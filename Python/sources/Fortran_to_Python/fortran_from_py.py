@@ -1,6 +1,6 @@
 import sys 
 #sys.path.append('Dropbox/Software_codes/Simulation/Advanced_programming/Python')
-sys.path.append("c:\Dropbox\Software_codes\Simulation\Advanced_programming\Python")
+#sys.path.append("c:\Dropbox\Software_codes\Simulation\Advanced_programming\Python")
 
 import fortran as f
 import os

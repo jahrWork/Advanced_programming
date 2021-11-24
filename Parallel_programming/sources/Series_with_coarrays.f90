@@ -32,7 +32,7 @@ implicit none
 !  number of terms for each image    
    Nt = N / Ni
  
-!  Each image performs a bacwards sum of the total sum  
+!  Each image performs a backwards sum of the total sum  
    S = 0 
    do i = image * Nt, 1 + (image-1)*Nt,  -1
       S = S + 1 / real(i)**2

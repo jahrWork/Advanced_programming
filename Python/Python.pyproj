@@ -1,0 +1,128 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5ca4ffdf-626b-4d0e-b42d-d7a1537ef971</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>sources\Fortran_to_Python\f2py_example.py</StartupFile>
+    <SearchPath>sources\scope;sources\algebra;sources\Functional programming;sources\odes;sources\Roots;sources\polymorphism;sources\Fortran_to_Python</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Python_project</Name>
+    <RootNamespace>Python_project</RootNamespace>
+    <InterpreterId>Global|VisualStudio|Python39</InterpreterId>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="sources\" />
+    <Folder Include="sources\iterators\" />
+    <Folder Include="sources\python_to_C\" />
+    <Folder Include="sources\pointers\" />
+    <Folder Include="sources\1.TO_DO\" />
+    <Folder Include="sources\Roots\" />
+    <Folder Include="sources\Functional programming\" />
+    <Folder Include="sources\Algebra\" />
+    <Folder Include="sources\Fortran_to_Python\" />
+    <Folder Include="sources\ODES\" />
+    <Folder Include="sources\polymorphism\" />
+    <Folder Include="sources\scope\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sources\Algebra\vectors_and_matrices.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Fortran_to_Python\fortran_from_py.py" />
+    <Compile Include="sources\python_to_C\compile_example.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\python_to_C\HelloWorld.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\Cauchy_problem.py" />
+    <Compile Include="sources\Functional programming\First_class_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Functional programming\Fourier.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Functional programming\functions.py" />
+    <Compile Include="sources\Functional programming\mapping.py" />
+    <Compile Include="sources\ODES\Temporal_error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\Temporal_schemes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\Orbits.py" />
+    <Compile Include="sources\main.py" />
+    <Compile Include="sources\Functional programming\map_filter_reduce.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\n_body_problem.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\polymorphism\polymorphic_odes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\polymorphism\polymorphism.py" />
+    <Compile Include="sources\Roots\roots.py" />
+    <Compile Include="sources\scope\modA.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\scope\modB.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\scope\scope_example.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\main_ODES.py" />
+    <Compile Include="sources\iterators\iterators.py" />
+    <Compile Include="sources\1.TO_DO\rests.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\1.TO_DO\OOP_N_body.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\pointers\pointers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\Stability_regions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\ODES\Stability.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\1.TO_DO\Monads.py" />
+    <Compile Include="sources\1.TO_DO\test_hypothesis.py" />
+    <Compile Include="sources\Fortran_to_Python\f2py_example.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="sources\Fortran_to_Python\fortran.f90" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|Python39" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

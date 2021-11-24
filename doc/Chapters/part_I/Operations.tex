@@ -1,0 +1,39 @@
+\chapter{Operations and von Neumann style} 
+
+\section{Introduction}
+maqchibe and style. instructions.....
+
+Example of code 3*2 
+
+Turing Universal machine 
+Neumann Architecture 
+Church lambda 
+Backus Fortran and its paper 
+
+
+\newpage 
+ \section{Roots of a second degree equation} 
+ In this section, a program to obtain the roots of a second order equation is presented:  
+ $$
+    a x^2 + b x + c = 0, \qquad \forall \ a, b, c \in \Re.
+ $$
+ The fundamental theorem of algebra states that every  Nth order polynomial has N complex roots. 
+ If the coefficients are real, then the roots are complex conjugate.
+ Dividing the above equation by $ a $ an looking for a perfect square, 
+ the following equation allows is obtained: 
+ $$
+    \left( x + \frac{b}{2a} \right)^2 - \frac{b^2 }{ 4 a^2} + \frac{c}{a} = 0. 
+ $$
+ Solving the unknown $ x$, the well known formula for the roots is obtained: 
+ \begin{equation}
+     x_{1,2} = \frac{ - b \pm \sqrt{ b^2 - 4 a c }  }{ 2 a  }  
+     \label{x12}
+ \end{equation} 
+ If the discriminant $ d = b^2 - 4 a c $ is les than zero, roots become complex. 
+ In the following code, complex solutions given by (\ref{x12}) are implemented. 
+ Note that the discriminant $ d $ was defined as a complex variable to avoid math problems 
+ when the discriminant is negative. Whereas the root a real negative number is not defined,
+ the root of a negative number  
+ number has a value when considering working with complex numbers. 
+ \renewcommand{\home}{./Fortran/sources/Foundations} 
+  \listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{Roots.f90}

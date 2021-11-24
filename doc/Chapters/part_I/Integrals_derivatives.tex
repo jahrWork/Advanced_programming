@@ -1,0 +1,281 @@
+%___________________________________________________________________________________________________
+\chapter{Operations with functions} 
+
+
+
+\section{Introduction} 
+
+This chapter covers some essential concepts that arise when the tools of mathematical analysis are used in scientific programming. The use of piecewise-defined functions, plotting functions as a means of debugging codes or the use of integrals and derivatives are the first things that a scientific code programmer will have to deal with to solve problems. 
+
+The examples presented here are developed with Fortran, however, the concepts are cross languages. The ideas around the approximation of a derivative or integral with a computer are the same in other languages and of course the need of using finite precision to represent real numbers becomes once again a matter to consider. 
+
+
+
+
+%___________________________________________________________________________________________________
+\newpage
+\section{Defining piecewise functions} \label{sec:piecewise}
+
+A function can be defined by means of one or more formulas, a list of values, a recurrence rule, etc. 
+In this example, the following piecewise mathematical function is defined in Fortran 
+using three formulas for different intervals of its domain:
+
+$$ 
+\myfunc{ f }{\mathbb{R}}{\mathbb{R}}{x}{f(x)} 
+$$
+
+\begin{equation}
+    x \rightarrow f\left( x\right) = 
+    \begin{cases}
+         0,  \ \ \ \  \ \ \ \ \  x < -\frac{\pi}{2}       \\
+         \cos(x), \ \             x \in\left[ -\frac{\pi}{2}, \frac{\pi}{2}   \right)        \\ 
+         0, \ \ \ \  \ \ \ \ \   x \geq \frac{\pi}{2}
+    \end{cases}
+    \label{eq:piecewise}
+\end{equation} 
+
+It can be easily done through a conditional expression on the variable $ x $ so, for each point of the domain the proper result is returned. 
+From the numerical point of view two precautions must be taken into account:
+
+\begin{itemize}
+    \item In the first place, make sure that the entire domain of the function 
+    is represented in the code, do not forget to consider all the intervals. 
+    It is possible that the domain of the function is not the whole set $\left\{ \mathbb{R} \right\} $, 
+    however, the function in the code may be called with values $ x $ out of the domain. 
+    A big topic is opened under this premise; how can be the output of an out-of-domain value managed.
+    
+    \item In the second place, for the algorithm the order in which we define the 
+    intervals is important. Consider what function we would be representing if the 
+    conditional \texttt{( x < PI/2 )} is written in the first place
+    and the conditional \texttt{( x < -PI/2 )} in the second place for this same example.
+    
+\end{itemize}
+
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus/Examples} 
+\listings{\home/Integrals_derivatives.f90}{function Piecewise_f}
+{end function}{Integrals_derivatives.f90}
+
+
+
+
+
+%___________________________________________________________________________________________________
+\section{Plotting functions}
+
+For a mathematical function its graph is one of the ways to represent it. 
+Notice that for a given function $ f(x) $ the set of all pairs 
+$ \left\{ ( x, f(x) ) \mid x\in D \right\}$ (where $D$ is the domain of the function) 
+are unique.
+
+This is specially useful when the domain and codomain of the function are subsets of $\mathbb{R}$
+or maybe the domain is a subset of $\mathbb{R}^2$ since the elements $(x,y)$ or $((x,y),z)$ can be 
+associated to points in a coordinate system resulting in a curve in 2 dimensions or a surface in 3 dimensions. 
+The graph of functions, results, variables, etc. is used for ``graphic debugging'', an essential way to debug 
+scientific programs like simulations in physics. 
+It makes much easier to find all kind of bugs in a program 
+by means of plotting final or intermediate results obtained by the computer.  
+
+The following example is based on DISLIN, a plotting library for Fortran and C languages created by the
+Max Planck Institute. It is a high-level plotting library for displaying
+data that can be called from the main program or subroutines.
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/graphs} 
+\listings{\home/plotting.f90}{subroutine plot}
+{end subroutine}{plotting.f90}
+
+
+The previous subroutine allows to plot a 201 points curve from a generic function declared (by means of an interface) as a:
+
+$$ 
+\myfunc{ \texttt{f\_R\_R} }{\mathbb{R}}{\mathbb{R}}{x}{\texttt{f\_R\_R(x)}} 
+$$
+
+It is used in combination with an initialization subroutine for the graph and a subroutine that displays the result (the Fortran solution that accompanies this book shows some examples of how to use this subroutines and DISLIN libraries):
+
+\texttt{subroutine plot\_ini( xmin\_, xmax\_,  ymin\_, ymax\_ )} 
+
+\texttt{subroutine plot\_show(  )}
+
+Notice how this subroutine makes use of the \texttt{parameter M} that needs to be converted to \texttt{real} when the grid \texttt{x} is calculated to avoid operating in the integer field. Also, the use of implicit loops greatly simplifies the reading of the code.
+
+
+%___________________________________________________________________________________________________
+\newpage 
+\section{Integrals and derivatives of functions}   \label{sec:intder}
+
+Let's build a simple approximation to the derivative of a function $ f(x) $ by means of its definition:
+
+\begin{equation}
+    f'(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+In calculus, the existence of this limit (derivable function) implies that both lateral limits exist, are finite and equal (at least when the function is defined in both sides of the point $x$):
+
+\begin{equation}
+    f'(x) = \lim_{h\rightarrow 0^-}\frac{f(x+h)-f(x)}{h} = \lim_{h\rightarrow 0^+}\frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+To obtain an approximation to this value $ f'(x) $ in a point $x $ with the computer, finite differences can be used. Instead of reproducing the limit in the point, a fixed value of $ h \neq 0$ is used. Notice that both $ h > 0 $ or $ h < 0 $ are possible so the approximation can be found like a forward difference or a backward difference. Actually, also central differences can be used if the expression is slightly modified. What must be considered is that now each expression leads to a different approximation while in calculus the existence of the derivative implies that all values are equal. 
+
+For this case let's consider $ h > 0 $ with $h$ a small value:
+
+\begin{equation}
+    f'(x) \simeq \frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+The question that arises; is it possible to bound the error of the approximation? 
+
+\begin{equation}
+    E = f'(x) - \frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+If the function $f(x)$ is sufficiently smooth near $x$ (for a forward-difference twice differentiable is needed), then a Taylor expansion can be used so the order of the scheme used is obtained. Intuitively, it is clear that by lowering the value of $h$ a better approximation of the derivative is obtained. Finding the order of the scheme means precisely finding how fast the error tends to zero when $h\rightarrow 0$. In addition, round-off error appears in this approximation depending on the value of $h$ too.
+
+Let's bound the truncation error for a forward difference. Starting with the Taylor series of $f(x)$ at the point $x$ particularized in $x+h$:
+
+$$
+f(x+h) = f(x) + h f'(x) + \frac{h^2}{2} f''(x) + \mathcal{O}(h^3) 
+$$
+
+Notice that $\O(h^3)$ means that the following terms are lower than a constant times $h^3$. Re-arranging the expression:
+
+$$
+\frac{f(x+h) - f(x)}{h} = f'(x) + \frac{h^2}{2h} f''(x) + \mathcal{O}(h^2) = f'(x) + \frac{h}{2} f''(x) + \mathcal{O}(h^2) 
+$$
+
+$$
+\abs{\frac{f(x+h) - f(x)}{h} - f'(x)}  \  \leq  \    C h  
+$$
+
+The error committed by replacing the derivative $f'(x)$ by the finite difference approximation is of order $h$ and the same result is obtained if backward-difference is used. Of course this is not the only way to approximate the value of a derivative. First of all, central differences could be used and, if the function is three times differentiable the truncation error of that approximation can be demonstrated that is of order $h^2$. Secondly, higher order finite differences exist so the value of a first derivative can be approximate with order $h^4$, $h^6$, etc. considering more points of the domain, while the example shown here comes from the derivative definition or the Taylor series expansion similarly, higher order approximations can be inferred from the interpolation theory. Thirdly, other strategies that also comes from the interpolation theory can be used so spectral convergence can be obtained (see section \ref{sec:convergence}). 
+
+A different source of discrepancy between the real value and the approximation appears; round-off error, also dependent on the value of $h$ taken. Notice that as $h$ gets smaller, the values of $f(x+h)$ and $f(x)$ become more similar. This issue, with infinite precision arithmetic would not pose any problem, however, performing the subtraction with the computer's finite precision involves the problem of numerical cancellation. This topic is broaden in the chapter \ref{sec:cancellation} since the basis of real numbers representation are explained. For now, just keep in mind the following:
+
+\begin{itemize}
+    \item Every real numbers in the computer is stored with a rounded value that fits in the finite precision used by the computer. Consider for example the numbers $1.2345651$ and $1.2345649$, in a finite precision machine they could be stored only with 6 significant digits and they would become: $1.23457$ and $1.23456$, they have been rounded. Of course, both values $f(x+h)$ and $f(x)$ in our derivative computation suffer from this issue.
+    
+    \item When two near values are subtracted the significant digits are reduced, i.e. from 6 significant digits in the following expression we end up with just 1: 
+    
+    $$
+    1.23457 - 1.23456 = 0.00001 = 1\cdot 10^{-5}
+    $$
+    
+    \item If both values are approximated to the sixth digit and the result of the subtraction is a value in the order of magnitude imposed by that digit, then it is dominated by the round off made to the numbers!
+     In this example the infinite precision operation would result in $1.2345651 - 1.2345649 = 2\cdot 10^{-7}$ quite smaller than the result obtained by the finite precision machine. 
+\end{itemize}
+
+Our expression for the derivative $\frac{f(x+h)-f(x)}{h}$ will have an error in the numerator divided by $h$ so, with no deeper explanations let's say now that this rounding error can be bounded by the following expression. Notice how it depends inversely on $h$ so it is a barrier for the reduction of h as a way to increase the accuracy of the derivative. The decision and meaning of writing $2\epsilon$ for the numerator error is deeply treated in the chapter \label{chap:reals}.  
+
+$$
+E_{round} = \frac{2\epsilon}{h}
+$$
+
+Since we could be interested in making $h$ as small as possible to obtain better approximations to the derivative, it is not difficult to find that round-off barrier in our computations. Both sources of error can be dominant and it is essential to understand the origin of both and how to relate the precision desired for a simulation (needs of the project) and the way to approximate derivatives with the computer. 
+
+%------------------------------------------------------------------------------------------
+The following codes recycles the procedure interface used along this chapter of \texttt{f\_R\_R(x)} for the function \texttt{f} and defines the \texttt{Derivative} function with inputs the function to derive and the value where obtaining the approximation. Notice that this new function itself also responds to the interface:
+
+$$ 
+\myfunc{ \texttt{f\_R\_R} }{\mathbb{R}}{\mathbb{R}}{x}{\texttt{f\_R\_R(x)}} 
+$$
+
+\vspace{0.5cm}
+
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+\listings{\home/Calculus.f90}{Derivative}
+{end function}{Calculus.f90}
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+\listings{\home/Calculus.f90}{interface}
+{end interface}{Calculus.f90}
+
+
+%------------------------------------------------------------------------------------------
+
+Now let's compute the definite integral of a function $f(x)$ in the closed interval $ [a,b] $ and let's do it in a functional way as it is common during this book.
+In this case we are going to obtain an approximation to the integral value through a Riemann sum, which means that the area of the curve under the function in the interval is obtained as a sum of small rectangles along the interval and carrying that process to the limit. 
+
+$$ 
+\int_{a}^{b}f(x)dx   =   \lim_{m\rightarrow \infty}\sum_{i=0}^{m-1}f(x_i) \Delta x
+$$
+
+Each value $x_i$ is taken from a partition of $[a,b]$:
+
+$$
+x_i = a + i\Delta x \ \ \    \text{with} \ \ \  i = 0, ..., m-1
+$$ 
+
+and with:
+
+$$
+\Delta x = \frac{\mid b-a\mid}{m}
+$$
+
+However, we need an approximation so instead of evaluating that limit, we choose a value $m$ big enough to accomplish with the accuracy required. 
+
+$$ 
+\int_{a}^{b}f(x)dx   \simeq \sum_{i=0}^{m-1}f(x_i) \Delta x
+$$
+
+In this example, the leftmost value of each subinterval is taken to approximate the rectangle area, however, the rightmost value or another point contained in the interval could be used. 
+
+%------------------------------------------------------------------------------------------
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+\listings{\home/Calculus.f90}{Integral}
+{end function}{Calculus.f90}
+
+Some notes should be taken from this example: firstly, notice that the initial value given to \texttt{dx} is not the actual value used, it is just an approximation to the expected value  (\texttt{0.001}). The operation \texttt{abs(b-a)/dx} is used to calculate the approximate number of subintervals that fit in our interval $[a,b]$ and then the integer part is retained. Then, the exact value of  \texttt{dx} is calculated for an integer number of subintervals. Secondly, notice that the sum must not stop in the last value of the interval ($b$) but in the previous one since the area of that rectangle is computed by $dx\cdot f(a+dx(m-1))$. As usual, the whole addition can be compacted in the sum of the components of a vector defined by an implicit loop. 
+
+%___________________________________________________________________________________________________
+\newpage 
+\section{Examples of operations with functions}
+
+The following subroutine gives some examples of the functions seen during this chapter. 
+DISLIN is used for all the graphs as mentioned before. Firstly, the plot intervals must 
+be initialize so the \texttt{plot\_ini} subroutine is used and the plotting boundaries 
+are declared, all the graphs will be calculated and represented in 
+$x\in \left[ -2\pi, 2\pi \right]$, 
+$y\in \left[ -2.5, 2.5 \right]$.
+Then, four functions are represented; a sine, 
+the piecewise function defined in \ref{eq:piecewise},
+its derivative and 
+its integral from $-1$ to x. 
+
+To graph those functions with \texttt{plot( f )}, the single input argument needed is the function itself.  
+Also, the already explained \texttt{procedure (f\_R\_R) :: f} is used for \texttt{f}. Hence,
+the functions \texttt{Derivative\_f(x)} and \texttt{Integral\_f(x)} are needed to 
+build the following mathematical expressions: 
+
+$$
+\text{\texttt{Derivative\_f}}(x) = \frac{df(x)}{dx}
+$$
+
+and:
+
+$$
+\text{\texttt{Integral\_f}}(x) = \int_{-1}^{x} f(x) dx
+$$
+
+Remember that $f(x) = \text{\texttt{Piecewise\_f(x)}}$. Notice that integrating the function with these limits implies finding one of the primitive functions of $f(x)$, that one where the not defined constant has a specific value decided by the lower integration limit $x=-1$. The function treated in this example is positive (or zero) in the whole domain of definition so its integral as well. However, since it is plotted starting in $x = -2\pi$ and the function is integrated from $x=-1$, we expect the result to be negative until it reaches zero in $x=-1$ according to this property of definite integrals:
+
+$$
+\int_{-1}^{x} f(x) dx = - \int_{x}^{-1} f(x) dx
+$$
+
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus/Examples} 
+\listings{\home/Integrals_derivatives.f90}{Integral_and_derivative_examples}
+{end subroutine}{Integrals_derivatives.f90}
+
+
+ 
+  
+  
+  

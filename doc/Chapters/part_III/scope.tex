@@ -1,0 +1,31 @@
+ 
+  %__________________________________________________________________________________________________
+ \chapter{Scope} 
+ 
+ \section{Introduction}
+ One of the most important matters that we need to understand when we begin to write our own programming codes is the scope. In other words,  variables which are public and those which are private. This is called the scope of the visibility of some variable in some part of our code. 
+ 
+ In any programming language, the scope of variables, objects, functions or procedures is the set of statements in which the variable can be used or modified. The region of a program in which this variable or identifier is visible is called the scope. 
+ 
+ Hence, public and public variables or procedures are specified explicitly. If not, local and global variables are visible. Local variables are those which specified inside the function or subroutine that we are dealing with and global variables are those that can be accessed by common variables of my own module  or by inclusions of other modules.   
+ 
+
+ In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  Variable $ z $ is a local variable, $ y $ is a global variable of module \texttt{modB} and $ x $ is a global variable of module \texttt{modA}.  All global variables of \texttt{modB} are seen in \texttt{Test}  by means of the  sentence \texttt{use modB}. Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}.   
+ \vspace{0.5cm} 
+ 
+ 
+ 
+ \newpage  
+ \section{Fortran}
+ 
+ \renewcommand{\home}{./Fortran/sources/scope} 
+ \listings{\home/modB.f90}{module modB}{end module}{modB.f90}
+ 
+ \listings{\home/modA.f90}{module modA}{end module}{modA.f90}
+ 
+ 
+ \newpage
+ \section{Python}
+ 
+ 
+  

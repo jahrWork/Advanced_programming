@@ -1,0 +1,195 @@
+
+  
+\newpage   
+\chapter{Read an external file} 
+
+  \renewcommand{\home}{./Fortran/sources/Foundations/read files} 
+  \listings{\home/read_files.f90}{subroutine Test_load_matrix}
+  {end subroutine}{read_files.f90}
+  
+  \newpage 
+  \listings{\home/read_files.f90}{function load_matrix}
+  {end function}{read_files.f90}
+  
+  \newpage
+  \listings{\home/read_files.f90}{function columns}
+  {end function}{read_files.f90}
+  
+  
+  
+  
+  
+ %   A batch file named: \mycap{Preliminary_examples.bat} allows to compile and to run this main program.  
+ 
+ 
+ % \newpage  
+ 
+ 
+ 
+ 
+ %   \subsection{Windows}
+ 
+ 
+ % _______________ RUN EXAMPLES_________________________________________________
+ 
+ %   >compile_Cauchy_Problem_examples.bat
+ %   
+ %   >compile_BVP_examples.bat 
+ %   
+ %   >
+ %   
+ %   >
+ %   
+ %   
+ %   
+ %   Examples of use compile.bat 
+ %   
+ % %  _________BASIC USAGE___________________________________________________________ 
+ %   
+ % %  >compile main 
+ %   
+ %   The file main.f90 contains the main program to be executed
+ %   
+ %%   e.g. to compile and to execute the "hello world" first example 
+ %   
+ %   >compile main    
+ %   
+ %   
+ % %  ___________ADVANCED USER______________________________________________________
+ %   
+ %   If the user develops a new module, or he wants to use existing examples,
+ %   the compilation procedure is as follows: 
+ %   
+ %%   > compile module_name main 
+ %   
+ %   1) module_name is a fortran module file which is located in sources. 
+ %   
+ %   2) main file is the main program.
+ %   It contains a use setence to access module_name and it calls some subrutine of  the module 
+ %   
+ %   
+ %   e.g. 
+ %   > compile 
+ %   
+ 
+ 
+ 
+ 
+ 
+ 
+ %   
+ %   
+ %   
+ %   
+ %   Informatics 2017/2018 Aerospace Engineering (UPM) 
+ %   
+ %   How to install FORTRAN and graphical windows in windows 10 
+ %   
+ %   Author: Juan A. Hernandez:  juanantonio.hernandez@upm.es 
+ %   
+ %   
+ %   
+ %   %   A) Copy Informatica\_2018 to Desktop 
+ %   
+ %   B) Check the compiler 
+ %   1)open command prompt and type >compile Hello\_world
+ %   2)open  command prompt and type >compile plot\_graph
+ %   
+ %   
+ %   \subsection{Ubuntu}
+ %   
+ %   
+ %   
+ %   Informatics 2017/2018 Aerospace Engineering (UPM) 
+ %   
+ %   How to install FORTRAN and graphical windows in Ubuntu from windows 10 
+ %   
+ %   Author: Juan A. Hernandez:  juanantonio.hernandez@upm.es 
+ %   
+ %   
+ %   
+ %   
+ %   A) Install UBUNTU from Windows 10 (skip this step if your machine is UBUNTU) 
+ %   
+ %   1) Setting/Security/Developer ( allow to create and modify programs ) 
+ %   
+ %   2) control panel/programs/Windows characteristics allow UBUNTU 
+ %   
+ %   3) cmd> bash . Create user and password UBUNTU machine 
+ %   
+ %   4) Install X11 server for graphical windows ( XMing ) to run graphical linux binaries from shell.
+ %   Capability to start 64-bit GUI-programs from the desktop file manager 
+ %   
+ %   5) Install graphical vim editor to check: 
+ %   
+ %   \$sudo apt-get install vim-gtk
+ %   
+ %   Now, you?ll need to set the ?DISPLAY? environment variable to point at the X server running on your Windows 10 PC. 
+ %   If you don?t do this, graphical applications will simply fail to launch.
+ %   To do this, run the following command in the Bash environment:
+ %   
+ %   \$export DISPLAY=:0
+ %   \$gvim
+ %   
+ %   
+ %   B) Install gfortran 
+ %   
+ %   1) \$ sudo apt-get install gfortran 
+ %   
+ %   
+ %   
+ %   C) Install DISLIN to plot with UBUNTU 
+ %   
+ %   1)  should install OpenMotif on Ubuntu 
+ %   
+ %   
+ %   \$ sudo add-apt-repository deb http://archive.ubuntu.com/ubuntu lsb\_release -sc universe multiverse
+ %   
+ %   \$ sudo apt-get update 
+ %   
+ %   \$ sudo apt-get install libxm4
+ %   
+ %   \$ sudo apt-get install libmotif4* libmotif-dev
+ %   
+ %   \$sudo apt-get install libx11-dev libxt-dev libgl1-mesa-dev  WARNING:(l1 ele and then one )
+ %   
+ %   
+ %   2) Check the compiler 
+ %   
+ %   1)\$ ./compile.sh Hello\_world
+ %   2)\$ ./compile.sh plot\_graph
+ %   
+ %   
+ %   
+ %   \subsection{MAC} 
+ %   
+ %   Informatics 2017/2018 Aerospace Engineering (UPM) 
+ %   
+ %   How to install FORTRAN and graphical windows in MAC OS 
+ %   
+ %   Author: Juan A. Hernandez:  juanantonio.hernandez@upm.es 
+ %   
+ %   
+ %   1) How to execute a Terminal 
+ %   
+ %   Applications/ Utilities/ Terminal
+ %   
+ %   2) How to execute a Terminal in a specific folder
+ %   
+ %   System Preferences/ Keyboard/ Speed functions/ Services - scroll and select "Terminal in the folder"
+ %   
+ %   
+ %   
+ %   3) Install gFortran to compile
+ %   
+ %   3.1) Install manager HOMEBREW (https://brew.sh)
+ %   3.2) \$ brew install gcc
+ %   
+ %   
+ %   4) Install Openmotiff
+ %   
+ %   4.1) Install server X11 through XQuartz (https://www.xquartz.org)
+ %   Capability to start 64-bit GUI-programs using x-windows from the shell 
+ %   
+ %   4.1)\$ brew install openmotif
+ %   

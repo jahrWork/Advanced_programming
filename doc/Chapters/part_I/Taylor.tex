@@ -1,0 +1,123 @@
+%___________________________________________________________________________________________________
+\chapter{Series expansion} 
+
+
+%___________________________________________________________________________________________________
+\section{Introduction} 
+
+One of the main focus of numerical methods is to approximate functions by means of different expansions: 
+
+\begin{enumerate} 
+\setlength\itemsep{-0.1cm}
+	\item Polynomial expansion: Taylor, Lagrange.
+	\item Trigonometric series: sine and cosine expansions. 
+	\item Expansion by means of known basis: Chebyshev, Legendre, etc. 
+\end{enumerate} 
+
+The same function can be expanded or approximated with different basis.
+It goes without saying that the computer only allows to sum a finite number $ N $  of terms. 
+
+Hence, the best election is related to the rate of convergence 
+of the expansion. In other words, given a tolerance error between the approximation and the exact function, 
+the best expansion allows to obtain the approximation with a minimum number of terms $N$. 
+
+
+
+
+%___________________________________________________________________________________________________
+\newpage
+\section{Expansions of functions} 
+   
+One of the most used series expansion of a function is its Taylor series, without going any further, in section \ref{sec:intder} we have used a Taylor expansion to estimate the truncation error committed when approximating the derivative of a function by its finite difference expression.
+
+In general, as already mentioned, a series expansion is a very useful way to approximate the value of a given function in a domain. More specifically, the Taylor series, which uses power series, allows us to estimate the value of a function at one point from its value and the value of its derivatives at a different point. Polynomials are extensively known and they are easy to derive, integrate, multiply, etc. so treating a function as its power series approximation can have many advantages when it comes to operating with that function.
+
+A power series of the function $f(x)$ can be expressed as:
+%\[  f(x) = \sum_{k=0} ^N a_k \  x^k, \qquad \qquad a_k = \frac{  f^{(k)} (0)  }{ k! },  \]  
+ 
+\[  f(x) = \sum_{k=0} ^N a_k \  x^k,  \] 
+
+where $a_k$ are real numbers that depend only on $k\in \mathbb{N}$ and not on $x$. For the case of a Taylor series around the point $a = 0$, these coefficients are calculated as:
+
+$$
+a_k = \frac{  f^{(k)} (0)  }{ k! }  
+$$
+
+being $f^{(k)} (0)$ the \textit{k}-th derivative of $f(x)$ in the point $a = 0$.
+ 
+For a Taylor expansion around a generic point $a$ the shape of the polynomial series and the coefficient expressions are:
+
+\[  f(x) = \sum_{k=0} ^N a_k \  (x - a)^k, \qquad a_k = \frac{  f^{(k)} (a)  }{ k! }   \] 
+
+
+
+
+  
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+   \listings{\home/Taylor_expansions.f90}{function TaylorE}
+   {end function}{Taylor_expansions.f90}
+   
+   
+   \listings{\home/Taylor_expansions.f90}{interface}
+   {end interface}{Taylor_expansions.f90}
+   
+   
+   
+   \listings{\home/Taylor_expansions.f90}{function TaylorN}
+      {end function}{Taylor_expansions.f90}
+  
+  
+  
+   \listings{\home/Taylor_expansions.f90}{interface Taylor}
+         {end interface}{Taylor_expansions.f90}
+   
+   
+   
+   
+   
+   
+
+%___________________________________________________________________________________________________
+\section{Parseval identity} 
+
+
+
+
+
+\begin{equation} 
+	f ( x)  =  \sum_{k=-\infty} ^{\infty}  \hat{c}_k  e^{ i k x }
+\end{equation} 
+
+\begin{equation} 
+	f ( x)  =  \sum_{k=0} ^{\infty} \  \hat{a}_k  \ \cos k x + \sum_{k=1} ^{\infty} \  \hat{b}_k  \sin k x
+\end{equation} 	
+
+\begin{equation} 
+	\hat{c}_k  =  \frac{1}{2} \ ( \ \hat{a}_k  - i \ \hat{b}_k \ ),  \quad k=1, \ldots, N/2. 
+\end{equation}	
+
+\begin{equation} 
+	\hat{c}_{-k}  =  \overline{ \hat{c}} _{k}  , \quad k=1, \ldots, N/2. 
+\end{equation} 	
+
+
+\begin{equation} 
+	\int _{-\pi} ^{\pi} f(x)^2 \ dx = 2 \pi \left(    | \hat{c}_0 |^2 + 2 \sum_{k=1} ^{\infty} |  \hat{c}_k  |^2 \right) 
+\end{equation} 
+
+Let $ f(x) = x $ $ \forall x \in [-\pi, +\pi ] $ and extend $ f(x) $  periodically to the right and to the left. Once $ f(x) $ is defined in 
+this way, it can be approximated by a sine expansion: 
+\begin{equation} 
+	f ( x)  =  \sum_{k=1} ^{N/2} \   \hat{b}_k  \sin k x, 
+\end{equation} 
+where the coefficients $ \hat{b}_k $ are given by:
+\begin{equation} 
+	\hat{b}_k   = \frac{ (-1)^{k+1} }{ \pi k }, \qquad k=1, \ldots, N/2. 
+\end{equation} 
+
+Using Parseval identify with $ f(x)$, the following  summation is obtained: 
+\begin{equation} 
+	\sum_{k=1} ^{\infty} \  \frac{1}{n^2}  \  = \frac{\pi^2}{6}
+\end{equation} 
+
+

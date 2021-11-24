@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{1DF3CA90-FAD4-42FB-B7DB-9CA15A455AA3}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Debug|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" RealKIND="realKIND8" Traceback="true" BoundsCheck="true" StackFrameCheck="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole" AdditionalDependencies="user32.lib gdi32.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RealKIND="realKIND8"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole" AdditionalDependencies="user32.lib gdi32.lib"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<Filter Name="Advanced programming">
+		<Filter Name="algebra">
+		<File RelativePath=".\sources\Advanced_programming\algebra\vectors_and_matrices.f90"/></Filter>
+		<Filter Name="functional programming">
+		<File RelativePath=".\sources\Advanced_programming\functional programming\First_class_functions.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\functional programming\Fourier.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\functional programming\functions.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\functional programming\map_filter_reduce.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\functional programming\mapping.f90"/></Filter>
+		<Filter Name="miscellaneous">
+		<Filter Name="fractals">
+		<File RelativePath=".\sources\Advanced_programming\miscellaneous\fractals\Mandelbrot.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\miscellaneous\fractals\VonKoch.f90"/></Filter>
+		<Filter Name="games">
+		<File RelativePath=".\sources\Advanced_programming\miscellaneous\games\Sudoku.f90"/></Filter></Filter>
+		<Filter Name="odes">
+		<Filter Name="schemes">
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Cauchy_Problem.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\dopri5.f"/>
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\dr_dopri5.f"/>
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\ODE_Interface.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Temporal_Schemes.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Wrappers.f90"/></Filter>
+		<File RelativePath=".\sources\Advanced_programming\odes\n_body_problem.f90"/></Filter>
+		<Filter Name="polymorphism">
+		<File RelativePath=".\sources\Advanced_programming\polymorphism\circle_class.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\polymorphism\polygon_class.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\polymorphism\polymorphism.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\polymorphism\square_class.f90"/></Filter>
+		<Filter Name="scope">
+		<File RelativePath=".\sources\Advanced_programming\scope\modA.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\scope\modB.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\scope\scope_example.f90"/></Filter>
+		<File RelativePath=".\sources\Advanced_programming\advanced_programming_techniques.f90"/></Filter>
+		<Filter Name="dislin">
+		<File RelativePath=".\sources\dislin\disifl_d.lib"/>
+		<File RelativePath=".\sources\dislin\dislin_d.f90"/></Filter>
+		<Filter Name="Foundations">
+		<Filter Name="Algebra">
+		<File RelativePath=".\sources\Foundations\Algebra\Dynamic_allocation.f90"/>
+		<File RelativePath=".\sources\Foundations\Algebra\Matrix_operations.f90"/></Filter>
+		<Filter Name="Calculus">
+		<Filter Name="Examples">
+		<File RelativePath=".\sources\Foundations\Calculus\Examples\Integrals_derivatives.f90"/>
+		<File RelativePath=".\sources\Foundations\Calculus\Examples\Series_expansion.f90"/>
+		<File RelativePath=".\sources\Foundations\Calculus\Examples\Sum_series.f90"/></Filter>
+		<File RelativePath=".\sources\Foundations\Calculus\Calculus.f90"/>
+		<File RelativePath=".\sources\Foundations\Calculus\Series.f90"/>
+		<File RelativePath=".\sources\Foundations\Calculus\Taylor_expansions.f90"/></Filter>
+		<Filter Name="graphs">
+		<File RelativePath=".\sources\Foundations\graphs\plotting.f90"/></Filter>
+		<Filter Name="Read files">
+		<File RelativePath=".\sources\Foundations\Read files\data.csv"/>
+		<File RelativePath=".\sources\Foundations\Read files\data2.csv"/>
+		<File RelativePath=".\sources\Foundations\Read files\Read_files.f90"/></Filter>
+		<File RelativePath=".\sources\Foundations\Foundations.f90"/>
+		<File RelativePath=".\sources\Foundations\Hello_world.f90"/>
+		<File RelativePath=".\sources\Foundations\Roots.f90"/></Filter>
+		<Filter Name="IEEE">
+		<File RelativePath=".\sources\IEEE\Huge_factorial.f90"/>
+		<File RelativePath=".\sources\IEEE\IEEE_operations.f90"/>
+		<File RelativePath=".\sources\IEEE\IEEE_representation.f90"/>
+		<File RelativePath=".\sources\IEEE\Integer_representation.f90"/>
+		<File RelativePath=".\sources\IEEE\integers_and_reals.f90"/>
+		<File RelativePath=".\sources\IEEE\robust_dot.f90"/>
+		<File RelativePath=".\sources\IEEE\Roots.f90"/>
+		<File RelativePath=".\sources\IEEE\Round_off.f90"/>
+		<File RelativePath=".\sources\IEEE\Summation_errors.f90"/>
+		<File RelativePath=".\sources\IEEE\to_do.f90"/>
+		<File RelativePath=".\sources\IEEE\Utilities.f90"/></Filter>
+		<File RelativePath=".\sources\main.f90"/></Filter>
+		<File RelativePath=".\ReadMe.txt"/></Files>
+	<Globals/></VisualStudioProject>

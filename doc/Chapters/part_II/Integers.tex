@@ -1,0 +1,921 @@
+%--------------------------------------------------------------------------------------------------------------------------------------
+ \renewcommand\home{./Fortran/sources/IEEE}
+
+\chapter{Integers representation} 
+
+    \addcontentsline{toc}{section}{Overview}
+    \section*{Overview} 
+    
+It is well known that the programs are written with numbers in decimal form. However, the computer, 
+in order to work with these constants and variables, is going to convert numbers to binary form. 
+Using two voltage levels (representing 0`s and 1`s) as unique states the computer can perform calculations that, 
+in order to show to the user the results obtained, will be translated again to decimal form. 
+
+The computer translates decimal values to binary similarly to the way humans typically do (with some exceptions to be noticed). For 
+positive integers the way to translate a value uses the principles of positional numeral systems, the value of each digit is totally determined by the 
+digit itself, the position in the number and the base of the numeral system (10 and 2 for decimal and binary). In the case of negative integer values, 
+while a person could write a sign (-) before the number, the machine uses only 0`s and 1`s and how this is done is treated in the chapter.
+
+On one hand, not all the numbers that can be written in a program (actually, 
+much less numbers than the infinite possibilities) are exactly represented 
+in the binary translation that the computer performs. It is
+essential for a programmer to understand this issue.
+On the other hand, integers do have an exact representation in binary form 
+with an integer variable  
+but its maximum and minimum value depends on the memory size of this variable.  
+The main problematic that motivates the study of the integer representation in 
+computers is related to overflow, values out of the representable range. 
+
+The following topics are covered in this chapter: 
+
+\begin{enumerate} 
+\setlength\itemsep{-0.1cm}
+    \item Integer overflow example.
+    \item Two's complement integer representation.
+    \item Understanding integer overflows.
+    \item Overflow of constants.
+    \item Overflow by incorrect assignment.
+    \item Declaring kind
+    \item Two's complement converter
+\end{enumerate} 
+    
+Throughout this chapter the reader will be able to understand and justify the corrupted values stored in a variable when an out-of-range integer is assigned by mistake. When this error occurs during compilation time, in many cases, the compiler does not abort the compilation, it only prints a warning. In the worst situation, the error appears during execution, the program is not working properly and this source of error could be a nightmare to trace.
+ 
+ 
+ 
+   
+\newpage
+    \section{Integer overflow example}
+
+
+The range of integer variables is limited by its memory size representation. 
+When programming and by mistake is possible to assign a value out of the
+range of some integer variable.
+It is very important to understand how the programming language treats this exception 
+to understand what is going on in our execution. 
+In the following example, the integer variable \texttt{i} is stored in 1-byte 
+ of memory 
+whereas  \texttt{k} is stored in 2-bytes.
+
+\vspace{0.5cm}
+
+\listings{\home/Integer_representation.f90}{subroutine Integer_overflow}
+{end subroutine}{Example of Integer overflow. Integer_representation.f90}
+
+
+
+A single loop prints on screen 
+the successive values of \texttt{k} and \texttt{i}. Once the value +127 
+of \texttt{i} is reached, negative numbers of \texttt{i} appear even when we are
+incrementing step by step the variable \texttt{k}.  
+The successive  values of \texttt{i} after $+127$ are $-128, -127,  \dots$ 
+
+To understand this fact, we should consider that integer numbers of 1-byte size 
+are treated as numbers 
+modulo $ 2^8 $ which means that if integer numbers were unsigned, their range would be 
+from 0 to 255. 
+If this unsigned integer variable were assigned with a number \texttt{k}
+greater than 255, the resulting value would be k mod 255 (remainder of k divided by 255). 
+Additionally, 
+to hold signed integer variables (positive and negative values), 
+a two's complement notation is generally used 
+that restrict the integer values from -128 to +127 in case of 1-byte size variables. 
+ 
+
+
+
+Another classical example that disconcerts to the novel programmer is the overflow with classical 
+mathematical operations such as the  factorial of an integer value: 
+$$
+ {\displaystyle n \ !=n\cdot (n-1)\cdot (n-2)\cdot (n-3)\cdot \cdots \cdot 3\cdot 2\cdot 1\ }  
+$$
+In the following code, 
+the factorial of 20 is obtained by multiplying the integer variable \texttt{f} 
+sequentially from 1 to 20. The partial results are shown on screen. After the variable \texttt{k} 
+has reached 13, the variable \texttt{f} shows wrong results. 
+\vspace{0.5cm}
+\listings{\home/Integer_representation.f90}{subroutine Factorial_overflow}
+{end subroutine}{Factorial overflow. Integer_representation.f90}
+Once the result has reached the maximum value the integer variable \texttt{f} can hold, even negative 
+numbers appears being the result of the modular arithmetic with two's complement. 
+It is important to notice, that in this case, the integer variable \texttt{f} is stored 
+in 4 -bytes which is the default storage of an integer value. 
+
+
+When an integer overflow occurs, the execution is not aborted 
+and the programmer is not alerted of the malfunction. 
+This is the main problems of integer overflow occurrences.  
+Generally, and integer overflow is associated to the following situations: 
+\begin{enumerate}
+\setlength\itemsep{-0.1cm}
+\item Counters to measure time or repetitive processes. 
+     If these counters are used in a perpetual control system, they are  eventually overflowed.
+\item Mathematical operations in the set of integers $ \mathbb{Z} $ such as the factorial of a number. 
+\item Careless assignments between reals and integers.
+\end{enumerate}
+
+When program codes are used as controlling units in embedding systems, 
+the overflow could origin terrible accidents such as the crash of the 1996 maiden 
+flight of the Ariane 5 rocket. 
+
+On May 2015, the European Aviation Safety Agency discovered that the embedded 
+software of the Boeing 787 suffered after 248 days an integer overflow  of a  counter of 
+a signed variable of 32-bits. 
+This overflow required to reset periodically the system to avoid 
+loss of electrical power and ram air turbine deployment. 
+
+
+
+The two's complement integer representation is explained in the next section. 
+
+ 
+\newpage
+    \section{Two's complement integer representation} \label{sec:TwosComp}
+
+An integer variable declared as 4-bytes (32 bits) size has $ 2^{32} $ possible different values. 
+Some languages allow to work with unsigned integers. In that case, 
+all bits are reserved for positive values and its range goes from 0 to $ 2^N - 1$. 
+When specifying signed integers, one bit has to be reserved for the sign and then the range is divided by two.
+Hence, an integer variable stored in 4-bytes has the range  [-2 147 483 648, 2 147 483 647]. 
+The Table \ref{tab:propertiesint} summarizes the main parameters for signed integers.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| r | c | c |}
+        
+        \hline
+        Name  & Minimum ($-2^{N-1}$) & Maximum ($2^{N-1} - 1$)  \\ \hline
+        
+        \texttt{ Kind = 1}                         & $-128$ & $127$ \\ \hline
+        \texttt{ Kind = 2}                      & $-32 768$ & $32 767$ \\ \hline
+        \texttt{ Kind = 4}               & $-2 147 483 648$ & $2 147 483 647$ \\ \hline
+        \texttt{ Kind = 8}   & $-9 223 372 036 854 775 808$ & $9 223 372 036 854 775 807$ \\ \hline
+        
+    \end{tabular}                                                       
+    \caption{Main properties of the different signed integer kinds used (two's complement used for negative values).}
+    \label{tab:propertiesint}
+\end{table}
+
+In general, the range of an integer variable stored in N bits is:   
+\begin{equation}
+    [ -2^{N-1},\: 2^{N-1}-1 ].  
+\end{equation}
+
+
+
+The Table \ref{bits} represents an integer storage with N-bits where $ b_i $ denotes the possible values 0 or 1. 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c | c | c | c | c | c |}
+        \hline
+        $ b_{N-1} $  & $ b_{N-2} $ &  $ b_{N-3} $ &\ldots  & \ldots & $ b_{2} $  & $ b_{1} $ & $ b_{0} $ \\ \hline 
+    \end{tabular}                                                       
+    \caption{Binary representation of an integer number stored in N bits.}
+    \label{bits}
+\end{table}
+
+The general expression to convert this binary number to decimal when it is expressed in two's complement is given by: 
+\begin{equation} 
+ x = - b_{N-1} \ 2 ^{ N-1 } \ + \ \sum_{i=0} ^{ N-2} \ b_i \ 2^i. 
+ \label{reconstruction}
+\end{equation} 
+
+As an example, let's consider an integer value equal to $425_{10}$ stored in 2-bytes of memory.
+The binary form comprises 16 different bits to hold the integer number. As a signed positive integer 
+it is represented with common binary numeral system: 
+\begin{multline*}
+    N = \texttt{ 0000000110101001}_{2} = 1\cdot 2^8 +1\cdot 2^7+ 0\cdot 2^6+ 1\cdot 2^5+ 0\cdot 2^4+ 1\cdot 2^3+  0\cdot 2^2+ \\ + 0\cdot 2^1+ 1\cdot 
+    2^0 = 2^8 + 2^7 + 2^5 + 2^3 + 2 = 425_{10}
+\end{multline*}
+where the leading zeroes are not displayed when printing that number on your screen. 
+The same number stored in a variable of 4-bytes (32bits) of memory size
+has the same binary representation but with more leading zeroes. 
+Notice that a signed integer variable of 1-byte size can not store this number 
+since its range is  $[-128, 127]$. 
+
+
+
+
+The following two questions arise:
+\begin{enumerate} 
+\setlength\itemsep{0cm}
+\item How are negative integer numbers stored in the computer? 
+\item How is overflow treated with integer numbers? 
+\end{enumerate} 
+
+To answer these two questions, we should understand how signed integer  
+numbers are stored in the computer. 
+There are two main ways to store signed integer variables in memory: 
+
+\begin{enumerate}
+\setlength\itemsep{0cm}
+\item One's complement integer representation. 
+\item Two's complement integer representation.
+\end{enumerate}
+
+In the following table, a signed integer variable of 3-bits of memory size is represented in binary form, 
+unsigned integer, two's complement and one's complement. 
+
+\begin{center} 
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Binary  & unsigned & two's comp.& one's comp.  \\
+        \hline
+        \texttt{000} & 0 & 0 & 0 \\
+        \hline
+        \texttt{001} &  1& 1 & 1 \\
+        \hline
+        \texttt{010} & 2 & 2 & 2 \\
+        \hline
+        \texttt{011} & 3 & 3 & 3 \\
+        \hline
+        \texttt{100} & 4 & -4 & -3 \\
+        \hline
+        \texttt{101} &  5 & -3 & -2 \\
+        \hline
+        \texttt{110} &  6 & -2 & -1 \\
+        \hline
+        \texttt{111} &  7 & -1 & -0 \\
+        \hline
+    \end{tabular}
+\end{center} 
+
+
+The two's complement notation is, generally, used in computers. 
+If the leftmost bit is \texttt{1}, the integer variable holds a negative number.
+From the above table, a procedure is deduced to obtain the binary form of a negative number. 
+For example, the binary form of -2 is obtained from the binary form of 2 which is \texttt{010}. Then, 
+these bits are inverted to give \texttt{101}. An finally, \texttt{001} is added to the resulting number to give: 
+\texttt{110} which is -2 in the two's complement.
+
+\begin{IN}
+   To obtain the binary form in two's complement of a negative number, carry out the following steps: 
+   \begin{enumerate}
+       \item Obtain the binary form of the integer number without sign. 
+       \item Invert all bits by using the bitwise NOT operation. 
+       \item Add 1 to the resulting value. 
+   \end{enumerate}
+\end{IN}
+
+The signed negative number $-425_{10}$, using two's complement, is translated in the machine like:
+
+\begin{equation}
+    N = \texttt{1111111001010111}_{2} = -425_{10}
+\end{equation}
+
+Notice that this technique to encode signed numbers defines the 'two's complement' of a specific number 
+with N bits as its complement with respect to $2^N$ which means that adding a number to its complement 
+results in $2^N$. From the different ways to represent signed numbers, this method performs addition, subtraction, and multiplication 
+in the same way for signed and unsigned binary numbers and it lacks from the negative zero. 
+
+
+
+
+Once the treatment of negative numbers is understood, the next step is to understand how the computer 
+treats an overflow with integers.  
+The most common result of an overflow is that the least significant representable digits 
+of the result are stored. Imagine that integer value 5 is stored in a 4-bits x-variable:
+$$
+       x = 0101.
+$$
+If the content of this variable is assigned to a y-variable of 3-bits (which can only store the range [-4,3]),
+only the least significant bits are stored and the 
+resulting variable will store the number
+$$
+       y = 101,
+$$
+which represents the value -3 in a two's complement representation with 3 bits. The original value of x has value 5.  
+Since the overflow of an integer variable never shows as an error, 
+it is very important to avoid overflows of integer variables not to have mysterious 
+programming problems very difficult to be identified. 
+
+
+\begin{IN}
+Overflow of integer variables are not usually identified as explicit errors and they 
+can originate strange behaviors very difficult to discover in a programming code. 
+\end{IN}
+
+
+
+
+    \newpage 
+    \section{Understanding integer overflows}  \label{sec:UndersIntOver}
+
+Now, the examples at the beginning of this chapter are easily interpreted. In the first case, the 
+values $+128, +129, \dots$ stored in \texttt{k} (2-bytes memory) size are assigned to the variable 
+\texttt{i} with 1-byte memory size.
+Then, the binary forms of $+128_{2-bytes}$ or $+129_{2-bytes}$:
+
+\begin{equation*}
+    +128_{2-bytes} = \texttt{00000000 10000000} ,\:  +129_{2-bytes} = \texttt{00000000 10000001}
+\end{equation*}
+
+are stored keeping the 8 least significant bits like:
+
+\begin{equation*}
+    \texttt{10000000} ,\:  \texttt{10000001}
+\end{equation*}
+
+which are the binary two's complement form of $-128_{1-byte}$ and $-127_{1-byte}$ respectively. 
+
+In the second example the variable \texttt{f} does not overflow in one or two units but in a much 
+higher quantity. 
+The real result of $13!$ is $6227020800$ whose binary representation with enough memory size to store 
+it (40 bits for example) is: 
+
+\begin{equation*}
+    6227020800_{40-bits} = \texttt{00000001 01110011 00101000 11001100 00000000} 
+\end{equation*}
+
+Once this variable is stored with the 32 least significant bits the result is:
+
+\begin{equation*}
+    \texttt{01110011 00101000 11001100 00000000} 
+\end{equation*}
+
+which is the binary two's complement representation of $+1932053504_{4-bytes}$, the result printed by the computer. 
+From that value, all the following results of the factorial are wrong because of the overflow of the 4-bytes variable. 
+
+
+
+
+In the following example, 
+an integer variable of 1-byte size is overflowed with the value 130 and with 
+-130. The resulting values are compared with an integer variable of 2-bytes size.  
+The internal representation  in binary form according to two's complement is also shown. 
+The following subroutine determines the internal binary form of an integer of any kind. 
+Depending on the \texttt{kind\_type} of the integer variable, 
+the maximum and minimum range is calculated by means of the subroutine \texttt{integer\_parameters}.
+Later, the integer variable \texttt{xr} is written in binary form by means of a \texttt{write} sentence. 
+And finally, the integer variable \texttt{xr} is reconstructed by means of equation  (\ref{reconstruction})
+to show on screen and to check the binary form representation. 
+
+\vspace{0.5cm}
+\listings{\home/Integer_representation.f90}{subroutine Integer_representation_twos_complement}
+{end subroutine}{Binary form representation. Integer_representation.f90}
+
+
+To understand the binary internal representation of an integer overflow, 
+the following lines gives the results: 
+\begin{verbatim} 
+call Integer_representation_twos_complement("kind=1",  130)
+call Integer_representation_twos_complement("kind=2",  130)
+call Integer_representation_twos_complement("kind=1", -130)
+call Integer_representation_twos_complement("kind=2", -130)
+\end{verbatim} 
+
+\begin{verbatim} 
+----------------------------------------------------------------
+ Internal representation of x=130  with x integer  kind=1
+    Integer  kind=8            x =                  130
+    Same integer kind=1        x =                 -126
+    Range integer kind=1         =                 -128      127
+    Internal representation of x = 10000010
+    Reconstruction sum b_i 2**k  =                 -126
+----------------------------------------------------------------
+----------------------------------------------------------------
+ Internal representation of x=130  with x integer  kind=2
+    Integer  kind=8            x =                  130
+    Same integer kind=2        x =                  130
+    Range integer kind=2         =               -32768    32767
+    Internal representation of x = 0000000010000010
+    Reconstruction sum b_i 2**k  =                  130
+---------------------------------------------------------------
+---------------------------------------------------------------
+ Internal representation of x=-130  with x integer  kind=1
+    Integer  kind=8            x =                 -130
+    Same integer kind=1        x =                  126
+    Range integer kind=1         =                 -128      127
+    Internal representation of x = 01111110
+    Reconstruction sum b_i 2**k  =                  126
+----------------------------------------------------------------
+----------------------------------------------------------------
+ Internal representation of x=-130  with x integer kind=2
+    Integer  kind=8            x =                 -130
+    Same integer kind=2        x =                 -130
+    Range integer kind=2         =               -3276     32767
+    Internal representation of x = 1111111101111110
+    Reconstruction sum b_i 2**k  =                 -130
+----------------------------------------------------------------
+\end{verbatim} 
+It's shown that the value \texttt{130} overflows an integer variable of \texttt{kind=1}.
+When this happens, no alert is shown by the compiler and non desirable results could destroy 
+the performance of our programming code.    
+
+
+
+    \newpage
+    \section{Overflow of constants}
+        
+The issues and limits treated above also appear when, instead of integer variables, the program works 
+with integer constants. 
+The assignment of a constant which is out range of a \texttt{kind=8} integer variable 
+will give rise to a compilation error.
+
+In the following example an integer variable of size 8 bytes is assigned with a huge number: 
+\begin{verbatim}
+    integer (kind = 8) :: P
+   
+    !Example variable assignation out-of-range 8 bytes
+    P = 9223372036854775808
+\end{verbatim}
+When trying to compile the above program, the compiler returns the following message: 
+\begin{verbatim}
+    Compilation Aborted (code 1)
+    error #6901: The decimal constant was too large when 
+        converting to an integer, and overflow occurred.
+        [9223372036854775808]
+\end{verbatim}
+The compiler tries to store the number \texttt{9223372036854775808}, which is equal to \texttt{huge(P)}+1,
+in an internal register of 8-bytes with two's complement representation. Since the constant is greater than 
+the maximum allowed value of the maximum memory size available in the computer the compiler gives the above error. 
+
+
+\newpage
+    \section{Overflow by incorrect assignment}
+
+If valid huge constants are assigned to lower size integer variables, only compiler warnings could alert 
+of possible malfunctions.  
+  
+In the following example, an integer variable \texttt{Q} of 4-bytes is considered. 
+The value \texttt{2147483648}, which is equal to \texttt{huge(Q)} +1, is assigned 
+to \texttt{Q}. 
+\vspace{0.5cm}
+\listings{\home/Integer_representation.f90}{subroutine Assignment_overflow}
+{end subroutine}{Assignment overflow. Integer_representation.f90}
+When compiling the above program, no errors are obtained but the following warning appears: 
+\begin{verbatim}
+    warning #6384: The INTEGER(KIND=4) value is out-of-range.	
+\end{verbatim}
+Hence, the program  could be executed without taking care of warning messages giving the following result: 
+
+\begin{verbatim}
+
+   Intention: assign Q <- 2147483648
+   Result:  Q = -2147483648 huge(Q) =   2147483647
+\end{verbatim}
+If warnings are not taken into account, non desirable results could be  obtained.  
+In this case, variable \texttt{Q} stores the value  \texttt{-2147483648} and the 
+programmer by an improper assignment tried to store the value \texttt{2147483648} which is greater 
+the maximum value that \texttt{Q} can store.
+
+
+
+
+    \section{Declaring kind}
+
+A good practice is to write codes that could be used with different integer sizes: \texttt{kind=1, 2, 4, 8}. 
+This can be done by not specifying the kind type of any integer variable. 
+In this case, the compiler assumes default integer kind for all integer variables. 
+Generally, this default can be easily changed  with a proper compilation option. 
+
+
+The opposite approach is to declare specifically the kind type of any integer variable by means of 
+sentences such as: 
+ \begin{verbatim}
+     integer (kind=1) :: i1
+     integer (kind=2) :: i2
+     integer (kind=4) :: i4
+     integer (kind=8) :: i8
+ \end{verbatim}
+When declaring constants, the situation is different. A specific kind type is declared  by underscoring the 
+constant with its kind type: 
+ \begin{verbatim}
+    integer (kind=8) :: i 
+    
+     i = 123_1 
+     i = 123_2
+     i = 123_4 
+     i = 123_8
+ \end{verbatim}
+In the above example, the constant \texttt{123} is stored in a register of 1, 2, 4, or 8 bytes. Later, it is 
+assigned to an integer variable of 8 bytes. 
+When no kind type specifier is selected for integer constants (\texttt{i = 123}), 
+then the compiler reserves an internal appropriate register of variable size
+depending on the value of the constant. 
+
+%
+%The compiler defines the memory size for each \textbf{constant} based on some rules:
+%
+%\begin{itemize}
+%    \item If a kind parameter is specified, the integer has the kind specified. 
+%    \item If a kind parameter is not specified, integer constants are interpreted as follows:
+%        \subitem If the integer constant is within the default integer kind range, the kind is default integer (compiler options).
+%        \subitem If the integer constant is outside the default integer kind range, the kind of the integer constant is the smallest integer 
+%kind that holds the constant. 
+%\end{itemize}
+%
+%According to \citet{IntelIntegers} the default integer size is affected by the compiler option \texttt{integer-size}, the \texttt{INTEGER} 
+%compiler directive, and the \texttt{OPTIONS} statement. These configurations allow the user to change easily the execution of the code so, 
+%for example, the algorithm can be checked for simple and double precision independently. 
+%
+%The memory size reserved for \textbf{variables} is slightly different:
+%
+%The first rule is also applied, the kind can be defined in the declaration. However, if it is not specified, the compiler is not permissive 
+%and does not changes it automatically if finds that an out-of-range value is stored in a variable sized with default integer value.
+% 
+%    The compiler do not decide automatically, just conforms to what is defined by the programmer. Notice that every code file admits some 
+%    compiler options where the default integer kind for variables and constants can be defined 
+%    (option \texttt{integer-size}).
+%    
+    
+\begin{IN}
+    \begin{itemize} 
+    \item  \textbf{Constants.}
+    The compiler reserves memory size depending on the magnitude of the constant. 
+    \item  \textbf{Variables.}
+    The memory size of any variable is specified by its kind type. 
+    If no kind type is specifically declared, the default integer kind is considered by the compiler. 
+   
+    \end{itemize} 
+\end{IN}
+
+%
+%fixes automatically the size reserved for all constants and variables based 
+%on the compiler options (which can be easily changed). 
+%
+%This allows you to run the program with different configurations depending on the needs of the moment. 
+%
+%However, codes are written with different purposes, choose the right option for each situation. 
+%If, despite this, you still want to declare the kind for a specific variable just 
+%include the value in the declaration by writing:
+%
+%\texttt{integer(kind = k) ::} where k is the bytes reserved: 1, 2, 4 or 8.
+%
+%%\texttt{integer(k) ::} or \texttt{integer*k ::}
+%
+
+
+
+
+%%OLD MATERIAL
+%\newpage
+%\listings{\home/Round_off.f90}{For CONSTANTS:}
+%{--END OF EXAMPLE--}{Second example of Integer_representation - Round_off.f90} 
+%
+%The previous example shows a couple of Warnings that must be considered when managing with integers. The first one makes reference to the assignation of the value $130$ to a 1 byte integer constant, The second warning says the same for the variable Q, which is also out-of-range since it is declared as \texttt{kind = 4}. Notice that none of them interrupts the compilation of the code so if the warnings are not considered, the program will be executed with a different behaviour as expected. 
+%
+%\begin{verbatim}
+%    warning #6047: The BYTE / LOGICAL(KIND=1) / INTEGER(KIND=1)
+%    value is out-of-range.   [130]
+%    
+%    warning #6384: The INTEGER(KIND=4) value is out-of-range.
+%\end{verbatim}
+
+
+%\begin{itemize}
+%    \item For a \textbf{constant} write the bytes reserved after the value preceded by an underscore (\texttt{n[\_k]}). 
+%    \item For a \textbf{variable}, just include the kind in the declaration by writing \texttt{integer(k) ::}, \texttt{integer(kind = k) ::} or \texttt{integer*k ::} (where k is the bytes reserved; 1, 2, 4 or 8).
+%\end{itemize}
+
+%\newpage
+%%Casos especiales
+%Finally, take a look at these two especial cases treated by the compiler. 
+%\begin{enumerate}
+%    \item In the assignment of a lesser memory size constant to a higher size variable the variable imposes its size and the constant will be transformed to the higher value. 
+%    \item If a corrupted constant (for example, \texttt{130\_1}) is assigned to a proper sized variable (for example \texttt{integer*2 :: R}), the compiler warns first about the out-of-range constant but makes the assignment properly assuming that the value expected for \texttt{R} is \texttt{130} and not the corrupted value.
+%\end{enumerate}
+%
+%\listings{\home/Round_off.f90}{!1. R is 8}
+%{--END OF EXAMPLE--}{Third example of Integer_representation - Round_off.f90}
+
+
+
+    \section{Two's complement converter} 
+
+A binary-to-decimal and decimal-to-binary converters are included in the codes that accompany this book.
+A third function is also included, it checks if an integer value is not properly stored 
+with an specific number of bits because of an overflow error. 
+The converters will return the two's complement conversion for the introduced value, whether is an
+integer value or a string characters of 0's and 1's. The specifications of each function are presented now.
+
+
+        \subsection{\texttt{TwosCompl\_converter\_to\_decimal} function}
+
+Returns the decimal integer value for the string of binary characters introduced according to the two's complement encoding.
+
+Notice that the two's complement encoding is always referred to an specific number of bits which means that it make 
+sense in a pre-defined memory size. Due to that, the conversion is performed according to the total length of bits 
+introduced in the string, if your binary expression has leading zeros do not forget to include them. In addition, 
+blank spaces are also treated as zeros so the string \texttt{' 01101'} is the same as \texttt{'001101'}.
+
+If more than 64 bits or wrong characters are introduced the result will be automatically \texttt{0}. 
+The table \ref{tab:specs1} shows the specifications of the input arguments of the converter.
+
+    \texttt{TwosCompl\_converter\_to\_decimal( bits )}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c |}
+        
+        \hline
+        Name       & Type                        & Limits  \\ \hline
+        
+        \begin{tabular}{@{}c@{}} \texttt{bits}  \\ (input)  \end{tabular}   & \texttt{character}    &  \begin{tabular}{@{}c@{}} Up to 64 characters with 0's, 1's  \\ or blank spaces (treated as 0's) \end{tabular}   \\ \hline
+        
+        Result   & \texttt{integer(kind=8)}   &  $[-9 223 372 036 854 775 808, 9 223 372 036 854 775 807]$  \\ \hline
+       
+        
+    \end{tabular}                                                       
+    \caption{Specifications of the \texttt{TwosCompl\_converter\_to\_decimal} function.}
+    \label{tab:specs1}
+\end{table}
+
+Example:
+\vspace{-0.5cm}
+\begin{verbatim} 
+write(*,*) "Two's complement conversion of binary: "
+write(*,*) "010101010110111001110  =  "
+write(*,*) TwosCompl_converter_to_decimal( '010101010110111001110' )
+\end{verbatim} 
+\vspace{-0.6cm}
+\begin{verbatim} 
+Two's complement conversion of binary:
+010101010110111001110  =
+                          699854
+\end{verbatim} 
+
+%Example 2:
+%
+%\begin{verbatim} 
+%write(*,*) "Two's complement conversion of binary: "
+%write(*,*) "110010110  =  "
+%write(*,*) TwosCompl_converter_to_decimal( '110010110' )
+%\end{verbatim}
+%
+%\begin{verbatim} 
+%Two's complement conversion of binary:
+%110010110  =
+%                         -106
+%\end{verbatim}
+ 
+
+        \subsection{\texttt{TwosCompl\_converter\_to\_binary} function}
+
+Returns the minimum length binary string that can store the decimal integer introduced according to the two's complement encoding.
+
+Notice that the two's complement encoding is always referred to an specific number of bits which means that it make 
+sense in a pre-defined memory size. This result is printed with the minimum bits that can store the number. 
+
+Out-of-range \texttt{kind=8} integer values will not be compiled (see table \ref{tab:specs2}). In addition, take into account that the algorithm used for this converter is the 
+one described in the section \ref{sec:TwosComp}. This algorithm will not return a proper value for the case \texttt{x = - huge(P) - 1} where \texttt{P} is a \texttt{kind=8}
+variable. While that number can be perfectly stored in the computer, its absolute value can not:
+
+\begin{equation*}
+    \left|x\right| = \left|- huge(P) - 1\right|= huge(P) + 1
+\end{equation*}
+
+    \texttt{TwosCompl\_converter\_to\_binary( x )}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c |}
+        
+        \hline
+        Name       & Type                        & Limits  \\ \hline
+        
+        \begin{tabular}{@{}c@{}} \texttt{x}  \\ (input)  \end{tabular}   & \begin{tabular}{@{}c@{}} \texttt{integer}  \\ (all kinds)  \end{tabular}  &  $[-9 223 372 036 854 775 807, 9 223 372 036 854 775 807]$  \\ \hline
+        
+        Result   & \texttt{character}  &  Up to 64 binary characters  \\ \hline
+        
+        
+    \end{tabular}                                                       
+    \caption{Specifications of the \texttt{TwosCompl\_converter\_to\_binary} function.}
+    \label{tab:specs2}
+\end{table}
+
+Example 1:
+
+\begin{verbatim} 
+write(*,*) "Two's complement conversion of integer: ", -89544563
+write(*,*) TwosCompl_converter_to_binary( -89544563 )
+\end{verbatim} 
+
+\begin{verbatim} 
+Two's complement conversion of integer:    -89544563
+1010101010011010100010001101
+\end{verbatim} 
+
+Example 2: This example shows that the number \texttt{1} must be represented with at least two bits. 
+The following section explains this result. 
+
+\begin{verbatim} 
+write(*,*) "Two's complement conversion of integer: ", 1
+write(*,*) TwosCompl_converter_to_binary( 1 )
+\end{verbatim} 
+
+\begin{verbatim} 
+Two's complement conversion of integer:            1
+01
+\end{verbatim}
+
+
+
+        \subsection{\texttt{Check\_overflowed\_int} function}
+
+For an integer introduced it returns the actual decimal integer stored in the computer in a specific memory 
+size according to the two's complement encoding. If the number is stored in more (or equal) binary digits than
+the minimum length needed, the result is the same as the input.
+
+Notice that an out-of-range \texttt{kind=8} integer value will not be compiled (see table \ref{tab:specs3}). 
+
+    \texttt{Check\_overflowed\_int( int, n\_bits )}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c |}
+        
+        \hline
+        Name       & Type                        & Limits  \\ \hline
+        
+        \begin{tabular}{@{}c@{}} \texttt{int}  \\ (input)  \end{tabular}   & \begin{tabular}{@{}c@{}} \texttt{integer}  \\ (all kinds)  \end{tabular}  &  $[-9 223 372 036 854 775 808, 9 223 372 036 854 775 807]$  \\ \hline
+        
+        \begin{tabular}{@{}c@{}} \texttt{n\_bits}  \\ (input)  \end{tabular}   & \begin{tabular}{@{}c@{}} \texttt{integer}  \\ (default kind)  \end{tabular}  &  $[1, 64]$  \\ \hline
+        
+        Result   & \texttt{integer(kind=8)}  &  $[-9 223 372 036 854 775 808, 9 223 372 036 854 775 807]$  \\ \hline
+        
+    \end{tabular}                                                       
+    \caption{Specifications of the \texttt{Check\_overflowed\_int} function.}
+    \label{tab:specs3}
+\end{table}
+
+A non-intuitive result is obtained from the experiment of representing the decimal integer \texttt{1} with just one bit. 
+In a pure binary conversion (unsigned integer for example) it is clear that the number \texttt{1} is represented through 
+the binary digit \texttt{1}. However, it can be checked that the two's complement conversion of the number \texttt{1} can only be 
+performed with 2 or more binary digits (\texttt{01}), being the result of the following line \texttt{-1}.
+
+\begin{verbatim}
+    Check_overflowed_int( 1, 1 )
+\end{verbatim}
+
+
+Example:
+
+\begin{verbatim} 
+write(*,*) "Check overflow integer of 13! = ", 6227020800
+write(*,*) "with 4-bytes memory size = ", 32, "bits"
+write(*,*) "The actual value stored is: "
+write(*,*) Check_overflowed_int( 6227020800, 32 )
+\end{verbatim} 
+
+\begin{verbatim} 
+Check overflow integer of 13! =             6227020800
+with 4-bytes memory size =           32 bits
+The actual value stored is:
+1932053504
+\end{verbatim} 
+
+
+
+
+%----------------------------OLD MATERIAL-----------------------
+%
+%A binary-to-decimal and decimal-to-binary converter is included in the codes that accompany this book.
+%In order to perform a conversion specify the value to convert, whether is a binary or a decimal value, 
+%and the number of memory size bits reserved to store the result. The two's complement conversion for that number of bits 
+%is shown in the screen together with some useful information about the conversion.
+%
+%\texttt{Twos\_complement\_converter} subroutine:
+%
+%Displays a summarize of the conversion with:
+%
+%\begin{itemize}
+%    \item Value to convert
+%    \item Number of bits reserved to store the result
+%    \item Decimal range available with that number of bits
+%    \item Two's complement result of the conversion with that number of bits
+%    \item Two's complement result of the conversion with 8-bytes (64 bits) memory storage 
+%\end{itemize} 
+%
+%Notice that the result with the specified number of bits and the maximum allowed memory size (8-bytes) is the same 
+%when no overflow has occurred. If an out-of-range number for the bits reserved is converted both results will differ. When this occurs, if the 
+%conversion is performed from decimal to binary, the converter automatically shows the actual decimal value that is being stored due to the overflowing 
+%value. The table \ref{tab:converterspecs} shows the specifications of the input arguments of the converter. 
+%
+%\texttt{call Twos\_complement\_converter( value, n\_bits )}
+%
+%\begin{table}[h]
+%    \centering
+%    \begin{tabular}{| c | c | c |}
+%        
+%        \hline
+%        Name       & type                        & limits  \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}} \texttt{value}  \\ (bin \rightarrow dec)  \end{tabular}   & \texttt{character}    &  \begin{tabular}{@{}c@{}} Up to 64 characters with 0's, 1's  \\ or blank spaces (treated as 0's) \end{tabular}   \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}} \texttt{value}  \\ (dec \rightarrow bin)  \end{tabular}   & \texttt{integer}   &  $[-9 223 372 036 854 775 808, 9 223 372 036 854 775 807]$  \\ \hline
+%        
+%        \texttt{n\_bits}    & \texttt{integer}                     & $[1, 64]$                                                  \\ \hline
+%        
+%        \multicolumn{3}{l}{ \begin{tabular}{@{}c@{}} Notice that \texttt{n\_bits} does not need to coincide with the number of bits  \\  in the binary value to convert, it can be greater, equal or less. \end{tabular}    }   \\ \hline
+%        
+%    \end{tabular}                                                       
+%    \caption{Input arguments of the \texttt{Twos\_complement\_converter} subroutine.}
+%    \label{tab:converterspecs}
+%\end{table}
+%
+%
+%
+%\newpage
+%Examples of binary\rightarrow decimal use:
+%
+%\begin{verbatim} 
+%call Twos_complement_converter( '0110100101101001', 30 )
+%\end{verbatim} 
+%
+%\begin{verbatim} 
+%--------------------------------------------------
+%Conversion from two's complement binary to decimal
+%                Value to convert =  0110100101101001
+%                     Memory size =  30 bits
+%Integer range = [          -536870912           536870911]
+%     Two's complement conversion =                 26985
+%Two's compl. 8-bytes conversion. =                 26985
+%--------------------------------------------------
+%\end{verbatim} 
+%
+%In this example the binary string is converted with enough memory size to hold the integer value, notice that 30 bits 
+%is not a supported integer in most programming languages since this data type is always stored in 1, 2, 4 or 8 bytes of memory. 
+%
+%\begin{verbatim} 
+%call Twos_complement_converter(                 &
+%    '0000000101110011001010001100110000000000', &
+%                                           32 )
+%\end{verbatim} 
+%
+%\begin{verbatim} 
+%--------------------------------------------------
+%Conversion from two's complement binary to decimal
+%Value to convert =  0000000101110011001010001100110000000000
+%     Memory size =  32 bits
+%Integer range = [         -2147483648          2147483647]
+%     Two's complement conversion =            1932053504
+%Two's compl. 8-bytes conversion. =            6227020800
+%--------------------------------------------------
+%\end{verbatim}
+%
+%In this example 4 bytes is not enough memory for this value, an overflow has occurred. The programmer should consider to use a 
+%\texttt{kind=8} variable to hold it if this value is used in the program. 
+%
+%
+%
+%
+%
+%\newpage
+%Examples of decimal\rightarrow binary use:
+%
+%\begin{verbatim} 
+%call Twos_complement_converter( 735, 16 )
+%\end{verbatim} 
+%
+%\begin{verbatim} 
+%--------------------------------------------------
+%Conversion from decimal to two's complement binary
+%Value to convert =                   735
+%Memory size =  16 bits
+%Integer range = [              -32768               32767]
+%Two's complement conversion =  0000001011011111
+%Two's compl. 8-bytes conversion. =  0000000000000000000000
+%                000000000000000000000000000000001011011111
+%--------------------------------------------------
+%\end{verbatim} 
+%
+%
+%
+%\begin{verbatim} 
+%call Twos_complement_converter( 35000, 16 )
+%\end{verbatim} 
+%
+%\begin{verbatim} 
+%--------------------------------------------------
+%Conversion from decimal to two's complement binary
+%Value to convert =                 35000
+%Memory size =  16 bits
+%Integer range = [              -32768               32767]
+%Two's complement conversion =  1000100010111000
+%Two's compl. 8-bytes conversion. =  0000000000000000000000
+%                000000000000000000000000001000100010111000
+%--------------------------------------------------
+%Overflow, not enough bits to store this number.
+%The actual value stored in the computer is:
+%--------------------------------------------------
+%Conversion from two's complement binary to decimal
+%                Value to convert =  1000100010111000
+%                     Memory size =  16 bits
+%Integer range = [              -32768               32767]
+%     Two's complement conversion =                -30536
+%Two's compl. 8-bytes conversion. =                 35000
+%--------------------------------------------------
+%\end{verbatim}
+%
+%In this last example notice how the number 35000 is an out-of-range value for a 2-bytes integer. 
+%The converter warns that an overflow has occurred and the actual value stored in the computer is 
+%$-30536$, which is the two's complement conversion of the 16 least significant bits involved in the 
+%expected value. 
+
+
+
+
+
+

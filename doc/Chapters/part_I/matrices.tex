@@ -1,6 +1,7 @@
 %___________________________________________________________________________________________________
 \chapter{Operations with vectors and matrices} 
 
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
 
 \section{Introduction}
 
@@ -181,7 +182,7 @@ Some basic notions are summarized now:
 
 
 
-\listings{\home/Algebra/Matrix_operations.f90}{subroutine Matrix_operation_examples}
+\listings{\home/Matrix_operations.f90}{subroutine Matrix_operation_examples}
       {end subroutine}{Matrix_operations.f90}
 
 
@@ -272,7 +273,7 @@ $$
 
 The following examples are supported by the functions: \texttt{Vandermonde( M )} matrix of a given dimension \texttt{M}, \texttt{trace( A )} trace of a matrix and the recursive function \texttt{power( a, k )} to obtain the kth power of a matrix. Once each function is coded, general operations like these proposed here are easy to implement, remember that each abstraction can now be used in any program where this algebra is needed from now on. 
 
-\listings{\home/Algebra/Dynamic_allocation.f90}{subroutine Matrices_allocation}
+\listings{\home/Dynamic_allocation.f90}{subroutine Matrices_allocation}
 {end subroutine}{Dynamic_allocation.f90}
 
 
@@ -291,10 +292,10 @@ Take note of the full array assignation performed inside the explicit loop. Once
 %Also, it is mandatory to specify to the function \texttt{sum} that the summation is only performed in the third dimension of \texttt{Ak} so it is adding one matrix to the next one. 
 
 
-\listings{\home/Algebra/Dynamic_allocation.f90}{function trace}
+\listings{\home/Dynamic_allocation.f90}{function trace}
 {end function}{Dynamic_allocation.f90}
 
-\listings{\home/Algebra/Dynamic_allocation.f90}{function power}
+\listings{\home/Dynamic_allocation.f90}{function power}
 {end function}{Dynamic_allocation.f90}
 
 For the functions \texttt{power( A, k )} and \texttt{trace( A )} two concepts should be extracted. Firstly, both must be used with square matrices, where both mathematical operations are defined. Secondly, the concept of recursion is used to calculate the kth power of a matrix. Essentially, the kth power of a matrix is the multiplication of that matrix with his $ k-1 $ power. A \texttt{recursive} statement is used for the function declaration so the compiler knows that this function can call to itself in order to calculate smaller instances of its main functionality, which means, it is going to call itself to calculate the $ (k-1) $ power once it tries to compute the kth power and so on until the power needed is 0 so the result is the identity matrix. 

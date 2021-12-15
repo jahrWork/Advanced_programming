@@ -31,9 +31,9 @@ subroutine Taylor_expansion_examples()
      call disfin                  
      
      call plot_ini(-0.9, 0.9, 0., 5.) 
-     call plot( fraction )  
+     call plot( fractional )  
      call color("red") 
-     call plot( Taylor_fraction ) 
+     call plot( Taylor_fractional ) 
      call disfin 
      
      call plot_ini(0., 2*PI, -2., 2.) 
@@ -41,7 +41,7 @@ subroutine Taylor_expansion_examples()
      do i=1, 26, 4  
         call color( colors(i/4+1)) 
         M = i
-       call plot( Taylor_cosine ) 
+        call plot( Taylor_cosine ) 
      end do 
      call disfin 
      
@@ -82,15 +82,15 @@ function cosine(x) result(h)
         
 end function
 
-function Taylor_fraction(x) result(f) 
+function Taylor_fractional(x) result(f) 
       real, intent(in) :: x 
       real :: f
       
-        f = Taylor( df = d_fraction, x0 = 0., x = x, N = 5 ) 
+        f = Taylor( df = d_fractional, x0 = 0., x = x, N = 5 ) 
         
 end function    
     
- function d_fraction(x, k) result(dk) 
+ function d_fractional(x, k) result(dk) 
       real, intent(in) :: x 
       integer, intent(in) :: k 
       real :: dk  
@@ -103,7 +103,7 @@ end function
         
 end function   
 
-function fraction(x) result(h) 
+function fractional(x) result(h) 
       real, intent(in) :: x 
       real :: h 
       

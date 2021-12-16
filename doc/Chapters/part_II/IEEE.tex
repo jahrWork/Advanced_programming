@@ -5,8 +5,10 @@
      
 \section*{Overview}
 
-Real numbers can be thought of  as points with a infinite decimal representation
-on an infinitely long line called the real line. However, since the internal representation of a real number 
+Real numbers can be represented by 
+an integer part and a decimal parts separated by a character which is usually a point. 
+The integer and the decimal part have, in general, infinite length.  
+However, since the internal representation of a real number 
 in a computer  is stored  on a finite amount of memory, 
 only some real numbers can be represented exactly. 
 In other words, working with a finite precision machine,  real numbers are approximate.
@@ -23,6 +25,7 @@ In other words, working with a finite precision machine,  real numbers are appro
 This idea is extended to real operations and allows to understand that most calculations 
 are approximate and the resulting errors are called "round-off" errors. 
 The origin and the consequences of these errors will be discussed in this chapter. 
+The following topics are covered in this chapter: 
 %
 %to perform will result in values 
 %that are not represented in the standard implemented in the machine. 
@@ -41,7 +44,7 @@ The origin and the consequences of these errors will be discussed in this chapte
   
 
 
-The following topics are covered in this chapter: 
+
 
 \begin{enumerate} 
     \setlength\itemsep{-0.1cm}
@@ -75,13 +78,15 @@ but the computer result is \texttt{S = 26.1582}
 \listings{\home/Round_off.f90}
 {errors_in_operations}{end subroutine}
 {Round_off.f90} 
-In this second example, an infinite loop is written to check the smallest value \texttt{eps} 
+
+\newpage
+In the second example, an infinite loop is written to check the smallest value \texttt{eps} 
 that being added to the unity gives a result different to the unity.  
 %This snippet allows to determine  the 
 %the smallest number E of the same kind as x such that 1 + E > 1. 
 Fortran implements this value by means of the intrinsic function \texttt{epsilon(x)}.
 
-\vspace{0.2cm}  
+\vspace{0.5cm}  
   \renewcommand{\home}{./Fortran/sources/IEEE}  
 \listings{\home/Round_off.f90}
 {loss_of_precision}{end subroutine}
@@ -90,7 +95,7 @@ Fortran implements this value by means of the intrinsic function \texttt{epsilon
 
 The above examples illustrate two main problems when working with real variables and real constants: 
 \begin{enumerate} 
-\setlength\itemsep{-0.1cm}
+\setlength\itemsep{0.1cm}
 \item Real constant numbers do not have an exact representation in the computer. 
 \item Operations with reals give rise to round-off errors that could be important. 
 \end{enumerate}
@@ -343,10 +348,204 @@ representation is the same but their distribution and range are different.
 %\end{IN}
 
 
+In the following section, 
+the standard IEEE 754 which is used in all computers is 
+explained in detail to understand how real numbers are stored in 
+floating point representation.
 
+
+
+
+\section{Floating-point representation in IEEE 754}
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
 \newpage 
-\section{Representation in IEEE 754}
+\FloatBarrier
+    \section{Distance between floating point real numbers} \label{sec:roundoff}
 
+It has been introduced in the previous section that there are two reasons why the number you may want to represent in the computer can not be 
+exactly represented and has to be rounded (to an IEEE floating-point value). First and the less common, the number is out of the 
+representable range in the specific precision (either for an overflow or underflow) and second, while the decimal number has finite number of 
+digits, the exact binary representation has infinite digits or just more significant digits than the allowed by the precision (see 
+\cite{articleIEEE}). 
+
+In a previous section the concepts of range and resolution of the numbers that are represented are explained. Also, how both concepts are 
+opposed due to the finite precision. A visually way to understand this is thinking of the exponent as a window between two values, and the 
+mantissa as the offset of an specific number from the initial value of the window \cite{VisExpl}. In the decimal system the window tells 
+which two consecutive power-of-ten are we treating: [0.1,1], [1,10], [10,100], etc. and in binary system the windows jump with powers-of-two 
+so [0.5,1], [1,2], [2,4], etc. This window then is divided in equidistant divisions according to the number of bits used for the mantissa. 
+However, notice that from one window to the next one the number of divisions is the same and the length of the window much bigger (each 
+window doubles the previous), then the resolution in that window is lower and the programmer is loosing capability to represent numbers since 
+the absolute value of the number is bigger. Said in other words, the density of IEEE 754 floating-point values near the zero is bigger than 
+the density of values with growing values. 
+
+Let's see this with an example, with 23 digits (the omitted leading 1 is always a 1) we have 23bits precision to divide every window, this 
+means $2^{23} = 8688608$ possible values. In the window $\left[1,2\right]$ the resolution is $\frac{\left(2-1\right)}{2^{23}} \sim 
+0.000000119$ while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is $\frac{\left(65536-32768\right)}{2^{23}} \sim 
+0.003906$. Notice the essential consequences of this, the simple step of writing a number in your program to be used as a constant or stored 
+in a variable is going to have an error associated, and this error is going to be higher when working with big numbers than small numbers. 
+For simple precision, like in the previous example, when the window corresponds to $\left[16777216=2^{24},8388608=2^{23}\right]$ the absolute 
+error committed is $1$. 
+
+The density of representable numbers can be represented in the number line, however, for the representation let's consider a lower precision. 
+For example, as it is broaden in \cite{articleIEEE}, consider the case where the base of representation is $2$, there are only $3$ 
+significant digits in the mantissa and only $4$ available exponents ($-1, 0, 1, 2$) without sign bit (see Figure \ref{fig:DensityNumbers}). A 
+general number in this system is written: $d.dd \quad x \quad 2^{e}\quad \textrm{with}\quad e \in \left[-1, 2\right] $ Take a look at the 
+possible decimal values that this system could represent (see table \ref{tab:PossibleValues}).
+
+\begin{table}
+    \centering
+    \begin{tabular}{| c | c | c | c | c | }
+        \hline
+        Mantissa/Exponent   & $-1$ & $0$  & $1$  &   $2$  \\ \hline
+        1.00                & $0.5$ & $1$  & $2$  &   $4$  \\ \hline
+        1.01                & $0.625$ & $1.25$  & $2.5$  &   $5$  \\ \hline
+        1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
+        1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
+    \end{tabular}
+    \caption{Possible values (shown the decimal value) covered by the example system treated (read text for explanation).}
+    \label{tab:PossibleValues}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/DensityNumbers.png}
+    \caption{Representable numbers in the binary numbers system defined by $p = 3$ and $e\in\left[-1, 2  \right]$ (read text for more 
+    details).}
+    \label{fig:DensityNumbers}
+\end{figure}
+
+
+In those cases where the exact number to be represented is approximated by the nearest IEEE 754 number, the absolute error committed is 
+bounded. This happens in the declaration of a variable or the use of a constant value. On the opposite, in the case of operating with 
+variables and constants the result of the calculation could be different from the nearest IEEE value to the exact result. 
+
+As an example, consider the binary system explained above, imagine that the program needs to use the value $3.1875_{10} = 11.0011_2 = 
+1.10011x2^1_2$. This number will be represented as $3_{10} = 1.10x2^1_2$ in the system proposed so the error committed is $0.1875_{10} = 
+0.0011_2$. Notice that this is $0.011_2$ units in the last place (\textit{ulps}). The absolute error in this system, when the exact number is 
+approximated by the nearest floating-point value, is bounded by $0.1_2 = 0.5_{10}$ ulps and the exact absolute error committed for a number 
+$z$ will be $\abs{d.dd-\left(\frac{z}{2^e}\right)} 2^{3-1}$ ulps. It seems that this absolute error is small for every number to be 
+represented, but take into account that the concept ``unit in the last place'' depends on the exponent, said in other words, depends on the 
+window of the number to be represented, so $0.5$ ulps in the number $z = 0.5625$ means an error of $0.0625_{10}$ units, but if the number $z 
+= 5.5$ is represented by the number $6_{10}$, then the error committed is $0.5_{10}$ units, which is quite bigger. 
+
+Another way to calculate and measure the error when the number is approximated by the nearest value is the relative error. This is the 
+difference between both the exact number and the approximation and divided by the exact value. Since this value is divided by the real 
+number, the relative error is going to have the same bounds for all the representable numbers, while the absolute error grows for growing 
+exponents, the denominator also grows and the relative errors maintains ``constant''. Actually, the relative error does not vary from one 
+window to the next one, it repeats the same behaviour, but it does change inside the window, just take a look at his expression. What it is 
+interesting is to calculate the relative error that is related to the maximum absolute error. In this case, for every exponent (window), the 
+real number varies in the range $z \in \left[\beta^e, \beta \beta^e\right)$ while the maximum absolute error is constant 
+$\frac{1}{2}\textrm{ulp}$ so the relative error ranges in: $\left[\frac{\beta}{2}\beta^{-p}, \frac{1}{2}\beta^{-p} \right]$
+
+\begin{IN}
+    Use the absolute error, whether expressed absolutely or with ulps, to understand the rounding error and use the relative error to analyse 
+    the results of calculations in the computer.
+\end{IN}  
+
+For a general number system where $\beta$ is the base of the system, $p$ is the number of digits reserved for the mantissa and $e$ is the 
+exponent, the table \ref{tab:errors} shows the errors and their bounds. Notice that the definition of the ulp is composed by a part that 
+depends number system ($\beta$ and $p$) and another part that depends on the specific exponent that is represented (the window), $e$. 
+
+\begin{table}
+    \centering
+    \begin{tabular}{| c | l | }
+        \hline
+        \textbf{Definition}   & \textbf{Expression }  \\ \hline
+        ulp                & $\beta\beta^{-p}\beta^e = 0.0000...\beta' \textrm{x} \beta^e    \quad     \textrm{with} \quad \beta' = 
+        \frac{\beta}{2} \textrm{digits}$  \\ \hline
+        Absolute error of $z$             & $\abs{d.dddd...\textrm{x} \beta^e - z} = \abs{d.dddd...-\frac{z}{\beta^e}}\beta^e$ \\ \hline
+        Maximum absolute error            & $\left[\left(\frac{\beta}{2}\right)\beta^{-p}\right]\beta^e = \frac{1}{2} ulp$  \\ \hline
+        Relative error                & $\abs{\frac{z - d.dddd...\textrm{x} \beta^e}{z}}$  \\ \hline
+        \begin{tabular}{@{}c@{}} Relative error of the   \\    maximum absolute error    \end{tabular}           & 
+        $\left[\frac{1}{2}\beta^{-p}, \frac{\beta}{2}\beta^{-p} \right]$   \\ \hline
+    \end{tabular}
+    \caption{Different errors committed when the real number $z$ is approximated by the nearest floating-point value.}
+    \label{tab:errors}
+\end{table}
+
+A good way to understand the expressions and behaviour of these errors is to represented them in the same number line shown above, using that 
+representation system. Because of the high density of the representable number in the IEEE-754 system for simple precision, in that case only 
+the boundaries of the errors are represented, while in the simpler case of only 3 significant digits, is possible to show the exact error for 
+every real number (see Figure \ref{fig:AbsErrorGraph}).
+
+For the relative error, take into account that the each number has its own value, exactly like the absolute error. However, we are more 
+interested in the general behaviour of this error. Since it is calculated dividing the absolute error for the real number ($z$) notice that 
+for each window the relative error is smaller in the higher values (in the right part of the window) while it is higher in the left part. 
+Furthermore, the relative error is exactly the same for all the windows (it does not vary with the exponent of the number represented). Said 
+that, the relative error is always bounded by $\frac{\beta}{2}\beta^{-p}$ in the left part of each window and by $ \frac{1}{2}\beta^{-p} $ in 
+the right part (see Figure \ref{fig:RelErrorGraph}). 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/AbsErrorGraph.png}
+    \caption{Graphic of the absolute error committed when the real numbers are approximated by the nearest floating-point value with the 
+    maximum value represented for each window (exponent).}
+    \label{fig:AbsErrorGraph}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/RelErrorGraph.png}
+    \caption{Graphic of the relative error committed when the real numbers are approximated by the nearest floating-point value with the 
+    maximum value represented for all windows (exponent).}
+    \label{fig:RelErrorGraph}
+\end{figure}
+
+\begin{IN}
+    The value $\frac{\beta}{2}\beta^{-p} = \epsilon$ is called machine epsilon, always take into account this magnitude because it bounds the 
+    relative error of any number when is rounded to the closest floating-point value. In the case of binary floating-point it can be 
+    expressed as $\epsilon = 2^{-p}$ taking the value of $2^{-24} \sim 5.96e-8$ in simple precision (23 bits plus 1 implicit bit), $2^{-53} 
+    \sim 1.11e-16$ in double precision and $2^{-113} \sim 9.63e-35$ in quadruple precision. In other conventions, the machine epsilon is 
+    considered the value $\beta^{1-p} = \epsilon$ which is the ulp for the value $1.0$ and in this case it is defined as: \textit{machine 
+    epsilon is defined as the difference between 1 and the next larger floating point number}.
+\end{IN}
+
+%Grafica de las cotas para el IEEE-754 hacer nosotros
+The example above helps to understand the behaviour of both errors, for a real situation where simple or double precision of IEEE standard is 
+used, the density of numbers is much higher but the curve is the same. For real applications a programmer is more interested in the upper 
+bound of the absolute and relative errors already expressed in decimal system since it is the numbers system used for a numerical simulation. 
+This values are represented in the Figures \ref{fig:AbsErrorIEEE} and \ref{fig:RelErrorIEEE}.
+
+%Ejemplo con repr exacta y sin repr exacta para distintas precisiones
+Now, with all the explanations above, the following examples are easy to understand based on converting the reals to floating-point values 
+from the IEEE standard. 
+%PONER EJEMPLOS
+
+%ESTE PARRAFO HABRA QUE EXPLICARLO MEJOR
+It can be concluded from this chapter that the density of numbers that can be represented near 0 is enormous, while this density decreases as 
+we move away from 0. This property of the floating point representation can be used by the numerical programmer through the normalization of 
+the operations to perform. For example, consider an ODE solution where the whole equation is dimensionless with all the terms divided by the 
+maximum values that the variables are going to reach. In this case, the solution will vary between 0 and 1 where the IEEE 754 floating point 
+set is more dense and the absolute error is lower. Anyway, do not forget that the relative error performed in a operation is going to be 
+constant. 
+
+
+
+
+\section{Decimal real number from its internal IEEE binary representation}
+Use scientific notation with ES format (normalized mantissa).
+
+$$
+   x = (-1) ^s \sum_{i=0}^{M-1}  b_i 2^{-i} 2^e 
+$$
+with $b_0 = 1$. 
+
+$$
+   \epsilon = m_1 2 ê - m_2 2^e  = 2^{e-M} 
+$$
+
+
+\section{IEEE binary representation from decimal real numbers}
+
+
+\section{IEEE exceptions}
+
+\section{Practical guidance to use real numbers} 
 
 
 The best way to understand the differences between both representations is with an example. 
@@ -371,8 +570,6 @@ The best way to understand the differences between both representations is with 
         extends the range but decreases the accuracy and resolution. 
     \end{itemize}
 \end{IN}
-
-
 
 
 
@@ -630,117 +827,9 @@ This program is not only useful to understand the conversion but also to make te
 
 
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-\newpage 
-\FloatBarrier
-    \section{Distance between floating point real numbers} \label{sec:roundoff}
-
-It has been introduced in the previous section that there are two reasons why the number you may want to represent in the computer can not be exactly represented and has to be rounded (to an IEEE floating-point value). First and the less common, the number is out of the representable range in the specific precision (either for an overflow or underflow) and second, while the decimal number has finite number of digits, the exact binary representation has infinite digits or just more significant digits than the allowed by the precision (see \cite{articleIEEE}). 
-
-In a previous section the concepts of range and resolution of the numbers that are represented are explained. Also, how both concepts are opposed due to the finite precision. A visually way to understand this is thinking of the exponent as a window between two values, and the mantissa as the offset of an specific number from the initial value of the window \cite{VisExpl}. In the decimal system the window tells which two consecutive power-of-ten are we treating: [0.1,1], [1,10], [10,100], etc. and in binary system the windows jump with powers-of-two so [0.5,1], [1,2], [2,4], etc. This window then is divided in equidistant divisions according to the number of bits used for the mantissa. However, notice that from one window to the next one the number of divisions is the same and the length of the window much bigger (each window doubles the previous), then the resolution in that window is lower and the programmer is loosing capability to represent numbers since the absolute value of the number is bigger. Said in other words, the density of IEEE 754 floating-point values near the zero is bigger than the density of values with growing values. 
-
-Let's see this with an example, with 23 digits (the omitted leading 1 is always a 1) we have 23bits precision to divide every window, this means $2^{23} = 8688608$ possible values. In the window $\left[1,2\right]$ the resolution is $\frac{\left(2-1\right)}{2^{23}} \sim 0.000000119$ while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is $\frac{\left(65536-32768\right)}{2^{23}} \sim 0.003906$. Notice the essential consequences of this, the simple step of writing a number in your program to be used as a constant or stored in a variable is going to have an error associated, and this error is going to be higher when working with big numbers than small numbers. For simple precision, like in the previous example, when the window corresponds to $\left[16777216=2^{24},8388608=2^{23}\right]$ the absolute error committed is $1$. 
-
-The density of representable numbers can be represented in the number line, however, for the representation let's consider a lower precision. For example, as it is broaden in \cite{articleIEEE}, consider the case where the base of representation is $2$, there are only $3$ significant digits in the mantissa and only $4$ available exponents ($-1, 0, 1, 2$) without sign bit (see Figure \ref{fig:DensityNumbers}). A general number in this system is written: $d.dd \quad x \quad 2^{e}\quad \textrm{with}\quad e \in \left[-1, 2\right] $ Take a look at the possible decimal values that this system could represent (see table \ref{tab:PossibleValues}).
-
-\begin{table}
-    \centering
-    \begin{tabular}{| c | c | c | c | c | }
-        \hline
-        Mantissa/Exponent   & $-1$ & $0$  & $1$  &   $2$  \\ \hline
-        1.00                & $0.5$ & $1$  & $2$  &   $4$  \\ \hline
-        1.01                & $0.625$ & $1.25$  & $2.5$  &   $5$  \\ \hline
-        1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
-        1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
-    \end{tabular}
-    \caption{Possible values (shown the decimal value) covered by the example system treated (read text for explanation).}
-    \label{tab:PossibleValues}
-\end{table}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/DensityNumbers.png}
-    \caption{Representable numbers in the binary numbers system defined by $p = 3$ and $e\in\left[-1, 2  \right]$ (read text for more details).}
-    \label{fig:DensityNumbers}
-\end{figure}
 
 
-In those cases where the exact number to be represented is approximated by the nearest IEEE 754 number, the absolute error committed is bounded. This happens in the declaration of a variable or the use of a constant value. On the opposite, in the case of operating with variables and constants the result of the calculation could be different from the nearest IEEE value to the exact result. 
-
-As an example, consider the binary system explained above, imagine that the program needs to use the value $3.1875_{10} = 11.0011_2 = 1.10011x2^1_2$. This number will be represented as $3_{10} = 1.10x2^1_2$ in the system proposed so the error committed is $0.1875_{10} = 0.0011_2$. Notice that this is $0.011_2$ units in the last place (\textit{ulps}). The absolute error in this system, when the exact number is approximated by the nearest floating-point value, is bounded by $0.1_2 = 0.5_{10}$ ulps and the exact absolute error committed for a number $z$ will be $\abs{d.dd-\left(\frac{z}{2^e}\right)} 2^{3-1}$ ulps. It seems that this absolute error is small for every number to be represented, but take into account that the concept ``unit in the last place'' depends on the exponent, said in other words, depends on the window of the number to be represented, so $0.5$ ulps in the number $z = 0.5625$ means an error of $0.0625_{10}$ units, but if the number $z = 5.5$ is represented by the number $6_{10}$, then the error committed is $0.5_{10}$ units, which is quite bigger. 
-
-Another way to calculate and measure the error when the number is approximated by the nearest value is the relative error. This is the difference between both the exact number and the approximation and divided by the exact value. Since this value is divided by the real number, the relative error is going to have the same bounds for all the representable numbers, while the absolute error grows for growing exponents, the denominator also grows and the relative errors maintains ``constant''. Actually, the relative error does not vary from one window to the next one, it repeats the same behaviour, but it does change inside the window, just take a look at his expression. What it is interesting is to calculate the relative error that is related to the maximum absolute error. In this case, for every exponent (window), the real number varies in the range $z \in \left[\beta^e, \beta \beta^e\right)$ while the maximum absolute error is constant $\frac{1}{2}\textrm{ulp}$ so the relative error ranges in: $\left[\frac{\beta}{2}\beta^{-p}, \frac{1}{2}\beta^{-p} \right]$
-
-\begin{IN}
-    Use the absolute error, whether expressed absolutely or with ulps, to understand the rounding error and use the relative error to analyse the results of calculations in the computer.
-\end{IN}  
-
-For a general number system where $\beta$ is the base of the system, $p$ is the number of digits reserved for the mantissa and $e$ is the exponent, the table \ref{tab:errors} shows the errors and their bounds. Notice that the definition of the ulp is composed by a part that depends number system ($\beta$ and $p$) and another part that depends on the specific exponent that is represented (the window), $e$. 
-
-\begin{table}
-    \centering
-    \begin{tabular}{| c | l | }
-        \hline
-        \textbf{Definition}   & \textbf{Expression }  \\ \hline
-        ulp                & $\beta\beta^{-p}\beta^e = 0.0000...\beta' \textrm{x} \beta^e    \quad     \textrm{with} \quad \beta' = \frac{\beta}{2} \textrm{digits}$  \\ \hline
-        Absolute error of $z$             & $\abs{d.dddd...\textrm{x} \beta^e - z} = \abs{d.dddd...-\frac{z}{\beta^e}}\beta^e$ \\ \hline
-        Maximum absolute error            & $\left[\left(\frac{\beta}{2}\right)\beta^{-p}\right]\beta^e = \frac{1}{2} ulp$  \\ \hline
-        Relative error                & $\abs{\frac{z - d.dddd...\textrm{x} \beta^e}{z}}$  \\ \hline
-        \begin{tabular}{@{}c@{}} Relative error of the   \\    maximum absolute error    \end{tabular}           & $\left[\frac{1}{2}\beta^{-p}, \frac{\beta}{2}\beta^{-p} \right]$   \\ \hline
-    \end{tabular}
-    \caption{Different errors committed when the real number $z$ is approximated by the nearest floating-point value.}
-    \label{tab:errors}
-\end{table}
-
-A good way to understand the expressions and behaviour of these errors is to represented them in the same number line shown above, using that representation system. Because of the high density of the representable number in the IEEE-754 system for simple precision, in that case only the boundaries of the errors are represented, while in the simpler case of only 3 significant digits, is possible to show the exact error for every real number (see Figure \ref{fig:AbsErrorGraph}).
-
-For the relative error, take into account that the each number has its own value, exactly like the absolute error. However, we are more interested in the general behaviour of this error. Since it is calculated dividing the absolute error for the real number ($z$) notice that for each window the relative error is smaller in the higher values (in the right part of the window) while it is higher in the left part. Furthermore, the relative error is exactly the same for all the windows (it does not vary with the exponent of the number represented). Said that, the relative error is always bounded by $\frac{\beta}{2}\beta^{-p}$ in the left part of each window and by $ \frac{1}{2}\beta^{-p} $ in the right part (see Figure \ref{fig:RelErrorGraph}). 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/AbsErrorGraph.png}
-    \caption{Graphic of the absolute error committed when the real numbers are approximated by the nearest floating-point value with the maximum value represented for each window (exponent).}
-    \label{fig:AbsErrorGraph}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/RelErrorGraph.png}
-    \caption{Graphic of the relative error committed when the real numbers are approximated by the nearest floating-point value with the maximum value represented for all windows (exponent).}
-    \label{fig:RelErrorGraph}
-\end{figure}
-
-\begin{IN}
-    The value $\frac{\beta}{2}\beta^{-p} = \epsilon$ is called machine epsilon, always take into account this magnitude because it bounds the relative error of any number when is rounded to the closest floating-point value. In the case of binary floating-point it can be expressed as $\epsilon = 2^{-p}$ taking the value of $2^{-24} \sim 5.96e-8$ in simple precision (23 bits plus 1 implicit bit), $2^{-53} \sim 1.11e-16$ in double precision and $2^{-113} \sim 9.63e-35$ in quadruple precision. In other conventions, the machine epsilon is considered the value $\beta^{1-p} = \epsilon$ which is the ulp for the value $1.0$ and in this case it is defined as: \textit{machine epsilon is defined as the difference between 1 and the next larger floating point number}.
-\end{IN}
-
-%Grafica de las cotas para el IEEE-754 hacer nosotros
-The example above helps to understand the behaviour of both errors, for a real situation where simple or double precision of IEEE standard is used, the density of numbers is much higher but the curve is the same. For real applications a programmer is more interested in the upper bound of the absolute and relative errors already expressed in decimal system since it is the numbers system used for a numerical simulation. This values are represented in the Figures \ref{fig:AbsErrorIEEE} and \ref{fig:RelErrorIEEE}.
-
-%Ejemplo con repr exacta y sin repr exacta para distintas precisiones
-Now, with all the explanations above, the following examples are easy to understand based on converting the reals to floating-point values from the IEEE standard. 
-%PONER EJEMPLOS
-
-%ESTE PARRAFO HABRA QUE EXPLICARLO MEJOR
-It can be concluded from this chapter that the density of numbers that can be represented near 0 is enormous, while this density decreases as we move away from 0. This property of the floating point representation can be used by the numerical programmer through the normalization of the operations to perform. For example, consider an ODE solution where the whole equation is dimensionless with all the terms divided by the maximum values that the variables are going to reach. In this case, the solution will vary between 0 and 1 where the IEEE 754 floating point set is more dense and the absolute error is lower. Anyway, do not forget that the relative error performed in a operation is going to be constant. 
-
-
-
-\section{Reconstruction from its internal binary representation}
-Use scientific notation with ES format (normalized mantissa).
-
-$$
-   x = (-1) ^s \sum_{i=0}^{M-1}  b_i 2^{-i} 2^e 
-$$
-with $b_0 = 1$. 
-
-$$
-   \epsilon = m_1 2 ê - m_2 2^e  = 2^{e-M} 
-$$
-
-
-
-\section{Writing floating point expressions}
+%\section{Writing floating point expressions}
 
 Exactly like in the case of integers, in a code, the programmer works with real variables and real constants, and it is interesting to manage properly the precision reserved for both. Specially in strong typed languages like Fortran, the programmer must understand how assignations are performed and the typical errors that could appear when types of variables are not properly defined. If the type of a variable is defined in the declaration of the variable it is typically used \texttt{real(kind = n) :: } or \texttt{real*n :: } where \texttt{n} is 4, 8 or 16. For each situation the strategy can vary, however, it can be interesting to write the program independently of the precision, this means that the declaration of variables is made with no kind specification, just \texttt{real :: x}. If the ``kind'' parameter is not specified, the kind of the variable is the default value, which can be modified in the compiler options. The main advantage of this strategy is that the code can be executed with all the precisions by changing an option of the compiler. Thus, the program is not dependent on the precision imposed when it was written. 
 
@@ -930,254 +1019,4 @@ y = x**2.
 
 
 
-
-
-\section{Condition number and stability} 
-    
-The condiotn number of a problem do not know anything about the operations 
-and the round-off errors associated to the algorithm.  
-
-An algorithm is stable is every step is well conditioned. 
-
-Round-off + unstable = disaster. (e.g. alternate series)
-
-Round-off + stable = bounded error. 
-
-Exact arithmetic (no round-off errors) stability is not concerned. 
-Well/Ill condiotned refers to the problem 
-
-stability refers to the algorithm. 
-
-Example. condition number at x = 0 is one but it is unstable. 
-
- 
-$$
-y = \sqrt{1+x} - 1 
-$$   
-
-
-Examples: 
-\begin{enumerate} 
-\item $1+ x $ no problme
-\item $ \sqrt{1+x} $ no problem 
-\item substract  $ \sqrt{1+x} - 1 $ :BIG PROBLEM 
-
-\end{enumerate}
-look for another algorithm 
-$$
-y =  \frac{x}{\sqrt{1+x} + 1}
-$$
-
-Backward stability. The significance of the error produced by the algorithm is due only to
-the conditioning of the problem. 
-
-
-Multiplications no problem 
-
-Substractions near equal values 
-$$ 
-k = \frac{ | x | }{ |x - y |}
-$$   
-    
-    $$
-     k = \frac{ f(x+\Delta x) - f(x) }{ f(x)} / \frac{ \Delta x  }{ x} = \frac{ f^\prime(x) x }{ f(x)}  
-    $$
-    
-    $$
-        \frac{\Delta y}{ y }  =  = \frac{ f^\prime(x) x }{ f(x)}  \frac{\Delta x}{ x}
-    $$
-    
-    
-    Stability 
-    $$
-      \frac{\tilde{f} (x) - f(x)   }{ f(x) }
-    $$
-
-Examples: 
-\begin{enumerate} 
-\item $\sqrt{x^2+1} -1$ 
-\item $ \frac{1- cos(x)}{ x^2} $ = $ 0.5 ( \frac{ sin(x/2)}   {x/2 } )^2 $
-\item plot $ y = (x-2)^9 x \in [ 1.95, 2.05] $ 1000 points 
-
-
-\end{enumerate}
-
-
-
-
- \usetikzlibrary{shapes.geometric, arrows}
- 
- \usetikzlibrary{positioning} 
- 
- \tikzstyle{block} = [draw, rectangle, rounded corners, draw=black, very thick,
- fill={rgb:orange,1;yellow,2;pink,5},
- text width=4cm, text centered, minimum height=1.2cm, node distance=3cm]
- 
- \tikzstyle{blockr} = [draw, rectangle, rounded corners, draw=black, very thick,
-  fill={rgb:red,1;red,2;red,5},
-  text width=4cm, text centered, minimum height=1.2cm, node distance=3cm]
- 
- \tikzstyle{container} = [draw, rectangle, inner sep=0.3cm]
- 
- \tikzstyle{text} = [draw, color=blue]
- \tikzstyle{arrow} = [thick,->, >=latex]
- \tikzstyle{line} = [thick,-]
- 
- 
- \begin{figure}[]
- 	\centering
- 	
- 	\begin{tikzpicture}
- 	
- 
- 	\node [block] (m) {Math model} ;
- 	\node [block, below right=2cm and -1cm of m] (a) {Algorithm};
-    \node [blockr, below left=2cm and -1cm of m] (n) {\textcolor{white}{New math model}};
- 	\node [blockr, below left=2cm and -1cm of a] (na) {\textcolor{white}{Change the algorithm}};
- 	\node [block, below right=2cm and -1cm of a] (p) {Implement};
- 
- 
- 	\draw [arrow] (m) -- (a);
- 	\draw [arrow] (m) -- (n);
- 	\draw [arrow] (a) -- (p);
- 	\draw [arrow] (a) -- (na);
- 	
- 
- 
- 
- 	
- 
- 	\node [color=blue, below right=0.5cm and -1.5cm of m ]  {Well-conditioned};
- 	\node [color=red, below left=0.5cm and -1.5cm of m ]  {Ill-conditioned};
- 	\node [color=blue, below right=0.5cm and -1.5cm of a ]  {Stable};
- 	\node [color=red, below left=0.5cm and -1.5cm of a ]  {Unstable};
- 
- 
- 	
- 	
- 	\end{tikzpicture}
- 	
- 	\caption{Software Development Life Cycle }
- \end{figure}
-
-
-
-
-
-  
-
-\newpage    
-\section{Common numerical errors}
-
-    
-    
-\listings{\home/Round_off.f90}
-{errors_in_operations}{end subroutine}
-{Round_off.f90} 
-
-
-
-\newpage    
-\section{Catastrophic cancellation}  \label{sec:cancellation}
-    
-    
-\listings{\home/Round_off.f90}
-{catastrophic_cancellation}{end subroutine}
-{Round_off.f90} 
-
-
-
-
-
-\newpage    
-\section{Truncation errors and round-off errors}
-    
-     
-\listings{\home/Summation_errors.f90}
-{summation_example}{end subroutine}
-{Summation_errors.f90} 
-
-
-
-\newpage    
-\section{IEEE exception examples}
-    
-    
-\listings{\home/IEEE_operations.f90}
-{IEEE_exception_examples}{end subroutine}
-{IEEE_operations.f90} 
-
-
-
-
-
-
-\section{TO MERGE}
-
-
-1. Calculando el epsilon correcto suma hasta un cierto error en modo debug
-2. En ese caso Debug sumar 10000000 de terminos no supone diferencia porque son numeros que no se pueden sumar ya
-3. Sumar hacia atras si reduce enormemente el errror de floating en cada suma y consigue mucha mas exactitud
-
-4.Pero la suma hacia delante si se hace con el modo Release optimiza el bucle y calcula con  mas precision 10000000 de terminos de la suma que el caso en el que para en el epsilon que le corresponde. Esto es magia del compilador que optimiza y seguramente haga sumas parciales hacia atras y por eso da mas exactitud. 
-
-5. Correr en modo release pero pedir que lo pinte dentro del bucle hace lo mismo que debug porque no es capaz de aplicar la optimizacion si le pides que pinte cosas entre medias. 
-
-In the context of floating-point representation, the intrinsic function $\epsilon$ represents the smallest 
-number that added to 1 results in a number higher than 1.
-This value depends on the number of binary digits reserved to store the floating-point
-value (as it is covered in the section \ref{chap:reals}). 
-
-It seems clear that adding a number higher than $\epsilon/2$ to 1
-will be captured by the floating-point precision jumping to the value $1 + \epsilon$, a lower value will not be added
-since the result is closer to 1 (and further from $1 + \epsilon$). For a number different than 1, let's say for example $S = 12.54$ a slight 
-modification of the epsilon is needed. However, the idea is the same, the floating-point value does not allow 
-adding more terms to $ S $ when those values are less than $\epsilon/2$. 
-
-
-%Notice that $S(1 + \epsilon) = S + S\epsilon$ represents an upper bound 
-%for the nearest floating-point value to $S$. Hence, adding values smaller than $S\epsilon$ to the number $S$ 
-%will not be captured in the result. 
-
-
-
-
-%First, take a look at the result of the computer if the summation process is stopped according to the 
-%floating-point error due to the significant digits. Notice that this result is obtained after 2260 sums
-%and the truncation error has the main part.
-%
-%\begin{verbatim} 
-%    Total Error = 4.4035912E-04
-%    Truncation Error = 4.4247787E-04
-%    Floating-point Error = -2.1187589E-06
-%\end{verbatim}
-%
-%Now try to calculate the same sum up to 10000000 terms, notice that the total error is similar to the 
-%previous case, a little lower at cost of 4 thousand times the number of sums performed, 
-%but now the floating-point error has the main contribution for the total error. 
-%
-%\begin{verbatim} 
-%    Total Error = 2.0885468E-04
-%    Truncation Error = 1.0000000E-07
-%    Floating-point Error = 2.0875467E-04
-%\end{verbatim}
-%
-%In addition, there is another way of calculating this sum with better accuracy in the computer apart from 
-%using higher precision for the variables. This is a non-intuitive way of calculating the sum that comes from the fact
-%that adding in floating-point arithmetic is not an associative operation. 
-%Let's perform the same sum backwards, with simple precision also and from the lower terms to the higher ones using 10000000 terms. 
-%
-%\begin{verbatim} 
-%    Total Error = 2.3841858E-07
-%    Truncation Error = 1.0000000E-07
-%    Floating-point Error = 1.3841859E-07
-%\end{verbatim}
-%
-%As a general rule, when adding terms with really different orders of magnitude try to sum first the lower values and then add the result to the higher values.
-
-
-
-%An extensive discussion regarding the consistency of using \texttt{epsilon( S )} for this example and the generalization for any other sum 
-%is treated in the section \ref{chap:reals} of Part \ref{PartII} of this book. Also, why dividing it by \texttt{2} is needed becomes clearer. Some notions of 
-%floating-point representation are essential to deepen in these topics. 
 

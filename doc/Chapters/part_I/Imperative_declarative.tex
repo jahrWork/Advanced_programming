@@ -3,6 +3,8 @@
 %\chapter{Imperative programming versus declarative programming} 
 \chapter{Imperative versus declarative programming} 
 
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+
 
 \section{Introduction}
 A big number of programming languages exist nowadays, all of them covering different features 
@@ -77,8 +79,7 @@ S_N = \sum_{n=1} ^{N} \frac{ 1 } { n^2 }
 $$
 In the following code, the summation is done in an iterative way. 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Sum_series.f90}{function SummationN_n2}
+\listings{\home/Examples/Sum_series.f90}{function SummationN_n2}
           {end function}{Sum_series.f90}
 
 The result for \texttt{N = 10} is obtained by calling the function in the following way:
@@ -110,18 +111,15 @@ is independently declared in a different function, hence, if the program specifi
 (a different sum is needed), updating this code is extremely easy. 
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Series.f90}{function Sigma_N}
+\listings{\home/Series.f90}{function Sigma_N}
           {end function}{Series.f90}
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Series.f90}{interface}
+\listings{\home/Series.f90}{interface}
           {end interface}{Series.f90}
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Sum_series.f90}{function a1}
+\listings{\home/Examples/Sum_series.f90}{function a1}
           {end function}{Sum_series.f90}
 
 The result for \texttt{N = 10} is obtained by calling the function in the following way:
@@ -173,8 +171,7 @@ S = \sum_{n=1} ^{\infty} \frac{ 1 } { n^2 }
 $$
 In the following code, the summation is done in an iterative way. 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Sum_series.f90}{function Summation_n2}
+\listings{\home/Examples/Sum_series.f90}{function Summation_n2}
           {end function}{Sum_series.f90}
 
 This piece of code performs the summation of as many terms as 
@@ -205,7 +202,7 @@ The result of the sum is obtained by calling the function in the following way:
 
 
 \newpage
-\section{Second example with declarative paradigm}
+\section{Second example with declarative paradigm}  \label{sec:Sigma}
 For this example a modification of \texttt{Sigma\_N} is needed: \texttt{Sigma}. Nevertheless, notice the simplicity of the code when 
 the existing function \texttt{Sigma\_N} is reused.
 
@@ -226,13 +223,11 @@ in another program, the same functions can be used thereby saving time.
 
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Series.f90}{function Sigma}
+\listings{\home/Series.f90}{function Sigma}
           {end function}{Series.f90}
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Series.f90}{function Tail}
+\listings{\home/Series.f90}{function Tail}
           {end function}{Series.f90}
 
 Do not forget to declare the same interface block of the first example \texttt{f\_N\_R(x)} and define 
@@ -314,8 +309,7 @@ $ (100)^5 $  can be done with real numbers.
 This is done in the  summation example by the following line: 
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
- \listings{\home/Sum_Series.f90}{real to avoid overflow}
+\listings{\home/Examples/Sum_series.f90}{real to avoid overflow}
           {overflow}{Sum_Series.f90}    
     
     
@@ -331,9 +325,8 @@ This forces to stop the summation process when round-off is encountered as
 it is done by the following line in the summation example: 
 
 
-  \vspace{0.5cm}
-  \renewcommand{\home}{./Fortran/sources/Foundations} 
-   \listings{\home/Sum_Series.f90}{do while}
+    \vspace{0.5cm}
+    \listings{\home/Examples/Sum_series.f90}{do while}
             {do while}{Sum_Series.f90}    
   
   
@@ -475,8 +468,7 @@ $$
 
 Let's execute now the following example to test this bad convergence sum series: 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations} 
-\listings{\home/Sum_Series.f90}{Summation_n2_examples}
+\listings{\home/Examples/Sum_series.f90}{Summation_n2_examples}
 {end subroutine}{Sum_Series.f90} 
 
 First, take a look at the result of the computer if the summation process is stopped according to the 

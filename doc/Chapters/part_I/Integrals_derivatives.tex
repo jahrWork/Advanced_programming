@@ -1,6 +1,7 @@
 %___________________________________________________________________________________________________
 \chapter{Operations with functions} 
 
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}
 
 
 \section{Introduction} 
@@ -52,9 +53,8 @@ From the numerical point of view two precautions must be taken into account:
 \end{itemize}
 
 
-\vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus/Examples} 
-\listings{\home/Integrals_derivatives.f90}{function Piecewise_f}
+\vspace{0.5cm} 
+\listings{\home/Examples/Integrals_derivatives.f90}{function Piecewise_f}
 {end function}{Integrals_derivatives.f90}
 
 
@@ -85,6 +85,7 @@ data that can be called from the main program or subroutines.
 \renewcommand{\home}{./Fortran/sources/Foundations/graphs} 
 \listings{\home/plotting.f90}{subroutine plot}
 {end subroutine}{plotting.f90}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 
 
 The previous subroutine allows to plot a 201 points curve from a generic function declared (by means of an interface) as a:
@@ -184,12 +185,10 @@ $$
 
 \vspace{0.5cm}
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Calculus.f90}{Derivative}
 {end function}{Calculus.f90}
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Calculus.f90}{interface}
 {end interface}{Calculus.f90}
 
@@ -226,7 +225,6 @@ In this example, the leftmost value of each subinterval is taken to approximate 
 %------------------------------------------------------------------------------------------
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Calculus.f90}{Integral}
 {end function}{Calculus.f90}
 
@@ -270,8 +268,7 @@ $$
 
 
 \vspace{0.5cm}
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus/Examples} 
-\listings{\home/Integrals_derivatives.f90}{Integral_and_derivative_examples}
+\listings{\home/Examples/Integrals_derivatives.f90}{Integral_and_derivative_examples}
 {end subroutine}{Integrals_derivatives.f90}
 
 

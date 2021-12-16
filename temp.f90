@@ -1,30 +1,29 @@
-recursive subroutine branches_solver(A, i, j, As)
-                 integer :: A(9,9), i, j
-                 integer, intent(out) :: As(9,9) 
+ function  biased_exponent( string  ) result(e) 
+   character(len=*), intent(in) :: string 
+   integer  :: e 
+ 
+    integer :: i, M 
+    integer :: bias 
     
-    integer :: k, k0, i1, j1 
     
+    M = len_trim(string) 
+    e = 0
+    do i=M, 1, -1
         
-!** solution is the branch which gets the last sudoku cell
-    if (i > 9) then
-      As = A  
-      
-!** explore k valid number in position i,j         
-    else
-      do k = 1, 9 
-        if ( is_valid(A, i, j, k) ) then
-            
-             k0 = A(i, j) 
-             A(i, j) = k  
-             call new_cell(k0, k, i, j, i1, j1) 
-             call branches_solver(A, i1, j1, As)
-          
-        !** set A(i,j) to try another branch 
-            if(k0==0) A(i,j) =0
-            call print_branch(i,j)
-        end if
-      end do
-     
-    end if
+        if (string(i:i)=='1') then 
+            e = e + 2**(M-i) 
+        end if 
+        
+    end do 
     
-end subroutine 
+  !  bias 
+  !   if (M==8) then 
+     !     bias = 127 
+  !   else if (M==15) then 
+         bias = 16383
+  !   end if 
+     
+     e = e - bias 
+  
+    
+ end function 

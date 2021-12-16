@@ -13,7 +13,7 @@ implicit none
   integer :: image, Ni  
 
 ! S is a coarray of dimension  determined at runtime
-  real (kind=8) :: S[*]
+  real (kind=8) :: S[*]  
   
 ! SN is the total sum of every image   
   real (kind=8) :: SN
@@ -28,7 +28,7 @@ implicit none
    Ni = num_images()
    
 !  number of terms to be added    
-   N = 2.**35
+   N = 2.**38
 !  number of terms for each image    
    Nt = N / Ni
  

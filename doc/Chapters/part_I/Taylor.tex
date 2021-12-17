@@ -132,44 +132,69 @@ The other three blocks of code compare some functions with their Taylor series e
 %___________________________________________________________________________________________________
 \section{Parseval's identity} 
 
-
-
-
-
+Let's consider a function $f(x)$ and its Fourier series expansion, whether expressed as a sines-cosines expansion:
 \begin{equation} 
-	f ( x)  =  \sum_{k=-\infty} ^{\infty}  \hat{c}_k  e^{ i k x }
-\end{equation} 
-
-\begin{equation} 
-	f ( x)  =  \sum_{k=0} ^{\infty} \  \hat{a}_k  \ \cos k x + \sum_{k=1} ^{\infty} \  \hat{b}_k  \sin k x
+	f ( x)  =  \sum_{k=0} ^{\infty} \  \hat{a}_k  \ \cos\left(k x\right)  + \sum_{k=1} ^{\infty} \  \hat{b}_k  \sin\left(k x\right)
 \end{equation} 	
 
+or as a complex form:
 \begin{equation} 
-	\hat{c}_k  =  \frac{1}{2} \ ( \ \hat{a}_k  - i \ \hat{b}_k \ ),  \quad k=1, \ldots, N/2. 
-\end{equation}	
-
-\begin{equation} 
-	\hat{c}_{-k}  =  \overline{ \hat{c}} _{k}  , \quad k=1, \ldots, N/2. 
-\end{equation} 	
-
-
-\begin{equation} 
-	\int _{-\pi} ^{\pi} f(x)^2 \ dx = 2 \pi \left(    | \hat{c}_0 |^2 + 2 \sum_{k=1} ^{\infty} |  \hat{c}_k  |^2 \right) 
+    f ( x)  =  \sum_{k=-\infty} ^{\infty}  \hat{c}_k  e^{ i k x }
 \end{equation} 
 
-Let $ f(x) = x $ $ \forall x \in [-\pi, +\pi ] $ and extend $ f(x) $  periodically to the right and to the left. Once $ f(x) $ is defined in 
-this way, it can be approximated by a sine expansion: 
+Notice that for this expressions the function $f(x)$ is considered real-valued and periodic with period $T=2\pi$. As we know, the computer can not compute an infinite number of terms, we must truncate the series somewhere, let's say when $k = N-1$ so a total of $N$ terms are considered. Then, the expansion becomes:
 \begin{equation} 
-	f ( x)  =  \sum_{k=1} ^{N/2} \   \hat{b}_k  \sin k x, 
+    f ( x)  =  \sum_{k=0} ^{N-1} \  \hat{a}_k  \ \cos\left(k x\right) + \sum_{k=1} ^{N-1} \  \hat{b}_k  \sin \left(k x\right)
+\end{equation}
+
+or in complex form, those $N$ terms becomes:
+\begin{equation} 
+    f ( x)  =  \sum_{k=-\frac{N}{2}} ^{\frac{N}{2}-1}  \hat{c}_k  e^{ i k x }
+\end{equation} 
+
+We can quickly revise the relation between the coefficients of the sines-cosines expansion and the coefficients of the complex series expansion:  
+
+$$
+\begin{cases}
+    \hat{c}_k  =  \frac{1}{2} \ ( \ \hat{a}_k  - i \ \hat{b}_k \ ),  \quad k=1, \ldots, N/2.   \\
+    \hat{c}_0  = \hat{a}_0   \\
+    \hat{c}_{-k}  =  \overline{ \hat{c} } _{k}  , \quad k=1, \ldots, N/2. 
+\end{cases}
+$$
+
+With that in mind, the Parseval's identity says:
+\begin{equation} 
+	\int _{-\pi} ^{\pi} f(x)^2 \ dx =  2 \pi  \sum_{k=-\infty} ^{\infty}  | \hat{c}_k | ^2       =  2 \pi \left(    | \hat{c}_0 |^2 + 2 \sum_{k=1} ^{\infty} |  \hat{c}_k  |^2 \right) 
+\end{equation} 
+
+
+
+
+
+A good example, related to previous chapters, is the following: consider the function $ f(x) = x \quad $ $ \forall x \in [-\pi, +\pi ) $ and extend it periodically to the right and to the left. Once $ f(x) $ is defined in this way, it can be approximated by a sine expansion: 
+%\begin{equation} 
+%	f ( x)  =  \sum_{k=1} ^{N/2} \   \hat{b}_k  \sin k x, 
+%\end{equation} 
+\begin{equation} 
+	f ( x )  =  \sum_{k=1} ^{\infty} \   \hat{b}_k  \sin \left(  kx\right), 
 \end{equation} 
 where the coefficients $ \hat{b}_k $ are given by:
+%\begin{equation} 
+%	\hat{b}_k   = \frac{ (-1)^{k+1} }{ \pi k }, \qquad k=1, \ldots, N/2. 
+%\end{equation} 
 \begin{equation} 
-	\hat{b}_k   = \frac{ (-1)^{k+1} }{ \pi k }, \qquad k=1, \ldots, N/2. 
+    \hat{b}_k   = \frac{ 2 (-1)^{k+1} }{ k }, \qquad k=1, \ldots,\infty. 
 \end{equation} 
 
-Using Parseval identify with $ f(x)$, the following  summation is obtained: 
+Using the Parseval's identity with $f(x)$, the following summation is obtained: 
+%\begin{equation} 
+%	\sum_{k=1} ^{\infty} \  \frac{1}{n^2}  \  = \frac{\pi^2}{6}
+%\end{equation} 
 \begin{equation} 
-	\sum_{k=1} ^{\infty} \  \frac{1}{n^2}  \  = \frac{\pi^2}{6}
-\end{equation} 
+    \sum_{k=1} ^{\infty} \  \frac{1}{k^2}  \  = \frac{\pi^2}{6}
+\end{equation}
 
-
+The Parseval's identity is then:
+$$
+\int_{-\pi}^{\pi}  x^2 dx  = \frac{2}{3} \pi^3 = 2\pi \left(   2\sum_{k=1}^{\infty}  \mid  -\frac{1}{2} i \hat{b}_k   \mid ^2  \right)
+$$

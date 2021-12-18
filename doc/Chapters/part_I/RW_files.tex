@@ -1,20 +1,32 @@
 
-  
 \newpage   
 \chapter{Read an external file} 
 
-  \renewcommand{\home}{./Fortran/sources/Foundations/read files} 
-  \listings{\home/read_files.f90}{subroutine Test_load_matrix}
-  {end subroutine}{read_files.f90}
-  
-  \newpage 
-  \listings{\home/read_files.f90}{function load_matrix}
-  {end function}{read_files.f90}
-  
-  \newpage
-  \listings{\home/read_files.f90}{function columns}
-  {end function}{read_files.f90}
-  
+\renewcommand{\home}{./Fortran/sources/Foundations/read files} 
+
+Reading and writing data from/to external files is usually an essential part of every software project. Maybe you want to process data returned by a different software, share information between two programs written in different languages, process the results from your program in an specialised plotting software or just reading the inputs of your program through a data sheet. 
+
+The aim of this chapter is to propose an orderly way to encapsulate and use a matrix reading function. As a result, this function hides the particularities of Fortran (or any other programming language where imitating this function) related to reading/writing information from files and builds an useful tool that can be easily recycled for future projects. A one-time effort to create a powerful and general tool is worthwhile if you are using a programming language regularly. Additionally, encapsulating and separately validating this tool reduces failures and helps to standardize the way of proceeding each time that a reading operation is performed.
+
+The following subroutine loads two matrices by declaring the relative path of the \texttt{.csv} file where information is stored and then writes them in the screen by rows. Notice that the dynamic object \texttt{A} in the subroutine does not need to be allocated since the compiler automatically takes care of that when the output of the reading function is available. Also, notice that the matrix is written using an explicit loop for rows and an implicit loop for columns. This technique is preferred since Fortran writes by default the data by columns. 
+
+
+\vspace{0.5cm} 
+\listings{\home/read_files.f90}{subroutine Test_load_matrix}
+{end subroutine}{read_files.f90}
+
+
+%-------------------------------
+The function \texttt{load\_matrix()} is in charge of reading the data and assigning the data to a local variable \texttt{A}. Contrary to the subroutine, here the dynamic object \texttt{A} needs to be allocated and assigned by hand. 
+
+\newpage 
+\listings{\home/read_files.f90}{function load_matrix}
+{end function}{read_files.f90}
+
+\newpage
+\listings{\home/read_files.f90}{function columns}
+{end function}{read_files.f90}
+
   
   
   

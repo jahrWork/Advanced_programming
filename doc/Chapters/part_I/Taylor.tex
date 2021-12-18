@@ -186,7 +186,12 @@ where the coefficients $ \hat{b}_k $ are given by:
     \hat{b}_k   = \frac{ 2 (-1)^{k+1} }{ k }, \qquad k=1, \ldots,\infty. 
 \end{equation} 
 
-Using the Parseval's identity with $f(x)$, the following summation is obtained: 
+Using the Parseval's identity with $f(x)$:
+$$
+\int_{-\pi}^{\pi}  x^2 dx  = \frac{2}{3} \pi^3 = 2\pi \left(   2\sum_{k=1}^{\infty}  \mid  -\frac{1}{2} i \hat{b}_k   \mid ^2  \right)
+$$
+
+and the following summation is obtained: 
 %\begin{equation} 
 %	\sum_{k=1} ^{\infty} \  \frac{1}{n^2}  \  = \frac{\pi^2}{6}
 %\end{equation} 
@@ -194,7 +199,3 @@ Using the Parseval's identity with $f(x)$, the following summation is obtained:
     \sum_{k=1} ^{\infty} \  \frac{1}{k^2}  \  = \frac{\pi^2}{6}
 \end{equation}
 
-The Parseval's identity is then:
-$$
-\int_{-\pi}^{\pi}  x^2 dx  = \frac{2}{3} \pi^3 = 2\pi \left(   2\sum_{k=1}^{\infty}  \mid  -\frac{1}{2} i \hat{b}_k   \mid ^2  \right)
-$$

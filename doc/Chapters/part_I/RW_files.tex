@@ -17,13 +17,16 @@ The following subroutine loads two matrices by declaring the relative path of th
 
 
 %-------------------------------
-The function \texttt{load\_matrix()} is in charge of reading the data and assigning the data to a local variable \texttt{A}. Contrary to the subroutine, here the dynamic object \texttt{A} needs to be allocated and assigned by hand. 
+The function \texttt{load\_matrix()} is in charge of reading the data and assigning it to a local variable \texttt{A}. Contrary to the subroutine, here the dynamic object \texttt{A} is allocated by hand. 
 
-\newpage 
+In summary, this function opens the requested file (input argument), reads the first line and saves the information in the variable \texttt{header}. This header determines the number of columns in which the data is ordered (using commas as separators). From now on, all rows are read until the total number is determined and the size of array \texttt{A} can be defined. Finally, the whole file can be reread again, saving the data in \texttt{A} this time. This function makes use of an auxiliary function called \texttt{columns( string, s )} which reads how many columns are declared in the header of the file using some specific separator. 
+
+Encapsulating some tools like this one allows the programmer to save time and reduce possible sources of error in future projects but does not eliminate the need to know the peculiarities of reading/writing data in files or screen, as is the case with any programming language. For the needs of each project some adjustments could be done.
+
+\vspace{0.5cm} 
 \listings{\home/read_files.f90}{function load_matrix}
 {end function}{read_files.f90}
 
-\newpage
 \listings{\home/read_files.f90}{function columns}
 {end function}{read_files.f90}
 

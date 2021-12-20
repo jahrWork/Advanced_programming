@@ -1,29 +1,47 @@
- function  biased_exponent( string  ) result(e) 
-   character(len=*), intent(in) :: string 
-   integer  :: e 
- 
-    integer :: i, M 
-    integer :: bias 
-    
-    
-    M = len_trim(string) 
-    e = 0
-    do i=M, 1, -1
-        
-        if (string(i:i)=='1') then 
-            e = e + 2**(M-i) 
-        end if 
-        
-    end do 
-    
-  !  bias 
-  !   if (M==8) then 
-     !     bias = 127 
-  !   else if (M==15) then 
-         bias = 16383
-  !   end if 
-     
-     e = e - bias 
+program Series_with_coarrays
+
+implicit none  
+
+! this image and number of images 
+  integer :: image, Ni  
+
+! S is a coarray of dimension  determined at runtime
+  real (kind=8) :: S[*]  
   
-    
- end function 
+! SN is the total sum of every image   
+  real (kind=8) :: SN
+  real (kind=8) :: t0, tf, rate, PI = 4*atan(1.0)
+  
+! N is the total number of terms 
+! Nt is the total number of terms of each image   
+  integer(kind=8) :: i, N , Nt 
+
+   call cpu_time(t0) 
+   image = this_image()
+   Ni = num_images()
+   
+!  number of terms to be added    
+   N = 2.**38
+!  number of terms for each image    
+   Nt = N / Ni
+ 
+!  Each image performs a backwards sum of the total sum  
+   S = 0 
+   do i = image * Nt, 1 + (image-1)*Nt,  -1
+      S = S + 1 / real(i)**2
+   end do
+   
+!  partial result of each image    
+   write(*,*) " image =", image, " S = ", S  
+   
+ ! Once image 1 finishes, it sums the contribution of each image
+   if (image .eq. 1) then
+      
+     write(*,*) "Sum contributions of different images  " 
+     SN = 0   
+     do i = Ni, 1, -1
+       SN = SN + S[i] 
+     end do
+     
+     call cpu_time(tf)
+     write (*,*) "CPU time:", tf-t0

@@ -66,14 +66,14 @@ module Read_files
          real, allocatable :: A(:,:) 
          integer :: i, j 
     
-         A = load_matrix('./sources/Foundations/data.csv') 
+         A = load_matrix('./sources/Foundations/Read files/data.csv') 
          
        ! print row ith 
          do i=1, size(A, dim=1) 
             write(*,'(10f8.3)') ( A(i,j), j=1, size(A, dim=2) ) 
          end do 
                  
-         A = load_matrix('./sources/Foundations/data2.csv') 
+         A = load_matrix('./sources/Foundations/Read files/data2.csv') 
          
          do i=1, size(A, dim=1) 
             write(*,'(10f8.3)') ( A(i,j), j=1, size(A, dim=2) ) 

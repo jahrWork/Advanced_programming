@@ -1,50 +1,35 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \renewcommand\home{./Fortran_project/sources/IEEE}
 
+%ESCRIBIR Y REORDENAR:
+
+%The accuracy is governed also by the number of bits used in the mantissa. The 
+%obligation to round numbers (rounding error) is related to accuracy. Dedicating more bits for the mantissa increases the resolution 
+%and the precision.
+%
+%so for a fixed number of bits (precision), dedicating more bits to the exponent and less bits to the mantissa 
+%extends the range but decreases the accuracy and resolution. 
+
+
 \chapter{Reals representation and operations} \label{chap:reals}
-     
-\section*{Overview}
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------     
+    \section*{Overview}
 
 Real numbers can be represented by 
-an integer part and a decimal parts separated by a character which is usually a point. 
+an integer part and a decimal parts separated by a character which is usually a point 
+and a $(-)$ sign when needed. 
 The integer and the decimal part have, in general, infinite length.  
 However, since the internal representation of a real number 
-in a computer  is stored  on a finite amount of memory, 
+in a computer  is stored on a finite amount of memory, 
 only some real numbers can be represented exactly. 
-In other words, working with a finite precision machine,  real numbers are approximate.
-
-    
-%Let's talk now about reals, the base of any numerical calculation that can be developed in a computer. 
-%If the infinite integers that exist can not be represented in the computer and a computer 
-%scientist is limited to the values in a range, 
-%in the case of reals it happens the same. 
-%However, between any two real numbers, 
-%there are also infinite reals so a finite number of bits is not able to represent that set either. 
-
+In other words, working with a finite precision machine, real numbers are approximate.
 
 This idea is extended to real operations and allows to understand that most calculations 
 are approximate and the resulting errors are called "round-off" errors. 
 The origin and the consequences of these errors will be discussed in this chapter. 
 The following topics are covered in this chapter: 
-%
-%to perform will result in values 
-%that are not represented in the standard implemented in the machine. 
-%Thus, those value are rounded to the nearest values that has representation in the computer. 
-%Either in assigning a constant to a variable or an operation, 
-%this is the origin of the rounding error, which is treated in this chapter. 
-
-
-
-
-  
-%  \vspace{0.5cm}
-%   \renewcommand{\home}{./Fortran_project/sources} 
-%    \listings{\home/main_advanced.f90}{select}{Games}{main_advanced.f90}
-  
-  
-
-
-
 
 \begin{enumerate} 
     \setlength\itemsep{-0.1cm}
@@ -58,20 +43,62 @@ The following topics are covered in this chapter:
     \item Catastrophic cancellation.
     \item Summation example.
     \item IEEE exception examples.
-    
 \end{enumerate} 
 
+Before continuing, revise these concepts in the context of numerical calculations:
 
-  \newpage    
-\section{Example of round-off errors} 
+\begin{itemize}
+    \item Precision/Accuracy or Resolution: These concepts can be understood as the smallest change that can be represented in floating point, 
+    how close a value is to what it is meant to be. This magnitude is governed by the number of bits of the mantissa, more specifically, its least significant bit. 
+    Round-off is related to this. 
+    
+    Sometimes the word ``precision'' is used for the number of bits, 
+    ``resolution'' for the distance between two available floating-point values and 
+    ``accuracy'' for the distance between a real value and its floating-point representation. 
+
+    \item Range: Set of the representable numbers, from the tiniest to the highest number. This concept is governed by the number of 
+    bits of the exponent and will be related to errors of overflow or underflow. 
+\end{itemize}
+
+
+
+
+%RESTOS
+    
+%Let's talk now about reals, the base of any numerical calculation that can be developed in a computer. 
+%If the infinite integers that exist can not be represented in the computer and a computer 
+%scientist is limited to the values in a range, 
+%in the case of reals it happens the same. 
+%However, between any two real numbers, 
+%there are also infinite reals so a finite number of bits is not able to represent that set either. 
+
+%
+%to perform will result in values 
+%that are not represented in the standard implemented in the machine. 
+%Thus, those value are rounded to the nearest values that has representation in the computer. 
+%Either in assigning a constant to a variable or an operation, 
+%this is the origin of the rounding error, which is treated in this chapter. 
+
+
+%  \vspace{0.5cm}
+%   \renewcommand{\home}{./Fortran_project/sources} 
+%    \listings{\home/main_advanced.f90}{select}{Games}{main_advanced.f90}
+
+
+
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------
+    \newpage    
+    \section{Examples of round-off errors} 
     
 To introduce unexpected behavior when working with real variables and round-off errors, 
 two examples are presented.   
-In the first example, a real variable \texttt{S} stored in 4 bytes of memory is used to sum \texttt{N=100000}
-times the value \texttt{dX = 0.3}. The expected result is \texttt{S = 0.3 \times 100000 = 30000 }. 
-However, the execution gives \texttt{S = 3027.90}. Later, in the same subroutine, la magnitude   
-\texttt{dX = 0.3} is substracted  \texttt{N} times. Again, the expected result is  \texttt{S =0 }
-but the computer result is \texttt{S = 26.1582}
+In the first example, a real variable \texttt{S} stored in 4 bytes of memory is used to sum \texttt{N = 100000}
+times the value \texttt{dX = 0.3}. The expected result is \texttt{S = 0.3 \times 100000 = 30000}. 
+However, the execution gives \texttt{S = 3027.90}. Later, in the same subroutine, the magnitude   
+\texttt{dX = 0.3} is subtracted \texttt{N} times. Again, the expected result is  \texttt{S = 0}
+but the computer returns \texttt{S = 26.1582}.
 
 \vspace{0.5cm}
  \renewcommand{\home}{./Fortran/sources/IEEE} 
@@ -209,14 +236,14 @@ is epxlained in the next sections.
 
 
 
-
-\section{Fixed-point and Floating-point representation}
+    %--------------------------------------------------------------------------------------------------------------------------------------
+    \section{Fixed-point and Floating-point representation}
 
 There are two main ways to represent real numbers in computers: 
 \begin{itemize}
-\item Fixed-point representation. 
+    \item Fixed-point representation. 
 The real number is represented by its integer part and its decimal part (e.g. \texttt{55.88}). 
-\item Floating-point representation. 
+    \item Floating-point representation. 
  The real number is represented by its mantissa and its exponent  (e.g. \texttt{0.5588e02}).
 \end{itemize} 
 
@@ -226,47 +253,84 @@ Then, the bits reserved for both parts are prefixed.
 This method has the advantage that processing the numbers is simpler
 but has strong limitations in the available range  to work with.
 
-Nowadays,  computers use  the floating point representation through the standard IEEE 754.
+Nowadays, computers use the floating point representation through the standard IEEE 754.
 The numbers are stored similarly to the way standard scientific notation is written. 
 Hence, a number of bits store the mantissa of the number and another part of bits store the exponent 
 of that number. 
-Notice that the exponent is telling how many positions the 
-Since the exponent allows to position the decimal point 
+Since the exponent allows to move position of the decimal point 
 to the left or to the right in the mantissa,  huge numbers and tiny numbers can be represented.
 As an inconvenient, for the same number of bytes, 
 this representation is slower to process and has lower resolution than fixed-point representation. 
 
-
 As an example, 
-consider a fixed point 1-byte precision number with 5 bits the integer part and 3 bits
+consider a fixed point 1-byte precision number with 5 bits reserved for the integer part and 3 bits
 for the decimal part as it is shown in Figure \ref{fig:FixedFloat}. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width= 0.8\textwidth]{./doc/Figures/FixedFloat2.png}
-    \caption{Representation of a couple of numbers with fixed point and floating point formats using only 1 byte (8 bits).}
+    \caption{Representation of number 20.25 with fixed point format using only 1 byte (8 bits).}
     \label{fig:FixedFloat}
 \end{figure}
-Giving a binary fixed point representation with 8 bits ($b_7, \ldots, b_0$), the decimal number is obtained by: 
+
+Given a binary fixed point representation with 8 bits ($b_7, \ldots, b_0$), the decimal number is obtained by: 
 $$
    x = b_7 \ 2^4 + b_6 \ 2^3 + b_5 \ 2^2  + b_4 \ 2^1 + b_3 \ 2^0 + b_2 \ 2^{-1}  + b_1 \ 2^{-2} + b_0 \ 2^{-3}
 $$
 Hence, the number $20.25$ is $\texttt{10100.010}$ in binary fixed point 
 representation. 
-Notice that the smallest number that can be represented would be 
-$\texttt{00000.001}$ which is only $0.125$ 
-and also notice that the biggest number available with this method is $\texttt{11111.111}$
+Notice that the smallest number that can be represented is
+$\texttt{00000.001}$, which is only $0.125$ 
+and also notice that the biggest number available with this method (and 8 bits) is $\texttt{11111.111}$
 which is $31.875$. 
 This representation allows numbers from $0.125 = 2^{-3}$ to $31.875$  with jumps of $0.125$. 
 If 2, 4, 8 or 16 bytes are used to represent this number the range increases 
 and the distance among numbers decreases but the range is still very limited. 
 
 
+
+
+
+
+
+
+\textbf{In order to compare with floating-point representation,
+let's consider a mini-float of 8 bits with the same memory size that 
+the above fixed point representation. 
+Consider a mini-float that only stores positive numbers, with
+4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
+Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$), 
+the decimal number is obtained by:}
+
+--posicion de mantisa y de exponente
+--0 para mas o para menos
+--yo mencionaria que hay un 1 implicito en la mantissa siempre imitando a la notacion cientifica
+--explicaria antes la notacion cientifica en binario, dos ideas solo. 
+--no es 15 precisamente porque son numeros entre 1 y 2 obligatoriamente.
+--dejar clara la competición entre precision y rango
+%For special purposes it is used the $(1, 4, 3, 7)$ minifloat, 
+
+%for the same exponent, all the mantissas grow with the same resolution and adding 
+%one to the exponent reduces highly the resolution.
+
+%Quickly in the floating-point 
+%of 1-byte the resolution is poor, 
+%for an exponent of $1110_2 = 14_10\rightarrow  \textrm{exponent} = 7$ the resolution 
+%is 16 units while the resolution for an exponent of $0001_2 = 1_10\rightarrow  \textrm{exponent} = -6$ 
+%is $0.001953...$. Why this happens is simple, we must not forget that the number of bits is
+% the same for this examples, in both cases we can not store more values than $2^8 = 256$, 
+% if we want more range, is at the cost of less resolution. 
+
+%\begin{IN}
+%    Do not forget that, exactly than in decimal system, the positions on the left of the decimal point are numbers bigger than 1 and the positions on the right are smaller than 1. While in decimal system each position multiplies by ten the value on his right, in binary system the value is doubled going to the left and divided by two going to the right. 
+%\end{IN}
+
+
 In order to compare with floating-point representation,
 let's consider a mini-float of 8 bits with the same memory size that 
 the above fixed point representation. 
 Consider a mini-float with
-4 bits for the exponent(1 for its sign and 3 for its value) and 4  bits for the mantissa.
+4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
 Giving a binary floating point representation with 8 bits ($b_7, \ldots, b_0$), 
 the decimal number is obtained by: 
 $$
@@ -285,30 +349,11 @@ The distance between the maximum number and its closest  number is:  $  2^{7}$
 and the distance between the minimum number and its closest number is:  
 $ 2^{-7}.$
 
-%These are not used in numerical calculations where simple precision (4 bytes) 
-%is the smallest precision used. 
-%However, it needs from the same amount of memory space 
-%as the previous example so it can be a good comparison to understand the concept. 
-%For special purposes it is used the $(1, 4, 3, 7)$ minifloat, 
-
-
-% and an exponent bias of +7 
-%(these concepts are broaden in this section). 
-%This representation allows a range between $r\in (-480 = 1 1111 111_2, 480 = \texttt{0 1111 111}_2)$ 
-%and 
-
-% $0.0078125_{10} =_2$. 
-%We are not discussing now if the number $0 0000 000_2$ is reserved for the $0$ 
-%or the number $\texttt{0 1111 111}$ or $\texttt{1 1111 111}$ are reserved for $\pm\infty$ 
-%since this is just an example of the capabilities of floating-point representation. 
-
-
-%Do not worry if the notation is not clear right now, it is explained later for the 4-bytes precision, 
-%which is similar. 
 
 
 
-To conclude, for the same number of bits, fixed-point numbers are equal-spaced  along 
+
+To conclude, for the same number of bits, fixed-point numbers are equal-spaced along 
 the whole range but with a smaller range ($31.875$ vs $ 15 \times 2^{7}$).
 The distance among real numbers in the fixed-point representation is constant and equal to $0.125$. 
 However, in the floating-point representation, the distance among real numbers 
@@ -316,18 +361,6 @@ changes from $ 2^7$ to $ 2^{-7}$ depending on the exponent of the real number.
 It is also important to notice that the total amount of real numbers in fixed point or floating point 
 representation is the same but their distribution and range are different.
 
-
-
-%for the same exponent, all the mantissas grow with the same resolution and adding 
-%one to the exponent reduces highly the resolution. 
-
-%Quickly in the floating-point 
-%of 1-byte the resolution is poor, 
-%for an exponent of $1110_2 = 14_10\rightarrow  \textrm{exponent} = 7$ the resolution 
-%is 16 units while the resolution for an exponent of $0001_2 = 1_10\rightarrow  \textrm{exponent} = -6$ 
-%is $0.001953...$. Why this happens is simple, we must not forget that the number of bits is
-% the same for this examples, in both cases we can not store more values than $2^8 = 256$, 
-% if we want more range, is at the cost of less resolution. 
 
 \begin{IN}
 %     Fixed-point format actually could represent larger numbers or smaller numbers,
@@ -343,11 +376,6 @@ representation is the same but their distribution and range are different.
 \end{enumerate}
 \end{IN}
 
-%\begin{IN}
-%    Do not forget that, exactly than in decimal system, the positions on the left of the decimal point are numbers bigger than 1 and the positions on the right are smaller than 1. While in decimal system each position multiplies by ten the value on his right, in binary system the value is doubled going to the left and divided by two going to the right. 
-%\end{IN}
-
-
 In the following section, 
 the standard IEEE 754 which is used in all computers is 
 explained in detail to understand how real numbers are stored in 
@@ -356,46 +384,205 @@ floating point representation.
 
 
 
-\section{Floating-point representation in IEEE 754}
+%%%%RESTOS
+
+%These are not used in numerical calculations where simple precision (4 bytes) 
+%is the smallest precision used. 
+%However, it needs from the same amount of memory space 
+%as the previous example so it can be a good comparison to understand the concept. 
+
+%Do not worry if the notation is not clear right now, it is explained later for the 4-bytes precision, 
+%which is similar. 
+
+% and an exponent bias of +7 
+%(these concepts are broaden in this section). 
+%This representation allows a range between $r\in (-480 = 1 1111 111_2, 480 = \texttt{0 1111 111}_2)$ 
+%and 
+
+
+% $0.0078125_{10} =_2$. 
+%We are not discussing now if the number $0 0000 000_2$ is reserved for the $0$ 
+%or the number $\texttt{0 1111 111}$ or $\texttt{1 1111 111}$ are reserved for $\pm\infty$ 
+%since this is just an example of the capabilities of floating-point representation. 
+
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------
+    \section{Floating-point representation in IEEE 754}
+
+
+The current standard implemented in most machines to work with floating-point arithmetic is the IEEE 754 Standard. Before delving into the particularities of the representation in this standard a summary of the main properties is presented here. 
+
+\begin{enumerate}
+    \item Similarly to the binary scientific notation, the binary point is located immediately after the first binary digit of the mantissa. 
+    \item Also imitating the binary scientific notation the first digit of the mantissa is always 1, therefore it is not necessary to store it.
+    \item The leftmost digit encodes the sign of the number: 1 for negative number, 0 for positive.
+    \item The rightmost digits encode the mantissa. 
+    \item In the middle, the exponent is encoded with an offset-binary representation (using an exponent bias).
+\end{enumerate} 
+
+Notice from the table \ref{tab:properties} that the actual bits used in the mantissa is always the number of mantissa bits + 1. 
+This is due to an implicit 1 in the left part of binary point, since it is always a 1, is not explicitly stored. 
+Hence, the binary mantissa of the example $-110.3125$ is actually $1.10111001010...$ while only the right part of the binary point is stored. 
+
+The table also shows the range of representable numbers, the minimum and maximum value allowed for each standard format. Finally, the information we are usually more interested in; the decimal precision we have when a real value is represented in IEEE 754 standard which is the number of decimal significant digits in our number. Any value stored in simple precision has at least 7 digits of accuracy regarding the value that we really want to work with. For better accuracy, use double precision. 
+
+\newpage
+\begin{figure}
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/ParametersIEEE.png}
+    \caption{Main formats in the standard IEEE 754: single, double and quadruple precision with a visual example in single precision.}
+    \label{fig:ParametersIEEE}
+\end{figure}
+
+
+\begin{table}[H]
+    \begin{tabular}{| r | c | c | c | c | c | }
+        
+        \hline
+        Name & Sign & Exponent & Mantissa & Exp. Bias & \begin{tabular}{@{}c@{}}Actual Bits\\  mantissa\end{tabular}  \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      & 1 & 8  & 23    & +127   & 24 \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    & 1 & 11 & 52    & +1023  & 53   \\  \hline
+        
+        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   & 1 & 15 & 112   & +16383 & 113   \\ \hline
+        
+    \end{tabular}                                                       
+    %\caption{Main properties of the different precisions covered by the IEEE 754 standard.}
+    %\label{tab:properties}
+\end{table}
+
+
+\begin{table}[H]
+    %\begin{flushright}
+    %\begin{turn}{90}
+    \begin{tabular}{| r | c | c | c |}
+        
+        \hline
+        Name  & \begin{tabular}{@{}c@{}}Normalized \\ range \end{tabular} & \begin{tabular}{@{}c@{}}Approximate\\decimal range\end{tabular} & Precision \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      &  \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ -38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7.2 digits  \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    &  \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ -308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15.9 digits        \\  \hline
+        
+        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   &  \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19.2 digits          \\ \hline
+        
+    \end{tabular}                                                       
+    %\end{turn}
+    \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
+    \label{tab:properties}
+    %\end{flushright}
+\end{table}
 
 
 
 
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-\newpage 
-\FloatBarrier
+
+
+
+
+%RESTOS
+
+%\newpage
+%%\begin{figure}[h]
+%\begin{sidewaysfigure}
+%%    %\begin{flushleft}
+%%    \centering
+%%    \includegraphics[width= \textwidth]{./doc/Figures/ParametersIEEE.png}
+%%    \caption{Main formats in the standard IEEE 754: single, double and quadruple precision with an example in single precision.}
+%%    \label{fig:ParametersIEEE}
+%%    %\end{flushleft}
+%    \begin{table}[H]
+%        %\begin{flushright}
+%        %\begin{turn}{90}
+%        \begin{tabular}{| r | c | c | c | c | c | c | c | c |}
+%            
+%            \hline
+%            Name & Sign & Exp. & Mantissa & Exp. Bias & \begin{tabular}{@{}c@{}}Bits\\  precision\end{tabular}  & \begin{tabular}{@{}c@{}}Normalized \\ range \end{tabular} & \begin{tabular}{@{}c@{}}Approximate\\decimal\end{tabular} & Precision \\ \hline
+%            
+%            \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      & 1 & 8  & 23    & +127   & 24 & \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ −38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7.2 digits  \\ \hline
+%            
+%            \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    & 1 & 11 & 52    & +1023  & 53 & \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ −308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15.9 digits        \\  \hline
+%            
+%            \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   & 1 & 15 & 112   & +16383 & 113 & \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19.2 digits          \\ \hline
+%            
+%        \end{tabular}                                                       
+%        %\end{turn}
+%        \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
+%        \label{tab:properties}
+%        %\end{flushright}
+%    \end{table}
+%\end{sidewaysfigure}
+%%\end{figure}
+
+
+
+
+
+
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------
+    \newpage 
+    \FloatBarrier
     \section{Distance between floating point real numbers} \label{sec:roundoff}
 
-It has been introduced in the previous section that there are two reasons why the number you may want to represent in the computer can not be 
-exactly represented and has to be rounded (to an IEEE floating-point value). First and the less common, the number is out of the 
-representable range in the specific precision (either for an overflow or underflow) and second, while the decimal number has finite number of 
-digits, the exact binary representation has infinite digits or just more significant digits than the allowed by the precision (see 
-\cite{articleIEEE}). 
 
-In a previous section the concepts of range and resolution of the numbers that are represented are explained. Also, how both concepts are 
-opposed due to the finite precision. A visually way to understand this is thinking of the exponent as a window between two values, and the 
-mantissa as the offset of an specific number from the initial value of the window \cite{VisExpl}. In the decimal system the window tells 
-which two consecutive power-of-ten are we treating: [0.1,1], [1,10], [10,100], etc. and in binary system the windows jump with powers-of-two 
-so [0.5,1], [1,2], [2,4], etc. This window then is divided in equidistant divisions according to the number of bits used for the mantissa. 
-However, notice that from one window to the next one the number of divisions is the same and the length of the window much bigger (each 
-window doubles the previous), then the resolution in that window is lower and the programmer is loosing capability to represent numbers since 
-the absolute value of the number is bigger. Said in other words, the density of IEEE 754 floating-point values near the zero is bigger than 
+In this section we delve into the relation between the number of bits reserved to store mantissa-exponent, 
+and the density of floating-point values in the real line.
+To understand this think of the exponent as a window between two values and the 
+mantissa as the offset of a number inside that window (see \cite{VisExpl}).
+ 
+In the decimal system a window is limited by two consecutive powers-of-ten: [0.1,1], [1,10], [10,100], etc. 
+In binary each window is bounded by powers-of-two: [0.5,1], [1,2], [2,4], etc. The exponent of a number 
+fixes its window. 
+
+Every window then is equidistantly divided according to the number of bits used for the mantissa. The least significant bit 
+in the mantissa tells us the minimum allowed jump in that window. 
+
+Notice that from one window to the next one the number of divisions is the same but the length of the window is twice the previous.
+Hence, the resolution in that window is lower and the programmer is loosing capacity to represent numbers. 
+Said in other words, the density of IEEE 754 floating-point values near the zero is bigger than 
 the density of values with growing values. 
 
-Let's see this with an example, with 23 digits (the omitted leading 1 is always a 1) we have 23bits precision to divide every window, this 
-means $2^{23} = 8688608$ possible values. In the window $\left[1,2\right]$ the resolution is $\frac{\left(2-1\right)}{2^{23}} \sim 
-0.000000119$ while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is $\frac{\left(65536-32768\right)}{2^{23}} \sim 
-0.003906$. Notice the essential consequences of this, the simple step of writing a number in your program to be used as a constant or stored 
-in a variable is going to have an error associated, and this error is going to be higher when working with big numbers than small numbers. 
-For simple precision, like in the previous example, when the window corresponds to $\left[16777216=2^{24},8388608=2^{23}\right]$ the absolute 
-error committed is $1$. 
 
-The density of representable numbers can be represented in the number line, however, for the representation let's consider a lower precision. 
-For example, as it is broaden in \cite{articleIEEE}, consider the case where the base of representation is $2$, there are only $3$ 
-significant digits in the mantissa and only $4$ available exponents ($-1, 0, 1, 2$) without sign bit (see Figure \ref{fig:DensityNumbers}). A 
-general number in this system is written: $d.dd \quad x \quad 2^{e}\quad \textrm{with}\quad e \in \left[-1, 2\right] $ Take a look at the 
-possible decimal values that this system could represent (see table \ref{tab:PossibleValues}).
+
+%-----------------------------------
+Let's see this with an example, consider a single precision mantissa, we count with 23 digits to divide every window, 
+this means $2^{23} = 8688608$ possible values. 
+
+In the window $\left[1,2\right]$ (exp $= 0$) the resolution is:
+$$
+\frac{\left(2-1\right)}{2^{23}} \sim 0.000000119
+$$ 
+while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is:
+$$
+\frac{\left(65536-32768\right)}{2^{23}} \sim 0.003906
+$$
+
+Each time you work with a real number in your program (as a constant or a variable), it is going to have a round-off error associated 
+which is going to be higher when working with big numbers than small numbers. 
+%-----------------------------------
+
+
+
+
+%-----------------------------------
+It is difficult to represent the density of representable numbers in the numbers line for IEEE 754 standard formats, 
+however, let's consider a lower precision. The phenomena in IEEE 754 is the same, but with much more values.
+As it is broaden in \cite{articleIEEE}, consider the case where there are only $2$ binary digits for the mantissa (+ an implicit 1),
+only $2$ digits for the exponent (four available exponents: $-1, 0, 1, 2$) 
+and not sign bit is considered.
+
+A general number in this system is written: 
+
+$$
+d.dd \times 2^{e}    \quad \textrm{with}\quad e \in \mathbb{Z}, e\in\left[-1, 2\right] 
+$$ 
+
+Take a look at the possible decimal values that this system can represent in the table \ref{tab:PossibleValues} and its representation in the real line (Figure \ref{fig:DensityNumbers}). 
 
 \begin{table}
     \centering
@@ -407,26 +594,41 @@ possible decimal values that this system could represent (see table \ref{tab:Pos
         1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
         1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
     \end{tabular}
-    \caption{Possible values (shown the decimal value) covered by the example system treated (read text for explanation).}
+    \caption{Possible decimal values covered by the example system treated.}
     \label{tab:PossibleValues}
 \end{table}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width= \textwidth]{./doc/Figures/DensityNumbers.png}
-    \caption{Representable numbers in the binary numbers system defined by $p = 3$ and $e\in\left[-1, 2  \right]$ (read text for more 
-    details).}
+    \caption{Representable numbers in the binary representation system defined by 3 mantissa digits and $e\in\left[-1, 2  \right]$ (read text for more details).}
     \label{fig:DensityNumbers}
 \end{figure}
+%-----------------------------------
 
 
-In those cases where the exact number to be represented is approximated by the nearest IEEE 754 number, the absolute error committed is 
-bounded. This happens in the declaration of a variable or the use of a constant value. On the opposite, in the case of operating with 
-variables and constants the result of the calculation could be different from the nearest IEEE value to the exact result. 
 
-As an example, consider the binary system explained above, imagine that the program needs to use the value $3.1875_{10} = 11.0011_2 = 
-1.10011x2^1_2$. This number will be represented as $3_{10} = 1.10x2^1_2$ in the system proposed so the error committed is $0.1875_{10} = 
-0.0011_2$. Notice that this is $0.011_2$ units in the last place (\textit{ulps}). The absolute error in this system, when the exact number is 
+
+The question that arises at this point is: Which is the round-off error committed when using finite precision floating-point reals?
+
+In those cases where the exact number to be represented is approximated by the nearest IEEE 754 number, the absolute error committed is bounded. 
+This happens in the declaration of a variable or the use of a constant value. 
+On the opposite, in the case of operating with variables and constants the result of the calculation could be different from the nearest IEEE value to the exact result. 
+
+
+
+
+%-----------------------------------
+Let's continue with the system explained above, imagine that the program needs to use the value 
+$$
+3.1875\mid_{10} = 11.0011\mid_2 = 1.10011\times 2^1\mid_2
+$$
+This number is not exactly represented so it is rounded to $1.10x2^1\mid_2 = 3_{10}$, the error committed is $0.1875_{10} = 0.0011_2$. 
+Notice that this is $0.011_2$ units in the last place (\textit{ulps}). 
+%-----------------------------------
+
+
+The absolute error in this system, when the exact number is 
 approximated by the nearest floating-point value, is bounded by $0.1_2 = 0.5_{10}$ ulps and the exact absolute error committed for a number 
 $z$ will be $\abs{d.dd-\left(\frac{z}{2^e}\right)} 2^{3-1}$ ulps. It seems that this absolute error is small for every number to be 
 represented, but take into account that the concept ``unit in the last place'' depends on the exponent, said in other words, depends on the 
@@ -525,9 +727,20 @@ set is more dense and the absolute error is lower. Anyway, do not forget that th
 constant. 
 
 
+%RESTOS
+%There are two reasons why a real number you may want to represent in the computer can not be 
+%exactly represented and has to be rounded to an IEEE floating-point value. 
+%The first and the less common, the number is out of the 
+%representable range either for an overflow or an underflow.
+%The second; there is not binary representation for that number, maybe its binary translation has infinite number of 
+%digits or maybe it has more significant digits than the allowed by the format used (precision, see 
+%\cite{articleIEEE}). 
 
 
 \section{Decimal real number from its internal IEEE binary representation}
+
+
+
 Use scientific notation with ES format (normalized mantissa).
 
 $$
@@ -545,31 +758,16 @@ $$
 
 \section{IEEE exceptions}
 
+
+
+
+
 \section{Practical guidance to use real numbers} 
 
 
 The best way to understand the differences between both representations is with an example. 
 
-\begin{IN}
-    Before the example, revise these concepts in the context of numerical calculations:
-    \begin{itemize}
-        \item Precision/Resolution: The smallest change that can be represented in floating point representation, which means, how exactly we 
-        can specify a number we want o represent. Sometimes it is used the word ``precision'' for the number of bits used (remember that a 
-        change in the least significant bit is the smallest available change) and ``resolution'' for that specific quantity changed. For 
-        every value in the exponent, the resolution is fixed by the value of the least significant bit of the mantissa in floating-point 
-        arithmetic, or the number bits in the mantissa which is similar. 
 
-        \item Accuracy: How close a value is to what it is meant to be or the closeness of floating point representation to the actual value. 
-        This can be used in the result of an operation or the assignment of a constant to a variable, the result should be a value while the 
-        computer gives a nearer but not equal number. The accuracy is governed also by the number of bits used in the mantissa. The 
-        obligation to round numbers (rounding error) is related to accuracy. Dedicating more bits for the mantissa increases the resolution 
-        and the precision.
-        
-        \item Range: Highest and tiniest number representable with the number of bits available. This concept is governed by the number of 
-        bits of the exponent so for a fixed number of bits (precision), dedicating more bits to the exponent and less bits to the mantissa 
-        extends the range but decreases the accuracy and resolution. 
-    \end{itemize}
-\end{IN}
 
 
 
@@ -590,39 +788,18 @@ The best way to understand the differences between both representations is with 
 
 Now the conversion between decimal and floating-point number in the standard IEEE can be treated.
 
-The current standard implemented in most machines to work with floating-point Arithmetic is the IEEE 754 Standard (see table \ref{tab:properties}). Let's take a look at the basics of a representation in this standard. Similarly to the scientific notation, this representation assumes that the binary point is located immediately at the right of the first binary digit, the sign bit as will be seen later. The exponent then will float the binary point to the right or to the left depending on the value. 
 
-\newpage
-%\begin{figure}[h]
-\begin{sidewaysfigure}
-        %\begin{flushleft}
-            \centering
-            \includegraphics[width= \textwidth]{./doc/Figures/ParametersIEEE.png}
-            \caption{Main formats in the standard IEEE 754: single, double and quadruple precision with an example in single precision.}
-            \label{fig:ParametersIEEE}
-        %\end{flushleft}
-        \begin{table}[H]
-            %\begin{flushright}
-                %\begin{turn}{90}
-                    \begin{tabular}{| r | c | c | c | c | c | c | c | c |}
-                        
-                        \hline
-                        Name & Sign & Exp. & Mantissa & Exp. Bias & \begin{tabular}{@{}c@{}}Bits\\  precision\end{tabular}  & \begin{tabular}{@{}c@{}}Normalized \\ range \end{tabular} & \begin{tabular}{@{}c@{}}Approximate\\decimal\end{tabular} & Precision \\ \hline
-                        
-                        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      & 1 & 8  & 23    & +127   & 24 & \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ −38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7.2 digits  \\ \hline
-                        
-                        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    & 1 & 11 & 52    & +1023  & 53 & \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ −308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15.9 digits        \\  \hline
-                        
-                        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   & 1 & 15 & 112   & +16383 & 113 & \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19.2 digits          \\ \hline
-                        
-                    \end{tabular}                                                       
-                %\end{turn}
-                \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
-                \label{tab:properties}
-            %\end{flushright}
-        \end{table}
-\end{sidewaysfigure}
-%\end{figure}
+
+
+
+
+
+
+
+
+
+
+
 
 This information can also be accessed by code, take a look at the useful intrinsic functions that can be used in Fortran.
 

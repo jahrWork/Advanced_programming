@@ -25,7 +25,7 @@ File3\Col=0
 File3\FirstLine=0
 File3\FoldedLines=
 MasterFile=
-CurrentFile=doc/Chapters/part_I/RW_files.tex
+CurrentFile=doc/Chapters/part_II/IEEE.tex
 Bookmarks=@Invalid()
 File4\FileName=doc/Chapters/part_I/Taylor.tex
 File4\EditorGroup=0
@@ -39,6 +39,18 @@ File5\Line=0
 File5\Col=0
 File5\FirstLine=0
 File5\FoldedLines=
+File6\FileName=doc/Chapters/Part_III/map_filter_reduce.tex
+File6\EditorGroup=0
+File6\Line=0
+File6\Col=0
+File6\FirstLine=0
+File6\FoldedLines=
+File7\FileName=doc/Chapters/part_II/IEEE.tex
+File7\EditorGroup=0
+File7\Line=0
+File7\Col=0
+File7\FirstLine=0
+File7\FoldedLines=5
 
 [InternalPDFViewer]
 File=

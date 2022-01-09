@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\renewcommand\home{./Fortran_project/sources/IEEE}
+\renewcommand{\home}{./Fortran/sources/IEEE} 
 
 %ESCRIBIR Y REORDENAR:
 
@@ -22,8 +22,18 @@
 %    \end{enumerate}
 %\end{IN}  
 
-
-
+%En declaring kind
+%Specially in strong typed languages like Fortran, a scientific programmer must understand how assignations are performed and the typical errors that could appear when types of variables are not properly defined. 
+%Ejemplo de declaracion viciada y ejemplo de declaracion no viciada
+%Ejemplo de real (N) que se pueda usar en la realidad. 
+%\begin{IN}
+%    As a conclusion, get used to think first the needs of your program regarding the precision of the real variables and constants so you can define it properly in their declarations. In case you prefer to write a code that does not depend on the precision do not specify values for precisions and choose the proper value in the compiler options for each compilation and execution. Anyway, do not forget to always specify that a constant is a real value, so it is not confused with an integer. Use one of the following ways:
+%    \begin{enumerate}
+%        \item Use a decimal point after the integer part of the number so it is clear that the number is treated as a real. For example \texttt{3. * 78.} is an operation between reals. 
+%        \item If the real constant has exponent use any of the symbols ``E'', ``D'' or ``Q'' depending on the precision. Use ``E'' if you do not want to specify precision and let the compiler use the default value. In this case the decimal point is optional. For example \texttt{45E-3 * 7.E2} is also an operation between reals with the default precision imposed by the compiler. In this case, after the symbol it must be an integer number, but you can use the value zero, for example \texttt{7e0 * 34.}
+%        \item If you need to work with an integer variable but operate it as a real value, then use the intrinsic function \texttt{real (N)}. In this situation the variable \texttt{N} which may be declared as an integer value could be used in operations with reals properly. 
+%    \end{enumerate}
+%\end{IN}
 
 \chapter{Reals representation and operations} \label{chap:reals}
 
@@ -115,7 +125,6 @@ However, the execution gives \texttt{S = 3027.90}. Later, in the same subroutine
 but the computer returns \texttt{S = 26.1582}.
 
 \vspace{0.5cm}
- \renewcommand{\home}{./Fortran/sources/IEEE} 
 \listings{\home/Round_off.f90}
 {errors_in_operations}{end subroutine}
 {Round_off.f90} 
@@ -128,7 +137,6 @@ that being added to the unity gives a result different to the unity.
 Fortran implements this value by means of the intrinsic function \texttt{epsilon(x)}.
 
 \vspace{0.5cm}  
-  \renewcommand{\home}{./Fortran/sources/IEEE}  
 \listings{\home/Round_off.f90}
 {loss_of_precision}{end subroutine}
 {Round_off.f90} 
@@ -439,7 +447,15 @@ Notice from the table \ref{tab:properties} that the actual bits used in the mant
 This is due to an implicit 1 in the left part of binary point, since it is always a 1, is not explicitly stored. 
 Hence, the binary mantissa of the example $-110.3125$ is actually $1.10111001010...$ while only the right part of the binary point is stored. 
 
-The table also shows the range of representable numbers, the minimum and maximum value allowed for each standard format. Finally, the information we are usually more interested in; the decimal precision we have when a real value is represented in IEEE 754 standard which is the number of decimal significant digits in our number. Any value stored in simple precision has at least 7 digits of accuracy regarding the value that we really want to work with. For better accuracy, use double precision. 
+The table also shows the range of representable numbers, the minimum and maximum value allowed for each standard format. 
+
+Finally, the information we are usually more interested in; the decimal precision for each format, which is the number of reliable decimal digits. Consider that $log_2(10)\approx 3.32 $ binary digits are needed in order to represent one single decimal digit. 
+
+In single precision we count on 24 binary digits for mantissa so: $24/3.32 = 7.2$ decimal digits are reliably represented. Notice this does not mean that the first 7 digits of the representation equals the expected value, it means that the relative error between both numbers is around $1e-7$. Just consider the number $1.3_{10}$, in the standard IEEE 754 in simple precision this value is stored as 
+$$
+\texttt{ 0 01111111 01001100110011001100110}_2 = 1.2999999523162841796875_{10}
+$$
+which means that the error caused by the conversion is $-4.76837158203125E-8$ while only the first digit is the same.
 
 \newpage
 \begin{figure}
@@ -762,6 +778,25 @@ set is more dense and the absolute error is lower.
 
 
 
+        %--------------------------------------------------------------------------------------------------------------------------------------
+        \subsection{Are integer numbers exactly represented in the reals?}
+
+
+Integer values in the field of reals follow the same treatment as any other real number so they will be exactly represented with the same number of decimal digits. Hence, not all the integers contained in the representable range of real numbers have exact representation in this set. 
+
+In the case of single precision for example, at least all the integers with 6 or less significant decimal digits can be converted to a IEEE 754 value without losing precision. Some integers with 9 digits can also be converted but more than 9 digits is inevitably related to loss of precision. 
+
+As an example, the following number is exactly stored: 
+$$
+899565_{10} = 01001001010110111001111011010000_2
+$$
+but the number $45962178_{10}$ is converted (with an error of $-2$ units) to:
+$$
+45962176_{10} = 01001100001011110101010011110000_2
+$$
+
+
+
 %RESTOS
 %There are two reasons why a real number you may want to represent in the computer can not be 
 %exactly represented and has to be rounded to an IEEE floating-point value. 
@@ -843,7 +878,10 @@ set is more dense and the absolute error is lower.
 %\end{IN}
 
 
-\section{Decimal real number from its internal IEEE binary representation}
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------     
+    \section{Decimal real number from its internal IEEE binary representation}
 
 Being $s$ the sign bit, $e$ the exponent already converted to decimal value and properly biased and $p$ the number of digits in the mantissa excluding the implicit 1, the decimal value can be obtained trough the following expression (see Table \ref{tab:properties}): 
 $$
@@ -880,8 +918,8 @@ $$
 %$$
 %Use scientific notation with ES format (normalized mantissa). 
 
-
-\section{IEEE binary representation from decimal real numbers}
+    %--------------------------------------------------------------------------------------------------------------------------------------     
+    \section{IEEE binary representation from decimal real numbers}
 
 Let's revise the steps to encode a decimal number in IEEE 754 binary representation:
 
@@ -932,16 +970,17 @@ Let's convert the number $-110.3125_{10}$ to a 32bits IEEE 754 floating point ex
 
 
 
-\section{IEEE exceptions}
 
+    %-------------------------------------------------------------------------------------------------------------------------------------- 
+    \FloatBarrier    
+    \section{IEEE exceptions}
 
+The standard IEEE 754 reserves some combinations of binary digits for special situations: \texttt{NaN}, $\pm\infty$ or denormalised numbers (see Table \ref{tab:SpecialValues}). In addition, take into account that there are two numbers equal to $0$: $\pm 0$.
 
+Infinity and NaN are essential to denote whether the result of a computation is too large to be represented in IEEE-754 (\textbf{overflow}) or a variable resulted in an illegal value (division $\frac{0}{0}$ for example). The operations between those special values are defined in the standard (see Table \ref{tab:SpecialOperations}).
 
+The denormalised numbers are used when \textbf{underflow} occurs, which means, a value in the gap that exits between the smallest normalised number representable (\texttt{tiny}) and the same negative value. With the denormalised or subnormal numbers a gradual underflow is achieved so numbers too small to be represented (otherwise replaced by 0) are gradually decreased. From the representation point of view, the number is not treated with an implicit 1 before the binary point in the mantissa, but with a zero. Hence, the range of the mantissa is $\left[ 0, 1\right)$.
 
-
-
-
-Finally, the standard reserves some exponent values to special situations (see Table \ref{tab:SpecialValues}). It is important to always consider that there are two numbers equal to $0$, $\pm 0$. Infinity and NaN's are essential to denote whether the result of a computation is too large to be represented in IEEE-754 (then infinity is used, for example, when the maximum exponent is exceeded in an operation, also called overflow) or a variable didn't obtained a known value or it is illegal (then NaN is used). The operations between those special values are totally defined in the standard (see Table \ref{tab:SpecialOperations}). The denormalised numbers are used when underflow occurs, which means, a value is obtained in the gap that exits between the smallest normalised number representable by the standard and the same negative value. That gap is many orders of magnitude larger than the machine epsilon (the distance between two representable values outside the gap, this is treated in the section \ref{sec:roundoff}). With the denormalised numbers (or subnormal numbers) a gradual underflow is achieved. Said in other words, the numbers too small to be represented (and then forced to be replaced by zero) are gradually decreased. In this case the number does not have an assumed leading one before the binary point, it is a zero. The range of the mantissa is then $\abs{c}\in\left[ 0,1\right)$.
 
 \begin{table}
     \centering
@@ -950,10 +989,10 @@ Finally, the standard reserves some exponent values to special situations (see T
         Exponent & Mantissa & Value represented \\ \hline
         All 0's  & All 0's & $\pm 0 $ depending on the sign bit, they are equal  \\ \hline
         All 1's  & All 0's & $\pm \infty$ depending on the sign bit \\ \hline
-        All 1's & NOT all 0's & Not a Number (NaN)  \\ \hline
+        All 1's & NOT all 0's & Not a Number (\texttt{NaN})  \\ \hline
         All 0's  & NOT all 0's & Denormalised numbers  \\ \hline
     \end{tabular}
-    \caption{Special values covered by the IEEE 754 standard.}
+    \caption{Special binary combinations covered by the IEEE 754 standard.}
     \label{tab:SpecialValues}
 \end{table}
 
@@ -977,77 +1016,108 @@ Finally, the standard reserves some exponent values to special situations (see T
     \label{tab:SpecialOperations}
 \end{table}
 
-Notice that the exponent with all 0's would correspond to $0_{10}$ for biased exponent while the exponent all 1's would be equal to $255_{10}$ for the biased exponent in simple precision.
 
-An essential concept to manage when programming is the relation between the precision used in a number and his decimal significant digits, which means, the number of reliable digits. This concept is broaden in the next section, however, notice now that when a decimal value is written in a program to be assigned to a variable, used as a constant or as a named constant, the binary value stored is the nearest IEEE 754 floating point value to the expected value. We always have to work with a rounding error, hence, the main question is how many digits are are reliable in the assignment of a variable? Well, it depends on the precision used, in the case of simple precision normally the first 7 digits are reliable but remember that the resolution is not the same everywhere. In some places the binary representation is dense and extra digits can be considered, in other places less digits. 
 
-As a quick approximation, consider that $log_2(10)\approx 3.32 $ ($2^n = 10$) binary digits are needed in order to represent one single decimal digit and with simple precision we count on 24 binary digits for mantissa (23 + omitted leading 1) so: $24/3.32 = 7.2$ decimal digits are represented. Notice that this does not mean that the first 7 digits of the represented number are equal to the 7 first digits of the expected value, it means that the relative error between both numbers is in the order of magnitude of $1e-7$. 
 
-Just consider the number $1.3_{10}$, in the standard IEEE 754 in simple precision this value is stored as $$\texttt{ 0 01111111 01001100110011001100110}_2 = 1.2999999523162841796875_{10} $$
 
-which means that the error caused by the conversion is $-4.76837158203125E-8$ while only the first digit is the same. Furthermore, this is only the error caused by the conversion to the binary value, more errors can appear when the program operates with that value. 
+    %--------------------------------------------------------------------------------------------------------------------------------------     
+    \section{Declaring kind} 
+    %\section{Practical guidance to use real numbers} 
 
-\begin{IN}
-    Notice that not all the integers contained in the representable range of real numbers have exact representation in this set. In the case of simple precision for example, at least all the integers with 6 or less significant decimal digits can be converted to a IEEE 754 value and not lose precision in the conversion. Some integers with 9 digits can also be converted but more than 9 digits is inevitably related to loss of precision. As an example, the number $899565_{10}$ is exactly transformed, but the number $45962178_{10}$ is converted to $ 45962176_{10}$ with an error of $-2$ units. 
-\end{IN}
 
-With the following subroutines and functions you can follow the deconstruction of a real number through his internal bits representation. This representation is charged in a string of bits and once extracted the different parts of the string (sign bit, exponent and mantissa), the value is reconstructed according to the standard. Notice that this code covers the normalized numbers and not the special values.
+Similarly to integers, a good practice is to write codes that can be used with different real precisions:
+\texttt{kind=2, 4, 8}. To do that, do not specify the kind of any \textbf{variable}, just use \texttt{real :: x}. 
+Then, the compiler assumes default real kind for all real variables. 
+Generally, this default can be easily changed with a proper compilation option and 
+the program does not depend on the precision imposed when it was written. 
 
-Either single, double or quadruple precision, the number is converted to a quadruple precision number. Notice that this conversion carries the error made in the first assignation (simple, double or quadruple) and the assignment to quadruple just simplifies the rest of the code since it is developed only for one kind. If a simple precision value is introduced in the program, where only 32bits are used, at the moment of assigning to the 128bits, lots of values will be filled will be filled with zeros. Later, the program extracts sign, exponent and mantissa. While sign and exponent are charged to an integer variable, the mantissa is stored in a quadruple precision real value (already adding the omitted 1). Taking into account the bias for the exponent and the basic conversion from binary to decimal the number can be reconstructed. While representing in the screen the bits, do not forget that leading zeros are not displayed, however, they are there and blanks are left instead.
+The alternative is to explicitly declare the kind (precision) of any real variable: 
 
-This program is not only useful to understand the conversion but also to make tests with the same number in different precisions. Call the program with the same number declared as simple, double and quadruple precision and take a care look at the big differences in the reconstructed number, specially the significant digits for all the precisions. 
+\begin{verbatim}
+real(kind = 4) :: x1
+real(kind = 8) :: x2
+real(kind = 16) :: x3
+\end{verbatim}
 
+When declaring \textbf{constants}, the situation is different. A specific kind type can be declared
+by underscoring the constant with its kind type. However, this is not the common way to do it, 
+consider not declaring the kind for any constants neither so it automatically adopts the default real kind value.
+
+\begin{verbatim}
+123.45_4
+123.45_8
+123.45_16
+\end{verbatim}
+
+\textbf{Scientific notation} can also be used in languages like Fortran, for example, declaring the real constant $10.$ can be done equivalently in the following ways:
+\begin{verbatim}
+10.
+1e1
+1.e1
+10e0
+10.E0
+10.e0
+\end{verbatim}
+First of all, notice that \texttt{10} can not be used since it would be treated as an integer. Secondly, remember that the kind of these constants \textbf{is not necessarily single precision}, default precision is being used with scientific notation so the \texttt{default real kind} option of the compiler rules the precision of these constants.
+
+Historically, if the scientific notation is mixed with the declaration of an specific kind, these declarations were used for double precision:
+\begin{verbatim}
+1d1
+1.d1
+1e1_8
+1.e1_8
+\end{verbatim}
+or for quadruple precision:
+\begin{verbatim}
+1q1
+1.q1
+1e1_16
+1.e1_16
+\end{verbatim}
+However, this is not our recommended way to do it, consider not declaring the kind for any constants so it automatically adopts the default real kind value.
+
+
+
+%RESTOS
+%If the type of a variable is defined in the declaration of the variable it is typically used \texttt{real(kind = n) :: } or \texttt{real*n :: } where \texttt{n} is 4, 8 or 16. 
+%Unless you have changed it, the default real kind is simple precision (\texttt{kind = 4}). 
+
+
+
+    %--------------------------------------------------------------------------------------------------------------------------------------     
+    \section{\texttt{subroutine mantissa\_exponent\_base\_2}} 
+
+
+Use the following subroutine to reconstruct a real number through its internal bits representation: 
 
 \newpage
-\renewcommand{\home}{./Fortran/sources/IEEE} 
 \listings{\home/IEEE_representation.f90}
 {subroutine mantissa_exponent_base_2}{end subroutine}
 {Subroutine to reconstruct the number in IEEE_representation.f90} 
 
-\newpage
-\renewcommand{\home}{./Fortran/sources/IEEE} 
+
+This subroutine works by storing in a quadruple precision number any input value, 
+either single, double or quadruple precision real. Then,  
+the binary representation is written in a string called \texttt{bits}, 
+the different parts are extracted (sign bit, exponent and mantissa) 
+and the decimal value reconstructed. 
+
+Notice the following: 
+first, this code covers the normalized numbers and not the special values and denormalized numbers. 
+Second, the conversion to quadruple precision carries with the round off error of the original precision and 
+third, in order to write bits in the screen do not forget that leading zeros are not displayed.
+
+Functions \texttt{normalized\_mantissa( string )} and \texttt{biased\_exponent( string )} returns the mantissa including an implicit 1 and the exponent biased with a bias value of 16383 from the input string of bits. 
+
 \listings{\home/IEEE_representation.f90}
 {function normalized_mantissa}{end function}
 {normalized_mantissa function in IEEE_representation.f90} 
 
-\newpage
-\renewcommand{\home}{./Fortran/sources/IEEE} 
 \listings{\home/IEEE_representation.f90}
 {biased_exponent}{end function}
 {biased_exponent function in IEEE_representation.f90} 
 
-
-
-
-
-
-\section{Practical guidance to use real numbers} 
-
-
-
-
-
-Exactly like in the case of integers, in a code, the programmer works with real variables and real constants, and it is interesting to manage properly the precision reserved for both. Specially in strong typed languages like Fortran, the programmer must understand how assignations are performed and the typical errors that could appear when types of variables are not properly defined. If the type of a variable is defined in the declaration of the variable it is typically used \texttt{real(kind = n) :: } or \texttt{real*n :: } where \texttt{n} is 4, 8 or 16. For each situation the strategy can vary, however, it can be interesting to write the program independently of the precision, this means that the declaration of variables is made with no kind specification, just \texttt{real :: x}. If the ``kind'' parameter is not specified, the kind of the variable is the default value, which can be modified in the compiler options. The main advantage of this strategy is that the code can be executed with all the precisions by changing an option of the compiler. Thus, the program is not dependent on the precision imposed when it was written. 
-
-In the case of constants the precision can be also defined when used, just add \texttt{\_k} besides the value of the constant with \texttt{k} is 4, 8 or 16 and that kind will be imposed to the constant. However, once again, this is not the common way to do it, consider not declaring the kind for the constants neither so it automatically adopts the default real kind value and, in case different precision is needed for the whole program, that option is changed in the compiler options. Unless you have changed it, the default real kind is simple precision (\texttt{kind = 4}). 
-
-When the constant has an exponent part, for example, \texttt{1.35E+9} which means \texttt{1.35 * 10**9} the constant is automatically a simple precision value because of the ``E'', unless the kind parameter besides specifies anything different (\texttt{1.35E+9\_8} would be double precision). If a ``D'' or a ``Q'' is used, then the constant is double or quadruple precision instead, in this case no optional parameter \texttt{\_k} can be used since the precision is already chosen. All these different ways to declare the same thing should be used in those cases the programmer needs it, consider not declaring the precision for each real value in the program and make it independent of the precision. When the constant does not have an exponent and does not have decimal part (for example the real value \texttt{8.}) the number written must have a decimal point to tell the compiler that is a real value, whether the kind parameter is imposed or not. Otherwise, the compiler will consider it an integer value. Later in the text is treated the possible errors that appears commonly in a program when operations between different types of variables and constants are performed.
-
-%Ejemplo de declaracion viciada y ejemplo de declaracion no viciada
-%Ejemplo de real (N) que se pueda usar en la realidad. 
-
-\begin{IN}
-    As a conclusion, get used to think first the needs of your program regarding the precision of the real variables and constants so you can define it properly in their declarations. In case you prefer to write a code that does not depend on the precision do not specify values for precisions and choose the proper value in the compiler options for each compilation and execution. Anyway, do not forget to always specify that a constant is a real value, so it is not confused with an integer. Use one of the following ways:
-    \begin{enumerate}
-        \item Use a decimal point after the integer part of the number so it is clear that the number is treated as a real. For example \texttt{3. * 78.} is an operation between reals. 
-        \item If the real constant has exponent use any of the symbols ``E'', ``D'' or ``Q'' depending on the precision. Use ``E'' if you do not want to specify precision and let the compiler use the default value. In this case the decimal point is optional. For example \texttt{45E-3 * 7.E2} is also an operation between reals with the default precision imposed by the compiler. In this case, after the symbol it must be an integer number, but you can use the value zero, for example \texttt{7e0 * 34.}
-        \item If you need to work with an integer variable but operate it as a real value, then use the intrinsic function \texttt{real (N)}. In this situation the variable \texttt{N} which may be declared as an integer value could be used in operations with reals properly. 
-    \end{enumerate}
-\end{IN}
-
-Unicamente tener cuidado con la asignacion de una constante o variable de doble a simple que no estas aprov3echando toda la precision y de simple a doble, que se hace la asignacion con el error que lleve el numero en simple precision. 
-
-
+Call the program with the same real value declared as simple, double and quadruple precision and take a care look at the big differences in the reconstructed number, specially the significant digits for all the precisions. 
 
 
 

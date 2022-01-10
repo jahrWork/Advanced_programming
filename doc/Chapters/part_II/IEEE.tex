@@ -12,15 +12,17 @@
 
 
 %\begin{IN}
-%    There are some basic concepts that you can revise to confront this section with all the tools. First of all, take a look at the positional numeral systems and how to convert a decimal number to a pure binary number either integer or fractional and either positive or negative. Then, take a look at the standard scientific notation in decimal system used to express large and tiny numbers, at this point revise the scientific notation in binary system which is similar. Once this is done, some conclusions can be obtained:
+%     Then, take a look at the standard scientific notation in decimal system used to express large and tiny numbers, at this point revise the scientific notation in binary system which is similar. Once this is done, some conclusions can be obtained:
 %    \begin{enumerate}
-%        \item The computer can not use the symbol (-) for negative values and it neither uses an explicit decimal point to represent the fractional part. It needs a method to express reals (and specially negative reals) just using 0's and 1's.
+
 %        \item Except for the number $0_{10} = 0_{2}$, all the numbers to be expressed in binary system are going to have the digit 1 as first significant digit. Exactly like in a decimal number the first significant digit must be a digit from 1 to 9. 
 %        \item Exactly like the case of a decimal number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=10$), where the exponents is chosen to accomplish $\abs{c}\in\left[ 1,10\right)$, for a binary number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=2$), the value of $\abs{c}\in\left[ 1,2\right)$ (except for the 0, which is an special value). That condition is expressed in decimal form, while it is referred to a binary number, the meaning is not other than the mantissa of a binary number expressed in binary standard scientific notation is going to be contained  between 1 and 2 while expressed in decimal form. In binary form, this means that the mantissa of the number always has the digit 1 followed by the fractional point and a series of binary digits. Well, notice that standard IEEE 754 for floating point numbers is really similar to scientific notation in base 2. 
 %        
 %        Just as an example, a binary number in standard scientific notation could be $\texttt{1.01101}\cdot2^{3}$. In this case, the mantissa is written in binary form while the base and exponent are written in decimal form, it does not change the meaning. We could write all the number in binary form like: $\texttt{1.01101}_2 \cdot 10_2^{11_2}$
 %    \end{enumerate}
 %\end{IN}  
+
+
 
 %En declaring kind
 %Specially in strong typed languages like Fortran, a scientific programmer must understand how assignations are performed and the typical errors that could appear when types of variables are not properly defined. 
@@ -35,6 +37,31 @@
 %    \end{enumerate}
 %\end{IN}
 
+
+%--posicion de mantisa y de exponente
+%--0 para mas o para menos
+%--yo mencionaria que hay un 1 implicito en la mantissa siempre imitando a la notacion cientifica
+%--explicaria antes la notacion cientifica en binario, dos ideas solo. 
+%--no es 15 precisamente porque son numeros entre 1 y 2 obligatoriamente.
+%--dejar clara la competición entre precision y rango
+%For special purposes it is used the $(1, 4, 3, 7)$ minifloat, 
+
+%for the same exponent, all the mantissas grow with the same resolution and adding 
+%one to the exponent reduces highly the resolution.
+
+%Quickly in the floating-point 
+%of 1-byte the resolution is poor, 
+%for an exponent of $1110_2 = 14_10\rightarrow  \textrm{exponent} = 7$ the resolution 
+%is 16 units while the resolution for an exponent of $0001_2 = 1_10\rightarrow  \textrm{exponent} = -6$ 
+%is $0.001953...$. Why this happens is simple, we must not forget that the number of bits is
+% the same for this examples, in both cases we can not store more values than $2^8 = 256$, 
+% if we want more range, is at the cost of less resolution. 
+
+%\begin{IN}
+%    Do not forget that, exactly than in decimal system, the positions on the left of the decimal point are numbers bigger than 1 and the positions on the right are smaller than 1. While in decimal system each position multiplies by ten the value on his right, in binary system the value is doubled going to the left and divided by two going to the right. 
+%\end{IN}
+
+
 \chapter{Reals representation and operations} \label{chap:reals}
 
 
@@ -42,7 +69,7 @@
     \section*{Overview}
 
 Real numbers can be represented by 
-an integer part and a decimal parts separated by a character which is usually a point 
+an integer part and a decimal parts separated by a character (which is usually a point) 
 and a $(-)$ sign when needed. 
 The integer and the decimal part have, in general, infinite length.  
 However, since the internal representation of a real number 
@@ -84,7 +111,8 @@ Before continuing, revise these concepts in the context of numerical calculation
     bits of the exponent and will be related to errors of overflow or underflow. 
 \end{itemize}
 
-
+This chapter does not cover the algorithm to convert from one numeral system to other (for example from decimal to binary). We recommend to revise the definition and notions of positional numeral systems and how to convert between different systems (either integer, fractional, positive and negative values).
+Also, the differences between exponential notation, normalized scientific notation could be revised to confront the following text. 
 
 
 %RESTOS
@@ -259,33 +287,85 @@ is epxlained in the next sections.
 
 
     %--------------------------------------------------------------------------------------------------------------------------------------
-    \section{Fixed-point and Floating-point representation}
+    \section{Represent reals in the computer}
+ 
+A real number is comprised by an integer part and a fractional part (separated by a point $``.''$) and, if the real number is negative, a minus sign is also included $``-''$.
+Both parts have, in general, infinite length. 
+Three challenges appear when we want to represent and use real numbers on a computer. 
+This chapter, in short, covers the solutions and consequences to these challenges:
+\begin{enumerate}
+    \item The computer does not understand numbers in base 10, like humans use. On the contrary, base 2 is used. 
+    \item A computer has finite amount of memory to store and process numbers.
+    \item Symbols like fractional point ($.$) or minus sign ($-$) must be encoded. 
+\end{enumerate}
+ 
+The first challenge involves the transformation of the decimal value to a binary value so the machine can process and store sequences of 0's and 1's in replacement of the decimal symbols (0, 1, 2, 3, etc.).
+If you have read the previous chapter and already know how to convert integers, you may think that the computer could convert integer part from one side and fractional part from the other side and store both as integer numbers. However, this is not the way to do it. 
 
-There are two main ways to represent real numbers in computers: 
-\begin{itemize}
-    \item Fixed-point representation. 
-The real number is represented by its integer part and its decimal part (e.g. \texttt{55.88}). 
-    \item Floating-point representation. 
- The real number is represented by its mantissa and its exponent  (e.g. \texttt{0.5588e02}).
-\end{itemize} 
+Since both, decimal and binary, are \textbf{positional numeral systems}, the conversion between both is done by changing the base from 10 to 2. 
+We saw in the previous chapter an integer conversion (\ref{sec:TwosComp}). Well, with reals is the same but also considering negative powers of the base. 
+Let's see for example the number $20.25_{10}$:
 
-Fixed-point representation fixes the position of the binary point that separates 
-the integer part from the decimal part. 
-Then, the bits reserved for both parts are prefixed. 
-This method has the advantage that processing the numbers is simpler
-but has strong limitations in the available range  to work with.
+\begin{multline*}
+    N = 20.25_{10} = 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2} = \texttt{10100.01}_{2} =  \\ 
+    = 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2}   
+\end{multline*}
+    
+Notice how our decimal value can be expressed with exponential notation in many different ways just by shifting the fractional point (floating-point):
+$$
+N = 20.25 = 2.025\cdot10^1 = 0.2025\cdot10^2 = 2025\cdot10^{-2}
+$$
+More specifically, there is one notation that is unique for this number, the normalized scientific notation (mantissa must be $1\leq\mid m \mid < 10$):
+$$
+N = 2.025\cdot10^1
+$$
+
+Now notice how our binary conversion can also be expressed in exponential notation, shifting the fractional point with powers of 2 (floating-point):
+$$
+N = \texttt{10100.01}_{2} = \texttt{1010.001}_{2}\cdot2^1  = \texttt{1010001}_{2}\cdot2^{-2} = \texttt{1.010001}_{2}\cdot2^4
+$$
+And more specifically, a binary standard scientific notation (mantissa must be $m = 1_2$, omit the sign for now) is unique:
+$$
+N = \texttt{1.010001}_{2}\cdot2^4
+$$
+
+The question now is which option is better: storing reals in fixed-point notation; $\texttt{10100.01}$ or in floating-point notation; $\texttt{1.010001}\cdot2^4$?
+
+
+    
+    
+    \section{Range-Precision in Fixed-point vs Floating-point}
+
+%There are two main ways to represent real numbers in computers: 
+%\begin{itemize}
+%    \item Fixed-point representation. 
+%The real number is represented by its integer part and its decimal part (e.g. \texttt{55.88}). 
+%    \item Floating-point representation. 
+% The real number is represented by its mantissa and its exponent  (e.g. \texttt{0.5588e02}).
+%\end{itemize} 
+
+Let's deal now with the second challenge of representing reals in the computer, 
+the computer counts with a finite amount of memory to store the binary value.
+
+\begin{enumerate}
+    \item \textbf{Fixed-point representation} fixes the position of the binary point that separates 
+    the integer part from the decimal part. Then, the bits reserved for both parts are prefixed. 
+    
+    \item \textbf{Floating-point representation} stores the value of the mantissa in some bits and the value of the exponent in different bits.
+\end{enumerate}
+
+Notice in the first place that fixed-point has the advantage that processing the numbers is simpler
+but has strong limitations in the available range to work with. 
+With floating-point, since the exponent allows to move position of the decimal point 
+to the left or to the right in the mantissa, huge numbers and tiny numbers can be represented.
+As an inconvenient, for the same number of bytes, 
+this representation is slower to process and has lower resolution than fixed-point representation.
 
 Nowadays, computers use the floating point representation through the standard IEEE 754.
-The numbers are stored similarly to the way standard scientific notation is written. 
-Hence, a number of bits store the mantissa of the number and another part of bits store the exponent 
-of that number. 
-Since the exponent allows to move position of the decimal point 
-to the left or to the right in the mantissa,  huge numbers and tiny numbers can be represented.
-As an inconvenient, for the same number of bytes, 
-this representation is slower to process and has lower resolution than fixed-point representation. 
-
+The numbers are encoded similarly to binary standard scientific notation. 
+ 
 As an example, 
-consider a fixed point 1-byte precision number with 5 bits reserved for the integer part and 3 bits
+consider a fixed-point 1-byte precision number with 5 bits reserved for the integer part and 3 bits
 for the decimal part as it is shown in Figure \ref{fig:FixedFloat}. 
 
 \begin{figure}[h]
@@ -303,58 +383,23 @@ Hence, the number $20.25$ is $\texttt{10100.010}$ in binary fixed point
 representation. 
 Notice that the smallest number that can be represented is
 $\texttt{00000.001}$, which is only $0.125$ 
-and also notice that the biggest number available with this method (and 8 bits) is $\texttt{11111.111}$
-which is $31.875$. 
-This representation allows numbers from $0.125 = 2^{-3}$ to $31.875$  with jumps of $0.125$. 
+and also notice that the biggest number available with this fixed-point 8 bits is $\texttt{11111.111}$
+which is $31.875$. As you may have seen, no negative values are encoded here. 
+
+This representation allows numbers from $0.125 = 2^{-3}$ to $31.875$ with jumps of $0.125$. 
 If 2, 4, 8 or 16 bytes are used to represent this number the range increases 
 and the distance among numbers decreases but the range is still very limited. 
 
-
-
-
-
-
-
-
-\textbf{In order to compare with floating-point representation,
-let's consider a mini-float of 8 bits with the same memory size that 
-the above fixed point representation. 
-Consider a mini-float that only stores positive numbers, with
-4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
-Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$), 
-the decimal number is obtained by:}
-
---posicion de mantisa y de exponente
---0 para mas o para menos
---yo mencionaria que hay un 1 implicito en la mantissa siempre imitando a la notacion cientifica
---explicaria antes la notacion cientifica en binario, dos ideas solo. 
---no es 15 precisamente porque son numeros entre 1 y 2 obligatoriamente.
---dejar clara la competición entre precision y rango
-%For special purposes it is used the $(1, 4, 3, 7)$ minifloat, 
-
-%for the same exponent, all the mantissas grow with the same resolution and adding 
-%one to the exponent reduces highly the resolution.
-
-%Quickly in the floating-point 
-%of 1-byte the resolution is poor, 
-%for an exponent of $1110_2 = 14_10\rightarrow  \textrm{exponent} = 7$ the resolution 
-%is 16 units while the resolution for an exponent of $0001_2 = 1_10\rightarrow  \textrm{exponent} = -6$ 
-%is $0.001953...$. Why this happens is simple, we must not forget that the number of bits is
-% the same for this examples, in both cases we can not store more values than $2^8 = 256$, 
-% if we want more range, is at the cost of less resolution. 
-
-%\begin{IN}
-%    Do not forget that, exactly than in decimal system, the positions on the left of the decimal point are numbers bigger than 1 and the positions on the right are smaller than 1. While in decimal system each position multiplies by ten the value on his right, in binary system the value is doubled going to the left and divided by two going to the right. 
-%\end{IN}
-
-
 In order to compare with floating-point representation,
-let's consider a mini-float of 8 bits with the same memory size that 
-the above fixed point representation. 
-Consider a mini-float with
-4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
-Giving a binary floating point representation with 8 bits ($b_7, \ldots, b_0$), 
-the decimal number is obtained by: 
+let's consider now a mini-float of same size, 8 bits.
+In this case 4 bits are reserved for the exponent (1 for its sign and 3 for its value) and 4 bits for the mantissa. 
+Once again no negative values are encoded. 
+Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$), 
+the decimal number is obtained by:
+
+
+
+%DESDE AQUI CUIDADO
 $$
    x = m \ 2^e, \quad m =  b_7 \ 2^{-1}  + b_6 \ 2^{-2} + b_5 \ 2^{-3} + b_4 \ 2^{-3}, \quad 
     e =  \pm (  b_2 \ 2^{2} + b_1 \ 2^{1} + b_0 \ 2^{0} ) 
@@ -427,7 +472,13 @@ floating point representation.
 %or the number $\texttt{0 1111 111}$ or $\texttt{1 1111 111}$ are reserved for $\pm\infty$ 
 %since this is just an example of the capabilities of floating-point representation. 
 
-
+%In order to compare with floating-point representation,
+%let's consider a mini-float of 8 bits with the same memory size that 
+%the above fixed point representation. 
+%Consider a mini-float with
+%4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
+%Giving a binary floating point representation with 8 bits ($b_7, \ldots, b_0$), 
+%the decimal number is obtained by: 
 
     %--------------------------------------------------------------------------------------------------------------------------------------
     \section{Floating-point representation in IEEE 754}

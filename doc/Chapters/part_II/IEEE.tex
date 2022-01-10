@@ -289,7 +289,7 @@ is epxlained in the next sections.
     %--------------------------------------------------------------------------------------------------------------------------------------
     \section{Represent reals in the computer}
  
-A real number is comprised by an integer part and a fractional part (separated by a point $``.''$) and, if the real number is negative, a minus sign is also included $``-''$.
+A real number is comprised by an integer part and a fractional part (separated by a point ``$.$'') and, if the real number is negative, a minus sign is also included ``$-$''.
 Both parts have, in general, infinite length. 
 Three challenges appear when we want to represent and use real numbers on a computer. 
 This chapter, in short, covers the solutions and consequences to these challenges:
@@ -305,39 +305,40 @@ If you have read the previous chapter and already know how to convert integers, 
 Since both, decimal and binary, are \textbf{positional numeral systems}, the conversion between both is done by changing the base from 10 to 2. 
 We saw in the previous chapter an integer conversion (\ref{sec:TwosComp}). Well, with reals is the same but also considering negative powers of the base. 
 Let's see for example the number $20.25_{10}$:
-
-\begin{multline*}
-    N = 20.25_{10} = 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2} = \texttt{10100.01}_{2} =  \\ 
-    = 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2}   
-\end{multline*}
-    
-Notice how our decimal value can be expressed with exponential notation in many different ways just by shifting the fractional point (floating-point):
 $$
-N = 20.25 = 2.025\cdot10^1 = 0.2025\cdot10^2 = 2025\cdot10^{-2}
+20.25_{10} = 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2}
+$$
+$$
+\texttt{10100.01}_{2} = 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2} 
+$$
+
+Notice how our decimal value, which is written in fixed-point notation (integer part + . + fractional part), can be expressed with exponential notation in many different ways just by shifting the fractional point (floating-point):
+$$
+20.25 = 2.025\cdot10^1 = 0.2025\cdot10^2 = 2025\cdot10^{-2}
 $$
 More specifically, there is one notation that is unique for this number, the normalized scientific notation (mantissa must be $1\leq\mid m \mid < 10$):
 $$
-N = 2.025\cdot10^1
+2.025\cdot10^1
 $$
 
-Now notice how our binary conversion can also be expressed in exponential notation, shifting the fractional point with powers of 2 (floating-point):
+Now notice how our binary conversion, also written in fixed-point notation (integer part + . + fractional part), can be expressed in many ways with exponential notation by shifting the fractional point with powers of 2 (floating-point):
 $$
-N = \texttt{10100.01}_{2} = \texttt{1010.001}_{2}\cdot2^1  = \texttt{1010001}_{2}\cdot2^{-2} = \texttt{1.010001}_{2}\cdot2^4
+\texttt{10100.01}_{2} = \texttt{1010.001}_{2}\cdot2^1  = \texttt{1010001}_{2}\cdot2^{-2} = \texttt{1.010001}_{2}\cdot2^4
 $$
 And more specifically, a binary standard scientific notation (mantissa must be $m = 1_2$, omit the sign for now) is unique:
 $$
-N = \texttt{1.010001}_{2}\cdot2^4
+\texttt{1.010001}_{2}\cdot2^4
 $$
 
 The question now is which option is better: storing reals in fixed-point notation; $\texttt{10100.01}$ or in floating-point notation; $\texttt{1.010001}\cdot2^4$?
-
+The answer to this question is treated in the next section. 
 
     
     
     \section{Range-Precision in Fixed-point vs Floating-point}
 
-Let's deal now with the second challenge of representing reals in the computer, 
-the computer counts on a finite amount of memory to store the binary value.
+Let's deal now with the second challenge of representing reals in the computer: 
+it counts on a finite amount of memory to store the binary value.
 
 \begin{enumerate}
     \item \textbf{Fixed-point representation} fixes the position of the binary point that separates 

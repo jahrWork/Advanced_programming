@@ -367,7 +367,7 @@ for the decimal part as it is shown in Figure \ref{fig:FixedFloat2}. No negative
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width= 0.8\textwidth]{./doc/Figures/FixedFloat2.png}
+    \includegraphics[width= 0.8\textwidth]{./doc/Figures/FixedFloat3.png}
     \caption{Representation of number 20.25 with fixed-point format using only 1 byte (8 bits).}
     \label{fig:FixedFloat2}
 \end{figure}
@@ -398,7 +398,7 @@ Once again no negative values are encoded.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width= 0.8\textwidth]{./doc/Figures/FloatFloat.png}
+    \includegraphics[width= 0.8\textwidth]{./doc/Figures/FloatFloat2.png}
     \caption{Representation of number 13.5 with floating-point format using only 1 byte (8 bits).}
     \label{fig:FloatFloat}
 \end{figure}
@@ -532,14 +532,14 @@ explained in detail to understand how real numbers are stored in floating point 
     \section{Floating-point representation in IEEE 754}
 
 
-The current standard implemented in most machines to work with floating-point arithmetic is the IEEE 754 Standard. Before delving into the particularities of the representation in this standard a summary of the main properties is presented here. 
+Before delving into the particularities of the representation in the standard IEEE 754 a summary of the main properties is presented here. 
 
 \begin{enumerate}
-    \item Similarly to the binary scientific notation, the binary point is located immediately after the first binary digit of the mantissa. 
+    \item Similarly to the binary normalized scientific notation, the binary point is located immediately after the first binary digit of the mantissa. 
     \item Also imitating the binary scientific notation the first digit of the mantissa is always 1, therefore it is not necessary to store it.
     \item The leftmost digit encodes the sign of the number: 1 for negative number, 0 for positive.
-    \item The rightmost digits encode the mantissa. 
     \item In the middle, the exponent is encoded with an offset-binary representation (using an exponent bias).
+    \item The rightmost digits encode the mantissa. 
 \end{enumerate} 
 
 Notice from the table \ref{tab:properties} that the actual bits used in the mantissa is always the number of mantissa bits + 1. 
@@ -991,11 +991,13 @@ Notice that $b_0 = 1$ considers the implicit 1 by adding $1\times2^0 = 1$ to the
 
 
 
-The exponent uses a bias (or offset binary) to encode negative values. Hence, being $r$ the number of exponent digits and $B$ the bias used for the specific format, the following expression gives its decimal value:
+The exponent uses a bias (or offset binary) to encode negative values. The following expression gives its decimal value:
 $$
 e = \sum_{j=0}^{r-1} b_j 2^j - \left( 2^{r-1} - 1 \right)
 $$
-
+Being $r$ the number of exponent digits. 
+ 
+ 
 %EJEMPLO
 Now we can easily reconstruct the example in the Figure \ref{fig:ParametersIEEE}. Separating sign, exponent and mantissa we have the single precision binary: 
 

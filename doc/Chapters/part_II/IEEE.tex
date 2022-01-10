@@ -336,22 +336,15 @@ The question now is which option is better: storing reals in fixed-point notatio
     
     \section{Range-Precision in Fixed-point vs Floating-point}
 
-%There are two main ways to represent real numbers in computers: 
-%\begin{itemize}
-%    \item Fixed-point representation. 
-%The real number is represented by its integer part and its decimal part (e.g. \texttt{55.88}). 
-%    \item Floating-point representation. 
-% The real number is represented by its mantissa and its exponent  (e.g. \texttt{0.5588e02}).
-%\end{itemize} 
-
 Let's deal now with the second challenge of representing reals in the computer, 
-the computer counts with a finite amount of memory to store the binary value.
+the computer counts on a finite amount of memory to store the binary value.
 
 \begin{enumerate}
     \item \textbf{Fixed-point representation} fixes the position of the binary point that separates 
-    the integer part from the decimal part. Then, the bits reserved for both parts are prefixed. 
+    the integer part from the fractional part. Hence, the bits reserved for both parts are prefixed. 
     
-    \item \textbf{Floating-point representation} stores the value of the mantissa in some bits and the value of the exponent in different bits.
+    \item \textbf{Floating-point representation} stores the mantissa with part of the bits and 
+    the exponent with different part of bits.
 \end{enumerate}
 
 Notice in the first place that fixed-point has the advantage that processing the numbers is simpler
@@ -362,92 +355,127 @@ As an inconvenient, for the same number of bytes,
 this representation is slower to process and has lower resolution than fixed-point representation.
 
 Nowadays, computers use the floating point representation through the standard IEEE 754.
-The numbers are encoded similarly to binary standard scientific notation. 
+The numbers are encoded similarly to \textbf{binary standard scientific notation}. 
+ 
+ 
+ 
+ 
  
 As an example, 
 consider a fixed-point 1-byte precision number with 5 bits reserved for the integer part and 3 bits
-for the decimal part as it is shown in Figure \ref{fig:FixedFloat}. 
+for the decimal part as it is shown in Figure \ref{fig:FixedFloat2}. No negative values are encoded here. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width= 0.8\textwidth]{./doc/Figures/FixedFloat2.png}
-    \caption{Representation of number 20.25 with fixed point format using only 1 byte (8 bits).}
-    \label{fig:FixedFloat}
+    \caption{Representation of number 20.25 with fixed-point format using only 1 byte (8 bits).}
+    \label{fig:FixedFloat2}
 \end{figure}
 
 Given a binary fixed point representation with 8 bits ($b_7, \ldots, b_0$), the decimal number is obtained by: 
 $$
    x = b_7 \ 2^4 + b_6 \ 2^3 + b_5 \ 2^2  + b_4 \ 2^1 + b_3 \ 2^0 + b_2 \ 2^{-1}  + b_1 \ 2^{-2} + b_0 \ 2^{-3}
 $$
-Hence, the number $20.25$ is $\texttt{10100.010}$ in binary fixed point 
-representation. 
+
 Notice that the smallest number that can be represented is
 $\texttt{00000.001}$, which is only $0.125$ 
 and also notice that the biggest number available with this fixed-point 8 bits is $\texttt{11111.111}$
-which is $31.875$. As you may have seen, no negative values are encoded here. 
+which is $31.875$.
 
-This representation allows numbers from $0.125 = 2^{-3}$ to $31.875$ with jumps of $0.125$. 
-If 2, 4, 8 or 16 bytes are used to represent this number the range increases 
-and the distance among numbers decreases but the range is still very limited. 
+This representation allows numbers from $0.125 = 2^{-3}$ to $31.875$ with equispaced jumps of $0.125$. 
+Naturally, with 2, 4, 8 or 16 bytes the range increases 
+and the distance among numbers decreases. However, the range is still very limited. 
 
-In order to compare with floating-point representation,
-let's consider now a mini-float of same size, 8 bits.
-In this case 4 bits are reserved for the exponent (1 for its sign and 3 for its value) and 4 bits for the mantissa. 
-Once again no negative values are encoded. 
-Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$), 
+
+
+
+
+In order to compare with floating-point representation
+let's consider a mini-float of same size, 8 bits.
+In this case 4 bits are reserved for the exponent (1 for its sign and 3 for its value) 
+and 4 bits for the mantissa as it is shown in Figure \ref{fig:FloatFloat}. 
+Once again no negative values are encoded.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{./doc/Figures/FloatFloat.png}
+    \caption{Representation of number 13.5 with floating-point format using only 1 byte (8 bits).}
+    \label{fig:FloatFloat}
+\end{figure}
+
+Since the integer part of the mantissa is always 1, we only need to encode the fractional part.
+Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$) 
+and noticing that $b_3 = 0$ encodes a positive exponent and $b_3 = 1$ a negative exponent, 
 the decimal number is obtained by:
-
-
-
-%DESDE AQUI CUIDADO
 $$
-   x = m \ 2^e, \quad m =  b_7 \ 2^{-1}  + b_6 \ 2^{-2} + b_5 \ 2^{-3} + b_4 \ 2^{-3}, \quad 
-    e =  \pm (  b_2 \ 2^{2} + b_1 \ 2^{1} + b_0 \ 2^{0} ) 
+   x = m \ 2^e, \quad m =  b_7 \ 2^{-1}  + b_6 \ 2^{-2} + b_5 \ 2^{-3} + b_4 \ 2^{-4}, \quad 
+    e =  (-1)^{b_3} (  b_2 \ 2^{2} + b_1 \ 2^{1} + b_0 \ 2^{0} ) 
 $$
-The maximum value with this representation is: 
+
+The maximum value allowed with this representation is: 
 $$
-   \texttt{1111 1111} = 15 \times 2^{7}
+   \texttt{1111 0111} = 1.9375 \times 2^{7}
 $$   
 and the smallest number is: 
 $$
-   \texttt{0001 0111} =  2^{-7}.
+   \texttt{0000 1111} =  2^{-7}.
 $$ 
-The distance between the maximum number and its closest  number is:  $  2^{7}$
-and the distance between the minimum number and its closest number is:  
-$ 2^{-7}.$
+In this representation, the distance between the maximum number and its closest number is $2^3$
+and the distance between the minimum number and its closest number is $ 2^{-11}$. Hence, in a 
+much bigger range we manage variable distances between reals, extremely shorts near 0 and really big 
+for bigger values. 
 
 
 
 
 
 To conclude, for the same number of bits, fixed-point numbers are equal-spaced along 
-the whole range but with a smaller range ($31.875$ vs $ 15 \times 2^{7}$).
-The distance among real numbers in the fixed-point representation is constant and equal to $0.125$. 
+the whole range but with a smaller range ($31.875$ vs $ 1.9375 \times 2^{7}$).
+The distance among real numbers in the fixed-point representation is constant ($0.125$ in our example). 
 However, in the floating-point representation, the distance among real numbers 
-changes from $ 2^7$ to $ 2^{-7}$ depending on the exponent of the real number. 
-It is also important to notice that the total amount of real numbers in fixed point or floating point 
-representation is the same but their distribution and range are different.
+changes from extremely short values to very big distances ($2^{-11}$ to $ 2^{7}$) depending on the exponent of the real number. 
+never forget that the total amount of real numbers in fixed point or floating point 
+representation is exactly the same but their distribution and range are different.
 
 
 \begin{IN}
-%     Fixed-point format actually could represent larger numbers or smaller numbers,
-%     but it has a static range, which means that the choose is done when designing the code, 
-%     later you can only use that range, 
-%     either big or small numbers. 
-%     Luckily, floating-point format has dynamic range, 
-%     which means that once designed the format it can handle 
-%     at the same time large and tiny numbers just varying the exponent. 
-\begin{enumerate}
-\item Fixed-point format has constant distance among all representable real numbers and a small range. 
-\item Floating-point format has variable distance among all representable real numbers with a huge range.  
-\end{enumerate}
+    \begin{enumerate}
+        \item Fixed-point format has constant distance among all representable real numbers and a small range. 
+        \item Floating-point format has variable distance among all representable real numbers with a huge range.  
+    \end{enumerate}
 \end{IN}
 
-In the following section, 
-the standard IEEE 754 which is used in all computers is 
-explained in detail to understand how real numbers are stored in 
-floating point representation.
 
+In the following section the standard IEEE 754, which is used in all computers, is 
+explained in detail to understand how real numbers are stored in floating point representation.
+
+
+%I change this part
+
+%In order to compare with floating-point representation
+%let's consider a mini-float of same size, 8 bits.
+%In this case 4 bits are reserved for the exponent (1 for its sign and 3 for its value) 
+%and 4 bits for the mantissa. 
+%Once again no negative values are encoded.
+%
+%Since the integer part of the mantissa is always a 1 we just need to encode the fractional part.
+%Given a binary floating point representation with these 8 bits ($b_7, \ldots, b_0$), 
+%the decimal number is obtained by:
+%$$
+%x = m \ 2^e, \quad m =  b_7 \ 2^{-1}  + b_6 \ 2^{-2} + b_5 \ 2^{-3} + b_4 \ 2^{-3}, \quad 
+%e =  \pm (  b_2 \ 2^{2} + b_1 \ 2^{1} + b_0 \ 2^{0} ) 
+%$$
+%The maximum value with this representation is: 
+%$$
+%\texttt{1111 1111} = 15 \times 2^{7}
+%$$   
+%and the smallest number is: 
+%$$
+%\texttt{0001 0111} =  2^{-7}.
+%$$ 
+%The distance between the maximum number and its closest  number is:  $  2^{7}$
+%and the distance between the minimum number and its closest number is:  
+%$ 2^{-7}.$
 
 
 
@@ -479,6 +507,26 @@ floating point representation.
 %4 bits for the exponent (1 for its sign and 3 for its value) and 4  bits for the mantissa.
 %Giving a binary floating point representation with 8 bits ($b_7, \ldots, b_0$), 
 %the decimal number is obtained by: 
+
+
+%There are two main ways to represent real numbers in computers: 
+%\begin{itemize}
+%    \item Fixed-point representation. 
+%The real number is represented by its integer part and its decimal part (e.g. \texttt{55.88}). 
+%    \item Floating-point representation. 
+% The real number is represented by its mantissa and its exponent  (e.g. \texttt{0.5588e02}).
+%\end{itemize} 
+
+%     Fixed-point format actually could represent larger numbers or smaller numbers,
+%     but it has a static range, which means that the choose is done when designing the code, 
+%     later you can only use that range, 
+%     either big or small numbers. 
+%     Luckily, floating-point format has dynamic range, 
+%     which means that once designed the format it can handle 
+%     at the same time large and tiny numbers just varying the exponent. 
+
+
+
 
     %--------------------------------------------------------------------------------------------------------------------------------------
     \section{Floating-point representation in IEEE 754}
@@ -934,17 +982,18 @@ $$
     %--------------------------------------------------------------------------------------------------------------------------------------     
     \section{Decimal real number from its internal IEEE binary representation}
 
-Being $s$ the sign bit, $e$ the exponent already converted to decimal value and properly biased and $p$ the number of digits in the mantissa excluding the implicit 1, the decimal value can be obtained trough the following expression (see Table \ref{tab:properties}): 
+The decimal value can be obtained trough the following expression (see Table \ref{tab:properties}):
 $$
    x = (-1)^s  2^e  \sum_{i=0}^{p} b_i 2^{-i} \quad \textnormal{with}\quad b_0 = 1
 $$
-Notice that $b_0 = 1$ considers the implicit 1 by adding $1\times2^0 = 1$ to the fractional mantissa. %The rest of terms go through the mantissa bits. 
+being $s$ the sign bit, $e$ the exponent already converted to decimal and properly biased and $p$ the number of digits in the mantissa excluding the implicit 1. 
+Notice that $b_0 = 1$ considers the implicit 1 by adding $1\times2^0 = 1$ to the fractional mantissa. 
 
 
 
 The exponent uses a bias (or offset binary) to encode negative values. Hence, being $r$ the number of exponent digits and $B$ the bias used for the specific format, the following expression gives its decimal value:
 $$
-e = \sum_{j=0}^{r-1} b_j 2^j - B 
+e = \sum_{j=0}^{r-1} b_j 2^j - \left( 2^{r-1} - 1 \right)
 $$
 
 %EJEMPLO
@@ -983,7 +1032,7 @@ Let's revise the steps to encode a decimal number in IEEE 754 binary representat
     
     \item Omit the first 1, which will be implicit.
     
-    \item Calculate the biased exponent by adding a bias (check Table \ref{tab:properties}).
+    \item Calculate the biased exponent by adding the bias $B = 2^{r-1}-1$ (check Table \ref{tab:properties}).
     
     \item Fill in the mantissa digits adding zeros at the right if necessary or truncating/rounding the excess of digits obtained in the conversion\footnote{The normal way to round the excess is by ``round to the nearest, ties to even''. If the (p+1)-th bit is a zero we chop the digits, if it is a 1 we add one to the p-th bit. The special case of a 1 in the (p+1)-th bit followed by zeros involves (similarly to the decimal system) that, if the p-th is a 1, we add one to the mantissa, if the p-th is a zero, we chop the digits.}.
 \end{enumerate}
@@ -1026,11 +1075,11 @@ Let's convert the number $-110.3125_{10}$ to a 32bits IEEE 754 floating point ex
     \FloatBarrier    
     \section{IEEE exceptions}
 
-The standard IEEE 754 reserves some combinations of binary digits for special situations: \texttt{NaN}, $\pm\infty$ or denormalised numbers (see Table \ref{tab:SpecialValues}). In addition, take into account that there are two numbers equal to $0$: $\pm 0$.
+The standard IEEE 754 reserves some combinations of binary digits for special situations: \texttt{NaN}, $\pm\infty$ or denormalised numbers (numbers in the gap that exits between the smallest normalised number representable (\texttt{tiny}) and the same negative value). In addition, take into account that there are two numbers equal to $0$: $\pm 0$ (see Table \ref{tab:SpecialValues}).
 
 Infinity and NaN are essential to denote whether the result of a computation is too large to be represented in IEEE-754 (\textbf{overflow}) or a variable resulted in an illegal value (division $\frac{0}{0}$ for example). The operations between those special values are defined in the standard (see Table \ref{tab:SpecialOperations}).
 
-The denormalised numbers are used when \textbf{underflow} occurs, which means, a value in the gap that exits between the smallest normalised number representable (\texttt{tiny}) and the same negative value. With the denormalised or subnormal numbers a gradual underflow is achieved so numbers too small to be represented (otherwise replaced by 0) are gradually decreased. From the representation point of view, the number is not treated with an implicit 1 before the binary point in the mantissa, but with a zero. Hence, the range of the mantissa is $\left[ 0, 1\right)$.
+The denormalised numbers (or subnormal numbers) are used when \textbf{underflow} occurs. Then, a gradual underflow is achieved so numbers too small to be represented (otherwise replaced by 0) are gradually decreased. From the representation point of view, the number is not treated with an implicit 1 before the binary point in the mantissa, but with a zero. Hence, the range of the mantissa is $\left[ 0, 1\right)$.
 
 
 \begin{table}
@@ -1083,7 +1132,6 @@ Generally, this default can be easily changed with a proper compilation option a
 the program does not depend on the precision imposed when it was written. 
 
 The alternative is to explicitly declare the kind (precision) of any real variable: 
-
 \begin{verbatim}
 real(kind = 4) :: x1
 real(kind = 8) :: x2
@@ -1091,14 +1139,14 @@ real(kind = 16) :: x3
 \end{verbatim}
 
 When declaring \textbf{constants}, the situation is different. A specific kind type can be declared
-by underscoring the constant with its kind type. However, this is not the common way to do it, 
-consider not declaring the kind for any constants neither so it automatically adopts the default real kind value.
-
+by underscoring the constant with its kind type:
 \begin{verbatim}
 123.45_4
 123.45_8
 123.45_16
 \end{verbatim}
+However, this is not the common way to do it, 
+consider not declaring the kind for any constant neither so it automatically adopts the default real kind value.
 
 \textbf{Scientific notation} can also be used in languages like Fortran, for example, declaring the real constant $10.$ can be done equivalently in the following ways:
 \begin{verbatim}
@@ -1109,7 +1157,8 @@ consider not declaring the kind for any constants neither so it automatically ad
 10.E0
 10.e0
 \end{verbatim}
-First of all, notice that \texttt{10} can not be used since it would be treated as an integer. Secondly, remember that the kind of these constants \textbf{is not necessarily single precision}, default precision is being used with scientific notation so the \texttt{default real kind} option of the compiler rules the precision of these constants.
+First of all, notice that \texttt{10} can not be used since it would be treated as an integer. 
+Secondly, remember that the kind of these constants \textbf{is not necessarily single precision}, default precision is being used with scientific notation so the \texttt{default real kind} option of the compiler rules the precision of these constants.
 
 Historically, if the scientific notation is mixed with the declaration of an specific kind, these declarations were used for double precision:
 \begin{verbatim}
@@ -1129,6 +1178,9 @@ However, this is not our recommended way to do it, consider not declaring the ki
 
 
 
+
+
+
 %RESTOS
 %If the type of a variable is defined in the declaration of the variable it is typically used \texttt{real(kind = n) :: } or \texttt{real*n :: } where \texttt{n} is 4, 8 or 16. 
 %Unless you have changed it, the default real kind is simple precision (\texttt{kind = 4}). 
@@ -1139,7 +1191,7 @@ However, this is not our recommended way to do it, consider not declaring the ki
     \section{\texttt{subroutine mantissa\_exponent\_base\_2}} 
 
 
-Use the following subroutine to reconstruct a real number through its internal bits representation: 
+The following subroutine allows to reconstruct a real number through its internal bits representation: 
 
 \newpage
 \listings{\home/IEEE_representation.f90}

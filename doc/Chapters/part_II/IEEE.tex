@@ -2,30 +2,7 @@
 \renewcommand{\home}{./Fortran/sources/IEEE} 
 
 %ESCRIBIR Y REORDENAR:
-
-%The accuracy is governed also by the number of bits used in the mantissa. The 
-%obligation to round numbers (rounding error) is related to accuracy. Dedicating more bits for the mantissa increases the resolution 
-%and the precision.
-%
-%so for a fixed number of bits (precision), dedicating more bits to the exponent and less bits to the mantissa 
-%extends the range but decreases the accuracy and resolution. 
-
-
-%\begin{IN}
-%     Then, take a look at the standard scientific notation in decimal system used to express large and tiny numbers, at this point revise the scientific notation in binary system which is similar. Once this is done, some conclusions can be obtained:
-%    \begin{enumerate}
-
-%        \item Except for the number $0_{10} = 0_{2}$, all the numbers to be expressed in binary system are going to have the digit 1 as first significant digit. Exactly like in a decimal number the first significant digit must be a digit from 1 to 9. 
-%        \item Exactly like the case of a decimal number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=10$), where the exponents is chosen to accomplish $\abs{c}\in\left[ 1,10\right)$, for a binary number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=2$), the value of $\abs{c}\in\left[ 1,2\right)$ (except for the 0, which is an special value). That condition is expressed in decimal form, while it is referred to a binary number, the meaning is not other than the mantissa of a binary number expressed in binary standard scientific notation is going to be contained  between 1 and 2 while expressed in decimal form. In binary form, this means that the mantissa of the number always has the digit 1 followed by the fractional point and a series of binary digits. Well, notice that standard IEEE 754 for floating point numbers is really similar to scientific notation in base 2. 
-%        
-%        Just as an example, a binary number in standard scientific notation could be $\texttt{1.01101}\cdot2^{3}$. In this case, the mantissa is written in binary form while the base and exponent are written in decimal form, it does not change the meaning. We could write all the number in binary form like: $\texttt{1.01101}_2 \cdot 10_2^{11_2}$
-%    \end{enumerate}
-%\end{IN}  
-
-
-
 %En declaring kind
-%Specially in strong typed languages like Fortran, a scientific programmer must understand how assignations are performed and the typical errors that could appear when types of variables are not properly defined. 
 %Ejemplo de declaracion viciada y ejemplo de declaracion no viciada
 %Ejemplo de real (N) que se pueda usar en la realidad. 
 %\begin{IN}
@@ -37,29 +14,6 @@
 %    \end{enumerate}
 %\end{IN}
 
-
-%--posicion de mantisa y de exponente
-%--0 para mas o para menos
-%--yo mencionaria que hay un 1 implicito en la mantissa siempre imitando a la notacion cientifica
-%--explicaria antes la notacion cientifica en binario, dos ideas solo. 
-%--no es 15 precisamente porque son numeros entre 1 y 2 obligatoriamente.
-%--dejar clara la competición entre precision y rango
-%For special purposes it is used the $(1, 4, 3, 7)$ minifloat, 
-
-%for the same exponent, all the mantissas grow with the same resolution and adding 
-%one to the exponent reduces highly the resolution.
-
-%Quickly in the floating-point 
-%of 1-byte the resolution is poor, 
-%for an exponent of $1110_2 = 14_10\rightarrow  \textrm{exponent} = 7$ the resolution 
-%is 16 units while the resolution for an exponent of $0001_2 = 1_10\rightarrow  \textrm{exponent} = -6$ 
-%is $0.001953...$. Why this happens is simple, we must not forget that the number of bits is
-% the same for this examples, in both cases we can not store more values than $2^8 = 256$, 
-% if we want more range, is at the cost of less resolution. 
-
-%\begin{IN}
-%    Do not forget that, exactly than in decimal system, the positions on the left of the decimal point are numbers bigger than 1 and the positions on the right are smaller than 1. While in decimal system each position multiplies by ten the value on his right, in binary system the value is doubled going to the left and divided by two going to the right. 
-%\end{IN}
 
 
 \chapter{Reals representation and operations} \label{chap:reals}
@@ -84,16 +38,17 @@ The following topics are covered:
 
 \begin{enumerate} 
     \setlength\itemsep{-0.1cm}
-    \item Example of round-off errors. 
-    \item Fixed-point and Floating-point representation.
-    \item Representation in IEEE 754.
-    \item Distance between floating point real numbers.
-    \item Reconstruction from its internal binary representation.
-    \item Writing floating point expressions.
-    \item Condition number and stability.
-    \item Catastrophic cancellation.
-    \item Summation example.
-    \item IEEE exception examples.
+    \item Examples of round-off errors. 
+    \item Represent reals in the computer.
+    \item Range-Precision in Fixed-point vs Floating-point.
+    \item Floating-point representation in IEEE 754.
+    \item Distance between floating-point real numbers.
+    \item Decimal real number from its internal IEEE binary representation.
+    \item IEEE binary representation from decimal real numbers.    
+    \item IEEE exception.
+    \item Declaring kind.
+    \item \texttt{subroutine mantissa\_exponent\_base\_2}.
+
 \end{enumerate} 
 
 Before continuing, revise these concepts in the context of numerical calculations:
@@ -333,7 +288,26 @@ $$
 The question now is which option is better: storing reals in fixed-point notation; $\texttt{10100.01}$ or in floating-point notation; $\texttt{1.010001}\cdot2^4$?
 The answer to this question is treated in the next section. 
 
-    
+
+
+
+
+
+
+%RESTOS
+%\begin{IN}
+%    \begin{enumerate}
+
+%        \item Except for the number $0_{10} = 0_{2}$, all the numbers to be expressed in binary system are going to have the digit 1 as first significant digit. Exactly like in a decimal number the first significant digit must be a digit from 1 to 9. 
+%        \item Exactly like the case of a decimal number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=10$), where the exponents is chosen to accomplish $\abs{c}\in\left[ 1,10\right)$, for a binary number expressed in standard scientific notation ($r=c\cdot b^e$ with $b=2$), the value of $\abs{c}\in\left[ 1,2\right)$ (except for the 0, which is an special value). That condition is expressed in decimal form, while it is referred to a binary number, the meaning is not other than the mantissa of a binary number expressed in binary standard scientific notation is going to be contained  between 1 and 2 while expressed in decimal form. In binary form, this means that the mantissa of the number always has the digit 1 followed by the fractional point and a series of binary digits. Well, notice that standard IEEE 754 for floating point numbers is really similar to scientific notation in base 2. 
+%        
+%        Just as an example, a binary number in standard scientific notation could be $\texttt{1.01101}\cdot2^{3}$. In this case, the mantissa is written in binary form while the base and exponent are written in decimal form, it does not change the meaning. We could write all the number in binary form like: $\texttt{1.01101}_2 \cdot 10_2^{11_2}$
+%    \end{enumerate}
+%\end{IN} 
+  
+  
+  
+  
     
     \section{Range-Precision in Fixed-point vs Floating-point}
 
@@ -534,7 +508,6 @@ explained in detail to understand how real numbers are stored in floating point 
 
 
 Before delving into the particularities of the representation in the standard IEEE 754 a summary of the main properties is presented here. 
-
 \begin{enumerate}
     \item Similarly to the binary normalized scientific notation, the binary point is located immediately after the first binary digit of the mantissa. 
     \item Also imitating the binary scientific notation the first digit of the mantissa is always 1, therefore it is not necessary to store it.
@@ -545,13 +518,15 @@ Before delving into the particularities of the representation in the standard IE
 
 Notice from the table \ref{tab:properties} that the actual bits used in the mantissa is always the number of mantissa bits + 1. 
 This is due to an implicit 1 in the left part of binary point, since it is always a 1, is not explicitly stored. 
-Hence, the binary mantissa of the example $-110.3125$ is actually $1.10111001010...$ while only the right part of the binary point is stored. 
+Hence, the binary mantissa of the example $-110.3125$ is actually $1.10111001010...$ while only the right part of the binary point is stored.
+There is one number that can not be written with an implicit 1 in standard scientific notation; 0. 
+This is one of the IEEE exceptions that are treated in section \ref{sec:exceptions}. 
 
 The table also shows the range of representable numbers, the minimum and maximum value allowed for each standard format. 
 
 Finally, the information we are usually more interested in; the decimal precision for each format, which is the number of reliable decimal digits. Consider that $log_2(10)\approx 3.32 $ binary digits are needed in order to represent one single decimal digit. 
 
-In single precision we count on 24 binary digits for mantissa so: $24/3.32 = 7.2$ decimal digits are reliably represented. Notice this does not mean that the first 7 digits of the representation equals the expected value, it means that the relative error between both numbers is around $1e-7$. Just consider the number $1.3_{10}$, in the standard IEEE 754 in simple precision this value is stored as 
+For example, in single precision we count on 24 binary digits for the mantissa so: $24/3.32 = 7.2$ decimal digits are reliably represented. Notice this does not mean that the first 7 digits of the representation equals the expected value, it means that the relative error between both numbers is around $1e-7$. Just consider the number $1.3_{10}$, in the standard IEEE 754 in simple precision this value is stored as 
 $$
 \texttt{ 0 01111111 01001100110011001100110}_2 = 1.2999999523162841796875_{10}
 $$
@@ -567,6 +542,7 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
 
 
 \begin{table}[H]
+    \centering
     \begin{tabular}{| r | c | c | c | c | c | }
         
         \hline
@@ -585,8 +561,7 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
 
 
 \begin{table}[H]
-    %\begin{flushright}
-    %\begin{turn}{90}
+    \centering
     \begin{tabular}{| r | c | c | c |}
         
         \hline
@@ -599,12 +574,9 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
         \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   &  \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19.2 digits          \\ \hline
         
     \end{tabular}                                                       
-    %\end{turn}
     \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
     \label{tab:properties}
-    %\end{flushright}
 \end{table}
-
 
 
 
@@ -657,7 +629,7 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
     %--------------------------------------------------------------------------------------------------------------------------------------
     \newpage 
     \FloatBarrier
-    \section{Distance between floating point real numbers} \label{sec:roundoff}
+    \section{Distance between floating-point real numbers} \label{sec:roundoff}
 
 
         %-------------------------------------------------------------------------------------------------------------------------------------- 
@@ -841,31 +813,47 @@ exponent of the number.
 
 
         %--------------------------------------------------------------------------------------------------------------------------------------
+        \FloatBarrier
         \subsection{Machine epsilon}
 
 The importance of machine epsilon lies in the fact that this magnitude bounds the 
 relative error of any number when is rounded to the closest floating-point value. 
 Different definitions are used, however, we consider the following: 
-it is the smallest number $E$ such that $1 + E > 1$. 
+it is the smallest number $\epsilon$ such that $1 + \epsilon > 1$. 
 In other words, the distance between 1 and the next larger floating point number (see Figure \ref{fig:RelErrorGraph}).
 
-Machine epsilon is then the smallest change we can make to the number 1 which involves adding one to the least significant bit of the mantissa. 
-Hence, calling $p$ to the number of significant digits of the mantissa (not including the implicit 1):
-
+Machine epsilon is then the smallest change we can make to the number 1 and is obtained by adding one to the least significant bit of the mantissa. 
+Hence, calling $p$ to the number of significant digits of the mantissa not including the implicit 1 (see Table \ref{tab:eps}):
 $$
 \epsilon = 2^{-p}
 $$ 
 
 \textit{Notice that sometimes $p$ is used for the mantissa digits including the implicit 1 so a slightly different expression of this machine epsilon can be found.}
 
-Formally, when the exact value to be represented is rounded to the nearest floating-point value, the relative error is not bounded by $\epsilon$ but $\frac{\epsilon}{2}$ which is called \textit{unit roundoff} ($u$). So:
-
+Formally, when the exact value to be represented is rounded to the nearest floating-point value, 
+the relative error is not bounded by $\epsilon$ but $\frac{\epsilon}{2}$ which is called \textit{unit roundoff} ($u$):
 $$
 u = \frac{\epsilon}{2} = 2^{-p-1}
 $$
 
 
-
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| r | c | c | c | }
+        
+        \hline
+        Name  &  Mantissa (p) & $\epsilon$ & $u$  \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}     &  23    & $\sim 1.19\cdot10^{-7} $   & $\sim 5.96\cdot10^{-8} $ \\ \hline
+        
+        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    &  52    & $\sim 2.22\cdot10^{-16} $  & $\sim 1.11\cdot10^{-16} $   \\  \hline
+        
+        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}  & 112   & $\sim 1.93\cdot10^{-34}  $  & $\sim 9.63\cdot10^{-35} $   \\ \hline
+        
+    \end{tabular}                                                       
+    \caption{Bounds of the relative error for the different formats covered by the IEEE 754 standard.}
+    \label{tab:eps}
+\end{table}
 
 
 
@@ -996,7 +984,7 @@ The exponent uses a bias (or offset binary) to encode negative values. The follo
 $$
 e = \sum_{j=0}^{r-1} b_j 2^j - \left( 2^{r-1} - 1 \right)
 $$
-Being $r$ the number of exponent digits. 
+being $r$ the number of exponent digits. 
  
  
 %EJEMPLO
@@ -1076,7 +1064,7 @@ Let's convert the number $-110.3125_{10}$ to a 32bits IEEE 754 floating point ex
 
     %-------------------------------------------------------------------------------------------------------------------------------------- 
     \FloatBarrier    
-    \section{IEEE exceptions}
+    \section{IEEE exceptions} \label{sec:exceptions}
 
 The standard IEEE 754 reserves some combinations of binary digits for special situations: \texttt{NaN}, $\pm\infty$ or denormalised numbers (numbers in the gap that exits between the smallest normalised number representable (\texttt{tiny}) and the same negative value). In addition, take into account that there are two numbers equal to $0$: $\pm 0$ (see Table \ref{tab:SpecialValues}).
 

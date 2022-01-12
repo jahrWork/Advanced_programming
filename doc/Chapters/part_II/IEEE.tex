@@ -642,84 +642,115 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
         %-------------------------------------------------------------------------------------------------------------------------------------- 
         \subsection{Floating-point distribution in the numbers line}
 
+In this section we delve into the relation between the amount of bits reserved to store exponent-mantissa and 
+the density of floating-point values in the numbers line. 
+Let's consider a vastly simplified format of only 4 bits: $2$ binary digits for the mantissa $p = 2$ (using an implicit 1) and 
+$2$ digits for the exponent (four available exponents: $-1, 0, 1, 2$). In addition, not sign bit is considered (see Figure \ref{fig:miniminifloat}).
 
-In this section we delve into the relation between the number of bits reserved to store mantissa-exponent, 
-and the density of floating-point values in the real line.
-To understand this think of the exponent as a window between two values and the 
-mantissa as the offset of a number inside that window (see \cite{VisExpl}).
- 
-In the decimal system a window is limited by two consecutive powers-of-ten: [0.1,1], [1,10], [10,100], etc. 
-In binary each window is bounded by powers-of-two: [0.5,1], [1,2], [2,4], etc. The exponent of a number 
-fixes its window. 
+\begin{minipage}{\textwidth}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width= \textwidth]{./doc/Figures/miniminifloat.png}
+        \captionof{figure}{Simplified floating-point representation with only 4 bits.}
+        \label{fig:miniminifloat}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.68\textwidth}
+        \centering
+        \begin{tabular}{| c | c | c | c | c | }
+            \hline
+            Mantissa/Exponent   & $-1$ & $0$  & $1$  &   $2$  \\ \hline
+            1.00                & $0.5$ & $1$  & $2$  &   $4$  \\ \hline
+            1.01                & $0.625$ & $1.25$  & $2.5$  &   $5$  \\ \hline
+            1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
+            1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
+        \end{tabular}
+        \captionof{table}{Possible decimal values covered by the example system treated.}
+        \label{tab:PossibleValues}
+    \end{minipage}
+\end{minipage}
 
-Every window then is equidistantly divided according to the number of bits used for the mantissa. The least significant bit 
-in the mantissa tells us the minimum allowed jump in that window. 
-
-Notice that from one window to the next one the number of divisions is the same but the length of the window is twice the previous.
-Hence, the resolution in that window is lower and the programmer is loosing capacity to represent numbers. 
-Said in other words, the density of IEEE 754 floating-point values near the zero is bigger than 
-the density of values with growing values. 
-
-
-
-%-----------------------------------
-Let's see this with an example, consider a single precision mantissa, we count with 23 digits to divide every window, 
-this means $2^{23} = 8688608$ possible values. 
-
-In the window $\left[1,2\right]$ (exp $= 0$) the resolution is:
-$$
-\frac{\left(2-1\right)}{2^{23}} \sim 0.000000119
-$$ 
-while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is:
-$$
-\frac{\left(65536-32768\right)}{2^{23}} \sim 0.003906
-$$
-
-Each time you work with a real number in your program (as a constant or a variable), it is going to have a round-off error associated 
-which is going to be higher when working with big numbers than small numbers. 
-%-----------------------------------
-
-
-
-
-%-----------------------------------
-It is difficult to represent the density of representable numbers in the numbers line for IEEE 754 standard formats, 
-however, let's consider a lower precision. The phenomena in IEEE 754 is the same, but with much more values.
-As it is broaden in \cite{articleIEEE}, consider the case where there are only $2$ binary digits for the mantissa $p = 2$ (using an implicit 1),
-only $2$ digits for the exponent (four available exponents: $-1, 0, 1, 2$) 
-and not sign bit is considered.
-
-A general number in this system is written: 
-
+A general floating-point number in this system is written (see \cite{articleIEEE}): 
 $$
 1.dd \times 2^{e}    \quad \textrm{with}\quad e \in \mathbb{Z}, e\in\left[-1, 2\right] 
 $$ 
-
-Take a look at the possible decimal values that this system can represent in the table \ref{tab:PossibleValues} and its representation in the real line (Figure \ref{fig:DensityNumbers}). 
-
-\begin{table}
-    \centering
-    \begin{tabular}{| c | c | c | c | c | }
-        \hline
-        Mantissa/Exponent   & $-1$ & $0$  & $1$  &   $2$  \\ \hline
-        1.00                & $0.5$ & $1$  & $2$  &   $4$  \\ \hline
-        1.01                & $0.625$ & $1.25$  & $2.5$  &   $5$  \\ \hline
-        1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
-        1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
-    \end{tabular}
-    \caption{Possible decimal values covered by the example system treated.}
-    \label{tab:PossibleValues}
-\end{table}
+A maximum of $2^4 = 16$ values can be represented with this system. 
+The possible values, those reals that has exact representation in this system,
+are written in the table \ref{tab:PossibleValues} and
+plotted in the numbers line of the Figure \ref{fig:DensityNumbers}. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width= \textwidth]{./doc/Figures/DensityNumbers.png}
-    \caption{Representable numbers in the binary representation system defined by 2 explicit mantissa digits and $e\in\left[-1, 2  \right]$ (read text for more details).}
+    \caption{Representation of the possible values covered by the example system treated.}
     \label{fig:DensityNumbers}
 \end{figure}
+
+
+
+
+\FloatBarrier
+Think of the exponent as a window between two values 
+and the mantissa as the offset of every number inside that window (see \cite{VisExpl}).
+In the decimal system a window is limited by two consecutive powers-of-ten: [0.1,1], [1,10], [10,100], etc. 
+In binary each window is bounded by powers-of-two: [0.5,1], [1,2], [2,4], etc. 
+
+The exponent of a number fixes its window. Then, 
+every window is equidistantly divided according to the number of bits used for the mantissa. 
+Both the least significant bit in the mantissa and the exponent tell us the constant distance between values in that window. 
+
+Notice that from one window to the next the number of divisions is the same but the length of the window is twice the previous.
+Hence, the resolution in that window is lower and the programmer is loosing capacity to represent numbers. 
+Said in other words, the density of floating-point values near the zero is bigger than 
+the density of values with growing values. 
+
+
+
+
+
+%-----------------------------------
+It is difficult to represent the density of representable numbers in the numbers line for IEEE 754 standard formats.
+However, the behaviour is exactly the same, but with much more values.
+Let's analyse it with an example, consider a single precision mantissa. 
+We count on 23 binary digits to divide every window: $2^{23} = 8688608$ possible values. 
+
+In the window $\left[1,2\right]$ (exponent $0$) the resolution is:
+$$
+\frac{\left(2-1\right)}{2^{23}} \simeq 0.000000119
+$$ 
+while in the window $\left[32768=2^{15},65536=2^{16}\right]$ the resolution is:
+$$
+\frac{\left(65536-32768\right)}{2^{23}} \simeq 0.003906
+$$
+To conclude, the density of numbers that are exactly represented in IEEE 754 decreases 
+when we move away from 0 on the numbers line. 
 %-----------------------------------
 
 
+
+
+
+%RESTOS
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width= .3\textwidth]{./doc/Figures/miniminifloat.png}
+%    \caption{Simplified floating-point representation with only 4 bits.}
+%    \label{fig:miniminifloat}
+%\end{figure}
+
+%\begin{table}
+%    \centering
+%    \begin{tabular}{| c | c | c | c | c | }
+%        \hline
+%        Mantissa/Exponent   & $-1$ & $0$  & $1$  &   $2$  \\ \hline
+%        1.00                & $0.5$ & $1$  & $2$  &   $4$  \\ \hline
+%        1.01                & $0.625$ & $1.25$  & $2.5$  &   $5$  \\ \hline
+%        1.10                & $0.75$ & $1.5$  & $3$  &   $6$  \\ \hline
+%        1.11                & $0.875$ & $1.75$  & $3.5$  &   $7$  \\ \hline
+%    \end{tabular}
+%    \caption{Possible decimal values covered by the example system treated.}
+%    \label{tab:PossibleValues}
+%\end{table}
 
 
         %-------------------------------------------------------------------------------------------------------------------------------------- 

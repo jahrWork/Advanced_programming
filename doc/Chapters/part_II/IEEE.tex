@@ -66,8 +66,8 @@ Before continuing, revise these concepts in the context of numerical calculation
     bits of the exponent and will be related to errors of overflow or underflow. 
 \end{itemize}
 
-This chapter does not cover the algorithm to convert from one numeral system to other (for example from decimal to binary). We recommend to revise the definition and notions of positional numeral systems and how to convert between different systems (either integer, fractional, positive and negative values).
-Also, the differences between exponential notation, normalized scientific notation could be revised to confront the following text. 
+%This chapter does not cover the algorithm to convert from one numeral system to other (for example from decimal to binary). We recommend to revise the definition and notions of positional numeral systems and how to convert between different systems (either integer, fractional, positive and negative values).
+%Also, the differences between exponential notation, normalized scientific notation could be revised to confront the following text. 
 
 
 %RESTOS
@@ -257,17 +257,22 @@ This chapter, in short, covers the solutions and consequences to these challenge
 The first challenge involves the transformation of the decimal value to a binary value so the machine can process and store sequences of 0's and 1's in replacement of the decimal symbols (0, 1, 2, 3, etc.).
 If you have read the previous chapter and already know how to convert integers, you may think that the computer could convert integer part from one side and fractional part from the other side and store both as integer numbers. However, this is not the way to do it. 
 
-Since both, decimal and binary, are \textbf{positional numeral systems}, the conversion between both is done by changing the base from 10 to 2. 
+Since both, decimal and binary, are positional numeral systems, the conversion between both is done by changing the base from 10 to 2. 
 We saw in the previous chapter an integer conversion (\ref{sec:TwosComp}). Well, with reals is the same but also considering negative powers of the base. 
-Let's see for example the number $20.25_{10}$:
-$$
-20.25_{10} = 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2}
-$$
-$$
-\texttt{10100.01}_{2} = 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2} 
-$$
+Let's see for example the number $20.25_{10}$ (remember that subscript $_{10}$ means decimal value and $_2$ binary value):
+\begin{eqnarray*}
+    20.25_{10} &=& 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2} \quad = \\
+    \texttt{10100.01}_{2} &=& 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2} 
+\end{eqnarray*} 
 
-Notice how our decimal value, which is written in fixed-point notation (integer part + . + fractional part), can be expressed with exponential notation in many different ways just by shifting the fractional point (floating-point):
+%$$
+%20.25_{10} = 2\cdot 10^1 + 0\cdot 10^0+ 2\cdot 10^{-1}+ 5\cdot 10^{-2}
+%$$
+%$$
+%\texttt{10100.01}_{2} = 1\cdot 2^4 +0\cdot 2^3+ 1\cdot 2^2+ 0\cdot 2^1+ 0\cdot 2^0+ 0\cdot 2^{-1}+  1\cdot 2^{-2} 
+%$$
+
+Notice how our decimal value, which is written in \textbf{fixed-point notation} (integer part + . + fractional part), can be expressed with exponential notation in many different ways just by shifting the fractional point (\textbf{floating-point}):
 $$
 20.25 = 2.025\cdot10^1 = 0.2025\cdot10^2 = 2025\cdot10^{-2}
 $$
@@ -276,7 +281,7 @@ $$
 2.025\cdot10^1
 $$
 
-Now notice how our binary conversion, also written in fixed-point notation (integer part + . + fractional part), can be expressed in many ways with exponential notation by shifting the fractional point with powers of 2 (floating-point):
+Now notice how our binary conversion, also written in \textbf{fixed-point notation} (integer part + . + fractional part), can be expressed in many ways with exponential notation by shifting the fractional point with powers of 2 (\textbf{floating-point}):
 $$
 \texttt{10100.01}_{2} = \texttt{1010.001}_{2}\cdot2^1  = \texttt{1010001}_{2}\cdot2^{-2} = \texttt{1.010001}_{2}\cdot2^4
 $$
@@ -285,7 +290,7 @@ $$
 \texttt{1.010001}_{2}\cdot2^4
 $$
 
-The question now is which option is better: storing reals in fixed-point notation; $\texttt{10100.01}$ or in floating-point notation; $\texttt{1.010001}\cdot2^4$?
+The question now is which option is better: storing reals in fixed-point notation $\texttt{10100.01}$ or in floating-point notation $\texttt{1.010001}\cdot2^4$.
 The answer to this question is treated in the next section. 
 
 
@@ -309,7 +314,7 @@ The answer to this question is treated in the next section.
   
   
     
-    \section{Range-Precision in Fixed-point vs Floating-point}
+    \section{Range-Precision: Fixed-point vs Floating-point}
 
 Let's deal now with the second challenge of representing reals in the computer: 
 it counts on a finite amount of memory to store the binary value.
@@ -509,11 +514,10 @@ explained in detail to understand how real numbers are stored in floating point 
 
 Before delving into the particularities of the representation in the standard IEEE 754 a summary of the main properties is presented here. 
 \begin{enumerate}
-    \item Similarly to the binary normalized scientific notation, the binary point is located immediately after the first binary digit of the mantissa. 
-    \item Also imitating the binary scientific notation the first digit of the mantissa is always 1, therefore it is not necessary to store it.
+    \item Similarly to the binary normalized scientific notation, the binary point is located immediately after the first binary digit of the mantissa which is always a 1 (normalized range) and it is not explicitly stored. 
     \item The leftmost digit encodes the sign of the number: 1 for negative number, 0 for positive.
-    \item In the middle, the exponent is encoded with an offset-binary representation (using an exponent bias).
     \item The rightmost digits encode the mantissa. 
+    \item Between sign bit and mantissa, the exponent is encoded with an offset-binary representation (using an exponent bias).
 \end{enumerate} 
 
 Notice from the table \ref{tab:properties} that the actual bits used in the mantissa is always the number of mantissa bits + 1. 
@@ -526,9 +530,12 @@ The table also shows the range of representable numbers, the minimum and maximum
 
 Finally, the information we are usually more interested in; the decimal precision for each format, which is the number of reliable decimal digits. Consider that $log_2(10)\approx 3.32 $ binary digits are needed in order to represent one single decimal digit. 
 
-For example, in single precision we count on 24 binary digits for the mantissa so: $24/3.32 = 7.2$ decimal digits are reliably represented. Notice this does not mean that the first 7 digits of the representation equals the expected value, it means that the relative error between both numbers is around $1e-7$. Just consider the number $1.3_{10}$, in the standard IEEE 754 in simple precision this value is stored as 
+For example, in single precision the mantissa counts on 24 binary digits (23 explicitly stored and 1 implicit) so: $24/3.32 = 7.2$. 
+Enough precision to have 7 decimal digits reliably represented. 
+Notice this does not mean that the first 7 digits of the representation equals the expected value, it means that the relative error between both numbers is around $1e-7$. 
+Just consider the number $1.3_{10}$, in the standard IEEE 754 in single precision this value is stored as 
 $$
-\texttt{ 0 01111111 01001100110011001100110}_2 = 1.2999999523162841796875_{10}
+\texttt{0 01111111 01001100110011001100110}_2 = 1.2999999523162841796875_{10}
 $$
 which means that the error caused by the conversion is $-4.76837158203125E-8$ while only the first digit is the same.
 
@@ -567,11 +574,11 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
         \hline
         Name  & \begin{tabular}{@{}c@{}}Normalized \\ range \end{tabular} & \begin{tabular}{@{}c@{}}Approximate\\decimal range\end{tabular} & Precision \\ \hline
         
-        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      &  \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ -38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7.2 digits  \\ \hline
+        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      &  \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ -38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7 digits  \\ \hline
         
-        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    &  \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ -308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15.9 digits        \\  \hline
+        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    &  \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ -308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15 digits        \\  \hline
         
-        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   &  \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19.2 digits          \\ \hline
+        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   &  \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19 digits          \\ \hline
         
     \end{tabular}                                                       
     \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
@@ -633,7 +640,7 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
 
 
         %-------------------------------------------------------------------------------------------------------------------------------------- 
-        \subsection{Example of floating-point distribution in the numbers line}
+        \subsection{Floating-point distribution in the numbers line}
 
 
 In this section we delve into the relation between the number of bits reserved to store mantissa-exponent, 
@@ -968,25 +975,62 @@ $$
 
 
 
-    %--------------------------------------------------------------------------------------------------------------------------------------     
+    %--------------------------------------------------------------------------------------------------------------------------------------    
     \section{Decimal real number from its internal IEEE binary representation}
 
-The decimal value can be obtained trough the following expression (see Table \ref{tab:properties}):
+
+\FloatBarrier 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/singlebits.png}
+    \caption{Bit index for a single precision IEEE 754 floating-point (4 bytes).}
+    \label{fig:singlebits}
+\end{figure}
+
+The decimal value for a single precision (\texttt{binary32}) floating point can be obtained trough the following expression (see Figure \ref{fig:singlebits}):
 $$
-   x = (-1)^s  2^e  \sum_{i=0}^{p} b_i 2^{-i} \quad \textnormal{with}\quad b_0 = 1
+   x = (-1)^{b_{31}}  2^e \left( 1 +   \sum_{i=1}^{23} b_{23-i} 2^{-i}    \right) 
 $$
-being $s$ the sign bit, $e$ the exponent already converted to decimal and properly biased and $p$ the number of digits in the mantissa excluding the implicit 1. 
-Notice that $b_0 = 1$ considers the implicit 1 by adding $1\times2^0 = 1$ to the fractional mantissa. 
+being $e$ the exponent already converted to decimal and properly biased. 
+Notice that the implicit 1 is added to the sum which covers all the mantissa digits. 
+
+The exponent uses a bias, also called  offset binary, to encode negative values $B = 2^{r-1} - 1 = 127$ ($r$ is the number of exponent digits). 
+The following expression gives its decimal value:
+$$
+e = \sum_{j=0}^{7} b_{23+j} 2^j - B
+$$
+ 
+
+%The decimal value for a IEEE 754 floating-point value can be obtained trough the following expression (see Table \ref{tab:properties}):
+%$$
+%x = (-1)^{s}  2^e  \sum_{i=0}^{p} b_i 2^{-i} \quad \textnormal{with}\quad b_0 = 1
+%$$
+%being $s$ the sign bit, $e$ the exponent already converted to decimal and properly biased and $p$ the number of digits in the mantissa excluding the implicit 1. 
+%Notice that $b_0 = 1$ considers the implicit 1 by adding $1\times2^0 = 1$ to the fractional mantissa.
+% 
+% The exponent uses a bias (or offset binary) to encode negative values. The following expression gives its decimal value:
+% $$
+% e = \sum_{j=0}^{r-1} b_j 2^j - \left( 2^{r-1} - 1 \right)
+% $$
+% being $r$ the number of exponent digits. 
+ 
+\begin{IN}
+    These expressions can be easily generalized by changing the bit index origins and upper limit of the sums:
+    $$
+    x = (-1)^{b_{p+r}}  2^e \left( 1 +   \sum_{i=1}^{p} b_{p-i} 2^{-i}    \right) 
+    $$
+    $$
+    e = \sum_{j=0}^{r-1} b_{p+j} 2^j - B
+    $$
+    being $p$ the the number of digits in the mantissa (excluding the implicit 1), $r$ the number of exponent digits and $B = 2^{r-1} - 1$ (see Table \ref{tab:properties}).   
+\end{IN}
 
 
 
-The exponent uses a bias (or offset binary) to encode negative values. The following expression gives its decimal value:
-$$
-e = \sum_{j=0}^{r-1} b_j 2^j - \left( 2^{r-1} - 1 \right)
-$$
-being $r$ the number of exponent digits. 
+
  
  
+
 %EJEMPLO
 Now we can easily reconstruct the example in the Figure \ref{fig:ParametersIEEE}. Separating sign, exponent and mantissa we have the single precision binary: 
 
@@ -1053,7 +1097,7 @@ Let's convert the number $-110.3125_{10}$ to a 32bits IEEE 754 floating point ex
     
     \item Writing the expressions for sign, exponent and mantissa and filling in the rest of mantissa digits with zeros at the right the result is: 
     
-    $\texttt{1}\quad \texttt{10000101}\quad \texttt{10111001010000000000000}_{binary32}$
+    $\texttt{1}\quad \texttt{10000101}\quad \texttt{10111001010000000000000}$
     
 \end{enumerate}
 
@@ -1119,7 +1163,7 @@ The denormalised numbers (or subnormal numbers) are used when \textbf{underflow}
 Similarly to integers, a good practice is to write codes that can be used with different real precisions:
 \texttt{kind=2, 4, 8}. To do that, do not specify the kind of any \textbf{variable}, just use \texttt{real :: x}. 
 Then, the compiler assumes default real kind for all real variables. 
-Generally, this default can be easily changed with a proper compilation option and 
+Generally, this default can be easily changed with a proper compilation option and then, 
 the program does not depend on the precision imposed when it was written. 
 
 The alternative is to explicitly declare the kind (precision) of any real variable: 
@@ -1129,43 +1173,36 @@ real(kind = 8) :: x2
 real(kind = 16) :: x3
 \end{verbatim}
 
-When declaring \textbf{constants}, the situation is different. A specific kind type can be declared
-by underscoring the constant with its kind type:
+Instead of that, we propose to manage the compiler options and write with this notation:
 \begin{verbatim}
-123.45_4
-123.45_8
-123.45_16
+    real :: x
 \end{verbatim}
-However, this is not the common way to do it, 
-consider not declaring the kind for any constant neither so it automatically adopts the default real kind value.
 
-\textbf{Scientific notation} can also be used in languages like Fortran, for example, declaring the real constant $10.$ can be done equivalently in the following ways:
+When declaring real \textbf{constants}, the situation is different. 
+Consider for example the real constant \texttt{10.}. 
+A specific kind type can be declared 
+by underscoring the constant with its kind type or
+by using exponential notation with \texttt{d} (double) or \texttt{q} (quadruple):
 \begin{verbatim}
-10.
-1e1
-1.e1
-10e0
-10.E0
-10.e0
+10._4        
+10._8    1d1     1.d1    1e1_8   1.e1_8
+10._16   1q1     1.q1    1e1_16  1.e1_16
+\end{verbatim}
+However, this is not our recommended way to do it.
+
+Consider not declaring the kind for any constant so it automatically adopts the default real kind value, use any of the following:
+\begin{verbatim}
+10.      1e1     1.e1    10e0   10E0    10.E0   10.e0
 \end{verbatim}
 First of all, notice that \texttt{10} can not be used since it would be treated as an integer. 
-Secondly, remember that the kind of these constants \textbf{is not necessarily single precision}, default precision is being used with scientific notation so the \texttt{default real kind} option of the compiler rules the precision of these constants.
+Secondly, remember that using exponential notation (\texttt{e} or \texttt{E}) does not automatically involves single precision. 
+The \texttt{default real kind} compiler option rules its precision.
 
-Historically, if the scientific notation is mixed with the declaration of an specific kind, these declarations were used for double precision:
-\begin{verbatim}
-1d1
-1.d1
-1e1_8
-1.e1_8
-\end{verbatim}
-or for quadruple precision:
-\begin{verbatim}
-1q1
-1.q1
-1e1_16
-1.e1_16
-\end{verbatim}
-However, this is not our recommended way to do it, consider not declaring the kind for any constants so it automatically adopts the default real kind value.
+\begin{IN}
+A program can be independent of declared precisions so the following compiler option rules the behaviour of all reals:
+
+Default Real KIND: $\texttt{/real-size:{32\mid64\mid128}}$
+\end{IN}
 
 
 
@@ -1173,8 +1210,54 @@ However, this is not our recommended way to do it, consider not declaring the ki
 
 
 %RESTOS
+%\begin{IN}
+%    A program can be independent of declared precisions so the following compiler option rules the behaviour of all reals:
+%    
+%    Default Real KIND: $\texttt{/real-size:{32\mid64\mid128}}$
+%    
+%    Default Double Precision KIND: $\texttt{/double-size:{32\mid64\mid128}}$
+%\end{IN}
+
 %If the type of a variable is defined in the declaration of the variable it is typically used \texttt{real(kind = n) :: } or \texttt{real*n :: } where \texttt{n} is 4, 8 or 16. 
 %Unless you have changed it, the default real kind is simple precision (\texttt{kind = 4}). 
+
+%When declaring \textbf{constants}, the situation is different. 
+%A specific kind type can be declared by underscoring the constant with its kind type:
+%\begin{verbatim}
+%    123.45_4
+%    123.45_8
+%    123.45_16
+%\end{verbatim}
+%However, this is not the common way to do it, 
+%consider not declaring the kind for any constant neither so it automatically adopts the default real kind value.
+%
+%\textbf{Scientific notation} can also be used in languages like Fortran, for example, declaring the real constant $10.$ can be done equivalently in the following ways:
+%\begin{verbatim}
+%    10.
+%    1e1
+%    1.e1
+%    10e0
+%    10.E0
+%    10.e0
+%\end{verbatim}
+%First of all, notice that \texttt{10} can not be used since it would be treated as an integer. 
+%Secondly, remember that the kind of these constants \textbf{is not necessarily single precision}, default precision is being used with scientific notation so the \texttt{default real kind} option of the compiler rules the precision of these constants.
+%
+%Historically, if the scientific notation is mixed with the declaration of an specific kind, these declarations were used for double precision:
+%\begin{verbatim}
+%    1d1
+%    1.d1
+%    1e1_8
+%    1.e1_8
+%\end{verbatim}
+%or for quadruple precision:
+%\begin{verbatim}
+%    1q1
+%    1.q1
+%    1e1_16
+%    1.e1_16
+%\end{verbatim}
+%However, this is not our recommended way to do it, consider not declaring the kind for any constants so it automatically adopts the default real kind value.
 
 
 

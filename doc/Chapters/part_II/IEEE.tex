@@ -757,44 +757,81 @@ when we move away from 0 on the numbers line.
         \subsection{Absolute and relative error}
 
 
-The question that arises at this point is: Which is the round-off error committed when using finite precision floating-point reals?
-
-In those cases where the exact number to be represented is approximated by the nearest IEEE 754 number, the absolute error committed is bounded. 
-This happens in the declaration of a variable or the use of a constant value. 
-On the opposite, in the case of operating with variables and constants the result of the calculation could be different from the nearest IEEE value to the exact result. 
-
+The question that arises at this point is: Which is the round-off error when using finite precision floating-point reals?
 
 %-----------------------------------
-Let's continue using the system explained above, imagine that the program needs to use the value 
+Let's see an example using the 4-bits system explained in the previous section. Imagine that you need to use the constant: 
 $$
 3.1875_{10} = 11.0011_2 = 1.10011\times 2^1_2
 $$
-This number is not exactly represented so it is rounded to $1.10\times2^1_2 = 3_{10}$, the error committed is $0.1875_{10} = 0.0011_2$. 
-Notice that the last representable place for the number $1.10\times2^1\mid_2$ is $0.01\times2^1 = 0.1$ so the error committed in our approximation is $0.011_2$ units in the last place (\textit{ulps}). 
-Formally, an ulp is defined as $ulp = 2^{e-p}$.
+This number does not have exact representation as we can check in Table \ref{tab:PossibleValues}. It will be rounded to the nearest representable number, which is: 
+$$
+1.10\times2^1_2 = 3_{10}
+$$
+The round-off error is $3.1875_{10} - 3_{10} = 0.1875_{10} = 0.0011_2$.
+ 
+Notice that the last representable binary place for the number $1.10\times2^1_2$ is $0.01\times2^1 = 0.1_2$ 
+so the error made in our approximation can also be expressed as $0.011_2$ units in the last place (\textit{ulps}). 
+%-----------------------------------
+
+
 
 
 
 {\large Absolute Error:}
 
-The absolute error can be expressed using ulps or the value of the difference itself. When the exact number is 
-approximated by the nearest floating-point value this error is always \textbf{bounded} by half ulp ($0.1_2 = 0.5_{10}$ ulps) and the \textbf{exact absolute error} committed for a number 
-$z$ will be $\abs{1.dd\times 2^e - z}$ or $\abs{1.dd - \left(  \frac{z}{2^e}  \right)}2^p$ ulp (see Figure \ref{fig:AbsErrorGraph}). 
+For a given value $z$ and its representation in a floating-point system $z_{fl}$, 
+the absolute error made is the distance between them:
+$$
+E_{abs} = \abs{z - z_{fl}} 
+$$
+This error can be expressed by the distance itself or using ulp.
 
-It seems that this absolute error is small but take into account that the concept ``ulp'' depends on the exponent of the number apart from the number of digits of the mantissa. 
-Half ulp will be much more important if the number to represent is around $2^{24}$ than if it is around $2^1$ (see Figure \ref{fig:AbsErrorGraph}). 
+The absolute error for our theoretical 4-bits system is plotted in Figure \ref{fig:AbsErrorGraph}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/AbsErrorGraph.png}
+    \caption{Absolute error made when the reals are approximated by the nearest floating-point value. The error bound is represented for each window (exponent).}
+    \label{fig:AbsErrorGraph}
+\end{figure}
+
+Notice that when the exact number is approximated by the nearest floating-point value 
+this error is always \textbf{bounded} by half ulp ($0.5_{10}$ ulp $= 0.1_2$ ulp). 
+Expressed with ulp seems that this bound is small but remember that the concept \textit{ulp} depends both on 
+the binary \textbf{digits of the mantissa} and the \textbf{exponent of the represented number}.
+Half ulp is much more important if we are representing a number around $2^{24}$ than a number near $2^1$.
+
+
+
 
 
 
 {\large Relative Error:}
 
-Another way to measure the error is the relative error. Now, the 
-difference between exact and approximated number is divided by the exact value. 
-While the absolute error grows for growing 
-exponents, the relative error does not vary from one 
-window to the next one, it repeats the same behaviour (see Figure \ref{fig:RelErrorGraph}). 
+Another way to measure the error made in the representation is using the relative error:
+$$
+E_{rel} = \abs{\frac{z - z_{fl}}{z}} = \abs{1 - \frac{z_{fl}}{z}}
+$$
+Now, the difference between exact and approximated number is divided by the exact value so
+the error does not grow while moving along the numbers line, 
+it remains bounded for the whole range. 
 
-Let's also find bounds for the relative error, for example, the relative error of the maximum absolute error committed in any window. 
+The relative error for our theoretical 4-bits system is plotted in Figure Figure \ref{fig:RelErrorGraph}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/RelErrorGraph.png}
+    \caption{Relative error made when the reals are approximated by the nearest floating-point value.}
+    \label{fig:RelErrorGraph}
+\end{figure}
+
+
+
+
+
+
+
+
+Let's find its bounds, for example, the relative error of the maximum absolute error committed in any window. 
 In this case, for every exponent, the 
 real number varies in the range 
 $$
@@ -830,24 +867,27 @@ exponent of the number.
     \label{tab:errors}
 \end{table}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/AbsErrorGraph2.png}
-    \caption{Graphic of the absolute error committed when the real numbers are approximated by the nearest floating-point value with the 
-    bounds for each window (exponent).}
-    \label{fig:AbsErrorGraph}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/RelErrorGraph2.png}
-    \caption{Graphic of the relative error committed when the real numbers are approximated by the nearest floating-point value with the 
-    bounds for all windows (exponent).}
-    \label{fig:RelErrorGraph}
-\end{figure}
 
 
 
+
+
+
+
+Formally, an ulp is defined as $ulp = 2^{e-p}$.
+
+
+When a variable is initialized or a constant value defined, the exact value is approximated by the nearest IEEE 754 number. Then,
+the absolute error committed is bounded. 
+On the contrary, when operating (adding, multiplying, dividing, etc.) with variables and constants, the result could be different from the nearest IEEE value to the exact result. 
+
+
+
+%RESTOS
+%which in our example system is:
+%$$
+%E_{abs} =  \abs{z - 1.dd\times 2^e} = \abs{ \left(  \frac{z}{2^e}  \right) - 1.dd }2^e
+%$$
 
 
         %--------------------------------------------------------------------------------------------------------------------------------------

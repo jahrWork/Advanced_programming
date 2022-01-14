@@ -181,7 +181,7 @@ The general expression to convert this binary number to decimal when it is expre
  \label{reconstruction}
 \end{equation} 
 
-As an example, let's consider an integer value equal to $425_{10}$ stored in 2-bytes of memory.
+As an example, let's consider an integer value equal to $425_{10}$ (subscripts $_{10}$ and $_2$ means decimal and binary value respectively) stored in 2-bytes of memory.
 The binary form comprises 16 different bits to hold the integer number. As a signed positive integer 
 it is represented with common binary numeral system: 
 \begin{multline*}
@@ -494,6 +494,13 @@ assigned to an integer variable of 8 bytes.
 When no kind type specifier is selected for integer constants (\texttt{i = 123}), 
 then the compiler reserves an internal appropriate register of variable size
 depending on the value of the constant. 
+
+\begin{IN}
+    A program can be independent of declared precisions so the following compiler option rules the behaviour of all integers:
+    
+    Default Integer KIND: $\texttt{/integer-size:{16\mid32\mid64}}$  
+\end{IN}
+
 
 %
 %The compiler defines the memory size for each \textbf{constant} based on some rules:

@@ -120,12 +120,12 @@ end function
 !*****************************************************************************
 !* It converts a string of bits  to a biased exponent 
 !*****************************************************************************   
- function  biased_exponent( string  ) result(e) 
+ function  biased_exponent( string ) result(e) 
    character(len=*), intent(in) :: string 
    integer  :: e 
  
     integer :: i, M 
-    integer :: bias 
+    integer :: bias, r = 15
     
     
     M = len_trim(string) 
@@ -138,14 +138,10 @@ end function
         
     end do 
     
-  !  bias 
-  !   if (M==8) then 
-     !     bias = 127 
-  !   else if (M==15) then 
-         bias = 16383
-  !   end if 
+    
+    bias = 2**(r-1) - 1 
      
-     e = e - bias 
+    e = e - bias 
   
     
  end function 
@@ -214,7 +210,7 @@ end function
         xr = s * m * 2.**e
          
         open( 6, FILE='CON', STATUS='UNKNOWN', RECL=200 )
-        write(6, '(a)' ) "----------------------------------------------------------------------------"
+        write(6, '(a)' ) "---------------------------------------------------"
         write(6, '(a35, ES40.32)' ) " x = ", x
         write(6, '(a35, a128)') "Internal representation of x = ", bits(1:128)
         write(6, '(a35, a112)') "Mantissa of x  = ", bits(17:128)
@@ -222,7 +218,7 @@ end function
         write(6, '(a35, ES40.32)') "Normalized mantissa x = ", m
         write(6, '(a35, i10)') "Exponent of x  = ", e
         write(6, '(a35, ES40.32)' ) "Reconstruction x = ", xr
-        write(6, '(a)' ) "------------------------------------------------------------------------------ "
+        write(6, '(a)' ) "---------------------------------------------------"
  
  
  
@@ -232,7 +228,15 @@ end function
  
  
  
-end module 
+    end module 
+    
+ 
     
     
     
+      !  bias 
+  !   if (M==8) then 
+     !     bias = 127 
+  !   else if (M==15) then 
+    !     bias = 16383
+  !   end if 

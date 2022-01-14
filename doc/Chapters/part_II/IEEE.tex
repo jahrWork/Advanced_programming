@@ -3,7 +3,6 @@
 
 %ESCRIBIR Y REORDENAR:
 %En declaring kind
-%Ejemplo de declaracion viciada y ejemplo de declaracion no viciada
 %Ejemplo de real (N) que se pueda usar en la realidad. 
 %\begin{IN}
 %    As a conclusion, get used to think first the needs of your program regarding the precision of the real variables and constants so you can define it properly in their declarations. In case you prefer to write a code that does not depend on the precision do not specify values for precisions and choose the proper value in the compiler options for each compilation and execution. Anyway, do not forget to always specify that a constant is a real value, so it is not confused with an integer. Use one of the following ways:
@@ -771,7 +770,7 @@ $$
 The round-off error is $3.1875_{10} - 3_{10} = 0.1875_{10} = 0.0011_2$.
  
 Notice that the last representable binary place for the number $1.10\times2^1_2$ is $0.01\times2^1 = 0.1_2$ 
-so the error made in our approximation can also be expressed as $0.011_2$ units in the last place (\textit{ulps}). 
+so the error made in our approximation can also be expressed as $0.011_2$ units in the last place (\textit{ulps} $= 2^{e-p}$). 
 %-----------------------------------
 
 
@@ -791,7 +790,7 @@ The absolute error for our theoretical 4-bits system is plotted in Figure \ref{f
 \begin{figure}[h]
     \centering
     \includegraphics[width= \textwidth]{./doc/Figures/AbsErrorGraph.png}
-    \caption{Absolute error made when the reals are approximated by the nearest floating-point value. The error bound is represented for each window (exponent).}
+    \caption{Absolute error made when the reals are approximated by the nearest floating-point value. Notice that reals are attracted by the floating-point values which act as a magnetic grid.}
     \label{fig:AbsErrorGraph}
 \end{figure}
 
@@ -816,7 +815,7 @@ Now, the difference between exact and approximated number is divided by the exac
 the error does not grow while moving along the numbers line, 
 it remains bounded for the whole range. 
 
-The relative error for our theoretical 4-bits system is plotted in Figure Figure \ref{fig:RelErrorGraph}.
+The relative error for our theoretical 4-bits system is plotted in Figure \ref{fig:RelErrorGraph}.
 \begin{figure}[h]
     \centering
     \includegraphics[width= \textwidth]{./doc/Figures/RelErrorGraph.png}
@@ -824,62 +823,55 @@ The relative error for our theoretical 4-bits system is plotted in Figure Figure
     \label{fig:RelErrorGraph}
 \end{figure}
 
-
-
-
-
-
-
-
-Let's find its bounds, for example, the relative error of the maximum absolute error committed in any window. 
-In this case, for every exponent, the 
-real number varies in the range 
+When the exact number is approximated by the nearest floating-point value we can also find an expression 
+for the bounds of this error. Let's find the relative error associated to the maximums of the absolute error made in any window.
+For every window (exponent) $z$ varies in the range 
 $$
 z \in \left[2^e, 2\times 2^e\right)
 $$ 
-while the maximum absolute error is $\frac{1}{2}\textrm{ulp} = 2^{e-p-1}$ 
-so the relative error ranges in: 
+and the maximum absolute error in that window is $\frac{1}{2}\textrm{ulp} = 2^{e-p-1}$.
+Then, the maximums of the relative error ranges in:
 $$
 \left[\frac{2^{e-p-1}}{2^{e+1}},  \frac{2^{e-p-1}}{2^e} \right] = \left[2^{-(p+2)},  2^{-(p+1)} \right]
 $$
+The highest value of the different peaks happens around the beginning of the window, 
+when the value of $z$ is lower (see Figure \ref{fig:RelErrorGraph}). 
 
-\begin{IN}
-    Use the absolute error, whether expressed absolutely or with ulps, to understand the rounding error and use the relative error to analyse 
-    the results of calculations in the computer.
-\end{IN}  
 
-All this magnitudes are summarised in the table \ref{tab:errors}. For a given number, $p$ is the number of digits reserved for the mantissa in its representation and $e$ is the 
-exponent of the number.
 
+
+
+
+
+This example imitates perfectly what happen with IEEE 754 floating-point formats. Both errors behave in the same way but with different values. 
+The table \ref{tab:errors} shows these magnitudes generalised for any binary floating-point format where 
+$p$ is the number of digits reserved for the mantissa and $e$ is the exponent of the value $z$ to be represented.
 \begin{table}
     \centering
     \begin{tabular}{| c | l | }
         \hline
         \textbf{Definition}       & \textbf{Expression}  \\ \hline %%%%%%
-        ulp                       & $2^{e-p} = 0.0000...1 \times 2^e $  \\ \hline
-        Absolute error of $z$     & $ \abs{d.dddd...\times 2^e - z} = \abs{d.dddd...-\frac{z}{2^e}} 2^e $ \\ \hline   %%%%%%%
-        Maximum absolute error    & $\frac{2^{-p}2^e}{2} = \frac{1}{2} ulp$  \\ \hline   %%%%%%%
-        Relative error            & $\abs{\frac{z - d.dddd...\times 2^e}{z}}$  \\ \hline
-        \begin{tabular}{@{}c@{}} Relative error of the   \\    maximum absolute error    \end{tabular}  & 
-        $\left[2^{-(p+2)}, 2^{-(p+1)} \right]$   \\ \hline     %%%%%%%
+        ulp                       & $2^{e-p} = 0.0000...01 \times 2^e $  \\ \hline
+        Absolute error of $z$     & $ \abs{z - z_{fl}} = \abs{z - 1.dddd...\times 2^e} $ \\ \hline   %%%%%%%
+        \begin{tabular}{@{}c@{}} Max absolute error   \\    for a given exponent    \end{tabular}    & $ \frac{1}{2} ulp = 2^{e-p-1}$  \\ \hline   %%%%%%%
+        Relative error            & $ \abs{\frac{z - z_{fl}}{z}} = \abs{1 - \frac{z_{fl}}{z}} = \abs{\frac{z - 1.dddd...\times 2^e}{z}}$  \\ \hline
+        Bounds for relative error   & $\left[2^{-(p+2)}, 2^{-(p+1)} \right]$   \\ \hline     %%%%%%%
     \end{tabular}
-    \caption{Different errors committed when the real number $z$ is approximated by the nearest floating-point value. Remember that here $p$ is the number of bits of the mantissa excluding the implicit 1. }
+    \caption{Main magnitudes that describe the representation of a value $z$ in a floating-point binary format when it is approximated by the nearest floating-point value $z_{fl}$.}
     \label{tab:errors}
 \end{table}
 
+When a variable is initialized or a constant value defined, the exact value is approximated by the nearest IEEE 754 number. Then, we have seen that the absolute error is bounded. 
+On the contrary, when operating (adding, multiplying, dividing, etc.) with reals, the finite precision result of the operation could be different from the nearest IEEE value to the exact result. 
+
+\begin{IN}
+    \begin{itemize}
+        \item Use the absolute error, whether expressed in units or with ulps, to understand the rounding error along the numbers line. 
+        \item Use the relative error to analyse the results of your calculations in the computer.
+    \end{itemize}   
+\end{IN}  
 
 
-
-
-
-
-
-Formally, an ulp is defined as $ulp = 2^{e-p}$.
-
-
-When a variable is initialized or a constant value defined, the exact value is approximated by the nearest IEEE 754 number. Then,
-the absolute error committed is bounded. 
-On the contrary, when operating (adding, multiplying, dividing, etc.) with variables and constants, the result could be different from the nearest IEEE value to the exact result. 
 
 
 
@@ -888,6 +880,22 @@ On the contrary, when operating (adding, multiplying, dividing, etc.) with varia
 %$$
 %E_{abs} =  \abs{z - 1.dd\times 2^e} = \abs{ \left(  \frac{z}{2^e}  \right) - 1.dd }2^e
 %$$
+
+%\begin{table}
+%    \centering
+%    \begin{tabular}{| c | l | }
+%        \hline
+%        \textbf{Definition}       & \textbf{Expression}  \\ \hline %%%%%%
+%        ulp                       & $2^{e-p} = 0.0000...1 \times 2^e $  \\ \hline
+%        Absolute error of $z$     & $ \abs{d.dddd...\times 2^e - z} = \abs{d.dddd...-\frac{z}{2^e}} 2^e $ \\ \hline   %%%%%%%
+%        Maximum absolute error    & $\frac{2^{-p}2^e}{2} = \frac{1}{2} ulp$  \\ \hline   %%%%%%%
+%        Relative error            & $\abs{\frac{z - d.dddd...\times 2^e}{z}}$  \\ \hline
+%        \begin{tabular}{@{}c@{}} Relative error of the   \\    maximum absolute error    \end{tabular}  & 
+%        $\left[2^{-(p+2)}, 2^{-(p+1)} \right]$   \\ \hline     %%%%%%%
+%    \end{tabular}
+%    \caption{Different errors committed when the real number $z$ is approximated by the nearest floating-point value. Remember that here $p$ is the number of bits of the mantissa excluding the implicit 1. }
+%    \label{tab:errors}
+%\end{table}
 
 
         %--------------------------------------------------------------------------------------------------------------------------------------
@@ -948,17 +956,19 @@ set is more dense and the absolute error is lower.
         \subsection{Are integer numbers exactly represented in the reals?}
 
 
-Integer values in the field of reals follow the same treatment as any other real number so they will be exactly represented with the same number of decimal digits. Hence, not all the integers contained in the representable range of real numbers have exact representation in this set. 
+Integer values in the field of reals follow the same treatment as any other real number so they will be exactly represented with the same number of decimal digits. 
+Hence, not all the integers contained in the representable range of real numbers have exact representation in this set. 
 
-In the case of single precision for example, at least all the integers with 6 or less significant decimal digits can be converted to a IEEE 754 value without losing precision. Some integers with 9 digits can also be converted but more than 9 digits is inevitably related to loss of precision. 
+In the case of single precision for example, at least all the integers with 6 or less significant decimal digits can be converted to a IEEE 754 value without losing precision. 
+Some integers with 9 digits can also be converted but more than 9 digits is inevitably related to loss of precision. 
 
 As an example, the following number is exactly stored: 
 $$
-899565_{10} = 01001001010110111001111011010000_2
+899565_{10} = \texttt{0 10010010 10110111001111011010000}
 $$
 but the number $45962178_{10}$ is converted (with an error of $-2$ units) to:
 $$
-45962176_{10} = 01001100001011110101010011110000_2
+45962176_{10} = \texttt{0 10011000 01011110101010011110000}
 $$
 
 

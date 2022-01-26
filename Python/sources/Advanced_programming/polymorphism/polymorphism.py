@@ -4,7 +4,7 @@ class polygon():
       self.length = sides
 
      def perimeter(self):
-        sides, x, y, z = self.length, self.x, self.y, self.z
+        sides = self.length
 
         return sum(sides); 
 

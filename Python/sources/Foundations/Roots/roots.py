@@ -1,6 +1,6 @@
 from cmath import sqrt #complex math library 
 
-def roots_2th_example(): 
+def Roots_2th(): 
 
    print("Roots of a x**2 + b* x + c = 0 ")
 

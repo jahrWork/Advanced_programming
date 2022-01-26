@@ -17,24 +17,24 @@ subroutine Matrix_operation_examples()
     V = [ ( 1./i**2, i=1, N ) ] 
     W = [ ( (-1)**(i+1)/(2*i+1.), i=1, N ) ] 
     A = reshape( [ ( ( (i/real(N))**(j-1), i=1, N ),  j=1, N) ], [N, N] )  
-    
-        
+            
     write(*,*) " 1. Sum ( V ) = ", sum(V) 
     write(*,*) " 2. Sum ( A ) = ", sum(A)
     write(*,*) " 3. Sum ( V, V>0 ) = ", sum(V, V>0) 
-    write(*,*) " 4. Sum ( A, A<0 ) = ", sum(A, A<0) 
+    write(*,*) " 4. Sum ( A, A>0.1 ) = ", sum(A, A>0.1) 
     write(*,*) " 5. dot product  ( V, W ) = ", dot_product(V, W)   
     write(*,*) " 6. dot product V and A(:,N) = ", dot_product( V, A(:,N) ) 
     write(*,*) " 7. mat multiply A times V = ", matmul( A, V )
+    write(*,*) " 8. my matmul sum(A x A )  = ", sum( my_matmul(A,A) )
     
-    write(*,*) " 8. my transpose (A) = " 
+    write(*,*) " 9. my transpose (A) = " 
     B = transpose(A) 
     do i=1, N
         write(*,'(100f8.3)') (B(i, j), j=1, N) 
     enddo 
     
-    write(*,*) " 9. maxval (A) = ", maxval(A)
-    write(*,*)" 10. maxloc (A) = ", maxloc(A)
+    write(*,*) " 10. maxval (A) = ", maxval(A)
+    write(*,*)" 11. maxloc (A) = ", maxloc(A)
   
   
 
@@ -66,7 +66,7 @@ end function
 ! Matrix multiplication  of two matrices A, B  of dimension NxM and MxL  
 !    C_ij = A_ik * B_kj
 !*****************************************************************************   
-function my_matmult( A, B ) result(C) 
+function my_matmul( A, B ) result(C) 
      real, intent(in) :: A(:,:), B(:,:) 
      real C( size(A, dim=1), size(B, dim=2) ) 
      

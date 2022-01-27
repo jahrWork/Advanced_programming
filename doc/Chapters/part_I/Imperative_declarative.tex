@@ -103,6 +103,10 @@ real should not be needed. However, there is another interest in doing that. As 
     
 \newpage 
 \subsection*{Python code} 
+This example can be implemented with Python in a similar way.
+Notice that data type for variables (\texttt{S}, \texttt{i} or \texttt{N}) is not explicitly declared, 
+Python automatically declares it when a value is assigned. Also, indentation rules are strictly followed and 
+there is no need to close structures like loops by means of statements. 
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.py}{def SummationN_n2}
@@ -160,13 +164,14 @@ of a series, it needs to know how to communicate with the function that defines 
 Through the interface block (intentionally created defining a function from integers to reals) \texttt{Sigma\_N}
 knows everything about the dummy arguments used inside the referenced procedure \texttt{a1(n)}. The same procedure 
 could be recycled next time a function of the following form is used: 
-
 $$ 
 \myfunc{ \texttt{f\_N\_R} }{\mathbb{Z}}{\mathbb{R}}{n}{\texttt{f\_N\_R(n)}} 
 $$
-
- 
 \subsection*{Python code}
+The same advantages demonstrated with Fortran are visible in Python, 
+now the extension and simplicity of the code is even higher due to the characteristics of this language. 
+However, do not forget the implicit assumptions that are made for its statements; 
+type and kind of variables, interface between procedures, etc.  
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Sigma_N}
@@ -214,6 +219,7 @@ it means that \texttt{an} has not contributed to \texttt{S} and the process is s
 take into account the need of
 initializing \texttt{S} and \texttt{Sn} with different values.
  
+\newpage
 The result of the sum is obtained by calling the function in the following way:
 \begin{verbatim} 
     integer :: n
@@ -225,9 +231,15 @@ The result of the sum is obtained by calling the function in the following way:
 \vspace{0.5cm}
 
 \subsection*{Python code}
+The same imperative statements are presented now with Python.  
+
+\vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.py}{modify arguments}
           {return S}{Sum_series.py}
+
+
+
 
 
 \newpage

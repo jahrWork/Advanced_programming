@@ -26,17 +26,13 @@ subroutine Matrix_operation_examples()
     write(*,*) " 6. dot product V and A(:,N) = ", dot_product( V, A(:,N) ) 
     write(*,*) " 7. mat multiply A times V = ", matmul( A, V )
     write(*,*) " 8. my matmul sum(A x A )  = ", sum( my_matmul(A,A) )
-    
     write(*,*) " 9. my transpose (A) = " 
     B = transpose(A) 
     do i=1, N
         write(*,'(100f8.3)') (B(i, j), j=1, N) 
     enddo 
-    
     write(*,*) " 10. maxval (A) = ", maxval(A)
     write(*,*)" 11. maxloc (A) = ", maxloc(A)
-  
-  
 
 end subroutine    
 !*****************************************************************************

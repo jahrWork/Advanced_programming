@@ -23,7 +23,7 @@ def Integral_and_derivative_examples():
 
    # plot integral of piecewise function 
      plt.plot( x,  array([ Integral(Piecewise_f, 0, xi) for xi in x]) )     
-     plt.show()  
+     plt.show()  #end
      
 
 
@@ -38,5 +38,5 @@ def Piecewise_f(x):
             return cos(x) 
             
        else: 
-            return  0 
+            return 0 # x > pi/2
       

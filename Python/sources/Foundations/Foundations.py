@@ -7,18 +7,13 @@ from Dynamic_allocation import Matrices_allocation
 from Integrals_derivatives import Integral_and_derivative_examples
 from Series_expansion import Taylor_expansion_examples
 from Read_files import Test_load_matrix
- 
- 
-  
-  
+   
 def menu_Foundations(): 
 
  option = 1     
  while option>0: 
-    
      
      print( "\n Welcome to basic programming concepts") 
-     
      print( " select an option " )
      print( " 0. exit/quit  " ) 
      print( " 1. Hello world" )  
@@ -29,8 +24,6 @@ def menu_Foundations():
      print( " 6. Integrals and derivatives ") 
      print( " 7. Taylor expansion ") 
      print( " 8. Read/write data from external files ") 
-
-    
      option = int (input("\n Select an option = ") )  
      print("\n")
      

@@ -1,7 +1,7 @@
 %___________________________________________________________________________________________________
 \chapter{Operations with vectors and matrices} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+
 
 \section{Introduction}
 
@@ -180,8 +180,7 @@ Some basic notions are summarized now:
 
 
 
-
-
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
 \listings{\home/Matrix_operations.f90}{subroutine Matrix_operation_examples}
       {end subroutine}{Matrix_operations.f90}
 
@@ -221,21 +220,13 @@ that programs store multidimensional arrays in a linear storage and Fortran is a
 
 
 
-%donde su término genérico vale %$ a_{ij} = (i/N)^j $.
- 
-%Escribir un programa para calcular  las operaciones siguientes con $N=100$: 
-%\begin{enumerate}
-%	\item Suma de  todas las componentes del vector $V$ y del vector $ W$. 
-%	\item Suma de  todas las componentes de la matriz $A$.   
-%	\item Suma de  las componentes del vector $W$ mayores que cero.
-%	\item Producto escalar de los vectores $V$ y $W$.   
-%	\item Producto escalar del vector $V$ y la columna $N$ de la matriz $A$. 
-%	\item Suma de las componentes de vector que resulta de  multiplicar la matriz $A$ por el vector $V$.
-%	\item Traza de la matriz $A$.
-%\end{enumerate}
 
- 
 
+ \newpage 
+ \subsection*{Python code}
+\renewcommand{\home}{./Python/sources/Foundations/Algebra} 
+\listings{\home/Matrix_operations.py}{def Matrix_operation_examples}
+      {WARNING}{Matrix_operations.py} 
 
 
 %_______________________________________________________________________________________________
@@ -273,6 +264,8 @@ $$
 
 The following examples are supported by the functions: \texttt{Vandermonde( M )} matrix of a given dimension \texttt{M}, \texttt{trace( A )} trace of a matrix and the recursive function \texttt{power( a, k )} to obtain the kth power of a matrix. Once each function is coded, general operations like these proposed here are easy to implement, remember that each abstraction can now be used in any program where this algebra is needed from now on. 
 
+\newpage 
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
 \listings{\home/Dynamic_allocation.f90}{subroutine Matrices_allocation}
 {end subroutine}{Dynamic_allocation.f90}
 
@@ -301,6 +294,15 @@ Take note of the full array assignation performed inside the explicit loop. Once
 For the functions \texttt{power( A, k )} and \texttt{trace( A )} two concepts should be extracted. Firstly, both must be used with square matrices, where both mathematical operations are defined. Secondly, the concept of recursion is used to calculate the kth power of a matrix. Essentially, the kth power of a matrix is the multiplication of that matrix with his $ k-1 $ power. A \texttt{recursive} statement is used for the function declaration so the compiler knows that this function can call to itself in order to calculate smaller instances of its main functionality, which means, it is going to call itself to calculate the $ (k-1) $ power once it tries to compute the kth power and so on until the power needed is 0 so the result is the identity matrix. 
 
 
+ \subsection*{Python code}
+\renewcommand{\home}{./Python/sources/Foundations/Algebra} 
+\listings{\home/Dynamic_allocation.py}{def Matrices_allocation}
+{return}{Dynamic_allocation.py}
+
+
+\renewcommand{\home}{./Python/sources/Foundations/Algebra} 
+\listings{\home/Dynamic_allocation.py}{def power}
+{matmul}{Dynamic_allocation.py}
 
 \section{Memories: Static, Heap, Stack}
 

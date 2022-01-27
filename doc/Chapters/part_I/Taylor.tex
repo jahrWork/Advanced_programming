@@ -1,7 +1,7 @@
 %___________________________________________________________________________________________________
 \chapter{Series expansion} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+
 
 %___________________________________________________________________________________________________
 \section{Introduction} 
@@ -58,10 +58,11 @@ Let's take a look at the Taylor expansion functions proposed here (written with 
 Despite that, the structure of both functions is the same, a declaration of the Taylor expansion definition. The \texttt{Sigma} function is called with the general term of the series, the first term to add (which is 0 in this kind of power expansion) and the condition to stop (epsilon value or number of terms). Those are the only ingredients needed to compute the sum series that returns the value of the Taylor expansion in a point $x$. 
   
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Taylor_expansions.f90}{function TaylorE}
    {end function}{Taylor_expansions.f90}
    
-      
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}       
 \listings{\home/Taylor_expansions.f90}{function TaylorN}
    {end function}{Taylor_expansions.f90}
    
@@ -76,17 +77,20 @@ Secondly, both functions are overloaded into one called \texttt{Taylor} so the p
    
     
 \vspace{0.5cm}   
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Taylor_expansions.f90}{interface}
    {end interface}{Taylor_expansions.f90}
 
-  
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}  
 \listings{\home/Taylor_expansions.f90}{interface Taylor}
          {end interface}{Taylor_expansions.f90}
    
 
+\newpage 
 Let's consider the following four examples (included in the Fortran project attached to this book) to better visualize how this function works:
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Series_expansion.f90}{Taylor_expansion_examples}
 {contains}{Series_expansion.f90}
    
@@ -127,8 +131,26 @@ The other three blocks of code compare some functions with their Taylor series e
 
 
   
+ 
+ \newpage 
+ \subsection*{Python code} 
+ \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+ \listings{\home/Taylor_expansions.py}{def Taylor}
+  {exit}{Taylor_expansions.f90}
+ 
+ \listings{\home/Taylor_expansions.py}{def Taylor_e}
+ {return}{Taylor_expansions.f90}
+  
+  \listings{\home/Taylor_expansions.py}{def Taylor_N}
+   {return}{Taylor_expansions.f90}
    
-
+   \newpage 
+    \listings{\home/Examples/Series_expansion.py}{def Taylor_expansion_examples}
+      {end}{Series_expansion.py}
+  
+ % Taylor_expansion_examples
+   
+\newpage 
 %___________________________________________________________________________________________________
 \section{Parseval's identity} 
 

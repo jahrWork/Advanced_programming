@@ -3,7 +3,7 @@
 %\chapter{Imperative programming versus declarative programming} 
 \chapter{Imperative versus declarative programming} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
+
 
 
 \section{Introduction}
@@ -79,8 +79,10 @@ S_N = \sum_{n=1} ^{N} \frac{ 1 } { n^2 }
 $$
 In the following code, the summation is done in an iterative way. 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.f90}{function SummationN_n2}
           {end function}{Sum_series.f90}
+          
 
 The result for \texttt{N = 10} is obtained by calling the function in the following way:
 \begin{verbatim} 
@@ -98,6 +100,13 @@ at the chapter \ref{sec:UndersIntOver}. Just forcing the number \texttt{1.} of t
 the operations are performed in the reals field so the result is properly calculated, converting the denominator to 
 real should not be needed. However, there is another interest in doing that. As a clue, overflow of integers must be avoided. 
     
+    
+\newpage 
+\subsection*{Python code} 
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Examples/Sum_series.py}{def SummationN_n2}
+          {return}{Sum_series.py}          
 
 
 
@@ -111,16 +120,21 @@ is independently declared in a different function, hence, if the program specifi
 (a different sum is needed), updating this code is extremely easy. 
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Series.f90}{function Sigma_N}
           {end function}{Series.f90}
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Series.f90}{interface}
           {end interface}{Series.f90}
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.f90}{function a1}
           {end function}{Sum_series.f90}
+
+
 
 The result for \texttt{N = 10} is obtained by calling the function in the following way:
 \begin{verbatim} 
@@ -151,12 +165,20 @@ $$
 \myfunc{ \texttt{f\_N\_R} }{\mathbb{Z}}{\mathbb{R}}{n}{\texttt{f\_N\_R(n)}} 
 $$
 
+ 
+\subsection*{Python code}
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Series.py}{def Sigma_N}
+          {return}{Series.py}
 
-%\vspace{0.5cm}
-%\renewcommand{\home}{./Fortran_project/sources/Foundations} 
-% \listings{\home/Sum_Series.f90}{function a1}
-%          {end function}{Sum_series.f90}
-%
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Examples/Sum_series.py}{def a1}
+          {return}{Sum_series.py}
+
+
 
 
 %--------------------------------------------------------------------------------------------
@@ -171,6 +193,7 @@ S = \sum_{n=1} ^{\infty} \frac{ 1 } { n^2 }
 $$
 In the following code, the summation is done in an iterative way. 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.f90}{function Summation_n2}
           {end function}{Sum_series.f90}
 
@@ -199,6 +222,12 @@ The result of the sum is obtained by calling the function in the following way:
 \end{verbatim}
 
 
+\vspace{0.5cm}
+
+\subsection*{Python code}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Examples/Sum_series.py}{modify arguments}
+          {return S}{Sum_series.py}
 
 
 \newpage
@@ -223,10 +252,13 @@ in another program, the same functions can be used thereby saving time.
 
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Series.f90}{function Sigma}
           {end function}{Series.f90}
 
+\newpage 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Series.f90}{function Tail}
           {end function}{Series.f90}
 
@@ -268,9 +300,20 @@ It is essential to notice three issues:
 
 
 
+\newpage 
+\subsection*{Python code}
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Series.py}{def Sigma}
+          {return}{Series.py}
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\listings{\home/Series.py}{def Tail}
+          {return}{Series.py}
 
 
-
+\newpage 
 
 \section{Numerical issues} \label{sec:NumIssues} 
  
@@ -309,6 +352,7 @@ $ (100)^5 $  can be done with real numbers.
 This is done in the  summation example by the following line: 
 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.f90}{real to avoid overflow}
           {overflow}{Sum_Series.f90}    
     
@@ -326,6 +370,7 @@ it is done by the following line in the summation example:
 
 
     \vspace{0.5cm}
+    \renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
     \listings{\home/Examples/Sum_series.f90}{do while}
             {do while}{Sum_Series.f90}    
   
@@ -435,10 +480,11 @@ Notice that the function \texttt{Tail} is specially created for good convergence
     ! Obtain N such as:
     ! integral from i=N+1 to infinity a_i = eps
 \end{verbatim}
-
-For a good convergence sum (the general term tends to 0 quickly), stopping the sum when $ an $ reaches a value \texttt{eps} leads to a situation 
-where the truncation error committed is not important compared to the value \texttt{eps} itself. The infinite terms not included in the sum would not appreciably
-modify the result. For a sum series with a poor convergence the situation is the opposite, stopping the sum when the general term is less than \texttt{eps} 
+For a fast convergence sum (the general term tends to 0 quickly), 
+the sum is stopped when the truncation error is equal or less than some specific value \texttt{eps}. 
+The terms not included in the sum would not appreciably
+modify the result. 
+For a sum series with a poor convergence the situation is the opposite, stopping the sum when the general term is less than \texttt{eps} 
 leaves without adding a huge number of terms whose sum is comparable to \texttt{eps} or even much more higher. Then, the total error committed could be impermissible 
 and there resides the difficulties of calculating these series.
 
@@ -450,14 +496,11 @@ if round-off is reached before the truncation error is permissible.
     
     
     
-    \subsection{First test for bad convergence sum}
-    
+ \subsection{First test for bad convergence sum}
 For the example we are treating here the bounds of the error are:
-
 \begin{equation}
     \frac{1}{N+1} \le \ S - S_N \ \le \frac{1}{N}
 \end{equation} 
-
 Being \texttt{S1} the result of the sum in the computer and using its analytical result,
 the total error of the sum is $ \pi^2/6 - \texttt{S1} $.
 Then, with the above bounds, the round-off error of the summation gives:
@@ -465,9 +508,9 @@ Then, with the above bounds, the round-off error of the summation gives:
 $$
     E_{fl} = E - E_N = \left( \frac{\pi^2}{6} - \texttt{S1} \right) - 1/N
 $$
-
 Let's execute now the following example to test this bad convergence sum series: 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.f90}{Summation_n2_examples}
 {end subroutine}{Sum_Series.f90} 
 

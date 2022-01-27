@@ -2,9 +2,9 @@ from numpy import zeros, sum, dot, matmul, array,  max, argmax, transpose, size,
 from numpy import set_printoptions
 
     
-#*****************************************************************************
+#***********************************************************
 #* Examples of vectorial and matrix operations
-#*****************************************************************************   
+#************************************************************  
 def Matrix_operation_examples():  
 
     N = 10 
@@ -28,14 +28,15 @@ def Matrix_operation_examples():
     print(" B = \n", B ) 
     
     print( "10. maxval (A) = ", max(A) )
-    print( "11. maxloc (A) = ", argmax(A) ) # WARNING: index is for the flattened matrix
+    print( "11. maxloc (A) = ", argmax(A) ) 
+    # WARNING: index is for the flattened matrix
   
   
 
-#*****************************************************************************
+#********************************************************
 # Dot product of two vectors of dimension N 
 #    sum from i=1 to i=N ( u_i * v_i ) 
-#*****************************************************************************   
+#********************************************************
 def my_dot_product( u, v ):  
    
     
@@ -48,10 +49,11 @@ def my_dot_product( u, v ):
     return S 
     
 
-#*****************************************************************************
-# Matrix multiplication  of two matrices A, B  of dimension NxM and MxL  
+#***********************************************************
+# Matrix multiplication  of two matrices A, B
+#    of dimension NxM and MxL  
 #    C_ij = A_ik * B_kj
-#*****************************************************************************   
+#***********************************************************   
 def my_matmul( A, B ):  
      
     N, M = shape(A)

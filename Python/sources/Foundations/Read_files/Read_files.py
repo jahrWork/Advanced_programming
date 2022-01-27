@@ -29,7 +29,7 @@ def Test_load_matrix():
          A = load_matrix('./sources/Foundations/Read_files/data2.csv') 
          
          for i in range( shape(A)[0] ): 
-            print( [ round(a,2) for a in A[i] ])
+            print( [ round(a,2) for a in A[i] ])  #end
          
     
     

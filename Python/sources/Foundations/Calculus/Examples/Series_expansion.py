@@ -12,9 +12,7 @@ def dkexp(x, k):
 def Taylor_expansion_examples(): 
     
    def Taylor_cosine(x):
-      
        return Taylor( df = d_cosine, x0 = 0., x = x, N = M ) 
-
  
    print(" Taylor exp(1.) x0=0   :", Taylor( df = dkexp, x0 = 0., x = 1., N = 1) )
    print(" Taylor exp(1.) x0=0   :", Taylor( df = dkexp, x0 = 0., x = 1., N = 4) )
@@ -36,7 +34,7 @@ def Taylor_expansion_examples():
    plt.plot( x, cos(x) )
    for  M in range(12, 18, 1):  
       plt.plot( x, array([ Taylor_cosine(xi) for xi in x])  )
-   plt.show()  
+   plt.show()  #end
 
            
 # ***********************************************************************     

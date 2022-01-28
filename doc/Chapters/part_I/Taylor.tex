@@ -54,7 +54,8 @@ For a Taylor expansion around a generic point $x_0$ the shape of the polynomial 
 
 
 
-Let's take a look at the Taylor expansion functions proposed here (written with a declarative style). Two approximations are used, one is called under the expected minimum value to be added to the series (epsilon), the other is directly called with the number of terms to be added. Imitating a multilayer structure, previous functions can be recycled, for example \texttt{TaylorE} needs to sum as many terms as the epsilon value requires so the function \texttt{Sigma} function (seen in chapter \ref{sec:Sigma}) is used. In a different way, \texttt{TaylorN} is directly based on \texttt{Sigma\_N} since the number of terms to be added are known and declared as an argument. 
+Let's take a look at the Taylor expansion functions proposed here (written with a declarative style). Two approximations are used, one is called under the expected minimum value to be added to the series (epsilon), the other is directly called with the number of terms to be added. Imitating a multilayer structure, previous functions can be recycled, for example \texttt{TaylorE} needs to sum as many terms as the epsilon value requires so the function \texttt{Sigma} function (seen in chapter \ref{sec:Sigma}) is used. In a different way, \texttt{TaylorN} is directly based on \texttt{Sigma\_N} since the number of terms to be added are known and declared as an argument.
+
 Despite that, the structure of both functions is the same, a declaration of the Taylor expansion definition. The \texttt{Sigma} function is called with the general term of the series, the first term to add (which is 0 in this kind of power expansion) and the condition to stop (epsilon value or number of terms). Those are the only ingredients needed to compute the sum series that returns the value of the Taylor expansion in a point $x$. 
   
 \vspace{0.5cm}
@@ -66,7 +67,8 @@ Despite that, the structure of both functions is the same, a declaration of the 
 \listings{\home/Taylor_expansions.f90}{function TaylorN}
    {end function}{Taylor_expansions.f90}
    
-   
+
+\newpage   
 A couple of details should be noticed here. First of all, the derivatives of the function to be expanded are introduced as an argument in \texttt{Taylor} function. The arguments of this function must be the value where deriving and its order. To do that, a generic procedure is used so it can be recycled next time a function of the same form is used:
 
 $$ 
@@ -89,13 +91,13 @@ Secondly, both functions are overloaded into one called \texttt{Taylor} so the p
 \newpage 
 Let's consider the following four examples (included in the Fortran project attached to this book) to better visualize how this function works:
 
-\vspace{0.5cm}
+\vspace{0.3cm}
 \renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 \listings{\home/Examples/Series_expansion.f90}{Taylor_expansion_examples}
-{contains}{Series_expansion.f90}
-   
-The first block of code calculates the value of $e$ using the Taylor series expansion of the function $e^x$ in $x_0 = 0$. Take a look at the source code to check how the derivative of the function is implemented.  Three calls are performed with $N = 1$, $N = 4$ and $eps = 1e-7$. As it is expected, each result returns a better approximation to the value of $e = 2.7182818284...$:
+{contains}{Series_expansion.f90} 
 
+\vspace{-0.2cm}
+The first block of code calculates the value of $e$ using the Taylor series expansion of the function $e^x$ in $x_0 = 0$. Take a look at the source code to check how the derivative of the function is implemented.  Three calls are performed with $N = 1$, $N = 4$ and $eps = 1e-7$. As it is expected, each result returns a better approximation to the value of $e = 2.7182818284...$:
 \begin{verbatim}
 Taylor exp(1.) x0=0   :   2.00000000000000
 Taylor exp(1.) x0=0   :   2.70833333333333
@@ -105,14 +107,14 @@ Taylor exp(1.) x0=0   :   2.71828182619849
 The other three blocks of code compare some functions with their Taylor series expansions. In the first place a cosine function is compared with its Taylor expansion around $x_0 = 0$ using $N = 10$ (11 terms of the series). The plot shows a black cosine curve in the interval $\left[0,2\pi\right]$ compared with a red curve with its series expansion (figure \ref{fig:Taylor1}). The same, with $N = 5$, is done with the function $f(x) = \frac{1}{1-x}$ in the interval $\left[-2,2\right]$, the result is seen in the the figure \ref{fig:Taylor2}. Finally, the cosine is approximated by 7 different curves, each of them considering more terms of the series expansions ($N = 1, 5, 9, 13, 17, 21$ and $25$) so the result converges to the cosine function (figure \ref{fig:Taylor3}). 
 
 \begin{figure}
-    \begin{subfigure}[h]{0.5\textwidth}
+    \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \includegraphics[width = \textwidth]{./doc/Figures/Taylor1.png}  \\
         \caption{Cosine (black) and Taylor expansion around $x_0 = 0$ with $N = 10$}
         \label{fig:Taylor1}
     \end{subfigure}
     \hspace{\fill}
-    \begin{subfigure}[h]{0.5\textwidth}
+    \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \includegraphics[width = \textwidth]{./doc/Figures/Taylor2.png}  \\
         \caption{Function $f(x) = \frac{1}{1-x}$ (black) and Taylor expansion around $x_0 = 0$ with $N = 5$}
@@ -120,7 +122,7 @@ The other three blocks of code compare some functions with their Taylor series e
     \end{subfigure}    
 
     \centering
-    \begin{subfigure}[h]{0.5\textwidth}
+    \begin{subfigure}[h]{0.4\textwidth}
         \centering
         \includegraphics[width = \textwidth]{./doc/Figures/Taylor3.png}  \\
         \caption{Cosine (black) and different Taylor expansions around $x_0 = 0$ with $N = 1, 5, 9, 13, 17, 21$ and $25$}
@@ -134,21 +136,35 @@ The other three blocks of code compare some functions with their Taylor series e
  
  \newpage 
  \subsection*{Python code} 
+ The same functions are coded now with Python, notice that overloading both into one function called \texttt{Taylor} is performed in a different way.
+ 
+ \vspace{0.5cm}
  \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
  \listings{\home/Taylor_expansions.py}{def Taylor}
-  {exit}{Taylor_expansions.f90}
+ {exit}{Taylor_expansions.f90}
  
  \listings{\home/Taylor_expansions.py}{def Taylor_e}
- {return}{Taylor_expansions.f90}
+ {Sigma}{Taylor_expansions.f90}
   
-  \listings{\home/Taylor_expansions.py}{def Taylor_N}
-   {return}{Taylor_expansions.f90}
+ \listings{\home/Taylor_expansions.py}{def Taylor_N}
+ {Sigma}{Taylor_expansions.f90}
+  
+ 
+    
    
    \newpage 
-    \listings{\home/Examples/Series_expansion.py}{def Taylor_expansion_examples}
-      {end}{Series_expansion.py}
+   Try the same examples treated with Fortran in the Python project attached to this book:
+      
+   \vspace{0.5cm}
+   \listings{\home/Examples/Series_expansion.py}{def Taylor_expansion_examples}
+   {end}{Series_expansion.py}
   
  % Taylor_expansion_examples
+  
+  
+  
+  
+  
    
 \newpage 
 %___________________________________________________________________________________________________
@@ -220,4 +236,6 @@ and the following summation is obtained:
 \begin{equation} 
     \sum_{k=1} ^{\infty} \  \frac{1}{k^2}  \  = \frac{\pi^2}{6}
 \end{equation}
+
+
 

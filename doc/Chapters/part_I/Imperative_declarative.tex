@@ -314,6 +314,7 @@ It is essential to notice three issues:
 
 \newpage 
 \subsection*{Python code}
+The same reused strategy is performed with Python by creating the corresponding function \texttt{Tail} and using \texttt{Sigma\_N}.
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Sigma}
@@ -323,6 +324,10 @@ It is essential to notice three issues:
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Tail}
           {return}{Series.py}
+
+
+
+
 
 
 \newpage 
@@ -508,7 +513,7 @@ if round-off is reached before the truncation error is permissible.
     
     
     
- \subsection{First test for bad convergence sum}
+    \subsection{First test for bad convergence sum}
 For the example we are treating here the bounds of the error are:
 \begin{equation}
     \frac{1}{N+1} \le \ S - S_N \ \le \frac{1}{N}

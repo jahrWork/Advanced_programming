@@ -12,8 +12,9 @@ In the second place, the concepts of static and dynamic
 data objects are covered. Notice that all the examples are written according to a 
 declarative programming, consider reproducing the same results with an imperative programming to 
 compare.
-
-{\Large Matrix arithmetic}
+    
+    \vspace{-.5cm}
+    \subsection*{Matrix arithmetic}
 
 In the context of scientific programming some features like a syntax close to mathematics or
 functional oriented programming are desirable for a programming language. In addition, 
@@ -52,9 +53,8 @@ The following concepts regarding arrays constructions and operations are covered
     
 \end{enumerate} 
 
-
-
-{\Large Static/Dynamic data objects}
+    \vspace{-.5cm}
+    \subsection*{Static/Dynamic data objects}
 
 Each data object declared in a program (variables, constants, pointers, arrays, etc.) are either static or dynamic 
 which means that the memory storage to hold that piece of data is reserved during compilation time or 
@@ -224,9 +224,22 @@ that programs store multidimensional arrays in a linear storage and Fortran is a
 
  \newpage 
  \subsection*{Python code}
+The whole function can be written in the same manner and almost identically with Python, 
+notice from the following example how all vectors and matrices are constructed by using implicit loops. 
+Furthermore, the same intrinsic functions are implemented making natural the use of mathematical notation when programming 
+(just consider some particularities like indentation or implicit typing). 
+\vspace{0.5cm} 
 \renewcommand{\home}{./Python/sources/Foundations/Algebra} 
 \listings{\home/Matrix_operations.py}{def Matrix_operation_examples}
       {WARNING}{Matrix_operations.py} 
+
+
+
+
+
+
+
+
 
 
 %_______________________________________________________________________________________________
@@ -272,7 +285,7 @@ The following examples are supported by the functions: \texttt{Vandermonde( M )}
 
 Let's take a deeper look into the program. First of all, notice that the 3-rank object \texttt{Ak} is declared with the attribute \texttt{allocatable} and colons \texttt{:} instead of the dimension specifications. Later, when the dimensions are known, the \texttt{allocate} function is used to reserve the appropriate memory for the variable.
 
-Consider now the first operation to perform. The expression \texttt{trace( Vandermonde(M) )} is coded inside an implicit loop from 1 to 10. This results are constructed in a vector with squared brackets and \texttt{sum} performs the summation of the components of that vector. The mathematical abstraction summation is already implemented in many programming languages. 
+The expression \texttt{trace( Vandermonde(M) )} is coded inside an implicit loop from 1 to 10. This results are constructed in a vector with squared brackets and \texttt{sum} performs the summation of the components of that vector. The mathematical abstraction summation is already implemented in many programming languages. 
 
 The use of many variables is avoided here thanks to a declarative programming. In an imperative programming the Vandermonde matrix would have been stored in a variable \texttt{AM(M,M)}, its trace in a real vector variable used as an input for \texttt{sum}. Do not think that these objects are not used now, the compiler needs them exactly the same in order to operate, however, it automatically reserves memory, stores the intermediate results, returns only the single result needed \texttt{S} and, when the calculation is finished, frees all that temporary memory used in an efficient way. 
 
@@ -294,7 +307,8 @@ Take note of the full array assignation performed inside the explicit loop. Once
 For the functions \texttt{power( A, k )} and \texttt{trace( A )} two concepts should be extracted. Firstly, both must be used with square matrices, where both mathematical operations are defined. Secondly, the concept of recursion is used to calculate the kth power of a matrix. Essentially, the kth power of a matrix is the multiplication of that matrix with his $ k-1 $ power. A \texttt{recursive} statement is used for the function declaration so the compiler knows that this function can call to itself in order to calculate smaller instances of its main functionality, which means, it is going to call itself to calculate the $ (k-1) $ power once it tries to compute the kth power and so on until the power needed is 0 so the result is the identity matrix. 
 
 
- \subsection*{Python code}
+
+    \subsection*{Python code}
 \renewcommand{\home}{./Python/sources/Foundations/Algebra} 
 \listings{\home/Dynamic_allocation.py}{def Matrices_allocation}
 {return}{Dynamic_allocation.py}
@@ -303,6 +317,10 @@ For the functions \texttt{power( A, k )} and \texttt{trace( A )} two concepts sh
 \renewcommand{\home}{./Python/sources/Foundations/Algebra} 
 \listings{\home/Dynamic_allocation.py}{def power}
 {matmul}{Dynamic_allocation.py}
+
+
+
+
 
 \section{Memories: Static, Heap, Stack}
 

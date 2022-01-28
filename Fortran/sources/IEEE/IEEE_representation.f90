@@ -137,13 +137,10 @@ end function
         end if 
         
     end do 
-    
-    
-    bias = 2**(r-1) - 1 
-     
+
+    bias = 2**(r-1) - 1      
     e = e - bias 
-  
-    
+
  end function 
 
  

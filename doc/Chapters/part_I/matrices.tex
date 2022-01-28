@@ -2,7 +2,7 @@
 \chapter{Operations with vectors and matrices} 
 
 
-
+\vspace{-.7cm}
 \section{Introduction}
 
 This chapter covers two independent topics through examples. In the first place, some essential 
@@ -13,8 +13,9 @@ data objects are covered. Notice that all the examples are written according to 
 declarative programming, consider reproducing the same results with an imperative programming to 
 compare.
     
-    \vspace{-.5cm}
+    \vspace{-.3cm}
     \subsection*{Matrix arithmetic}
+    \vspace{-.2cm}
 
 In the context of scientific programming some features like a syntax close to mathematics or
 functional oriented programming are desirable for a programming language. In addition, 
@@ -62,9 +63,9 @@ during the execution of the program respectively. Consider the variable \texttt{
 beginning of a code, its memory storage is reserved when the program is compiled and this space is not liberated 
 until the program has finished the execution. 
 
-Another option to declare and manage the memory storage of a object is dynamic allocation. In this case, the 
-storage of a variable like \texttt{real, allocatable :: Ak(:, :, :)} is not reserved until 
-the program orders it (during execution) and can be changed or freed at any moment.
+Another option to declare and manage the memory storage of a object involves using dynamic allocation. For this case, the 
+storage of a variable is not reserved until the program orders it (during execution) and can be changed or freed at any moment. 
+This is done through a code like \texttt{real, allocatable :: Ak(:, :, :)}.
 
 
 
@@ -124,8 +125,13 @@ Some basic notions are summarized now:
     \item Once declared, the initialization of the arrays is performed with constructors. In the case of Fortran the constructors are only used for rank-one arrays so functions like \texttt{reshape} are needed for higher ranks. Three ways are normally used to manually construct an array:
     
     \begin{enumerate}
-        \item By a list of values: \texttt{ (/ list /) } or \texttt{ [ list ] } where 'list' is full of values separated by commas (of the same type declared for the array). For example: \texttt{V = [ 3.4, 5.2, 4.5, 2.1 ]} is a column vector of dimension 4 with those values in each position.
-        \item An array expression can also be used in the initialization: \texttt{V = [ B(2, 3:5) ]} which stores in \texttt{V} the list of values in the second row of \texttt{B} from the column \texttt{3} to \texttt{5}.
+        \item By a list of values: \texttt{ [ list ] } where 'list' is full of values separated by commas (of the same type declared for the array). 
+        For example: 
+        
+        \texttt{V = [ 3.4, 5.2, 4.5, 2.1 ]} is a column vector of dimension 4 with those values in each position.
+        \item An array expression can also be used in the initialization: 
+        
+        \texttt{V = [ B(2, 3:5) ]} stores in \texttt{V} the list of values in the second row of \texttt{B} from columns \texttt{3} to \texttt{5}.
         \item Using an implicit loop so a list of elements is computed from a loop controlled by a DO variable. Lots of examples of this are used throughout this book: \texttt{V = [ ( 1./i**2, i=1, N ) ]}.
     \end{enumerate}
 
@@ -178,6 +184,8 @@ Some basic notions are summarized now:
 \end{itemize}
 
 
+
+%\texttt{ (/ list /) } is not used as constructor.
 
 
 \renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 

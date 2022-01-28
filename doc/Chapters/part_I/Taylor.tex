@@ -97,7 +97,7 @@ Let's consider the following four examples (included in the Fortran project atta
 {contains}{Series_expansion.f90} 
 
 \vspace{-0.2cm}
-The first block of code calculates the value of $e$ using the Taylor series expansion of the function $e^x$ in $x_0 = 0$. Take a look at the source code to check how the derivative of the function is implemented.  Three calls are performed with $N = 1$, $N = 4$ and $eps = 1e-7$. As it is expected, each result returns a better approximation to the value of $e = 2.7182818284...$:
+The first block of code calculates the value of $e$ using a Taylor expansion of the function $e^x$ in $x_0 = 0$. Take a look at the source code to check how the derivative of the function is implemented.  Three calls are performed with $N = 1$, $N = 4$ and $eps = 1e-7$. As it is expected, each result returns a better approximation to the value of $e = 2.7182818284...$:
 \begin{verbatim}
 Taylor exp(1.) x0=0   :   2.00000000000000
 Taylor exp(1.) x0=0   :   2.70833333333333

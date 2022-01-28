@@ -710,7 +710,7 @@ the density of values with growing values.
 %-----------------------------------
 It is difficult to represent the density of representable numbers in the numbers line for IEEE 754 standard formats.
 However, the behaviour is exactly the same, but with much more values.
-Let's analyse it with an example, consider a single precision mantissa. 
+Consider a single precision mantissa. 
 We count on 23 binary digits to divide every window: $2^{23} = 8688608$ possible values. 
 
 In the window $\left[1,2\right]$ (exponent $0$) the resolution is:
@@ -775,9 +775,7 @@ so the error made in our approximation can also be expressed as $0.011_2$ units 
 
 
 
-
-
-{\large Absolute Error:}
+{\Large Absolute Error}
 
 For a given value $z$ and its representation in a floating-point system $z_{fl}$, 
 the absolute error made is the distance between them:
@@ -804,8 +802,8 @@ Half ulp is much more important if we are representing a number around $2^{24}$ 
 
 
 
+{\Large Relative Error}
 
-{\large Relative Error:}
 
 Another way to measure the error made in the representation is using the relative error:
 $$
@@ -862,16 +860,26 @@ $p$ is the number of digits reserved for the mantissa and $e$ is the exponent of
 \end{table}
 
 When a variable is initialized or a constant value defined, the exact value is approximated by the nearest IEEE 754 number. Then, we have seen that the absolute error is bounded. 
-On the contrary, when operating (adding, multiplying, dividing, etc.) with reals, the finite precision result of the operation could be different from the nearest IEEE value to the exact result. 
+On the contrary, when operating (adding, multiplying, dividing, etc.) with reals, the finite precision result of the operation could be different from the nearest IEEE value to the exact result.
+The absolute error, whether expressed in units or with ulps, is usually used to understand the rounding error along the numbers line. However, the relative error is better to analyse calculations.  
 
 \begin{IN}
     \begin{itemize}
-        \item Use the absolute error, whether expressed in units or with ulps, to understand the rounding error along the numbers line. 
-        \item Use the relative error to analyse the results of your calculations in the computer.
+        \item The term \textit{ulp} is used to indicate the last representable binary place for a floating point, it depends on the number of mantissa digits and the exponent of the number to be represented: $ulp = 2^{e-p}$. 
+        \item The absolute round-off error grows with the exponent but always bounded by $\frac{1}{2} ulp = 2^{e-p-1}$.
+        \item The relative round-off error is bounded by a constant value along the numbers line equal to $2^{-(p+1)}$.
     \end{itemize}   
-\end{IN}  
+\end{IN} 
 
 
+
+
+%\begin{IN}
+%    \begin{itemize}
+%        \item Use the absolute error, whether expressed in units or with ulps, to understand the rounding error along the numbers line. 
+%        \item Use the relative error to analyse the results of your calculations in the computer.
+%    \end{itemize}   
+%\end{IN}  
 
 
 
@@ -917,9 +925,9 @@ $$
 \textit{Notice that sometimes $p$ is used for the mantissa digits including the implicit 1 so a slightly different expression of this machine epsilon can be found.}
 
 Formally, when the exact value to be represented is rounded to the nearest floating-point value, 
-the relative error is not bounded by $\epsilon$ but $\frac{\epsilon}{2}$ which is called \textit{unit roundoff} ($u$):
+the relative error is not bounded by $\epsilon$ but $\frac{\epsilon}{2}$ which is called \textit{unit roundoff}:
 $$
-u = \frac{\epsilon}{2} = 2^{-p-1}
+\frac{\epsilon}{2} = 2^{-p-1}
 $$
 
 
@@ -928,7 +936,7 @@ $$
     \begin{tabular}{| r | c | c | c | }
         
         \hline
-        Name  &  Mantissa (p) & $\epsilon$ & $u$  \\ \hline
+        Name  &  Mantissa (p) & $\epsilon$ & $\frac{\epsilon}{2}$  \\ \hline
         
         \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}     &  23    & $\sim 1.19\cdot10^{-7} $   & $\sim 5.96\cdot10^{-8} $ \\ \hline
         
@@ -1070,7 +1078,7 @@ $$
 
 The decimal value for a single precision (\texttt{binary32}) floating point can be obtained trough the following expression (see Figure \ref{fig:singlebits}):
 $$
-   x = (-1)^{b_{31}}  2^e \left( 1 +   \sum_{i=1}^{23} b_{23-i} 2^{-i}    \right) 
+   x = (-1)^{b_{31}}  \:  2^e  \: \left( 1 +   \sum_{i=1}^{23} b_{23-i} 2^{-i}    \right) 
 $$
 being $e$ the exponent already converted to decimal and properly biased. 
 Notice that the implicit 1 is added to the sum which covers all the mantissa digits. 
@@ -1264,6 +1272,8 @@ Consider for example the real constant \texttt{10.}.
 A specific kind type can be declared 
 by underscoring the constant with its kind type or
 by using exponential notation with \texttt{d} (double) or \texttt{q} (quadruple):
+
+\newpage
 \begin{verbatim}
 10._4        
 10._8    1d1     1.d1    1e1_8   1.e1_8
@@ -1342,13 +1352,13 @@ Default Real KIND: $\texttt{/real-size:{32\mid64\mid128}}$
 
 
 
-    %--------------------------------------------------------------------------------------------------------------------------------------     
+    %--------------------------------------------------------------------------------------------------------------------------------------  
+    \newpage   
     \section{\texttt{subroutine mantissa\_exponent\_base\_2}} 
 
 
 The following subroutine allows to reconstruct a real number through its internal bits representation: 
-
-\newpage
+\vspace{0.5cm}
 \listings{\home/IEEE_representation.f90}
 {subroutine mantissa_exponent_base_2}{end subroutine}
 {Subroutine to reconstruct the number in IEEE_representation.f90} 
@@ -1365,7 +1375,7 @@ first, this code covers the normalized numbers and not the special values and de
 Second, the conversion to quadruple precision carries with the round off error of the original precision and 
 third, in order to write bits in the screen do not forget that leading zeros are not displayed.
 
-Functions \texttt{normalized\_mantissa( string )} and \texttt{biased\_exponent( string )} returns the mantissa including an implicit 1 and the exponent biased with a bias value of 16383 from the input string of bits. 
+Functions \texttt{normalized\_mantissa(string)} and \texttt{biased\_exponent(string)} returns the mantissa including an implicit 1 and the exponent biased with a bias value of 16383 from the input string of bits. 
 
 \listings{\home/IEEE_representation.f90}
 {function normalized_mantissa}{end function}

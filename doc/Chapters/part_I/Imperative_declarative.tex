@@ -103,6 +103,10 @@ real should not be needed. However, there is another interest in doing that. As 
     
 \newpage 
 \subsection*{Python code} 
+This example can be implemented with Python in a similar way.
+Notice that data type for variables (\texttt{S}, \texttt{i} or \texttt{N}) is not explicitly declared, 
+Python automatically declares it when a value is assigned. Also, indentation rules are strictly followed and 
+there is no need to close structures like loops by means of statements. 
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.py}{def SummationN_n2}
@@ -160,13 +164,14 @@ of a series, it needs to know how to communicate with the function that defines 
 Through the interface block (intentionally created defining a function from integers to reals) \texttt{Sigma\_N}
 knows everything about the dummy arguments used inside the referenced procedure \texttt{a1(n)}. The same procedure 
 could be recycled next time a function of the following form is used: 
-
 $$ 
 \myfunc{ \texttt{f\_N\_R} }{\mathbb{Z}}{\mathbb{R}}{n}{\texttt{f\_N\_R(n)}} 
 $$
-
- 
 \subsection*{Python code}
+The same advantages demonstrated with Fortran are visible in Python, 
+now the extension and simplicity of the code is even higher due to the characteristics of this language. 
+However, do not forget the implicit assumptions that are made for its statements; 
+type and kind of variables, interface between procedures, etc.  
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Sigma_N}
@@ -214,6 +219,7 @@ it means that \texttt{an} has not contributed to \texttt{S} and the process is s
 take into account the need of
 initializing \texttt{S} and \texttt{Sn} with different values.
  
+\newpage
 The result of the sum is obtained by calling the function in the following way:
 \begin{verbatim} 
     integer :: n
@@ -225,9 +231,15 @@ The result of the sum is obtained by calling the function in the following way:
 \vspace{0.5cm}
 
 \subsection*{Python code}
+The same imperative statements are presented now with Python.  
+
+\vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Examples/Sum_series.py}{modify arguments}
           {return S}{Sum_series.py}
+
+
+
 
 
 \newpage
@@ -302,6 +314,7 @@ It is essential to notice three issues:
 
 \newpage 
 \subsection*{Python code}
+The same reused strategy is performed with Python by creating the corresponding function \texttt{Tail} and using \texttt{Sigma\_N}.
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Sigma}
@@ -311,6 +324,10 @@ It is essential to notice three issues:
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \listings{\home/Series.py}{def Tail}
           {return}{Series.py}
+
+
+
+
 
 
 \newpage 
@@ -496,7 +513,7 @@ if round-off is reached before the truncation error is permissible.
     
     
     
- \subsection{First test for bad convergence sum}
+    \subsection{First test for bad convergence sum}
 For the example we are treating here the bounds of the error are:
 \begin{equation}
     \frac{1}{N+1} \le \ S - S_N \ \le \frac{1}{N}
@@ -600,7 +617,7 @@ used for the forward sum.
 
 \begin{verbatim} 
 Summation 1/n**2
-S =  1.64493406584823   N =  1000000000 Error = 1.000000082740371E-009
+S = 1.64493406584823 N = 1000000000 Error = 1.000000082740371E-009
 
 Truncation error S =   1.000000000000000E-009
 Round --off error =   8.274037093680878E-017

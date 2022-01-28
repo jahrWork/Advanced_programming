@@ -1,5 +1,7 @@
 \chapter{Operations and von Neumann style} 
 
+
+
 \section{Introduction}
 
 Let's revise some pillars of the computation through the names of the people that developed them; Turing, Neumann, Church and Backus. 
@@ -9,15 +11,19 @@ The theory of computation gives us the basis for the automatic processing of inf
 The tools of theory of computation will tell us if our problem can be solved in the framework of a \textbf{model of computation}, using an \textbf{algorithm} and how \textbf{efficiently} is going to be solved. 
 An essential concept arise here, the model of computation is a mathematical abstract construction that describes how to compute the output of a mathematical function given its input. 
 
+%Turing Universal machine
+This leads us to the concept of Turing machine, the model of computation invented by Alan Turing to give answer to some essential questions in the theory of computation and mathematics in general. This abstract construction consists on a scanning head capable of reading a single cell at a time from an infinite tape. This tape has information coded and once a cell is read, the machine can delete that cell, write another symbol or leave the same symbol. Then, it can move to a different position in the tape. According to the current state of the machine and the position in the tape the machine follow a set of rules (also coded) and take some action or another. 
+
+Everything that is computable and everything that a machine can compute nowadays can be theoretically programmed in a Touring machine although maybe in a less efficient way. Furthermore, it is said that any system capable of doing what a Touring machine can do is Touring-complete and can also compute everything that is computable. Applying this idea to programming languages we can find if any computable algorithm can be performed in it and it turns that all programming languages nowadays are Touring-complete as soon as they allow mainly if-then-else structures and go-to statements. 
 
 
 
 
-machine and style. instructions.....
-
-Example of code 3*2 
-
-Turing Universal machine 
+ 
+RAM model
+Lenguajes (style) vs máquinas (machine)
+Arquitecturas
+Paradigmas, instructions, Backus
 Neumann Architecture 
 Church lambda 
 Backus Fortran and its paper 
@@ -27,7 +33,8 @@ Backus Fortran and its paper
 
 
 
-
+%Example of code 3*2 
+%machine and style.
 
 
 

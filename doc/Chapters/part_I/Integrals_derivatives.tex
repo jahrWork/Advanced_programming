@@ -1,7 +1,7 @@
 %___________________________________________________________________________________________________
 \chapter{Operations with functions} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}
+
 
 
 \section{Introduction} 
@@ -53,15 +53,27 @@ From the numerical point of view two precautions must be taken into account:
 \end{itemize}
 
 
-\vspace{0.5cm} 
+\newpage
+%\vspace{0.5cm} 
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}
 \listings{\home/Examples/Integrals_derivatives.f90}{function Piecewise_f}
 {end function}{Integrals_derivatives.f90}
 
-
-
+\vspace{-0.7cm} 
+\subsection*{Python code} 
+The same code written with Python is more straight-forward,
+this function definition with an \texttt{if/else} structure is a good example. 
+Remember that implicit typing can make programming simpler but can also lead to unpredictable results or errors difficult to debug.
+\vspace{0.3cm}
+\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
+\lstpython
+\listings{\home/Examples/Integrals_derivatives.py}{def Piecewise_f}
+{x > pi}{Integrals_derivatives.py}
+\lstfor
 
 
 %___________________________________________________________________________________________________
+\vspace{-0.5cm}
 \section{Plotting functions}
 
 For a mathematical function its graph is one of the ways to represent it. 
@@ -101,6 +113,10 @@ It is used in combination with an initialization subroutine for the graph and a 
 \texttt{subroutine plot\_show(  )}
 
 Notice how this subroutine makes use of the \texttt{parameter M} that needs to be converted to \texttt{real} when the grid \texttt{x} is calculated to avoid operating in the integer field. Also, the use of implicit loops greatly simplifies the reading of the code.
+
+
+
+
 
 
 %___________________________________________________________________________________________________
@@ -183,8 +199,8 @@ $$
 \myfunc{ \texttt{f\_R\_R} }{\mathbb{R}}{\mathbb{R}}{x}{\texttt{f\_R\_R(x)}} 
 $$
 
+\newpage
 \vspace{0.5cm}
-
 \listings{\home/Calculus.f90}{Derivative}
 {end function}{Calculus.f90}
 
@@ -230,6 +246,28 @@ In this example, the leftmost value of each subinterval is taken to approximate 
 
 Some notes should be taken from this example: firstly, notice that the initial value given to \texttt{dx} is not the actual value used, it is just an approximation to the expected value  (\texttt{0.001}). The operation \texttt{abs(b-a)/dx} is used to calculate the approximate number of subintervals that fit in our interval $[a,b]$ and then the integer part is retained. Then, the exact value of  \texttt{dx} is calculated for an integer number of subintervals. Secondly, notice that the sum must not stop in the last value of the interval ($b$) but in the previous one since the area of that rectangle is computed by $dx\cdot f(a+dx(m-1))$. As usual, the whole addition can be compacted in the sum of the components of a vector defined by an implicit loop. 
 
+
+\newpage 
+\subsection*{Python code} 
+Find the same example coded with Python, there is no need of explicitly declare an interface between the argument function \texttt{f} and the functions \texttt{Derivative( f, x )} and \texttt{Integral( f, x )}. 
+\renewcommand{\home}{./Python/sources/Foundations/Calculus}
+
+\vspace{0.5cm}
+\lstpython
+\listings{\home/Calculus.py}{def Derivative}
+{return}{Calculus.py}
+\lstfor
+
+\vspace{0.5cm}
+\lstpython
+\listings{\home/Calculus.py}{def Integral}
+{return}{Calculus.py}
+\lstfor
+
+ 
+
+
+
 %___________________________________________________________________________________________________
 \newpage 
 \section{Examples of operations with functions}
@@ -266,12 +304,19 @@ $$
 \int_{-1}^{x} f(x) dx = - \int_{x}^{-1} f(x) dx
 $$
 
-
+\newpage 
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Calculus}
 \listings{\home/Examples/Integrals_derivatives.f90}{Integral_and_derivative_examples}
 {end subroutine}{Integrals_derivatives.f90}
-
-
+ 
+ \newpage 
+ \subsection*{Python code} 
+ \renewcommand{\home}{./Python/sources/Foundations/Calculus}
+ \lstpython
+ \listings{\home/Examples/Integrals_derivatives.py}{def Integral_and_derivative_examples}
+ {end}{Integrals_derivatives.py}
+ \lstfor
  
   
   

@@ -13,7 +13,7 @@ contains
     real :: a, b, c       ! coefficients 
     complex :: x1, x2, d  ! roots and discriminant 
     
-    a = 1.;  b = 0;  c = 1
+    a = 1.;  b = 1;  c = 1
       
     if (abs(a)==0) then 
          if (abs(b)==0) then 

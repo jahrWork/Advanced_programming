@@ -4,8 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5ca4ffdf-626b-4d0e-b42d-d7a1537ef971</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sources\Fortran_to_Python\f2py_example.py</StartupFile>
-    <SearchPath>sources\scope;sources\algebra;sources\Functional programming;sources\odes;sources\Roots;sources\polymorphism;sources\Fortran_to_Python</SearchPath>
+    <StartupFile>sources\main.py</StartupFile>
+    <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Advanced_programming\python_to_C;sources\Advanced_programming\Fortran_to_Python</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_project</Name>
@@ -26,92 +26,121 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="sources\" />
-    <Folder Include="sources\iterators\" />
-    <Folder Include="sources\python_to_C\" />
-    <Folder Include="sources\pointers\" />
-    <Folder Include="sources\1.TO_DO\" />
-    <Folder Include="sources\Roots\" />
-    <Folder Include="sources\Functional programming\" />
-    <Folder Include="sources\Algebra\" />
-    <Folder Include="sources\Fortran_to_Python\" />
-    <Folder Include="sources\ODES\" />
-    <Folder Include="sources\polymorphism\" />
-    <Folder Include="sources\scope\" />
+    <Folder Include="sources\Foundations\Calculus\Examples\" />
+    <Folder Include="sources\Foundations\iterators\" />
+    <Folder Include="sources\Foundations\" />
+    <Folder Include="sources\Advanced_programming\" />
+    <Folder Include="sources\Advanced_programming\python_to_C\" />
+    <Folder Include="sources\Foundations\Calculus\" />
+    <Folder Include="sources\Foundations\Read_files\" />
+    <Folder Include="sources\Advanced_programming\pointers\" />
+    <Folder Include="sources\Advanced_programming\1.TO_DO\" />
+    <Folder Include="sources\Foundations\Roots\" />
+    <Folder Include="sources\Advanced_programming\Functional programming\" />
+    <Folder Include="sources\Foundations\Algebra\" />
+    <Folder Include="sources\Advanced_programming\Fortran_to_Python\" />
+    <Folder Include="sources\Advanced_programming\ODES\" />
+    <Folder Include="sources\Advanced_programming\polymorphism\" />
+    <Folder Include="sources\Advanced_programming\scope\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sources\Algebra\vectors_and_matrices.py">
+    <Compile Include="sources\Advanced_programming\advanced_programming_techniques.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Fortran_to_Python\fortran_from_py.py" />
-    <Compile Include="sources\python_to_C\compile_example.py">
+    <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />
+    <Compile Include="sources\Foundations\Algebra\Matrix_operations.py" />
+    <Compile Include="sources\Foundations\Algebra\vectors_and_matrices.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\python_to_C\HelloWorld.py">
+    <Compile Include="sources\Advanced_programming\Fortran_to_Python\fortran_from_py.py" />
+    <Compile Include="sources\Advanced_programming\python_to_C\compile_example.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\Cauchy_problem.py" />
-    <Compile Include="sources\Functional programming\First_class_functions.py">
+    <Compile Include="sources\Advanced_programming\python_to_C\HelloWorld.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Functional programming\Fourier.py">
+    <Compile Include="sources\Advanced_programming\ODES\Cauchy_problem.py" />
+    <Compile Include="sources\Advanced_programming\Functional programming\First_class_functions.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Functional programming\functions.py" />
-    <Compile Include="sources\Functional programming\mapping.py" />
-    <Compile Include="sources\ODES\Temporal_error.py">
+    <Compile Include="sources\Advanced_programming\Functional programming\Fourier.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\Temporal_schemes.py">
+    <Compile Include="sources\Advanced_programming\Functional programming\functions.py" />
+    <Compile Include="sources\Advanced_programming\Functional programming\mapping.py" />
+    <Compile Include="sources\Advanced_programming\ODES\Temporal_error.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\Orbits.py" />
+    <Compile Include="sources\Advanced_programming\ODES\Temporal_schemes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Advanced_programming\ODES\Orbits.py" />
+    <Compile Include="sources\Foundations\Calculus\Calculus.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Foundations\Calculus\Examples\Integrals_derivatives.py" />
+    <Compile Include="sources\Foundations\Calculus\Examples\Series_expansion.py" />
+    <Compile Include="sources\Foundations\Calculus\Examples\Sum_series.py" />
+    <Compile Include="sources\Foundations\Calculus\Series.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Foundations\Calculus\Taylor_expansions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Foundations\Foundations.py" />
+    <Compile Include="sources\Foundations\Hello_world.py" />
+    <Compile Include="sources\Foundations\Read_files\Read_files.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="sources\main.py" />
-    <Compile Include="sources\Functional programming\map_filter_reduce.py">
+    <Compile Include="sources\Advanced_programming\Functional programming\map_filter_reduce.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\n_body_problem.py">
+    <Compile Include="sources\Advanced_programming\ODES\n_body_problem.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\polymorphism\polymorphic_odes.py">
+    <Compile Include="sources\Advanced_programming\polymorphism\polymorphic_odes.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\polymorphism\polymorphism.py" />
-    <Compile Include="sources\Roots\roots.py" />
-    <Compile Include="sources\scope\modA.py">
+    <Compile Include="sources\Advanced_programming\polymorphism\polymorphism.py" />
+    <Compile Include="sources\Foundations\Roots\roots.py" />
+    <Compile Include="sources\Advanced_programming\scope\modA.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\scope\modB.py">
+    <Compile Include="sources\Advanced_programming\scope\modB.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\scope\scope_example.py">
+    <Compile Include="sources\Advanced_programming\scope\scope_example.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\main_ODES.py" />
-    <Compile Include="sources\iterators\iterators.py" />
-    <Compile Include="sources\1.TO_DO\rests.py">
+    <Compile Include="sources\Advanced_programming\ODES\main_ODES.py" />
+    <Compile Include="sources\Foundations\iterators\iterators.py" />
+    <Compile Include="sources\Advanced_programming\1.TO_DO\rests.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\1.TO_DO\OOP_N_body.py">
+    <Compile Include="sources\Advanced_programming\1.TO_DO\OOP_N_body.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\pointers\pointers.py">
+    <Compile Include="sources\Advanced_programming\pointers\pointers.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\Stability_regions.py">
+    <Compile Include="sources\Advanced_programming\ODES\Stability_regions.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\ODES\Stability.py">
+    <Compile Include="sources\Advanced_programming\ODES\Stability.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\1.TO_DO\Monads.py" />
-    <Compile Include="sources\1.TO_DO\test_hypothesis.py" />
-    <Compile Include="sources\Fortran_to_Python\f2py_example.py">
+    <Compile Include="sources\Advanced_programming\1.TO_DO\Monads.py" />
+    <Compile Include="sources\Advanced_programming\1.TO_DO\test_hypothesis.py" />
+    <Compile Include="sources\Advanced_programming\Fortran_to_Python\f2py_example.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="sources\Fortran_to_Python\fortran.f90" />
+    <Content Include="sources\Advanced_programming\Fortran_to_Python\fortran.f90" />
+    <Content Include="sources\Foundations\Read_files\data.csv" />
+    <Content Include="sources\Foundations\Read_files\data2.csv" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|Python39" />

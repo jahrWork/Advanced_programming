@@ -2,7 +2,7 @@
 \newpage   
 \chapter{Read an external file} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/read files} 
+
 
 Reading and writing data from/to external files is usually an essential part of every software project. Maybe you want to process data returned by a different software, share information between two programs written in different languages, process the results from your program in an specialised plotting software or just reading the inputs of your program through a data sheet. 
 
@@ -10,8 +10,9 @@ The aim of this chapter is to propose an orderly way to encapsulate and use a ma
 
 The following subroutine loads two matrices by declaring the relative path of the \texttt{.csv} file where information is stored and then writes them in the screen by rows. Notice that the dynamic object \texttt{A} in the subroutine does not need to be allocated since the compiler automatically takes care of that when the output of the reading function is available. Also, notice that the matrix is written using an explicit loop for rows and an implicit loop for columns. This technique is preferred since Fortran writes by default the data by columns. 
 
-
+\newpage 
 \vspace{0.5cm} 
+\renewcommand{\home}{./Fortran/sources/Foundations/read files} 
 \listings{\home/read_files.f90}{subroutine Test_load_matrix}
 {end subroutine}{read_files.f90}
 
@@ -23,14 +24,36 @@ In summary, this function opens the requested file (input argument), reads the f
 
 Encapsulating some tools like this one allows the programmer to save time and reduce possible sources of error in future projects but does not eliminate the need to know the peculiarities of reading/writing data in files or screen, as is the case with any programming language. For the needs of each project some adjustments could be done.
 
+\newpage
 \vspace{0.5cm} 
+\renewcommand{\home}{./Fortran/sources/Foundations/read files}
 \listings{\home/read_files.f90}{function load_matrix}
 {end function}{read_files.f90}
 
+\renewcommand{\home}{./Fortran/sources/Foundations/read files}
 \listings{\home/read_files.f90}{function columns}
 {end function}{read_files.f90}
 
   
+  
+  
+  
+\newpage 
+\subsection*{Python code} 
+The following examples reproduce the same behaviour with Python, notice that many functions are already implemented in different packages of Python. 
+In this case the function \texttt{load\_matrix()} encapsulates the load of the specific file through \texttt{read\_csv()} (included in Pandas package), prints the header and returns the needed values. As mentioned before, encapsulating tools like this one allows you to save time and reduce possible sources of error in future projects by creating an standard for all your programs. 
+
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations/Read_files}
+\lstpython 
+   \listings{\home/Read_files.py}{def Test_load_matrix}
+    {end}{Read_files.py}
+  
+ \renewcommand{\home}{./Python/sources/Foundations/Read_files} 
+    \listings{\home/Read_files.py}{def load_matrix}
+     {return}{Read_files.py} 
+  \lstfor
   
   
   

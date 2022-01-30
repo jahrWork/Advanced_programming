@@ -1,5 +1,4 @@
  module Foundations 
-  
     
   use Roots, only : Roots_2th  
   use Sum_series, only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
@@ -10,8 +9,6 @@
   use Read_files, only : Test_load_matrix
  
   implicit none 
-    
-  
   
 contains 
     

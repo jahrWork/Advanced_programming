@@ -20,7 +20,7 @@ def Integrate_NBP():
 
        return F_NBody_problem( U, Nb, Nc )
 
-   N =  100000    # time steps 
+   N =  1000    # time steps 
    Nb = 4      # bodies 
    Nc = 3      # coordinates 
    Nt = (N+1) * 2 * Nc * Nb

@@ -99,13 +99,14 @@
 		<File RelativePath=".\sources\Foundations\Calculus\Taylor_expansions.f90"/></Filter>
 		<Filter Name="graphs">
 		<File RelativePath=".\sources\Foundations\graphs\plotting.f90"/></Filter>
+		<Filter Name="Roots">
+		<File RelativePath=".\sources\Foundations\Roots\Roots.f90"/></Filter>
 		<Filter Name="Read files">
 		<File RelativePath=".\sources\Foundations\Read files\data.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\data2.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\Read_files.f90"/></Filter>
 		<File RelativePath=".\sources\Foundations\Foundations.f90"/>
-		<File RelativePath=".\sources\Foundations\Hello_world.f90"/>
-		<File RelativePath=".\sources\Foundations\Roots.f90"/></Filter>
+		<File RelativePath=".\sources\Foundations\Hello_world.f90"/></Filter>
 		<Filter Name="IEEE">
 		<File RelativePath=".\sources\IEEE\Huge_factorial.f90"/>
 		<File RelativePath=".\sources\IEEE\IEEE_operations.f90"/>

@@ -89,38 +89,3 @@ end function
 end module   
     
     
-    
-    
-    
-    
-    
-    
-    !!*****************************************************************************
-!! It plots  piecewise functions 
-!!*****************************************************************************   
-!subroutine Function_examples 
-!
-!  real, allocatable :: x(:)  ! domain point 
-!  real, allocatable :: y(:)  ! image point 
-!  integer :: i               ! index of domain point 
-!  integer :: N               ! number of points 
-!  real :: a=-5, b=5          ! domain interval  x in [a, b]  
-!  real ::  dx                ! step between domain points 
-!    
-!  N = 10 
-!  dx = (b-a)/N 
-!  
-!  ! automatic allocation 
-!  x = [ (a + i * dx , i=0, N) ] 
-!  
-!  ! vectorial operation (note: elemental real function f(x)) 
-!  y = f(x)
-!  
-!  write(*,'(2(a,f5.1))') " a =", a, " b= ", b 
-!  write(*,*) "      Definition of a piecewise function f(x)      "
-!  write(*,*) " Hit enter key to plot the piecewise function " 
-!  read(*,*) 
-!  call scrmod("reverse")
-!  call qplot(x, y, N+1) 
-!
-!end subroutine 

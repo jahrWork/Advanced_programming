@@ -4,14 +4,9 @@ Program main
     use Foundations, only                     : menu_foundations  
     use integers_and_reals, only              : menu_Integers_and_reals
     use advanced_programming_techniques, only : menu_advanced_programming_techniques
-    
-     use N_body_problem, only        : Integrate_NBP
        
     implicit none 
     integer :: option 
-      
-   !call Integrate_NBP
-   !stop 
     
 option = 1     
 do while (option>0) 
@@ -43,6 +38,4 @@ do while (option>0)
      end select 
      
 end do
-    
-    
 end program 

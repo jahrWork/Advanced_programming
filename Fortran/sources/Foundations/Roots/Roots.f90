@@ -22,7 +22,7 @@ contains
              write(*,*) "There is only one solution x1 =", -c/b  
          end if 
     else
-            d =  b**4 - 4*a*c  
+            d =  b**2 - 4*a*c  
             x1 = ( -b + sqrt(d) )/( 2*a ) 
             x2 = ( -b - sqrt(d) )/( 2*a )
             

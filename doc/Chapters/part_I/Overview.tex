@@ -1,4 +1,4 @@
-\chapter{Python and Fortran foundations through examples} 
+\chapter{Python and Fortran foundations} 
  
 As a first approach to the use of Fortran to learn applied mathematics 
 a chapter including basic operations will be presented. 
@@ -24,3 +24,861 @@ different options you can execute all the examples presented.
    
  
  
+ 
+ 
+ \section{Programming through documentaries and movies} 
+ 
+     
+       
+ % \section{Introduction}
+  To understand different characteristic of modern programming languages
+  is helpful to revise the history of informatics. In this chapter, 
+  some documentaries are revised and commented to wet the appetite of the 
+  reader in deep concepts such as functional programming. 
+  This chapter should not be considered  a comprehensive selection of movies 
+  or documentaries about the history of informatics. 
+  It covers some interesting movies or documentaries, 
+  from the point of view of the authors, to explain some aspects 
+  of the software world that are relevant for a software 
+  developer.  
+  
+ From the pioneering days to our days, languages and programs have evolved 
+ a lot trying to make the coding process more efficient in terms of developing time 
+ having codes more robust. Mathematics have been an important pillar to underpin
+ the evolution of programming  languages. 
+ At the beginning, programs were built with a reduced set of machine instructions 
+ to achieve the desired result. These programs were far from the human natural language.
+ Since math allow to model or to express by its formalism some part of the reality, first 
+ languages tried to translate mathematical formulas to machine code. This was the purpose 
+ of John Backus and his team at IBM in 1954 when they developed 
+ the Fortran (Formula-translation) language. 
+ Fortran was the first high-level programming language to implement mathematical equations. 
+ Before those years, Allan Turing in 1936 invented the computer as a mathematical  abstraction 
+ imagining a machine with an infinitely long tape feeding instructions to manipulate symbols. 
+ This was called the universal Turing machine 
+ which is a mathematical model of the modern computers we all use in our days. 
+ Later, Turing and his team at Bletchley built an analogical machine 
+ to crack the ‘Enigma’ code. 
+  
+  
+ 
+ Our journey begins when Allan Turing deciphering enigma and first NASA calculating 
+ John Glenn first orbital flights around the Earth with a Fortran program running on IBM computer. 
+ The following list treats to give a basic historic perspective
+ of the most relevant events before those Allan Turing contributions. 
+ 
+ \begin{itemize} 
+ \setlength\itemsep{0cm}
+ \item[1812] Charles Babbage invented the first mechanical computer: the Difference Engine.
+ Babbage died before the complete successful engineering of his inventions. 
+ \item[1872]  Ada Lovelace. Daughter of the poet Lord Byron. Lovelace invented the first language with perforated cards. 
+ \item[1889]   Herman Hollerith invented an electromechanical tabulating machine for punched cards 
+ to assist automation census. Hollerith founded a company with several other companies to form the 
+ Computing-Tabulating-Recording Company. In 1924, the company was renamed 
+ "International Business Machines" (IBM). 
+ \item[1904] John Ambrose Fleming invented the first thermionic  vacuum valve which was the origin
+ of digital computers.  
+ \item[1936] Alan Turing developed the  Universal Turing machine. 
+ \item[1939] Alan Turing deciphered enigma. 
+ \item[1945]
+ ENIAC (Electronic Numerical Integrator and Computer) was the first programmable digital computer. 
+ It was designed for ballistic calculations but its first program was a feasibility study 
+ of a thermonuclear weapon.
+ ENIAC was 30 feet by 60 feet, weighing 30 tons and using 19000 vacuum tubes.
+ 
+ \item[1945]  John von Neumann described the von Neumann architecture of computers based on: 
+ CPU (Control Processing Unit), Memory and Input/Output devices. 
+ This architecture is still present in our days.
+   
+ 
+ 
+ \item[1947]  Kathleen Hylda Valerie Booth wrote the first assembly language.
+ %She helped design three different machines including the ARC (Automatic Relay Calculator), 
+ %SEC (Simple Electronic Computer), and APE(X)C.
+ %Transistor. First assembly language with von Neumann. 
+ 
+ \item [1947] 
+ The  transistor was invented by American physicists John Bardeen and Walter  Brattain 
+ while working under William Shockley at Bell Labs. 
+ The three shared the 1956 Nobel Prize in Physics for their achievement. All modern computers
+ are based on billions of transistors. 
+   
+ 
+ \item[1954]  John Backus father of Fortran language at IBM and NASA 
+ with its first orbital calculations.
+ \item[1977]  John Backus won the Alan Turing award. 
+  His lecture was: "Can machines be liberated from the von Neumann style ?" 
+  \end{itemize}      
+  
+  
+  \newpage 
+ \section*{Algorithms and machines: "The imitation game"} 
+ In 1952, Alan Turing was arrested for homosexuality. 
+ Homosexuality was punished at that time in England. 
+ In 1936, Turing had invented a hypothetical computing device that came to be known 
+ as the ‘universal Turing machine’. 
+ Whilst working for the National Physical Laboratory (NPL), 
+ Turing published a design for the ACE (Automatic Computing Engine), which was 
+ arguably the forerunner to the modern computer. 
+ The ACE project was not taken forward, however, and he later left the NPL. 
+ In 1942,  Turing developed the Bombe machine to decipher messages encrypted by the German Enigma 
+ machine during the Second World War. 
+ 
+   
+   
+ \section*{First numerical computing: "Hidden figures"}
+ Hidden Figures is a 2016 American biographical  film 
+ about African American female mathematicians and engineers 
+ who worked at the National Aeronautics and Space Administration (NASA) 
+ during the Space Race.
+ Katherine Johnson works at the Langley Research Center in Hampton, Virginia in 1961, 
+ alongside her colleagues Mary Jackson and Dorothy Vaughan. 
+ NASA installed an IBM 7090 electronic computer to expedite calculations and to replace human computers. 
+ Dorothy takes a book about Fortran and teaches herself and her co-workers programming. 
+ %On the day of the John Glenn's launch, discrepancies are found in the IBM 7090 calculations, 
+ %and Katherine is asked to check the capsule's landing coordinates.   
+ This movie shows how computers and Fortran programs were demanded by NASA
+ to expedite calculations and how Dorothy and her team had to acquire programming skills 
+ at a time where even IBM engineers were disoriented with a new technology. 
+ 
+  
+   
+  
+ \section*{First personal computers: "Triumph of nerds"}
+ Triumph of the Nerds is a 1996 British/American television documentary
+ It explores the development of the personal computer in the United States from World War II to 1995. 
+ Triumph of the Nerds was written and hosted by Robert X. Cringely (Mark Stephens) 
+ and based on his 1992 book Accidental Empires. 
+ The documentary comprises interviews with important figures connected with the personal computer, 
+ including Steve Jobs, Steve Wozniak, Bill Gates, Steve Ballmer, Paul Allen, Bill Atkinson, 
+ Andy Hertzfeld, Ed Roberts, and Larry Ellison. 
+ 
+ %Cringely followed the series with Nerds 2.0.1 (titled Glory of the Geeks in the UK), 
+ %a history of the Internet to 1998. 
+ %In 2012, 
+ %Cringely released the full interview that Steve Jobs gave in 1995 for Triumph of the Nerds as Steve
+ 
+ \subsection*{Part I}
+ This documentary is divided in three parts and describes the birth of personal computers at a time where 
+ mainframes were the only computers. Nerds began to play with electronic devices  
+ creating a growing interest in personal computers. Cobol, Fortran and Basic were the 
+ first languages. Nerds thought it was a bible for them. 
+ For a 10 years old, it was an incredible thrilling experience.
+  
+ In 1971, Intel invented the Microprocessor but they didn't realize the potential of the personal computers.    
+ In 1975, Ed Roberts in Albuquerque invented the first personal computer without monitor or keyboard.
+ It was named ALTAIR and based on a Intel 8080 Microprocessor.
+ It was created to play and people began to think what to do with that useless computer.   
+ Paul Allan began with the Altair and with a tape of paper programming in Basic. 
+ They attached a keyboard and a monitor and at the end of 1975 it was a  groovy revolution. 
+   
+ The first Apple computer was created to impress the club. 
+ Two years past from 1975 to build Apple 2. Wozniak was the Mozart of the digital computer. 
+ He succeeded with 21 years old. 
+ One of the first useful programs was VisiCalc, the first spreadsheet to evaluate 
+ profits and expenses instead of running numbers by hand. 
+ Dan Bricklin was the programmer but he didn't make money. 
+ He wanted to make a better world. 
+   
+  
+   
+ \subsection*{Part II}
+ In 1980 Apple II was a success and  IBM appeared into the scene. 
+ At that time IBM was involved with mainframes. 
+ IBM was  a entire  conservative culture social culture:  a strict dress code, 
+ singing songs of IBM's culture,
+ working from 9 to 5 and  washing the car on Saturday. 
+ While being IBMers, they noticed the explosion of Apple II. 
+ Besides, IBM realized that  a personal computer  needed software: a computer language and an  
+ operating system.  At that time, Gary kildall created the first OS: CPM.
+ %Bill gates has the basic language. CPM . First OS. He was not a 
+ %fighter. Bill gates was very competitive.
+ Gary didn't receive IBM and Bill Gates saw the opportunity. 
+ They replicated CPM in four months: they call it PC DOS 1.0. 
+ Bill Gates  bought the OS replicate by Tim Patterson. 50 thousand dollars was the price. 
+ Then, Bill and Paul become multi  billionaire.  
+ In 1981, IBM entered in the market with Lotus 1/2/3.
+ It was the Killer application. The market was euphoric. 
+ People wanted to copy the IBM by  reverse engineering. 
+   
+ Engineers from Texas Computer founded Compaq Computer. 
+ Micro was available from Intel but the ROM bios was patented.
+ After being advice by engineering lawyers, Compaq looked for virgin senior engineers 
+ (those who never saw the IBM PC).  After the virgins test, 15 senior engineers were hired. 
+ It took one year to accomplish that PC and one million dollars. 
+ Terror was in IBM because prices went down due to competence.   
+ IBM with a new operating system: OS/2 tried to steal the business to Microsoft. 
+ It was a culture clash between IBM and Microsoft. 
+ In 1990,  Microsoft with Windows broke 
+ relations with IBM but the Windows idea came from Apple.   
+ %It was one of the biggest business errors of IBM. 
+ %IBM gave  1/3 of the cake to Intel and 1/3 to Microsoft.
+   
+  
+ \subsection*{Part III} 
+ A revolution to make the personal computer friendlier.  
+ In 1995,  Microsoft Windows announced its OS. 
+ Those ideas were invented 20 years ago. 
+ It all began in 1971 in  Xerox at Palo Alto. 
+ They created the first GUI (Graphical User Interface).
+ Engineers had a lot of freedom in Xerox developing  their dreams. The mouse was 
+ created there but there were a terrible mismatch between researchers and managers. 
+ 
+ At that tiem, Steve Jobs wanted to change the world not to earn money.
+ In 1979, Steve  visited to Xerox's researchers. 
+ Steve Jobs had the vision . Xerox showed Steve three things: 1) a network like internet, 
+ 2) a GUI and  3) object oriented programming. He 
+ was blinded by 2). It was a turning point. 
+ After an hour Steve understood what was going on. 
+ Apple developed Lisa with one hundred engineers. 
+   
+ In 1981, Apple was in trouble because IBM was selling software that didn't run on MAC. 
+ IBM had software. In 1983 they announced a game to 
+ create software for MAC. Bill Gates was there. 
+ Steve didn't realize that Bill was going to be his rival instead of IBM. 
+ Macintosh was the first 
+ affordable PC with a GUI but with  very bad sales. 
+ It was 1000 dollars more expensive them IBM.  
+ %Commercial against IBM tirany.   
+ Steve Jobs made agreement with Bill gates to create software. 
+ He thought that the Big Blue was the enemy. 
+   
+   
+ %What you see is what you get. 
+ %Wysiwyg. 
+ Apple needed a killer application. 
+ The problem was the dot printer. Agreement with Adobe people to create laser images printings. 
+ Adobe also developed in Xerox 
+ Apple bought those software.
+ They developed a killing application. 
+ Steve terrified everyone. 
+ So one steve left apple was twofold. 
+   
+ Scotty talked with Apple board and decided to follow Scotty plans. 
+ Steve said that he hired the wrong guy: Scotty Pepsi cola.  Steve left the company.   
+ In 1984, Microsoft launched Windows to challenge Macintosh.    
+ Apple sewed Microsoft. A long a legal battle of six years and  Apple lost. 
+ Steve said that Microsoft didn't have taste 
+ in the sense that they don't think original ideas. 
+   
+ %Society needs 30 years to arrange Advances in technologies. 
+   
+   
+   
+    
+ \section*{Home computers in Europe: "Clive Sinclair"} 
+ While USA was euphoric with personal computers in Europe another visionary: 
+ Clive Sinclair (Micro men) revolved the market.    
+ Clive existed to push barriers and an inventor was obliged to dream. 
+ He created Sinclair company close to Cambridge university. 
+ Clive wanted to develop his electric car and his television but his colleague 
+ Christopher Curry wanted to create a home computer.   
+ %Margaret Thatcher ( Zacher) was elected.    
+ Clive and Curry broke relations and in 1978 Curry Christopher created
+ a company with Hermann Hauser an Austrian entrepreneur  who obtained his Ph D in Cavendish
+ lab. They meet the Cambridge processor group joining those guys who did everything for fun. 
+    
+ %Radionics 1978. 
+    
+ Clive saw the announcement of 2000 pounds of Apple II and thought why it was so expensive. 
+ He visioned a personal computer in every home in Britain for 99 ponds.
+ In 1980, Sinclair Research launched the first Sinclair ZX80 for 99 pounds.  
+  
+    
+ Acorn Computes, the company founded by Christopher Curry launched a personal computer 
+ with memory and more power.   
+ BBC announced a computer home initiative to put a computer in every school of the country.    
+ Chris and Clive began to fight to win a  BBC computer conquest. 
+ %Thy met in a bar to discuss B
+ %oin forces   
+ %Nerds eating with the tester wires.
+ %They have a computer series. 
+ BBC was expecting something different. Chris said that he would do something in four days. 
+ He asked his team to do it and they did it:  Acorn computer prototype. 
+ Acorn won the conquest and launched then BBC computer. 
+ 
+ In 1982, Sinclair Research launched the 125 pounds ZX Spectrum. 
+ It was a revolution not only with nerds in Britain but also Europe with Zilog Z80 microprocessor that was a 
+ software-compatible extension and enhancement of the Intel 8080. 
+ Quantum Leap was another powerful computer launched by Sinclair Research  in 
+ 1984 available for 399 pounds but it was not like the ZX Spectrum. 
+ Clive was concerned with his electric car and the computer boom became to an end. 
+ Clive Sinclair sold more than 12000 electric mobile cars C5.  
+ Sinclair company was sold to Amstrad computers. 
+ 
+ %What else can I do ? 
+ %BBC micro from acorn did not have so many games. 
+ %. Ready to ship in 20 days.
+ %   BBC basic language. It was success.
+ %Sinclair clash with Chris in a pub. 
+    
+    
+ Acorn was considered the British Apple.    
+ Acorn designed to ARM microchip. The most famous microchip.
+ The ARM chip designed by Acorn team has gone on to be the most popular michochip in history.  
+ As of 2018, over 100.000 million copies of the ARM processor have been manufactured, powering much of the world's mobile computing and 
+ embedded systems. Population of the world in 2018: 7600 million persons. 
+ Acorn sold 1.5 million BBC micros 
+ 250000 unsold computer electrons.     
+ The company was bought by Olivetti in 1985. 
+      
+    
+ The home computer market was dominated by giant American companies. 
+       
+  
+ 
+    
+   
+    
+ \section*{The birth of internet: "Lo and Behold"} 
+ Lo and Behold, Reveries of the Connected World is a 2016 American documentary film 
+ directed by Werner Herzog. It comprimes 10 chapters from the birth of Internet to possible future 
+ scenarios. 
+ 
+ In 1969, Internet was born at UCLA.   
+ It was the first node for decades. 
+ Stanford did the first communication. 
+ Stanford and UCLA were connected by internet and by by a telephone at the same time.  
+ They intended to transmit the word 'LOGIN' letter by letter,  
+ but the system crashed with the letter 'G'. 
+ Hence, the first message on the Internet was 'LO' as in 'Lo and Behold'.    
+ %    Arpanet. 197--. Protocol and technology.    
+ The film explores the beneficial of  Internet through the following chapters: 
+ \begin{itemize} 
+ \setlength\itemsep{0cm}
+ \item I. The Early Days
+ \item II.  The Glory of the Net
+ \item III. The Dark Side
+ \item IV. Life Without the Net
+ \item I. The End of the Net
+ \item VI.  Earthly Invaders
+ \item VII.  Internet on Mars
+ \item VIII.  Artificial Intelligence
+ \item IX. The Internet of Me
+ \item X. The Future
+ \end{itemize} 
+ 
+ 
+   
+   
+    
+     
+    
+    
+   
+ \section*{Free software: "The Revolution OS. The code"}
+ Revolution OS is a 2001 documentary film that introduces the concept of GNU, 
+ open source and the free software movement. It also describes the birth of Linux movement
+ with  interviews to  Richard Stallman, Linus Torvalds, 
+ Eric S. Raymond and Bruce Perens.
+ They are perhaps the most relevant persons who created a software revolution that it is still live.  
+ Richard Stallman defined the free software as new human right to male people free. 
+ Bruce Perens worked on the open source definition and allow others to think in a collaborative way when 
+ developing software. Linus Torvald,  leading the Linux movement, was perhaps one of the first example of this idea. 
+ To analyze and to understand that software movement, Eric Steven Raymond wrote: "The Cathedral and the Bazar: 
+ musing on Linux and open source by accidental revolutionary". 
+ In this book Raymond discussed  how is possible to develop software by breaking all strict software rules of engineers.  
+ 
+ Since there are slight differences between open source and free software when working on a collaborative
+ software project,  let's say the objectives are absolutely different.  Whereas the main objective of the open source 
+ movement is to optimize the developing software process by collaborating, the main objective of 
+ the free software movement is to make people free with allowing them to choose or to develop free or non-proprietary
+ tools for their everyday life.  Free software demands freedom. Open source demands quality. 
+ In 1983, R Stallman created the GNU operating system. 
+ GNU is like Unix. But unlike Unix, GNU gives its users freedom to develop or modify 
+ under the  General Public License (GNU GPL).
+ At that time, people working on the university, wanted to have a Unix SUN SPARC station at home. That's why Linux was so important. 
+ R. Stallman  began to write GNU Unix by developing compilers, editors and some other tools. But one piece was missing: the kernel which is 
+ the portion of the operating system that facilitates interactions between hardware and software components.  In 1991, Linus Torvald created 
+ the free kernel. 
+ An IBM PC with Linux cost 2000 dollars  in comparison  7000 dollars a of a SUN SPARC. 
+ R. Stallman proposed to name the new operating system:  GNU/Linux  but Linux was finally its name.  
+ Linus Torvalds said that R. Stallman was the great philosopher and he was the engineer. 
+ 
+ At that time,  Bill Gates defended private software and quality of Linux operating system 
+ was by far superior to Windows Microsoft OS. Hence, Linux gained dominance over Microsoft in professional 
+ applications.  
+ 
+ 
+ 
+ %Linux had a track similar to internet. In 1993 internet became a common commodity.
+ 
+ 
+ %People uses programs instead of OS. 
+ 
+ %Richard Stallman 
+ %1971 in MIT. Founded 
+ %They didn't like passwords. 
+ %The security was a joke. 
+ %Homebrew computer club. 
+ %. 
+ %
+ %With free software you have freedom 
+ %
+ %Free has two meanings in English. One 
+ %Related to money and other related to freedom. 
+ 
+ 
+ %The first company around gnu software wax to sell services around gnu software. In a propietary software, support is a monopoly. Microsoft. 
+ %
+ %
+ %Stallman gives in his manifesto the keys to make money. 
+ %
+ %1) support by everyone. Deliver support. 
+ %cysgnus was the first company. 
+ %
+ %1991-1993 infancy of Linux. 
+ %
+ %Stallman tried to divide the kernel. Very difficult to debug but very powerful. 
+ %
+ %Linus tried a monolithic kernel. 
+ %
+ 
+ 
+ %The cathedral of the bazaar.
+ %
+ %
+ %They changed free software by open software .
+ %Stallman is free software and others open software. Free to redistribution. 
+ %
+ %Linux open software.
+ %
+ %VA Linux company 
+ %
+ %IPO 
+ %
+ % 
+ %Apache project. HTTP project. Web server. 
+ %
+ %Red hat sotware was one the most important companies to support Linux. 
+ %
+ %
+ %Apache web server was the Killer application of Linux. It motivates companies to internet. 
+ %
+ %Apache software foundations. 
+ %
+ %Raymond thought that 
+ %
+ %
+ %Sharing is the basic of society. 
+ %
+ %Open software is not comunishm because it does not force people to share. 
+ %
+ %The revolution goes prime time. 
+ %
+ %Red hat Linux company became public. 
+ %
+ %
+ %GPL Genral public license. 
+ %
+ %
+ %The mind behind Linux 
+ 
+ %Linux code. 
+ %
+ %
+ %1998 Netscape was one the first companies.
+ %Influenedt by the cathedral and the bazaar. 
+ %Source code was its product. Mozilla product. 
+ %
+ %They change to open source 
+ %1) free redistribution 
+ %2) 
+ %3) 
+ %4) integrity of author code 
+ %5) no discrimination  
+ %
+ %
+ %Red hat goes to market. 1999
+ %
+ %The code: the story of Linux. You tube . Boring  socialism in action. 
+ %
+ %Open source project is compared to science or knowledge. 
+ %
+ %
+ %Social machine around open source code 
+ %
+ %Revolution OS . You tube. Free software gnu,Linux . Better than the code but boring. 
+ %
+ %1991 first Linux 10000 lines of code. 
+ %
+ %1992. 40000 lines of code and 1000 users. 
+ %
+ %1993. 100000 lines of code and 20000 users. 
+ %
+ %1995. 250000 lines of code and 500000 users.
+ %
+ %1997. 800000 lines of code and 3.5 million users.  
+ %
+ %1998. 1.5 million lines of code and 7.5 million users. 
+ %
+ %1999. 12 million users. 
+ %
+ %
+ %
+ %Gnu : main component c compiler. 
+ %
+ %Richard stallman. Founder of gnu. 
+ %
+ %Apache web server. 1993. Mass market. 
+ %Application built with Linux. 
+ %
+ %
+ %The cathedral and the bazzar. Book. Eric Raymond. 
+ %
+ %
+ %
+ %1998 Netscape. Rel ase source code. Mozzila. Browser. 
+ %
+ %1999. 
+ %
+ %Influential 
+ %
+ %
+ %VA Linux 
+ %
+ %Free software. Gnu. Collaboration. 
+ %
+ %Open source. VA Linux. 
+ %Definition: free redistribution, source code available, derived works permitted, integrity of the author of code. No discrimination against 
+ %
+ %Cygnus . Free sotware model.  First company. 
+ %
+ %Oracle. 
+ %
+ %1998. Venture capilist. Enter in open source. 
+ %
+ %When Stallman recieves the prize in that congress. Torvald ignores him. 
+ %
+ %VA Linux company multiplied its share values by 10 In one day. 
+ %
+ %
+ %
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ %
+ %
+ %
+ %
+ %
+ %The film begins with glimpses of Raymond, a Linux IPO, Torvalds, the idea of Open Source, 
+ %Perens, Stallman, then sets the historical stage in the early days of 
+ %hackers and computer hobbyists when code was shared freely. 
+ %It discusses how change came in 1978 as Microsoft co-founder Bill Gates, 
+ %in his Open Letter to Hobbyists, pointedly prodded hobbyists to pay up. 
+ %Stallman relates his struggles with proprietary software vendors at the 
+ %MIT Artificial Intelligence Lab, leading to his departure to focus on the 
+ %development of free software, and the GNU Project.
+ %
+ %Torvalds describes the development of the Linux kernel, 
+ %the GNU/Linux naming controversy, Linux's further evolution, and its commercialization.
+ %
+ %Raymond and Stallman clarify the philosophy of free software versus communism and capitalism, as well as the development stages of Linux.
+ %
+ %Michael Tiemann discusses meeting Stallman in 1987, getting an early version of Stallman's GCC, and founding Cygnus Solutions.
+ %
+ %Larry Augustin describes combining GNU software with a normal PC to create a Unix-like workstation at one third the price and twice the 
+ %power 
+ %of a Sun workstation. He relates his early dealings with venture capitalists, the eventual capitalization and commodification of Linux for 
+ %his own company, VA Linux, and its IPO.
+ %
+ %Brian Behlendorf, one of the original developers of the Apache HTTP Server, explains that he started to exchange patches for the NCSA web 
+ %server daemon with other developers, which led to the release of "a patchy" webserver, dubbed Apache.
+ %
+ %Frank Hecker of Netscape discusses the events leading up to Netscape's executives releasing the source code for Netscape's browser, one of 
+ %the signal events which made open source a force to be reckoned with by business executives, the mainstream media, and the public at 
+ %large.[1] This point was validated further after the film's release as the Netscape source code eventually became the Firefox web browser, 
+ %reclaiming a large percentage of market share from Microsoft's Internet Explorer.
+ %
+ %The film also documents the scope of the first full-scale LinuxWorld Summit conference, with appearances by Linus Torvalds and Larry 
+ %Augustin 
+ %on the keynote stage.
+ %
+ %Much of the footage for the film was shot in Silicon Valley.
+ 
+ 
+ 
+ 
+  
+  
+     
+ \section*{Artificial intelligence: "The thirteenth floor"} 
+ The Thirteenth Floor is a 1999 science fiction film written and directed by Josef Rusnak. 
+ In this film, very real human simulations are done with a supercomputer. 
+ In 2000, The Thirteenth Floor was nominated for the Saturn Award for Best Science Fiction Film, but lost to The Matrix.
+ 
+ This film is chosen because of the close relation with  "simulated reality" theory by Nick Bostrom.
+ In 2003, Nick Bostrom published his paper: "Are you living in a computer simulation ?".
+ In 2014, Nick Bostrom in his book : "Superintelligence: Paths, Dangers, Strategies" 
+ defines thoroughly superintelligence and the post human stage in which a supercomputers exceed the human intelligence and reality could be 
+ conceived as a simulation. He also analyzes dangers of this scenario and 
+ how society sholud be prepared to receive theses advances. 
+ 
+ 
+ 
+   
+ %\section*{Math and computers: "The colors of infinity"} 
+    
+  
+   
+ \section*{Data privacy: "The great hack"}
+ The Great Hack is a 2019 documentary film about the Facebook–Cambridge Analytica data scandal.
+ Cambridge Analytica was dedicated to collect big data to reinforce a  sales strategy creating massive campaigns that approached users in a 
+ personal manner.
+ The documentary focuses on Professor David Carroll, Brittany Kaiser (former business development director for Cambridge Analytica), and 
+ British investigative journalist Carole Cadwalladr. Their stories expose the work of Cambridge Analytica in the politics of various 
+ countries, including the United Kingdom's Brexit campaign and the 2016 United States elections.   
+ Project Alamo was a database of voter information created for Donald Trump's 2016 presidential campaign
+ that spent one million dollars per day in Facebook ads. 
+ Cambridge Analytica collected 5000 data points of every person to model personality.   
+  
+ Roger McNamee is an American businessman, investor, venture capitalist and musician.
+ He was one of the first Facebook investors. In this documentary he says that 
+ Facebook was created to connect people but after the Cambridge Analytica data scandal, he felt guilty and 
+ he was not able to sleep at night. 
+ One of the main problems of data privacy is that we are in love with free service in which   we accept 
+ that our private data associated to way of life or customs can be used for financial or politic purposes. 
+ %We are more the commodity. But we . 
+ %
+ %2016 elections. It was a change. 
+ 
+ 
+ %Donald Trump campaign spent 5.9 million versus 66000 dollars Hillary in Facebook ads.   
+   
+ 
+ Carole Cadwalladr relates very emotively, in her TED talk, that they are driving us apart
+ and trying to explain how our private data  is affecting our life by means of these social media platforms. 
+ %Is this what you want. 
+ %You have to understand how you data. 
+ She finishes saying that our dignity is at stake. 
+ David Carroll continues to teach and advocate for data rights to be recognized as the new human rights. 
+ 
+   
+   
+   
+ %  Cambridge Analytica. The brain. In UK 
+ %  Alexander Nix was its ceo. 
+   
+ %  An environment of great innovation. 
+ %  Expert data science. 
+   
+ %  It was tied to the brexit champein. 
+ %  They tried to break the world to rebuild new pieces. 
+ %  Ruining our democracy. 
+   
+ %  Brittany Kaiser. Top executive. 
+   
+ %  SCL. 
+   
+ %  Defeat crooked Hillary : dishonest, illegal. Cambridge analytica created that slogan. 
+   
+   
+ %  The guardian and the observer. 
+   
+ %  It's about our democracy. 
+   
+ %  Brittany says thay obama did not pay her to his champein and she needed money. 
+   
+   
+   
+   
+ %   Mi
+   
+   
+   
+  
+        
+ \section*{Social networks: "The social dilemma"}
+ The Social Dilemma is a 2020 American documentary film about 
+ addiction to social media and how people emotions are manipulated  
+ and how disinformation is spread.
+ They are very concerned. 
+ When you look around you is like the world is going crazy. 
+  
+ In 2006 Facebook was looking at Google with admiration. 
+ They created something good and the same time a machine to make money.  
+ If the  product is free, you are the product.  
+ % Book: Jaron Lanier. Ten arguments for deleting your social media accounts. Right now. 
+  
+ % Robert macnameee: selling their users. 
+  
+ 
+ % 
+ % What do they do with our data ? 
+ % They build models that predict our actions. Hi
+  
+ Facebook techniques: engagement, growth adds
+  
+  And then give you back the dopamine hit. 
+  
+ Social media is a drug. 
+ That directly affects the release of dopamine in the reward pathway. 
+ Around 3 hours on average. Social media. 
+  
+ %A pacifier. Social media. 
+  
+ Hundreds of algorithms running simultaneously. 
+ Few people working on those algorithms. 
+ But machine learning has nothing to do with precise  instructions. 
+ They don't know the programmers what is going to happen. 
+ Because the algorithm is designed to maximize the profit. 
+ AI makes the rest. It learns online. And modifies the 
+ way of interactions with human beings. 
+ In that sense, we don't have the control. 
+  
+ You are playing with AI. 
+ It knows everything about you and you don't know anything about him.  
+ It's not a fair fight. 
+  
+ Two time scenarios. 
+  
+  1) when AI will be smarter than human
+  
+  2) right now . The root of addiction.
+   Polarization, radicalization, outrage-ification, vanity-ification. 
+  This is checkmate on humanity. 
+  
+  Example. Imagine wikipedia saying different definitions for different people. If wikipedia could know your profile and it was paid to 
+  change 
+  a little bit your idea, it would change your information to conquer its objectives. 
+  
+  Each person has its own reality with its own story based on his profile. 
+  You think what they don't realize what is going on. Your question. Because they are not seeing the same information than others. 
+  
+  Fake news makes companies to earn more money than true news. 
+  
+  Social media amplifies gossips and rumors not allowing us s to distinguish between true and fake. 
+  
+  Conspiracy theories. Very easy. 
+  
+  Technology is the existencial threat. 
+  
+  Whether it is to be utopia or oblivion will be a touch-and-go relay race right up to the final moment. Humanity is in his final exam as to 
+  whether or not it qualifies for continuance in universe. 
+  Buckminster Fuller. 
+  
+  
+  Technology is Simultaneously utopia and distopia. 
+  
+  The business model has a problem. 
+  
+  These markets undermine democracy and undermine freedom. 
+  
+  Based on religion: profits at all costs. Corrosive business model.  
+  
+  Not everyone recognize that we have a problem. 
+  
+  Reform facebook and Google. 
+  
+  Qwant in instead of google. Block notifications. 
+  
+  
+  Three basic rules:
+  
+  1) out of your bedroom
+  2) no social media until high school. 
+  3) limit you social media time. 
+  
+  
+  Delete your social media accounts. To have more people to have a conversation. 
+  
+  
+  Check mate on humanity 
+  
+  1) drug addict to social media 
+  2) when superintelligence will surpass human beings. 
+  3) these markets undermine democracy. 
+  
+  Bunkminster Fuller 
+  
+  
+  Three rules to convict social media:
+  1) avoid phone in your bedroom
+  2) don't allow kids to enter in social media until they are at least in high school. 
+  3) discuss the time you devote to social media. 
+  
+  
+\section{Basic operations and von Neumann style} 
+
+\renewcommand{\home}{./Fortran/sources/Foundations/Roots}
+
+
+Let's revise some pillars of the computation through the names of the people 
+that developed them; Turing, Church, Neumann and Backus. 
+Some notions of theory of computation are revised here so a reader that is new 
+to the scientific programming can familiarize himself. 
+
+The theory of computation gives us the basis for the automatic processing of information where we have a \textbf{problem} to solve (a 
+relation or function between a bunch of inputs and their associated outputs) and we want a machine (analog, digital, quantum, etc.) to solve 
+it. 
+The tools of theory of computation will tell us if our problem can be solved in the framework of a \textbf{model of computation}, using an 
+\textbf{algorithm} and how \textbf{efficiently} is going to be solved. 
+An essential concept arise here, the model of computation is a mathematical abstract construction that describes how to compute the output of 
+a mathematical function given its input. 
+
+%Turing Universal machine
+This leads us to the concept of Turing machine, the model of computation invented by Alan Turing to give answer to some essential questions 
+in the theory of computation and mathematics in general. This abstract construction consists on a scanning head capable of reading from an 
+infinite tape of cells a single cell at a time. This tape has information coded and once a cell is read, the machine can delete that cell, 
+write another symbol or leave the symbol. Then, it can move to a different position in the tape. According to the current state of the 
+machine and the position in the tape the machine follow a set of rules (also coded) and take some action or another. 
+
+Everything that is computable and everything that a machine can compute nowadays can be theoretically programmed in a Touring machine 
+although maybe inefficiently. Furthermore, it is said that any system capable of doing what a Touring machine can do is Touring-complete and 
+than can also compute everything that is computable. Applying this idea to programming languages and real machines we can find if any 
+computable algorithm can be performed in it and it turns that all programming languages nowadays are Touring-complete as soon as they allow 
+mainly if-then-else structures and go-to statements. 
+
+We see then that a conceptual model of computation is intimately related to the programming languages (the software codes we create) and the 
+real machines we use everyday from a hardware point of view (laptops, PCs, smartphones, etc.). Computers today are built by implementing what 
+a Turing machine describes theoretically, using an architecture. The architecture is the set of rules and methods that describe how software 
+and hardware in a machine are organized, interrelate and work to conform a computer.
+
+%von Neumann architecture
+Let's briefly describe what a von Neumann architecture is, mainly used in the machine around us. In this description of a computer, a Central 
+Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit separated from the CPU. In that memory, 
+data and program are stored together and each memory position is uniquely identified by an address. Some Buses transfer information between 
+different parts of the computer; data, addresses or control commands. Finally, input/output devices can communicate with the machine using 
+the Buses too. Notice firstly that this is not the only possible architecture for a machine. Secondly, this architecture describes not only 
+how the hardware is organized but also how data and programs work so programming languages are also influenced by this architecture. 
+
+
+%RAM model and Church lambda 
+Different computation models exist apart from the Turing machine, Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are 
+some of them. Some of these computation models give rise to a programming paradigm like imperative programming or functional programming. The 
+former finds its foundations in the Touring machine and the latter is supported by the concepts of lambda calculus, developed by Alonzo 
+Church. All computable algorithms can be computed using lambda calculus so it is Turing complete and is built with three kind of terms: 
+variables, abstractions and applications. This model is focused on the use of transformation rules and not in the machine that implements 
+these rules so it is closer to software than hardware. Essentially an abstraction here can be seen as a function (with an argument and a 
+function body) so the programs are built by applying functions to other functions instead of assigning (storing) values to variables and 
+iterate  process. 
+
+
+%Paradigmas, instructions, machine and style
+%Backus Fortran and its paper 
+This strong relation between imperative programming languages and the von Neumann computer was treated by John Backus in its paper ``Can 
+Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs''. He remarks the parallelism between the 
+von Neumann memory and the use of variables to store data or the instruction cycle of a CPU (fetch, store, execute) with the assignment 
+statement of a programming language. Furthermore, this assignment statement splits the programming languages into two worlds: a world of 
+expressions with strong algebraic properties and a world of statements with few mathematical properties. In this paper, he proposes an 
+alternative to this reality based on the functional programming style. 
+
+Imperative and declarative programming paradigms are treated in the following section using examples that illustrate the main difference 
+between them: when a programmer tells the machine how to perform each task step by step or when the programmer just tells what to obtain and 
+its properties but not the control flow to perform the task. 
+
+%Example of code 3*2 
+
+
+ 
+ 
+ \section{Imperative versus declarative programming} 
+ 
+ \section{Vector languages}
+ 
+ \section{Functional programming}

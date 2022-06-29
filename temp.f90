@@ -1,47 +1,30 @@
-program Series_with_coarrays
-
-implicit none  
-
-! this image and number of images 
-  integer :: image, Ni  
-
-! S is a coarray of dimension  determined at runtime
-  real (kind=8) :: S[*]  
-  
-! SN is the total sum of every image   
-  real (kind=8) :: SN
-  real (kind=8) :: t0, tf, rate, PI = 4*atan(1.0)
-  
-! N is the total number of terms 
-! Nt is the total number of terms of each image   
-  integer(kind=8) :: i, N , Nt 
-
-   call cpu_time(t0) 
-   image = this_image()
-   Ni = num_images()
-   
-!  number of terms to be added    
-   N = 2.**38
-!  number of terms for each image    
-   Nt = N / Ni
- 
-!  Each image performs a backwards sum of the total sum  
-   S = 0 
-   do i = image * Nt, 1 + (image-1)*Nt,  -1
-      S = S + 1 / real(i)**2
-   end do
-   
-!  partial result of each image    
-   write(*,*) " image =", image, " S = ", S  
-   
- ! Once image 1 finishes, it sums the contribution of each image
-   if (image .eq. 1) then
+recursive subroutine branches_solver(A, i, j, As)
+                 integer :: A(9,9), i, j
+                 integer, intent(out) :: As(9,9) 
+    
+    integer :: k, k0, i1, j1 
+    
+        
+!** solution is the branch which gets the last sudoku cell
+    if (i > 9) then
+      As = A  
       
-     write(*,*) "Sum contributions of different images  " 
-     SN = 0   
-     do i = Ni, 1, -1
-       SN = SN + S[i] 
-     end do
+!** explore k valid number in position i,j         
+    else
+      do k = 1, 9 
+        if ( is_valid(A, i, j, k) ) then
+            
+             k0 = A(i, j) 
+             A(i, j) = k  
+             call new_cell(k0, k, i, j, i1, j1) 
+             call branches_solver(A, i1, j1, As)
+          
+        !** set A(i,j) to try another branch 
+            if(k0==0) A(i,j) =0
+            call print_branch(i,j)
+        end if
+      end do
      
-     call cpu_time(tf)
-     write (*,*) "CPU time:", tf-t0
+    end if
+    
+end subroutine 

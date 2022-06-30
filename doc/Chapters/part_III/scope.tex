@@ -1,33 +1,60 @@
- 
-  %__________________________________________________________________________________________________
+ %__________________________________________________________________________________________________
  \chapter{Scope} 
  
- \section{Introduction}
- One of the most important matters that we need to understand when we begin to write our own programming codes is the scope. In other words,  variables which are public and those which are private. This is called the scope of the visibility of some variable in some part of our code. 
  
- In any programming language, the scope of variables, objects, functions or procedures is the set of statements in which the variable can be used or modified. The region of a program in which this variable or identifier is visible is called the scope. 
  
- Hence, public and public variables or procedures are specified explicitly. If not, local and global variables are visible. Local variables are those which specified inside the function or subroutine that we are dealing with and global variables are those that can be accessed by common variables of my own module  or by inclusions of other modules.   
+\section{Introduction}
+One of the most important matters that we need to understand when we begin to write our own codes in any programming language is the scope. 
+The scope of variables, named constants, objects, functions or procedures is the area of the program where they can be used or modified, that is, the area where each object is visible.
+
+The example that best illustrates this concept is a variable \texttt{c} declared inside a function \texttt{f( x )}. 
+This variable named \texttt{c} can be initialized, used and modified inside the function. However, outside this area, \texttt{c} is not seen or the name \texttt{c} could refer to a totally different entity. 
+In this case \texttt{c} is said to be a \textit{local variable}.
+When a variable is declared at the beginning of a program, outside the scope of any function, it is said to be a \textit{global variable} and it can be used everywhere in your program unless you intentionally limit its scope. 
+
+Notice that \textit{global} and \textit{local} normally refer to those entities that are seen by the whole program or just some parts of the code, respectively. 
+On other occasions, \textit{global} and \textit{local} entities refer to one specific unit of program/subprogram, for instance, a variable declared at the beginning of a module is a \textit{global} variable for that module, so any subroutine or function defined inside will see it. However, that does not necessarily mean that the variable will be seen by the main unit of program that uses this module. 
+
+%Another example is the variable declared at the beginning of a subroutine that has a function declared inside, it is considered a global variable for the subroutine and functions nested but it is considered local according to the main program. 
+
+Each programming language has its own set of rules to consider entities as global or local, however, sometimes the programmer can limit or enlarge the scope.
+The statements \texttt{public} and \texttt{private} change the scope of entities so they can be accessed or not outside a module.
+Hence, private variables or procedures are specified explicitly. Otherwise, local and global variables are visible outside by default.   
  
 
- In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  Variable $ z $ is a local variable, $ y $ is a global variable of module \texttt{modB} and $ x $ is a global variable of module \texttt{modA}.  All global variables of \texttt{modB} are seen in \texttt{Test}  by means of the  sentence \texttt{use modB}. Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}.   
- \vspace{0.5cm} 
+
+%In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  
+In the following code, the variable $y$ is a global variable of module \texttt{modB} and $x$ is a global variable of module \texttt{modA}.  
+Then, $y$ is seen inside function \texttt{functionB()} and $x$ is seen in \texttt{functionA}.
+All global variables of \texttt{modB} are seen outside by means of the sentence \texttt{use modB}. 
+Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}. 
+More specifically, this means that $x$ is also seen in \texttt{functionB()}. 
+\vspace{0.5cm} 
  
  
+\newpage  
+\section{Fortran}
+\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
+\listings{\home/modB.f90}{module modB}{end module}{modB.f90}
+
+\listings{\home/modA.f90}{module modA}{end module}{modA.f90}
+
+
+\newpage
+\section{Python}
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\listings{\home/modB.py}{from}{return}{modB.py}
+
+\listings{\home/modA.py}{x}{return}{modA.py}
  
- \newpage  
- \section{Fortran}
-  \renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
- \listings{\home/modB.f90}{module modB}{end module}{modB.f90}
- 
- \listings{\home/modA.f90}{module modA}{end module}{modA.f90}
- 
- 
- \newpage
- \section{Python}
-   \renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
-  \listings{\home/modB.py}{from}{return}{modB.py}
   
-  \listings{\home/modA.py}{x}{return}{modA.py}
- 
+  
+  
+  
+  
+
+%The region of a program in which this variable or identifier is visible is called the scope.
+%set of statements in which the variable can be used or modified
+% This is called the scope of the visibility of some variable in some part of our code. 
+%Local variables are those which specified inside the function or subroutine that we are dealing with and global variables are those that can be accessed by common variables of my own module  or by inclusions of other modules. 
   

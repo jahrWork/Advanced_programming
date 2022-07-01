@@ -4,23 +4,15 @@
  
  
 \section{Introduction}
-One of the most important matters that we need to understand when we begin to write our own codes in any programming language is the scope. 
-The scope of variables, named constants, objects, functions or procedures is the area of the program where they can be used or modified, that is, the area where each object is visible.
 
-The example that best illustrates this concept is a variable \texttt{c} declared inside a function \texttt{f( x )}. 
-This variable named \texttt{c} can be initialized, used and modified inside the function. However, outside this area, \texttt{c} is not seen or the name \texttt{c} could refer to a totally different entity. 
-In this case \texttt{c} is said to be a \textit{local variable}.
-When a variable is declared at the beginning of a program, outside the scope of any function, it is said to be a \textit{global variable} and it can be used everywhere in your program unless you intentionally limit its scope. 
+In this section we take a deeper look at how the scope is treated in Fortran and Python since each programming language has its own particularities. 
+Fortran has two units of program (\texttt{program} and \texttt{module}) and two units of subprogram (\texttt{subroutine} and \texttt{function}).
+Everything declared at the beginning of a program/subprogram will be treated as global for that unit. Hence, all units of program nested will see the entity. 
+This also includes the \texttt{use} statement, e.g. a main program using a module makes visible all the global entities of the module in the main program. 
 
-Notice that \textit{global} and \textit{local} normally refer to those entities that are seen by the whole program or just some parts of the code, respectively. 
-On other occasions, \textit{global} and \textit{local} entities refer to one specific unit of program/subprogram, for instance, a variable declared at the beginning of a module is a \textit{global} variable for that module, so any subroutine or function defined inside will see it. However, that does not necessarily mean that the variable will be seen by the main unit of program that uses this module. 
 
-%Another example is the variable declared at the beginning of a subroutine that has a function declared inside, it is considered a global variable for the subroutine and functions nested but it is considered local according to the main program. 
 
-Each programming language has its own set of rules to consider entities as global or local, however, sometimes the programmer can limit or enlarge the scope.
-The statements \texttt{public} and \texttt{private} change the scope of entities so they can be accessed or not outside a module.
-Hence, private variables or procedures are specified explicitly. Otherwise, local and global variables are visible outside by default.   
- 
+
 
 
 %In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  

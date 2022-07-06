@@ -6,6 +6,7 @@ from map_filter_reduce import     test_map_filter_reduce
 from functions import             derivative_example
 from mapping import               mapping_example
 from n_body_problem import        Integrate_NBP
+from pointers import              test_pointer 
 from main_ODES import             Kepler_schemes
 from Fourier import               Fourier_example
 from fortran_from_py import       fortran_example
@@ -20,13 +21,13 @@ def menu_advanced_programming_techniques():
      
      print( " select an option " )
      print( " 0. exit/quit  " ) 
-     print( " 1. main program, modules,scope, private and public " ) 
+     print( " 1. Scope, private and public " ) 
+     print( " 5. Functional programming" )  
      print( " 2. Objects and polymorphism  " ) 
-     print( " 3. Vectors and matrices  " ) 
-     print( " 4. First class functions. Integrals and moments   ") 
-     print( " 5. Functional programming: map, filter and reduce " )  
+   
      print( " 6. Pointers and different views of data. N body problem " )  
-     print( " 7. Fourier series examples    " ) 
+
+  
      print( " 8. Wrappers: Fortran from Python  ")     
 
      option = int ( input() ) 
@@ -52,10 +53,11 @@ def menu_advanced_programming_techniques():
          mapping_example()
 
      elif option == 6: 
+          test_pointer() 
           Integrate_NBP() 
 
      elif option == 7: 
-          Fourier_example() 
+         
 
      elif option == 8: 
           fortran_example() 

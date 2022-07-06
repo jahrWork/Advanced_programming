@@ -1,6 +1,6 @@
 from numpy import array, reshape 
 
-def test_pointer(): 
+def pointer_examples(): 
  print(" Scalar and pointers ") 
  a = 3 
  pa = a 

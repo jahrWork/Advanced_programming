@@ -5,7 +5,7 @@
     <ProjectGuid>5ca4ffdf-626b-4d0e-b42d-d7a1537ef971</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>sources\main.py</StartupFile>
-    <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Advanced_programming\python_to_C;sources\Advanced_programming\Fortran_to_Python</SearchPath>
+    <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Advanced_programming\python_to_C;sources\Advanced_programming\Fortran_to_Python;sources\Foundations\Data_type</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_project</Name>
@@ -26,12 +26,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="sources\" />
+    <Folder Include="sources\Advanced_programming\overloading\" />
     <Folder Include="sources\Foundations\Calculus\Examples\" />
     <Folder Include="sources\Foundations\iterators\" />
     <Folder Include="sources\Foundations\" />
     <Folder Include="sources\Advanced_programming\" />
     <Folder Include="sources\Advanced_programming\python_to_C\" />
     <Folder Include="sources\Foundations\Calculus\" />
+    <Folder Include="sources\Foundations\Data_type\" />
     <Folder Include="sources\Foundations\Read_files\" />
     <Folder Include="sources\Advanced_programming\pointers\" />
     <Folder Include="sources\Advanced_programming\1.TO_DO\" />
@@ -45,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="sources\Advanced_programming\advanced_programming_techniques.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Advanced_programming\overloading\overloading.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />
@@ -63,7 +68,7 @@
     <Compile Include="sources\Advanced_programming\Functional programming\First_class_functions.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\Functional programming\Fourier.py">
+    <Compile Include="sources\Foundations\Algebra\Fourier.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Advanced_programming\Functional programming\functions.py" />
@@ -85,6 +90,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Foundations\Calculus\Taylor_expansions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Foundations\Data_type\data_type.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Foundations\Foundations.py" />

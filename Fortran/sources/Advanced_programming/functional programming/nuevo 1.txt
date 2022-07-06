@@ -1,0 +1,22 @@
+ subroutine Fibonacci_numbers 
+    
+   
+    
+     write(*,*) "Fibomacci numbers =", Fibonacci(10)
+  contains 
+  
+  pure recursive real function Fibonacci(n) 
+        integer, intent(in) :: n 
+    
+        if (n==0) then 
+                  Fibonacci = 1 
+                  
+        else if (n==1) then
+                 Fibonacci = 1 
+        else 
+                 Fibonacci = Fibonacci(n−1) + Fibonacci(n−2)
+        end if 
+  end function
+  end subroutine   
+  
+    

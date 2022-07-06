@@ -63,6 +63,10 @@
 		<File RelativePath=".\sources\Advanced_programming\miscellaneous\fractals\VonKoch.f90"/></Filter>
 		<Filter Name="games">
 		<File RelativePath=".\sources\Advanced_programming\miscellaneous\games\Sudoku.f90"/></Filter></Filter>
+		<Filter Name="pointers">
+		<File RelativePath=".\sources\Advanced_programming\pointers\pointers.f90"/></Filter>
+		<Filter Name="overloading">
+		<File RelativePath=".\sources\Advanced_programming\overloading\overloading.f90"/></Filter>
 		<Filter Name="odes">
 		<Filter Name="schemes">
 		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Cauchy_Problem.f90"/>
@@ -99,12 +103,12 @@
 		<File RelativePath=".\sources\Foundations\Calculus\Taylor_expansions.f90"/></Filter>
 		<Filter Name="graphs">
 		<File RelativePath=".\sources\Foundations\graphs\plotting.f90"/></Filter>
-		<Filter Name="Roots">
-		<File RelativePath=".\sources\Foundations\Roots\Roots.f90"/></Filter>
 		<Filter Name="Read files">
 		<File RelativePath=".\sources\Foundations\Read files\data.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\data2.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\Read_files.f90"/></Filter>
+		<Filter Name="Roots">
+		<File RelativePath=".\sources\Foundations\Roots\Roots.f90"/></Filter>
 		<File RelativePath=".\sources\Foundations\Foundations.f90"/>
 		<File RelativePath=".\sources\Foundations\Hello_world.f90"/></Filter>
 		<Filter Name="IEEE">

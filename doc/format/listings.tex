@@ -66,31 +66,33 @@
 		morekeywords={ssh,scp,server.py,runserver.sh,killserver.sh,killemail.sh,runemail.sh}
 	}
 }
-\newcommand{\lstpython}{
-	\lstset{
-		language=python,
-		basicstyle=\footnotesize\ttfamily,
-		frame=single,
-		showspaces=false,
-		showstringspaces=false,
-		backgroundcolor=\color{gray!2},
-		keywordstyle=\normalsize\bfseries,
-		deletekeywords={type},
-        commentstyle=\color{gray!50},
-        captionpos=b, % sets the caption-position to bottom
-		stringstyle=\color{gray},     % string literal style
-		breaklines=true,
-        breakatwhitespace=false, 
-		alsoletter={.,...},
-		morekeywords={},
-        tabsize=2, % sets default tabsize to 2 spaces
-        numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
-        numberstyle = \color{black},
-        rulesepcolor=\color{gray},
-        frame=trBL,
-        showtabs=false % show tabs within strings adding particular underscores
-	}
-}
+
+
+%\newcommand{\lstpython}{
+%	\lstset{
+%		language=python,
+%		basicstyle=\footnotesize\ttfamily,
+%		frame=single,
+%		showspaces=false,
+%		showstringspaces=false,
+%		backgroundcolor=\color{gray!2},
+%		keywordstyle=\normalsize\bfseries,
+%		deletekeywords={type},
+%        commentstyle=\color{gray!50},
+%        captionpos=b, % sets the caption-position to bottom
+%		stringstyle=\color{gray},     % string literal style
+%		breaklines=true,
+%        breakatwhitespace=false, 
+%		alsoletter={.,...},
+%		morekeywords={},
+%        tabsize=2, % sets default tabsize to 2 spaces
+%        numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+%        numberstyle = \color{black},
+%        rulesepcolor=\color{gray},
+%        frame=trBL,
+%        showtabs=false % show tabs within strings adding particular underscores
+%	}
+%}
 
 
 
@@ -188,64 +190,104 @@
 
 
 
-\newcommand{\lstfor}{
- \lstset{ 
-    language=Fortran, % choose the language of the code
-    % basicstyle=\footnotesize\ttfamily,
-    % keywordstyle=\color{black}\textit, % style for keywords
-    basicstyle=\footnotesize\ttfamily,
-    keywordstyle=\normalsize\bfseries,%\textit, %%
-    numbers=none, % where to put the line-numbers
-    numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
-    backgroundcolor=\color{gray!2},
-    showspaces=false, % show spaces adding particular underscores
-    showstringspaces=false, % underline spaces within strings
-    showtabs=false, % show tabs within strings adding particular underscores
-    frame=single, % adds a frame around the code
-    tabsize=2, % sets default tabsize to 2 spaces
-    rulesepcolor=\color{gray},
-    stringstyle=\color{gray},     % string literal style
-    captionpos=b, % sets the caption-position to bottom
-    breaklines=true, % sets automatic line breaking
-    breakatwhitespace=false, 
-    commentstyle=\color{gray!50},
-    numberstyle = \color{black},
-    frame=trBL,
-    morekeywords={procedure, findloc}
-}
-}
+%\newcommand{\lstfor}{
+% \lstset{ 
+%    language=Fortran, % choose the language of the code
+%    % basicstyle=\footnotesize\ttfamily,
+%    % keywordstyle=\color{black}\textit, % style for keywords
+%    basicstyle=\footnotesize\ttfamily,
+%    keywordstyle=\normalsize\bfseries,%\textit, %%
+%    numbers=none, % where to put the line-numbers
+%    numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+%    backgroundcolor=\color{gray!2},
+%    showspaces=false, % show spaces adding particular underscores
+%    showstringspaces=false, % underline spaces within strings
+%    showtabs=false, % show tabs within strings adding particular underscores
+%    frame=single, % adds a frame around the code
+%    tabsize=2, % sets default tabsize to 2 spaces
+%    rulesepcolor=\color{gray},
+%    stringstyle=\color{gray},     % string literal style
+%    captionpos=b, % sets the caption-position to bottom
+%    breaklines=true, % sets automatic line breaking
+%    breakatwhitespace=false, 
+%    commentstyle=\color{gray!50},
+%    numberstyle = \color{black},
+%    frame=trBL,
+%    morekeywords={procedure, findloc}
+%}
+%}
+
+
 \newcommand\mycap[1]{ \texttt{ \detokenize{#1} }  }
 
 
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-%INSTEAD OF DEFINING THE lstset WITH THE FOLLOWING LINE WE CALL TO AN SPECIFIC LANGUAGE FOR THE WHOLE BOOK:
-\lstfor
+\newcommand{\lstfor}{
+ \lstset{ 
+     language=Fortran, % choose the language of the code
+    % basicstyle=\footnotesize\ttfamily,
+   %  keywordstyle=\color{black}\textit, % style for keywords
+     basicstyle=\footnotesize\ttfamily,
+     keywordstyle=\color{blue}\normalsize\bfseries,%\textit, %%
+     numbers=none, % where to put the line-numbers
+     numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+     backgroundcolor=\color{blue!1},
+  %   backgroundcolor=\color{blue!5!white},
+     showspaces=false, % show spaces adding particular underscores
+     showstringspaces=false, % underline spaces within strings
+     showtabs=false, % show tabs within strings adding particular underscores
+     frame=single, % adds a frame around the code
+  %   rulecolor=\color{black},
+     rulecolor=\color{Blue!75!black},
+     tabsize=2, % sets default tabsize to 2 spaces
+  %   rulesepcolor=\color{blue},
+     rulesepcolor=\color{Blue!75!black},
+     stringstyle=\color{orange},     % string literal style
+     captionpos=b, % sets the caption-position to bottom
+     breaklines=true, % sets automatic line breaking
+     breakatwhitespace=false, 
+     commentstyle=\color{codegreen},
+     numberstyle = \color{black},
+     frame=trBL,
+     morekeywords={procedure, abstract, findloc}
+ }
+}
 
 
-% \lstset{ 
-%     language=Fortran, % choose the language of the code
-%    % basicstyle=\footnotesize\ttfamily,
-%    % keywordstyle=\color{black}\textit, % style for keywords
-%     basicstyle=\footnotesize\ttfamily,
-%     keywordstyle=\normalsize\bfseries,%\textit, %%
-%     numbers=none, % where to put the line-numbers
-%     numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
-%     backgroundcolor=\color{gray!2},
-%     showspaces=false, % show spaces adding particular underscores
-%     showstringspaces=false, % underline spaces within strings
-%     showtabs=false, % show tabs within strings adding particular underscores
-%     frame=single, % adds a frame around the code
-%     tabsize=2, % sets default tabsize to 2 spaces
-%     rulesepcolor=\color{gray},
-%     stringstyle=\color{gray},     % string literal style
-%     captionpos=b, % sets the caption-position to bottom
-%     breaklines=true, % sets automatic line breaking
-%     breakatwhitespace=false, 
-%     commentstyle=\color{gray!50},
-%     numberstyle = \color{black},
-%     frame=trBL,
-%     morekeywords={procedure, findloc}
-% }
+
+\newcommand{\lstpython}{
+ \lstset{ 
+     language=Python, % choose the language of the code
+    % basicstyle=\footnotesize\ttfamily,
+   %  keywordstyle=\color{black}\textit, % style for keywords
+     basicstyle=\footnotesize\ttfamily,
+     keywordstyle=\color{blue}\normalsize\bfseries,%\textit, %%
+     numbers=none, % where to put the line-numbers
+     numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+     backgroundcolor=\color{blue!1},
+     showspaces=false, % show spaces adding particular underscores
+     showstringspaces=false, % underline spaces within strings
+     showtabs=false, % show tabs within strings adding particular underscores
+     frame=single, % adds a frame around the code
+   %  rulecolor=\color{black},
+     rulecolor=\color{Blue!75!black},
+     tabsize=2, % sets default tabsize to 2 spaces
+   %  rulesepcolor=\color{blue},
+     rulesepcolor=\color{Blue!75!black},
+     stringstyle=\color{orange},     % string literal style
+     captionpos=b, % sets the caption-position to bottom
+     breaklines=true, % sets automatic line breaking
+     breakatwhitespace=false, 
+     commentstyle=\color{codegreen},
+     numberstyle = \color{black},
+     frame=trBL,
+     morekeywords={}
+ }
+}

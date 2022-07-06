@@ -1,7 +1,8 @@
-from numpy import array 
-    
+   
 def function_examples():  
-       
+
+      print( "First class functions. Integrals and moments   ") 
+     
     # Integral of f(x) from a to b 
       R = Integral(h, 0., 1.) 
       print("\n  Integral of h(x) from 0 to 1  =", R )
@@ -17,11 +18,15 @@ def function_examples():
 def Integral(f, a, b):  
 
       N = 100  
-      dx = (b-a)/N; 
-      x = array( [ a + dx*i for i in range(N+1) ] ) 
-      return dx * sum( f(x) ) 
+      dx = (b-a)/N
+      S = 0
+      for i in range(1, N+1):
+          xi = a + dx * i 
+          S = S + dx * f(xi)
+          
+      return S
     
-def  Moment(f, n, a, b):  
+def Moment(f, n, a, b):  
 
     def g(x): 
         return x**n * f(x) 
@@ -32,6 +37,30 @@ def  Moment2(f, n, a, b):
 
     return Integral( lambda x: x**n *f(x), a, b)
     
-def   h(x): 
+def h(x): 
    
     return x**2 + x + 1 
+
+def compose(f, g): 
+
+     def h(x): 
+          return f( g(x) )
+
+     return h
+
+h = compose(lambda x: x**2, lambda x:sqrt(x) ) 
+
+def Fibonacci_numbers():
+
+    def Fibonacci(n): 
+        
+         if n==0:
+                 Fibonacci = 1 
+                  
+         elif n==1:
+                 Fibonacci = 1 
+         else:
+                 Fibonacci = Fibonacci(n-1) + Fibonacci(n-2) 
+
+    for i in range(3, 11):  
+       print("Fibomacci numbers =", i, Fibonacci(i)) 

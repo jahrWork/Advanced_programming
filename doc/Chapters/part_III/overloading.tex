@@ -1,17 +1,159 @@
 
-\chapter{Overloading: operators and functions}
+\chapter{Overloading functions and operators}
+
+From the mathematical point of view operators, such as\texttt{+}, can be 
+applied to elements of sets with different types. Additionally, functions representing 
+common concepts, such as integrals, can be applied to dimensional spaces of different rank. 
+It is desirable to maintain the same opeands or the same function concepts independently 
+of data types and dimensional rank.  
+
+If the programming language is a compiling language, such as Fortran, 
+the compiler identifies, at compilation time, the type of the operands or the arguents 
+involved when calling a function and it selects automatically the proper operation. 
+If the language is interpreted and non-typed language, such as Python, overloading is not supported. 
+However, there are many alternatives to emulate overloading in Python. 
+
+For example, the operator \texttt{+} 
+is defined differently for real numbers of complex numbers. However, the same operator 
+is used for those different operations. This is done by overloading the operator. 
+If $x$ and $y$ are reals, the expression $ x+y $ involves the operator \texttt{+}
+which is the classical sum. 
+However, if  $u$ and $v$ are complexes, 
+the expression $ u+v $ involves the same operator \texttt{+}. It this case, 
+the result yields a complex number in which 
+the real part is the sum of real parts of $ u $ and $ v $
+and the imaginary part is the sum of imaginary parts of $ u $ and $ v $.
+Many operands and functions are previously overloaded by the native language 
+as it is this example. 
+
+
+
+
+Additionally to operands, functions can also be overloaded. 
+In this chapter, the function \texttt{Integral} is created to overload line integrals 
+and surface integrals. 
+Let's consider the  line integral in a compact segment $[a, b]$: 
+\begin{equation}   
+    I =  \int _a ^b f(x) \ dx, \qquad f: \mathbb{R} \rightarrow \mathbb{R},   
+\end{equation} 
+and the surface integral in a compact square $ \Omega = [a, b] \times [c,d]$:   
+\begin{equation}   
+    I =  \int _{\partial \Omega} f(x, y) \ dx \ dy, 
+    \qquad f: \mathbb{R}\times \mathbb{R} \rightarrow \mathbb{R}.   
+\end{equation} 
+From the software point of view, using the same word \texttt{Integral}
+to invoke surface or line integrals is desirable. 
+Besides, a surface integral can be expressed by the following way: 
+\begin{equation}   
+    I =  \int _{a} ^b \left(   \int _{c} ^d f(x,y) \ dy      \right) \ dx,
+\end{equation} 
+in which the integrand is defined with the parametric line integral:
+\begin{equation}   
+   I_1(x) = \int _{c} ^d f(x,y) \ dy.  
+   \label{I1}   
+\end{equation} 
+The final expression for the surface integral is:  
+\begin{equation}   
+    I =   \int _{a} ^b I_1(x) \ dx. 
+    \label{I2D}  
+\end{equation} 
+Hence, a surface integral can be defined by functional composition of line integrals. 
+In the expression,  $ I_1(x) $, the variable $ x $ acts as a parameter
+and $ I_1(x) $ is calculated by means a line integral. 
+ 
+In the following pages, these two concepts overloading and functional composition
+are taken into account to write two implementations in Fortran and Python. 
 
  
 \newpage  
-\section{Fortran}
+\subsection*{Fortran}
 
-% \renewcommand{\home}{./Fortran/sources/preliminaries} 
-% \listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{roots.f90}
+\renewcommand{\home}{./Fortran/sources/Advanced_programming/overloading} 
+\lstfor
+
+First, the overloading implementation is explained. Once two different functions are 
+created for line and surface integrals, the overloading implementation in done
+with the following code: 
+\vspace{0.5cm}  
+\listings{\home/overloading.f90}{interface Integral}{end interface}{overloading.f90}
+At compilation time, function invocations are analyzed ans its proper function
+is identified. In the following code, two integrals are invoked with 
+different number and type of arguments.
+\vspace{0.5cm} 
+\listings{\home/overloading.f90}{subroutine test_Integral}{end subroutine}{overloading.f90}
+The first \texttt{Integral} invocation has three arguments, the two first are reals and the 
+third \texttt{f1} is a real function.
+The second \texttt{Integral} invocation has five arguments, the four first are reals and 
+the fith \texttt{f2} is a real function 
+$(\mathbb{R}\times \mathbb{R} \rightarrow \mathbb{R})$.
+What rest is to write, \texttt{Integral1D} and \texttt{Integral2D} accoding to their 
+specifications.  
+\newpage  
+
+Let's begin with  \verb|Integral1D| implementation. 
+Even though the numerical method to approximate the line integral is not relevant, 
+a Riemann approximation is shown in the following code to have a complete testing
+example that could be used as a template. 
+\vspace{0.5cm} 
+\listings{\home/overloading.f90}{function Integral1D}{end function}{overloading.f90} 
+Note that the third argument is defined as a \verb|f_R_R| procedure or function. 
+Hence, the definitions of \verb|f_R_R| for line integrals and \verb|f_R2_R|
+for surface integrals are given in the following code: 
+\vspace{0.5cm} 
+\listings{\home/overloading.f90}{abstract interface}{end interface}{overloading.f90} 
+ 
+\newpage  
+Let's finish with \verb|Integral2D| implementation. 
+Taking into account the definition of a surface integral expressed 
+by  equations (\ref{I2D}) and (\ref{I1}), the following implementation is clear: 
+
+\vspace{0.5cm}  
+\listings{\home/overloading.f90}{function Integral2D}{end function}{overloading.f90} 
+\verb|Integral2D|  is built by a line integral (\verb|Integral1D|) 
+in which the integrand is parametric line integral defined by: 
+\vspace{0.5cm}   
+\listings{\home/overloading.f90}{function Parametric_I1D}{end function}{overloading.f90} 
+    
+ 
  
 \newpage
-\section{Python}
+\subsection*{Python}
+\renewcommand{\home}{./Python/sources/Advanced_programming/overloading}
+\lstpython 
+The same concepts are applied to implement an overloaded \verb|Integral| in Python. 
+As it is mentioned repetitively, Python allows writing shorter codes 
+than Fortran but paying the price of no specifying function arguments or variables. 
 
-Python does not allow overloading 
 
-%\renewcommand{\home}{./Python/sources/Roots} 
-%\listings{\home/roots.py}{from}{x1=}{roots.py}
+Even though Python does not allow overloading, an easy proposa  is shown to 
+emulate overloading in the following code: 
+\vspace{0.5cm} 
+\listingsp{\home/overloading.py}{def Integral }{None}{overloading.py} 
+At execution time, the \verb|Integral| function 
+checks how may arguments are present. If the invocation is done with three
+arguments, line integral is assumed. 
+ If the invocation is done with five
+arguments, surface integral is assumed. Otherwise, \verb|Integral| function
+will show an error.  
+
+In the following code, an example of the overloaded  \verb|Integral| is shown: 
+\vspace{0.5cm}
+\listingsp{\home/overloading.py}{def test_Integral}{y}{overloading.py}
+Note that the first invocation has three arguments and the second invocation has five 
+arguments. Note also that anonymous functions or lambda functions have been 
+expressed in the last argument to make the example more compact.  
+
+
+\newpage
+Finallly, \verb|Integral1D| and \verb|Integral2D| ae implemented according to their
+definitions.
+\verb|Integral1D| is approximated by Riemann sums 
+\vspace{0.5cm}
+\listingsp{\home/overloading.py}{def Integral1D}{return}{overloading.py}
+
+And \verb|Integral2D| is expressed by means of \verb|Integral1D| function 
+according to its definition given by (\ref{I2D}) and (\ref{I1}). 
+\vspace{0.5cm}
+\listingsp{\home/overloading.py}{def Integral2D}{a, b, I1}{overloading.py}
+
+

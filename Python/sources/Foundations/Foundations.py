@@ -1,5 +1,6 @@
 
 from Hello_world import Hello_world
+from data_type import data_type
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
 from Matrix_operations import Matrix_operation_examples
@@ -17,7 +18,7 @@ def menu_Foundations():
      print( " select an option " )
      print( " 0. exit/quit  " ) 
      print( " 1. Hello world" )  
-     print( " 2. Roots of second grade equation" )  
+     print( " 2. Data types" )  
      print( " 3. Sum of series ") 
      print( " 4. Vectors and matrices ") 
      print( " 5. Memory allocation ") 
@@ -31,6 +32,7 @@ def menu_Foundations():
            Hello_world()
           
      elif option == 2: 
+           data_type()
            Roots_2th()
          
      elif option == 3: 
@@ -42,7 +44,8 @@ def menu_Foundations():
         Matrix_operation_examples() 
      
      elif option == 5: 
-        Matrices_allocation()
+        Matrices_allocation() 
+        Fourier_example() 
          
      elif option == 6: 
         Integral_and_derivative_examples()

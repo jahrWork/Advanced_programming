@@ -6,7 +6,8 @@ from numpy import  array, conj
 
 
 def Fourier_example(): 
-    
+  
+     print( " Fourier series examples    " ) 
 
      N = 24     # Fourier truncated series 
      M = 2000   # points to plot 
@@ -40,7 +41,7 @@ def Fourier_series(N, x):
 #   real :: a(0:N/2), b(0:N/2) 
     a = array( [ 0. for k in range(M+1) ] )
     b = array( [ 0. for k in range(M+1) ] ) 
-    # WARNING DOESN'T WORK  if array is initialized with 0 instead of 0. 
+    # WARNING DOES NOT WORK  if array is initialized with 0 instead of 0. 
     c = array( [ complex(0., 0.)   for k in range(-M, M+1) ] )
     e = array( [ exp( 1j * k * x ) for k in range(-M, M+1) ] )
 

@@ -1,4 +1,4 @@
-module First_class_functions 
+﻿module First_class_functions 
     
     implicit none 
     
@@ -8,13 +8,40 @@ module First_class_functions
       end function 
     end interface 
     
+    abstract interface 
+      real function  g_R_R(x)
+        real, intent(in) :: x 
+      end function 
+    end interface 
     
-    contains 
+   type :: pointer_f
+      procedure(g_R_R), pointer, nopass :: p
+   end type     
+     
+     
+   type :: compose
+       procedure(g_R_R), pointer, nopass :: f, g
+         
+   contains
+         procedure ::  hc 
+   end type
+
+
+   interface compose
+     procedure :: compose_constructor
+   end interface 
+
+
+     
+contains
     
+ 
     
     subroutine Function_examples 
     
        real :: R 
+       
+      write(*,*) " First class functions. Integrals and moments   " 
        
     ! Integral of f(x) from a to b 
       R = Integral(h, 0., 1.) 
@@ -34,16 +61,16 @@ module First_class_functions
        real,intent(in) :: a, b 
       
        integer :: i, N 
-       real :: S, dx 
-       real, allocatable :: x(:) 
-       
+       real :: S, dx, xi 
        
        N = 100 
        dx = (b-a)/N 
-       allocate ( x(0:N) ) 
        
-       x = [ ( a + dx * i, i=0, N) ] 
-       S = dx * sum ( f(x) )   
+       S = 0 
+       do i=1, N 
+         xi =  a + dx * i
+         S = S + f(xi) 
+       end do 
        
        Integral = S 
        
@@ -74,7 +101,119 @@ module First_class_functions
        
     end function 
     
+ 
+    
+   function  compose_constructor(f, g) result(c)
+            procedure (g_R_R) :: f, g 
+            type (compose) :: c
+            
+             c % f   => f
+             c % g   => g
+            
+   end function 
+
+   real function hc(this, x) 
+        class (compose) :: this 
+        real, intent(in) :: x 
+        
+         hc = this % g ( this % f(x) ) 
+        
+   end function 
+    
+  
+
+   
     
     
+  subroutine Functions_returning_functions
+      
+     type (compose) :: c(2) 
+     type (pointer_f) :: f(2), f_inverse(2) 
+     integer :: i 
+     
+     f(1) % p => sin
+     f(2) % p => cos
+     
+     f_inverse(1) % p => asin
+     f_inverse(2) % p => acos
+     
+     
+     do i=1, 2 
+       c(i) = compose( f(i) % p, f_inverse(i) % p ) 
+     end do 
+     
+    
+     do i=1, 2 
+       write(*,*) "Compose f_inverse( f(x) ) =", c(i) % hc(0.2)
+     end do 
+  
+     
+    
+  end subroutine 
+  
+  
+ subroutine pure_functions
+    
+     real :: a = 1   
+    
+     write(*,*) "pure f(x) =", f(1.), f(1.)
+     write(*,*) "impure f(x) =", f_impure(1.), f_impure(1.)
+    
+  contains 
+  
+  pure real function f(x) 
+ !  real, intent(inout) :: x ! Error, OUT or INOUT not allowed
+    real, intent(in) :: x 
+    
+     !real :: b = 1   ! Error, Initilization is not permitted 
+     !real, save :: b ! Error, save  is not permitted 
+      real :: b 
+      
+   ! a = a + 1 ! Error: compiler trows an error
+               ! Since f is pure, external variable can not be modified
+     b = 1 
+     b = b + 1 ! no problem,  b is local 
+     
+     f = x**2 + a + b 
+   ! write(*,*) " f = ", f ! Error, I/O not allowed 
+
+  end function
+  real function f_impure(x) result(f)
+    real, intent(in) :: x 
+    
+      real :: b = 1   
+      
+       b = b + 1 
+       f = x**2 + a + b 
+ 
+  end function 
+  end subroutine 
+   
+   subroutine Fibonacci_numbers 
+    
+     integer :: i 
+   
+    do i=3, 10 
+     write(*,*) "Fibomacci numbers =", i, Fibonacci(i)
+    end do 
+    
+  contains 
+  
+  pure recursive real function Fibonacci(n) 
+        integer, intent(in) :: n 
+    
+        if (n==0) then 
+                 Fibonacci = 1 
+                  
+        else if (n==1) then
+                 Fibonacci = 1 
+        else 
+                 Fibonacci = Fibonacci(n-1) + Fibonacci(n-2) 
+        end if 
+  end function
+  end subroutine   
+  
+	
+ 
 end module 
     

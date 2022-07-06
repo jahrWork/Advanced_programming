@@ -1,5 +1,64 @@
 \chapter{Basic operations} 
 
+
+
+\section{Data types} 
+
+
+
+Georg Cantorgave the following definition: 
+
+A set is a gathering together into a whole of definite, distinct objects of our perception or our thought—which are called elements of the 
+set.
+
+Roster or enumeration notation defines a set by listing
+its elements between curly brackets, separated by commas:
+$$
+A = \{ 4, 2, 1, 3 \}
+$$
+$$
+B = \{ blue, white, red \}.
+$$
+In a set, all that matters is whether each element is in it or not, 
+so the ordering of the elements in roster notation is irrelevant 
+(in contrast, in a sequence, a tuple, or a permutation of a set, 
+the ordering of the terms matters).
+
+ 
+For example, {2, 4, 6} and {4, 6, 4, 2} represent the same set.
+
+For sets with many elements, especially those following an implicit pattern,
+the list of members can be abbreviated using an ellipsis '...'.
+For instance, the set of the first thousand positive integers 
+may be specified in roster notation as
+$$
+\{ 1, 2, 3, ..., 1000 \}.
+$$
+
+
+
+\newpage 
+\subsection*{Fortran code}
+
+
+\newpage 
+\subsection*{Python code}
+The same function is presented below coded with Python. Essentially both codes are quite similar, 
+however, now data types for variables are not explicitly declared because 
+Python automatically declares them. In addition, indentation rules must be strictly followed. 
+\vspace{0.5cm} 
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{def}{format}{data_type.py}
+%\lstfor
+  
+
+Explain  3 iterators with for Python: 
+
+for v in V: 
+for i in range(len(V)): 
+for i, v in enumerate(V):
+
 \newpage 
 \section{Roots of a second degree equation} 
 In this section, a program to obtain the roots of a second order equation is presented:  
@@ -25,8 +84,8 @@ when the discriminant is negative. Whereas the root of a real negative number is
 the root of a negative number has a value for complex numbers. 
  
 \vspace{0.5cm}
+\lstfor
 \listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{Roots.f90}
-
 
 
 \newpage 
@@ -37,8 +96,8 @@ Python automatically declares them. In addition, indentation rules must be stric
 \vspace{0.5cm} 
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/Roots} 
-\listings{\home/Roots.py}{from}{output}{Roots.py}
-\lstfor
+\listingsp{\home/Roots.py}{from}{output}{Roots.py}
+%\lstfor
   
   
  

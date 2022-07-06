@@ -4,9 +4,27 @@ Program main
     use Foundations, only                     : menu_foundations  
     use integers_and_reals, only              : menu_Integers_and_reals
     use advanced_programming_techniques, only : menu_advanced_programming_techniques
-       
+     
+     ! use pointers, only              : pointer_examples
+     use overloading, only           : test_integral 
+     use First_class_functions
+     use map_filter_reduce
+      
     implicit none 
     integer :: option 
+   
+    call test_rotation
+    stop 
+    
+    !call test_integral 
+    !stop 
+    ! call pointer_examples 
+    !stop 
+    !
+    call Fibonacci_numbers
+    stop 
+    call pure_functions
+    stop 
     
 option = 1     
 do while (option>0) 

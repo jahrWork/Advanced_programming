@@ -1,12 +1,14 @@
  module Foundations 
     
-  use Roots, only : Roots_2th  
-  use Sum_series, only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
-  use Matrix_operations, only : Matrix_operation_examples
-  use Dynamic_allocation, only : Matrices_allocation
+  use Roots,                 only : Roots_2th  
+  use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
+  use Matrix_operations,     only : Matrix_operation_examples
+  use Dynamic_allocation,    only : Matrices_allocation
+  use vectors_and_matrices,  only : dot_product_examples, matmul_examples, greatest_difference
+  use Fourier,               only : Fourier_examples
   use Integrals_derivatives, only : Integral_and_derivative_examples
-  use Series_expansion, only : Taylor_expansion_examples
-  use Read_files, only : Test_load_matrix
+  use Series_expansion,      only : Taylor_expansion_examples
+  use Read_files,            only : Test_load_matrix
  
   implicit none 
   
@@ -53,6 +55,10 @@ do while (option>0)
      
      case(5) 
           call Matrices_allocation()
+          call dot_product_examples
+          call matmul_examples
+          call greatest_difference 
+          call Fourier_examples
          
      case(6) 
            call Integral_and_derivative_examples()

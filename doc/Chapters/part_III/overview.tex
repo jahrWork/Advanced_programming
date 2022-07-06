@@ -29,6 +29,21 @@ allows to use different data types at run time.
                
                
 \section{Data types} 
+
+Each constant, variable, array or function in a programming language has an intrinsic data type associated. 
+This type decides among other things the permitted values that the entity can have or the set of operations that can be performed with them.
+For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 
+Then, a value $x\in \mathbb{Z}$ will be stored in an \texttt{integer} variable and operations like addition, multiplication or exponentiation are allowed. 
+
+The data typing in a programming language could be explicit if the programmer needs to decide and declare the type for each variable or implicit when the language assumes the type. 
+Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
+Python is mainly an implicit typing language since we can assign a value to a variable without declaring type, i.e. \texttt{a = 3} will automatically treat \texttt{a} as an integer. 
+Fortran, on the contrary, is a explicit typing language because all variables must be previously declared with a specific type, i.e. \texttt{real :: x = 5.6}.
+
+
+
+
+
 \section{Scope} 
 
 One of the most important matters that we need to understand when we begin to write our own codes in any programming language is the scope. 

@@ -1,5 +1,101 @@
+%__________________________________________________________________________________________________
+\chapter{Data types} 
  
-  %__________________________________________________________________________________________________
- \chapter{Data types} 
- 
- \section{Introduction}
+    \section{Introduction}
+
+In the following examples the intrinsic data types in Fortran and Python are presented through some basic examples. 
+
+Notice that Fortran provides five intrinsic data types but derived data types can be created either from intrinsic data types or from other derived types previously defined.
+The five intrinsic types are of numeric nature: \texttt{integer}, \texttt{real} or \texttt{complex}, boolean nature: \texttt{logical} or text nature: \texttt{character}.
+
+The numeric types of data behave like the mathematical abstractions of these sets while the boolean type gets the two possible values of the Boolean algebra; \texttt{True} and \texttt{False}. 
+The \texttt{character} type can store strings with ASCII characters which includes alphanumeric, symbols and signs characters.   
+
+The same data types are built-in in Python but with a different name (\texttt{int}, \texttt{float}, \texttt{complex}, \texttt{bool} and \texttt{str}). 
+In addition, more data types can be found by default; of sequence nature: \texttt{list}, \texttt{tuple} or \texttt{range}, mapping nature: \texttt{dict} or set nature: \texttt{set} among others. 
+
+These new types are used to store collections of data that can be at the same time any type of data. For example a list can contain strings together with integers and reals. 
+A \texttt{list} is characterised by being ordered; the position within the list is kept, changeable; change, add, and remove items are allowed when needed in the execution of the code and allow duplicates; items can appear more than one time in the list, the difference between both elements comes with the index within the list. 
+A \texttt{tuple} is quite the same than a \texttt{list}: ordered data collection that allows duplicates, however, these are unchangeable which means that once created we cannot change, add or remove items. 
+Python allocates the required memory once and not reallocates it so this becomes a more memory efficient strategy.
+
+A \texttt{set} in Python is also a collection of any type of data but in this case unordered and not allowing duplicate values. 
+Notice that an element within the set, since it is not stored in a defined order (with an integer index pointing to them), two equal elements could not be distinguished.
+In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
+The \texttt{frozenset} is similar but once created its content can not be modified. 
+%Finally, a dictionary 
+
+
+
+    \newpage  
+    \section{Fortran}
+
+\begin{verbatim}
+program data_types
+
+implicit none
+
+character (len=10,kind=1) :: string = 'data types'
+integer :: int = 1
+real :: x = 1.8
+complex :: com = (1,1)
+logical :: bool = .true.
+
+end program
+\end{verbatim}
+
+
+
+
+
+
+
+    \newpage
+    \section{Python}
+
+\begin{verbatim}
+def data_type(): 
+
+string = "data types"
+integer = 1 
+real = 1.8 
+complex = 1 + 1j
+bool = True
+
+sets = "unordered set with distinct elements" 
+S = {string, integer, real, complex} 
+
+# print order is unpredictable 
+print("\n type=", type(S)) 
+for s in S: 
+print(" element =", s)
+
+lists = "ordered set allowing equal elements" 
+S = ["one", 5, 3.5, 5] 
+
+# lists are ordered  
+S[3] = 8
+print("\n type=", type(S))   
+for i in range(len(S)): 
+print(" element =", S[i]) 
+
+
+tuples ="inmutable ordered set" 
+S = ("one", 5, 3.5, 5)  
+
+# tuples are inmutable 
+print("\n type=", type(S))
+for i in range(len(S)): 
+print(" element =", S[i])   
+print("\n")   
+
+dictionaries = "ordered data values in key:value pairs"
+# mutable and do not allow duplicates"
+arrays = {"set":sets, "list":lists, "tuple":tuples, "dictionary":dictionaries} 
+
+for e in arrays:  
+print("{:12} {} {}".format(e, ":", arrays[e]) )
+print("\n")
+\end{verbatim}
+
+

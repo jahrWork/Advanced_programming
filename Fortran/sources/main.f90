@@ -5,26 +5,39 @@ Program main
     use integers_and_reals, only              : menu_Integers_and_reals
     use advanced_programming_techniques, only : menu_advanced_programming_techniques
      
-     ! use pointers, only              : pointer_examples
+     use pointers, only              : pointer_examples
      use overloading, only           : test_integral 
      use First_class_functions
      use map_filter_reduce
+     use polymorphic_ODES
       
     implicit none 
     integer :: option 
    
-    call test_rotation
-    stop 
+    
+     
+     !call referential_transparency
+     !stop 
+    
+    !call complex_ODES 
+    !stop 
+    !
+    
+    !call test_filter_reduce
+    !stop 
+    !
+    !call test_rotation
+    !stop 
     
     !call test_integral 
     !stop 
-    ! call pointer_examples 
-    !stop 
+     call pointer_examples 
+    stop 
     !
-    call Fibonacci_numbers
-    stop 
-    call pure_functions
-    stop 
+    !call Fibonacci_numbers
+    !stop 
+    !call pure_functions
+    !stop 
     
 option = 1     
 do while (option>0) 

@@ -1,5 +1,7 @@
 
-from numpy import array, max, zeros, cos, sin, matmul, pi 
+from numpy import array, max, zeros, cos, sin, matmul, pi, argmin
+from numpy.linalg import norm  
+import random
 import matplotlib.pyplot as plt
 
 def str_to_number(str):
@@ -18,20 +20,12 @@ def g(x):
 def test_map_filter_reduce(): 
 
     print( " map, filter and reduce " ) 
-    sp = array( ["123", "111", "444", "555"] ) 
-    m = array( [1, 2, 3, 4] )
+    sp = ["123", "111", "444", "555"]  
 #   MAP 
-    m =  array( list( map(str_to_number, sp) ) ) 
-    #m[:] = str_to_number( sp[:] ) # it does not work 
-    #N = len( sp )
-    #for i in range(N) : 
-    #    m[i] = str_to_number( sp[i] )
-    m = g( m ) # it works with functions 
-   
+    m =  list( map(str_to_number, sp) )
 
 #   FILTER
-    f =  array( list( filter(my_filter, m) ) ) 
-    f = f [ f > 200 ] # similar filter 
+    f = list( filter(my_filter, m) )  
 
 #   REDUCE 
     r =  max(m) 
@@ -51,7 +45,10 @@ def Rotation(P, theta):
       
       return matmul(A, P) 
     
-
+def distance(P, P0):
+    
+   return norm( P - P0 )
+     
 
 def test_rotation(): 
 
@@ -63,8 +60,40 @@ def test_rotation():
      plt.plot( image[:,0], image[:,1] )
      plt.plot( imageR[:,0], imageR[:,1] )
      plt.show()
-   
+ 
+def filter_d(P, R1, R2):
+      
+        d = norm( P )
+        return   d < R2 and d > R1  
+     
+
+def test_filter_reduce():  
+
+     N = 10000
+    
+     set = array( zeros( [N, 2]) )
+     random.seed(1)
+
+     for i in range(N):  
+         r = [ random.uniform(-1, 1), random.uniform(-1, 1)]
+         set[i,:] = r 
+          
+     subset = array(list( filter( lambda x: filter_d(x, 0.4, 0.7), set)))
+     
+     P0 = array( [0.5, 0.5] )
+    
+     v = array(list( map( lambda x: distance(x, P0), set) ))  
+     i = v.argmin()
+     P1 = set[i] 
+     print( "Nearest point P =", P1 ) 
+     
+     plt.plot( set[:,0], set[:,1], ".")
+     plt.plot( subset[:,0], subset[:,1], ".")
+     plt.show() 
+ 
 
 if __name__ == '__main__':  
    test_map_filter_reduce()
+   #exit()
    test_rotation()
+   test_filter_reduce() 

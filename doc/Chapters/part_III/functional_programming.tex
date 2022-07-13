@@ -9,10 +9,15 @@ by Alonzo Church (1903-1995).
 Alan Turing (1912-1954), who was a student of Alonzo Church, created the 
 universal Turing machine which laid the foundation of imperative 
 programming style.
-Python and Fortran both support functional programming in some degree.  
+In 1957, Fortran language was created by John Backus(1924-2007).
+In 1977, Backus described the Function Programming (FP) in his famous Turing Award lecture:
+ "Can Programming Be Liberated from the von Neumann Style?".
+%In the mid 1980s Backus and his colleagues came up with the language FL. 
+%Python and Fortran both support functional programming in some degree.  
 In this chapter, the following concepts, associated to functional 
-programming, will be discussed through  different examples 
+programming paradigm, will be discussed through  different examples 
 for Python and Fortran:  
+\vspace{-0.25cm}
 \begin{enumerate} 
  \setlength\itemsep{0cm}
 \item First-Class functions.
@@ -20,9 +25,10 @@ for Python and Fortran:
 \item Recursion. 
 \item Map, filter and reduce elemental functions.  
 \item Modularity. 
-\item Closure.
+%\item Closure.
 \item Referential transparency. 
 \end{enumerate} 
+\vspace{-0.25cm}
 Main advantages of functional programming are: its closeness 
 to mathematical formulation, its ability to avoid side effects and 
 its modularity to partition complex problems into easier ones.
@@ -284,28 +290,25 @@ Mapping applies to any set: a collection of objects.
 is a map from $ A $ to $ B$; for every 
 $ a $  in $ A$, there is a unique object $ f(a)$  in $ B$.
 For example, rotating 
-a body about a point is map that transform the body coordinates into new coordinates 
+a body about a point is a map that transforms the body coordinates into new coordinates 
 keeping the axes fixed. 
 
 
+
+A filter tests each element of a set with a unary predicate. 
+Elements that satisfy the predicate are kept and  those that don’t are removed. 
 A filter on a set $ X $ is 
-a special family of subsets. A filter on a set may be thought 
-of as representing a "collection of large subsets".
-Filters in topology can be used to study topological spaces 
-and define all basic topological notions such a 
-convergence, continuity, compactness, and more.
-One of the first examples of a filter is the neighborhood filter 
-$\mathcal{N}(x) $ at a point 
-$ x$  in a topological space 
-$(X,\tau )$ 
-which is the family of sets consisting of all neighborhoods of $x$.  
-By definition, a neighborhood of some given point $x$  
-is any subset $  B \subseteq X $ 
-whose topological interior contains this point; 
-that is, such that $ x \in \operatorname {Int} _{X}B.$
+a subset  $ B \subseteq X $.
+
+
+Reduce combines the elements of the set together using a binary function to get a scalar result. 
+Examples of functions that perform reduction on arrays are: sum, product, all, any, minval,  maxval, maxloc
+and minloc.
 
 
 
+ 
+ 
 
 
 \vspace{1cm} 
@@ -380,219 +383,265 @@ for a generic point. Note that the keyword \verb|map| allows this mapping.
 The first argument of \verb|map| is the scalar function to be applied to each element 
 of the set and the second argument is the set. Since \verb|Rotation| has two arguments: 
 point and angle to be rotated, a \verb|lambda| function is used to define a 
-new function with of only one argument.  
+new function with only one argument.  
 
 
 
   
   
  \newpage 
-\subsection{Filter}   
+\subsection{Filter and reduce} 
+In Fortran, filtering is accomplishing by the intrinsic function \verb|pack| and
+reduce operation with different functions. In this example, \verb|minloc| is used.   
+A set of random two dimensional points is generated 
+in the square $ [-1, 1] \times [-1,1]$.  This set of points is filtered through the \verb|filter|
+function which determines if the point is inside the region enclosed between
+the two concentric circles of radius \verb|R1| and \verb|R2|. Since the function \verb|filter|
+has \verb|elemental| attribute, the statement \verb|filter(set, 0.4, 0.7)| constitutes 
+a mapping for all elements of \verb|set|. The intrinsic function \verb|pack|
+filters the complete \verb|set| yielding a \verb|subset|. Finally, \verb|minloc| is used 
+as an example of reduce functions. 
+
+\vspace{-0.5cm}
+  \subsection*{Fortran} 
+  \renewcommand{\home}{./Fortran/sources/Advanced_programming/functional programming} 
+   \lstfor
+  \listings{\home/map_filter_reduce.f90}{subroutine test_filter_reduce}
+  {Nearest}{map_filter_reduce.f90}
+   
+  \listings{\home/map_filter_reduce.f90}{function filter}
+  {end function}{map_filter_reduce.f90}
+  
+  
+\newpage 
+\subsection*{Python}
+In Python, filtering is accomplishing by the intrinsic function \verb|filter| and
+reduce operation with different functions. In this example, \verb|armin| is used.   
+A set of random two dimensional points is generated 
+in the square $ [-1, 1] \times [-1,1]$.  
+This set of points is filtered through the \verb|filter_d|
+function which determines if the point is inside the region enclosed between
+the two concentric circles of radius \verb|R1| and \verb|R2|. Since the function \verb|filter_d|
+has three arguments, a lambda function is used to meet the requirement of the first a argument 
+of the function \verb|map|. The result of \verb|filter| is transformed a list and later to a
+numpy array.  Finally, \verb|argmin| is used 
+as an example of reduce functions.  
+  
+\vspace{0.5cm}   
+  \renewcommand{\home}{./Python/sources/Advanced_programming/functional programming}
+  \lstpython
+  \listingsp{\home/map_filter_reduce.py}{def test_filter_reduce}
+  {Nearest}{map_filter_reduce.py}
+  \listingsp{\home/map_filter_reduce.py}{def filter_d}
+  {return}{map_filter_reduce.py}
+   \listingsp{\home/map_filter_reduce.py}{distance}
+    {return}{map_filter_reduce.py}
+  
+  
   
  \newpage 
  \subsection*{Fortran} 
+ In this last example, an array of char strings
+ containing numbers  is transformed to an array numbers by means of a mapping. 
+ Then, the array is filtered (\verb|pack|) retaining only those elements which are greater than 
+ 200 and, finally, a reduce function \verb|maxval| is used  to obtain the maximum value of the 
+ array. 
+ \vspace{0.5cm}
  \renewcommand{\home}{./Fortran/sources/Advanced_programming/functional programming} 
   \lstfor
  \listings{\home/map_filter_reduce.f90}{subroutine test_map_filter_reduce}
  {end subroutine}{map_filter_reduce.f90}
-  
+  \vspace{0.5cm}
  \listings{\home/map_filter_reduce.f90}{elemental integer function str_to_number}
  {end function}{map_filter_reduce.f90}
  
  
- \newpage 
- \subsection*{Python}
+\newpage 
+\subsection*{Python}
+In this last example, a list  of char strings
+containing numbers is transformed to a list of numbers by the \verb|map| function. 
+Then, the list is filtered (\verb|filter|) with \verb|my_filter| predicate
+retaining only those elements which are greater than 
+200 and, finally, a reduce function \verb|max| is used to obtain the maximum value of the 
+list. 
+ \vspace{0.5cm}
  \renewcommand{\home}{./Python/sources/Advanced_programming/functional programming}
  \lstpython
  \listingsp{\home/map_filter_reduce.py}{def test_map_filter_reduce}
  {max value}{map_filter_reduce.py}
+ \vspace{0.5cm}
  \listingsp{\home/map_filter_reduce.py}{def str_to_number}
  {return}{map_filter_reduce.py}
+ \vspace{0.5cm}
+ \listingsp{\home/map_filter_reduce.py}{def my_filter}
+  {return}{map_filter_reduce.py}
  
  
-
-
-Named parameters and default parameters  
-
 \newpage   
 \section{Modularity} 
+Modular programming is a software design technique that separates 
+the functionality of a program into independent modules containing 
+specific aspects  of the required functionality.
+Modular programming developed in the late 1960s and 1970s, 
+as a larger-scale analog of the concept of structured programming (1960s).
+Structured programming was developed to improve the clarity of a computer 
+program by making use of the structured control flow sentences (if/then/else, while/for).
+Modular programming  refers to the high-level decomposition of the code 
+and structured programming refers 
+to the low-level code use of structured control flow.
+
+Python and Fortran allows to develop huge programs based on different modules.
+In Python,  modules are source Python files containing functions that 
+can be imported or used easily from another Python file. It can be considered a Python library. 
+In Fortran, modules are specified by the name \verb|module xxx| and they can be stored in Fortran
+source files. To follow the same methodology than Python, it is advisable to name that 
+Fortran source file with same name  than the module storing only one module per file. This 
+Fortran file \verb|contains| functions. 
+Since Python is an untyped language, interface of functions is unknown when imported. 
+This is a double-edge sword. The favorable consequence is the same function could be used 
+for different data types if the involved operations are defined. The bad consequence is that 
+errors associated to wrong use of the functions are only detected at run time. 
+On the contrary, Fortran has explicit interface of all public functions contained in some module 
+when it is used. This explicit interface allows to correct 
+implementing errors at compiling time. However, overloading is needed when 
+calling those functions with new types. 
+In both languages, modularity is a pillar in functional programming creating 
+abstractions in a hierarchical fashion.
+
+For example, to solve a nonlinear system of partial differential equations, 
+the following layers or modules can be defined: 
+\begin{enumerate}
+\setlength\itemsep{0cm}
+\item Application layer: solve a nonlinear system of partial differential equation. 
+\item Discretization layer: discretization method for partial differential equations.  
+\item Non linear solver: functions to solve nonlinear system of equations 
+such as Newton method.
+\item Linear algebra:  methods to solve linear systems of equations. 
+\end{enumerate}
+The original complex problem is formulated by functional composition into smaller
+or simpler problems or functions. 
+One of the main goals of modularity in functional programming is the ability to 
+build different methods of different modules without knowing the functionality of 
+other modules. Besides, an extra effort must be put to define the hierarchical 
+structure.  
 
 
  
-  The only input to a pure function is its argument list and the only output is its return value. 
-  If you haven’t seen this before, you might 
-  think all functions are pure. After all, any function takes in values and returns a value.
-   But in conventional programming there are 
-  typically out-of-band ways for information to flow in or out of a function. 
-  For example, an impure function may depend on a global variable 
-  or class member data. 
-  In that case, it’s behavior is not entirely determined by its arguments. Similarly, an impure function might set a 
-  global variable or write to a database. 
-  In that case the function has a side effect in addition to its return value.
-  
-  You can write pure functions in any language, 
-  though it’s easier in some languages than others. 
-  For example, no one would call Fortran a 
-  functional language, but there are people (M. J. D. Powell comes to mind)
-   who discipline themselves to write pure functions in Fortran.
-  
-  
-  
-  
-  So why don’t programmers use pure functions more often? 
-  One reason is that pure functions require longer argument lists. 
-  In an object 
-  oriented language, object methods can have shorter argument lists 
-  by implicitly depending on object state. 
-  The price to pay for shorter 
-  method signatures is that you can’t understand a method by itself. 
-  You have to know the state of the object when the method is called. 
-  Is 
-  it worthwhile to give up referential transparency in order to have shorter method signatures? 
-  It depends on your context and your taste, 
-  though in my opinion its often worthwhile to use longer function 
-  signatures in exchange for more pure functions.
-  
-  Another reason people give for not writing pure functions 
-  is that its too expensive to copy large data structures to pass them into a 
-  function. But that’s what pointers are for. You can conceptually 
-  pass an object into a function without having to actually make a copy of 
-  the object’s bits.
-  
-  You can also fake purity for the sake of efficiency. 
-  For example, Mike Swaim left a comment recently giving an example of how memoization 
-  sped up a program by several orders of magnitude. 
-  (Memoization is a technique of caching computations. When a function is asked to compute 
-  something, it first looks to see whether it has already done the calculation. If so, it returns the cached value. If not, it does the 
-  calculation and adds its output to the cache.) 
-  
-  A function that uses memoization is not strictly pure — 
-  its calculations have a persistent 
-  impact on the state of its cache —
-   but such a function can still have referential transparency, always returning the same output given the 
-  same input. 
-  You could say it’s cheating to call such functions pure, 
-  and it is, but if you’re really a stickler about it, all pure 
-  functions have side effects.
-  
-  
 
- 
- 
- 
-
-
-
-
-
-
-
-
-
- In particular, in computer science, modular structure is typically held to
- support understandability, reliability, the possibility of independent development, flexibility, and reuse. Transferring notions of 
- modularity to mathematics
- provides insight as to how these benefits are achieved in that setting as well.
- This perspective is largely orthogonal to traditional approaches to addressing ontological and epistemological questions. In particular, it 
- seems equally
- compatible with realist and antirealist views of mathematics. But in addition
- to being independently valuable, a better understanding of what we value in
- mathematics, and why, can inform traditional lines of inquiry as well. For example, it can provide a more robust picture of how our 
- mathematical language
- deals with mathematical objects, and what it is about such objects that gives
- them the air of reality
- 
- 
- 
- Modular programming (also referred to as modular architecture) is a general programming concept. It involves separating a program's 
- functions into independent pieces or building blocks, each containing all the parts needed to execute a single aspect of the functionality
- 
- Modular programming is a software design technique that emphasizes separating the functionality of a program into independent, 
- interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality.
- 
- A module interface expresses the elements that are provided and required by the module. The elements defined in the interface are detectable 
- by other modules. The implementation contains the working code that corresponds to the elements declared in the interface. Modular 
- programming is closely related to structured programming and object-oriented programming, all having the same goal of facilitating 
- construction of large software programs and systems by decomposition into smaller pieces, and all originating around the 1960s. While the 
- historical usage of these terms has been inconsistent, "modular programming" now refers to the high-level decomposition of the code of an 
- entire program into pieces: structured programming to the low-level code use of structured control flow, and object-oriented programming to 
- the data use of objects, a kind of data structure.
- 
- In object-oriented programming, the use of interfaces as an architectural pattern to construct modules is known as interface-based 
- programming.[c
- 
- 
- CODING FORTRAN: INTERFACE BLOCKS (MODULARITY)
- 03/02/2021
- Interface blocks provide a means of doing type checking between the calling subprogram, and the called subprogram. Incorrect types between 
- the calling arguments, and the subprogram parameters is a common source of problems. This doesn’t happen as much in languages such as C, 
- because if a real parameter is given as an argument to a subprogram which expects an integer it is merely truncated. Why use an interface 
- block? Largely because it is good programming practice to include explicit interfaces, even if they are not required.
- 
- 
  
  
   
-\newpage  
-\section{Closure} 
-
- 
- \newpage 
-  \renewcommand{\home}{./Fortran/sources/Advanced_programming/functional programming} 
-  \listings{\home/First_class_functions.f90}{real function Moment}
-  {end function}{First_class_functions.f90}
-  
-
- and lexical scoping
-
-
-Lexical scoping defines how variables are seen in nested functions.
-When functions are defined inside other functions, the scope of this inner 
-function comprises local variables of the actual function and 
-local variables of those outer or parent functions.
-
-
- 
-inner functions contain the scope 
-of parent functions even if the parent function has returned.
- 
+%\newpage  
+%\section{Closure} 
+%
+% 
+% \newpage 
+%  \renewcommand{\home}{./Fortran/sources/Advanced_programming/functional programming} 
+%  \listings{\home/First_class_functions.f90}{real function Moment}
+%  {end function}{First_class_functions.f90}
+%  
+%
+% and lexical scoping
+%
+%
+%Lexical scoping defines how variables are seen in nested functions.
+%When functions are defined inside other functions, the scope of this inner 
+%function comprises local variables of the actual function and 
+%local variables of those outer or parent functions.
+%
+%
+% 
+%inner functions contain the scope 
+%of parent functions even if the parent function has returned.
+% 
 
 
 \newpage  
 \section{Referential transparency}  
+In functional programming, referential transparency is defined as the fact that an 
+math expression involving function evaluations can be
+simplified or rewrite in different order without changing the result of the program.
+The concept was originated in Alfred North Whitehead and 
+Bertrand Russell's Principia Mathematica (1910–13).
+Mathematical concepts, such as simplification or factorization applies also
+to functional programming. Imagine, for example, the following math expression: 
+\begin{equation}
+g(x) + g(x) \ ( h(x) - 1 ). 
+\end{equation} 
+By extracting the common factor $ g(x) $, the expression simplifies to yield: 
+\begin{equation}
+ g(x) \  h(x). 
+\end{equation} 
+This is always true for mathematical functions. However, 
+when trying to simplify expressions in a programming code, it is only valid when dealing 
+with pure functions. 
+Imagine the following example with  $ g(x) $ impure: 
+ \vspace{0.5cm}
+ \renewcommand{\home}{./Fortran/sources/Advanced_programming/functional programming} 
+  \lstfor
+  \listings{\home/First_class_functions.f90}{referential_transparency}
+ {end function}{First_class_functions.f90}
+Every time $ g(x) $ is evaluated, the statement \verb|b=b+1| increases by one the 
+\verb|b| variable
+yielding different values of $ g(x)$ for identical values of its argument $x$ 
+($g(x)$ is an impure function). 
+In this example, the first expressions gives \verb|3.0| and the simplified expression 
+gives  \verb|5.0|. It is said tha the above expression is not referentially transparent 
+and this simplification is not allowed or gives different results. 
+Referential transparency is desirable property 
+to factorize or simplify programming codes. 
+%To attain referential transparency, all functions and procedures 
+%should be pure.  
+If all functions involved in some expression are pure functions, 
+then the expression is referentially transparent.
 
 
-  Why write pure functions? A pure function has referential transparency, meaning it will always return the same value when given the same 
-  inputs. The output does not depend on the system time, the state of a database, which functions were called previously, or anything else 
-  that is not explicitly passed as an argument to the function. This means pure functions are easier to understand (and hence easier to debug 
-  and test).
+\newpage
+\subsection{Benefits of referential transparency} 
+When developing huge numerical codes, specifications are not always perfectly clear. 
+Final specifications usually evolve with results of different tests. Besides, it is very easy to 
+write impure functions when external or global variables are needed.
+Math abstractions are explored and defined at the same time or after the code is functional. 
+Additionally,  when different developers are involved,  
+similar or repetitive functions are written making grow the code unnecessarily. 
+All these issues usually originate  huge codes that should be 
+rewritten to yield: robust, easy to maintain, more efficient and fast codes. 
+From the point of view of the authors, these issues eventually originate 
+the following three categories of programming code: 
+\begin{enumerate}
+\item Spaghetti code. Usually, imperative programming dominates the scenario. 
+\item Encapsulated code. Some effort is put in functions isolation but a real hierarchical 
+ structure is missing. 
+\item Multilayer code. Simple math abstractions are encapsulated in pure functions and 
+more complex functions are built by function composition of pure functions. 
+\end{enumerate}
+The main benefit of referential transparency  is
+the ability to read, understand, reason about and modify our 
+functions without altering the external world. 
+When the code is written with pure functions, different developers are able to write 
+their pure functions without knowing the code of other programmers or other layers. 
+Even if they need the outputs of some layers that are not written yet, the referential
+transparency allows to substitute these functions by emulators that gives
+the value it is supposed to yield. 
 
 
+Functional programming  with referential transparency or pure functions allows to rewrite and reorder 
+a huge programming code easier than imperative programming. 
+The semantics of an imperative programming language is based on definition 
+and ordering of different sequence points.
+If the substitution of an expression with its value is valid only at a certain point 
+in the execution of the program, then the expression is 
+not referentially transparent. 
+However, pure functional programming 
+is referentially transparent and expressions can be evaluated at any time. 
+Hence, there is no need to define sequence points and no need 
+to guarantee of the order of evaluation. 
+This advantage allows to test the code with compilers or to refactor
+the code with intelligent tools. 
 
-Pure functions are easier to understand because 
-they don’t change any states and depend only on the input given to them. 
-Whatever output they 
-produce is the return value they give. 
-Their function signature gives all the information 
-about them i.e. their return type and their 
-arguments.
-The ability of functional programming languages to treat functions as values and pass them to functions as parameters make the code more 
-readable and easily understandable.
-
-Testing and debugging is easier. 
-Since pure functions take only arguments and produce output, they don’t produce any changes don’t take input 
-or produce some hidden output. 
-
-They use immutable values, 
-so it becomes easier to check some problems in programs 
-written uses pure functions.
-
-It is used to implement concurrency/parallelism because pure functions 
-don’t change variables or any other data outside of it.
-It adopts lazy evaluation which avoids repeated evaluation
-because the value is evaluated and stored only when it is needed.
-
-
+Other benefits of referential transparency is refactoring and maintenance tasks. 
+Huge numerical programming codes are always evolving by including new functionalities 
+or by improving theirs performances. 
 
   
   

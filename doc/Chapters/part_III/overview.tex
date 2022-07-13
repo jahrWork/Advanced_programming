@@ -15,7 +15,7 @@ allows to use different data types at run time.
     
   \vspace{0.5cm}
    \renewcommand{\home}{./Fortran/sources/Advanced_programming} 
-   
+   \lstfor
     \listings{\home/advanced_programming_techniques.f90}{while}{Wrapper}
              {advanced_programming_techniques.f90}
   
@@ -23,12 +23,12 @@ allows to use different data types at run time.
   
    \vspace{0.5cm}
      \renewcommand{\home}{./Python/sources/Advanced_programming} 
-     
-      \listings{\home/advanced_programming_techniques.py}{while}{Wrappers}
+     \lstpython
+      \listingsp{\home/advanced_programming_techniques.py}{while}{Wrappers}
                {advanced_programming_techniques.py}
                
 
-            
+\newpage            
 \section{Scope} 
 
 One of the most important matters that we need to understand when we begin to write our own codes in any programming language is the scope. 
@@ -55,15 +55,173 @@ As a general rule, the use of global variables should be reduced as possible, th
 
 
 \section{Functional Programming}
+Scitientifc programming is very close 
+to mathematics. Numerical schemes and approximation are grounded on vector spaces of finite and 
+infinite dimensions. Hence, experts developers have a deep knowledge of mathematics and they 
+feel conformable when writing in codes that mimic the mathematical functions. 
+Functional programming paradigm allows mathematician to talk the same language that they are used to. 
+There are also other reasons why functional programming is growing in popularity. 
+\begin{enumerate}
+\item Complex simulations involve complex process of data. Functional programming avoids 
+the control flow by concentrating in what to do. When complexity grows exponentially, 
+functions should work independently of the outer world. 
+\item Hierarchical knowledge based on function composition and abstraction layers. 
+Functional programming is grounded on lambda calculus and in function composition concepts that 
+allow to build huge codes with different abstraction layers organized in a knowledge hierarchical fashion. 
+\item Parallel programming. 
+Since computational requirements are growing with more realistic simulations, parallel programming is
+becoming a common reality. Different functions are run simultaneously in different processors. 
+ Functional programming adapts flawlessly to the parallel programming 
+strategy by minimizing side effects with pure functions. 
+\end{enumerate}
+Object oriented languages tend to be imperative performing actions sequentially.  
+Sentence are  put in order to understand how the program performs and variables are followed
+to achieve the desired result. On the contrary, when developing codes with functional 
+programming paradigm, the driver is the function or what to do. 
+Functional programming is  declarative which means that functions are built by functional composition
+and no flow control is followed. Its power lies in declarativity and expressivity.
 
-to mimic the mathematical functions 
+Functional programming concentrates on operations like mapping which transform a complete set 
+of elements in another set or collection of objects by means of a pure function.  
+There is no need to follow the flow ot the program to check the right performance of the operation. 
+It looks really elegant.
 
+Everything started with the hardware.
+Imperative style suited better for hardware due to the von Neumann architecture. 
+John Backus in 1977 asked in his famous Turing Award lecture:
+ "Can Programming Be Liberated from the von Neumann Style?". 
+ It was the origin of functional programming. 
+
+
+\newpage 
 \section{Overloading} 
+Scientific programming has common operations that are performed for different 
+space domains or different data types. In those cases, functions or operators can be  overloaded 
+to generalize different types or data structures.  
+Overloading is usually referred to:  
+\begin{enumerate}
+\item Function overloading.
+\item Operator overloading.
+\end{enumerate}
+Functional overloading refers to creation of multiple functions with the same name but with different implementations. 
+Calls to an overloaded function will run a 
+specific implementation of that function depending on the arguments of the call. 
+Function overloading is usually named: static polymorphism in which a function call is resolved by matching 
+type, kind and rank of actual arguments with a function with same type, kind and rank of dummy arguments.
+Function overloading is usually associated with statically-typed programming languages such as Fortran. 
+The determination of which function to use for a particular call is resolved at compilation time.
+Those languages which are untyped, such as Python, do not support function overloading. 
+
+
+Operator overloading complements the definition of classical operators for operands of new types. 
+For example, the operator \verb|*| is natively overloaded for real or complex numbers. 
+In automatic differentiation technique, dual numbers 
+$$ z = a + b \epsilon
+$$ 
+with $\epsilon^2=0$ 
+are defined to calculate exact derivatives of real functions. 
+If basic operators and intrinsic functions are overloaded for those dual numbers, 
+this technique allows to calculate 
+exact derivatives of real functions is implemented very easily. 
+
+Operator overloading is syntactic sugar which means that things are made easier to read or to express.
+It makes the language "sweeter" for human use.
+Sometimes, operator overloading is termed operator {\it ad hoc} polymorphism.
+In scientific computing, operator overloading allows to manipulate objects with the same syntax as on paper.
+
+
+
+\newpage 
 \section{Object Oriented Programming}
+
+\newpage 
 \section{Pointers} 
+
+A pointer is a variable that stores a memory address. 
+This memory address refers to some number, array of numbers or some object. 
+The same memory address can be stored in different pointers that represent  
+objects or arrays with different shapes or ranks. 
+There are  distinct uses of pointers: 
+\begin{enumerate}
+\item To improve performance for repetitive operations and to optimize memory management. 
+If program processes a large data set, it is usually cheaper to operate contents through 
+its address or reference instead of copying to some other variable he data set. 
+\item To hold the addresses of entry points of functions. Pointers to functions 
+are used to compose new functions or to bind methods. 
+\item To pass arguments or functions to other functions.
+When functions are called, inputs arguments can be passed by value or by reference or address. 
+In Fortran, if arguments are scalar, they are passed by value but if arguments are arrays or other objects, 
+arguments are passed by reference. 
+In Python, all arguments are passed by reference. 
+\item To see the same data structure  with different shapes. 
+In simulation programs, when discretizing space domain, 
+it is desirable to work  with variables shaped as tensors of some specific rank. 
+When discretizing the time domain, temporal schemes work with column vector of data. 
+These two different ways of working with variables can be done through pointers with different shape pointing to
+the same space of memory. 
+\item To connect blocks for simulating multi-domain dynamical systems. 
+This type of systems is characterized by a set of black boxes or pure functions which are connected to 
+each other. Outputs of different blocks are connected to inputs of other blocks. 
+This dynamical system is built by creating different blocks or functions and then  
+connecting outputs with inputs by pointing different variables. 
+
+\end{enumerate}
+Because pointers allow access to memory addresses, 
+there are risks associated with using them and their use should be restricted to advanced 
+programmers because the learning curve is very steep. 
+Python does not have pointers even though every object is a pointer internally. 
+Languages such as Fortran has restricted their use to be safer. For example, 
+when calling a function, array arguments are passed by reference and
+Fortran checks the TKR(type, kind, rank) rule to match dummy arguments with actual 
+arguments. Besides, the compiler allows to array bounds checking
+to verify that the pointer or the actual argument contains 
+a value that is a valid memory address.
+
+
+\newpage 
 \section{Wrappers} 
+
+\newpage 
 \section{Mixing Python and Fortran}
+
+\newpage 
 \section{Parallel programming} 
 
+
+Processors however, reached the ceiling in terms of the frequency in which the operations 
+could be performed, and thus a new trend appeared – 
+parallelism. Such processors like Core 2 Duo started to appear and they were having 2, 4, 8 
+and more independent cores.
+
+But in order for computations to be done in parallel, the program has to have a very small state – 
+it has to be decomposed and as simple as 
+possible. Otherwise there will be a high possibility of system parts having to depend on each other. 
+Consequently, the calling order of the 
+functions can affect the final result.
+
+Previous paradigms (including OOP) did not limit this state, and its small size could be guaranteed 
+by the developer only. In functional 
+programming it happens due to the paradigm itself. That’s why for the majority of programs in functional 
+languages, it is easier to realize 
+parallelization, and it works more efficiently.
+
+
+
+That’s my personal opinion. The interest towards functional languages in the last 10-20 years has been rising.
+ But there are still not many 
+vacancies, and the community is rather small. If you are a JavaScript developer, it would be easier for you 
+to find a job.
+
+There is a tendency however that demand for functional developers keeps rising, and in theory affects salaries. 
+Be that as it may, companies 
+prefer a more flexible approach to that, and are usually supportive towards their candidates.
+
+Those specialists who work with distributed systems are well paid. They can find a good place. 
+there are lots of services distributed among 
+hundreds of servers all over the world, and they should work as a whole. There are a lot of such systems, 
+and the number of them will be 
+increasing. Unfortunately, there is a small amount of such specialists. When there is not enough of 
+them and the demand is high, it will be 
+profitable.
 
                

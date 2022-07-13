@@ -5,14 +5,74 @@
 \chapter{Parallel programming} 
 
 
-
+\vspace{-1cm} 
 \section{Introduction}
- 
+\vspace{-0.2cm} 
+Computational fluid dynamics (CFD) 
+uses numerical methods to simulate problems that involve fluid flows. 
+Computers are used to perform the calculations required to simulate 
+fluid motion subjected to boundary conditions associated to surfaces.  
+High-speed supercomputers are  required to solve complex problems
+and to achieve better solutions.
+The idea of parallel programming is based on a bunch of CPU processors in a specific architecture 
+to divide the required calculations into different tasks that could be performed in parallel.
+Usually, space dimension divide the space domain in different regions, blocks or elements.
+Time domain is usually difficult to divide because it constitutes the evolution line 
+or the iterative counter. 
+However, every time step, the  state vector $ U(t) $ is updated 
+by vector operations. These operations  can be parallelized by splitting the the state 
+vector in two or more parts. A profound knowledge of the numerical method is required to 
+design a strategy to parallelize the programming code.
+  
+When talking about real parallel programs, two classic libraries are involved: MPI (Message Passing Interface)
+and OpenMP (Open Multi-Processing).
+MPI is a standardized and portable message-passing standard designed to function onparallel computing architectures
+and OpenMP is an application programming interface (API) 
+that supports multi-platform shared-memory multiprocessing programming. 
+Both libraries are supported  in C, C++, and Fortran.
+Besides, Fortran supports parallel programming natively without using any external library. 
+Fortran defines a new type called Coarray Fortran (CAF) to implement parallel programming with a minimum effort. 
+A CAF program is replicated a number of times and all copies were executed asynchronously. 
+Each copy has its own set of data objects and is termed an image. 
+Since the inclusion of coarrays in the Fortran 2008 standard, the number of implementations is growing.
+
+
 \newpage
-\section{Fortran}
-\subsection{Sum of series}
+\section{Sum of series}
+The idea of this example is to show how independent operations can be performed in parallel by using 
+Coarrays in Fortran. 
+The following program sums the first $ N $ terms of the series: 
+\begin{equation}
+S_N = \sum _{i=1} ^N \ \frac{1}{i^2}
+\end{equation}
+If $ Ni$  processors are available to perform calculations at the same time, 
+the total sum can be divided in $Ni$  parts  with the following expression: 
+\begin{equation}
+S_N = S^1 + S^2 +  \ldots + S^{Ni}.
+\end{equation}
+Each partial sum $ S^j $  will add $ M = N/Ni $ terms and 
+its  expression performed by each processor or image $ j $ is: 
+\begin{equation}
+S^j = \sum _{i=(j-1)M} ^{j M}  \ \frac{1}{i^2}.
+\end{equation}
+In the following example, a parallel Fortran program is written to 
+perform this calculations. 
+First,  the intrinsic function \verb|num_images()| determines the number of available processors. 
+A real variable is specified to store the partial sums of each processor by the sentence 
+\begin{verbatim}
+        real (kind=8) :: S[*] 
+\end{verbatim} 
+Note that \verb|S| is a coarray and its dimension is determined at run-time.  
+Once any \verb|image| is finished, the real variable \verb|SN| sums every contribution of different 
+images \verb|j| with the following sentence: 
+\begin{verbatim}
+        SN = SN + S[j] 
+\end{verbatim} 
+It is important to note that this program is replicated exactly in each image. Hence, functions involved in 
+the parallel program should be pure to avoid side effects. This is  one of the most important 
+reasons why functional programming with pure functions is growing in popularity. 
 
-
+\newpage 
 \renewcommand{\home}{./Parallel_programming/sources} 
 \listings{\home/Series_with_coarrays.f90}{program}
 {CPU time}{Series_with_coarrays.f90}

@@ -10,7 +10,7 @@ program Series_with_coarrays
 implicit none  
 
 ! this image and number of images 
-  integer :: image, Ni  
+  integer :: image, j, Ni  
 
 ! S is a coarray of dimension  determined at runtime
   real (kind=8) :: S[*]  
@@ -21,7 +21,7 @@ implicit none
   
 ! N is the total number of terms 
 ! Nt is the total number of terms of each image   
-  integer(kind=8) :: i, N , Nt 
+  integer(kind=8) :: i,  N , Nt 
 
    call cpu_time(t0) 
    image = this_image()
@@ -46,8 +46,8 @@ implicit none
       
      write(*,*) "Sum contributions of different images  " 
      SN = 0   
-     do i = Ni, 1, -1
-       SN = SN + S[i] 
+     do j = Ni, 1, -1
+       SN = SN + S[j] 
      end do
      
      call cpu_time(tf)

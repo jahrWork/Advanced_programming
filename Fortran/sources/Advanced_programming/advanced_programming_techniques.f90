@@ -3,10 +3,11 @@ module advanced_programming_techniques
      
     use scope_example, only         : scope_public_private_example
     use polymorphism, only          : polymorphism_example
-    use First_class_functions, only : function_examples  
+    use polymorphic_ODES, only      : complex_ODES
+    use First_class_functions, only : function_examples, referential_transparency  
     use functions, only             : derivative_examples  
     use mapping, only               : mapping_example    
-    use map_filter_reduce, only     : test_map_filter_reduce
+    use map_filter_reduce, only     : test_map_filter_reduce, test_rotation, test_filter_reduce
     use overloading, only           : test_integral 
     use pointers, only              : pointer_examples
     use N_body_problem, only        : Integrate_NBP
@@ -53,13 +54,17 @@ do while (option>0)
          call derivative_examples
          call test_map_filter_reduce
          call mapping_example
+         call test_rotation
+         call test_filter_reduce 
+         call referential_transparency
          
          
      case(3)  
          call test_Integral 
                  
      case(4)
-         call  polymorphism_example  
+         call polymorphism_example
+         call complex_ODES
          
      case(5) 
          call pointer_examples

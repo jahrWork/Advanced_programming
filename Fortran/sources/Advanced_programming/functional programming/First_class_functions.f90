@@ -156,12 +156,12 @@ contains
     
      real :: a = 1   
     
-     write(*,*) "pure f(x) =", f(1.), f(1.)
+     write(*,*) "pure f(x) =", f_pure(1.), f_pure(1.)
      write(*,*) "impure f(x) =", f_impure(1.), f_impure(1.)
     
   contains 
   
-  pure real function f(x) 
+  pure real function f_pure(x) 
  !  real, intent(inout) :: x ! Error, OUT or INOUT not allowed
     real, intent(in) :: x 
     
@@ -174,7 +174,7 @@ contains
      b = 1 
      b = b + 1 ! no problem,  b is local 
      
-     f = x**2 + a + b 
+     f_pure = x**2 + a + b 
    ! write(*,*) " f = ", f ! Error, I/O not allowed 
 
   end function
@@ -213,7 +213,34 @@ contains
   end function
   end subroutine   
   
-	
+  
+  subroutine referential_transparency 
+  
+     real :: x=1, b=1  
+      
+     write(*,*) "Referential transparency"
+     write(*,*) " Two expressions at x=1"
+     write(*,*) "  g(x) is impure and h(x) is pure"
+     write(*,*) "  g(x) + g(x)( h(x) - 1 ) =", g(x) + g(x)*( h(x)-1 )
+     write(*,*) "  g(x) h(x) =", g(x)*h(x)
+     
+  contains 
+  real function g(x) 
+    real, intent(in) :: x 
+      
+       b = b + 1 
+       g = x + b 
+ 
+  end function 
+   
+  real function h(x) 
+    real, intent(in) :: x 
+    
+       h = x 
+ 
+  end function 
+end subroutine 
+  
  
 end module 
     

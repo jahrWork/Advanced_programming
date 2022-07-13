@@ -16,9 +16,32 @@ from Temporal_schemes import RK4
 #------------------------------------------------------------------    
 def Integrate_NBP():  
     
-   def F_NBody(U, t):
-
-       return F_NBody_problem( U, Nb, Nc )
+   #-----------------------------------------------------------------
+   #  dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
+   #----------------------------------------------------------------- 
+   def F_NBody(U, t): 
+     
+ #   Write equations: Solution( body, coordinate, position-velocity )      
+     Us  = reshape( U, (Nb, Nc, 2) )  
+     F = array( zeros(len(U)) )   
+     dUs = reshape( F, (Nb, Nc, 2) )  
+     
+     r = reshape( Us[:, :, 0], (Nb, Nc) )     # position and velocity 
+     v = reshape( Us[:, :, 1], (Nb, Nc) )
+     
+     drdt = reshape( dUs[:, :, 0], (Nb, Nc) ) # derivatives
+     dvdt = reshape( dUs[:, :, 1], (Nb, Nc) )
+    
+     dvdt[:,:] = 0  # WARNING dvdt = 0, does not work 
+    
+     for i in range(Nb):   
+       drdt[i,:] = v[i,:]
+       for j in range(Nb): 
+         if j != i:  
+           d = r[j,:] - r[i,:]
+           dvdt[i,:] = dvdt[i,:] +  d[:] / norm(d)**3 
+    
+     return F
 
    N =  1000    # time steps 
    Nb = 4      # bodies 
@@ -30,8 +53,8 @@ def Integrate_NBP():
  
    U0 = Initial_positions_and_velocities( Nc, Nb )
  
-   #U = odeint(F_NBody, U0, Time)
-   U =  Cauchy_problem( F_NBody, Time, U0, RK4) 
+  #U = odeint(F_NBody, U0, Time)
+   U = Cauchy_problem(F_NBody, Time, U0, RK4) 
 
    Us  = reshape( U, (N+1, Nb, Nc, 2) ) 
    r   = reshape( Us[:, :, :, 0], (N+1, Nb, Nc) ) 
@@ -70,32 +93,7 @@ def Initial_positions_and_velocities( Nc, Nb ):
 
     return U0 
      
-#-----------------------------------------------------------------
-#  dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
-#----------------------------------------------------------------- 
-def F_NBody_problem(U, Nb, Nc): 
-     
- #   Write equations: Solution( body, coordinate, position-velocity )      
-     Us  = reshape( U, (Nb, Nc, 2) )  
-     F = array( zeros(len(U)) )   
-     dUs = reshape( F, (Nb, Nc, 2) )  
-     
-     r = reshape( Us[:, :, 0], (Nb, Nc) )     # position and velocity 
-     v = reshape( Us[:, :, 1], (Nb, Nc) )
-     
-     drdt = reshape( dUs[:, :, 0], (Nb, Nc) ) # derivatives
-     dvdt = reshape( dUs[:, :, 1], (Nb, Nc) )
-    
-     dvdt[:,:] = 0  # WARNING dvdt = 0, does not work 
-    
-     for i in range(Nb):   
-       drdt[i,:] = v[i,:]
-       for j in range(Nb): 
-         if j != i:  
-           d = r[j,:] - r[i,:]
-           dvdt[i,:] = dvdt[i,:] +  d[:] / norm(d)**3 
-    
-     return F
+
 
     
 def test_without_pointers_Integrate_NBP():  
@@ -166,10 +164,8 @@ def  without_pointers_F_NBody_problem(U, Nb, Nc):
 
 
 
-
-
- #if __name__ == '__main__': 
-     #Integrate_NBP()  
-     #test_without_pointers_Integrate_NBP() 
+if __name__ == '__main__': 
+     Integrate_NBP()  
+     test_without_pointers_Integrate_NBP() 
 
 

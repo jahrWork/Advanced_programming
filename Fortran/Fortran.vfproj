@@ -63,10 +63,6 @@
 		<File RelativePath=".\sources\Advanced_programming\miscellaneous\fractals\VonKoch.f90"/></Filter>
 		<Filter Name="games">
 		<File RelativePath=".\sources\Advanced_programming\miscellaneous\games\Sudoku.f90"/></Filter></Filter>
-		<Filter Name="pointers">
-		<File RelativePath=".\sources\Advanced_programming\pointers\pointers.f90"/></Filter>
-		<Filter Name="overloading">
-		<File RelativePath=".\sources\Advanced_programming\overloading\overloading.f90"/></Filter>
 		<Filter Name="odes">
 		<Filter Name="schemes">
 		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Cauchy_Problem.f90"/>
@@ -76,9 +72,14 @@
 		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Temporal_Schemes.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\odes\schemes\Wrappers.f90"/></Filter>
 		<File RelativePath=".\sources\Advanced_programming\odes\n_body_problem.f90"/></Filter>
+		<Filter Name="overloading">
+		<File RelativePath=".\sources\Advanced_programming\overloading\overloading.f90"/></Filter>
+		<Filter Name="pointers">
+		<File RelativePath=".\sources\Advanced_programming\pointers\pointers.f90"/></Filter>
 		<Filter Name="polymorphism">
 		<File RelativePath=".\sources\Advanced_programming\polymorphism\circle_class.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\polymorphism\polygon_class.f90"/>
+		<File RelativePath=".\sources\Advanced_programming\polymorphism\polymorphic_ODES.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\polymorphism\polymorphism.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\polymorphism\square_class.f90"/></Filter>
 		<Filter Name="scope">

@@ -10,7 +10,7 @@ def oscillator(U, t):
 def complex_oscillator(Z, t):
     return -1j * Z
 
-def test_simulation(U0, Nv, F):  
+def simulation(U0, Nv, F):  
 
      N = 100
      U = array( zeros( [N+1, Nv], dtype=type(U0) ) )
@@ -29,14 +29,15 @@ def test_simulation(U0, Nv, F):
      plt.show()
 
 
-if __name__ == '__main__':  
+def complex_ODES(): 
+    
    # Example of a system of two real equations 
    U0 = array( [1, 0] ) 
-   test_simulation( U0, 2, oscillator )
+   simulation( U0, 2, oscillator )
 
    # Example of a complex equation sith the same function 
    Z0 = complex( 1, 0 ) 
-   test_simulation( Z0, 1, complex_oscillator )
+   simulation( Z0, 1, complex_oscillator )
 
    # state vector to integrate is polymorphic 
 

@@ -2,45 +2,250 @@
  
 \chapter{Pointers} 
 
-\newpage
+\vspace{-1cm}
 \section{Introduction}
+\vspace{-0.2cm}
+A pointer is a variable that stores a memory address of some other variable or function. 
+For example, the sentence \verb|a = 10.4| creates the internal representation of the float 
+ number \verb|10.4| and stores it in some part of the computer memory. After this number is stored, 
+the label \verb|a| holds the memory direction where \verb|10.4| is stored. 
+It is said that the variable \verb|a| points to the number \verb|10.4|.
+
+Pointers are a very powerful concept to optimize memory, to write compact codes and to pass
+array arguments to different functions. However, they are difficult to understand 
+and very dangerous at the beginning and their use should be restricted to advanced users. 
+Following this idea, Python language do not have pointer variables.
+However, in Python everything is a pointer internally and 
+it is necessary to understand how it works to avoid  misunderstandings and 
+strange behaviors or errors.
+Fortran language has pointers but they  have been restricted to  avoid
+classical problems and to make them safer.
+Pointers are also used when calling a function. Different inputs arguments are passed by reference or by value. 
+If they are passed by reference, it means that only their address or pointer is passed. 
+If they are passed by value, it means that a copy of the original argument is made
+and a new local variable for this function is created. 
+Once the function is abandoned, the variable is destroyed.  
+Pointers can  also store the addresses of functions 
+and can be used to compose or construct new functions. 
+
+In the following sections, 
+different examples will be shown from scalar variables to array or vector variables 
+explaining the pointer concept and its relevance in numerical problems.
+Some examples are chosen to lighten obscure hidden programming errors  even 
+in languages like Python in which no explicit pointers are present. 
+
+
+
+\newpage 
 \subsection*{Fortran}
+In the following example, scalar real variables (\verb|a|, \verb|b|) 
+and real vector  variables are created (\verb|v|, \verb|U|) with the \verb|target| attribute. 
+It means that these variables can be pointed by pointers.  
+Additionally, pointers to scalar  variables (\verb|pa|) and 
+pointers to real vector  variables are created (\verb|pv|, \verb|pU|) 
+with the \verb|pointer| attribute.
+This attribute allows to point these pointer variables to target variables. 
+In Fortran, to point a pointer variable \verb|pa| to a target variable \verb|a|, 
+the following sentence is used: \verb|pa =>a|.
+Once \verb|pa| is pointed, \verb|pa| works as any other classical variables 
+and any modification in \verb|a| alters the content of \verb|pa| and vice-versa because they both point
+to the same address of memory. 
+
+The same concepts are applied to vector variables with same or different rank. 
+The two dimensional pointer \verb|pU| is pointed to
+vector$ \verb|U| $ with $4$  components. The sentence \verb|pU(0:1,0:1) => U| points a matrix pointer 
+of size $ 2 \times 2 $ to the vector \verb|U|. It is important to note, 
+that in Fortran that \verb|U| holds the matrix \verb|pU|  by columns. 
+\vspace{0.3cm}  
 \renewcommand{\home}{./Fortran/sources/Advanced_programming/pointers} 
+\lstfor
 \listings{\home/pointers.f90}{pointer_examples}{end subroutine}{pointers.f90}
 
 
-
 \newpage
 \subsection*{Python}
+As it was mentioned, Python has no pointer variables but all variables are treated like pointers
+internally. The sentence \verb|a =3| transforms the decimal number \verb|3| to its binary representation
+in some part of the memory. Later, label \verb|a| is pointed to the address where this integer is stored. 
+The next sentence \verb|pa =a| copies the same address of variable \verb|a| for the new label
+\verb|pa|. To check this fact, the intrinsic Python function \verb|id(a)| gives the identifier where 
+\verb|a| is stored. The next sentence \verb|a=4| creates again a new integer number an stores 
+it in some part of the computer memory. At this time, \verb|pa| is pointing to number \verb|3| and 
+\verb|a| is pointing to number  \verb|4|.
+If \verb|a| is modified, \verb|pa| is not modified because they are pointing 
+to two different addresses of memory. 
+
+
+The same concepts are applied to numpy arrays of same or different ranks.
+The sentence \verb|a=array([1,2,3,4])| creates a one dimensional numpy array.
+The sentence \verb|b=a| points varriable \verb|b| to the memory address of \verb|a|. 
+Hence, by modifying \verb|a|, the variable \verb|b| is modified consistently.
+However, the sentence \verb|a=a+1| does not work as expected. The reason 
+is that this sentence creates another instance for \verb|a| which means
+that \verb|pa| and  \verb|a| are stored in different positions of memory. Hence, 
+the sentence \verb|a=a+1| does not modify the content of \verb|pa|. 
+To fix this issue, the  sentence \verb|a[:]=a[:]+1| should be used 
+to modify \verb|pa| at the same time.  
+To point a two dimensional array to a one dimensional array, 
+the sentence \verb|pa=reshape(a,(2,2))| assign a matrix pointer 
+of size $ 2 \times 2 $ to the vector \verb|a|. It is important to note, 
+that in Python that \verb|a| holds the matrix \verb|pa|  by rows. 
+\vspace{0.4cm}  
 \renewcommand{\home}{./Python/sources/Advanced_programming/pointers} 
-\listingsp{\home/pointers.py}{def pointer_examples}{pU is U}{pointers.py}
+\lstpython
+\listingsp{\home/pointers.py}{def pointer_examples}{pa points to a}{pointers.py}
 
 
+
+
+
+
+
+\section{Aliasing and cloning} 
+Depending on the program needs, variables could share the same memory addresses than others 
+to implement a clear and concise code or to optimize memory. 
+Hence, it is important to know the mechanisms to achieve te desired result.
+The process of pointing different labels to the same memory content is called aliasing.
+If aliasing is considered, changes in different labels or variables are reflected in 
+different variables. If this behavior is not desired, cloning creates
+a duplicate independent object.
+These concepts only apply to Python because in Fortran target and pointer variables are specified explicitly. 
+In the following example, mechanisms for aliasing or  cloning  sets, tuples,lists or dictionaries
+are shown. Usually, the sentence \verb|pa=a| is used to alias \verb|pa| to \verb|a|. 
+If duplicate or copies are required, \verb|copy| function is used for sets, \verb|dict| function is used
+for dictionaries and slicing  \verb|pa=a[:]| is used for lists. 
+  
+
+\subsection*{Python}
+
+\vspace{0.4cm}  
+\renewcommand{\home}{./Python/sources/Advanced_programming/pointers} 
+\lstpython
+\listingsp{\home/pointers.py}{def aliasing_and_cloning_examples}{Dictionaries, cloning}{pointers.py}
 
 
 
 \newpage
-\section{N body problem}  
+\section{N-body problem}  
+This example is used to show how pointers allow to write simulation codes 
+where the same system variables are seen with different shapes. 
+ 
+The N-body problem is the problem of predicting the individual motions 
+of a group of mass objects under the influence of their gravitational field.
+If  $ \bold{r}_i \in \mathbb{R}^3$ and $ \bold{v}_i \in \mathbb{R}^3$ are 
+the position and the velocity vectors 
+of each mass object $  i $, the equations of motion for each mass object writes:  
+\begin{equation} 
+\frac{d \bold{r}_i}{dt} = \bold{v}_i, \qquad i=1, \ldots,N  
+\label{velocity} 
+\end{equation}
+
+\begin{equation} 
+m_i \frac{d \bold{v}_i}{dt} =  \sum_{j=1, j \ne i} ^N G \ m_i \ m_j \ \frac{\bold{r}_j -\bold{r}_i}
+                              {\|\bold{r}_j -\bold{r}_i \|^3}
+                              \qquad i=1, \ldots,N 
+\label{momentum}                              
+\end{equation}
+These ordinary differential equations together with initial conditions for the position 
+and velocity of each mass point  constitute a Cauchy problem ($dU/dt = F(U,t)$) 
+that can be integrated with any temporal scheme. 
+To prepare the system to use any library for the numerical integration, a vector state comprising all 
+degrees of freedom mus be defined. 
+The state vector $ U(t) $ and its derivative $ F(U,t) $ can be  defined as: 
+\begin{equation} 
+U(t) =
+\begin{pmatrix}
+\begin{pmatrix}
+  x_1 \\ y_1 \\ z_1 \\ \dot x_1 \\ \dot y_1 \\ \dot z_1 
+\end{pmatrix}
+\\
+\begin{pmatrix}
+  \vdots \\
+\end{pmatrix}
+\\
+\begin{pmatrix}
+  x_N \\ y_N \\ z_N \\ \dot x_N \\ \dot y_N \\ \dot z_N 
+\end{pmatrix}
+\end{pmatrix}, \qquad
+F(U,t) =
+\begin{pmatrix}
+\begin{pmatrix}
+  \dot x_1 \\ \dot y_1 \\ \dot z_1 \\ \ddot x_1 \\ \ddot y_1 \\ \ddot z_1 
+\end{pmatrix}
+\\
+\begin{pmatrix}
+  \vdots \\
+\end{pmatrix}
+\\
+\begin{pmatrix}
+  \dot x_N \\ \dot y_N \\ \dot z_N \\ \ddot x_N \\ \ddot y_N \\ \ddot z_N 
+\end{pmatrix}
+\end{pmatrix}.
+\end{equation} 
+where $ (x_i, y_i, z_i )$ and $ (\dot x_i, \dot y_i, \dot z_i )$ are the position and velocity 
+of the  mass point $ i $. Note that the values $ (\ddot x_i, \ddot y_i, \ddot z_i )$
+are obtained from equation (\ref{momentum}). The positions and the velocities of all points 
+an be stored in two matrices ${r}_{ik} $ and  ${v}_{ik} $.
+The first index represents the object $i$ and the second index represents the coordinate. 
+%To save the two different arrays could be considered 
+%to Since $ U(t) $ contains all degrees 
+%of freedom of the problem, a
+
+   
+
+\newpage
 \subsection*{Fortran}
+In the following example, the function \verb|F_NBody| uses 
+the state vector \verb|U| as an input and returns its derivative \verb|F|. Both arguments   
+are considered  target variables. Pointer variables \verb|Us| and \verb|dUs| are created 
+with rank three to be pointed to \verb|U| and \verb|F| respectively. The first index represents
+the body, the second index the coordinate and the third index their position or velocity. 
+The sentence \verb|Us(1:Nb,1:Nc,1:2)=>U| points \verb|Us| to \verb|U|. Now the components 
+of \verb|Us| and \verb|U| are the same but with different shape. Another two pointer 
+variables are specified \verb|r| and \verb|v| with rank two to be pointed to different parts of 
+\verb|Us|. The first index of \verb|r| represents the body and the second index the coordinate 
+position. The pointers \verb|r| and \verb|v| are pointed to different parts of \verb|Us|. The same 
+idea is done for the derivative pointers \verb|drdt| and \verb|dvdt|. 
+Once all pointers are assigned, equations (\ref{velocity}) and (\ref{momentum}) are written 
+with no effort and the derivative of the vector state is modified automatically. 
+This powerful technique based on pointers allows to integrate the N-body Cauchy problem 
+by using standard libraries. 
+\vspace{0.3cm}
 \renewcommand{\home}{./Fortran/sources/Advanced_programming/odes} 
+\lstfor
 \listings{\home/n_body_problem.f90}{function F_NBody}{end function}{n_body_problem.f90}
 
-\newpage 
-\listings{\home/n_body_problem.f90}{subroutine F_N_body_problem}
-{end subroutine}{n_body_problem.f90}
-
-
+\listings{\home/n_body_problem.f90}{Cauchy_ProblemS}{Cauchy_ProblemS}{n_body_problem.f90}
 
 
 \newpage
 \subsection*{Python}
+In the following example, the function \verb|F_NBody| uses 
+the state vector \verb|U| as an input and returns its derivative \verb|F|. 
+The \verb|numpy| function \verb|reshape| allows to create pointers \verb|Us| and \verb|dUs|
+with rank three  pointed to \verb|U|. The first index of \verb|Us| represents
+the body, the second index the coordinate and the third index their position or velocity. 
+Now the components 
+of \verb|Us| and \verb|U| are the same but with different shape. 
+Another two pointer \verb|r| and \verb|v| with rank two are created reshaping \verb|Us|. 
+The first index of \verb|r| represents the body and the second index the coordinate 
+position. The pointers \verb|r| and \verb|v| are pointed to different parts of \verb|Us|. 
+The same idea is done for the derivative pointers \verb|drdt| and \verb|dvdt|. 
+Once all pointers are assigned, equations (\ref{velocity}) and (\ref{momentum}) are written 
+with no effort and the derivative of the vector state is modified automatically. 
+This powerful technique based on pointers allows to integrate the N-body Cauchy problem 
+by using standard libraries. In this example, the N-body problem is integrated 
+the standard \verb|odeint| function from \verb|scipy| and with our own function 
+\verb|Caucy_problem|.
+\vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Advanced_programming/odes} 
-\listingsp{\home/n_body_problem.py}{def F_NBody_problem}{return F}{n_body_problem.py}
+\lstpython
+\listingsp{\home/n_body_problem.py}{def F_NBody}{return F}{n_body_problem.py}
 
 
-\newpage
-\listingsp{\home/n_body_problem.py}{def Initial_positions_and_velocities}{-0.4}{n_body_problem.py}
-\listingsp{\home/n_body_problem.py}{def Integrate_NBP}{plt.show}{n_body_problem.py}
+
+%\listingsp{\home/n_body_problem.py}{def Initial_positions_and_velocities}{-0.4}{n_body_problem.py}
+\listingsp{\home/n_body_problem.py}{F_NBody, U0}{F_NBody, Time}{n_body_problem.py}
 
 
 

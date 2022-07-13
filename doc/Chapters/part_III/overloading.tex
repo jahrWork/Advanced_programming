@@ -1,18 +1,16 @@
 
 \chapter{Overloading functions and operators}
-
-From the mathematical point of view operators, such as\texttt{+}, can be 
-applied to elements of sets with different types. Additionally, functions representing 
-common concepts, such as integrals, can be applied to dimensional spaces of different rank. 
-It is desirable to maintain the same opeands or the same function concepts independently 
-of data types and dimensional rank.  
-
+From the mathematical point of view operators and functions representing 
+common concepts can be to different types of different n-dimensional spaces.
+It is desirable to maintain the same operators or the same function names 
+by overloading function names and operator symbols. 
 If the programming language is a compiling language, such as Fortran, 
-the compiler identifies, at compilation time, the type of the operands or the arguents 
+the compiler identifies, at compilation time, the type of the operands or the arguments 
 involved when calling a function and it selects automatically the proper operation. 
-If the language is interpreted and non-typed language, such as Python, overloading is not supported. 
+If the language is untyped interpreted language, such as Python, overloading is not supported. 
 However, there are many alternatives to emulate overloading in Python. 
 
+Operators can be applied to elements of sets with different types.
 For example, the operator \texttt{+} 
 is defined differently for real numbers of complex numbers. However, the same operator 
 is used for those different operations. This is done by overloading the operator. 
@@ -23,14 +21,18 @@ the expression $ u+v $ involves the same operator \texttt{+}. It this case,
 the result yields a complex number in which 
 the real part is the sum of real parts of $ u $ and $ v $
 and the imaginary part is the sum of imaginary parts of $ u $ and $ v $.
-Many operands and functions are previously overloaded by the native language 
-as it is this example. 
+Many operands and functions are previously overloaded by the native language.
 
+Additionally to operators, functions can also be overloaded. 
+Functions are overloaded with n-dimensional spaces. 
+For example, the mathematical concept: integral 
+can be defined and overloaded for line integrals or surface integrals. 
+ 
 
+\newpage 
+\section{Overloading functions in n-dimensional spaces}
 
-
-Additionally to operands, functions can also be overloaded. 
-In this chapter, the function \texttt{Integral} is created to overload line integrals 
+In this example, the function \texttt{Integral} is created to overload line integrals 
 and surface integrals. 
 Let's consider the  line integral in a compact segment $[a, b]$: 
 \begin{equation}   
@@ -72,7 +74,7 @@ are taken into account to write two implementations in Fortran and Python.
 \lstfor
 
 First, the overloading implementation is explained. Once two different functions are 
-created for line and surface integrals, the overloading implementation in done
+created for line and surface integrals, the overloading implementation is done
 with the following code: 
 \vspace{0.5cm}  
 \listings{\home/overloading.f90}{interface Integral}{end interface}{overloading.f90}
@@ -157,3 +159,144 @@ according to its definition given by (\ref{I2D}) and (\ref{I1}).
 \listingsp{\home/overloading.py}{def Integral2D}{a, b, I1}{overloading.py}
 
 
+
+\newpage 
+\section{Overloading functions with complex numbers}
+
+In this example, an ordinary differential system of equations is integrated
+in real variable and complex variable. 
+Let's consider the first order 
+differential system of equations of dimension $ N $ in real variable: 
+\begin{equation}   
+    \frac{dU }{ dt} =  F( U,t ) , \qquad 
+    F: \mathbb{R}^N \times \mathbb{R} \rightarrow \mathbb{R}^N,   
+    \label{cauchy}
+\end{equation} 
+where $ U(t) \in \mathbb{R}^N $. This system of equations together with 
+the initial condition $ U_0 $ constitutes a Cauchy problem and allows 
+to determine the solution $ U(t) $ for all $ t \in [0, T]$.
+To approximate numerically the solution of the Cauchy problem, a partition of
+the time segment $ [0, T] $ is considered. 
+Once this partition is defined by different time steps $ t_n $, the solution 
+can be approximated by any temporal scheme. 
+The Euler scheme is the easiest numerical method to approximate numerically 
+the solution $ U^{n+1} $ at time step $t_{n+1} $ from the solution 
+$ U^{n} $ at time step $t_{n} $. 
+\begin{equation}   
+    U^{n+1}=  U^n + \Delta t \ F( U^n, t_n), \qquad 
+    n=0, \ldots, N  
+    \label{euler}   
+\end{equation}
+In this example, 
+the harmonic oscillator ($ \ddot x   + x = 0 $)  is integrated.
+This oscillator can be formulated as a first order system of two equations:
+\begin{equation}   
+    \frac{d}{dt }   
+ \begin{pmatrix}
+ x \\
+ \dot x
+ \end{pmatrix}   
+    = 
+  \begin{pmatrix}
+  \dot x \\
+  - x
+  \end{pmatrix}
+  \label{oscillator}
+\end{equation}
+where the state vector can be  defined with $ U = ( x, \ \dot x  )^T $ 
+and, consequently,  $ F= ( U_2, \ -U_1  )^T $. The same harmonic oscillator
+can be expressed in complex variable by doing  $ Z = x + i \ \dot x  $. 
+In complex variable, the equations of the harmonic oscillator yields: 
+\begin{equation}   
+    \frac{dZ}{dt }  = - i \ Z.
+    \label{coscillator}
+\end{equation} 
+The main objective of this section is to show different alternatives 
+to integrate in complex variable by means of functions written for 
+real variable. 
+
+Since Python is untyped, a minor modification will allow to integrate 
+in real or in complex variable with the same functions.
+On the contrary, Fortran variables are obliged to be typed.  
+In this case, instead of writing new software to overload the Euler 
+scheme, a different approach will be shown. The real function $ F $ in equation
+(\ref{cauchy}) will be build by means of the complex function of equation
+(\ref{coscillator}) and the complex system of equations will be integrated in real 
+variable with minor modifications. 
+
+In the following pages, these ideas will be developed 
+to write two implementations in Fortran and Python. 
+
+ 
+\newpage  
+\subsection*{Fortran}
+First, the \verb|Euler| function 
+is implemented for real variable. Given an approximate solution \verb|U1| 
+at time step \verb|t1|, the solution \verb|U2| at  time step  \verb|t2| 
+is calculated by (\ref{euler}). 
+\vspace{0.4cm}  
+\renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+\lstfor
+\listings{\home/polymorphic_ODES.f90}{function Euler}{end function}{polymorphic_ODES.f90}
+Then, the real function of the harmonic oscillator (\ref{oscillator}) is defined by:
+\vspace{0.4cm} 
+\listings{\home/polymorphic_ODES.f90}{function oscillator}{end function}{polymorphic_ODES.f90}
+Finally, a loop allows to calculate and to store every time 
+step of the time partition. The matrix \verb|U(0:N,Nv)| holds \verb|N+1|
+time steps for every \verb|Nv| variables. 
+\vspace{0.4cm} 
+\listings{\home/polymorphic_ODES.f90}{simulation}{end do}{polymorphic_ODES.f90}
+
+
+\newpage 
+To integrate the complex system, 
+the harmonic oscillator equations (\ref{coscillator}) written in complex 
+variable are implement with the following function: 
+\vspace{0.4cm} 
+\listings{\home/polymorphic_ODES.f90}{complex_oscillator}{end function}{polymorphic_ODES.f90}
+Finally, the function \verb|complex_simulation| is built with complex 
+arguments. It defines a real function \verb|F| which is created 
+by means of the complex function \verb|Fc| and then 
+the problem can be simulated in real variable. 
+\vspace{0.4cm} 
+\listings{\home/polymorphic_ODES.f90}{complex_simulation}{end subroutine}{polymorphic_ODES.f90}
+
+ 
+\newpage
+\subsection*{Python}
+As it was mentioned, to overload the Python code to integrate a complex problem 
+is much easier because Python functions are implemented without knowing 
+the type of variables. 
+First, the \verb|Euler| function 
+is implemented. Given an approximate solution \verb|U1| 
+at time step \verb|t1|, the solution \verb|U2| at  time step  \verb|t2| 
+is calculated by (\ref{euler}).
+\vspace{0.4cm} 
+\renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism}
+\lstpython 
+\listingsp{\home/polymorphic_ODES.py}{def Euler}{return}{polymorphic_ODES.py.py}  
+Then, the real function of the harmonic oscillator (\ref{oscillator}) is defined by:
+\vspace{0.4cm} 
+\listingsp{\home/polymorphic_ODES.py}{def oscillator}{return}{polymorphic_ODES.py}
+Finally, a loop allows to calculate and to store every time 
+step of the time partition. The matrix \verb|U(0:N,Nv)| holds \verb|N+1|
+time steps for every \verb|Nv| variables. 
+\vspace{0.4cm} 
+\listingsp{\home/polymorphic_ODES.py}{def simulation}{Euler}{polymorphic_ODES.py}
+To integrate the system in complex variable, 
+the complex function of the harmonic oscillator (\ref{coscillator}) is defined by:
+\vspace{0.4cm} 
+\listingsp{\home/polymorphic_ODES.py}{def complex_oscillator}{return}{polymorphic_ODES.py}
+\newpage 
+In the following code, the harmonic oscillator is integrated in real and in complex variable with the same 
+code: 
+\vspace{0.5cm} 
+\listingsp{\home/polymorphic_ODES.py}{def complex_ODES}{complex_oscillator}{polymorphic_ODES.py} 
+Note that while \verb|U0| is a nump array of real components, \verb|Z0| is a complex variable holding the 
+same initial condition than \verb|U0|. 
+The key idea of this overloading is hidden in the function \verb|simulation|. When this function is called, 
+a numpy array to store different time steps of all variables is created. The type of its components 
+is the same as the type of the initial condition. Hence, if the \verb|simulation| function is called 
+with a complex initial condition, the numpy array \verb|U| has complex components and different operations are 
+well defined. Similarly, if the initial condition has real components, the numpy array \verb|U| 
+is created with real components and everything works flawlessly as expected. 

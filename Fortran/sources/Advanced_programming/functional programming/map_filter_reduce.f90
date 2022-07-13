@@ -70,6 +70,14 @@ function pointc(x,y) result(P)
             
 end function 
 
+elemental function distance(P, P0) 
+     type (point2D), intent(in) :: P, P0 
+     real :: distance 
+           
+   distance  = norm2( [ P % x - P0 % x, P % y - P0 % y ] )
+     
+end function     
+    
 subroutine test_rotation() 
 
      integer, parameter :: N = 5 
@@ -88,5 +96,55 @@ subroutine test_rotation()
      call plot_show() 
    
 end subroutine 
+
+
+elemental function filter(P, R1, R2) 
+     type (point2D), intent(in) :: P 
+     real, intent(in) :: R1, R2 
+     logical :: filter 
+     
+        real :: d 
+        
+        d = norm2( [ P % x, P % y ] )
+        
+        filter =  d < R2 .and. d > R1  
+     
+end function 
+
+subroutine test_filter_reduce() 
+
+     integer :: i, N = 10000
+     type (point2D), allocatable :: set(:), subset(:) 
+     real :: r(2) 
+     type (point2D) :: P0, P1 
+    
+     allocate( set(N) ) 
+     call random_seed()
+     do i=1, N 
+         call random_number(r) 
+         r = -1 + 2*r
+         set(i) = pointc( r(1), r(2) ) 
+     end do 
+          
+     subset = pack( set, filter(set, 0.4, 0.7) ) 
+     
+     P0 = pointc( 0.5, 0.5)
+     i = minloc( distance(set,P0), dim=1 ) 
+     P1 = set(i) 
+     write(*,'(A,i5,A,2f15.6)') "Nearest point P =", P1 % x, P1 % y
+     
+     call plot_ini( -1., 1., -1., 1. )   
+     call incmrk(-1);  call marker(21);
+     call curve( set(:) % x, set(:) % y, N ) 
+     call color("red")
+     call curve( subset(:) % x, subset(:) % y, size(subset) )
+     call plot_show()
+     
+     write(*,*) "size subset =", size(subset) 
+    
+end subroutine  
+    
+
+
 
 end module 

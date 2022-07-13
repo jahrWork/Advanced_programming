@@ -14,7 +14,7 @@ module n_body_problem
 !------------------------------------------------------------------    
  subroutine Integrate_NBP 
    
-   integer, parameter :: N =  100000   ! time steps 
+   integer, parameter :: N =  1000   ! time steps 
    integer, parameter :: Nb = 4      ! # of bodies 
    integer, parameter :: Nc = 3      ! # of coordinates 
    real :: Time(0:N) 
@@ -47,28 +47,36 @@ module n_body_problem
      F = F_NBody(U, t) 
      
 end function
-
+!-----------------------------------------------------------------
+! dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
+!-----------------------------------------------------------------
 function F_NBody(U, t) result(F)           
      real, target :: U(:), t 
      real, target :: F(size(U))
      
-    real, pointer :: r(:,:), v(:,:)       ! position and velocity 
-    real, pointer :: drdt(:,:), dvdt(:,:) ! derivatives
+    real, pointer :: r(:,:), v(:,:), drdt(:,:), dvdt(:,:)   
     real, pointer :: Us(:, :, :), dUs(:, :, :)  
+    real ::  d(Nc)  
+    integer :: i, j 
     
-     Us(1:Nb, 1:Nc, 1:2)  => U 
-     dUs(1:Nb, 1:Nc, 1:2)  => F 
+     Us(1:Nb, 1:Nc, 1:2)  => U;  dUs(1:Nb, 1:Nc, 1:2)  => F
      
-     r => Us(1:Nb, 1:Nc, 1)
-     v => Us(1:Nb, 1:Nc, 2)
+     r => Us(1:Nb, 1:Nc, 1);  drdt => dUs(1:Nb, 1:Nc, 1)
+     v => Us(1:Nb, 1:Nc, 2);  dvdt => dUs(1:Nb, 1:Nc, 2)
      
-     drdt => dUs(1:Nb, 1:Nc, 1)
-     dvdt => dUs(1:Nb, 1:Nc, 2)
+     dvdt = 0  
+     do i=1, Nb 
+       do j=1, Nb
+         if (j/=i) then  
+           d = r(j,:) - r(i,:)
+           dvdt(i,:) = dvdt(i,:) +  d / norm2(d)**3 
+         end if  
+       end do 
+     end do 
     
-     call F_N_body_problem( Nb, Nc, r, v, drdt, dvdt ) 
+     drdt = v
      
 end function
-    
 end subroutine 
 
 !-------------------------------------------------------
@@ -97,34 +105,6 @@ subroutine Initial_positions_and_velocities( Nb, Nc, r, v )
     
 end subroutine 
 
- 
-!-----------------------------------------------------------------
-! dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
-!-----------------------------------------------------------------
-subroutine F_N_body_problem( Nb, Nc, r, v, drdt, dvdt ) 
-    integer, intent(in) :: Nb, Nc  
-    real, intent(in) :: r(Nb, Nc), v(Nb, Nc)
-    real, intent(out):: drdt(Nb, Nc), dvdt(Nb, Nc) 
-     
-     real ::  d(Nc)  
-     integer :: i, j 
-     real :: mu(Nb) 
-   
-    dvdt = 0  
-    
-    do i=1, Nb 
-       do j=1, Nb
-         if (j/=i) then  
-           d = r(j,:) - r(i,:)
-           dvdt(i,:) = dvdt(i,:) +  d / norm2(d)**3 
-         end if  
-       end do 
-    end do 
-    
-    drdt = v
-        
-end subroutine
- 
  
 !------------------------
 ! orbits of N bodies 

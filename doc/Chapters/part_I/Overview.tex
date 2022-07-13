@@ -27,7 +27,7 @@ different options you can execute all the examples presented.
  
  
  \newpage 
- \section{Programming through history} 
+    \section{Programming through history} 
  
      
        
@@ -113,7 +113,7 @@ different options you can execute all the examples presented.
   
   
   \newpage 
- \section*{Algorithms and machines: "The imitation game"} 
+\section*{Algorithms and machines: "The imitation game"} 
  In 1952, Alan Turing was arrested for homosexuality. 
  Homosexuality was punished at that time in England. 
  In 1936, Turing had invented a hypothetical computing device that came to be known 
@@ -127,7 +127,7 @@ different options you can execute all the examples presented.
  
    
    
- \section*{First numerical computing: "Hidden figures"}
+\section*{First numerical computing: "Hidden figures"}
  Hidden Figures is a 2016 American biographical  film 
  about African American female mathematicians and engineers 
  who worked at the National Aeronautics and Space Administration (NASA) 
@@ -145,7 +145,7 @@ different options you can execute all the examples presented.
   
    
   
- \section*{First personal computers: "Triumph of nerds"}
+\section*{First personal computers: "Triumph of nerds"}
  Triumph of the Nerds is a 1996 British/American television documentary
  It explores the development of the personal computer in the United States from World War II to 1995. 
  Triumph of the Nerds was written and hosted by Robert X. Cringely (Mark Stephens) 
@@ -267,7 +267,7 @@ different options you can execute all the examples presented.
    
    
     
- \section*{Home computers in Europe: "Clive Sinclair"} 
+\section*{Home computers in Europe: "Clive Sinclair"} 
  While USA was euphoric with personal computers in Europe another visionary: 
  Clive Sinclair (Micro men) revolved the market.    
  Clive existed to push barriers and an inventor was obliged to dream. 
@@ -331,7 +331,7 @@ different options you can execute all the examples presented.
     
    
     
- \section*{The birth of internet: "Lo and Behold"} 
+\section*{The birth of internet: "Lo and Behold"} 
  Lo and Behold, Reveries of the Connected World is a 2016 American documentary film 
  directed by Werner Herzog. It comprimes 10 chapters from the birth of Internet to possible future 
  scenarios. 
@@ -367,7 +367,7 @@ different options you can execute all the examples presented.
     
     
    
- \section*{Free software: "The Revolution OS. The code"}
+\section*{Free software: "The Revolution OS. The code"}
  Revolution OS is a 2001 documentary film that introduces the concept of GNU, 
  open source and the free software movement. It also describes the birth of Linux movement
  with  interviews to  Richard Stallman, Linus Torvalds, 
@@ -608,7 +608,7 @@ different options you can execute all the examples presented.
   
   
      
- \section*{Artificial intelligence: "The thirteenth floor"} 
+\section*{Artificial intelligence: "The thirteenth floor"} 
  The Thirteenth Floor is a 1999 science fiction film written and directed by Josef Rusnak. 
  In this film, very real human simulations are done with a supercomputer. 
  In 2000, The Thirteenth Floor was nominated for the Saturn Award for Best Science Fiction Film, but lost to The Matrix.
@@ -627,7 +627,7 @@ different options you can execute all the examples presented.
     
   
    
- \section*{Data privacy: "The great hack"}
+\section*{Data privacy: "The great hack"}
  The Great Hack is a 2019 documentary film about the Facebook–Cambridge Analytica data scandal.
  Cambridge Analytica was dedicated to collect big data to reinforce a  sales strategy creating massive campaigns that approached users in a 
  personal manner.
@@ -791,19 +791,19 @@ Three rules to combat social media:
 
  
 \newpage   
-\section{Basic operations and von Neumann style} 
+    \section{Von Neumann style} 
 
-\renewcommand{\home}{./Fortran/sources/Foundations/Roots}
+%Teoria de la computacion
+%Model of computation: Turing machine, RAM, lambda    -->    Programming paradigm (imperative, declarative, functional, object-oriented, etc.)
+%Architecture: Von Neumann
 
-
-Let's revise some pillars of the computation through the names of the people 
+In the following sections we revise some pillars of the computation through the names of the people 
 that developed them; Turing, Church, Neumann and Backus. 
 Some notions of theory of computation are revised here so a reader that is new 
 to the scientific programming can familiarize himself. 
 
 The theory of computation gives us the basis for the automatic processing of information where we have a \textbf{problem} to solve (a 
-relation or function between a bunch of inputs and their associated outputs) and we want a machine (analog, digital, quantum, etc.) to solve 
-it. 
+relation or function between a bunch of inputs and their associated outputs) and we want a machine (analog, digital, quantum, etc.) to solve it. 
 The tools of theory of computation will tell us if our problem can be solved in the framework of a \textbf{model of computation}, using an 
 \textbf{algorithm} and how \textbf{efficiently} is going to be solved. 
 An essential concept arise here, the model of computation is a mathematical abstract construction that describes how to compute the output of 
@@ -828,121 +828,160 @@ a Turing machine describes theoretically, using an architecture. The architectur
 and hardware in a machine are organized, interrelate and work to conform a computer.
 
 %von Neumann architecture
-Let's briefly describe what a von Neumann architecture is, mainly used in the machine around us. In this description of a computer, a Central 
-Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit separated from the CPU. In that memory, 
-data and program are stored together and each memory position is uniquely identified by an address. Some Buses transfer information between 
-different parts of the computer; data, addresses or control commands. Finally, input/output devices can communicate with the machine using 
-the Buses too. Notice firstly that this is not the only possible architecture for a machine. Secondly, this architecture describes not only 
-how the hardware is organized but also how data and programs work so programming languages are also influenced by this architecture. 
+Let's briefly describe what a von Neumann architecture is since this architecture is mainly used in the machine around us. 
+In this description of a computer, a Central Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit separated from the CPU. 
+In that memory, data and program are stored together and each memory position is uniquely identified by an address. 
+Some Buses transfer information between different parts of the computer; data, addresses or control commands. 
+Finally, input/output devices can communicate with the machine using the Buses too. 
+Notice firstly that this is not the only possible architecture for a machine. 
+Secondly, this architecture describes not only how the hardware is organized but also how data and programs work so programming languages are also influenced by this architecture. 
 
 
 %RAM model and Church lambda 
-Different computation models exist apart from the Turing machine, Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are 
-some of them. Some of these computation models give rise to a programming paradigm like imperative programming or functional programming. The 
-former finds its foundations in the Touring machine and the latter is supported by the concepts of lambda calculus, developed by Alonzo 
-Church. All computable algorithms can be computed using lambda calculus so it is Turing complete and is built with three kind of terms: 
-variables, abstractions and applications. This model is focused on the use of transformation rules and not in the machine that implements 
-these rules so it is closer to software than hardware. Essentially an abstraction here can be seen as a function (with an argument and a 
-function body) so the programs are built by applying functions to other functions instead of assigning (storing) values to variables and 
-iterate  process. 
+Different computation models exist apart from the Turing machine, Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
+Some of these computation models give rise to a programming paradigm. Take a look at the next section to delve into this idea.  
 
 
-%Paradigmas, instructions, machine and style
+ 
+ 
+    \section{Imperative versus declarative programming} 
+
+%Paradigmas
+We have mentioned three essential models of computation: a Turing machine, Random-access Machines and $\lambda$-calculus (developed by Alonzo Church).
+Lambda-calculus is focused on the use of transformation rules and not in the machine that implements these rules so it is closer to software than hardware.
+It is built with three kind of terms: variables, abstractions and applications. 
+Essentially an abstraction here can be seen as a function (with an argument and a function body). 
+Hence, the programs are built by applying functions to other functions instead of assigning (storing) values to variables and an iteration process. 
+
+Some of these computation models give rise to a programming paradigm like imperative programming or functional programming (usually included in the declarative programming paradigm).
+A programming paradigm is the approach used to build the program, the features that define how to solve the problem with the computer. 
+The imperative programming paradigm finds its foundations in the Touring machine and functional programming is supported by the concepts of lambda calculus. 
+All computable algorithms can be computed using lambda calculus so it is Turing complete.
+
+
+
+        \subsection*{Imperative programming}
+    
+In the imperative programming paradigm the programmer tells the machine how to perform each task step by step. 
+The program state is changed through assignment statements so the main focus is \textbf{how} the result is obtained. 
+Structural Paradigm and Object-Oriented Paradigm are included in this group. 
+
+Advantages:
+Very easy to implement
+Contains loops and variables
+
+Disadvantages:
+More buggy compared to Declarative
+Hard to maintain
+Less efficient for long term
+Parallel programming not available
+Examples:
+OOPS is one of the most famous programming paradigm. OOPS short for (Object Oriented Programming) it comes under Imperative programming. In 
+this paradigm everything is revolving around classes and objects.
+
+Languages: Java,Python,C++,Ruby, Smalltalk
+
+
+        \subsection*{Declarative programming}
+
+In the declarative programming paradigm the programmer just tells the computer what to obtain and its properties but not the control flow to perform the task.
+Functional Paradigm, Logical Paradigm, Mathematical Paradigm and Reactive Paradigm are included in this group.
+ 
+Advantages:
+Short and Efficient Code
+Implemented by the methods not yet known at the time of programming
+Characterized by high level of abstraction that's why easier to represent complex logic
+Maintenance is possible irrespective of application development.
+
+Disadvantages:
+Hard to understand for external Devs
+Hard to take characteristics of individual applications into account during programming
+Examples:
+Functional programming The functional programming paradigms has its roots in mathematics and it is language independent. The central model 
+for the abstraction is the function which are meant for some specific computation and not the data structure. Data are loosely coupled to 
+functions.
+
+Languages: JavaScript,Haskell,Scala,Erlang, Lisp
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+%Instructions, machine and style
 %Backus Fortran and its paper 
-This strong relation between imperative programming languages and the von Neumann computer was treated by John Backus in its paper ``Can 
-Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs''. He remarks the parallelism between the 
-von Neumann memory and the use of variables to store data or the instruction cycle of a CPU (fetch, store, execute) with the assignment 
-statement of a programming language. Furthermore, this assignment statement splits the programming languages into two worlds: a world of 
-expressions with strong algebraic properties and a world of statements with few mathematical properties. In this paper, he proposes an 
-alternative to this reality based on the functional programming style. 
+The strong relation between imperative programming languages and the von Neumann computer was treated by John Backus in its paper ``Can 
+Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs''. 
+He remarks the parallelism between the von Neumann memory and the use of variables to store data.
+Also the similarities between the instruction cycle of a CPU (fetch, store, execute) and the assignment statement of a programming language. 
+Furthermore, this assignment statement splits the programming languages into two worlds: 
+\begin{enumerate}
+    \item A world of expressions with strong algebraic properties (right side).
+    \item A world of statements with few mathematical properties (left side).
+\end{enumerate} 
+In this paper, he proposes an alternative to this reality based on the functional programming style. 
 
-Imperative and declarative programming paradigms are treated in the following section using examples that illustrate the main difference 
-between them: when a programmer tells the machine how to perform each task step by step or when the programmer just tells what to obtain and 
-its properties but not the control flow to perform the task. 
-
-%Example of code 3*2 
-
+Imperative and declarative programming paradigms are treated in the chapter \ref{chap:impdec} using examples that illustrate the main difference between them. 
+Notice that the declarative programming paradigm is usually represented by the functional programming paradigm although there are more paradigms included here (logic, constraint programming, etc.).
+Functional programming is treated during the whole book, starting in the section \ref{sec:fpro}.
 
  
+
  
- \section{Imperative versus declarative programming} 
+% Ever since I started learning react I heard this buzzword Functional Programming. I have searched all over the internet and found some 
+% useful resources, watched countless youtube videos and finally got the hang of it, And probably you'll get it too till the end of this 
+% article.
+% First we will see how programming paradigm works, then we will cover functional programming and once we know the basics we will go over the 
+% implementation with JavaScript's Map, Reduce and Filter method.
  
- Ever since I started learning react I heard this buzzword Functional Programming. I have searched all over the internet and found some 
- useful resources, watched countless youtube videos and finally got the hang of it, And probably you'll get it too till the end of this 
- article.
- First we will see how programming paradigm works, then we will cover functional programming and once we know the basics we will go over the 
- implementation with JavaScript's Map, Reduce and Filter method.
+ % Programming Paradigms
+ % Basically there are various approaches to write you programs. If you've done a CS major you'd probably know these and if you didn't don't 
+ % worry its a method to solve a problem. There are two main paradigms Imperative programming and Declarative programming.
  
- Programming Paradigms
- Basically there are various approaches to write you programs. If you've done a CS major you'd probably know these and if you didn't don't 
- worry its a method to solve a problem. There are two main paradigms Imperative programming and Declarative programming.
  
- 1. Imperative Programming
- Imperative programming works by changing the program state through assignment statements. The main focus in this approach is how we achieve 
- the goal
  
- Advantages:
- Very easy to implement
- Contains loops and variables
- Disadvantages:
- More buggy compared to Declarative
- Hard to maintain
- Less efficient for long term
- Parallel programming not available
- Examples:
- OOPS is one of the most famous programming paradigm. OOPS short for (Object Oriented Programming) it comes under Imperative programming. In 
- this paradigm everything is revolving around classes and objects.
  
- Languages: Java,Python,C++,Ruby, Smalltalk
- 2. Declarative Programming
- Declarative programming is a way of building programs that express the logic of computation without describing its control flow.
+    \section{Vector languages}
  
- Advantages:
- Short and Efficient Code
- Implemented by the methods not yet known at the time of programming
- Characterized by high level of abstraction that's why easier to represent complex logic
- Maintenance is possible irrespective of application development.
- Disadvantages:
- Hard to understand for external Devs
- Hard to take characteristics of individual applications into account during programming
- Examples:
- Functional programming The functional programming paradigms has its roots in mathematics and it is language independent. The central model 
- for the abstraction is the function which are meant for some specific computation and not the data structure. Data are loosely coupled to 
- functions.
  
- Languages: JavaScript,Haskell,Scala,Erlang, Lisp
+In the context of scientific programming some features like a syntax close to mathematics or
+functional oriented programming are desirable for a programming language. 
+In addition, array programming (vector languages) is an essential characteristic. 
+It makes reference to the possibility of operating a whole group of values at the same time.
+Hence, the operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
+in a easy to write (near to maths) expression, greatly simplifying maths computations.
  
  
  
  
  
  
- \section{Vector languages}
+    \section{Functional programming} \label{sec:fpro}
  
- \section{Functional programming}
+Functional programming (FP) is highly influenced by Mathematics realm. 
+FP would love to have all Mathematics included in every line of code.
  
- 1. Imperative Paradigm
- In which control flow is explicit, where the programmer instructs the program how to change its state. Where it includes more paradigms:
+Although Math is only built with functions and variables, it’s still very powerful and expressive. 
+That’s what FP is trying to do. 
+Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
  
- Structural Paradigm
- Object-Oriented Paradigm
- 2. Declarative Paradigm
- In which control flow is implicit, where the programmer instructs the program what should be done without specifying how to it should be 
- done. Where it includes more paradigms:
- 
- Functional Paradigm
- Logical Paradigm
- Mathematical Paradigm
- Reactive Paradigm
+That’s why functions’ freedom (making them first-class) comes into work. 
+When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
+Which as we mentioned earlier, FP will make your code more Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
  
  
- Functional programming (FP) is highly influenced by Mathematics realm. FP would love to have all Mathematics included in every line of code.
- 
- Although Math is only built with functions and variables, it’s still very powerful and expressive. That’s what FP is trying to do. Solving 
- every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
- 
- That’s why functions’ freedom (making them first-class) comes into work. When you can treat a function in a programming language as simple 
- as a variable, that language would be much more flexible and opens a lot of rooms for improvements. Which as we mentioned earlier, FP will 
- make your code more Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
  
  
+ 
+ 
+ 
+ 
+ 
+% 1. Imperative Paradigm
+% In which control flow is explicit, where the programmer instructs the program how to change its state. Where it includes more paradigms:
+% 
+% 
+% 2. Declarative Paradigm
+% In which control flow is implicit, where the programmer instructs the program what should be done without specifying how to it should be 
+% done.

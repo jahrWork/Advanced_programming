@@ -1,47 +1,170 @@
 \chapter{Basic operations} 
 
 
+\section{Introduction} 
+
+Como la arquitectura de von neumann motiva que usemos variables con un data type en las que guardamos el valor con el que vamos a trabajar
+
+
+
 
 \section{Data types} 
 
 Each constant, variable, array or function in a programming language has an intrinsic data type associated. 
-This type decides among other things the permitted values that the entity can have or the set of operations that can be performed with them.
+This type decides, among other things, the permitted values that the entity can have and the set of operations that can be performed with them.
 For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 
 Then, a value $x\in \mathbb{Z}$ will be stored in an \texttt{integer} variable and operations like addition, multiplication or exponentiation are allowed. 
 
-The data typing in a programming language could be explicit if the programmer needs to decide and declare the type for each variable or implicit when the language assumes the type. 
+The data typing in a programming language is explicit when the programmer needs to decide and declare the type for each variable or implicit when the language assumes the type. 
 Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
 Python is mainly an implicit typing language since we can assign a value to a variable without declaring type, i.e. \texttt{a = 3} will automatically treat \texttt{a} as an integer. 
 Fortran, on the contrary, is a explicit typing language because all variables must be previously declared with a specific type, i.e. \texttt{real :: x = 5.6}.
 
-In the following examples the intrinsic data types in Fortran and Python are presented through some basic examples. 
 
-Notice that Fortran provides five intrinsic data types but derived data types can be created either from intrinsic data types or from other derived types previously defined.
-The five intrinsic types are of numeric nature: \texttt{integer}, \texttt{real} or \texttt{complex}, boolean nature: \texttt{logical} or text nature: \texttt{character}.
 
-The numeric types of data behave like the mathematical abstractions of these sets while the boolean type gets the two possible values of the Boolean algebra; \texttt{True} and \texttt{False}. 
-The \texttt{character} type can store strings with ASCII characters which includes alphanumeric, symbols and signs characters.   
+
+Notice that Fortran provides five intrinsic data types. 
+Derived data types can be created either from intrinsic data types or from other derived types previously defined.
+The five intrinsic types are:
+\begin{itemize}
+    \item Numeric nature: \texttt{integer}, \texttt{real}, \texttt{complex}. 
+    \item Boolean nature: \texttt{logical}.
+    \item Text nature: \texttt{character}.
+\end{itemize}
+The numeric types of data behave like the mathematical abstractions of these sets, 
+roughly speaking: $n\in \mathbb{Z}$ is stored in an \texttt{integer}, $x\in \mathbb{R}$ is stored in an \texttt{real} and $z\in \mathbb{C}$ is stored in an \texttt{complex} variable.
+The \texttt{logical} type gets the two possible values of the Boolean algebra; \texttt{True} and \texttt{False}. 
+Finally, the \texttt{character} type can store strings with ASCII characters which includes alphanumeric, symbols and sign characters.   
+
+
+
 
 The same data types are built-in in Python but with a different name (\texttt{int}, \texttt{float}, \texttt{complex}, \texttt{bool} and \texttt{str}). 
-In addition, more data types can be found by default; of sequence nature: \texttt{list}, \texttt{tuple} or \texttt{range}, mapping nature: \texttt{dict} or set nature: \texttt{set} among others. 
+In addition, more data types can be found by default, among others we find:
+\begin{itemize}
+    \item Sequence nature: \texttt{list}, \texttt{tuple} or \texttt{range}.
+    \item Mapping nature: \texttt{dict}.
+    \item Set nature: \texttt{set}, \texttt{frozenset}.
+\end{itemize}
+These new types are used to store collections of data whose the elements can be any type of data. 
+For example a list can contain strings together with integers or reals but also other lists nested. 
+Notice that Fortran does not include these data types.
 
-These new types are used to store collections of data that can be at the same time any type of data. For example a list can contain strings together with integers and reals. 
-A \texttt{list} is characterised by being ordered; the position within the list is kept, changeable; change, add, and remove items are allowed when needed in the execution of the code and allow duplicates; items can appear more than one time in the list, the difference between both elements comes with the index within the list. 
-A \texttt{tuple} is quite the same than a \texttt{list}: ordered data collection that allows duplicates, however, these are unchangeable which means that once created we cannot change, add or remove items. 
-Python allocates the required memory once and not reallocates it so this becomes a more memory efficient strategy.
 
-A \texttt{set} in Python is also a collection of any type of data but in this case unordered and not allowing duplicate values. 
-Notice that an element within the set, since it is not stored in a defined order (with an integer index pointing to them), two equal elements could not be distinguished.
+
+
+%MATEMATICAS:
+%List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. USUALLY INFINITE
+%Tuple: enumerated collection of objects in which repetitions are allowed and order matters. ALWAYS FINITE
+
+%PROGRAMMING PYTHON:
+%List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. ONLY FINITE IS POSSIBLE
+%Tuple: Same as list but it can not change (programming concept not related to maths)
+
+A \texttt{list} extracts its meaning from the concept of sequence/list in mathematics, notice that when talking about programming, lists can not be infinite while sequences can in mathematics:
+
+\textit{A sequence is an enumerated collection of objects in which repetitions are allowed and order matters.}
+
+Hence, a list is characterised by being i) ordered; the position within the list is kept, ii) changeable; change, add, and remove items are allowed when needed in the execution of the code and iii) allow duplicates; items can appear more than one time in the list. Notice that the difference between any two elements comes with the index within the list.
+A \texttt{tuple} is quite the same than a \texttt{list}: ordered data collection that allows duplicates. 
+%takes also the mathematical meaning: \textit{a finite ordered list (sequence) of elements} 
+However, tuples are unchangeable, which means that once created we cannot change, add or remove items. 
+Python allocates the required memory once and not reallocates it so this becomes a more memory efficient strategy to follow when the data is going to be immutable.
+
+A list is written using square brackets and a tuple round brackets, both with comma-separated values:
+\begin{verbatim}
+L = [ ("one", 5, 3.5, 5 ]
+\end{verbatim}
+\begin{verbatim}
+T = ( ("one", 5, 3.5, 5 )
+\end{verbatim}
+
+A \texttt{set} in Python takes the same meaning as the definition of set in the set theory started by Georg Cantor:
+
+\textit{A set is a gathering together into a whole of definite, distinct objects of our perception or our thought, which are called elements of the set.}
+
+Hence, Python treats them as a collection of any type of data, but in this case i) unordered and ii) not allowing duplicate values. 
+In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant (there is not an integer index pointing to them).
+Furthermore, notice that two equal elements, since they are not ordered, could not be distinguished between them. Hence, duplicate values are not allowed. 
+
+Roster or enumeration notation defines a set by listing its elements between curly brackets separated by commas:
+\begin{verbatim}
+S = { 4, 2, 1, 3 }
+\end{verbatim}
+\begin{verbatim}
+S2 = { blue, white, red }
+\end{verbatim}
+As it is easy to follow from the definition, different orderings in roster notation does not change the set.
+For example, $\{ 2, 4, 6 \}$ and $\{ 4, 6, 4, 2 \}$ represent the same set.
+For sets with many elements, especially those following an implicit pattern,
+the list of members can be abbreviated using an ellipsis ``...''.
+For instance, the set of the first thousand positive integers 
+may be specified in roster notation as
+\begin{verbatim}
+{ 1, 2, 3, ..., 1000 }.
+\end{verbatim}
 In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
-The \texttt{frozenset} is similar but once created its content can not be modified. 
-%Finally, a dictionary 
+Exactly like a tuple is an unchangeable list, a \texttt{frozenset} is an unchangeable set, once created, its content can not be modified. 
+
+A dictionary (\texttt{dict}), like a list, is also a collection of data that can store any type of data (even other dictionaries nested), are ordered and changeable.
+However, unlike lists, the values are stored in pars: \texttt{key:value} and do not allow duplicates; it cannot have two items with the same key.
+
+To write a dictionary we write the list of elements, separated by commas and using a colon (\texttt{:}) to separate each pair. 
+Also, all the content is enclosed in curly brackets (\texttt{\{\}}). 
+Let's see an example:
+\begin{verbatim}
+D = { ``Name'': ``John'', ``Age'': 32, ``Mark'': 7.3 }
+\end{verbatim}
+
+\newpage
+When we want to use all these collections of data, since they are treated as \textit{iterable} objects, we can use a \texttt{for} loop to iterate through them. 
+If \texttt{V} is a list, tuple, dictionary or set, we can move throughout all the elements using:
+\begin{verbatim}
+for v in V:
+\end{verbatim}
+So \texttt{v} takes, sequentially, all the values stored in \texttt{V}. 
+Notice that, if \texttt{V} is a set, the elements won't follow any specific order. 
+Let's execute for example:
+\begin{verbatim}
+S = {7,2,"car",78.2,"boat",4.5}
+for x in S:
+    print(x)
+\end{verbatim}
+resulting in:
+\begin{verbatim}
+2
+4.5
+7
+boat
+78.2
+car
+\end{verbatim}
+Use the following expression to iterate using an index throughout the whole length of the collection:
+\begin{verbatim}
+for i in range(len(V)): 
+\end{verbatim}
+or extract both the index and the value of the element using:
+\begin{verbatim}
+for i, v in enumerate(V):
+\end{verbatim}
 
 
 
-Fortran
+
+In the following examples the intrinsic data types in Fortran and Python are presented through some basic expressions. 
+
+
+\newpage 
+\subsection*{Fortran code}
+Since Fortran is a explicit typing language, before using any variable, all must be previously declared with a specific type.
+The following program shows an example of the declaration and initialization of the five data types we can find. 
+%\vspace{0.5cm}
+%\lstfor
+%\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
+%\listings{\home/modB.f90}{module modB}{end module}{modB.f90}
 
 \begin{verbatim}
-    program data_types
+program data_types
     
     implicit none
     
@@ -51,120 +174,44 @@ Fortran
     complex :: com = (1,1)
     logical :: bool = .true.
     
-    end program
+end program
 \end{verbatim}
 
 
-
-
-
-
-
-Python
-
-\begin{verbatim}
-    def data_type(): 
-    
-    string = "data types"
-    integer = 1 
-    real = 1.8 
-    complex = 1 + 1j
-    bool = True
-    
-    sets = "unordered set with distinct elements" 
-    S = {string, integer, real, complex} 
-    
-    # print order is unpredictable 
-    print("\n type=", type(S)) 
-    for s in S: 
-    print(" element =", s)
-    
-    lists = "ordered set allowing equal elements" 
-    S = ["one", 5, 3.5, 5] 
-    
-    # lists are ordered  
-    S[3] = 8
-    print("\n type=", type(S))   
-    for i in range(len(S)): 
-    print(" element =", S[i]) 
-    
-    
-    tuples ="inmutable ordered set" 
-    S = ("one", 5, 3.5, 5)  
-    
-    # tuples are inmutable 
-    print("\n type=", type(S))
-    for i in range(len(S)): 
-    print(" element =", S[i])   
-    print("\n")   
-    
-    dictionaries = "ordered data values in key:value pairs"
-    # mutable and do not allow duplicates"
-    arrays = {"set":sets, "list":lists, "tuple":tuples, "dictionary":dictionaries} 
-    
-    for e in arrays:  
-    print("{:12} {} {}".format(e, ":", arrays[e]) )
-    print("\n")
-\end{verbatim}
-
-
-
-
-
-
-
-Georg Cantorgave the following definition: 
-
-A set is a gathering together into a whole of definite, distinct objects of our perception or our thought—which are called elements of the 
-set.
-
-Roster or enumeration notation defines a set by listing
-its elements between curly brackets, separated by commas:
-$$
-A = \{ 4, 2, 1, 3 \}
-$$
-$$
-B = \{ blue, white, red \}.
-$$
-In a set, all that matters is whether each element is in it or not, 
-so the ordering of the elements in roster notation is irrelevant 
-(in contrast, in a sequence, a tuple, or a permutation of a set, 
-the ordering of the terms matters).
-
- 
-For example, {2, 4, 6} and {4, 6, 4, 2} represent the same set.
-
-For sets with many elements, especially those following an implicit pattern,
-the list of members can be abbreviated using an ellipsis '...'.
-For instance, the set of the first thousand positive integers 
-may be specified in roster notation as
-$$
-\{ 1, 2, 3, ..., 1000 \}.
-$$
-
-
-
-\newpage 
-\subsection*{Fortran code}
 
 
 \newpage 
 \subsection*{Python code}
-The same function is presented below coded with Python. Essentially both codes are quite similar, 
+Take a look now at the example of use of these data types in Python. 
+Essentially both codes are quite similar, 
 however, now data types for variables are not explicitly declared because 
-Python automatically declares them. In addition, indentation rules must be strictly followed. 
+Python automatically declares them. 
+In addition, indentation rules must be strictly followed. 
 \vspace{0.5cm} 
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/data_type} 
 \listingsp{\home/data_type.py}{def}{format}{data_type.py}
-%\lstfor
-  
 
-Explain  3 iterators with for Python: 
 
-for v in V: 
-for i in range(len(V)): 
-for i, v in enumerate(V):
+
+
+ 
+
+
+
+
+
+\newpage
+\section{Basic operations}
+
+
+
+Lo basico de verdad, especialmente division de integers
+
+%Example of code 3*2 
+
+
+
 
 \newpage 
 \section{Roots of a second degree equation} 
@@ -207,4 +254,5 @@ Python automatically declares them. In addition, indentation rules must be stric
 %\lstfor
   
   
+ 
  

@@ -1,27 +1,49 @@
 \chapter{Python and Fortran foundations} 
- 
-As a first approach to the use of Fortran to learn applied mathematics 
-a chapter including basic operations will be presented. 
-In it the reader can become familiar to the use of basic sentences in order to 
-perform simple mathematical operations.
+Python and Fortran foundations try to give the reader a first approach to implement  numerical 
+problems in the computer. The authors consider that a brief knowledge of history of 
+computer and programming languages allow to understand how different programming skills or paradigms
+have evolved during the last decades. For this reason, a pleasant  history tour through is proposed 
+at the beginning of this chapter. The birth of computers, 
+the space race and the influence of profound mathematicians among other factors conformed 
+the origin of computing languages. Several movies and documentaries are recommended to 
+understand those naive and happy days and how geeks and nerds had a big influence in the first 
+stages of personal computer business.       
+The universal Turing machine together with the von Neumann computer architecture gave rise 
+to the imperative paradigm of programming problems. 
+The imperative paradigm consists of a sequence  of basic computer operations to achieve
+the solution of some problem. 
+Later, John Backus, among others, asked himself if different programming paradigms 
+than imperative were possible to solve problems. 
+It was the birth of a programming style closer to mathematics than to a specific computer 
+architecture. 
 
+In this part, basic operations are presented as a first approach to 
+perform simple mathematical operations.
+%
+% to learn applied mathematics 
+%a chapter including  
+%In it the reader can become familiar to the use of basic sentences in order
 For each concept treated a Fortran code example guides the explanation and at the 
 end of each chapter the corresponding Python codes are presented. Thus, the following
 can be also used as a comparison between the foundations of both programming languages. 
  
-The following menu schematizes the concepts treated in the following chapters, by choosing 
-different options you can execute all the examples presented. 
- 
-    \newpage 
-    
-    \vspace{0.5cm}
-    \renewcommand{\home}{./Fortran/sources/Foundations} 
-  \listings{\home/Foundations.f90}{do while}{end select}{Foundations.f90}
+
+\newpage 
+\subsection*{Fortran menu}
+ \vspace{-0.3cm}
+The following Fortran menu covers different examples of the first part of the book: 
+\vspace{-0.3cm}
+\renewcommand{\home}{./Fortran/sources/Foundations} 
+\lstfor
+\listings{\home/Foundations.f90}{Basic programming}{end select}{Foundations.f90}
    
-    \newpage
-    \vspace{0.5cm}
-    \renewcommand{\home}{./Python/sources/Foundations} 
-  \listings{\home/Foundations.py}{while}{Test_load_matrix()}{Foundations.py}  
+\newpage
+\subsection*{Python menu}   
+The following Fortran menu covers different numerical examples of the first part of the book: 
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Foundations} 
+\lstpython
+\listingsp{\home/Foundations.py}{while}{Test_load_matrix()}{Foundations.py}  
    
  
  

@@ -86,7 +86,7 @@
 		<File RelativePath=".\sources\Advanced_programming\scope\modA.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\scope\modB.f90"/>
 		<File RelativePath=".\sources\Advanced_programming\scope\scope_example.f90"/></Filter>
-		<File RelativePath=".\sources\Advanced_programming\advanced_programming_techniques.f90"/></Filter>
+		<File RelativePath=".\sources\Advanced_programming\advanced_programming.f90"/></Filter>
 		<Filter Name="dislin">
 		<File RelativePath=".\sources\dislin\disifl_d.lib"/>
 		<File RelativePath=".\sources\dislin\dislin_d.f90"/></Filter>
@@ -104,6 +104,8 @@
 		<File RelativePath=".\sources\Foundations\Calculus\Taylor_expansions.f90"/></Filter>
 		<Filter Name="graphs">
 		<File RelativePath=".\sources\Foundations\graphs\plotting.f90"/></Filter>
+		<Filter Name="Basic operations">
+		<File RelativePath=".\sources\Foundations\Basic operations\Basic_operations.f90"/></Filter>
 		<Filter Name="Read files">
 		<File RelativePath=".\sources\Foundations\Read files\data.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\data2.csv"/>

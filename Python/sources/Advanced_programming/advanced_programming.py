@@ -1,6 +1,6 @@
 from scope_example import         scope_public_private_example
 from polymorphism import          polymorphism_example
-from polymorphic_ODES import      complex_ODES
+from polymorphic_odes import      complex_ODES
 from vectors_and_matrices import  dot_product_examples, matmul_examples, greatest_difference
 from First_class_functions import function_examples
 from map_filter_reduce import     test_map_filter_reduce
@@ -11,12 +11,14 @@ from pointers import              pointer_examples
 from main_ODES import             Kepler_schemes
 from Fourier import               Fourier_example
 from fortran_from_py import       fortran_example
+from decorators import            decorator_example
+from main_ODES  import            plotting_with_decorators 
 
 
-def menu_advanced_programming_techniques(): 
+def menu_advanced_programming(): 
     
- option = 1     
- while option > 0 :  
+     
+ while True :  
    
      print( "\n Welcome to Advanced programming concepts" ) 
      
@@ -26,16 +28,15 @@ def menu_advanced_programming_techniques():
      print( " 2. Objects and polymorphism  " ) 
      print( " 3. Vector operations  " ) 
      print( " 5. Functional programming" )  
-    
      print( " 6. Pointers and different views of data. N body problem " )  
+     print( " 7. Wrappers") 
+     print( " 8. calling Fortran from Python  ")    
+     option = int (input("\n Select an option = ") )  
+       
+     if option==0:
+          break
 
-  
-     print( " 8. Wrappers: Fortran from Python  ")     
-
-     option = int ( input() ) 
-     print(" option =", option)
-  
-     if option == 1 : 
+     elif option == 1 : 
          scope_public_private_example() 
    
      elif option == 2:  
@@ -58,6 +59,10 @@ def menu_advanced_programming_techniques():
      elif option == 6: 
           pointer_examples() 
           Integrate_NBP() 
+
+     elif option == 7: 
+          decorator_example()
+          plotting_with_decorators()
 
      elif option == 8: 
           fortran_example() 

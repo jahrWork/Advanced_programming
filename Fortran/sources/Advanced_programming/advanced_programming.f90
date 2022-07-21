@@ -1,4 +1,4 @@
-module advanced_programming_techniques  
+module advanced_programming 
     
      
     use scope_example, only         : scope_public_private_example
@@ -21,16 +21,13 @@ module advanced_programming_techniques
     
 contains 
  
-subroutine menu_advanced_programming_techniques 
+subroutine menu_advanced_programming 
    
 integer :: option 
 
-option = 1     
-do while (option>0) 
+do ! Advanced programming menu
     
-     write(*,*) 
-     write(*,*) "Advanced programming techniques" 
-     
+     write(*,'(/,A)') "Advanced programming techniques" 
      write(*,*) " select an option " 
      write(*,*) " 0. exit/quit  "
      write(*,*) " 1. Scope, private and public " 
@@ -39,15 +36,17 @@ do while (option>0)
      write(*,*) " 4. Object Oriented Programming"
      write(*,*) " 5. Pointers and different views of data. N body problem "  
      write(*,*) " 6. Wrappers  "
-     write(*,*) " 7. Mixing Python with Fortran " 
+     write(*,*) " 7. Calling Python from Fortran " 
      write(*,*) " 8. Examples: fractals, games   "
 
      read(*,*) option   
      
     select case(option)
+     case(0) 
+          exit
+        
      case(1) 
           call scope_public_private_example
-            
    
      case(2) 
          call Function_examples  
@@ -75,16 +74,15 @@ do while (option>0)
          call Wrapper_examples
          
       case(7) 
-         !call py2for_examples    
+     !    call calling_Python_from_Fortran_examples    
          
      case(8) 
          call plot_VonKoch
          call plot_Mandelbrot_example 
          call sudoku_examples
          
-      case(11) 
+     case(11) 
          
-      
           case default
            write(*,*) " option not implemented" 
               

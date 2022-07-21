@@ -8,7 +8,7 @@ module Fourier
     
     contains
     
-subroutine Fourier_examples 
+subroutine Fourier_example 
     
     integer :: N = 24   ! Fourier truncated series 
     integer, parameter :: M = 2000 ! points to plot 

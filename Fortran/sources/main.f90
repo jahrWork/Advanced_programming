@@ -1,50 +1,16 @@
   
 Program main 
     
-    use Foundations, only                     : menu_foundations  
-    use integers_and_reals, only              : menu_Integers_and_reals
-    use advanced_programming_techniques, only : menu_advanced_programming_techniques
-     
-     use pointers, only              : pointer_examples
-     use overloading, only           : test_integral 
-     use First_class_functions
-     use map_filter_reduce
-     use polymorphic_ODES
-      
+    use Foundations, only               : menu_foundations  
+    use integers_and_reals, only        : menu_Integers_and_reals
+    use advanced_programming, only      : menu_advanced_programming
+         
     implicit none 
     integer :: option 
    
-    
-     
-     !call referential_transparency
-     !stop 
-    
-    !call complex_ODES 
-    !stop 
-    !
-    
-    !call test_filter_reduce
-    !stop 
-    !
-    !call test_rotation
-    !stop 
-    
-    !call test_integral 
-    !stop 
-     call pointer_examples 
-    stop 
-    !
-    !call Fibonacci_numbers
-    !stop 
-    !call pure_functions
-    !stop 
-    
-option = 1     
-do while (option>0) 
-    
-     write(*,*) 
-     write(*,*) "Welcome to Advanced Programming" 
-     write(*,*) "for Numerical Calculations" 
+do 
+     write(*,'(/, A)') "Welcome to Advanced Programming" 
+     write(*,*) "for Numerical Calculations (Fortran project)" 
      
      write(*,*) " select an option " 
      write(*,*) " 0. exit/quit  "
@@ -54,6 +20,10 @@ do while (option>0)
      read(*,*) option   
      
     select case(option)
+        
+     case(0) 
+          exit
+          
      case(1) 
           call menu_Foundations
          
@@ -61,7 +31,7 @@ do while (option>0)
            call menu_Integers_and_reals
          
      case(3) 
-         call menu_advanced_programming_techniques
+         call menu_advanced_programming
          
          case default
            write(*,*) " option not implemented" 
@@ -69,4 +39,5 @@ do while (option>0)
      end select 
      
 end do
+
 end program 

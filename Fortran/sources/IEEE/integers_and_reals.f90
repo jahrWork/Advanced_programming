@@ -22,9 +22,9 @@ subroutine menu_Integers_and_reals
     integer (kind=8) :: i8      ! 8-byte size
     
   
- option = 1    
- do while (option>0)   
-    write(*,*) " Enter option ? "
+ do
+     
+    write(*,*) " select an option  "
     write(*,*) " 0. Exit " 
     write(*,*) " 1. Integer overflow  "
     write(*,*) " 2. Understanding integer overflows  "
@@ -41,10 +41,10 @@ subroutine menu_Integers_and_reals
     select case(option) 
         
     case(0) 
-       exit 
+        exit 
      
-    !----------------------- INTEGERS CHAPTER -----------------------
-    case(1) 
+    
+    case(1) ! INTEGERS CHAPTER 
         call Integer_overflow  
         call Factorial_overflow
        
@@ -65,8 +65,8 @@ subroutine menu_Integers_and_reals
     case(4)
         call TwosCompl_int_converter
         
-    !----------------------- REALS CHAPTER -----------------------   
-    case(5)
+     
+    case(5)  ! REALS CHAPTER 
       ! Extend precison of single-precision constants : Compiler YES /fpconstant 
         x = 0.1;      call IEEE_real_representation(x)  
         xd = 0.1;     call IEEE_real_representation(xd) 

@@ -1,23 +1,206 @@
 
 
-\chapter{Wrappers to reuse old codes} 
+\chapter{Wrappers or decorators} 
+
+\vspace{-1cm} 
+\section{Introduction} 
+\vspace{-0.5cm}
+Wrappers or decorators is perhaps one of most powerful  
+programming skills to be used by advanced developers. 
+It resembles the natural way of thinking.
+Let's imagine that our main objective or task is to simulate 
+the behavior of a dynamical system. To achieve that goal, libraries 
+concerning to numerical schemes to integrate the problem should be written.
+The final result is a function to simulate the problem. 
+Generally, this software has been implemented in some library and there is no 
+need to implement it again. 
+If this is the case and the simulation software belongs to some library,
+modifications are generally avoided due to different reason such as: 
+scarce knowledge of the implemented problem, old codes with 
+obscure implementations difficult to modify, robust and validated codes
+or standard libraries. That's why, generally,  
+modifications are not desirable or not allowed. 
+However, if extra 
+functionalities such as:  debugging, profiling or plotting  
+are not implemented, the elegant way of having those extra functionalities
+without modifying the standard code is by means of wrappers or decorators. 
+It is important to note that a wrapper or decorator can modify or complement 
+the behavior of and existing code by means of watching input arguments and
+processing output results. 
+There two main uses of wrappers: 
+\vspace{-0.5cm}
+\begin{enumerate}
+\setlength\itemsep{0cm}
+\item Basic wrappers to communicate between to different libraries.
+\item Advanced wrappers or decorators to extend 
+functionality of existing software. This extra functionality could include:
+ profiling, debugging, checking valid arguments, exception treatment and plotting. 
+\end{enumerate} 
+Besides, multiple decorators  can be used at the same time. A simulation software can
+be decorated to validate input arguments, to measure its memory requirement and 
+its time and, finally, to plot or show results in a graphical user interface. 
+
+\newpage
+\section{Basic wrapping}
+The basic use of wrappers is to reuse old codes by wrapping them with a modern 
+function interface. This basic use could covers the two following needs: 
+\begin{enumerate}
+\item To reduce the number of input arguments. 
+If programs were written in the past where languages do not allow 
+functionalities such as dynamic allocation, 
+extra input arguments were defined to store working memory areas.
+Wrappers allow to reduce those extra arguments by allocating dynamically 
+those working areas before the old code is called.  
+
+\item To adapt input arguments to match some required specifications.
+If the existing software is going to be integrated in some specific library 
+to be used by other modules, the function interface should 
+adapted to new specifications. This can be done very easily 
+by writing a wrapper 
+
+\item To hide spaghetti or non structured codes by means of a nice wrapper. 
+\end{enumerate}
+
 \subsection*{Fortran} 
+The Dormand–Prince method or DOPRI method
+is an embedded Runge–Kutta ODE solver (Dormand \& Prince 1980). 
+Dormand–Prince method is currently an option in Python's SciPy ODE integration library.
+In the following example a call to an old numerical scheme \verb|DOPRI5| is shown.
+The code was written by E. Hairer and G. Wanner 
+and described in: "Differential Equations I. Nonstiff problems". 1993, Springer-Verlag. 
+\vspace{0.5cm} 
+   \renewcommand{\home}{./Fortran/sources/Advanced_programming/odes/schemes} 
+   \lstfor
+  \listings{\home/Temporal_Schemes.f90}{CALL DOPRI5}
+  {IDID}{Temporal_Schemes.f90}
+The subroutine \verb|DOPRI5| has 17 arguments. 
+A wrapper is written to reduce the function interface to 5 arguments. 
+\vspace{0.5cm}   
+\listings{\home/Temporal_Schemes.f90}{subroutine WDOPRI5}
+{WDOPRI5}{Temporal_Schemes.f90}
 
-\renewcommand{\home}{./Fortran_project/sources/odes} 
 
-\listings{\home/Temporal_schemes.f90}{subroutine WDOPRI5}
-{end subroutine}{Temporal_schemes.f90}
+\newpage 
+\section{Explaining decorators}
+There is a specific syntactic sugar to write wrappers in Python. 
+These wrappers are called decorators.
+To explain how a decorator works, a recall to functional programming should be made. 
+The important key to remember is that first class functions can  
+have input arguments as functions and also can return functions. 
+ 
+
+\subsection*{Python} 
+In the following code, a function called \verb|simple_decorator| is shown.  
+It has an input function argument \verb|f| and it returns the internal 
+function \verb|wrapped_function|. 
+\renewcommand{\home}{./Python/sources/Advanced_programming/decorators}
+\lstpython 
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{simple_decorator}
+  {return wrapped_function}{decorators.py}
+In the following snippet, a function \verb|f(x)| is defined and 
+a new function \verb|g| is created by means of \verb|simple_decorator| function. 
+Since \verb|g=simple_decorator(f)|, \verb|g| is the internal new function \verb|wrapped_function| which prints its name and its input
+argument, then it evaluates \verb|f(x)| and finally, prints its output. Hence, \verb|g| decorates \verb|f(x)|
+with those input/output messages. Python has  syntactic sugar to make this creation easier. 
+By positioning \verb|@simple_decorator| just above the definition of \verb|f(x)|, any invocation 
+of \verb|f(x)| will be decorated having the same effect than \verb|g|
+but simplifying the syntax code.    
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{@simple_decorator}
+  {4}{decorators.py} 
+
+\newpage 
+\section{Debugging} 
+When debugging code, it always important to check the type of input arguments,
+its values and to know the returning values. An extra difficulty is that 
+functions are defined with different 
+numbers of input arguments. 
+To overcome this difficulty, 
+Python allows to define arguments by preceding its name with an asterisk (*), 
+indicating argument tuple packing. 
+Any corresponding arguments in the function call are packed into a tuple 
+that the function can refer to by 
+the given name.
+Besides, Python has a similar operator, the double asterisk (**),  
+indicating that the corresponding arguments are expected to be key=value pairs.
+
+In the following code, a function \verb|debugging| prints the input values of any function 
+\verb|f| either arguments are given by their value or when arguments are given by key-value pairs. 
+After the function is called \verb|r=f(*args, **kwargs)|, the type of the result and its value 
+is printed.  
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{Decorator to debug}
+  {return debug_f}{decorators.py}
+
+By positioning \verb|@debugging| just above any function definition, input arguments
+and output value of any function will be printed.  
 
 
 
 \newpage 
-\renewcommand{\home}{./Fortran_project/sources/odes} 
-\listings{\home/Wrappers.f90}{subroutine Test_Arenstorf_orbit}
-{end subroutine}{Wrappers.f90}
+\section{Profiling} 
+Program profiling is a dynamic analysis to measure memory consumption and CPU processing time 
+involved when executing some programming code. 
+Profiling information can be used to optimize the code by modifying those parts more 
+demanding in erms of memory or CPU time. 
+When functional programming paradigm is adopted, measuring isolated functions is more than enough 
+to identify those critical demanding parts. 
+To measure the CPU time and the memory consumption of some function, 
+different libraries can be used to trace memory allocation and processing time. 
+
+The following decorator \verb|profiling|  uses the \verb|tracemalloc| module  to trace memory blocks allocated by Python
+and the \verb|time| module with the \verb|perf_counter| 
+function to give  the float value of time in seconds. 
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{Decorator to measure}
+  {return profile_f}{decorators.py}
+By positioning the decorator \verb|@profiling| just above any function, used memory and 
+elapsed time can be calculated.
+The important idea of this function or decorator is that it is written only one time 
+and it is used for any function to measure making codes much smaller and easier to maintain.
+
 
 \newpage
-\subsection*{Python}
+\section{Exceptions}
+Generally, functions are not prepared or protected for different combinations of input 
+arguments. There are many situations when undesired combinations of input values gives 
+strange or unforeseen behavior giving rise to math exceptions and other kind of 
+malfunction or errors. When an error occurs, 
+Python will stop and generate an error message.
+These exceptions can be handled using the \verb|try| statement for a block of code. 
+The \verb|except| statement for a block of code lets to handle the error.
 
-Decorators
+
+Instead of writing  repetitive \verb|try/except| structure for any single function, the following 
+decorator \verb|exceptions| can be used as a template 
+to protect any function form possible malfunctions. 
+
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{exceptions}
+  {return exception_treatment}{decorators.py}
+
+In the following snippet, \verb|f| function is decorated with \verb|debugging|, 
+\verb|profiling| and \verb|exceptions| at the same time. 
+In the last evaluation of \verb|f("2",5)|, the \verb|exceptions| decorator handles the error
+of trying to add string characters with integers numbers. 
+\vspace{0.5cm}
+\listingsp{\home/decorators.py}{@debugging}
+  {exception f}{decorators.py}
 
 
+\newpage 
+\section{Decorated simulations} 
+In this last example, four simulations of the Kepler orbit with different numerical schemes 
+are decorated with: \verb|profiling| 
+to measure used memory and CPU time, \verb|debugging| to monitor input arguments and 
+\verb|plot_simulation| to plot the simulated orbit. 
+
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Advanced_programming/ODES}
+
+\listingsp{\home/main_ODES.py}{Decorator to plot}
+  {return plot}{main_ODES.py}
+
+\listingsp{\home/main_ODES.py}{Decorators to plot}
+  {RK4}{main_ODES.py}

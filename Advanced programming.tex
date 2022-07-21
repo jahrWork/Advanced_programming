@@ -89,8 +89,9 @@ twoside
 \pretitle{\vspace{-150pt} \begin{flushleft} \HorRule \fontsize{34}{34}
 		\usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont}
 	% Your article title	
-	\title{{\fontsize{27}{33}\selectfont Advanced Programming for \\ Numerical Calculations:  \\  \vspace{0.8cm} } 
-	 {\fontsize{27}{33}\selectfont Python \& Fortran\\ }
+	\title{{\fontsize{27}{33}\selectfont Advanced Programming for \\ Numerical Calculations: 
+	 \\  \vspace{0.8cm} } 
+	 {\fontsize{27}{33}\selectfont Climbing Python \& Fortran\\ }
 	 }
 	
 	% Whitespace under the title	
@@ -117,7 +118,17 @@ twoside
 \date{  } % Add a date here if you would like one to appear underneath the title block
 
 
+\usepackage{tocloft}
+\setlength{\cftbeforechapskip}{0.4cm}
 
+\usepackage{hyperref}
+
+\newcommand{\link}[2]
+{  
+\color{red}    
+\href{#2}{#1}                     
+\color{black}  
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,18 +146,25 @@ twoside
     
     \noindent  Cover: 
     
-    \noindent If you want something, go for it. Cover design Belén Moreno Santamaría
+    \noindent If you want something, go for it.
+    \\ Cover design Laura Hernández \& Cristina de Lorenzo
    
  
     \vfill  
     \begin{minipage}[b]{0.9\textwidth}
-     %   This manual is aimed at the Aerospace Engineering students of the Technical University of Madrid who may start programming different languages with Microsoft Visual Studio. It is also for anyone interested in start using this complete tool from scratch. Additional content can be downloaded from \url{https://github.com/jahrWork}. The manual has been written with the idea of increasing all the information presented and improving the contents. Ideas for something to be added, deleted or changed would be kindly appreciated. In addition, corrections and feedback about anything that could be improved or better explained are welcomed. All contributions can be made in:
+     %   This manual is aimed at the Aerospace Engineering students of the Technical University of Madrid who may start programming different 
+     %languages with Microsoft Visual Studio. It is also for anyone interested in start using this complete tool from scratch. Additional 
+     %content can be downloaded from \url{https://github.com/jahrWork}. The manual has been written with the idea of increasing all the 
+     %information presented and improving the contents. Ideas for something to be added, deleted or changed would be kindly appreciated. In 
+     %addition, corrections and feedback about anything that could be improved or better explained are welcomed. All contributions can be 
+     %made 
+     %in:
         
-        \vspace*{2\baselineskip}
-        Miguel Ángel Rapado Tamarit \newline
-        \textcolor{Blue}{marapadotamarit@gmail.com}
-        \vspace*{3\baselineskip}
-        
+%        \vspace*{2\baselineskip}
+%        Miguel Ángel Rapado Tamarit \newline
+%        \textcolor{Blue}{marapadotamarit@gmail.com}
+%        \vspace*{3\baselineskip}
+%        
         %\footnotesize\raggedright
         
     \end{minipage}
@@ -156,11 +174,8 @@ twoside
     No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopy, recording, or any information storage and retrieval system, without permission in writing from the authors. 
     \vspace{2\baselineskip}
     
- %   \noindent \copyright   \ \ 2020 Miguel Ángel Rapado Tamarit \\ Belén Moreno Santamaría \\ Juan Antonio Hernández Ramos \\
+
        \noindent \copyright  \ \ 2022 Juan Antonio Hernández Ramos 
-       
-    
-             
        \hspace{0.7cm}     Miguel Ángel Rapado Tamarit
     
     \vspace{0.5cm}            
@@ -213,7 +228,7 @@ twoside
    
    
   
-  \part{Advanced programming techniques: }\label{PartIII}
+  \part{Advanced programming}\label{PartIII}
        \input{./doc/Chapters/Part_III/overview.tex}  
        \input{./doc/Chapters/Part_III/scope.tex}  
        \input{./doc/Chapters/Part_III/functional_programming.tex}     
@@ -225,7 +240,7 @@ twoside
     %  \input{./doc/Chapters/Part_III/unit_testing.tex} 
        \input{./doc/Chapters/Part_III/mixing.tex}
        \input{./doc/Chapters/Part_III/parallel.tex}
-       \input{./doc/Chapters/Part_III/misc.tex}
+   %    \input{./doc/Chapters/Part_III/misc.tex}
        
    
 

@@ -16,16 +16,16 @@ allows to use different data types at run time.
   \vspace{0.5cm}
    \renewcommand{\home}{./Fortran/sources/Advanced_programming} 
    \lstfor
-    \listings{\home/advanced_programming_techniques.f90}{while}{Wrapper}
-             {advanced_programming_techniques.f90}
+    \listings{\home/advanced_programming.f90}{Advanced programming}{Wrapper}
+             {advanced_programming.f90}
   
   \newpage 
   
    \vspace{0.5cm}
      \renewcommand{\home}{./Python/sources/Advanced_programming} 
      \lstpython
-      \listingsp{\home/advanced_programming_techniques.py}{while}{Wrappers}
-               {advanced_programming_techniques.py}
+      \listingsp{\home/advanced_programming.py}{while}{Wrappers}
+               {advanced_programming.py}
                
 
 \newpage            
@@ -180,48 +180,101 @@ a value that is a valid memory address.
 
 \newpage 
 \section{Wrappers} 
+A wrapper refers to functions 
+that wrap around other function in order to change its interface or to complement 
+its functionality. 
+Many times, different software packages are used in the same project where a specific 
+interface is defined. To adapt the open source libraries to our specific interface 
+requirements, a wrapper encapsulates some existing function. 
+This is perhaps the most common and easy use of wrappers for ensuring compatibility or 
+interoperability. 
+
+Sometimes, the Application Program Interface (API) of some module or package 
+is not well designed and creates a lot of intercommunication problems due to its 
+huge channel of information associated to different variables or objects. 
+By developing an intelligent wrapper and without changing any line of code 
+of the existing package, the new API can improve a lot allowing developers to concentrate
+in the functionality by reducing the API complexity.  The wrapper of the new API 
+is the only component that communicates  with both parts of the programming code.
+An easy example of these kind of wrappers is the use of functions 
+measuring physical magnitudes written in Anglo-Saxon system of units. 
+When these functions are used by the  International System of Units, or SI, a wrapper 
+to convert input argument and output value to SI is required. 
+Besides, input arguments can be checked and modified before calling the function to increase robustness
+or the function by means of a wrapper. 
+Another important application of wrappers is related to the connection of two different programming 
+paradigms: object oriented programming (OOP) and functional programming (FP). 
+These two different software developments can be separated in different modules or packages 
+and a wrapper written with in OOP or FP can be used to connect these two worlds. 
+
+
+%The most important characteristic associated to the use of wrappers is there is no need to modify 
+%the existing or validated software to change functionality. 
+%Other important and advanced use of wrappers is associated to extra functionalities. 
+%In this case, wrappers are built not to modify the interface or to adapt different software but 
+%to create new functionality without modifying the existing one. 
+%This advanced use of wrappers can be understood as  levels of selection and evolution in 
+%natural life. New wrappers are created by requirements imposed by software and environment. 
+%Ancestral layers are not modified and subsequent layers increase functionality 
+%by creating wrappers that are superposed in chronological order giving rise to evolved components. 
+
+Another important and advanced use of wrappers is associated with extra and new functionalities. 
+In this case, wrappers are built not to 
+modify the interface  but to create a new functionality without modifying the existing one. This advanced 
+use of wrappers can be understood as the evolution of species in nature. 
+Ancestral layers are not modified, such as metabolism or growth. However, subsequent layers, 
+such as developing an extreme metabolism,  increase functionality by creating superposed 
+wrappers in chronological order, giving rise to new components that their 
+environment will select. 
+An extensive set of these new functionalities quasi-randomly and very usually appear, 
+but only the ones that satisfy 
+the requirements imposed by the proper software and the environment survive, 
+as in the test-driven development methodology and the evolution of 
+species.
+
+
+
+
+
+In Python, decorators or wrappers are syntactic sugar (easier to code) for software components. 
+It's possible to apply multiple decorators at the same time to the same function. 
+A bunch of useful decorators allow the developer to create new functionalities by superposing 
+decorators to existing functions changing the functionality 
+without writing a line a new code. 
+
+
+
+
 
 \newpage 
 \section{Mixing Python and Fortran}
 
 \newpage 
 \section{Parallel programming} 
+Processors have reached the ceiling in terms of the frequency in which the operations 
+could be performed, and thus an new type of computation appears: parallelism.  
+Parallel computing performs simultaneously many calculations. 
+Large problems are divided into smaller ones which are solved at the same time.
 
+One parameter to measure the improvement of the parallelized program is the the speedup. 
+The speedup is defined as the ratio of the execution time on a single processor divided by 
+the execution time on a multiple processor system. 
+If these small problems are independent to each other, the speedup that parallelism could attain 
+is proportional to the number of processors. 
+Generally, this small tasks need to communicate to each other decreasing the speedup of the 
+overall performance. 
 
-Processors however, reached the ceiling in terms of the frequency in which the operations 
-could be performed, and thus a new trend appeared – 
-parallelism. Such processors like Core 2 Duo started to appear and they were having 2, 4, 8 
-and more independent cores.
+One the most challenging task of the developer is to design the partition of the 
+whole problem by minimizing the communication between individual tasks.  
+This is the most difficult task because it demands a deep knowledge of the whole computing 
+problem. Besides, depending on the code design, this partitioning task could be not rewarding 
+giving rise to parallel codes with poorer performances than sequential original codes. 
+Generally, it is said that a code implemented with functional programming paradigm is easier to 
+parallelize than a code written with object oriented programming paradigm. 
+This fact is related to pure functions and referential transparency that 
+assure that functions give the same result no matter the processor they are running. 
+%There are only a few programming languages that allow parallelism natively such as: Haskell, 
+%Julia or Fortran. 
 
-But in order for computations to be done in parallel, the program has to have a very small state – 
-it has to be decomposed and as simple as 
-possible. Otherwise there will be a high possibility of system parts having to depend on each other. 
-Consequently, the calling order of the 
-functions can affect the final result.
-
-Previous paradigms (including OOP) did not limit this state, and its small size could be guaranteed 
-by the developer only. In functional 
-programming it happens due to the paradigm itself. That’s why for the majority of programs in functional 
-languages, it is easier to realize 
-parallelization, and it works more efficiently.
-
-
-
-That’s my personal opinion. The interest towards functional languages in the last 10-20 years has been rising.
- But there are still not many 
-vacancies, and the community is rather small. If you are a JavaScript developer, it would be easier for you 
-to find a job.
-
-There is a tendency however that demand for functional developers keeps rising, and in theory affects salaries. 
-Be that as it may, companies 
-prefer a more flexible approach to that, and are usually supportive towards their candidates.
-
-Those specialists who work with distributed systems are well paid. They can find a good place. 
-there are lots of services distributed among 
-hundreds of servers all over the world, and they should work as a whole. There are a lot of such systems, 
-and the number of them will be 
-increasing. Unfortunately, there is a small amount of such specialists. When there is not enough of 
-them and the demand is high, it will be 
-profitable.
 
                

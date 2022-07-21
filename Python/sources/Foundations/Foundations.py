@@ -11,24 +11,27 @@ from Read_files import Test_load_matrix
    
 def menu_Foundations(): 
 
- option = 1     
- while option>0: 
+    
+ while True: 
      
      print( "\n Welcome to basic programming concepts") 
      print( " select an option " )
      print( " 0. exit/quit  " ) 
      print( " 1. Hello world" )  
-     print( " 2. Data types" )  
+     print( " 2. Data types and basic operations" )  
      print( " 3. Sum of series ") 
      print( " 4. Vectors and matrices ") 
      print( " 5. Memory allocation ") 
      print( " 6. Integrals and derivatives ") 
-     print( " 7. Taylor expansion ") 
+     print( " 7. Taylor and Fourier expansions ") 
      print( " 8. Read/write data from external files ") 
      option = int (input("\n Select an option = ") )  
      print("\n")
      
-     if option==1: 
+     if option==0:
+          break
+
+     elif option==1: 
            Hello_world()
           
      elif option == 2: 
@@ -45,18 +48,18 @@ def menu_Foundations():
      
      elif option == 5: 
         Matrices_allocation() 
-        Fourier_example() 
-         
+                 
      elif option == 6: 
         Integral_and_derivative_examples()
          
      elif option ==  7: 
-         Taylor_expansion_examples()
+         Taylor_expansion_examples() 
+         Fourier_example()
          
      elif option ==  8:
         Test_load_matrix()
     
-     elif option> 0: 
+     else : 
            print( " option not implemented" )
 
 

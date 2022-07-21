@@ -5,7 +5,7 @@
     <ProjectGuid>5ca4ffdf-626b-4d0e-b42d-d7a1537ef971</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>sources\main.py</StartupFile>
-    <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Advanced_programming\python_to_C;sources\Advanced_programming\Fortran_to_Python;sources\Foundations\Data_type;sources\Advanced_programming\pointers</SearchPath>
+    <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Foundations\Data_type;sources\Advanced_programming\pointers;sources\Advanced_programming\decorators;sources\Advanced_programming\Mixing languages\Fortran_to_Python;sources\Advanced_programming\Mixing languages\python_to_C</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_project</Name>
@@ -26,12 +26,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="sources\" />
+    <Folder Include="sources\Advanced_programming\decorators\" />
+    <Folder Include="sources\Advanced_programming\Mixing languages\" />
     <Folder Include="sources\Advanced_programming\overloading\" />
     <Folder Include="sources\Foundations\Calculus\Examples\" />
     <Folder Include="sources\Foundations\iterators\" />
     <Folder Include="sources\Foundations\" />
     <Folder Include="sources\Advanced_programming\" />
-    <Folder Include="sources\Advanced_programming\python_to_C\" />
+    <Folder Include="sources\Advanced_programming\Mixing languages\python_to_C\" />
     <Folder Include="sources\Foundations\Calculus\" />
     <Folder Include="sources\Foundations\Data_type\" />
     <Folder Include="sources\Foundations\Read_files\" />
@@ -40,13 +42,19 @@
     <Folder Include="sources\Foundations\Roots\" />
     <Folder Include="sources\Advanced_programming\Functional programming\" />
     <Folder Include="sources\Foundations\Algebra\" />
-    <Folder Include="sources\Advanced_programming\Fortran_to_Python\" />
+    <Folder Include="sources\Advanced_programming\Mixing languages\Fortran_to_Python\" />
     <Folder Include="sources\Advanced_programming\ODES\" />
     <Folder Include="sources\Advanced_programming\polymorphism\" />
     <Folder Include="sources\Advanced_programming\scope\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sources\Advanced_programming\advanced_programming_techniques.py">
+    <Compile Include="sources\Advanced_programming\1.TO_DO\memoization.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Advanced_programming\advanced_programming.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Advanced_programming\decorators\decorators.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Advanced_programming\overloading\overloading.py">
@@ -57,11 +65,11 @@
     <Compile Include="sources\Foundations\Algebra\vectors_and_matrices.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\Fortran_to_Python\fortran_from_py.py" />
-    <Compile Include="sources\Advanced_programming\python_to_C\compile_example.py">
+    <Compile Include="sources\Advanced_programming\Mixing languages\Fortran_to_Python\fortran_from_py.py" />
+    <Compile Include="sources\Advanced_programming\Mixing languages\python_to_C\compile_example.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\python_to_C\HelloWorld.py">
+    <Compile Include="sources\Advanced_programming\Mixing languages\python_to_C\HelloWorld.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Advanced_programming\ODES\Cauchy_problem.py" />
@@ -107,7 +115,7 @@
     <Compile Include="sources\Advanced_programming\ODES\n_body_problem.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\polymorphism\polymorphic_ODES.py">
+    <Compile Include="sources\Advanced_programming\polymorphism\polymorphic_odes.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Advanced_programming\polymorphism\polymorphism.py" />
@@ -123,9 +131,6 @@
     </Compile>
     <Compile Include="sources\Advanced_programming\ODES\main_ODES.py" />
     <Compile Include="sources\Foundations\iterators\iterators.py" />
-    <Compile Include="sources\Advanced_programming\1.TO_DO\rests.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="sources\Advanced_programming\1.TO_DO\OOP_N_body.py">
       <SubType>Code</SubType>
     </Compile>
@@ -140,13 +145,13 @@
     </Compile>
     <Compile Include="sources\Advanced_programming\1.TO_DO\Monads.py" />
     <Compile Include="sources\Advanced_programming\1.TO_DO\test_hypothesis.py" />
-    <Compile Include="sources\Advanced_programming\Fortran_to_Python\f2py_example.py">
+    <Compile Include="sources\Advanced_programming\Mixing languages\Fortran_to_Python\f2py_example.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="sources\Advanced_programming\Fortran_to_Python\fortran.f90" />
+    <Content Include="sources\Advanced_programming\Mixing languages\Fortran_to_Python\fortran.f90" />
     <Content Include="sources\Foundations\Read_files\data.csv" />
     <Content Include="sources\Foundations\Read_files\data2.csv" />
   </ItemGroup>

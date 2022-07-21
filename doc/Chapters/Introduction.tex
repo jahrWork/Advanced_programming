@@ -1,21 +1,62 @@
-\chapter*{Programming through examples: Fortran and Python}
+\chapter*{Advanced Programming for Numerical Calculations: Climbing Python \& Fortran}
 %addcontentsline{toc}{chapter}{Introduction}
 %\thispagestyle{empty}
+\vspace{-2.5cm}
+This book is devoted to those who like math and  use  
+programming languages such as: Python or Fortran to solve numerical problems.  
+The main focus of this book is to approach math language to programming languages by 
+paying attention to functional programming paradigm.
+Through different numerical examples, 
+the book tries to mimic mathematics by showing how  mathematical concepts 
+are implemented by means of functional programming paradigm. 
+ 
+
+This book is divided in three parts: 
+\begin{itemize}
+\setlength\itemsep{0cm}
+\item[] Part I. Foundations. 
+\item[] Part II. Computer operations with integers and reals. 
+\item[] Part III. Advanced programming. 
+\end{itemize}
+\vspace{-0.2cm}
+These three parts can be read  independently. The first part: Foundations is devoted to 
+initiate the reader in implementing  numerical problems with the computer.
+The second part: Computer operations with integers and reals. 
+Real or integer numbers are represented with finite storage. When oerating those numbers, 
+errors associated to the loss of precision is encountered. This second part tries to get a deep 
+knowledge, by following different examples, of this round-off errors.   
+The third part: Advanced programming gives tries to show the most important techniques 
+focalizing  mainly in the functional programming paradigm with pure functions 
+emulating math environments. 
 
 
-
+This book can not be considered a full handbook of Python or Fortran. 
+It is a modest approach of challenging numerical problems by means of
+functional programming in Python and Fortran. 
+This book is fully supported with the following software repository: 
+\vspace{-0.2cm}
+\begin{center} 
+\link{Software repository: jahrWork}{https://github.com/jahrWork/Advanced_programming}
+\end{center} 
 
 \newpage 
-\vspace{-1.5cm}
-
+\subsection*{Fortran menu}
+The repository comprises a Fortran project and Python project
+implemented in Visual Studio. However, examples can be run with any other different editor or 
+Integrated
+Development Environment (IDE). 
+Once this repository  is downloaded or cloned, the following Fortran main program 
+covers different examples for the three parts of this book:   
+\vspace{0.5cm}
 \lstfor
-
-
- \renewcommand{\home}{./Fortran/sources} 
-  \listings{\home/main.f90}{Program main}{end program}{main.f90}
+\renewcommand{\home}{./Fortran/sources} 
+\listings{\home/main.f90}{Program main}{end program}{main.f90}
 
 \newpage 
+\subsection*{Python menu}
+The following Python main program 
+covers different examples for the three parts of this book:   
 \vspace{0.5cm}
 \lstpython
- \renewcommand{\home}{./Python/sources} 
-  \listingsp{\home/main.py}{from}{elif option>}{main.py}
+\renewcommand{\home}{./Python/sources} 
+\listingsp{\home/main.py}{from}{option not implemented}{main.py}

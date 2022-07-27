@@ -1,45 +1,95 @@
 \chapter{Python and Fortran foundations} 
-Python and Fortran foundations try to give the reader a first approach to implement  numerical 
-problems in the computer. The authors consider that a brief knowledge of history of 
-computer and programming languages allow to understand how different programming skills or paradigms
-have evolved during the last decades. For this reason, a pleasant  history tour through is proposed 
+
+%Parrafo de intro a Python y Fortran
+Python and Fortran are both high-level programming languages, being the former the first high-level programming language and it was invented by John Backus for IBM in 1954.
+Python, which was developed by Guido van Rossum and first released in 1991, is a general-purpose programming language, this means that it is not specialized for any specific kind of problem. 
+It is usually used for data analytics, Artificial Intelligence and machine learning, to build websites or for data visualization among others. 
+However, the language together with the standard library is not prepared for numerical computing.
+Hence, four main libraries are used to extend its capabilities: \textit{numpy}, \textit{scipy}, \textit{matplotlib} and \textit{pandas}. 
+Fortran stands for \textit{Formula Translation} and was specifically created for scientific computing in 1957.
+Through the successive standards developed in its history, all the features needed to perform scientific computing are built in. 
+From a general point of view, Fortran is a compiled language statically and strongly typed projected for high performance computing and natively parallel.
+On the contrary, Python is an interpreted, dynamically and weakly-typed language. 
+
+
+%De qué va Foundations de forma historiada
+\textit{Python and Fortran foundations} tries to give the reader a first approach to implement numerical 
+problems in the computer. 
+The authors consider that a brief knowledge of the history of 
+computers and programming languages allow to understand how different programming skills or paradigms
+have evolved during the last decades. For this reason, a pleasant history tour is proposed 
 at the beginning of this chapter. The birth of computers, 
 the space race and the influence of profound mathematicians among other factors conformed 
 the origin of computing languages. Several movies and documentaries are recommended to 
 understand those naive and happy days and how geeks and nerds had a big influence in the first 
-stages of personal computer business.       
-The universal Turing machine together with the von Neumann computer architecture gave rise 
-to the imperative paradigm of programming problems. 
-The imperative paradigm consists of a sequence  of basic computer operations to achieve
-the solution of some problem. 
+stages of personal computer business.
+
+Then, the following sections revise some building blocks of the theory of computation 
+through the names of the people that worked on them: Turing, Church, Neumann and Backus. 
+The theory of computation gives the basis for the automatic processing of information where there is a 
+problem to solve (a function between a bunch of inputs and their associated outputs) 
+and a machine (analog, digital, quantum, etc.) to solve it. 
+The tools of the theory of computation will tell if the problem can be solved in the framework of a model of computation, 
+using an algorithm and 
+how efficiently is going to be solved. 
+The model of computation is a mathematical abstract construction 
+that describes how to compute the output of this mathematical function given its input.
+The universal Turing machine for example is a model of computation and 
+together with the von Neumann computer architecture gave rise 
+to the imperative programming paradigm. 
+The imperative paradigm consists of a sequence of basic computer operations, focused on the control flow of the program,
+ to achieve the solution of some problem. 
 Later, John Backus, among others, asked himself if different programming paradigms 
 than imperative were possible to solve problems. 
-It was the birth of a programming style closer to mathematics than to a specific computer 
-architecture. 
+It was the birth of a programming style, the functional programming, closer to mathematics than to a specific computer 
+architecture and focused on the result of the computation rather than the flow control of the program. 
 
-In this part, basic operations are presented as a first approach to 
-perform simple mathematical operations.
-%
-% to learn applied mathematics 
-%a chapter including  
-%In it the reader can become familiar to the use of basic sentences in order
-For each concept treated a Fortran code example guides the explanation and at the 
+Finally, there are some essential features that makes a programming language suitable for scientific programming.
+A functional programming paradigm would be one of these, but also a syntax close to mathematics 
+or an array programming construction are desirable. 
+Array programming language, also called vector language makes reference to the possibility 
+of operating a whole group of values at the same time.
+Hence, the same operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
+in a closer to maths style, greatly simplifying mathematical expressions.
+
+For each concept treated here a Fortran code example guides the explanation and at the 
 end of each chapter the corresponding Python codes are presented. Thus, the following
 can be also used as a comparison between the foundations of both programming languages. 
  
+ 
 
-\newpage 
-\subsection*{Fortran menu}
- \vspace{-0.3cm}
-The following Fortran menu covers different examples of the first part of the book: 
-\vspace{-0.3cm}
+%In this part, basic operations are presented as a first approach to 
+%perform simple mathematical operations.
+% to learn applied mathematics 
+%a chapter including  
+%In it the reader can become familiar to the use of basic sentences in order
+ 
+%Some notions of theory of computation are revised here so a reader that is new 
+%to the scientific programming can familiarize himself.
+ 
+
+    %\newpage 
+    \subsection*{Fortran menu}
+    %\vspace{-0.3cm}
+The following Fortran menu covers the different examples that are developed throughout the first part of this book.
+By introducing a number on this menu you will execute a bunch of subroutines and functions. 
+Notice that option \texttt{1} can be used to check that the programs are working properly in your computer, it just executes the well-known \texttt{Hello world} example. 
+The option \texttt{2} includes all the programs treated in the chapter \ref{chap:basicop}, 
+option \texttt{3} has the codes of chapter \ref{chap:impdec},
+options \texttt{4} and \texttt{5} show the codes of chapter \ref{chap:matrices},
+options \texttt{6} and \texttt{7} show the programs of chapter \ref{chap:opfuncs} and finally,
+option \texttt{8} includes the code explained in chapter \ref{chap:readwrite}.
+%\vspace{-0.3cm}
+
+\newpage
 \renewcommand{\home}{./Fortran/sources/Foundations} 
 \lstfor
 \listings{\home/Foundations.f90}{Basic programming}{end select}{Foundations.f90}
    
-\newpage
-\subsection*{Python menu}   
-The following Fortran menu covers different numerical examples of the first part of the book: 
+   
+    \newpage
+    \subsection*{Python menu}   
+The following Python menu covers the numerical examples developed throughout the first part of this book in the same order that the previous menu. 
 \vspace{0.5cm}
 \renewcommand{\home}{./Python/sources/Foundations} 
 \lstpython
@@ -815,21 +865,10 @@ Three rules to combat social media:
 \newpage   
     \section{Von Neumann style} 
 
-%Teoria de la computacion
 %Model of computation: Turing machine, RAM, lambda    -->    Programming paradigm (imperative, declarative, functional, object-oriented, etc.)
 %Architecture: Von Neumann
 
-In the following sections we revise some pillars of the computation through the names of the people 
-that developed them; Turing, Church, Neumann and Backus. 
-Some notions of theory of computation are revised here so a reader that is new 
-to the scientific programming can familiarize himself. 
 
-The theory of computation gives us the basis for the automatic processing of information where we have a \textbf{problem} to solve (a 
-relation or function between a bunch of inputs and their associated outputs) and we want a machine (analog, digital, quantum, etc.) to solve it. 
-The tools of theory of computation will tell us if our problem can be solved in the framework of a \textbf{model of computation}, using an 
-\textbf{algorithm} and how \textbf{efficiently} is going to be solved. 
-An essential concept arise here, the model of computation is a mathematical abstract construction that describes how to compute the output of 
-a mathematical function given its input. 
 
 %Turing Universal machine
 This leads us to the concept of Turing machine, the model of computation invented by Alan Turing to give answer to some essential questions 
@@ -967,12 +1006,7 @@ Functional programming is treated during the whole book, starting in the section
     \section{Vector languages}
  
  
-In the context of scientific programming some features like a syntax close to mathematics or
-functional oriented programming are desirable for a programming language. 
-In addition, array programming (vector languages) is an essential characteristic. 
-It makes reference to the possibility of operating a whole group of values at the same time.
-Hence, the operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
-in a easy to write (near to maths) expression, greatly simplifying maths computations.
+
  
  
  

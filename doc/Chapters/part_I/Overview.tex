@@ -57,7 +57,6 @@ end of each chapter the corresponding Python codes are presented. Thus, the foll
 can be also used as a comparison between the foundations of both programming languages. 
  
  
-
 %In this part, basic operations are presented as a first approach to 
 %perform simple mathematical operations.
 % to learn applied mathematics 
@@ -98,12 +97,10 @@ The following Python menu covers the numerical examples developed throughout the
  
  
  
- \newpage 
+    \newpage 
     \section{Programming through history} 
  
      
-       
- % \section{Introduction}
   To understand different characteristic of modern programming languages
   is helpful to revise the history of informatics. In this chapter, 
   some documentaries are revised and commented to wet the appetite of the 
@@ -184,8 +181,8 @@ The following Python menu covers the numerical examples developed throughout the
   \end{itemize}      
   
   
-  \newpage 
-\section*{Algorithms and machines: "The imitation game"} 
+        \newpage 
+        \subsection*{Algorithms and machines: "The imitation game"} 
  In 1952, Alan Turing was arrested for homosexuality. 
  Homosexuality was punished at that time in England. 
  In 1936, Turing had invented a hypothetical computing device that came to be known 
@@ -199,7 +196,7 @@ The following Python menu covers the numerical examples developed throughout the
  
    
    
-\section*{First numerical computing: "Hidden figures"}
+        \subsection*{First numerical computing: "Hidden figures"}
  Hidden Figures is a 2016 American biographical  film 
  about African American female mathematicians and engineers 
  who worked at the National Aeronautics and Space Administration (NASA) 
@@ -217,7 +214,7 @@ The following Python menu covers the numerical examples developed throughout the
   
    
   
-\section*{First personal computers: "Triumph of nerds"}
+        \subsection*{First personal computers: "Triumph of nerds"}
  Triumph of the Nerds is a 1996 British/American television documentary
  It explores the development of the personal computer in the United States from World War II to 1995. 
  Triumph of the Nerds was written and hosted by Robert X. Cringely (Mark Stephens) 
@@ -231,7 +228,7 @@ The following Python menu covers the numerical examples developed throughout the
  %In 2012, 
  %Cringely released the full interview that Steve Jobs gave in 1995 for Triumph of the Nerds as Steve
  
- \subsection*{Part I}
+            \subsubsection*{Part I}
  This documentary is divided in three parts and describes the birth of personal computers at a time where 
  mainframes were the only computers. Nerds began to play with electronic devices  
  creating a growing interest in personal computers. Cobol, Fortran and Basic were the 
@@ -255,7 +252,7 @@ The following Python menu covers the numerical examples developed throughout the
    
   
    
- \subsection*{Part II}
+            \subsubsection*{Part II}
  In 1980 Apple II was a success and  IBM appeared into the scene. 
  At that time IBM was involved with mainframes. 
  IBM was  a entire  conservative culture social culture:  a strict dress code, 
@@ -288,7 +285,7 @@ The following Python menu covers the numerical examples developed throughout the
  %IBM gave  1/3 of the cake to Intel and 1/3 to Microsoft.
    
   
- \subsection*{Part III} 
+            \subsubsection*{Part III} 
  A revolution to make the personal computer friendlier.  
  In 1995,  Microsoft Windows announced its OS. 
  Those ideas were invented 20 years ago. 
@@ -339,7 +336,7 @@ The following Python menu covers the numerical examples developed throughout the
    
    
     
-\section*{Home computers in Europe: "Clive Sinclair"} 
+        \subsection*{Home computers in Europe: "Clive Sinclair"} 
  While USA was euphoric with personal computers in Europe another visionary: 
  Clive Sinclair (Micro men) revolved the market.    
  Clive existed to push barriers and an inventor was obliged to dream. 
@@ -403,7 +400,7 @@ The following Python menu covers the numerical examples developed throughout the
     
    
     
-\section*{The birth of internet: "Lo and Behold"} 
+        \subsection*{The birth of internet: "Lo and Behold"} 
  Lo and Behold, Reveries of the Connected World is a 2016 American documentary film 
  directed by Werner Herzog. It comprimes 10 chapters from the birth of Internet to possible future 
  scenarios. 
@@ -439,7 +436,7 @@ The following Python menu covers the numerical examples developed throughout the
     
     
    
-\section*{Free software: "The Revolution OS. The code"}
+        \subsection*{Free software: "The Revolution OS. The code"}
  Revolution OS is a 2001 documentary film that introduces the concept of GNU, 
  open source and the free software movement. It also describes the birth of Linux movement
  with  interviews to  Richard Stallman, Linus Torvalds, 
@@ -680,7 +677,7 @@ The following Python menu covers the numerical examples developed throughout the
   
   
      
-\section*{Artificial intelligence: "The thirteenth floor"} 
+        \subsection*{Artificial intelligence: "The thirteenth floor"} 
  The Thirteenth Floor is a 1999 science fiction film written and directed by Josef Rusnak. 
  In this film, very real human simulations are done with a supercomputer. 
  In 2000, The Thirteenth Floor was nominated for the Saturn Award for Best Science Fiction Film, but lost to The Matrix.
@@ -694,12 +691,11 @@ The following Python menu covers the numerical examples developed throughout the
  
  
  
-   
- %\section*{Math and computers: "The colors of infinity"} 
+        %\subsection*{Math and computers: "The colors of infinity"} 
     
   
    
-\section*{Data privacy: "The great hack"}
+        \subsection*{Data privacy: "The great hack"}
  The Great Hack is a 2019 documentary film about the Facebook–Cambridge Analytica data scandal.
  Cambridge Analytica was dedicated to collect big data to reinforce a  sales strategy creating massive campaigns that approached users in a 
  personal manner.
@@ -766,7 +762,7 @@ The following Python menu covers the numerical examples developed throughout the
    
   
 \newpage         
-\section*{Social networks: "The social dilemma"}
+        \subsection*{Social networks: "The social dilemma"}
 The Social Dilemma is a 2020 American documentary film about 
 addiction to social media and how people emotions are manipulated  
 and how disinformation is spread.
@@ -864,48 +860,63 @@ Three rules to combat social media:
  
 \newpage   
     \section{Von Neumann style} 
-
-%Model of computation: Turing machine, RAM, lambda    -->    Programming paradigm (imperative, declarative, functional, object-oriented, etc.)
-%Architecture: Von Neumann
-
-
-
-%Turing Universal machine
-This leads us to the concept of Turing machine, the model of computation invented by Alan Turing to give answer to some essential questions 
-in the theory of computation and mathematics in general. This abstract construction consists on a scanning head capable of reading from an 
-infinite tape of cells a single cell at a time. This tape has information coded and once a cell is read, the machine can delete that cell, 
-write another symbol or leave the symbol. Then, it can move to a different position in the tape. According to the current state of the 
+\vspace{-0.3cm}
+The Turing machine was invented by Alan Turing in 1936 by the name of ``a-machine''. 
+The purpose for this model of computation was to give answer to some essential questions 
+in the theory of computation and mathematics in general. 
+This abstract construction consists on a scanning head capable of reading from an 
+infinite tape of cells a single cell at a time. 
+This tape has information coded and once a cell is read, the machine can delete that cell, 
+write another symbol or leave the symbol. 
+Then, it can move to a different position in the tape. 
+According to the current state of the 
 machine and the position in the tape the machine follow a set of rules (also coded) and take some action or another. 
 
 Everything that is computable and everything that a machine can compute nowadays can be theoretically programmed in a Touring machine 
-although maybe inefficiently. Furthermore, it is said that any system capable of doing what a Touring machine can do is Touring-complete and 
-than can also compute everything that is computable. Applying this idea to programming languages and real machines we can find if any 
-computable algorithm can be performed in it and it turns that all programming languages nowadays are Touring-complete as soon as they allow 
+although maybe inefficiently. 
+Furthermore, it is said that any system capable of doing what a Touring machine can do is Touring-complete and 
+than can also compute everything that is computable. 
+These ideas can be applied to programming languages apart from computers and,
+given a computable algorithm, find if it can be implemented in the specific language.
+It turns that all programming languages nowadays are Touring-complete as soon as they allow 
 mainly if-then-else structures and go-to statements. 
 
-We see then that a conceptual model of computation is intimately related to the programming languages (the software codes we create) and the 
-real machines we use everyday from a hardware point of view (laptops, PCs, smartphones, etc.). Computers today are built by implementing what 
-a Turing machine describes theoretically, using an architecture. The architecture is the set of rules and methods that describe how software 
-and hardware in a machine are organized, interrelate and work to conform a computer.
+Notice that a conceptual model of computation is intimately related not only to the 
+real machines we use everyday from a hardware point of view (laptops, PCs, smartphones, etc.) 
+but also to the programming language. 
+Computers today are built by implementing what 
+a Turing machine describes theoretically, using an architecture. 
+The architecture is the set of rules and methods that describe how software 
+and hardware are organized, interrelate and work to conform a machine.
 
 %von Neumann architecture
-Let's briefly describe what a von Neumann architecture is since this architecture is mainly used in the machine around us. 
+The most common architecture used in the machines around us (although not the only option) is the von Neumann architecture. 
 In this description of a computer, a Central Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit separated from the CPU. 
-In that memory, data and program are stored together and each memory position is uniquely identified by an address. 
-Some Buses transfer information between different parts of the computer; data, addresses or control commands. 
-Finally, input/output devices can communicate with the machine using the Buses too. 
-Notice firstly that this is not the only possible architecture for a machine. 
-Secondly, this architecture describes not only how the hardware is organized but also how data and programs work so programming languages are also influenced by this architecture. 
+In that memory, with each memory position uniquely identified by an address, the data and program are stored together. 
+Some Buses transfer data, addresses and control commands between different parts of the computer
+and at the same time allows the communication with input/output devices.
+The CPU follows an instruction cycle, composed by three stages, to work: 
+i) it fetches the next instruction of the program from the memory address (a counter points to this address), 
+ii) this instruction is decoded and 
+iii) the CPU performs the actions required by the instruction (reading addresses, performing arithmetic, writing in memory, etc.)
 
 
-%RAM model and Church lambda 
-Different computation models exist apart from the Turing machine, Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
-Some of these computation models give rise to a programming paradigm. Take a look at the next section to delve into this idea.  
+Notice that this architecture not only describes how the hardware is organized but also how data and programs work.
+Inevitably, this architecture has influenced how programming languages are built to the point that 
+these are high level software versions of the von Neumann machine. 
+The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+
 
 
  
  
     \section{Imperative versus declarative programming} 
+
+%RAM model and Church lambda 
+Different computation models exist apart from the Turing machine, 
+Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
+Some of these computation models give rise to a programming paradigm. 
+Take a look at the next section to delve into this idea.  
 
 %Paradigmas
 We have mentioned three essential models of computation: a Turing machine, Random-access Machines and $\lambda$-calculus (developed by Alonzo Church).

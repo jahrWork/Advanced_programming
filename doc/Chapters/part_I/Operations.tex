@@ -10,6 +10,8 @@ Como la arquitectura de von neumann motiva que usemos variables con un data type
 
 \section{Data types} 
 
+
+
 Each constant, variable, array or function in a programming language has an intrinsic data type associated. 
 This type decides, among other things, the permitted values that the entity can have and the set of operations that can be performed with them.
 For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 
@@ -196,21 +198,37 @@ In addition, indentation rules must be strictly followed.
 
 
  
+ \section{Data structures} 
+ 
 
 
 
 
 
 \newpage
+\section{Math operators}
+Arithmetic operator 
+Comparison operator 
+Logical operator 
+Membership operator 
+
+\section{Assignment operators}
+
+
+\section{Flow structures}
+
+if 
+where 
+iterators:
+list, tuples, arrays, sets, dictionaries (key, value)
+
+
+
+for k in D   dictionary iterates in key 
+for k in D.keys()   dictionary iterates in keys
+for v in D.values()   dictionary iterates in values
+
 \section{Basic operations}
-
-
-
-Lo basico de verdad, especialmente division de integers
-
-%Example of code 3*2 
-
-
 
 
 \newpage 
@@ -238,6 +256,7 @@ when the discriminant is negative. Whereas the root of a real negative number is
 the root of a negative number has a value for complex numbers. 
  
 \vspace{0.5cm}
+\renewcommand{\home}{./Fortran/sources/Foundations/Roots} 
 \lstfor
 \listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{Roots.f90}
 

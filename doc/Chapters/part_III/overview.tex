@@ -1,33 +1,38 @@
 
  
+ \chapter*{Menu for Advanced Programming} 
+    
+   \vspace{0.5cm}
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming} 
+    \lstfor
+     \listings{\home/advanced_programming.f90}{Advanced programming}{Wrapper}
+              {advanced_programming.f90}
+  
+    \vspace{0.5cm}
+      \renewcommand{\home}{./Python/sources/Advanced_programming} 
+      \lstpython
+       \listingsp{\home/advanced_programming.py}{while}{Wrappers}
+                {advanced_programming.py}
+                
+ 
+ 
+ 
+ 
+ 
  
  
   
 \chapter{Overview} 
 One of the main characteristics to reuse code is generic programming.  
-Generic programming is based on abstract variable types that are then instantiated when they are used for specific variable type.
+Generic programming is based on abstract variable types that are then instantiated 
+when they are used for specific variable type.
 
 Since Python is non typed language, 
 generic programming in this language is straightforward. 
 However, in Fortran the use of abstract  \lstinline{class(*)} 
 allows to use different data types at run time. 
   
-    
-  \vspace{0.5cm}
-   \renewcommand{\home}{./Fortran/sources/Advanced_programming} 
-   \lstfor
-    \listings{\home/advanced_programming.f90}{Advanced programming}{Wrapper}
-             {advanced_programming.f90}
-  
-  \newpage 
-  
-   \vspace{0.5cm}
-     \renewcommand{\home}{./Python/sources/Advanced_programming} 
-     \lstpython
-      \listingsp{\home/advanced_programming.py}{while}{Wrappers}
-               {advanced_programming.py}
-               
-
+ 
 \newpage            
 \section{Scope} 
 

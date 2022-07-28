@@ -60,6 +60,9 @@
     <Compile Include="sources\Advanced_programming\overloading\overloading.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="sources\Advanced_programming\scope\global_variables.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />
     <Compile Include="sources\Foundations\Algebra\Matrix_operations.py" />
     <Compile Include="sources\Foundations\Algebra\vectors_and_matrices.py">

@@ -1353,23 +1353,18 @@ Default Real KIND: $\texttt{/real-size:{32\mid64\mid128}}$
 
 
     %--------------------------------------------------------------------------------------------------------------------------------------  
-    \newpage   
-    \section{\texttt{subroutine mantissa\_exponent\_base\_2}} 
-
-
+\newpage   
+\section{\texttt{subroutine mantissa\_exponent\_base\_2}} 
 The following subroutine allows to reconstruct a real number through its internal bits representation: 
-\vspace{0.5cm}
+%\vspace{0.5cm}
 \listings{\home/IEEE_representation.f90}
 {subroutine mantissa_exponent_base_2}{end subroutine}
 {Subroutine to reconstruct the number in IEEE_representation.f90} 
-
-
 This subroutine works by storing in a quadruple precision number any input value, 
 either single, double or quadruple precision real. Then,  
 the binary representation is written in a string called \texttt{bits}, 
 the different parts are extracted (sign bit, exponent and mantissa) 
 and the decimal value reconstructed. 
-
 Notice the following: 
 first, this code covers the normalized numbers and not the special values and denormalized numbers. 
 Second, the conversion to quadruple precision carries with the round off error of the original precision and 

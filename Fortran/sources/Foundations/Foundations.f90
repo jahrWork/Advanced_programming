@@ -54,16 +54,16 @@ do ! Basic programming examples
      
      case(5) 
           call Matrices_allocation()
-          call dot_product_examples
-          call matmul_examples
-          call greatest_difference 
+          call dot_product_examples()
+          call matmul_examples()
+          call greatest_difference() 
          
      case(6) 
            call Integral_and_derivative_examples()
          
      case(7) 
            call Taylor_expansion_examples()
-            call Fourier_example
+           call Fourier_example()
          
      case(8)
          call Test_load_matrix()

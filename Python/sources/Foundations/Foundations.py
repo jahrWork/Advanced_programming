@@ -15,7 +15,6 @@ def menu_Foundations():
  while True: 
      
      print( "\n Welcome to basic programming concepts") 
-     print( " select an option " )
      print( " 0. exit/quit  " ) 
      print( " 1. Hello world" )  
      print( " 2. Data types and basic operations" )  
@@ -26,7 +25,6 @@ def menu_Foundations():
      print( " 7. Taylor and Fourier expansions ") 
      print( " 8. Read/write data from external files ") 
      option = int (input("\n Select an option = ") )  
-     print("\n")
      
      if option==0:
           break

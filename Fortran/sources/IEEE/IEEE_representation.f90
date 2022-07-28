@@ -43,9 +43,6 @@ module IEEE_representation
            end select 
      
     
-   
-    
-    
   end subroutine  
   
 !*****************************************************************************
@@ -152,8 +149,7 @@ end function
          real (kind=4), intent(in) :: x        
          real (kind=4), intent(out) :: m        ! mantissa 
          integer, intent(out) :: e, s  ! exponent and sign 
-    
-    
+        
         character (len=32) :: bits 
         real :: xr 
     
@@ -176,9 +172,7 @@ end function
         write(*,*) " normalized mantissa x = ", m
         write(*,*) " exponent of x (base 2) = ", e
         write(*, '(a, ES15.7)' ) "------- reconstruction x = ", xr
- 
- 
- 
+  
  end subroutine  
  
 !*****************************************************************************
@@ -188,7 +182,6 @@ end function
          real (kind=16), intent(in) :: x        
          real (kind=16), intent(out) :: m     ! mantissa 
          integer, intent(out) :: e, s         ! exponent and sign 
-    
     
         character (len=128) :: bits 
         real (kind=16) :: xr 
@@ -216,8 +209,6 @@ end function
         write(6, '(a35, i10)') "Exponent of x  = ", e
         write(6, '(a35, ES40.32)' ) "Reconstruction x = ", xr
         write(6, '(a)' ) "---------------------------------------------------"
- 
- 
  
  end subroutine 
  

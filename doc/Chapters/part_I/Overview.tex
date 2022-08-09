@@ -1,82 +1,60 @@
 \chapter{Computer, programming languages and paradigms} 
 
-%Parrafo de intro a Python y Fortran
-Python and Fortran are both high-level programming languages, being the former the first high-level programming language and it was invented by John Backus for IBM in 1954.
-Python, which was developed by Guido van Rossum and first released in 1991, is a general-purpose programming language, this means that it is not specialized for any specific kind of problem. 
-It is usually used for data analytics, Artificial Intelligence and machine learning, to build websites or for data visualization among others. 
-However, the language together with the standard library is not prepared for numerical computing.
-Hence, four main libraries are used to extend its capabilities: \textit{numpy}, \textit{scipy}, \textit{matplotlib} and \textit{pandas}. 
-Fortran stands for \textit{Formula Translation} and was specifically created for scientific computing in 1957.
-Through the successive standards developed in its history, all the features needed to perform scientific computing are built in. 
-From a general point of view, Fortran is a compiled language statically and strongly typed projected for high performance computing and natively parallel.
-On the contrary, Python is an interpreted, dynamically and weakly-typed language. 
-
-
 %De qué va Foundations de forma historiada
-\textit{Python and Fortran foundations} tries to give the reader a first approach to implement numerical 
-problems in the computer. 
-The authors consider that a brief knowledge of the history of 
-computers and programming languages allow to understand how different programming skills or paradigms
-have evolved during the last decades. For this reason, a pleasant history tour is proposed 
-at the beginning of this chapter. The birth of computers, 
-the space race and the influence of profound mathematicians among other factors conformed 
-the origin of computing languages. Several movies and documentaries are recommended to 
-understand those naive and happy days and how geeks and nerds had a big influence in the first 
-stages of personal computer business.
+This chapter is intended to give the reader more context about the concepts treated before.  
+The following sections review some building blocks of the theory of computation 
+through the names of the people that worked on them: Turing, Church, Neumann and Backus.
 
-Then, the following sections revise some building blocks of the theory of computation 
-through the names of the people that worked on them: Turing, Church, Neumann and Backus. 
-The theory of computation gives the basis for the automatic processing of information where there is a 
+Notice that each section from 6.1 to 6.4 extends the concepts treated in chapters 1 to 4.
+Concepts like model of computation, the Von Neumann architecture and how it influences a programming language are summarized in section \ref{sec:vonNeu}.
+The main ideas behind the imperative and declarative programming paradigms are treated in section \ref{sec:impvsdec}.
+Vector languages, another essential property desired for scientific computing are introduced in section \ref{sec:veclan}.
+Section \ref{sec:fpro} gives a theoretical description for Functional Programming, a paradigm usually included within the declarative paradigms. 
+ 
+Finally, the authors consider that a brief knowledge of the history of computers and programming languages 
+allow to understand how different programming skills or paradigms have evolved during the last decades. 
+For this reason, a pleasant history tour is proposed in section \ref{sec:films}. 
+The birth of computers, the space race and the influence of profound mathematicians among other factors conformed the origin of computing languages. 
+Several movies and documentaries are recommended to understand those naive and happy days and how geeks and nerds had a big influence in the first stages of personal computer business.
+  
+  
+   
+  %In this part, basic operations are presented as a first approach to 
+  %perform simple mathematical operations.
+  % to learn applied mathematics 
+  %a chapter including  
+  %In it the reader can become familiar to the use of basic sentences in order
+  
+  %Some notions of theory of computation are revised here so a reader that is new 
+  %to the scientific programming can familiarize himself.
+  
+ 
+
+
+ 
+ 
+ 
+
+
+    \newpage   
+    \section{Von Neumann style}  \label{sec:vonNeu}
+    %\vspace{-0.3cm}
+Notice that the theory of computation gives the basis for the automatic processing of information where there is a 
 problem to solve (a function between a bunch of inputs and their associated outputs) 
 and a machine (analog, digital, quantum, etc.) to solve it. 
-The tools of the theory of computation will tell if the problem can be solved in the framework of a model of computation, 
-using an algorithm and 
-how efficiently is going to be solved. 
-The model of computation is a mathematical abstract construction 
-that describes how to compute the output of this mathematical function given its input.
-The universal Turing machine for example is a model of computation and 
-together with the von Neumann computer architecture gave rise 
-to the imperative programming paradigm. 
-The imperative paradigm consists of a sequence of basic computer operations, focused on the control flow of the program,
- to achieve the solution of some problem. 
-Later, John Backus, among others, asked himself if different programming paradigms 
-than imperative were possible to solve problems. 
-It was the birth of a programming style, the functional programming, closer to mathematics than to a specific computer 
-architecture and focused on the result of the computation rather than the flow control of the program. 
+The tools of the theory of computation tell 
+if the problem can be solved in the \textbf{framework of a model of computation}, 
+using an \textbf{algorithm} and 
+\textbf{how efficiently} is going to be solved.
 
-Finally, there are some essential features that makes a programming language suitable for scientific programming.
-A functional programming paradigm would be one of these, but also a syntax close to mathematics 
-or an array programming construction are desirable. 
-Array programming language, also called vector language makes reference to the possibility 
-of operating a whole group of values at the same time.
-Hence, the same operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
-in a closer to maths style, greatly simplifying mathematical expressions.
-
-For each concept treated here a Fortran code example guides the explanation and at the 
-end of each chapter the corresponding Python codes are presented. Thus, the following
-can be also used as a comparison between the foundations of both programming languages. 
- 
- 
-%In this part, basic operations are presented as a first approach to 
-%perform simple mathematical operations.
-% to learn applied mathematics 
-%a chapter including  
-%In it the reader can become familiar to the use of basic sentences in order
- 
-%Some notions of theory of computation are revised here so a reader that is new 
-%to the scientific programming can familiarize himself.
- 
-
- 
- 
-\newpage   
-    \section{Von Neumann style} 
-\vspace{-0.3cm}
-The Turing machine was invented by Alan Turing in 1936 by the name of ``a-machine''. 
+But first let's define what a model of computation is: a mathematical abstract construction 
+that describes how to compute the output of a mathematical function given its input.
+The Turing machine, invented by Alan Turing in 1936 by the name of ``a-machine'', is a model of computation. 
 The purpose for this model of computation was to give answer to some essential questions 
 in the theory of computation and mathematics in general. 
+
 This abstract construction consists on a scanning head capable of reading from an 
-infinite tape of cells a single cell at a time. 
+infinite tape of cells, a single cell at a time. 
 This tape has information coded and once a cell is read, the machine can delete that cell, 
 write another symbol or leave the symbol. 
 Then, it can move to a different position in the tape. 
@@ -106,26 +84,59 @@ In this description of a computer, a Central Processing Unit (CPU) is in charge 
 In that memory, with each memory position uniquely identified by an address, the data and program are stored together. 
 Some Buses transfer data, addresses and control commands between different parts of the computer
 and at the same time allows the communication with input/output devices.
-The CPU follows an instruction cycle, composed by three stages, to work: 
-i) it fetches the next instruction of the program from the memory address (a counter points to this address), 
-ii) this instruction is decoded and 
-iii) the CPU performs the actions required by the instruction (reading addresses, performing arithmetic, writing in memory, etc.)
-
+The CPU works following an instruction cycle composed by three stages:
+\begin{enumerate}[label=(\roman*)]
+    \item it fetches the next instruction of the program from the memory address (a counter points to this address),
+    \item this instruction is decoded and 
+    \item the CPU performs the actions required by the instruction (reading addresses, performing arithmetic, writing in memory, etc.)
+\end{enumerate} 
 
 Notice that this architecture not only describes how the hardware is organized but also how data and programs work.
 Inevitably, this architecture has influenced how programming languages are built to the point that 
 these are high level software versions of the von Neumann machine. 
-The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+%The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+
+Aqui contar como influencia el lenguaje en profundidad...
+
+
+
+
+
+
+% The universal Turing machine for example is a model of computation and 
+% together with the von Neumann computer architecture gave rise 
+% to the imperative programming paradigm. 
+% The imperative paradigm consists of a sequence of basic computer operations, focused on the control flow of the program,
+% to achieve the solution of some problem. 
+% Later, John Backus, among others, asked himself if different programming paradigms 
+% than imperative were possible to solve problems. 
+% It was the birth of a programming style, the functional programming, closer to mathematics than to a specific computer 
+% architecture and focused on the result of the computation rather than the flow control of the program. 
+% 
+% 
+% 
+% 
+% 
+% Finally, there are some essential features that makes a programming language suitable for scientific programming.
+% A functional programming paradigm would be one of these, but also a syntax close to mathematics 
+% or an array programming construction are desirable. 
+% Array programming language, also called vector language makes reference to the possibility 
+% of operating a whole group of values at the same time.
+% Hence, the same operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
+% in a closer to maths style, greatly simplifying mathematical expressions.
+
+
+
 
 
 
  
- 
-    \section{Imperative versus declarative programming} 
+    \newpage
+    \section{Imperative versus declarative programming}  \label{sec:impvsdec}
 
 %RAM model and Church lambda 
 Different computation models exist apart from the Turing machine, 
-Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
+Random-access Machine (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
 Some of these computation models give rise to a programming paradigm. 
 Take a look at the next section to delve into this idea.  
 
@@ -225,14 +236,16 @@ Functional programming is treated during the whole book, starting in the section
  
  
  
-    \section{Vector languages}
+    \section{Vector languages} \label{sec:veclan}
  
  
 
- 
- 
- 
- 
+
+
+
+
+
+
  
  
     \section{Functional programming} \label{sec:fpro}
@@ -268,7 +281,7 @@ Which as we mentioned earlier, FP will make your code more Predictable, Testable
 
 
 \newpage 
-\section{Programming through history} 
+\section{Programming through history}   \label{sec:films}
 To understand different characteristic of modern programming languages
 is helpful to revise the history of informatics. In this chapter, 
 some documentaries and movies are commented to whet the appetite of the 

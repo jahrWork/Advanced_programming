@@ -1,7 +1,7 @@
 {
     "InternalPDFViewer": {
         "Embedded": false,
-        "File": "Advanced programming.pdf"
+        "File": ""
     },
     "Session": {
         "Bookmarks": [
@@ -13,17 +13,17 @@
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 0,
+                "FirstLine": 190,
                 "FoldedLines": "",
                 "Line": 215
             },
             {
-                "Col": 35,
+                "Col": 12,
                 "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/Overview.tex",
+                "FileName": "doc/Chapters/part_I/introduction.tex",
                 "FirstLine": 0,
-                "FoldedLines": "99,103,185,199,217,339,403,439,680,695,699,766,863,905,1003,1013",
-                "Line": 78
+                "FoldedLines": "24,43",
+                "Line": 2
             },
             {
                 "Col": 33,
@@ -34,12 +34,12 @@
                 "Line": 0
             },
             {
-                "Col": 0,
+                "Col": 14,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/sum_series.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 7
             },
             {
                 "Col": 0,
@@ -64,8 +64,17 @@
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 0
+            },
+            {
+                "Col": 2,
+                "EditorGroup": 0,
+                "FileName": "doc/Chapters/part_I/Overview.tex",
+                "FirstLine": 0,
+                "FoldedLines": "68,119,141,163,223,235,268,693",
+                "Line": 14
             }
         ],
-        "MasterFile": ""
+        "MasterFile": "",
+        "VerticalSplit": false
     }
 }

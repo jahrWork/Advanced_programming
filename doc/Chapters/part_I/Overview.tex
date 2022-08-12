@@ -30,12 +30,6 @@ Several movies and documentaries are recommended to understand those naive and h
   
  
 
-
- 
- 
- 
-
-
     \newpage   
     \section{Von Neumann style}  \label{sec:vonNeu}
     %\vspace{-0.3cm}
@@ -110,12 +104,12 @@ Notice that the \textit{variables} in a programming language imitate the \textit
 The \textit{control statements} emulate the \textit{jump and test instructions} and
 the \textit{assignment statement} imitate the \textit{fetching, performing arithmetic and storing process}. 
 
-The assignment statement \texttt{v = 3 * 5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
+The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
 with the flow of assignments of single variables (imitating single words). 
 By executing assignments many times, maybe altering subscripts (imitating memory addresses), 
 the program ends up with the result stored in a variable (imitating the storage in memory). 
 Furthermore, this assignment statement splits the programming languages into two worlds: 
-a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{a =}).
+a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
 %In this paper, he proposes an alternative to this reality based on the functional programming style. 
 
 
@@ -184,7 +178,8 @@ Advantages:
     \item Very easy to implement
     \item Relatively easy to learn
     \item Easier to debug when the code is not huge
-    \item Easy to understand although maybe time consuming
+    \item Easy to understand for beginners and external developers 
+    %(thinking in what a single-core processor would do with the code)
     %\item Contains loops and variables
 \end{itemize}
 
@@ -192,9 +187,10 @@ Disadvantages:
 \begin{itemize}[noitemsep]
     \item More buggy compared to Declarative
     \item More difficult to organize than declarative programming
-    \item Quickly becomes voluminous and hard to maintain 
+    \item Quickly becomes voluminous and hard to maintain or extent
     \item Loses clarity while its size grows
     \item Less efficient for long term
+    \item Difficult to create reusable code
     \item Parallel programming not available
 \end{itemize}
 
@@ -214,19 +210,22 @@ As a result, data are loosely coupled to functions.
 
 Advantages:
 \begin{itemize}[noitemsep]
-    \item Short and Efficient Code
-    \item Implemented by the methods not yet known at the time of programming
-    \item Characterized by high level of abstraction that's why easier to represent complex logic
-    \item Maintenance is possible irrespective of application development.
+    \item Short and efficient Code
+    \item Implemented by methods not yet known in the moment of coding
+    \item Easier to maintain, extend and optimize
+    \item Easier to create reusable code
+    \item Uses a high level of abstraction making easier to represent complex logic
+    %\item Maintenance is possible irrespective of application development
 \end{itemize}
 
 Disadvantages:
 \begin{itemize}[noitemsep]
-    \item Hard to understand for external Devs
-    \item Hard to take characteristics of individual applications into account during programming
+    \item Hard to understand for external developers and beginners
+    %\item Needs from abstract theoretical programming models 
+    \item Hard to consider specific characteristics of individual applications during programming
 \end{itemize}
 
-Some languages that mainly follow a declarative paradigm are:
+Some languages that allows a declarative paradigm are:
 \begin{itemize}
     \item JavaScript, Haskell, Scala, Erlang, Lisp
 \end{itemize}
@@ -307,18 +306,68 @@ However, this is done by the compiler under several optimizations of the code.
 On the contrary, array programming is automatically intended to implicit parallelization. 
 %Array processing is distinct from parallel processing in that one physical processor performs operations on a group of items simultaneously while parallel processing aims to split a larger problem into smaller ones (MIMD) to be solved piecemeal by numerous processors. Processors with two or more cores are increasingly common today
 
-
+%A FUTURO AQUI PODEMOS TRATAR LA DIFERENCIA ENTRE 
+%VECTOR LANGUAGE - VECTOR PROCESSOR (PROCESADOR CON DISTINTOS ALUs CREO) - MULTIPROCESSOR (MUCHOS PROCESADORES o MUCHOS CORES, PARALELO) 
 
  
  
     \section{Functional programming} \label{sec:fpro}
- 
-Functional programming (FP) is highly influenced by Mathematics realm. 
-FP would love to have all Mathematics included in every line of code.
 
-Although Math is only built with functions and variables, it’s still very powerful and expressive. 
-That’s what FP is trying to do. 
-Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
+With his visionary paper, where John Backus presented his Function-level programming (FP), he accelerate the research in Functional Programming.
+These researches end up in the modern functional languages, however, these are based on the lambda calculus instead of the paradigm described by Backus. 
+Hence, the ideas developed in his paper under the name of functional programming should not be confused with the current concept of functional programming. 
+Let's take a look at the main ideas behind his alternative to von Neumann programming languages. 
+
+He based his alternative on the idea of changing variables by functions/programs and operations by combining forms. 
+This means that it is possible to take some functions, or programs, and combine them with algebraic laws so a new program is obtained.
+These algebraic laws can be similar to the algebraic laws that range over numbers and are used to solve equations.
+In addition, these laws give the power to the paradigm since they allow to use general theorems of the algebra for the programs. 
+
+Backus uses a comparison between an inner product coded using imperative style: 
+\begin{verbatim}
+c := 0
+for i := 1 step 1 until n do
+    c := c + a[i]xb[i]
+\end{verbatim}
+and his functional style:
+\newline\newline
+\texttt{Def IP $\equiv (/+)\circ(\alpha \times)\circ \textrm{Trans}$} 
+\newline\newline
+where \texttt{/} involves inserting the operation between members of the argument, 
+\texttt{$\alpha$} applies the operation to all members and
+\texttt{Trans} transposes the argument.
+
+He remarks the following ideas among others:
+\begin{enumerate}
+    \item Instead of operating on a state that is changed by means of control statements (\texttt{for}), a program can only operate on its arguments. 
+    The only possible rules are one that applies a function to its arguments and other rule that combines different functions to create a new one. 
+    
+    \item It is hierarchical: complex entities are built from simpler ones. 
+    The complex entities are not more than a function built from the combination of simpler functions.
+    
+    \item It is static and nonrepetitive: the programmer does not need to mentally execute the code to understand it. 
+    On the contrary, the programmer is only worried about the meaning of the program, not how it is implemented. 
+    
+    \item It operates on whole conceptual units instead of operating one word at a time. 
+    The same operation performed over a number can be performed over a higher level elements, said in other words, 
+    the operation is abstracted to admit any kind of data structure.
+    Hence, no extra data is needed to describe the operation except for the arguments to be operated. 
+    
+    %\item No procedure declaration is needed and no substitution rules are applied to make the operation general.
+\end{enumerate}
+ 
+Nowadays, the functional programming paradigm is completely based on mathematics and 
+more specifically on the lambda calculus. 
+It seeks to have each line of code made up of mathematics which, 
+although it only needs from variables and functions to work, is extremely powerful.
+
+%Contar los pilares fuindamentales de la prog funcional ahora. 
+
+ 
+ 
+ 
+
+
 
 That’s why functions’ freedom (making them first-class) comes into work. 
 When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
@@ -329,7 +378,11 @@ Which as we mentioned earlier, FP will make your code more Predictable, Testable
  
  
  
- 
+ %Functional programming (FP) is highly influenced by Mathematics realm. 
+ %FP would love to have all Mathematics included in every line of code.
+% Although Math is only built with functions and variables, it’s still very powerful and expressive. 
+% That’s what FP is trying to do. 
+% Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
  
  
 % 1. Imperative Paradigm

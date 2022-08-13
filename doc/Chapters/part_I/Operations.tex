@@ -1,7 +1,7 @@
 \chapter{Basic operations} \label{chap:basicop}
 
 
-\section{Introduction} 
+    \section{Introduction} 
 
 Como la arquitectura de von neumann motiva que usemos variables con un data type en las que guardamos el valor con el que vamos a trabajar
 %Decir que esta comparación la mostró john backus
@@ -198,15 +198,85 @@ In addition, indentation rules must be strictly followed.
 
 
  
- \section{Data structures} 
+\section{Data structures} 
  
+The following concepts regarding arrays constructions and operations are covered:
+\begin{enumerate} 
+    \item Type, rank and dimension of arrays.
+    \item Constructors to initialize an array. 
+    \item Sectors or slices of arrays. 
+    \item Operations among array. 
+\end{enumerate} 
+
+
+Some basic notions are summarized now: 
+%\begin{itemize}
+%    \item An array is properly declared when it has type, rank and dimension (or extent). 
+%All this information comes from the mathematical definition of the vectors and matrices.
+%
+%\begin{enumerate}
+%    \item The data type in this case is \texttt{real} since the examples are built with real vectors/matrices. 
+%    \item Rank is the number of dimensions in the array; a rank-one array represents a column vector (\texttt{V} or \texttt{W}), a rank-two array represents a matrix organised into columns and rows (\texttt{A} or \texttt{B}), etc. 
+%    \item The extent of each particular dimension is its length, which means, the number of elements in that dimension. All dimensions involved in these examples are equal to \texttt{N}. The bounds of a dimension does not have to start with index \texttt{1}, later some examples with different bounds are shown. 
+%\end{enumerate}
+%
+%\item Once declared, the initialization of the arrays is performed with constructors. In the case of Fortran the constructors are only used for rank-one arrays so functions like \texttt{reshape} are needed for higher ranks. Three ways are normally used to manually construct an array:
+%
+%\begin{enumerate}
+%    \item By a list of values: \texttt{ [ list ] } where 'list' is full of values separated by commas (of the same type declared for the array). 
+%    For example: 
+%    
+%    \texttt{V = [ 3.4, 5.2, 4.5, 2.1 ]} is a column vector of dimension 4 with those values in each position.
+%    \item An array expression can also be used in the initialization: 
+%    
+%    \texttt{V = [ B(2, 3:5) ]} stores in \texttt{V} the list of values in the second row of \texttt{B} from columns \texttt{3} to \texttt{5}.
+%    \item Using an implicit loop so a list of elements is computed from a loop controlled by a DO variable. Lots of examples of this are used throughout this book: \texttt{V = [ ( 1./i**2, i=1, N ) ]}.
+%\end{enumerate}
+%
+%\item The sectors of an array are already introduced in this text. Notice that the initialization of \texttt{V} in this example: \texttt{V = [ B(2, 3:5) ]} use a sector of the whole array \texttt{B}. This can also be extended to a whole dimension of an array, i.e. the column 5 of an array \texttt{C} is referred like \texttt{C(:,5)}. Furthermore, alternate values can be selected by specifying a lower and upper bound and the jump between values (see matrix B of Figure \ref{fig:arrays}): \texttt{B(-2:4:2,:)} being the second value \texttt{2} the jump between rows.
+%
+%\begin{figure}
+%    \begin{subfigure}[h]{0.5\textwidth}
+%        
+%        \centering
+%        \includegraphics[width = \textwidth]{./doc/Figures/Array1.png}  \\
+%        \begin{flushleft}
+%            Rank = 2 \\
+%            %Extent = 5 and 4 \\
+%            Size = 20 \\
+%            Bounds = (1:5, 1:4) \\
+%            Shape = (5, 4)
+%        \end{flushleft}
+%        
+%    \end{subfigure}
+%    \hspace{\fill}
+%    \begin{subfigure}[h]{0.5\textwidth}
+%        
+%        \centering
+%        \includegraphics[width = \textwidth]{./doc/Figures/Array3.png}  \\
+%        \begin{flushleft}
+%            Rank = 2 \\
+%            %Extent = 7 and 2 \\
+%            Size = 14 \\
+%            Bounds = (-2:4, 0:1) \\
+%            Shape = (7, 2)
+%        \end{flushleft}
+%        
+%    \end{subfigure}
+%    \caption{Properties of a couple of arrays.}   \label{fig:arrays}
+%\end{figure}
+%
+%\end{itemize}
+
+
+%\texttt{ (/ list /) } is not used as constructor.
 
 
 
 
 
 \newpage
-\section{Math operators}
+\section{Maths operators}
 Arithmetic operator 
 Comparison operator 
 Logical operator 
@@ -226,8 +296,6 @@ iterators: list, tuples, arrays, sets, dictionaries (key, value)
 for k in D   dictionary iterates in key 
 for k in D.keys()   dictionary iterates in keys
 for v in D.values()   dictionary iterates in values
-
-\section{Basic operations}
 
 
 \newpage 

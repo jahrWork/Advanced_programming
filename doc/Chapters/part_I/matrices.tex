@@ -5,62 +5,64 @@
 \vspace{-.7cm}
 \section{Introduction}
 
-This chapter covers two independent topics through examples. In the first place, some essential 
-operations of matrix arithmetic are introduced, an operation like the product of two matrices becomes 
-extremely simple in programming languages oriented to vector programming. 
-In the second place, the concepts of static and dynamic 
-data objects are covered. Notice that all the examples are written according to a 
-declarative programming, consider reproducing the same results with an imperative programming style to 
-compare.
+This chapter covers two independent topics through examples. 
+In the first place, some essential operations of matrix arithmetic are introduced, 
+an operation like the product of two matrices becomes extremely simple 
+in programming languages oriented to vector programming. 
+In the second place, the concepts of static and dynamic data objects are covered. 
+Notice that all the examples are written according to a declarative programming style, 
+consider reproducing the same results with an imperative programming style to compare.
     
     \vspace{-.3cm}
     \subsection*{Matrix arithmetic}
     \vspace{-.2cm}
 
-We have seen before what array programming (or vector languages) is.
-Some languages like Fortran, MATLAB, R or the NumPy extension of Python support array programming.
+An array programming language or vector language has the possibility 
+to operate a whole group of values at once.
+The common operations that range over scalar numbers can then be applied to vectors, 
+matrices and higher dimension arrays in a closer to maths style. 
+Hence, mathematical expressions at the time of programming are simplified.
+
+Languages like Fortran, MATLAB, R or the NumPy extension of Python support array programming.
 Matrix arithmetic are built-in in these languages and expressing the mathematical language in a natural way is feasible.
 
-Take note of the difference between array programming and array processors. The first makes reference to how the programmer 
-codes the mathematical operations in its program (a big advantage is obtained from this feature for Scientific Computing as mentioned before). 
-The second feature is related to how the processor operates that group of numbers, by performing
-all the operations together under the same instruction given to the processor in a considerably increase of speed.
-Both features suppose an increase of performance for the coding and executing of scientific programs, however, this chapter is 
-oriented to the aspects of the first feature mentioned. 
+\newpage
+The following array operations are covered:
+\begin{enumerate}
+    \item Addition. 
+    \item Dot product.
+    \item Matrix multiplications. 
+    \item Hadamard product. 
+\end{enumerate}  
 
-%It is relatively new the development of array programming languages being Fortran the first one to include it in the 90's with the 
-%ISO/IEC standard 1539:1991. 
 
-The following concepts regarding arrays constructions and operations are covered:
-\begin{enumerate} 
-    \item Type, rank and dimension of arrays.
-    \item Constructors to initialize an array. 
-    \item Sectors or slices of arrays. 
-    \item Operations among array. 
-    
-    \begin{enumerate}
-        \item Addition. 
-        \item Dot product.
-        \item Matrix multiplications. 
-        \item Hadamard product. 
-    \end{enumerate}  
-    
-\end{enumerate} 
+%Take note of the difference between array programming and array processors. The first makes reference to how the programmer 
+%codes the mathematical operations in its program (a big advantage is obtained from this feature for Scientific Computing as mentioned before). 
+%The second feature is related to how the processor operates that group of numbers, by performing
+%all the operations together under the same instruction given to the processor in a considerably increase of speed.
+%Both features suppose an increase of performance for the coding and executing of scientific programs, however, this chapter is 
+%oriented to the aspects of the first feature mentioned. 
+
+
 
     \vspace{-.5cm}
     \subsection*{Static/Dynamic data objects}
 
-Each data object declared in a program (variables, constants, pointers, arrays, etc.) are either static or dynamic 
-which means that the memory storage to hold that piece of data is reserved during compilation time or 
-during the execution of the program respectively. Consider the variable \texttt{real :: A(N, N)} declared at the 
-beginning of a code, its memory storage is reserved when the program is compiled and this space is not liberated 
+Each data object declared in a program (variables, constants, pointers, arrays, etc.) are either static or dynamic, 
+this means that the memory storage to hold that piece of data is reserved during compilation time or 
+during the execution of the program respectively. 
+
+Consider for example the Fortran variable \texttt{real :: A(N, N)} declared at the beginning of a code, 
+its memory storage is reserved when the program is compiled and this space is not liberated 
 until the program has finished the execution. 
 
-Another option to declare and manage the memory storage of a object involves using dynamic allocation. For this case, the 
-storage of a variable is not reserved until the program orders it (during execution) and can be changed or freed at any moment. 
-This is done through a code like \texttt{real, allocatable :: Ak(:, :, :)}.
+Another option to declare and manage the memory storage of an object involves using dynamic allocation. 
+In this case, the storage of the variable is not reserved until the program orders it (which happens during the execution of the code) and can be changed or freed at any moment. 
+In Fortran for example, this is done through a code like \texttt{real, allocatable :: Ak(:, :, :)}.
 
-
+This chapter also includes a review of the main memories that a program uses to work: Static, Heap and Stack.
+All variables, program instructions, constants, etc. are stored in these memories and their use is intimately related 
+to the different ways of allocating space in the code.
 
 
 
@@ -68,128 +70,50 @@ This is done through a code like \texttt{real, allocatable :: Ak(:, :, :)}.
 \newpage 
 \section{Static size vectors and matrices} 
 
-For the following example some basic matrix arithmetic is performed with static data objects. 
-Since the sizes of the arrays are known at compile-time, the memory storage can be declared statically. 
-The main properties of a static allocation are:
+Consider the same vectors $V, W \in \mathbb{R}^N$ and matrices $A, B \in { \cal{M}}_{N \times N} (\mathbb{R})$ used for the previous chapter and using $N=10$: 
+$$
+V = \left[ v_i =\frac{1}{i^2}, \ \ i = 1 \ldots  N \right],
+$$
+$$
+W = \left[ w_i = \frac{(-1)^{i+1}}{2i+1}, \ \ i = 1 \ldots  N \right].
+$$
+$$
+A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right].
+$$
+$$
+B = A^T
+$$
 
+and let's write the following operations:
+%Describo matemáticamente las mismas operaciones que tenemos en el código
+
+Since the sizes of these arrays are known at compile-time, the memory storage can be declared statically. 
+The main properties of a static allocation are:
 \begin{enumerate}
-    \item The memory address and the size are assigned during the compilation of the code in the executable image of your program.
+    \item The memory address and the size are assigned during the compilation of the code in the executable image of the program.
     \item These address and size can not be changed during execution.
     \item Once the program finishes the execution the space is freed.
     \item It is a simple and quick allocation process.
 \end{enumerate}
 
 
-Consider the vectors $V, W \in \mathbb{R}^N$ and the matrices  $ A, B \in { \cal{M}}_{N \times N} (\mathbb{R})$ defined in the following way: 
-
-$$
-V = \left[ v_i =\frac{1}{i^2}, \ \ i = 1 \ldots  N \right],
-$$
-
-$$
-W = \left[ w_i = \frac{(-1)^{i+1}}{2i+1}, \ \ i = 1 \ldots  N \right].
-$$
-
-$$
-A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right].
-$$
-
-$$
-B = A^T
-$$
-
-
-
-
-
-
-Some basic notions are summarized now: 
-
-\begin{itemize}
-    \item An array is properly declared when it has type, rank and dimension (or extent). 
-    All this information comes from the mathematical definition of the vectors and matrices.
+Some operations to be used with real matrices are introduced now. Notice that these examples are limited to numeric arrays, reals or even integers, but arrays can be constructed with a different data type. Furthermore, different operations could be created for new data types also created by the programmer. 
     
-    \begin{enumerate}
-        \item The data type in this case is \texttt{real} since the examples are built with real vectors/matrices. 
-        \item Rank is the number of dimensions in the array; a rank-one array represents a column vector (\texttt{V} or \texttt{W}), a rank-two array represents a matrix organised into columns and rows (\texttt{A} or \texttt{B}), etc. 
-        \item The extent of each particular dimension is its length, which means, the number of elements in that dimension. All dimensions involved in these examples are equal to \texttt{N}. The bounds of a dimension does not have to start with index \texttt{1}, later some examples with different bounds are shown. 
-    \end{enumerate}
+Consult the specifications of the following matrix operations to become familiarized with the purpose, inputs and optional arguments allowed.
+As a quick reference: use \texttt{sum} to add all elements of an array, whether it is across one dimension, all the dimensions 
+or only those elements that accomplish with some condition (e.g. $ V_i > 0 $). Use \texttt{dot\_product} to calculate the scalar 
+product of two vectors, \texttt{matmul} for a matrix multiplication and \texttt{transpose} to calculate the transpose of a matrix or vector. 
+In addition, \texttt{maxval} and \texttt{maxloc} return the maximum value of all the elements of an array and its position, whether 
+it is across one specific dimension, the whole array or only for those values that accomplish with a specified condition.
 
-    \item Once declared, the initialization of the arrays is performed with constructors. In the case of Fortran the constructors are only used for rank-one arrays so functions like \texttt{reshape} are needed for higher ranks. Three ways are normally used to manually construct an array:
-    
-    \begin{enumerate}
-        \item By a list of values: \texttt{ [ list ] } where 'list' is full of values separated by commas (of the same type declared for the array). 
-        For example: 
-        
-        \texttt{V = [ 3.4, 5.2, 4.5, 2.1 ]} is a column vector of dimension 4 with those values in each position.
-        \item An array expression can also be used in the initialization: 
-        
-        \texttt{V = [ B(2, 3:5) ]} stores in \texttt{V} the list of values in the second row of \texttt{B} from columns \texttt{3} to \texttt{5}.
-        \item Using an implicit loop so a list of elements is computed from a loop controlled by a DO variable. Lots of examples of this are used throughout this book: \texttt{V = [ ( 1./i**2, i=1, N ) ]}.
-    \end{enumerate}
-
-    \item The sectors of an array are already introduced in this text. Notice that the initialization of \texttt{V} in this example: \texttt{V = [ B(2, 3:5) ]} use a sector of the whole array \texttt{B}. This can also be extended to a whole dimension of an array, i.e. the column 5 of an array \texttt{C} is referred like \texttt{C(:,5)}. Furthermore, alternate values can be selected by specifying a lower and upper bound and the jump between values (see matrix B of Figure \ref{fig:arrays}): \texttt{B(-2:4:2,:)} being the second value \texttt{2} the jump between rows.
-    
-    \begin{figure}
-        \begin{subfigure}[h]{0.5\textwidth}
-
-            \centering
-            \includegraphics[width = \textwidth]{./doc/Figures/Array1.png}  \\
-            \begin{flushleft}
-                Rank = 2 \\
-                %Extent = 5 and 4 \\
-                Size = 20 \\
-                Bounds = (1:5, 1:4) \\
-                Shape = (5, 4)
-            \end{flushleft}
-
-        \end{subfigure}
-        \hspace{\fill}
-        \begin{subfigure}[h]{0.5\textwidth}
-
-            \centering
-            \includegraphics[width = \textwidth]{./doc/Figures/Array3.png}  \\
-            \begin{flushleft}
-                   Rank = 2 \\
-                   %Extent = 7 and 2 \\
-                   Size = 14 \\
-                   Bounds = (-2:4, 0:1) \\
-                   Shape = (7, 2)
-            \end{flushleft}
-
-        \end{subfigure}
-        \caption{Properties of a couple of arrays.}   \label{fig:arrays}
-    \end{figure}
-    
-    \item Some operations to be used with real matrices are introduced now. Notice that these examples are limited to numeric arrays, reals or even integers, but arrays can be constructed with a different data type. Furthermore, different operations could be created for new data types also created by the programmer. 
-    
-    Consult the specifications of the following matrix operations to become familiarized with the purpose, inputs and optional arguments allowed.
-    As a quick reference: use \texttt{sum} to add all elements of an array, whether it is across one dimension, all the dimensions 
-    or only those elements that accomplish with some condition (e.g. $ V_i > 0 $). Use \texttt{dot\_product} to calculate the scalar 
-    product of two vectors, \texttt{matmul} for a matrix multiplication and \texttt{transpose} to calculate the transpose of a matrix or vector. 
-    In addition, \texttt{maxval} and \texttt{maxloc} return the maximum value of all the elements of an array and its position, whether 
-    it is across one specific dimension, the whole array or only for those values that accomplish with a specified condition.
-    
-    It is mandatory that rank and dimension of the arguments of these intrinsic functions must agree with the mathematical definitions of
-    the operations, consider for example how the scalar product of the vector V with a column of A is calculated. The colon symbol : is used
-    as an implicit loop for all the elements of column \texttt{N} in the matrix. 
-    
-\end{itemize}
-
-
-
-%\texttt{ (/ list /) } is not used as constructor.
+It is mandatory that rank and dimension of the arguments of these intrinsic functions must agree with the mathematical definitions of
+the operations, consider for example how the scalar product of the vector V with a column of A is calculated. The colon symbol : is used
+as an implicit loop for all the elements of column \texttt{N} in the matrix. 
 
 
 \renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
 \listings{\home/Matrix_operations.f90}{subroutine Matrix_operation_examples}
       {end subroutine}{Matrix_operations.f90}
-
-
-
-
-
-
 
 
 Take some interesting notes of the previous example. First of all, N is declared as a named constant thanks to the 

@@ -315,15 +315,17 @@ On the contrary, array programming is automatically intended to implicit paralle
 
 With his visionary paper, where John Backus presented his Function-level programming (FP), he accelerate the research in Functional Programming.
 These researches end up in the modern functional languages, however, these are based on the lambda calculus instead of the paradigm described by Backus. 
-Hence, the ideas developed in his paper under the name of functional programming should not be confused with the current concept of functional programming. 
-Let's take a look at the main ideas behind his alternative to von Neumann programming languages. 
+Hence, the ideas developed in his paper under the name of functional programming do not fully coincide with the current concept of functional programming. 
+%Let's take a look at the main ideas behind his alternative to von Neumann programming languages. 
 
-He based his alternative on the idea of changing variables by functions/programs and operations by combining forms. 
-This means that it is possible to take some functions, or programs, and combine them with algebraic laws so a new program is obtained.
-These algebraic laws can be similar to the algebraic laws that range over numbers and are used to solve equations.
-In addition, these laws give the power to the paradigm since they allow to use general theorems of the algebra for the programs. 
+He based his alternative to von Neumann programming languages on the idea of changing variables by functions/programs and operations by combining forms. 
+Combining forms means to take some functions and combine them with algebraic laws so a new one is obtained.
+These algebraic laws are similar to the algebraic laws ranging over numbers and used to solve equations.
+Thanks to the general theorems of the algebra associated to algebraic laws, the paradigm gains its power. 
+%In addition, these laws give the power to the paradigm since they allow to use general theorems of the algebra for the programs. 
 
 Backus uses a comparison between an inner product coded using imperative style: 
+\vspace{-0.5cm}
 \begin{verbatim}
 c := 0
 for i := 1 step 1 until n do
@@ -338,21 +340,21 @@ where \texttt{/} involves inserting the operation between members of the argumen
 \texttt{Trans} transposes the argument.
 
 He remarks the following ideas among others:
-\begin{enumerate}
-    \item Instead of operating on a state that is changed by means of control statements (\texttt{for}), a program can only operate on its arguments. 
-    The only possible rules are one that applies a function to its arguments and other rule that combines different functions to create a new one. 
+\vspace{-0.3cm}
+\begin{enumerate}[noitemsep, label=(\roman*)]
+    \item Instead of operating on a state changed by means of control statements (\texttt{for}), a program can only operate on its arguments. 
+    Only two rules are needed: one that applies a function to its arguments and other that combines different functions. 
     
     \item It is hierarchical: complex entities are built from simpler ones. 
-    The complex entities are not more than a function built from the combination of simpler functions.
+    The complex entities are functions built from the combination of simpler functions.
     
     \item It is static and nonrepetitive: the programmer does not need to mentally execute the code to understand it. 
-    On the contrary, the programmer is only worried about the meaning of the program, not how it is implemented. 
+    Then, is only worried about the meaning of the program, not how it is implemented. 
     
     \item It operates on whole conceptual units instead of operating one word at a time. 
-    The same operation performed over a number can be performed over a higher level elements, said in other words, 
-    the operation is abstracted to admit any kind of data structure.
-    Hence, no extra data is needed to describe the operation except for the arguments to be operated. 
-    
+    The operation is considered an abstraction that admits any kind of data structure. 
+    Hence, no extra data (\texttt{n}) is needed to describe the operation except for the arguments. 
+%    The same operation performed over a number can be performed over a higher level elements
     %\item No procedure declaration is needed and no substitution rules are applied to make the operation general.
 \end{enumerate}
  
@@ -361,29 +363,55 @@ more specifically on the lambda calculus.
 It seeks to have each line of code made up of mathematics which, 
 although it only needs from variables and functions to work, is extremely powerful.
 
-%Contar los pilares fuindamentales de la prog funcional ahora. 
+This paradigm takes its name from the fact that its main operation is the application of functions to arguments and 
+every function is at the same time composed by other functions and glued together. 
+Some of the basic principles underlying this paradigm are:
+\begin{enumerate}[noitemsep]
+    \item \textbf{Immutability:} Neither assignment statements nor variables are needed.
+    Hence, once declared a value, it never changes, making the program more predictable. 
+    
+    \item \textbf{No side effects:} Side effect in a function is every observable effect different than computing the result of the function applied to its arguments.
+    A functional program should not contain any side effects, eliminating then a big source of bugs. 
+    From a practical perspective, functional programming tries to reduce as much as possible side effects, letting them exist when they are required. 
+    %An advantage directly obtained from this principle is that the order of execution becomes irrelevant.
+    Since the value returned by a function is going to be immutable (no side effects can change it), 
+    the function can be evaluated at any point in the code, the order of execution and the control flow become irrelevan.
+    
+    \item \textbf{Pure functions:} These functions, apart from lacking side effects, always return the same result for the same input arguments.
+    Considering that the expression can be evaluated at any point in the code the function calls can be replaced by their returned value and the program is still as predictable as before.  
+    This property is called \textbf{referential transparency} and makes functional programs more tractable mathematically. 
+    
+    \item \textbf{First-class functions:} Those that i) accept other functions as arguments,
+    ii) return them as results, iii) can be assigned to variables or iv) can be included in any data structure. 
+    Functions are treated as first-class entities when they support the operations available to other entities like common variables with no restrictions. 
+    By treating functions as simple as variables the language becomes much more flexible. 
+    Many concepts are born here: 
+    \textbf{higher-order functions} (when at least the function takes one or more functions as arguments or returns a function as a result) or
+    \textbf{closures} (functions returned by a parent function, higher-order, that at the same time access the internal state of the parent).
+    %Currying   
+    %\item \textbf{Lazy evaluation:}    
+\end{enumerate}
+ 
+This paradigm contributes mainly with two features to modularity; higher-order functions and lazy evaluation. %ref a Huges y su paper
+Modularity is a key property in a well-structured software, it simplifies debugging, allows to test independent pieces of code and code reuse.  
+Hence, considering the basic principles of the paradigm and the qualities inherited from being a declarative paradigm,
+functional programming has the potential to make a program 
+short, effective, easy and part by part debuggable, reusable, maintainable, testable, predictable, and well-structured among others. 
 
- 
- 
- 
 
 
 
-That’s why functions’ freedom (making them first-class) comes into work. 
-When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
-Which as we mentioned earlier, FP will make your code more Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
+%Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
  
- 
- 
- 
- 
- 
+
  %Functional programming (FP) is highly influenced by Mathematics realm. 
  %FP would love to have all Mathematics included in every line of code.
 % Although Math is only built with functions and variables, it’s still very powerful and expressive. 
 % That’s what FP is trying to do. 
 % Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
  
+%That’s why functions’ freedom (making them first-class) comes into work. 
+%When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
  
 % 1. Imperative Paradigm
 % In which control flow is explicit, where the programmer instructs the program how to change its state. Where it includes more paradigms:

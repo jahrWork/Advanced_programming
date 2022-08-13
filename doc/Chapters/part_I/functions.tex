@@ -1,21 +1,68 @@
 %___________________________________________________________________________________________________
 \chapter{Operations with functions}     \label{chap:opfuncs}
 
+    \section{Introduction} 
 
+One of the paradigms grouped within the declarative programming is the functional programming paradigm,
+which finds its bases in mathematics and more specifically in lambda calculus.
+With this paradigm every piece of code uses pure mathematical style and is built 
+under two main ideas: the functions are only applied to arguments 
+and the functions are combined to create new functions. 
 
+Some programming Languages that support functional programming are 
+Haskell, JavaScript, Lisp, Erlang or Scala.
+Although Fortran and Python are not functional programming languages, they
+take several principles and ideas from this paradigm such as pure functions or first-class/higher-order functions,
+the latter, introduced below, is intensively used in this chapter. 
 
-\section{Introduction} 
-
-This chapter covers some essential concepts that arise when the tools of mathematical analysis are used in scientific programming. The use of piecewise-defined functions, plotting functions as a means of debugging codes or the use of integrals and derivatives are the first things that a scientific code programmer will have to deal with to solve problems. 
-
-The examples presented here are developed with Fortran, however, the concepts are cross languages. The ideas around the approximation of a derivative or integral with a computer are the same in other languages and of course the need of using finite precision to represent real numbers becomes once again a matter to consider. 
-
-
-
-
-%___________________________________________________________________________________________________
+%f matematica vs f lambda
+In mathematics a function is a relation 
+from elements of a set $X$ of inputs (domain) 
+to elements of a set $Y$ of outputs (codomain) 
+where each input is related to exactly one output.
+$$ 
+\myfunc{ f }{X}{Y}{x}{f(x) = x^2} 
+$$
 \newpage
-\section{Defining piece-wise functions} \label{sec:piecewise}
+A function in a language like Fortran follows the same concept:
+\begin{verbatim}
+function f(x) 
+    real, intent(in) :: x
+    real :: f
+
+    f = x**2
+    
+end function
+\end{verbatim} 
+Notice that, in lambda calculus and functional languages, functions are much the same but anonymous, 
+which means they do not have an identifier associated to denote them. 
+
+This chapter covers the equivalent of some mathematical analysis tools translated to scientific programming. 
+Piecewise-defined functions, plotting of functions, integrals and derivatives or series expansions of functions 
+are some of the first things that a scientific programmer should know to solve problems. 
+All these tools, when expressed in a program, can make intensive use of higher-order functions: 
+those functions that can take one or more functions as arguments 
+or can return a function as a result.
+
+The examples presented here are developed with Fortran and Python, however, the concepts are cross languages. 
+For example, the ideas around the approximation of a derivative or integral with a computer or 
+the consequences of using finite precision to represent real numbers
+are similar in any language. 
+
+ 
+%Its properties are covered later in the Advance Programming chapter. 
+%Try now to glimpse with these examples some of its advantages comparing it to the imperative programming.
+%It seeks to have each line of code made up of mathematics which, 
+%although it only needs from variables and functions to work, is extremely powerful.
+
+%Modularity is a key property in a well-structured software, it simplifies debugging, allows to test independent pieces of code and code reuse.  
+%Hence, considering the basic principles of the paradigm and the qualities inherited from being a declarative paradigm,
+%functional programming has the potential to make a program 
+%short, effective, easy and part by part debuggable, reusable, maintainable, testable, predictable, and well-structured among others. 
+
+    %___________________________________________________________________________________________________
+    \newpage
+    \section{Defining piece-wise functions} \label{sec:piecewise}
 
 A function can be defined by means of one or more formulas, a list of values, a recurrence rule, etc. 
 In this example, the following piece-wise mathematical function is defined in Fortran 
@@ -26,7 +73,7 @@ $$
 $$
 
 \begin{equation}
-    x \rightarrow f\left( x\right) = 
+    f\left( x\right) = 
     \begin{cases}
          0,  \ \ \ \  \ \ \ \ \  x < -\frac{\pi}{2}       \\
          \cos(x), \ \             x \in\left[ -\frac{\pi}{2}, \frac{\pi}{2}   \right)        \\ 
@@ -72,9 +119,9 @@ Remember that implicit typing can make programming simpler but can also lead to 
 \lstfor
 
 
-%___________________________________________________________________________________________________
-\vspace{-0.5cm}
-\section{Plotting functions}
+    %___________________________________________________________________________________________________
+    \vspace{-0.5cm}
+    \section{Plotting functions}
 
 For a mathematical function its graph is one of the ways to represent it. 
 Notice that for a given function $ f(x) $ the set of all pairs 
@@ -119,9 +166,9 @@ Notice how this subroutine makes use of the \texttt{parameter M} that needs to b
 
 
 
-%___________________________________________________________________________________________________
-\newpage 
-\section{Integrals and derivatives of functions}   \label{sec:intder}
+    %___________________________________________________________________________________________________
+    \newpage 
+    \section{Integrals and derivatives of functions}   \label{sec:intder}
 
 Let's build a simple approximation to the derivative of a function $ f(x) $ by means of its definition:
 
@@ -268,9 +315,9 @@ Find the same example coded with Python, there is no need of explicitly declare 
 
 
 
-%___________________________________________________________________________________________________
-\newpage 
-\section{Examples of operations with functions}
+    %___________________________________________________________________________________________________
+    \newpage 
+    \section{Examples of operations with functions}
 
 The following subroutine gives some examples of the functions seen during this chapter. 
 DISLIN is used for all the graphs as mentioned before. Firstly, the plot intervals must 
@@ -319,8 +366,8 @@ $$
  \lstfor
  
 
-%___________________________________________________________________________________________________
-\section{Series expansion} 
+    %___________________________________________________________________________________________________
+    \section{Series expansion} 
 
 One of the main focus of numerical methods is to approximate functions by means of different expansions: 
 
@@ -340,9 +387,9 @@ the best expansion allows to obtain the approximation with a minimum number of t
 
 
 
-%___________________________________________________________________________________________________
-\newpage
-\section{Expansions of functions} 
+        %___________________________________________________________________________________________________
+        \newpage
+        \subsection{Taylor expansions of functions} 
    
 One of the most used series expansion of a function is its Taylor series, without going any further, in section \ref{sec:intder} we have used 
 a Taylor expansion to estimate the truncation error committed when approximating the derivative of a function by its finite difference 
@@ -474,8 +521,8 @@ $25$) so the result converges to the cosine function (figure \ref{fig:Taylor3}).
 
   
  
- \newpage 
- \subsection*{Python code} 
+            \newpage 
+            \subsubsection*{Python code} 
  The same functions are coded now with Python, notice that overloading both into one function called \texttt{Taylor} is performed in a 
  different way.
  
@@ -514,9 +561,9 @@ $25$) so the result converges to the cosine function (figure \ref{fig:Taylor3}).
   
   
    
-%\newpage 
-%%___________________________________________________________________________________________________
-%\section{Parseval's identity} 
+        %\newpage 
+        %%___________________________________________________________________________________________________
+        %\subsection{Parseval's identity} 
 %
 %Let's consider a function $f(x)$ and its Fourier series expansion, whether expressed as a sines-cosines expansion:
 %\begin{equation} 
@@ -591,8 +638,8 @@ $25$) so the result converges to the cosine function (figure \ref{fig:Taylor3}).
 %\end{equation}
 %
 
-\newpage 
-\section{Truncated Fourier series}
+        \newpage 
+        \subsection{Truncated Fourier series}
 Fourier series are important expansions in applied mathematics or physics to represent a
 periodic functions.  
 When implementing these expansions in the computer, truncated Fourier series are used
@@ -636,8 +683,8 @@ f(x) =\sum_{k=1}^N  - \frac{2 \ (-1)^{k}}{\pi \ k}   \ \sin ( \ 2 \pi k  x \ ).
 
 
 
-\newpage
-\subsection*{Fortran}
+        \newpage
+        \subsubsection*{Fortran}
 In following Fortran code, the saw--tooth wave is reconstructed 
 by means of its harmonic decomposition. The function \verb|Fourier_series| implements 
 equation (\ref{sawtooth}). Then,  subroutine \verb|Fourier_example| calculates the image of 
@@ -654,8 +701,8 @@ equation (\ref{sawtooth}). Then,  subroutine \verb|Fourier_example| calculates t
  {end subroutine}{Fourier.f90}
 
 
-\newpage
-\subsection*{Python}
+        \newpage
+        \subsubsection*{Python}
 In following Python code, the saw--tooth wave is reconstructed 
 by means of its harmonic decomposition. The function \verb|Fourier_series| implements 
 equation (\ref{sawtooth}). Then, function \verb|Fourier_example| calculates the image of 

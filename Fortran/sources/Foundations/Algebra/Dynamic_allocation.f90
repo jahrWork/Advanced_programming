@@ -64,7 +64,6 @@ recursive function power(A, k) result(B)
     real :: B( size(A,dim=1), size(A,dim=1) )  
     
      integer :: i, N  
-    
   
     N = size( A, dim=1) 
     
@@ -74,7 +73,6 @@ recursive function power(A, k) result(B)
                B = matmul( power(A,k-1), A )  
     end if 
     
-       
 end function 
 
 

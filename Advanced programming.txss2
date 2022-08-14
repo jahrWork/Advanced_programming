@@ -6,14 +6,14 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "Advanced programming.tex",
+        "CurrentFile": "doc/Chapters/part_I/matrices.tex",
         "FileVersion": 1,
         "Files": [
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 190,
+                "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 215
             },
@@ -26,12 +26,12 @@
                 "Line": 2
             },
             {
-                "Col": 33,
+                "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Operations.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 192
             },
             {
                 "Col": 14,
@@ -42,12 +42,12 @@
                 "Line": 7
             },
             {
-                "Col": 0,
+                "Col": 10,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/matrices.tex",
                 "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 0
+                "FoldedLines": "5,16,48,70,115,189,209,251,307",
+                "Line": 309
             },
             {
                 "Col": 0,
@@ -70,7 +70,7 @@
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Overview.tex",
                 "FirstLine": 0,
-                "FoldedLines": "68,119,141,163,223,235,268,693",
+                "FoldedLines": "",
                 "Line": 14
             }
         ],

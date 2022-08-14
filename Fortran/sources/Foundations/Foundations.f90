@@ -3,7 +3,7 @@
   use Basic_operations,      only : Data_types 
   use Roots,                 only : Roots_2th  
   use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
-  use Matrix_operations,     only : Matrix_operation_examples
+  use Matrix_operations,     only : Matrix_operation_examples, ElementWise_operation_examples
   use Dynamic_allocation,    only : Matrices_allocation
   use vectors_and_matrices,  only : dot_product_examples, matmul_examples, greatest_difference
   use Fourier,               only : Fourier_example
@@ -50,7 +50,8 @@ do ! Basic programming examples
         call Summation_functional_examples()
          
      case(4)      
-       call  Matrix_operation_examples() 
+       call  Matrix_operation_examples()
+       call  ElementWise_operation_examples()
      
      case(5) 
           call Matrices_allocation()

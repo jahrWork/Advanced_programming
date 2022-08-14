@@ -94,6 +94,8 @@
 		<Filter Name="Algebra">
 		<File RelativePath=".\sources\Foundations\Algebra\Dynamic_allocation.f90"/>
 		<File RelativePath=".\sources\Foundations\Algebra\Matrix_operations.f90"/></Filter>
+		<Filter Name="Basic operations">
+		<File RelativePath=".\sources\Foundations\Basic operations\Basic_operations.f90"/></Filter>
 		<Filter Name="Calculus">
 		<Filter Name="Examples">
 		<File RelativePath=".\sources\Foundations\Calculus\Examples\Integrals_derivatives.f90"/>
@@ -104,8 +106,6 @@
 		<File RelativePath=".\sources\Foundations\Calculus\Taylor_expansions.f90"/></Filter>
 		<Filter Name="graphs">
 		<File RelativePath=".\sources\Foundations\graphs\plotting.f90"/></Filter>
-		<Filter Name="Basic operations">
-		<File RelativePath=".\sources\Foundations\Basic operations\Basic_operations.f90"/></Filter>
 		<Filter Name="Read files">
 		<File RelativePath=".\sources\Foundations\Read files\data.csv"/>
 		<File RelativePath=".\sources\Foundations\Read files\data2.csv"/>

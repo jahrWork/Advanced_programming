@@ -75,40 +75,42 @@ $$
 V = \left[ v_i =\frac{1}{i^2}, \ \ i = 1 \ldots  N \right],
 $$
 $$
-W = \left[ w_i = \frac{(-1)^{i+1}}{2i+1}, \ \ i = 1 \ldots  N \right].
+W = \left[ w_i = \frac{(-1)^{i+1}}{2i+1}, \ \ i = 1 \ldots  N \right],
 $$
 $$
-A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right].
+A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right],
 $$
 $$
 B = A^T
 $$
-
-and let's compute the following operations:
+and let's compute the following matrix operations:
 $$
 1.\;\sum_{i=1}^N v_i  \qquad \qquad 2.\;\sum_{i,j=1}^N a_{ij}   \qquad \qquad   3.\;\sum_{v_i>0} v_i   \qquad \qquad 4.\;\sum_{\scriptstyle i,j=1 \atop \scriptstyle a_{ij} > 0.1}^N a_{ij}   
 $$
 $$
-5.\; V\cdot W^T    \quad \quad      6.\; V\cdot (a_{ij})_{\scriptstyle 1\leq i\leq N \atop \scriptstyle j = N}    \quad  \quad  7.\; AV     \quad \quad   8.\;\sum_{i,j=1}^N (A^2)_{ij}   \quad \quad    9.\; B = A^T
+5.\; V\cdot W^T    \quad \quad      6.\; V\cdot [a_{ij}]_{\scriptstyle 1\leq i\leq N \atop \scriptstyle j = N}    \quad  \quad  7.\; AV     \quad \quad   8.\;\sum_{i,j=1}^N [A^2]_{ij}   \quad \quad    9.\; B = A^T
 $$
-
 $$
 10.\;\max_{1\leq i,j\leq N} \{ a_{ij} \}       \qquad \qquad     11.\;\arg\max_{1\leq i,j\leq N} \{ a_{ij} \}   
 $$
 
+Apart from matrix operations, programming languages also support element-wise operations,
+those where the result is an equal shaped array with the results of applying the operation to each/corresponding elements.
+Let's compute for example the addition of two matrices, the Hadamard product (where corresponding elements are multiplied)
+or some elemental operations that can also be applied to matrices apart from numbers: cosine or square root. 
+Notice that, where needed $i,j = 1\ldots N$ with $N=10$:
+$$
+1.\;\Tr(A + B)  \quad \quad 2.\;\Tr(A\odot B)  \quad \quad   3.\;\Tr( \left[ cos( a_{ij} )\right] )   \quad \quad 4.\;\Tr( \left[ \sqrt{a_{ij}} \right] )
+$$
+
 Since the sizes of these arrays are known at compile-time, the memory storage can be declared statically. 
 The main properties of a static allocation are:
-
 \begin{enumerate}
     \item The memory address and the size are assigned during the compilation of the code in the executable image of the program.
     \item These address and size can not be changed during execution.
     \item Once the program finishes the execution the space is freed.
     \item It is a simple and quick allocation process.
 \end{enumerate}
-
-
-
-
 
 
 
@@ -145,7 +147,7 @@ Secondly, to initialize both \texttt{V} and \texttt{W} their definition is writt
 To define the matrix \texttt{A} two implicit loops are used: 
 the nested loop \texttt{i} iterates in the rows while 
 \texttt{j} jumps from one column to the next one. 
-Both loops define a $N*N$ rank-one vector that needs to be reshaped to a ${\mathbb{R}}^{N\times N}$ matrix. 
+Both loops define a $N\cdot N$ rank-one vector that needs to be reshaped to a ${\mathbb{R}}^{N\times N}$ matrix. 
 The function \texttt{reshape} organizes the components of the vector into columns. 
 
 Finally, notice how an implicit loop with a colon symbol \texttt{:} is also used
@@ -157,31 +159,11 @@ Compare this way with the output of the line \texttt{write(*,*) B} where all the
 This is due to the fact multidimensional arrays are stored in a linear storage and Fortran,
 which is a \textit{column-major order} language, organizes the consecutive elements of a column one next to each other.
 
-
-
-
-
-
- 
-%Thirdly, take into account the difference between these operations and the element wise operations that can performed with 
-%vectors and matrices. Some operations like the addition of two matrices are performed by adding the corresponding elements of both, also, 
-%many elemental operations on numbers can also be applied to matrices, so the result is an equal shaped array 
-%with the results of applying the operation to each element. Test the following expressions for matrix addition, Hadamard product (multiplying the corresponding elements of both matrices), cosine or square root of all elements of \texttt{A}:
-%
-%\begin{verbatim} 
-%A + B
-%A*B
-%cos( A )
-%SQRT( A )
-%\end{verbatim}
-
-
-
-
-%my matmul
-
-
-
+The following code computes the proposed element-wise operations using Fortran.
+\vspace{0.5cm} 
+\lstfor 
+\listings{\home/Matrix_operations.f90}{subroutine ElementWise_operation_examples}
+{end subroutine}{Matrix_operations.f90}
 
 
 
@@ -192,14 +174,17 @@ The same function can be written almost identically with Python.
 Notice from the following code how all vectors and matrices are constructed by using similar implicit loops. 
 In addition, the same intrinsic functions are implemented so the use of mathematical notation when programming becomes natural.
 Some particularities in this examples would be the indentation or the use of implicit typing. 
-\vspace{0.5cm} 
+%\vspace{0.5cm} 
 \renewcommand{\home}{./Python/sources/Foundations/Algebra} 
 \lstpython
 \listings{\home/Matrix_operations.py}{def Matrix_operation_examples}
       {WARNING}{Matrix_operations.py} 
 
-
-
+The following code computes the proposed element-wise operations using Python.
+\vspace{-.5cm}
+\lstpython
+\listings{\home/Matrix_operations.py}{def ElementWise_operation_examples}
+{END}{Matrix_operations.py}
 
 
 
@@ -324,90 +309,90 @@ In this sense, the function \texttt{trace} belongs to the \texttt{numpy} library
 
 
 \newpage
-\section{Memories: Static, Heap, Stack}
-
-It is clear that during the execution of the program certain amount of memory is needed. Data objects or the source code 
-must be stored somewhere. The compiler, the linker and the operating system of the machine decides where each piece of data is stored. 
-Three regions of the memory can be distinguished for a program (see Figure \ref{fig:Memories}): 
-static, heap and stack, each one related to one type of allocation. Notice that the last two memories are dynamic in nature.
-
-Static and dynamic allocation have been already treated. A third way to allocate memory size for data objects is used: 
-stack (or automatic) allocation. The compiler is constantly using it 
-in order to store temporary arrays used 
-inside subroutines/functions or needed for array expressions.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/Memories.png}
-    \caption{Three memory regions used by a program.}
-    \label{fig:Memories}
-\end{figure}
-
-Let's revise some properties, advantages and problems associated to these memories:
-
-\begin{itemize}
-    \item \textbf{Static:} it is usually located in the low end of the memory reserved for the application. The compiler creates a list of variables to be allocated during compilation and gives them a fixed address 
-    so the whole program can use these variables at any time and faster. 
-    
-    This static allocation requires knowing the amount of memory needed at compile-time.
-    
-    \item \textbf{Heap:} when a data object is allocated, the application requests an amount of memory to the system, if there is space available the system answers with the 
-    starting address where storing the data. Once that memory is not needed any more, the program can ask the system to free that memory under the \texttt{deallocate} statement (in the case of Fortran) so
-    that space becomes available for the next time. Notice that the amount of space for a program is bigger than the stack, but not unlimited, here concepts like virtual memory and swap play an important role. 
-    
-    For the heap a memory leak can happen if no deallocation is performed (the memory continue being used with not useful data) and it is normally slower than static allocation. 
-    However, the programmer manages this space and the program decides how much memory to use for each purpose. 
-    
-    \item \textbf{Stack:} it is composed by a limited amount of memory and a pointer that holds the current position where routines can store local variables. This space is filled from the top to the bottom of the memory so any time that a subroutine or function (let's say \texttt{function A}) needs from temporary storage this space is used, the pointer is decremented and the stack space is reduced. If this function calls a nested \texttt{function B}, then its local variables are stored below variables of \texttt{A} and the pointer is decremented once again. Once the \texttt{routine B} finishes its operations, the pointer is incremented again below the spaced filled by \texttt{routine A} so that memory is available for the next routine. This structure is called LIFO; 'Last-In,-First-Out'.  
-    
-    The process is efficient and fast and the space is automatically freed when the routine returns to its host. This allocation is performed by the machine but the programmer usually has the option to declare some variables as \texttt{AUTOMATIC} in subprograms so they reside in the stack area. On the contrary, the amount of space is limited by the linker in the case of Windows and the programmer must be careful with allocating more space than it is available in order to avoid stack overflow. 
-        
-\end{itemize}
-
-
-Stack overflow, when the memory allocated on the stack overflows into other memory regions, usually happens with two situations; extremely deep (or infinite) recursion and large array variables. 
-
-%Primer ejemplo de stack overflow
-
-
-The second example dynamically allocates a $400\times 400\times 400$ of 4-bytes reals array in the heap (\texttt{R})  but then the function \texttt{StackOverflow\_size( n )} tries to locate a similar automatic array (\texttt{S}) in the stack leading to a Stack Overflow error. 
-
-\begin{verbatim}
-real, allocatable :: R(:,:,:)
-integer :: n
-
-n = 400
-allocate( R(n, n, n) )
-
-R = StackOverflow_size( n ) 
-\end{verbatim}
-
-with the function:
-
-\begin{verbatim}
-function StackOverflow_size( n ) result(R)
-integer, intent(in) :: n
-real :: R(n, n, n)    
-
-    R(:, :, :) = 1.
-
-end function
-\end{verbatim}
-
-Some strategies can be used to avoid this error:
-
-\begin{enumerate}
-    \item Try to reduce the abuse of stack; allocate automatic arrays that usually goes to stack so they are located in heap. Then, they are automatically deallocated at the end of the routine. 
-    
-    \item The size of the Stack memory can be increased through a linker option. In Visual Studio for example it can be written: \texttt{/STACK:100000000} specifying the size in bytes desired.
-    
-    \item A compiler option can be used to change the default storing place for automatic arrays and temporary arrays so they are automatically located in the heap: \texttt{/heap-arrays}. If a kilobytes size is specified, only larger arrays are allocated to heap (i.e. \texttt{/heap-arrays100} to only affect arrays larger than 100 kilobytes). Use the value \texttt{0} to apply the behaviour to all arrays.  
-    
-\end{enumerate}
-
-
-Now try to execute the second example with the option \texttt{/heap-arrays0} specified in the compilation options. For the case of Visual Studio it can be done in the project properties by clicking on Configuration Properties/Fortran/Command Line and adding that line.
+%\section{Memories: Static, Heap, Stack}
+%
+%It is clear that during the execution of the program certain amount of memory is needed. Data objects or the source code 
+%must be stored somewhere. The compiler, the linker and the operating system of the machine decides where each piece of data is stored. 
+%Three regions of the memory can be distinguished for a program (see Figure \ref{fig:Memories}): 
+%static, heap and stack, each one related to one type of allocation. Notice that the last two memories are dynamic in nature.
+%
+%Static and dynamic allocation have been already treated. A third way to allocate memory size for data objects is used: 
+%stack (or automatic) allocation. The compiler is constantly using it 
+%in order to store temporary arrays used 
+%inside subroutines/functions or needed for array expressions.
+%
+%
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width= \textwidth]{./doc/Figures/Memories.png}
+%    \caption{Three memory regions used by a program.}
+%    \label{fig:Memories}
+%\end{figure}
+%
+%Let's revise some properties, advantages and problems associated to these memories:
+%
+%\begin{itemize}
+%    \item \textbf{Static:} it is usually located in the low end of the memory reserved for the application. The compiler creates a list of variables to be allocated during compilation and gives them a fixed address 
+%    so the whole program can use these variables at any time and faster. 
+%    
+%    This static allocation requires knowing the amount of memory needed at compile-time.
+%    
+%    \item \textbf{Heap:} when a data object is allocated, the application requests an amount of memory to the system, if there is space available the system answers with the 
+%    starting address where storing the data. Once that memory is not needed any more, the program can ask the system to free that memory under the \texttt{deallocate} statement (in the case of Fortran) so
+%    that space becomes available for the next time. Notice that the amount of space for a program is bigger than the stack, but not unlimited, here concepts like virtual memory and swap play an important role. 
+%    
+%    For the heap a memory leak can happen if no deallocation is performed (the memory continue being used with not useful data) and it is normally slower than static allocation. 
+%    However, the programmer manages this space and the program decides how much memory to use for each purpose. 
+%    
+%    \item \textbf{Stack:} it is composed by a limited amount of memory and a pointer that holds the current position where routines can store local variables. This space is filled from the top to the bottom of the memory so any time that a subroutine or function (let's say \texttt{function A}) needs from temporary storage this space is used, the pointer is decremented and the stack space is reduced. If this function calls a nested \texttt{function B}, then its local variables are stored below variables of \texttt{A} and the pointer is decremented once again. Once the \texttt{routine B} finishes its operations, the pointer is incremented again below the spaced filled by \texttt{routine A} so that memory is available for the next routine. This structure is called LIFO; 'Last-In,-First-Out'.  
+%    
+%    The process is efficient and fast and the space is automatically freed when the routine returns to its host. This allocation is performed by the machine but the programmer usually has the option to declare some variables as \texttt{AUTOMATIC} in subprograms so they reside in the stack area. On the contrary, the amount of space is limited by the linker in the case of Windows and the programmer must be careful with allocating more space than it is available in order to avoid stack overflow. 
+%        
+%\end{itemize}
+%
+%
+%Stack overflow, when the memory allocated on the stack overflows into other memory regions, usually happens with two situations; extremely deep (or infinite) recursion and large array variables. 
+%
+%%Primer ejemplo de stack overflow
+%
+%
+%The second example dynamically allocates a $400\times 400\times 400$ of 4-bytes reals array in the heap (\texttt{R})  but then the function \texttt{StackOverflow\_size( n )} tries to locate a similar automatic array (\texttt{S}) in the stack leading to a Stack Overflow error. 
+%
+%\begin{verbatim}
+%real, allocatable :: R(:,:,:)
+%integer :: n
+%
+%n = 400
+%allocate( R(n, n, n) )
+%
+%R = StackOverflow_size( n ) 
+%\end{verbatim}
+%
+%with the function:
+%
+%\begin{verbatim}
+%function StackOverflow_size( n ) result(R)
+%integer, intent(in) :: n
+%real :: R(n, n, n)    
+%
+%    R(:, :, :) = 1.
+%
+%end function
+%\end{verbatim}
+%
+%Some strategies can be used to avoid this error:
+%
+%\begin{enumerate}
+%    \item Try to reduce the abuse of stack; allocate automatic arrays that usually goes to stack so they are located in heap. Then, they are automatically deallocated at the end of the routine. 
+%    
+%    \item The size of the Stack memory can be increased through a linker option. In Visual Studio for example it can be written: \texttt{/STACK:100000000} specifying the size in bytes desired.
+%    
+%    \item A compiler option can be used to change the default storing place for automatic arrays and temporary arrays so they are automatically located in the heap: \texttt{/heap-arrays}. If a kilobytes size is specified, only larger arrays are allocated to heap (i.e. \texttt{/heap-arrays100} to only affect arrays larger than 100 kilobytes). Use the value \texttt{0} to apply the behaviour to all arrays.  
+%    
+%\end{enumerate}
+%
+%
+%Now try to execute the second example with the option \texttt{/heap-arrays0} specified in the compilation options. For the case of Visual Studio it can be done in the project properties by clicking on Configuration Properties/Fortran/Command Line and adding that line.
 
 
 %-------------------------------------------------------------------------------------------------------------

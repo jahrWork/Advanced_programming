@@ -309,91 +309,94 @@ In this sense, the function \texttt{trace} belongs to the \texttt{numpy} library
 
 
 \newpage
-%\section{Memories: Static, Heap, Stack}
-%
-%It is clear that during the execution of the program certain amount of memory is needed. Data objects or the source code 
-%must be stored somewhere. The compiler, the linker and the operating system of the machine decides where each piece of data is stored. 
-%Three regions of the memory can be distinguished for a program (see Figure \ref{fig:Memories}): 
-%static, heap and stack, each one related to one type of allocation. Notice that the last two memories are dynamic in nature.
-%
-%Static and dynamic allocation have been already treated. A third way to allocate memory size for data objects is used: 
-%stack (or automatic) allocation. The compiler is constantly using it 
-%in order to store temporary arrays used 
-%inside subroutines/functions or needed for array expressions.
-%
-%
-%\begin{figure}[h]
-%    \centering
-%    \includegraphics[width= \textwidth]{./doc/Figures/Memories.png}
-%    \caption{Three memory regions used by a program.}
-%    \label{fig:Memories}
-%\end{figure}
-%
-%Let's revise some properties, advantages and problems associated to these memories:
-%
-%\begin{itemize}
-%    \item \textbf{Static:} it is usually located in the low end of the memory reserved for the application. The compiler creates a list of variables to be allocated during compilation and gives them a fixed address 
-%    so the whole program can use these variables at any time and faster. 
-%    
-%    This static allocation requires knowing the amount of memory needed at compile-time.
-%    
-%    \item \textbf{Heap:} when a data object is allocated, the application requests an amount of memory to the system, if there is space available the system answers with the 
-%    starting address where storing the data. Once that memory is not needed any more, the program can ask the system to free that memory under the \texttt{deallocate} statement (in the case of Fortran) so
-%    that space becomes available for the next time. Notice that the amount of space for a program is bigger than the stack, but not unlimited, here concepts like virtual memory and swap play an important role. 
-%    
-%    For the heap a memory leak can happen if no deallocation is performed (the memory continue being used with not useful data) and it is normally slower than static allocation. 
-%    However, the programmer manages this space and the program decides how much memory to use for each purpose. 
-%    
-%    \item \textbf{Stack:} it is composed by a limited amount of memory and a pointer that holds the current position where routines can store local variables. This space is filled from the top to the bottom of the memory so any time that a subroutine or function (let's say \texttt{function A}) needs from temporary storage this space is used, the pointer is decremented and the stack space is reduced. If this function calls a nested \texttt{function B}, then its local variables are stored below variables of \texttt{A} and the pointer is decremented once again. Once the \texttt{routine B} finishes its operations, the pointer is incremented again below the spaced filled by \texttt{routine A} so that memory is available for the next routine. This structure is called LIFO; 'Last-In,-First-Out'.  
-%    
-%    The process is efficient and fast and the space is automatically freed when the routine returns to its host. This allocation is performed by the machine but the programmer usually has the option to declare some variables as \texttt{AUTOMATIC} in subprograms so they reside in the stack area. On the contrary, the amount of space is limited by the linker in the case of Windows and the programmer must be careful with allocating more space than it is available in order to avoid stack overflow. 
-%        
-%\end{itemize}
-%
-%
-%Stack overflow, when the memory allocated on the stack overflows into other memory regions, usually happens with two situations; extremely deep (or infinite) recursion and large array variables. 
-%
-%%Primer ejemplo de stack overflow
-%
-%
-%The second example dynamically allocates a $400\times 400\times 400$ of 4-bytes reals array in the heap (\texttt{R})  but then the function \texttt{StackOverflow\_size( n )} tries to locate a similar automatic array (\texttt{S}) in the stack leading to a Stack Overflow error. 
-%
-%\begin{verbatim}
-%real, allocatable :: R(:,:,:)
-%integer :: n
-%
-%n = 400
-%allocate( R(n, n, n) )
-%
-%R = StackOverflow_size( n ) 
-%\end{verbatim}
-%
-%with the function:
-%
-%\begin{verbatim}
-%function StackOverflow_size( n ) result(R)
-%integer, intent(in) :: n
-%real :: R(n, n, n)    
-%
-%    R(:, :, :) = 1.
-%
-%end function
-%\end{verbatim}
-%
-%Some strategies can be used to avoid this error:
-%
-%\begin{enumerate}
-%    \item Try to reduce the abuse of stack; allocate automatic arrays that usually goes to stack so they are located in heap. Then, they are automatically deallocated at the end of the routine. 
-%    
-%    \item The size of the Stack memory can be increased through a linker option. In Visual Studio for example it can be written: \texttt{/STACK:100000000} specifying the size in bytes desired.
-%    
-%    \item A compiler option can be used to change the default storing place for automatic arrays and temporary arrays so they are automatically located in the heap: \texttt{/heap-arrays}. If a kilobytes size is specified, only larger arrays are allocated to heap (i.e. \texttt{/heap-arrays100} to only affect arrays larger than 100 kilobytes). Use the value \texttt{0} to apply the behaviour to all arrays.  
-%    
-%\end{enumerate}
-%
-%
-%Now try to execute the second example with the option \texttt{/heap-arrays0} specified in the compilation options. For the case of Visual Studio it can be done in the project properties by clicking on Configuration Properties/Fortran/Command Line and adding that line.
+\section{Memories: Static, Heap, Stack}
+During the execution of a program, certain amount of memory is needed to store data objects and the source code. 
+The compiler, the linker and the operating system of the machine decides where each piece of data is stored. 
+Three regions of memory are distinguished: static, heap and stack (see Figure \ref{fig:Memories}). 
+Each one is related to one type of allocation, static kind of allocation for the static region and dynamic in nature for the other two.
 
+Static and dynamic allocations have been already treated. 
+The third type of allocation is the stack (or automatic) allocation. 
+The compiler is constantly using it, 
+for example to store temporary arrays inside subroutines/functions 
+or to store temporary arrays from array expressions.
+
+Let's review some properties associated to each memory region:
+\begin{itemize}[noitemsep]
+    \item \textbf{Static:} it is usually located in the low end of the memory reserved for the application. 
+    The compiler creates a list of variables to be allocated during the compilation and gives them a fixed address.
+    
+    The whole program can access these variables at any time in a quick way
+    but it requires knowing the amount of memory needed at compile-time.
+    
+    \item \textbf{Heap:} the program requests a specific amount of memory (depending on the purpose) to the system in run-time.
+    If there is available space, the system responds with the starting address where storing the data. 
+    When that space is no longer needed, the program can ask the system to free up the memory so it is available for the next time.
+    
+    Usually, the amount of heap space is bigger than the stack (although slower), but not unlimited. 
+    Hence, if no deallocation is performed, a memory leak can happen in the sense that the memory is still reserved with no useful data.
+    Concepts like virtual memory and swap play an important role. 
+    Notice that the program decides the amount of memory needed and the programmer has control over this memory in several occasions, 
+    
+    \item \textbf{Stack:} it is composed by a limited amount of memory and a pointer that marks how full it is. 
+    With this pointer, the routines know where to store local variables. 
+    This memory space is filled from the top to the bottom so any time that a subroutine or function (let's say \texttt{function A}) needs from temporary storage this space is used, the pointer is decremented and the stack space is reduced. If this function calls a nested \texttt{function B}, then its local variables are stored below variables of \texttt{A} and the pointer is decremented once again. Once the \texttt{routine B} finishes its operations, the pointer is incremented again below the spaced filled by \texttt{routine A} so that memory is available for the next routine. This structure is called LIFO; 'Last-In,-First-Out'.  
+    
+    The process is efficient and fast and the space is automatically freed when the routine returns to its host. This allocation is performed by the machine but the programmer usually has the option to declare some variables as \texttt{AUTOMATIC} in subprograms so they reside in the stack area. On the contrary, the amount of space is limited by the linker in the case of Windows and the programmer must be careful with allocating more space than it is available in order to avoid stack overflow.   
+\end{itemize}
+
+
+Stack overflow, when the memory allocated on the stack overflows into other memory regions, usually happens with two situations; extremely deep (or infinite) recursion and large array variables. 
+
+%Primer ejemplo de stack overflow
+
+
+The second example dynamically allocates a $400\times 400\times 400$ of 4-bytes reals array in the heap (\texttt{R})  but then the function \texttt{StackOverflow\_size( n )} tries to locate a similar automatic array (\texttt{S}) in the stack leading to a Stack Overflow error. 
+
+\begin{verbatim}
+real, allocatable :: R(:,:,:)
+integer :: n
+
+n = 400
+allocate( R(n, n, n) )
+
+R = StackOverflow_size( n ) 
+\end{verbatim}
+
+with the function:
+
+\begin{verbatim}
+function StackOverflow_size( n ) result(R)
+integer, intent(in) :: n
+real :: R(n, n, n)    
+
+    R(:, :, :) = 1.
+
+end function
+\end{verbatim}
+
+Some strategies can be used to avoid this error:
+
+\begin{enumerate}
+    \item Try to reduce the abuse of stack; allocate automatic arrays that usually goes to stack so they are located in heap. Then, they are automatically deallocated at the end of the routine. 
+    
+    \item The size of the Stack memory can be increased through a linker option. In Visual Studio for example it can be written: \texttt{/STACK:100000000} specifying the size in bytes desired.
+    
+    \item A compiler option can be used to change the default storing place for automatic arrays and temporary arrays so they are automatically located in the heap: \texttt{/heap-arrays}. If a kilobytes size is specified, only larger arrays are allocated to heap (i.e. \texttt{/heap-arrays100} to only affect arrays larger than 100 kilobytes). Use the value \texttt{0} to apply the behaviour to all arrays.  
+    
+\end{enumerate}
+
+
+Now try to execute the second example with the option \texttt{/heap-arrays0} specified in the compilation options. For the case of Visual Studio it can be done in the project properties by clicking on Configuration Properties/Fortran/Command Line and adding that line.
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width= \textwidth]{./doc/Figures/Memories.png}
+    \caption{Three memory regions used by a program and the advantages and disadvantages associated to their allocation.}
+    \label{fig:Memories}
+\end{figure}
 
 %-------------------------------------------------------------------------------------------------------------
 %MAYBE INTERESTING IN FUTURE:
@@ -422,5 +425,6 @@ In this sense, the function \texttt{trace} belongs to the \texttt{numpy} library
 %  Fortran for example uses this memory to create space for local arrays (those based on arguments of routines) or for temporary copies in array expressions. 
 %     the stack is managed by the CPU, there is no ability to modify it
 % variables are allocated and freed automatically
-%  
+
+%  under the \texttt{deallocate} statement (in the case of Fortran)
   

@@ -5,6 +5,7 @@
   use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
   use Matrix_operations,     only : Matrix_operation_examples, ElementWise_operation_examples
   use Dynamic_allocation,    only : Matrices_allocation
+  use Stack_Overflow,        only : StackOverflow_LargeArrays, fact
   use vectors_and_matrices,  only : dot_product_examples, matmul_examples, greatest_difference
   use Fourier,               only : Fourier_example
   use Integrals_derivatives, only : Integral_and_derivative_examples
@@ -57,8 +58,10 @@ do ! Basic programming examples
           call Matrices_allocation()
           call dot_product_examples()
           call matmul_examples()
-          call greatest_difference() 
-         
+          call greatest_difference()    
+          write(*,*) "3! = ", fact(3)
+          call StackOverflow_LargeArrays()
+          
      case(6) 
            call Integral_and_derivative_examples()
          

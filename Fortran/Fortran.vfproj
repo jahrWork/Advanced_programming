@@ -93,7 +93,8 @@
 		<Filter Name="Foundations">
 		<Filter Name="Algebra">
 		<File RelativePath=".\sources\Foundations\Algebra\Dynamic_allocation.f90"/>
-		<File RelativePath=".\sources\Foundations\Algebra\Matrix_operations.f90"/></Filter>
+		<File RelativePath=".\sources\Foundations\Algebra\Matrix_operations.f90"/>
+		<File RelativePath=".\sources\Foundations\Algebra\Stack_Overflow.f90"/></Filter>
 		<Filter Name="Basic operations">
 		<File RelativePath=".\sources\Foundations\Basic operations\Basic_operations.f90"/></Filter>
 		<Filter Name="Calculus">

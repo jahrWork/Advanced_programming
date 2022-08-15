@@ -310,84 +310,95 @@ In this sense, the function \texttt{trace} belongs to the \texttt{numpy} library
 
 \newpage
 \section{Memories: Static, Heap, Stack}
-During the execution of a program, certain amount of memory is needed to store data objects and the source code. 
+During the execution of a program certain amount of memory is needed to store data objects and the source code. 
 The compiler, the linker and the operating system of the machine decides where each piece of data is stored. 
 Three regions of memory are distinguished: static, heap and stack (see Figure \ref{fig:Memories}). 
 Each one is related to one type of allocation, static kind of allocation for the static region and dynamic in nature for the other two.
 
-Static and dynamic allocations have been already treated. 
+Static and dynamic allocations have been already used in this chapter. 
 The third type of allocation is the stack (or automatic) allocation. 
 The compiler is constantly using it, 
 for example to store temporary arrays inside subroutines/functions 
 or to store temporary arrays from array expressions.
 
-Let's review some properties associated to each memory region:
-\begin{itemize}[noitemsep]
+Let's first review how each memory region works:
+\begin{itemize}
     \item \textbf{Static:} it is usually located in the low end of the memory reserved for the application. 
-    The compiler creates a list of variables to be allocated during the compilation and gives them a fixed address.
-    
-    The whole program can access these variables at any time in a quick way
-    but it requires knowing the amount of memory needed at compile-time.
-    
-    \item \textbf{Heap:} the program requests a specific amount of memory (depending on the purpose) to the system in run-time.
+    The compiler creates a list of objects to be allocated during the compilation and gives them a fixed address.
+       
+    \item \textbf{Heap:} the program requests a specific amount of memory to the system during run-time.
     If there is available space, the system responds with the starting address where storing the data. 
     When that space is no longer needed, the program can ask the system to free up the memory so it is available for the next time.
-    
-    Usually, the amount of heap space is bigger than the stack (although slower), but not unlimited. 
-    Hence, if no deallocation is performed, a memory leak can happen in the sense that the memory is still reserved with no useful data.
-    Concepts like virtual memory and swap play an important role. 
-    Notice that the program decides the amount of memory needed and the programmer has control over this memory in several occasions, 
-    
+    For some purposes the programmer can manage the allocation and deallocation of space, for the rest, the compiler automatically manages it. 
+   
     \item \textbf{Stack:} it is composed by a limited amount of memory and a pointer that marks how full it is. 
-    With this pointer, the routines know where to store local variables. 
-    This memory space is filled from the top to the bottom so any time that a subroutine or function (let's say \texttt{function A}) needs from temporary storage this space is used, the pointer is decremented and the stack space is reduced. If this function calls a nested \texttt{function B}, then its local variables are stored below variables of \texttt{A} and the pointer is decremented once again. Once the \texttt{routine B} finishes its operations, the pointer is incremented again below the spaced filled by \texttt{routine A} so that memory is available for the next routine. This structure is called LIFO; 'Last-In,-First-Out'.  
-    
-    The process is efficient and fast and the space is automatically freed when the routine returns to its host. This allocation is performed by the machine but the programmer usually has the option to declare some variables as \texttt{AUTOMATIC} in subprograms so they reside in the stack area. On the contrary, the amount of space is limited by the linker in the case of Windows and the programmer must be careful with allocating more space than it is available in order to avoid stack overflow.   
+    With this pointer, the routines know where to store local variables at a specific moment. 
+    This memory space is filled from the top to the bottom: 
+    if a function needs temporary storage, let's say \texttt{functionA}, then it fills in the Stack starting in the pointer.
+    Hence, the pointer is decremented and the stack space is reduced. 
+    If \texttt{functionA} calls a nested \texttt{functionB} then the new local variables are stored below the variables of \texttt{functionA} and the pointer is decremented again. 
+    Once \texttt{functionB} finishes its execution, the pointer is incremented and the memory is freed so that space is available for the next routine. 
+    This structure is called ``Last-In, First-Out'' (LIFO).  
 \end{itemize}
 
+Notice that the whole program can access the objects stored in the \textbf{static} at any time in a quick way.
+However, it requires knowing the amount of memory needed at compile-time.
+Comparing \textbf{heap} and \textbf{stack}, the amount of heap space is usually bigger than the stack, but it is not unlimited. 
+Hence, if no heap deallocation is performed, a memory leak can happen (space still reserved with no useful data).
+Concepts like virtual memory and swap play an important role then. 
+The use of stack is an efficient and fast process (usually faster than the heap).
+In addition, this space is automatically freed when a routine ends its execution. 
+Although this allocation is performed by the machine,
+the programmer usually has some control over it. 
+For example in Fortran, some variables can be declared as \texttt{AUTOMATIC} inside subprograms so they are necessarily saved in the stack. 
+However, in Windows, the linker limits the amount of stack and the programmer must be careful about allocating more space than is available in order to avoid stack overflow.   
 
-Stack overflow, when the memory allocated on the stack overflows into other memory regions, usually happens with two situations; extremely deep (or infinite) recursion and large array variables. 
+In the following examples the problem of Stack overflow is simulated.
+It usually happens in two situations; large array variables and extremely deep (or infinite) recursion. 
 
+
+    %\newpage 
+    \subsection*{Fortran code}
+
+%Primer ejemplo de stack overflow
+In the following example let's allocate a $400\times400\times400$ 4-bytes reals array first in the heap (\texttt{R}) and 
+then in the Stack through an automatic array (\texttt{S}) using the function \texttt{StackOverflow\_size( n )}. 
+Notice that there is not errors in compile-time since there is enough space in the heap, 
+however, during the execution a \texttt{Program Exception - stack overflow} appears.
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+\listings{\home/Stack_Overflow.f90}{subroutine StackOverflow_LargeArrays}
+{end subroutine}{Stack_Overflow.f90}
+
+\listings{\home/Stack_Overflow.f90}{function StackOverflow_size}
+{end function}{Stack_Overflow.f90}
+
+\newpage
+Some strategies can be used to avoid this error:
+\begin{enumerate}
+    \item Try to reduce the abuse of stack: allocate automatic arrays that usually goes to stack so they are located in heap and automatically deallocated at the end of the routine. 
+    \item Increase the size of the stack: in Visual Studio for example a linker option can be specified, \texttt{/STACK:100000000} where the number indicates the size in bytes.
+    \item Change the default location for automatic arrays and temporary arrays: they can be automatically located in the heap by using the compiler option \texttt{/heap-arrays}. 
+    By specifying a kilobytes size, i.e \texttt{/heap-arrays100}, only larger arrays are allocated in the heap. 
+    Use the compiler option \texttt{/heap-arrays0} to apply the behaviour to all arrays.   
+\end{enumerate}
+As an exercise try to execute this example changing the default location for automatic arrays and temporary arrays. 
+In Visual Studio it can be done in the project properties by clicking on \textit{Configuration Properties/Fortran/Command Line} and adding \texttt{/heap-arrays0}.
+
+
+%Segundo ejemplo de stack overflow
+
+
+
+    \subsection*{Python code}
+    
+    
 %Primer ejemplo de stack overflow
 
 
-The second example dynamically allocates a $400\times 400\times 400$ of 4-bytes reals array in the heap (\texttt{R})  but then the function \texttt{StackOverflow\_size( n )} tries to locate a similar automatic array (\texttt{S}) in the stack leading to a Stack Overflow error. 
+%Segundo ejemplo de stack overflow
 
-\begin{verbatim}
-real, allocatable :: R(:,:,:)
-integer :: n
-
-n = 400
-allocate( R(n, n, n) )
-
-R = StackOverflow_size( n ) 
-\end{verbatim}
-
-with the function:
-
-\begin{verbatim}
-function StackOverflow_size( n ) result(R)
-integer, intent(in) :: n
-real :: R(n, n, n)    
-
-    R(:, :, :) = 1.
-
-end function
-\end{verbatim}
-
-Some strategies can be used to avoid this error:
-
-\begin{enumerate}
-    \item Try to reduce the abuse of stack; allocate automatic arrays that usually goes to stack so they are located in heap. Then, they are automatically deallocated at the end of the routine. 
-    
-    \item The size of the Stack memory can be increased through a linker option. In Visual Studio for example it can be written: \texttt{/STACK:100000000} specifying the size in bytes desired.
-    
-    \item A compiler option can be used to change the default storing place for automatic arrays and temporary arrays so they are automatically located in the heap: \texttt{/heap-arrays}. If a kilobytes size is specified, only larger arrays are allocated to heap (i.e. \texttt{/heap-arrays100} to only affect arrays larger than 100 kilobytes). Use the value \texttt{0} to apply the behaviour to all arrays.  
-    
-\end{enumerate}
-
-
-Now try to execute the second example with the option \texttt{/heap-arrays0} specified in the compilation options. For the case of Visual Studio it can be done in the project properties by clicking on Configuration Properties/Fortran/Command Line and adding that line.
 
 
 
@@ -398,14 +409,17 @@ Now try to execute the second example with the option \texttt{/heap-arrays0} spe
     \label{fig:Memories}
 \end{figure}
 
+
+
+
+
+
 %-------------------------------------------------------------------------------------------------------------
 %MAYBE INTERESTING IN FUTURE:
 
 %When using AUTOMATIC, SAVE, STATIC, etc.
 %\item How to manage it in your program and recommendations.
 %\item How to reserve more space in each of them.
-
-
 
 
 %-------------------------------------------------------------------------------------------------------------

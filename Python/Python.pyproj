@@ -10,11 +10,12 @@
     <OutputPath>.</OutputPath>
     <Name>Python_project</Name>
     <RootNamespace>Python_project</RootNamespace>
-    <InterpreterId>Global|VisualStudio|Python39</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,6 +66,7 @@
     </Compile>
     <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />
     <Compile Include="sources\Foundations\Algebra\Matrix_operations.py" />
+    <Compile Include="sources\Foundations\Algebra\Stack_Overflow.py" />
     <Compile Include="sources\Foundations\Algebra\vectors_and_matrices.py">
       <SubType>Code</SubType>
     </Compile>
@@ -159,6 +161,7 @@
     <Content Include="sources\Foundations\Read_files\data2.csv" />
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.9" />
     <InterpreterReference Include="Global|VisualStudio|Python39" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

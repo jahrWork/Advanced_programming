@@ -357,7 +357,7 @@ In the following examples the problem of Stack overflow is simulated.
 It usually happens in two situations; large array variables and extremely deep (or infinite) recursion. 
 
 
-    %\newpage 
+ 
     \subsection*{Fortran code}
 
 %Primer ejemplo de stack overflow
@@ -386,14 +386,35 @@ Some strategies can be used to avoid this error:
 As an exercise try to execute this example changing the default location for automatic arrays and temporary arrays. 
 In Visual Studio it can be done in the project properties by clicking on \textit{Configuration Properties/Fortran/Command Line} and adding \texttt{/heap-arrays0}.
 
-
 %Segundo ejemplo de stack overflow
+In the following example the end condition of a recursive procedure is incorrectly defined.
+The code shows the same function \texttt{power} used in the Dynamic allocation examples, 
+but now the end condition (\texttt{if (k >= 10) then}) is incorrectly implemented (\texttt{wrong\_power}). 
+Notice that computing a power smaller than \texttt{k = 10} will result in an endless recursion.
+This could also happen if, by mistake, the recursion is defined with increasing powers instead of decreasing 
+even when the end condition is properly defined. 
 
+Sometimes Fortran could stop working before breaking by a Stack Overflow error.
+In this case, since the recursion is performed with a big \texttt{matrix} in each call ($100\times 100$),
+the Stack Overflow error breaks the execution. 
+Notice that both examples are commented in the project so as not to break the flow.
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+\listings{\home/Stack_Overflow.f90}{StackOverflow_InfiniteRecursion}
+{end subroutine}{Stack_Overflow.f90}
 
+\newpage
+\listings{\home/Stack_Overflow.f90}{recursive function wrong_power}
+{end function}{Stack_Overflow.f90}
 
     \subsection*{Python code}
-    
-    
+%The same issues appear with Python.
+%the use of implicit loops to construct arrays, 
+%the use of similar intrinsic functions or 
+%the need to define those functions not built-in in the language.
+%In this sense, the function \texttt{trace} belongs to the \texttt{numpy} library so there is no need to code it.
+%  
 %Primer ejemplo de stack overflow
 
 

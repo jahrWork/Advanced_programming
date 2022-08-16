@@ -43,9 +43,11 @@ def menu_Foundations():
          
      elif option == 4:      
         Matrix_operation_examples() 
+        ElementWise_operation_examples()
      
      elif option == 5: 
         Matrices_allocation() 
+        StackOverflow_LargeArrays()
                  
      elif option == 6: 
         Integral_and_derivative_examples()

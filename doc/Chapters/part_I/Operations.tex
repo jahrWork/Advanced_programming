@@ -3,12 +3,54 @@
 
     \section{Introduction} 
 
-Como la arquitectura de von neumann motiva que usemos variables con un data type en las que guardamos el valor con el que vamos a trabajar
-%Decir que esta comparación la mostró john backus
+In this first chapter some of the ingredients that conform a programming language are presented. 
+Que es un lenguaje de programacion, elementos básicos de la programación
+Que es un programa
+Que es un algoritmo
 
 
 
-\section{Data types} 
+
+
+The theory of computation gives the basis for the automatic processing of information where there is a 
+problem to solve (a function between a bunch of inputs and their associated outputs) 
+and a machine (analog, digital, quantum, etc.) to solve it. 
+
+
+
+According to John Backus in his article ``Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs'' 
+this bus that connects CPU and memory acts as a bottleneck. 
+He says this is because in each instruction cycle the bus transmit a single word (let's say 64 bits) between memory and CPU.
+The purpose of any program is to modify the content of the memory so at the end of the execution the output of our function (or problem to solve) is stored.
+But this process is performed by pumping single words at a time through this bus.
+In addition, from all the information sent back and forth, a large part is not useful for the solution of our problem: names of data, other data needed to compute those names, memory addresses, etc. 
+
+Notice that this architecture not only describes how the hardware is organized but also how data and programs work.
+Backus states that the von Neumann computer is the intellectual parent of conventional programming languages. 
+Inevitably, this architecture has influenced how they are built to the point that 
+they are high level software versions of the von Neumann machine. 
+%The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+
+%Aqui contar como influencia el lenguaje en profundidad...
+Notice that the \textit{variables} in a programming language imitate the \textit{memory cells} of the von Neumann architecture.
+The \textit{control statements} emulate the \textit{jump and test instructions} and
+the \textit{assignment statement} imitate the \textit{fetching, performing arithmetic and storing process}. 
+
+The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
+with the flow of assignments of single variables (imitating single words). 
+By executing assignments many times, maybe altering subscripts (imitating memory addresses), 
+the program ends up with the result stored in a variable (imitating the storage in memory). 
+Furthermore, this assignment statement splits the programming languages into two worlds: 
+a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
+%In this paper, he proposes an alternative to this reality based on the functional programming style. 
+
+
+
+
+
+
+
+    \section{Data types} 
 
 
 
@@ -198,7 +240,7 @@ In addition, indentation rules must be strictly followed.
 
 
  
-\section{Data structures} 
+    \section{Data structures} 
  
 The following concepts regarding arrays constructions and operations are covered:
 \begin{enumerate} 
@@ -276,16 +318,16 @@ Some basic notions are summarized now:
 
 
 \newpage
-\section{Maths operators}
+    \section{Maths operators}
 Arithmetic operator 
 Comparison operator 
 Logical operator 
 Membership operator 
 
-\section{Assignment operators}
+    \section{Assignment operators}
 
 
-\section{Flow structures}
+    \section{Flow structures}
 
 if 
 where 
@@ -299,7 +341,7 @@ for v in D.values()   dictionary iterates in values
 
 
 \newpage 
-\section{Roots of a second degree equation} 
+    \section{Roots of a second degree equation} 
 In this section, a program to obtain the roots of a second order equation is presented:  
 $$
 a x^2 + b x + c = 0, \qquad \forall \ a, b, c \in \mathbb{R}.

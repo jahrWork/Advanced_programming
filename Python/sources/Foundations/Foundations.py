@@ -4,6 +4,7 @@ from data_type import data_type
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
 from Matrix_operations import Matrix_operation_examples
+from Stack_Overflow import StackOverflow_LargeArrays, StackOverflow_InfiniteRecursion
 from Dynamic_allocation import Matrices_allocation
 from Integrals_derivatives import Integral_and_derivative_examples
 from Series_expansion import Taylor_expansion_examples
@@ -47,7 +48,8 @@ def menu_Foundations():
      
      elif option == 5: 
         Matrices_allocation() 
-        StackOverflow_LargeArrays()
+        #StackOverflow_LargeArrays()
+        StackOverflow_InfiniteRecursion()
                  
      elif option == 6: 
         Integral_and_derivative_examples()

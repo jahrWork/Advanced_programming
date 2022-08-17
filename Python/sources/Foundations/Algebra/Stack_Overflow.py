@@ -1,4 +1,4 @@
-from numpy import identity, random, array
+from numpy import identity, random, array, zeros, shape, matmul
 
     
 #***********************************************************
@@ -6,7 +6,7 @@ from numpy import identity, random, array
 #************************************************************  
 def StackOverflow_LargeArrays():  
 
-    n = 400
+    n = 4000
 
     R = StackOverflow_size( n )
   
@@ -26,7 +26,7 @@ def StackOverflow_size( n ):
 def StackOverflow_InfiniteRecursion():  
 
     k = 3
-    wrong_power(random.rand(100,100), k)
+    wrong_power( random.rand(100,100), k )
     
 
 def wrong_power(A, k):    

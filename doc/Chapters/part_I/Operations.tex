@@ -3,35 +3,29 @@
 
     \section{Introduction} 
 
-In this first chapter some of the ingredients that conform a programming language are presented. 
-Que es un lenguaje de programacion, elementos básicos de la programación
-Que es un programa
-Que es un algoritmo
+This chapter introduces some of the most basic ingredients that support the programming.
+Data types, data structures, maths operators or flow structures are some of the most basic concepts needed to code in any programming language. 
+But first let's put them in context. 
+
+An algorithm in mathematics is a finite sequence of unambiguous instructions to solve a specific problem. 
+Notice that this definition involves that the algorithm ends in a finite number of steps, 
+the sequence of instructions that yields the output are numbered and followed in their numerical order and
+inputs, instructions and outputs must be properly identified. 
+
+The problem can be seen as a function between a bunch of inputs and their associated outputs.
+If we particularize it on a specific set of inputs we have an instance of that problem, 
+then, we need an algorithm to solve the instance.
+The theory of computation gives the basis for the automatic processing of the algorithm where there is a 
+problem to solve, an algorithm that solves it and a machine to compute it. 
+
+To take advantage of the use of machines that compute the algorithm automatically we use programs.
+The program or code is the translation of the algorithm expressed in a mathematical language to a language understood by 
+the machine, the programming language. 
+
+Cuento los elementnos basicos de un programa que emulan el algoritmo
+Cuento las caracteristicas fundamentales de un lenguaje de programacion
 
 
-
-
-
-The theory of computation gives the basis for the automatic processing of information where there is a 
-problem to solve (a function between a bunch of inputs and their associated outputs) 
-and a machine (analog, digital, quantum, etc.) to solve it. 
-
-
-
-According to John Backus in his article ``Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs'' 
-this bus that connects CPU and memory acts as a bottleneck. 
-He says this is because in each instruction cycle the bus transmit a single word (let's say 64 bits) between memory and CPU.
-The purpose of any program is to modify the content of the memory so at the end of the execution the output of our function (or problem to solve) is stored.
-But this process is performed by pumping single words at a time through this bus.
-In addition, from all the information sent back and forth, a large part is not useful for the solution of our problem: names of data, other data needed to compute those names, memory addresses, etc. 
-
-Notice that this architecture not only describes how the hardware is organized but also how data and programs work.
-Backus states that the von Neumann computer is the intellectual parent of conventional programming languages. 
-Inevitably, this architecture has influenced how they are built to the point that 
-they are high level software versions of the von Neumann machine. 
-%The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
-
-%Aqui contar como influencia el lenguaje en profundidad...
 Notice that the \textit{variables} in a programming language imitate the \textit{memory cells} of the von Neumann architecture.
 The \textit{control statements} emulate the \textit{jump and test instructions} and
 the \textit{assignment statement} imitate the \textit{fetching, performing arithmetic and storing process}. 
@@ -42,7 +36,7 @@ By executing assignments many times, maybe altering subscripts (imitating memory
 the program ends up with the result stored in a variable (imitating the storage in memory). 
 Furthermore, this assignment statement splits the programming languages into two worlds: 
 a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
-%In this paper, he proposes an alternative to this reality based on the functional programming style. 
+
 
 
 

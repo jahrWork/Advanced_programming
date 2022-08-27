@@ -15,20 +15,76 @@ inputs, instructions and outputs must be properly identified.
 The problem can be seen as a function between a bunch of inputs and their associated outputs.
 If we particularize it on a specific set of inputs we have an instance of that problem, 
 then, we need an algorithm to solve the instance.
-The theory of computation gives the basis for the automatic processing of the algorithm where there is a 
-problem to solve, an algorithm that solves it and a machine to compute it. 
+The theory of computation gives the basis for the automatic processing of the algorithm, it needs from a 
+problem to solve, an algorithm that solves it and a machine to compute it 
+and gives answers for example to how efficiently the problem is going to be solved. 
 
 To take advantage of the use of machines that compute the algorithm automatically we use programs.
 The program or code is the translation of the algorithm expressed in a mathematical language to a language understood by 
 the machine, the programming language. 
 
-Cuento los elementnos basicos de un programa que emulan el algoritmo
-Cuento las caracteristicas fundamentales de un lenguaje de programacion
+In conclusion, the algorithm breaks down a complex problem into simpler instructions 
+and the program translates those steps so the machine can understand them. 
+To translate these instructions each programming language offers a bunch of building blocks.
+Most programming languages have the same components as building blocks:
+\begin{itemize}
+    \item Statements and Expressions: Statements are all lines of code that instructs the compiler to perform a task.
+    There are several types of statements from assignments or procedures calls to flow control structures. 
+    It is usually distinguished between statements and expressions, the former are executed and the latter evaluated.
+\end{itemize}
+
+Statements
+A statement is an instruction that performs an action. For example, the statement Lbl.BackColor = Color.Blue sets the background color of Lbl to Blue.
+
+Functions
+A function is a statement that returns a value. For example, the function InputBox() returns the value of its dialog text field.
+
+Variables
+A variable is a word defined in the program that stores a value. For example, the statement msg = “Hello World!” stores a string of characters in a variable called msg.
+
+Operators
+An operator is an arithmetical symbol. For example, the * asterisk character is the multiplication operator and the / forward slash character is the division operator.
+
+Objects
+An object is a program “building block” entity. It can be visible, like a Button control, or invisible like a Timer control.
+
+Properties
+A property is a characteristic of an object. For example, the property Btn.Text is the Text property of the Btn object.
+
+Methods
+A method is an action that an object can perform. For example, the method Btn.Click() is the Click method of the Btn object.
+
+Comments
+A comment is an explanatory line in the program code starting with an apostrophe ’ character. It’s not actually read by the compiler but exists to explain the purpose of the code. For example, ‘ Clear the list. might explain a Clear statement.
 
 
-Notice that the \textit{variables} in a programming language imitate the \textit{memory cells} of the von Neumann architecture.
-The \textit{control statements} emulate the \textit{jump and test instructions} and
-the \textit{assignment statement} imitate the \textit{fetching, performing arithmetic and storing process}. 
+Most important basic elements for programming languages are:
+
+Programming Environment
+Data Types
+Variables
+Keywords
+Logical and Arithmetical Operators
+If else conditions
+Loops
+Numbers, Characters and Arrays
+Functions
+Input and Output Operations
+
+
+Data types and Data structures
+Math operators
+Assignment
+Flow structures
+
+
+Lo del libro de JA
+
+%Input: getting data and commands into the computer
+%Output: getting your results out of the computer
+%Looping and conditionals: testing to see if a condition is true of false, and cycling through a set of instructions until some condition is met
+%Mathematical operations (arithmetic): Performing mathematical calculations on your data
+%Variables and data structures: storing information, which may change over time
 
 The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
 with the flow of assignments of single variables (imitating single words). 

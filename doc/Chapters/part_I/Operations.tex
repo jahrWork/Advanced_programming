@@ -2,7 +2,6 @@
 
 
     \section{Introduction} 
-
 This chapter introduces some of the most basic ingredients that support the programming.
 Data types, data structures, maths operators or flow structures are some of the most basic concepts needed to code in any programming language. 
 But first let's put them in context. 
@@ -27,83 +26,84 @@ In conclusion, the algorithm breaks down a complex problem into simpler instruct
 and the program translates those steps so the machine can understand them. 
 To translate these instructions each programming language offers a bunch of building blocks.
 Most programming languages have the same components as building blocks:
-\begin{itemize}
-    \item Statements and Expressions: Statements are all lines of code that instructs the compiler to perform a task.
-    There are several types of statements from assignments or procedures calls to flow control structures. 
-    It is usually distinguished between statements and expressions, the former are executed and the latter evaluated.
+\begin{itemize}[noitemsep]
+    \item \textbf{Statements and Expressions:} Statements are all lines of code that instructs the compiler to perform a task.
+    There are several types of statements like assignments, procedures calls, input/output statements or flow control structures. 
+    It is usually distinguished between statements and expressions. 
+    The former are executed with no value as a result, only an instruction, 
+    and the latter are evaluated to determine a resulting value.
+    
+    \item \textbf{Variables and data structures:} a variable is a tag that identifies a piece of data, 
+    it's a reference to the memory space holding the data but not the data itself. 
+    Actually, this data attached may change during the execution of the program. 
+    Some data types commonly found are integer, real, complex, logical or character.
+    In contrast, \textbf{constants} may also have a name but their attached data don't change during the execution.
+    Data structures are also used to store, organize and process data, 
+    now arranged in a specific way so that it can be treated efficiently. 
+    Some common data structures are arrays, sets, lists, tuples, trees, graphs, etc.
+    
+    \item \textbf{Operators:} These are symbols that tells the compiler to perform operations of different kind in order to produce a result.
+    There are arithmetic (addition, subtraction, multiplication, division, etc.), 
+    relational (greater than, less than, equal to, different to, etc.) and 
+    logical operators (AND, OR, NOT). 
+    Sometimes the assignment operator (\texttt{=}) is also included in this classification, 
+    however, it has a different nature compared to the others. 
+    
+    \item \textbf{Control flow structures:} These are the structures that, by means of keywords, allow to control the flow of data along the program. 
+    Essentially they allow the program to take decisions and execute instructions in a certain way depending on those decisions. 
+    The most basic control structures are the loops and the conditionals. 
+    
+    \item \textbf{Comments:} This is a line of code that is not read or executed by the compiler and 
+    that is intended to help the programmer understand the code.
+    
+    %\item \textbf{Procedures, Objects, etc:}
 \end{itemize}
 
-Statements
-A statement is an instruction that performs an action. For example, the statement Lbl.BackColor = Color.Blue sets the background color of Lbl to Blue.
+Some other keywords and characters are usually reserved by the programming language in order to perform different tasks. 
+These keywords depend on each language and can be used for example to 
+group numbers (parenthesis), 
+delimit characters (\texttt{''}), 
+indicate classes or methods,
+break lines of code, etc.
 
-Functions
-A function is a statement that returns a value. For example, the function InputBox() returns the value of its dialog text field.
-
-Variables
-A variable is a word defined in the program that stores a value. For example, the statement msg = “Hello World!” stores a string of characters in a variable called msg.
-
-Operators
-An operator is an arithmetical symbol. For example, the * asterisk character is the multiplication operator and the / forward slash character is the division operator.
-
-Objects
-An object is a program “building block” entity. It can be visible, like a Button control, or invisible like a Timer control.
-
-Properties
-A property is a characteristic of an object. For example, the property Btn.Text is the Text property of the Btn object.
-
-Methods
-A method is an action that an object can perform. For example, the method Btn.Click() is the Click method of the Btn object.
-
-Comments
-A comment is an explanatory line in the program code starting with an apostrophe ’ character. It’s not actually read by the compiler but exists to explain the purpose of the code. For example, ‘ Clear the list. might explain a Clear statement.
+Finally, there is a different kind of statement that is not part of the programming language itself 
+but also instructs the compiler to perform tasks; the compiler directives. 
+These statements cause the compiler to take a specific action during compilation and may vary from compiler to compiler.
 
 
-Most important basic elements for programming languages are:
-
-Programming Environment
-Data Types
-Variables
-Keywords
-Logical and Arithmetical Operators
-If else conditions
-Loops
-Numbers, Characters and Arrays
-Functions
-Input and Output Operations
-
-
-Data types and Data structures
-Math operators
-Assignment
-Flow structures
-
-
-Lo del libro de JA
-
+%MORE:
 %Input: getting data and commands into the computer
 %Output: getting your results out of the computer
-%Looping and conditionals: testing to see if a condition is true of false, and cycling through a set of instructions until some condition is met
-%Mathematical operations (arithmetic): Performing mathematical calculations on your data
-%Variables and data structures: storing information, which may change over time
 
-The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
-with the flow of assignments of single variables (imitating single words). 
-By executing assignments many times, maybe altering subscripts (imitating memory addresses), 
-the program ends up with the result stored in a variable (imitating the storage in memory). 
-Furthermore, this assignment statement splits the programming languages into two worlds: 
-a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
+%Libro FORTRAN: Programación Multicapa
+
+%Most important basic elements for programming languages are:
+%Programming Environment
+%Keywords
+%Input and Output Operations
+
+%Functions
+%A function is a statement that returns a value. For example, the function InputBox() returns the value of its dialog text field.
+%Objects
+%An object is a program “building block” entity. It can be visible, like a Button control, or invisible like a Timer control.
+%Properties
+%A property is a characteristic of an object. For example, the property Btn.Text is the Text property of the Btn object.
+%Methods
+%A method is an action that an object can perform. For example, the method Btn.Click() is the Click method of the Btn object.
 
 
 
-
+%The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
+%with the flow of assignments of single variables (imitating single words). 
+%By executing assignments many times, maybe altering subscripts (imitating memory addresses), 
+%the program ends up with the result stored in a variable (imitating the storage in memory). 
+%Furthermore, this assignment statement splits the programming languages into two worlds: 
+%a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
 
 
 
 
     \section{Data types} 
-
-
-
 Each constant, variable, array or function in a programming language has an intrinsic data type associated. 
 This type decides, among other things, the permitted values that the entity can have and the set of operations that can be performed with them.
 For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 

@@ -1,19 +1,19 @@
 {
     "InternalPDFViewer": {
         "Embedded": false,
-        "File": ""
+        "File": "Advanced programming.pdf"
     },
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "doc/Chapters/part_I/matrices.tex",
+        "CurrentFile": "Advanced programming.tex",
         "FileVersion": 1,
         "Files": [
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 0,
+                "FirstLine": 40,
                 "FoldedLines": "",
                 "Line": 215
             },
@@ -30,8 +30,8 @@
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Operations.tex",
                 "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 192
+                "FoldedLines": "3,105,292,370,376,379,393",
+                "Line": 4
             },
             {
                 "Col": 14,
@@ -42,12 +42,12 @@
                 "Line": 7
             },
             {
-                "Col": 10,
+                "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/matrices.tex",
                 "FirstLine": 0,
-                "FoldedLines": "5,16,48,70,115,189,209,251,307",
-                "Line": 309
+                "FoldedLines": "5,16,48,70,194,311",
+                "Line": 311
             },
             {
                 "Col": 0,
@@ -74,7 +74,6 @@
                 "Line": 14
             }
         ],
-        "MasterFile": "",
-        "VerticalSplit": false
+        "MasterFile": ""
     }
 }

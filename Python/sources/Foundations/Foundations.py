@@ -1,6 +1,6 @@
 
 from Hello_world import Hello_world
-from data_type import data_type
+from data_type import data_types
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
 from Matrix_operations import Matrix_operation_examples
@@ -34,7 +34,7 @@ def menu_Foundations():
            Hello_world()
           
      elif option == 2: 
-           data_type()
+           data_types()
            Roots_2th()
          
      elif option == 3: 

@@ -103,21 +103,42 @@ These statements cause the compiler to take a specific action during compilation
 
 
 
-    \section{Data types} 
-Each constant, variable, array or function in a programming language has an intrinsic data type associated. 
-This type decides, among other things, the permitted values that the entity can have and the set of operations that can be performed with them.
+    \section{Data types}
+    
+Several objects are used to build the different branches of mathematics; numbers, operations, functions, sets, vectors, matrices, tensors and a large etcetera. 
+Let's review here the formal definition of some objects that later are represented in programming by means of the data types. 
+
+The set of integers $\mathbb{Z}$ includes the number zero (0), the natural numbers ($\mathbb{N} = \{ 1,2,3,... \}$) and their additive inverses, the negative numbers ($\{ -1,-2,-3,... \}$).
+The set of real numbers ($\mathbb{R}$) includes any number identified with a point on the real number line.
+This set includes both the set of rational numbers ($\mathbb{Q}$) and the set of irrational numbers.
+Finally, the complex numbers ($\mathbb{C}$) extends the real numbers using the imaginary unit, an element satisfying the equation $i^2 = -1$.
+This equation does not have solution among the real numbers and, 
+once introduced the imaginary unit, every complex number can be expressed as $a+bi$ where $a,b\in\mathbb{R}$. 
+
+In the context of the elementary algebra, some operations are defined for the elements of each of these sets.
+Furthermore, the operations together with the sets accomplish with a bunch of algebraic properties that give them 
+a ring structure to the integers 
+or a field structure in the case of reals or complex numbers. 
+
+In a different context, the Boolean algebra, the values of the variables are the truth values: true and false instead of numbers.
+Also, the basic operations are conjunction (and), disjunction (or) and negation (not) instead of binary operations like addition and multiplication.
+
+In a similar way, each constant, variable, array or function in a programming language has an intrinsic data type associated. 
+This type decides, among other things, the allowed values that the entity can have and the set of operations that can be performed with them.
 For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 
 Then, a value $x\in \mathbb{Z}$ will be stored in an \texttt{integer} variable and operations like addition, multiplication or exponentiation are allowed. 
 
-The data typing in a programming language is explicit when the programmer needs to decide and declare the type for each variable or implicit when the language assumes the type. 
+The data typing in a programming language is explicit when the programmer needs to decide and declare the type for each variable or implicit when the language assumes it. 
 Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
 Python is mainly an implicit typing language since we can assign a value to a variable without declaring type, i.e. \texttt{a = 3} will automatically treat \texttt{a} as an integer. 
 Fortran, on the contrary, is a explicit typing language because all variables must be previously declared with a specific type, i.e. \texttt{real :: x = 5.6}.
 
 
 
+        \newpage
+        \subsection*{Fortran code}
 
-Notice that Fortran provides five intrinsic data types. 
+Fortran provides five intrinsic data types. 
 Derived data types can be created either from intrinsic data types or from other derived types previously defined.
 The five intrinsic types are:
 \begin{itemize}
@@ -125,15 +146,161 @@ The five intrinsic types are:
     \item Boolean nature: \texttt{logical}.
     \item Text nature: \texttt{character}.
 \end{itemize}
-The numeric types of data behave like the mathematical abstractions of these sets, 
-roughly speaking: $n\in \mathbb{Z}$ is stored in an \texttt{integer}, $x\in \mathbb{R}$ is stored in an \texttt{real} and $z\in \mathbb{C}$ is stored in an \texttt{complex} variable.
+The numeric types behave like the mathematical abstractions of these sets, 
+roughly speaking: $n\in \mathbb{Z}$ is stored in an \texttt{integer}, 
+$x\in \mathbb{R}$ is stored in an \texttt{real} and 
+$z\in \mathbb{C}$ is stored in an \texttt{complex} variable.
+Many nuances to the equivalence between the programming concept and the mathematical abstraction for integers and reals are treated in the Part \ref{PartII} of this book. 
 The \texttt{logical} type gets the two possible values of the Boolean algebra; \texttt{True} and \texttt{False}. 
 Finally, the \texttt{character} type can store strings with ASCII characters which includes alphanumeric, symbols and sign characters.   
 
+Since Fortran is an explicit typing language, before using any variable, all must be previously declared with a specific type.
+The following program shows an example of the declaration and initialization of the five data types we can find. 
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+\listings{\home/Basic_operations.f90}{subroutine Data_types}
+{end subroutine}{Basic_operations.f90}
 
 
 
-The same data types are built-in in Python but with a different name (\texttt{int}, \texttt{float}, \texttt{complex}, \texttt{bool} and \texttt{str}). 
+        \newpage 
+        \subsection*{Python code}
+
+The same five data types are built-in in Python but with a different name: 
+\begin{itemize}
+    \item Numeric nature: \texttt{int}, \texttt{float}, \texttt{complex}. 
+    \item Boolean nature: \texttt{bool}.
+    \item Text nature: \texttt{str}.
+\end{itemize}
+
+Since Python is an implicit typing language don't declare the type of any variable and just initialize it.
+The following program shows an example of the initialization of the five data types we can find. 
+\vspace{0.5cm} 
+\renewcommand{\home}{./Python/sources/Foundations/Data_type} 
+\lstpython
+\listings{\home/data_type.py}{def data_types}
+{string}{data_type.py} 
+
+
+
+
+    \newpage
+    \section{Data structures} 
+
+Numbers and truth values are not the only objects needed to build the different branches of mathematics.
+Also sets, vectors, tuples, matrices, tensors or sequences are used in the context of algebra, calculus or set theory.
+Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
+
+%set
+A set, with the definition given by Georg Cantor within the set theory, 
+is a gathering together into a whole of definite, distinct objects of our perception or our thought, 
+which are called elements of the set.
+The elements of a set can be any mathematical objects: numbers, points in space, geometrical shapes, variables or other sets.
+However, every element of the set must be different from the others.
+
+%tuples
+
+
+%sequences
+
+
+
+%vectors
+The term vector in mathematics has different formal definitions depending on the context.
+Vector is usually used for tuples, which means, finite ordered lists (sequences) of elements. 
+An $n-$tuple for example is an ordered list of $n$ elements, where $n$ is a non-negative integer.
+However, historically the term vector was used for geometric vectors, objects that has magnitude and direction.
+Finally, in pure mathematics a vector is any element of a vector space. 
+
+Indeed, vectors seen as tuples of elements in a field $\mathbb{F}$ together with the common addition of vectors and the multiplication by an scalar in the field $\mathbb{F}$ build a vector space. 
+It is usually used $\mathbb{F}^{n}$ to denote the set of all $n-$tuples with entries in the field $\mathbb{F}$, that could be for example $\mathbb{R}$ or $\mathbb{C}$. 
+Hence, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are 2-tuples and 3-tuples of reals and conform vector spaces with all its linear combinations.
+Notice that a vector can be represented by a one-dimensional arrangement of $n$ elements with respect to a given basis.
+
+A matrix is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
+Matrices over a field $\mathbb{F}$ are those where all its \textit{elements} or \textit{entries} are elements of the field $\mathbb{F}$.
+If $\mathbb{F}$ is $\mathbb{R}$ or $\mathbb{C}$ it conforms real matrices or complex matrices respectively.
+It is usually used $\mathbb{F}^{m\times n}$ to denote the set of $m\times n$ matrices with entries in the field $\mathbb{F}$. 
+This set, together with the common addition of matrices and the multiplication by numbers (scalars) in the field $\mathbb{F}$ have the structure of vector space. 
+Hence, the matrices are also vectors inherited from the vector space structure they present.
+
+%Tensors are NOT the generalization of scalars, vectors and matrices (no indices, one index, two indices) to an arbitrary number of indices. 
+The concept of tensor, like the concept of vector, also has different approaches. 
+Avoiding the formal definition let's consider here that a tensor can be represented as a potentially multidimensional array.
+The elements in this multidimensional array are called its scalar components and are denoted by indices denoting their position in the array.
+A tensor is usually denoted by a symbolic name followed by a collection of subscripts where 
+the number of subscripts attached defines the rank of the tensor. 
+For example $\alpha_{ijkl}$ is a rank 4 tensor.
+
+%Sequence
+
+
+
+
+
+%notacion de cada uno
+%con parentesis
+%con corchetes cuadrados
+%con llaves
+ 
+
+en programacion como los convertimos
+definimos data structures
+
+
+
+
+        \newpage
+        \subsection*{Fortran code}
+ 
+%\vspace{0.5cm}
+%\lstfor
+%\renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+%\listings{\home/Basic_operations.f90}{subroutine Data_types}
+%{end subroutine}{Basic_operations.f90}
+
+
+
+        \newpage 
+        \subsection*{Python code}
+
+
+
+%\vspace{0.5cm} 
+%\renewcommand{\home}{./Python/sources/Foundations/Data_type} 
+%\lstpython
+%\listings{\home/data_type.py}{def data_types}
+%{string}{data_type.py} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A \texttt{set} in Python takes the same meaning as the definition of set.
+
+
+
+
+
+
+
+
+
+
+
 In addition, more data types can be found by default, among others we find:
 \begin{itemize}
     \item Sequence nature: \texttt{list}, \texttt{tuple} or \texttt{range}.
@@ -173,9 +340,13 @@ L = [ ("one", 5, 3.5, 5 ]
 T = ( ("one", 5, 3.5, 5 )
 \end{verbatim}
 
-A \texttt{set} in Python takes the same meaning as the definition of set in the set theory started by Georg Cantor:
 
-\textit{A set is a gathering together into a whole of definite, distinct objects of our perception or our thought, which are called elements of the set.}
+
+
+
+
+
+
 
 Hence, Python treats them as a collection of any type of data, but in this case i) unordered and ii) not allowing duplicate values. 
 In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant (there is not an integer index pointing to them).
@@ -245,33 +416,6 @@ for i, v in enumerate(V):
 
 
 
-In the following examples the intrinsic data types in Fortran and Python are presented through some basic expressions. 
-
-
-\newpage 
-\subsection*{Fortran code}
-Since Fortran is a explicit typing language, before using any variable, all must be previously declared with a specific type.
-The following program shows an example of the declaration and initialization of the five data types we can find. 
-%\vspace{0.5cm}
-%\lstfor
-%\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
-%\listings{\home/modB.f90}{module modB}{end module}{modB.f90}
-
-\begin{verbatim}
-program data_types
-    
-    implicit none
-    
-    character (len=10,kind=1) :: string = 'data types'
-    integer :: int = 1
-    real :: x = 1.8
-    complex :: com = (1,1)
-    logical :: bool = .true.
-    
-end program
-\end{verbatim}
-
-
 
 
 \newpage 
@@ -290,7 +434,7 @@ In addition, indentation rules must be strictly followed.
 
 
  
-    \section{Data structures} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 The following concepts regarding arrays constructions and operations are covered:
 \begin{enumerate} 

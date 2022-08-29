@@ -1,10 +1,15 @@
-def data_type(): 
+def data_types(): 
 
-  string = "data types"
   integer = 1 
   real = 1.8 
   complex = 1 + 1j
-  
+  bool = True
+  string = "data types"
+  #END
+
+
+
+def data_structures():
   sets = "unordered set with distinct elements" 
   S = {string, integer, real, complex} 
   
@@ -39,5 +44,3 @@ def data_type():
   for e in arrays:  
      print("{:12} {} {}".format(e, ":", arrays[e]) )
   print("\n")
-
-     

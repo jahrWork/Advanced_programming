@@ -5,8 +5,6 @@ def data_types():
   complex = 1 + 1j
   bool = True
   string = "data types"
-  #END
-
 
 
 def data_structures():

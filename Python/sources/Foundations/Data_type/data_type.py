@@ -8,14 +8,16 @@ def data_types():
 
 
 def data_structures():
+
   sets = "unordered set with distinct elements" 
-  S = {string, integer, real, complex} 
+  S = {"car", 5, 6.7, 1 + 1j} 
   
   # print order is unpredictable 
   print("\n type=", type(S)) 
   for s in S: 
      print(" element =", s)
      
+
   lists = "ordered set allowing equal elements" 
   S = ["one", 5, 3.5, 5] 
   

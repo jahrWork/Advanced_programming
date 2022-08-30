@@ -1,6 +1,6 @@
  module Foundations 
     
-  use Basic_operations,      only : Data_types 
+  use Basic_operations,      only : Data_types, Data_structures
   use Roots,                 only : Roots_2th  
   use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
   use Matrix_operations,     only : Matrix_operation_examples, ElementWise_operation_examples
@@ -43,6 +43,7 @@ do ! Basic programming examples
           
      case(2) 
          call Data_types()
+         call Data_structures()
          call Roots_2th()
          
      case(3) 

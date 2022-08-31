@@ -34,4 +34,15 @@ contains
          
  end subroutine 
  
+ subroutine Operators()
+ 
+     integer :: int = 3
+     real :: x = 7., y = 2.
+     complex :: c = (2,3)
+     logical :: bool = .true.
+     
+     write(*,*) "x*c + y/( x**2 + x ) = ", x*c + y/( x**2 + x ) 
+         
+ end subroutine 
+ 
  end module 

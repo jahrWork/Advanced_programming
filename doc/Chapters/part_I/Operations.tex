@@ -45,9 +45,9 @@ Most programming languages have the same components as building blocks:
     \item \textbf{Operators:} These are symbols that tells the compiler to perform operations of different kind in order to produce a result.
     There are arithmetic (addition, subtraction, multiplication, division, etc.), 
     relational (greater than, less than, equal to, different to, etc.) and 
-    logical operators (AND, OR, NOT). 
+    logical operators (AND, OR, NOT) operators among others. 
     Sometimes the assignment operator (\texttt{=}) is also included in this classification, 
-    however, it has a different nature compared to the others. 
+    however, it has a different nature compared to the rest. 
     
     \item \textbf{Control flow structures:} These are the structures that, by means of keywords, allow to control the flow of data along the program. 
     Essentially they allow the program to take decisions and execute instructions in a certain way depending on those decisions. 
@@ -139,7 +139,8 @@ Fortran, on the contrary, is a explicit typing language because all variables mu
         \subsection*{Fortran code}
 
 Fortran provides five intrinsic data types. 
-Derived data types can be created either from intrinsic data types or from other derived types previously defined.
+Derived data types can be created either from intrinsic data types or from other derived types previously defined 
+and they behave similarly to the data structures treated later.
 The five intrinsic types are:
 \begin{itemize}
     \item Numeric nature: \texttt{integer}, \texttt{real}, \texttt{complex}. 
@@ -167,7 +168,9 @@ The following program shows an example of the declaration and initialization of 
         \newpage 
         \subsection*{Python code}
 
-The same five data types are built-in in Python but with a different name: 
+The same five data types, also known as primitive data types, are built-in in Python but with a different name.
+In addition, Python also allows non-primitive data types (explained in this book as data structures)
+and user-defined data structures.
 \begin{itemize}
     \item Numeric nature: \texttt{int}, \texttt{float}, \texttt{complex}. 
     \item Boolean nature: \texttt{bool}.
@@ -187,7 +190,7 @@ The following program shows an example of the initialization of the five data ty
 
     \newpage
     \section{Data structures} 
-
+\vspace{-0.5cm}
 Numbers and truth values are not the only objects needed to build the different branches of mathematics.
 Also sets, vectors, tuples, matrices, tensors or sequences are used in the context of algebra, calculus or set theory.
 Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
@@ -529,16 +532,18 @@ Two main strategies can be followed:
     While lists and tuples are easily iterable on their indices, 
     sets are not subscriptable (they do not have order) and 
     dictionaries need keys as subscripts and not indices. 
+    \item \textbf{Iterate in both the index and the element.} 
+    In the code above the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
+    by means of the \texttt{eunmerate()} function.
+    While lists and tuples are easily iterable on their indices, 
+    sets are not subscriptable (they do not have order) and 
+    dictionaries should be better iterated using their keys.
 \end{enumerate} 
 
-Notice that \texttt{range(start, stop, step)}, with \texttt{start} and \texttt{step} optional arguments, returns a sequence of numbers between the given range.
-When only \texttt{stop} is specified (see examples) the iterator starts in \texttt{0} and do not include the stop number itself.
-All the arguments of \texttt{range()} are integers, hence, the function \texttt{len()} is used to find the length of the structure to be iterated. 
-
-
-
-
- 
+Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
+All its arguments are integers and \texttt{start} and \texttt{step} are optional.
+When only \texttt{stop} is specified (see the examples above) the iterator starts in \texttt{0} and do not include the stop number itself.
+The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
 
  
 
@@ -564,58 +569,159 @@ All the arguments of \texttt{range()} are integers, hence, the function \texttt{
 
 \newpage
     \section{Maths operators}
+In mathematics, rings, fields, groups, vector spaces and more algebraic structures 
+are built with the following ingredients:
+\begin{enumerate}[noitemsep]
+    \item A nonempty set $A$.
+    \item Some operations on $A$.
+    \item A finite set of axioms that these operations must satisfy.   
+\end{enumerate}
+We can consider for example the set of reals together 
+with the operations of addition and multiplication 
+and the following axioms: 
+associativity and commutativity of addition and multiplication, 
+existence of additive and multiplicative identity,
+existence of additive and multiplicative inverses and
+distributivity of multiplication over addition.
+Then, the field $\{\mathbb{R}, +, \times\}$ is built. 
+
+A big amount of consequences are derived from the fact that we are working with a field:
+some equations are proved to have unique solutions, subtraction and division
+can be performed, every Cauchy sequence has a limit, etc. 
+
+We have seen before that the intrinsic data types appear as a need of representing 
+some essential mathematical sets like the reals, the integers, the complex numbers or
+the truth values. 
+In the same way, the mentioned operations are reproduced in the programming language 
+so the whole potential of algebraic structures are transmitted to the computer. 
+
+However, the arithmetic operators are not the only essential operators in mathematics, 
+in the context of an ordered field like the mentioned $\{\mathbb{R}, +, \times\}$
+any two elements can be compared with the usual ordering, which is derived from the 
+conventional counting and measuring order on $\mathbb{R}$. 
+The relational operators are used to compare any two numbers, $x, y \in \mathbb{R}$ for example. 
+Both numbers could accomplish with some of the following comparisons: 
+equals operator $x = y$, not equal $x\neq y$, less than $x < y$, greater than $x > y$, less or equal than $x \leq y$ and greater or equal than $x\geq y$. 
+Notice that the complex numbers do not have the structure of an ordered field and then, these operators are not useful in this context. 
+
+A logical operator on mathematical statements is used to combine one or more statements to create a new one. 
+More than one operator can be used together in an statement building a compound operator. 
+Let's review some essential operators of this kind for the statements $P$ and $Q$:
+\newpage
+\begin{enumerate}[noitemsep]
+    \item Conjunction of statements: $P \land Q$ is true when both $P$ and $Q$ are true.
+    \item Disjunction of statements: $P\lor Q$ is true when at least $P$ or $Q$ is true.
+    \item Negation of a statement: $\neg P$ is true only when $P$ is false.
+    \item Implication or conditional: If $P$ then $Q$, $P\to Q$ is false only when $P$ is true and $Q$ is false. 
+\end{enumerate}
+
+Extending the use of propositional logic to the set theory, notice that an element or a set 
+do not have a truth value associated on their own, an element is not true or false by itself. 
+By including the relation between a member and a set as operator, true or false statements can be 
+built and used in the context of propositional logic. 
+For example, using the membership operator $\in$ we can say $3.5 \in \mathbb{R}$ is a true proposition. 
+Also the opposite operator can be considered, $3.5 \notin \mathbb{N}$ is a true proposition.
+
+
+
+Programming languages usually have built-in all these operators in their syntax,
+hence, each of them has a reserved symbol or keyword.
+From a general perspective, 
+they behave similarly to functions (also treated in this book), 
+but they differ in the syntax or the semantics. 
+Furthermore, sometimes the language allows the users to create new operators 
+or add meanings to existing ones similarly to functions. 
+
+In a programming language the data type of an entity decides, among other things, 
+the allowed values that it can have and 
+the set of operations that can be performed with them.
+The same applies to data structures, each structure can be operated 
+with a different bunch of operators in order to work with them. 
+
+
+
+        \subsection*{Arithmetic operators}
+        
+        For both Fortran and Python the symbols for the main arithmetic operations are:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{+} for the addition operator, 
+            \item \texttt{-} for subtraction,
+            \item \texttt{*} for multiplication,
+            \item \texttt{/} for division and
+            \item \texttt{**} for exponentiation.
+        \end{itemize}
+        Python also includes the modular arithmetic operators, specially important in finite fields and several branches of the mathematics:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{//} for the floor division: implementing the floor function over the result of the division, which means, it returns the greatest integer less than or equal to $x\in\mathbb{R}$.
+            \item \texttt{\%} for the modulo operation: it returns the modulus of the division, its remainder after one number is divided by another.
+        \end{itemize}
+        
+        
+        
+        \subsection*{Relational operators}
+        
+        For both Fortran and Python the relational operators are:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{==} for the \textit{equal to} operator, 
+            \item \texttt{/=} in Fortran and \texttt{!=} in Python for the \textit{not equal to} operator.
+            \item \texttt{>} for the \textit{greater than} operator,
+            \item \texttt{<} for the \textit{less than} operator,
+            \item \texttt{>=} for the \textit{greater or equal to} operator and
+            \item \texttt{<=} for the \textit{less or equal to} operator.
+        \end{itemize}
+        Historically, Fortran also allows \texttt{.EQ., .NE., .GT., .LT., .GE., .LE.} for the above operators respectively. 
     
+        
+        \subsection*{Logical operators}
+        In Fortran the logical operators are:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{.and.} for the conjunction operator, 
+            \item \texttt{.or.} for the disjunction operator,
+            \item \texttt{.not.} for the negation operator,
+            \item \texttt{.eqv.} for the equivalent operator (true if both functional arguments have the same logical value) and
+            \item \texttt{.neqv.} for the non-equivalent operator (true if both functional arguments have different logical value).
+        \end{itemize}
     
-Arithmetic operator 
-Comparison operator 
-Logical operator 
-Membership operator 
+        In Python the logical operators are:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{and} for the conjunction operator, 
+            \item \texttt{or} for the disjunction operator and
+            \item \texttt{not} for the negation operator.
+        \end{itemize}
+        
+        
+        \subsection*{Membership operators}
+        
+        Python allows the membership operators for sets, lists, tuples and dictionary keys by using:
+        \vspace{-0.5cm}
+        \begin{itemize}[noitemsep]
+            \item \texttt{in} for the $\in$ operator and
+            \item \texttt{not in} for the $\notin$ operator.
+        \end{itemize}        
+      
+      
+      
+      
+        \newpage
+        \subsection*{Fortran code}
 
 
 
-In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
-
-
-
-When we want to use all these collections of data, since they are treated as \textit{iterable} objects, we can use a \texttt{for} loop to iterate through them. 
-If \texttt{V} is a list, tuple, dictionary or set, we can move throughout all the elements using:
-\begin{verbatim}
-    for v in V:
-\end{verbatim}
-So \texttt{v} takes, sequentially, all the values stored in \texttt{V}. 
-Notice that, if \texttt{V} is a set, the elements won't follow any specific order. 
-Let's execute for example:
-\begin{verbatim}
-    S = {7,2,"car",78.2,"boat",4.5}
-    for x in S:
-    print(x)
-\end{verbatim}
-resulting in:
-\begin{verbatim}
-    2
-    4.5
-    7
-    boat
-    78.2
-    car
-\end{verbatim}
-Use the following expression to iterate using an index throughout the whole length of the collection:
-\begin{verbatim}
-    for i in range(len(V)): 
-\end{verbatim}
-or extract both the index and the value of the element using:
-\begin{verbatim}
-    for i, v in enumerate(V):
-\end{verbatim}
-
-
-
-
-
-
-
-
-
+        \subsection*{Python code}
+        
+        
+        
+        
+        
+        
+        
+%Luego hay funciones y metodos de objetos para hacer un monton mas de operaciones de todo tipo. 
+%In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
 
 
     \section{Assignment operators}
@@ -638,7 +744,7 @@ for k in D.keys()   dictionary iterates in keys
 for v in D.values()   dictionary iterates in values
 
 
-\newpage 
+    \newpage 
     \section{Roots of a second degree equation} 
 In this section, a program to obtain the roots of a second order equation is presented:  
 $$

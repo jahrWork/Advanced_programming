@@ -30,39 +30,38 @@ def data_structures():
 
   sets = "unordered set with distinct elements" 
   S = {"car", 5, 6.7, 1 + 1j} 
-  
-  # print order is unpredictable 
+   
   print("\n type=", type(S)) 
-  for s in S: 
+  for s in S:    # print order is unpredictable
      print(" element =", s)
 
   lists = "ordered set allowing equal elements" 
   S = ["one", 5, 3.5, 5] 
-  
-  # lists are ordered  
+   
   S[3] = 8
   print("\n type=", type(S))   
-  for i in range(len(S)): 
+  for i in range(len(S)):    # lists are ordered 
      print(" element =", S[i]) 
      
   tuples ="inmutable ordered set" 
   S = ("one", 5, 3.5, 5)  
   
-  # tuples are inmutable 
   print("\n type=", type(S))
-  for i in range(len(S)): 
+  for i in range(len(S)):     # tuples are inmutable 
      print(" element =", S[i])   
-  print("\n")   
+  print("\n") 
+  
+  for i, s in enumerate(S):
+      print(" index =", i, " element =", s)   
+  print("\n")
 
   dictionaries = "ordered data values in key:value pairs"
-  # mutable and do not allow duplicates"
   D = {"set":sets, "list":lists, "tuple":tuples, "dict":dictionaries} 
   
-  for k in D:  
+  for k in D:     # mutable and do not allow duplicates"
      print("{:6} {} {}".format(k, ":", D[k]) )
   print("\n")
 
   ite = iter( ("one", 5, 3.5, 5) )
-
   print( next(ite) )
   print( next(ite) ) #returns StopIteration when no more elements. 

@@ -29,7 +29,7 @@ contains
     
     !Slices
     C(:,2) = X(1:5)
-    C(2:3,3:4) = reshape( [1., 2., 3., 4.], [2,2] )
+    C(2:3,3:4) = reshape( [1., 2., 3., 4.], [2,2] ) !enter by columns!
     B(-2:4:3,:) = reshape( [1., 2., 3., 4., 5., 6.], [3,2] )
          
  end subroutine 

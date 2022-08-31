@@ -264,8 +264,8 @@ With the Fortran examples below the following concepts are covered:
 
 Also, with the Python examples, the following concepts are treated:
 \begin{enumerate}[noitemsep]
-    %\item Using arrays with NumPy library.
-    \item Using sets, lists, tuples and dictionaries.
+    \item Constructors, iterators and slices for NumPy arrays.
+    \item Using sets, lists, tuples and dictionaries: constructors.
     \item Iterators for data structures.
 \end{enumerate}
 
@@ -279,44 +279,40 @@ Also, with the Python examples, the following concepts are treated:
 Consider the following vectors $V, W \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ and matrix $A \in { \cal{M}}^{N \times N} (\mathbb{R})$ 
 with $N=10$ and let's declare them using Fortran arrays. 
 $$
-V = \left( v_i =\frac{1}{i^2}, \ \ i = 1 \ldots  N \right)^T, \qquad \qquad  W = \left( w_i = \frac{(-1)^{i+1}}{2i+1}, \ \ i = 1 \ldots  N \right)^T,
+V = \left( v_i =\frac{1}{i^2} \right)^T, \quad W = \left( w_i = \frac{(-1)^{i+1}}{2i+1} \right)^T \;\; i = 1 \ldots  N,  \quad Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T
 $$
 $$
-A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right],
+A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right], \quad X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T
 $$
-$$
-X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T, \qquad \qquad  Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T
-$$
- 
-An array, either representing a vector, a matrix or a tensor, is properly declared when it has 
+An array, either representing a vector, a matrix or a tensor, is properly \textbf{declared} when it has 
 type, rank and dimension (or extent) (see Figure \ref{fig:arrays}). 
-The data type for this example is \texttt{real} since its elements are reals. 
-The rank; the number of dimensions in the array, is 1 (column vector) for \texttt{V}, \texttt{W}, \texttt{X} and \texttt{Y}
-and 2 (matrix organised into columns and rows) for \texttt{A}.
-Hence, vectors are declared with only one index and matrices with two indices. 
-Finally, the extent of each particular dimension is its length; the number of elements in that dimension.
-All dimensions involved in these examples are equal to \texttt{N}, 6 or 3.
-Notice that the bounds of a dimension does not have to start with index \texttt{1}, 
-later some examples with different bounds are shown. 
+The data type has already been treated before, in these examples we are using \texttt{real}. 
+The rank; the number of dimensions in the array, is 1 for column vectors, 2 for matrices and can be higher for higher dimension tensors.
+The extent of each particular dimension is its length; the number of elements in that dimension.
+\begin{IN}
+Notice that, in Fortran, the \textbf{bounds of a dimension} may start with the index we prefer. 
+By default it stars with index \texttt{1} but it can start in \texttt{0} or whatever index we want. 
+For example the matrix \texttt{B(-2:4,0:1)} starts in \texttt{-2} and ends in \texttt{4} (also included) for the first dimension and 
+\texttt{0} and \texttt{1} (also included) for the second dimension. 
+\end{IN}
 \vspace{0.5cm}
 \lstfor
 \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
 \listings{\home/Basic_operations.f90}{subroutine Data_structures}
-{i, j}{Basic_operations.f90}
-
-
+{4,0}{Basic_operations.f90}
 
 
 
 
 %Initialization
-Once declared, the initialization of the arrays is performed with constructors. 
+Once declared, the \textbf{initialization} of the arrays is performed with constructors. 
 Three ways are commonly used to manually construct an array: 
+\vspace{-0.5cm}
 \begin{enumerate}[noitemsep]
     \item \textbf{By a list of values:} \texttt{ [ list ] } where 'list' is a list of values of the same array type separated by commas. 
     For example the vector \texttt{X} in the code. 
     \item \textbf{Using an array expression:} \texttt{Y = [ A(2, 3:5) ]} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
-    \item \textbf{Using an implicit loop:} a list of elements is computed from a loop. For example vectors \texttt{V} or \texttt{W} in the code.
+    \item \textbf{Using an implicit loop:} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
 \end{enumerate}
 In the case of Fortran the constructors are only used for rank-one arrays so 
 functions like \texttt{reshape} are needed for higher ranks. 
@@ -327,19 +323,17 @@ For example the matrix \texttt{A} in the code is initialized using the \texttt{r
 \listings{\home/Basic_operations.f90}{1./i}
 {2, 3}{Basic_operations.f90}    
     
+   
+  
     
-    
-    
-    
-    
-    
-%sectors, iterators...    
-Notice that the initialization of \texttt{Y} in the example above, \texttt{Y = [ A(2, 3:5) ]}, use a sector (or slice) of the whole array \texttt{A}. 
+%sectors, iterators... 
+In general, Fortran allows only one kind of \textbf{iterator} for arrays; 
+an index in the dimension whether it loops with an implicit or explicit loop.   
+This is intimately related to the \textbf{slicing} of an array: the initialization of \texttt{Y} in the example above use an slice of \texttt{A}.
 This can also be extended to a whole dimension of an array using the colon symbol, \texttt{C(:,2)} (see the example below and Figure \ref{fig:arrays}). 
 Furthermore, alternate values can be selected by specifying a lower bound, an upper bound and the jump between values 
 (see the example below and Figure \ref{fig:arrays}), \texttt{B(-2:4:3,:)} being the value \texttt{3} the jump between rows.
-In general, Fortran allows only one kind of iterator for arrays; 
-an index in the dimension whether it loops with an implicit or explicit loop.
+Notice that, since Fortran is a column major order language, functions like \texttt{reshape} and slicing treats the data by columns. 
 \vspace{0.2cm}
 \lstfor
 \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
@@ -381,25 +375,76 @@ an index in the dimension whether it loops with an implicit or explicit loop.
 
         \newpage 
         \subsection*{Python code}
-%REPETIR MATRICES EN PYTHON
-Python allows the following data structures: 
+Let's see the same examples defined above using \texttt{NumPy} arrays and 
+let's include now a matrix $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$. 
+Notice that now they do not need to be explicitly declared, 
+Python automatically does it. 
+$$
+Z =     
+\begin{bmatrix}
+    1.1 & 2.2 & 3.3\\
+    4 & 5.6 & 6.2
+\end{bmatrix} 
+$$
+
+%Initialization
+The \textbf{initialization} of the arrays is performed using the \texttt{array()} function as constructor. 
+Three ways are commonly used to manually construct an array: 
+\begin{enumerate}[noitemsep]
+    \item \textbf{By a list of values:} \texttt{ [ list ] } or \texttt{ [ [ list ], [ list ] ] } where \texttt{list} is a list of values of the same array type separated by commas. 
+    For example the vector \texttt{X} or the matrix \texttt{Z}.
+    Notice that Python allows manual constructors for higher than rank-one arrays.
+    \item \textbf{Using an array expression:} \texttt{Y = A(1, 2:5)} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
+    Notice that Python not only starts in \texttt{0} all the indices so \texttt{1} means the second column, 
+    but also an slice like \texttt{2:5} ends in \texttt{4} so the slice takes columns \texttt{3} to \texttt{5}. 
+    \item \textbf{Using an implicit loop:} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
+\end{enumerate}
+\vspace{0.5cm} 
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{def arrays}{by rows}{data_type.py}
+
+%sectors, iterators...    
+These arrays can be \textbf{iterated} using an index in each dimension and 
+\textbf{slicing} is also allowed.
+Notice here that NumPy arrays, contrary to Fortran, are row-major order. 
+This means that arrays store the data by rows and 
+then \texttt{C[1:3 ,2:4] = [ [1.,2.], [3.,4.] ]} will be assigned by rows. 
+
+Similarly to Fortran, the colon symbol iterates in a whole dimension (see \texttt{C[:,1]} in the example above) and 
+alternate values can be selected by specifying lower and upper bound and the jump between values.
+However, the example \texttt{B(-2:4:3,:)} made with Fortran can not be copied because:
+\begin{IN}
+In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} and
+the stop value of the slices is never reached. 
+\end{IN}
+
+
+
+
+
+
+
+
+
+\vspace{0.5cm}
+Python has built-in other data structures which are used to store collections of data.
+Their elements can be of any type, for example a list can contain strings together with integers and also other lists nested. 
+This applies for all the following structures:
+\vspace{-.5cm}
 \begin{itemize}[noitemsep]    
     \item Set nature: \texttt{set}, \texttt{frozenset}.
     \item Sequence nature: \texttt{list}, \texttt{tuple}.
     \item Mapping nature: \texttt{dict}.
 \end{itemize}
-
-These structures are used to store collections of data whose the elements can be of any type. 
-For example a list can contain strings together with integers or reals but also other lists nested. 
-This applies for all the above structures.
+\vspace{-.5cm}
 
 %--------------------------------------------------------------------------
 A \texttt{set} in Python takes the same meaning as the mathematical object: a collection of any type of data that 
 i) is unordered and 
 ii) do not allow duplicate values. 
 In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant.
-Furthermore, notice that two equal elements, since they are not ordered, could not be distinguished between them. 
-Hence, duplicate values are not allowed.
+Furthermore, two equal elements, since they are not ordered, could not be distinguished between them. 
 A \texttt{frozenset} is an unchangeable set, once created, its content can not be modified. 
 
 
@@ -411,17 +456,16 @@ A \texttt{frozenset} is an unchangeable set, once created, its content can not b
 %PROGRAMMING PYTHON:
 %List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. ONLY FINITE IS POSSIBLE
 %Tuple: Same as list but it can not change (programming concept not related to maths)
-A \texttt{list} extracts its meaning from the concept of sequence in mathematics: 
-enumerated collection of objects (usually infinite) in which repetitions are allowed and order matters.
-Notice that when programming, lists can not be infinite.
+A \texttt{list} extracts its meaning from the concept of sequence in mathematics,
+however, in programming lists can not be infinite.
 Hence, a list is characterised by being 
 i) ordered: the position within the list is kept, 
 ii) allow duplicates: items can appear more than one time in the list and  
 iii) changeable: change, add, and remove items are allowed.
-Notice that the difference between any two elements comes with the index within the list.
+In a list, the difference between any two elements comes with the index within the list.
+Notice that lists are not arrays or viceversa, in the sense that they come from completely different mathematical concepts. 
 
-A \texttt{tuple} also takes the mathematical definition of tuple: 
-a finite sequence. 
+A \texttt{tuple} also takes the mathematical definition of tuple (a finite sequence). 
 Since both tuples and lists are finite in the computer, the only difference between them are the changeability.
 Hence, a tuple is characterised by being 
 i) ordered: the position within the tuple is kept, 
@@ -437,18 +481,19 @@ A dictionary (\texttt{dict}) is similar to a list.
 It is ordered, changeable and can store any type of data (even other dictionaries nested).
 However, unlike lists, the values are stored in pairs: \texttt{key:value} and do not allow the same key for two elements.
 
-%To write a
-%Let's see an example:
-%\begin{verbatim}
-%    D = { ``Name'': ``John'', ``Age'': 32, ``Mark'': 7.3 }
-%\end{verbatim}
+
+
+
+
 
 
 
 \newpage
 Let's now take a look at some examples of use cases of these structures. 
 Notice that they do not need to be explicitly declared, 
-Python automatically does it.
+Python automatically does it. 
+The following notation is used to manually construct these structures: 
+\vspace{-0.5cm}
 \begin{itemize}[noitemsep]
     \item \textbf{Set:} Following the roster notation, it is defined by listing its elements between curly brackets and separated by commas.
     \newline Notice that \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
@@ -459,16 +504,36 @@ Python automatically does it.
     enclosed in curly brackets (\texttt{\{\}}) and 
     using a colon (\texttt{:}) to separate each pair. 
 \end{itemize}
-\vspace{0.3cm} 
+%\vspace{0.3cm} 
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/data_type} 
-\listingsp{\home/data_type.py}{def data_structures}{format}{data_type.py}
+\listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
 
 
 
 
 \newpage
-Sets, lists, tuples and dictionaries are iterable objects.
+Sets, lists, tuples and dictionaries are iterable structures since they all contains a countable number of elements.
+Every iterable object can use the \texttt{iter()} method to create an iterator from the data structure.
+Also, the \texttt{next()} method is used to jump to the next element in the iterator (\texttt{ite} is created and iterated in the code above).
+
+However, a more straightforward way involves using loops to iterate through the iterable object.
+Two main strategies can be followed: 
+\begin{enumerate}
+    \item \textbf{Iterating in the elements of the structure.} 
+    In the code above the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
+    by means of \texttt{s} and \texttt{k} respectively. 
+    All iterable structures are iterable in their elements.  
+    \item \textbf{Iterating in the index.}
+    In the code above both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
+    While lists and tuples are easily iterable on their indices, 
+    sets are not subscriptable (they do not have order) and 
+    dictionaries need keys as subscripts and not indices. 
+\end{enumerate} 
+
+Notice that \texttt{range(start, stop, step)}, with \texttt{start} and \texttt{step} optional arguments, returns a sequence of numbers between the given range.
+When only \texttt{stop} is specified (see examples) the iterator starts in \texttt{0} and do not include the stop number itself.
+All the arguments of \texttt{range()} are integers, hence, the function \texttt{len()} is used to find the length of the structure to be iterated. 
 
 
 
@@ -481,7 +546,7 @@ Sets, lists, tuples and dictionaries are iterable objects.
 %future?
 %\texttt{ (/ list /) } is not used as constructor.
 
-
+%enumerate en Python futuro?
 
 %For sets with many elements, especially those following an implicit pattern,
 %the list of members can be abbreviated using an ellipsis ``...''.
@@ -499,6 +564,8 @@ Sets, lists, tuples and dictionaries are iterable objects.
 
 \newpage
     \section{Maths operators}
+    
+    
 Arithmetic operator 
 Comparison operator 
 Logical operator 
@@ -552,6 +619,10 @@ or extract both the index and the value of the element using:
 
 
     \section{Assignment operators}
+
+
+
+
 
 
     \section{Flow structures}

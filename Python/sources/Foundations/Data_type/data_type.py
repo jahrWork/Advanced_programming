@@ -65,3 +65,15 @@ def data_structures():
   ite = iter( ("one", 5, 3.5, 5) )
   print( next(ite) )
   print( next(ite) ) #returns StopIteration when no more elements. 
+
+
+def Operators(): 
+
+  x = 7.; y = 2.
+  Primes = {2, 3, 5, 7, 9, 11, 13, 17, 19}
+     
+  print( "x*(2+3j) + y/( x**2 + x ) ) = ", x*(2+3j) + y/( x**2 + x ) ) 
+  print( "(7//2)*2 + 7%2 == 7 = ", (7//2)*2 + 7%2 == 7 )
+  print( "( ( x >= y ) and ( 1/x <= 1/y ) ) == True = ",
+                 ( ( x >= y ) and ( 1/x <= 1/y ) ) == True ) 
+  print( "(1 in Primes) or (3 in Primes) = ", (1 in Primes) or (3 in Primes) )

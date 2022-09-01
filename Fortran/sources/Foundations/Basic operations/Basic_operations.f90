@@ -36,12 +36,11 @@ contains
  
  subroutine Operators()
  
-     integer :: int = 3
      real :: x = 7., y = 2.
-     complex :: c = (2,3)
-     logical :: bool = .true.
      
-     write(*,*) "x*c + y/( x**2 + x ) = ", x*c + y/( x**2 + x ) 
+     write(*,*) "x*(2,3) + y/( x**2 + x ) = ", x*(2,3) + y/( x**2 + x ) 
+     write(*,*) "( ( x >= y ) .and. ( 1/x <= 1/y ) ) .eqv. .true. = ", &
+                 ( ( x >= y ) .and. ( 1/x <= 1/y ) ) .eqv. .true.
          
  end subroutine 
  

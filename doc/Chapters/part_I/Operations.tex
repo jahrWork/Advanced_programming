@@ -28,10 +28,15 @@ To translate these instructions each programming language offers a bunch of buil
 Most programming languages have the same components as building blocks:
 \begin{itemize}[noitemsep]
     \item \textbf{Statements and Expressions:} Statements are all lines of code that instructs the compiler to perform a task.
-    There are several types of statements like assignments, procedures calls, input/output statements or flow control structures. 
+    There are several types of statements like assignments, procedures calls, input/output statements or control flow structures. 
     It is usually distinguished between statements and expressions. 
     The former are executed with no value as a result, only an instruction, 
     and the latter are evaluated to determine a resulting value.
+    \begin{itemize}
+        \item \textbf{Control flow structures:} These are the structures that, by means of keywords, allow to control the flow of data along the program. 
+        Essentially they allow the program to take decisions and execute instructions in a certain way depending on those decisions. 
+        The most basic control structures are the loops and the conditionals.  
+    \end{itemize}
     
     \item \textbf{Variables and data structures:} a variable is a tag that identifies a piece of data, 
     it's a reference to the memory space holding the data but not the data itself. 
@@ -48,10 +53,6 @@ Most programming languages have the same components as building blocks:
     logical operators (AND, OR, NOT) operators among others. 
     Sometimes the assignment operator (\texttt{=}) is also included in this classification, 
     however, it has a different nature compared to the rest. 
-    
-    \item \textbf{Control flow structures:} These are the structures that, by means of keywords, allow to control the flow of data along the program. 
-    Essentially they allow the program to take decisions and execute instructions in a certain way depending on those decisions. 
-    The most basic control structures are the loops and the conditionals. 
     
     \item \textbf{Comments:} This is a line of code that is not read or executed by the compiler and 
     that is intended to help the programmer understand the code.
@@ -665,7 +666,7 @@ with a different bunch of operators in order to work with them.
         For both Fortran and Python the relational operators are:
         \vspace{-0.5cm}
         \begin{itemize}[noitemsep]
-            \item \texttt{==} for the \textit{equal to} operator, 
+            \item \texttt{==} for the \textit{equal to} operator (notice that \texttt{=} is not used for this), 
             \item \texttt{/=} in Fortran and \texttt{!=} in Python for the \textit{not equal to} operator.
             \item \texttt{>} for the \textit{greater than} operator,
             \item \texttt{<} for the \textit{less than} operator,
@@ -709,12 +710,20 @@ with a different bunch of operators in order to work with them.
       
         \newpage
         \subsection*{Fortran code}
-
+        The following Fortran code shows some mixed expressions that use the previous operators. 
+        \vspace{0.5cm}
+        \lstfor
+        \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+        \listings{\home/Basic_operations.f90}{subroutine Operators}
+        {end subroutine}{Basic_operations.f90}
 
 
         \subsection*{Python code}
-        
-        
+        The following Python code shows some mixed expressions that use the previous operators. 
+        \vspace{0.5cm} 
+        \lstpython
+        \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+        \listingsp{\home/data_type.py}{def Operators}{1 in Primes}{data_type.py}
         
         
         
@@ -723,30 +732,68 @@ with a different bunch of operators in order to work with them.
 %Luego hay funciones y metodos de objetos para hacer un monton mas de operaciones de todo tipo. 
 %In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
 
+    \newpage
+    \section{Assignment operator}
+The assignment operator is different from the rest of operators in the sense that its 
+definition does not come from pure mathematics. 
+It is based on the assignment statement, already mentioned in the introduction of this section. 
+In programming we have seen that the variables are built by 
+a memory storage location tagged with a symbolic name.
+While the name is just a tag to identify the variable,
+the content of the memory location is the data itself. 
+Essentially, this operator sets or re-sets the value stored in that memory location (data) using its name. 
 
-    \section{Assignment operators}
+To do that the assignment statement is used: 
+
+\texttt{name = expr}
+ 
+This statement works from right to left, first the expression \texttt{expr} on the right is evaluated and
+when it is done, the data resulted is charged in the memory location tagged by \texttt{name}.
+According to John Backus in his article ``Can Programming Be Liberated from the von Neumann Style?'' 
+this operator splits the programming languages into two worlds: 
+a world of expressions with strong algebraic properties \texttt{expr} and 
+a world of statements with few mathematical properties \texttt{name =}.
 
 
 
+    \section{Control Flow statements}
+In order to translate the algorithm to the programming language another kind of statement is needed, 
+the control flow statements. 
+All the statements in a program are executed from top to bottom but 
+the control flow statements modify this behaviour by including decisions, 
+loops, branches, separate blocks execution, etc. 
+Let's review some essential statements commonly used, 
+specially in imperative programming languages 
+(we will delve into the concepts of imperative and declarative languages later in this book).
 
 
-
-    \section{Flow structures}
-
-if 
-where 
-iterators: list, tuples, arrays, sets, dictionaries (key, value)
-
-
-
-for k in D   dictionary iterates in key 
-for k in D.keys()   dictionary iterates in keys
-for v in D.values()   dictionary iterates in values
+        \subsection*{Conditionals}
+        
+        
+        
+        \subsection*{Loops}
+        
+        
+        
+        \subsection*{Iterators}
+        
+        iterators: list, tuples, arrays, sets, dictionaries (key, value)
+        for k in D   dictionary iterates in key 
+        for k in D.keys()   dictionary iterates in keys
+        for v in D.values()   dictionary iterates in values
+        
+    
+    
+    
+    
+        
+%where??
 
 
     \newpage 
     \section{Roots of a second degree equation} 
-In this section, a program to obtain the roots of a second order equation is presented:  
+In this section all of the concepts presented above are put into practice, 
+a program to obtain the roots of a second order equation is presented:  
 $$
 a x^2 + b x + c = 0, \qquad \forall \ a, b, c \in \mathbb{R}.
 $$
@@ -764,9 +811,9 @@ Solving the unknown $x$, the well known formula for the roots is obtained:
 \end{equation} 
 If the discriminant $ d = b^2 - 4 a c $ is less than zero, roots become complex. 
 In the following code, complex solutions given by (\ref{x12}) are implemented. 
-Note that the discriminant $ d $ was defined as a complex variable to avoid math problems 
-when the discriminant is negative. Whereas the root of a real negative number is not defined,
-the root of a negative number has a value for complex numbers. 
+Note that the discriminant $ d $ was defined as a complex variable to avoid maths problems 
+when the discriminant is negative. Whereas negative numbers do not have real square roots, 
+they have a value within the set of complex numbers. 
  
 \vspace{0.5cm}
 \renewcommand{\home}{./Fortran/sources/Foundations/Roots} 
@@ -774,9 +821,9 @@ the root of a negative number has a value for complex numbers.
 \listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{Roots.f90}
 
 
-\newpage 
-\subsection*{Python code}
-The same function is presented below coded with Python. Essentially both codes are quite similar, 
+        \newpage 
+        \subsection*{Python code}
+The same function is presented now coded with Python. Essentially both codes are quite similar, 
 however, now data types for variables are not explicitly declared because 
 Python automatically declares them. In addition, indentation rules must be strictly followed. 
 \vspace{0.5cm} 

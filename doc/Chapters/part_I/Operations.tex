@@ -2,30 +2,36 @@
 
 
     \section{Introduction} 
-This chapter introduces some of the most basic ingredients that support the programming.
-Data types, data structures, maths operators or flow structures are some of the most basic concepts needed to code in any programming language. 
-But first let's put them in context. 
+    \vspace{-0.7cm}
+This chapter introduces some of the most basic ingredients of computer programming 
+using its foundational concepts of mathematics.
+Data types, data structures, maths operators or control flow structures 
+find their origins in mathematical objects.
+In a given branch of mathematics, an object is anything that can be formally defined and 
+which is subject of deductive reasoning. 
+For example, the numbers are objects in the numbers theory and
+all algebraic structures are objects in abstract algebra.
+But first let's give some context. 
 
-An algorithm in mathematics is a finite sequence of unambiguous instructions to solve a specific problem. 
-Notice that this definition involves that the algorithm ends in a finite number of steps, 
-the sequence of instructions that yields the output are numbered and followed in their numerical order and
-inputs, instructions and outputs must be properly identified. 
+An \textbf{algorithm} in mathematics is a finite and ordered sequence of unambiguous instructions to solve a specific problem. 
+Notice that this definition involves that i) the algorithm ends in a finite number of steps, 
+ii) the sequence of instructions that yields the output are followed in their numerical order and
+iii) inputs, instructions and outputs must be properly identified. 
 
-The problem can be seen as a function between a bunch of inputs and their associated outputs.
-If we particularize it on a specific set of inputs we have an instance of that problem, 
-then, we need an algorithm to solve the instance.
-The theory of computation gives the basis for the automatic processing of the algorithm, it needs from a 
-problem to solve, an algorithm that solves it and a machine to compute it 
-and gives answers for example to how efficiently the problem is going to be solved. 
+The \textbf{problem to solve} can be seen as a function between a bunch of inputs and their associated outputs.
+The algorithm solves and instance of this function, which means, its particularization on a specific set of inputs.
+Given a problem, an algorithm to solve it and a machine, 
+the \textbf{theory of computation} gives the basis for the automatic processing of the algorithm
+and answers things like how efficiently the problem is solved. 
 
-To take advantage of the use of machines that compute the algorithm automatically we use programs.
-The program or code is the translation of the algorithm expressed in a mathematical language to a language understood by 
-the machine, the programming language. 
+To use \textbf{machines} we need to speak their language.
+The \textbf{program} or code is the translation of the algorithm (mathematical language) 
+to a language understood by the machine, the programming language. 
 
-In conclusion, the algorithm breaks down a complex problem into simpler instructions 
-and the program translates those steps so the machine can understand them. 
-To translate these instructions each programming language offers a bunch of building blocks.
-Most programming languages have the same components as building blocks:
+In conclusion, 
+an algorithm breaks down a complex problem into simpler instructions 
+and then is translated into a program so the machine can understand it. 
+Most programming languages have the same components as building blocks to translate these instructions:
 \begin{itemize}[noitemsep]
     \item \textbf{Statements and Expressions:} Statements are all lines of code that instructs the compiler to perform a task.
     There are several types of statements like assignments, procedures calls, input/output statements or control flow structures. 
@@ -62,7 +68,7 @@ Most programming languages have the same components as building blocks:
 
 Some other keywords and characters are usually reserved by the programming language in order to perform different tasks. 
 These keywords depend on each language and can be used for example to 
-group numbers (parenthesis), 
+group expressions (parenthesis), 
 delimit characters (\texttt{''}), 
 indicate classes or methods,
 break lines of code, etc.
@@ -116,18 +122,17 @@ Finally, the complex numbers ($\mathbb{C}$) extends the real numbers using the i
 This equation does not have solution among the real numbers and, 
 once introduced the imaginary unit, every complex number can be expressed as $a+bi$ where $a,b\in\mathbb{R}$. 
 
-In the context of the elementary algebra, some operations are defined for the elements of each of these sets.
-Furthermore, the operations together with the sets accomplish with a bunch of algebraic properties that give them 
-a ring structure to the integers 
-or a field structure in the case of reals or complex numbers. 
+In the context of the elementary algebra, some operations are defined for the elements of each of these sets, addition and multiplication.
+Furthermore, the properties of these operations give a ring structure to the integers 
+and a field structure to reals and complex. 
 
-In a different context, the Boolean algebra, the values of the variables are the truth values: true and false instead of numbers.
+In a different context, the Boolean algebra, the values of the variables are the truth values: true, false, instead of numbers.
 Also, the basic operations are conjunction (and), disjunction (or) and negation (not) instead of binary operations like addition and multiplication.
 
 In a similar way, each constant, variable, array or function in a programming language has an intrinsic data type associated. 
 This type decides, among other things, the allowed values that the entity can have and the set of operations that can be performed with them.
-For example, the set of integers in mathematics are represented in a programming language through \texttt{integer} data type. 
-Then, a value $x\in \mathbb{Z}$ will be stored in an \texttt{integer} variable and operations like addition, multiplication or exponentiation are allowed. 
+For example, the set of integers in mathematics is represented in a programming language through \texttt{integer} data type. 
+Then, a value $i\in\mathbb{Z}$ will be stored in an \texttt{integer} variable that admits addition, multiplication or exponentiation. 
 
 The data typing in a programming language is explicit when the programmer needs to decide and declare the type for each variable or implicit when the language assumes it. 
 Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
@@ -140,8 +145,7 @@ Fortran, on the contrary, is a explicit typing language because all variables mu
         \subsection*{Fortran code}
 
 Fortran provides five intrinsic data types. 
-Derived data types can be created either from intrinsic data types or from other derived types previously defined 
-and they behave similarly to the data structures treated later.
+Derived data types can be created either from intrinsic types or from other derived types previously defined.
 The five intrinsic types are:
 \begin{itemize}
     \item Numeric nature: \texttt{integer}, \texttt{real}, \texttt{complex}. 
@@ -757,11 +761,10 @@ a world of statements with few mathematical properties \texttt{name =}.
 
 
     \section{Control Flow statements}
-In order to translate the algorithm to the programming language another kind of statement is needed, 
-the control flow statements. 
+In order to translate the steps of an algorithm to the programming language the control flow statements are needed. 
 All the statements in a program are executed from top to bottom but 
 the control flow statements modify this behaviour by including decisions, 
-loops, branches, separate blocks execution, etc. 
+loops, branches, separate block executions, etc. 
 Let's review some essential statements commonly used, 
 specially in imperative programming languages 
 (we will delve into the concepts of imperative and declarative languages later in this book).

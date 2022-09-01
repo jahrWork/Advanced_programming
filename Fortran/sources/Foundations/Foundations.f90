@@ -42,10 +42,8 @@ do ! Basic programming examples
          call Hello_world()
           
      case(2) 
-         call Data_types()
-         call Data_structures()
-         call Operators()
-         call Roots_2th()
+         call Data_types(); call Data_structures()
+         call Operators();  call Roots_2th()
          
      case(3) 
          call Summation_n2_examples()

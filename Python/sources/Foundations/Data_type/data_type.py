@@ -1,4 +1,5 @@
-from numpy import array, zeros
+from numpy import array, zeros, conjugate, real, imag, sqrt
+from re import split
 
 def data_types(): 
 
@@ -77,3 +78,27 @@ def Operators():
   print( "( ( x >= y ) and ( 1/x <= 1/y ) ) == True = ",
                  ( ( x >= y ) and ( 1/x <= 1/y ) ) == True ) 
   print( "(1 in Primes) or (3 in Primes) = ", (1 in Primes) or (3 in Primes) )
+
+
+
+def input_Complex():
+  
+  # read real and imaginary parts using function split()
+  x, y = [float(i) for i  in split( "\s", input("Enter x, y: ") ) ] 
+  print("Values x, y: ", x, y) 
+  z = complex(x, y)
+
+  # read real and imaginary parts using objects and .split() method
+  x, y =  input("Enter x, y: ").split()
+  x, y = [float(x), float(y)]  
+  z = complex(x, y)
+  
+  w = sqrt(z); print("sqrt(z) = ", w)
+
+  # real and imaginary parts using functions
+  print(real(w)); print(imag(w))
+
+  # real and imaginary parts using objects
+  print(w.real); print(w.imag)
+
+

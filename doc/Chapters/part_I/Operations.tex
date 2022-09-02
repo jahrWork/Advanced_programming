@@ -1,16 +1,16 @@
 \chapter{Basic operations} \label{chap:basicop}
 
-
+    \vspace{-1cm}
     \section{Introduction} 
     \vspace{-0.7cm}
 This chapter introduces some of the most basic ingredients of computer programming 
 using its foundational concepts of mathematics.
-Data types, data structures, maths operators or control flow structures 
+Data types, data structures, maths operators, etc.
 find their origins in mathematical objects.
 In a given branch of mathematics, an object is anything that can be formally defined and 
 which is subject of deductive reasoning. 
-For example, the numbers are objects in the numbers theory and
-all algebraic structures are objects in abstract algebra.
+For example, the numbers are objects in the Numbers Theory and
+all algebraic structures are objects in Abstract Algebra.
 But first let's give some context. 
 
 An \textbf{algorithm} in mathematics is a finite and ordered sequence of unambiguous instructions to solve a specific problem. 
@@ -18,7 +18,7 @@ Notice that this definition involves that i) the algorithm ends in a finite numb
 ii) the sequence of instructions that yields the output are followed in their numerical order and
 iii) inputs, instructions and outputs must be properly identified. 
 
-The \textbf{problem to solve} can be seen as a function between a bunch of inputs and their associated outputs.
+The \textbf{problem} to solve can be seen as a function between a bunch of inputs and their associated outputs.
 The algorithm solves and instance of this function, which means, its particularization on a specific set of inputs.
 Given a problem, an algorithm to solve it and a machine, 
 the \textbf{theory of computation} gives the basis for the automatic processing of the algorithm
@@ -27,55 +27,98 @@ and answers things like how efficiently the problem is solved.
 To use \textbf{machines} we need to speak their language.
 The \textbf{program} or code is the translation of the algorithm (mathematical language) 
 to a language understood by the machine, the programming language. 
-
-In conclusion, 
+Hence, 
 an algorithm breaks down a complex problem into simpler instructions 
 and then is translated into a program so the machine can understand it. 
 Most programming languages have the same components as building blocks to translate these instructions:
 \begin{itemize}[noitemsep]
-    \item \textbf{Statements and Expressions:} Statements are all lines of code that instructs the compiler to perform a task.
+    \item \textbf{Statements and Expressions:} Statements are all line of code that instructs the compiler to perform a task.
     There are several types of statements like assignments, procedures calls, input/output statements or control flow structures. 
-    It is usually distinguished between statements and expressions. 
-    The former are executed with no value as a result, only an instruction, 
-    and the latter are evaluated to determine a resulting value.
+    It is usually distinguished between statement and expression. 
+    The former is executed with no value as a result, only a compiler instruction, 
+    the latter is evaluated and ends with a resulting value.
     \begin{itemize}
         \item \textbf{Control flow structures:} These are the structures that, by means of keywords, allow to control the flow of data along the program. 
-        Essentially they allow the program to take decisions and execute instructions in a certain way depending on those decisions. 
-        The most basic control structures are the loops and the conditionals.  
+        The most basic control structures are the loops, which let instructions be repeated until a condition is reached and 
+        the conditionals, which allow to make decisions and execute instructions accordingly.  
     \end{itemize}
     
-    \item \textbf{Variables and data structures:} a variable is a tag that identifies a piece of data, 
-    it's a reference to the memory space holding the data but not the data itself. 
-    Actually, this data attached may change during the execution of the program. 
-    Some data types commonly found are integer, real, complex, logical or character.
-    In contrast, \textbf{constants} may also have a name but their attached data don't change during the execution.
+    \item \textbf{Variables and Data structures:} A variable involves a tag that identifies a memory location and 
+    the content of the memory, the data itself. 
+    This attached data, of different types (integer, real, character, etc.), may change during the execution of the program.
+    In contrast, \textbf{constants} may also have a name but the data don't change during the execution.
     Data structures are also used to store, organize and process data, 
     now arranged in a specific way so that it can be treated efficiently. 
     Some common data structures are arrays, sets, lists, tuples, trees, graphs, etc.
     
-    \item \textbf{Operators:} These are symbols that tells the compiler to perform operations of different kind in order to produce a result.
-    There are arithmetic (addition, subtraction, multiplication, division, etc.), 
-    relational (greater than, less than, equal to, different to, etc.) and 
-    logical operators (AND, OR, NOT) operators among others. 
+    \item \textbf{Operators:} Symbols that tell the compiler to perform operations of different kind in order to produce a result.
+    There are arithmetic operators ($+$, $*$, $-$, $/$, etc.), 
+    relational ($>$, $<$, $==$, etc.), 
+    logical operators (\texttt{AND}, \texttt{OR}, \texttt{NOT}), etc. 
     Sometimes the assignment operator (\texttt{=}) is also included in this classification, 
-    however, it has a different nature compared to the rest. 
+    however, it has a different nature. 
     
-    \item \textbf{Comments:} This is a line of code that is not read or executed by the compiler and 
-    that is intended to help the programmer understand the code.
+    \item \textbf{Functions, Procedures:} Procedures and functions in computer science are usually defined as 
+    named blocks of code that are called to perform a task, maybe accepting some input arguments and maybe returning some output values. 
+    Pure functions can be included here, the representation of the mathematical functions in programming. 
     
-    %\item \textbf{Procedures, Objects, etc:}
+    \item \textbf{Objects:} objects are constructions with 
+    \textit{state} (combinations of variables and data structures) and 
+    \textit{behaviour} (combinations of functions and methods) 
+    to represent concepts and objects of the real world. 
+    A complex number could be an object, 
+    whose state needs from variables: the real and imaginary parts, and 
+    whose behaviour involves addition, multiplication, conjugation among others. 
+    
+    \item \textbf{Comments:} Lines of code intended to help programmers understand the code, 
+    but which are not read or executed by the compiler.
 \end{itemize}
-
-Some other keywords and characters are usually reserved by the programming language in order to perform different tasks. 
-These keywords depend on each language and can be used for example to 
+\vspace{-0.5cm}
+Other \textbf{keywords and characters} are usually reserved by each programming language 
+in order to perform tasks like: 
 group expressions (parenthesis), 
 delimit characters (\texttt{''}), 
-indicate classes or methods,
-break lines of code, etc.
+break lines of code, 
+include more than one statement in a line, etc.
 
-Finally, there is a different kind of statement that is not part of the programming language itself 
-but also instructs the compiler to perform tasks; the compiler directives. 
-These statements cause the compiler to take a specific action during compilation and may vary from compiler to compiler.
+Finally, the \textbf{compiler/interpreter directives} are not part of the programming language itself 
+but also instructs the compiler to perform tasks. 
+These statements cause the compiler to take a specific action during compilation and 
+may vary from compiler to compiler.
+
+
+Let's see all these components together, 
+do not worry if the syntax of the languages or 
+the meaning of the keywords are not clear at this point. 
+The first example solves the roots of a second degree equation in Fortran and 
+the other example reads real and imaginary parts of a complex number with Python.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.95\textwidth]{./doc/Figures/components.png}
+    \caption{Main building blocks used to code in common programming languages.}
+    \label{fig:components}
+\end{figure}
+\FloatBarrier
+%THIS CODE IS USED TO GENERATE LATER THE IMAGE...
+%\vspace{0.5cm}
+%\renewcommand{\home}{./Fortran/sources/Foundations/Roots} 
+%\lstfor
+%\listings{\home/Roots.f90}{subroutine Roots_2th}{end subroutine}{}
+%
+%\renewcommand{\home}{./Python/sources/Foundations/Data_type} 
+%\lstpython
+%\listingsp{\home/data_type.py}{def input_Complex}{w.imag}{}
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 
 
 %MORE:
@@ -115,64 +158,72 @@ These statements cause the compiler to take a specific action during compilation
 Several objects are used to build the different branches of mathematics; numbers, operations, functions, sets, vectors, matrices, tensors and a large etcetera. 
 Let's review here the formal definition of some objects that later are represented in programming by means of the data types. 
 
+In mathematics, the numbers are usually classified into sets according to their nature.
 The set of integers $\mathbb{Z}$ includes the number zero (0), the natural numbers ($\mathbb{N} = \{ 1,2,3,... \}$) and their additive inverses, the negative numbers ($\{ -1,-2,-3,... \}$).
 The set of real numbers ($\mathbb{R}$) includes any number identified with a point on the real number line.
-This set includes both the set of rational numbers ($\mathbb{Q}$) and the set of irrational numbers.
-Finally, the complex numbers ($\mathbb{C}$) extends the real numbers using the imaginary unit, an element satisfying the equation $i^2 = -1$.
-This equation does not have solution among the real numbers and, 
-once introduced the imaginary unit, every complex number can be expressed as $a+bi$ where $a,b\in\mathbb{R}$. 
+$\mathbb{R}$ includes both the set of rational numbers ($\mathbb{Q}$) and the set of irrational numbers.
+Finally, the complex numbers ($\mathbb{C}$) extends the real numbers using the imaginary unit, an element satisfying the equation $i^2 = -1$, which does not have solution among the reals.
+Once introduced the imaginary unit, every complex number can be expressed as $a+bi$ where $a,b\in\mathbb{R}$. 
 
-In the context of the elementary algebra, some operations are defined for the elements of each of these sets, addition and multiplication.
-Furthermore, the properties of these operations give a ring structure to the integers 
-and a field structure to reals and complex. 
+The fact that a number belongs to one or another set is not only important from the classification point of view.
+It also comes with a long list of derived consequences which are essential to build mathematics. 
+Let's take for example $\mathbb{Z}$ equipped with the usual addition, multiplication and ordering. 
+Automatically we can assert that for any $a,b\in\mathbb{Z}$, $a\cdot b\in\mathbb{Z}$ and $a+b\in\mathbb{Z}$.
+Also, we do not have to worry about the order to operate them since $a+b=b+a$ and $a\cdot b = b\cdot a$.
+To mention other results, for $a,b>0$ then $a+b>0$, $a+b>a$, $a+b>b$, $a\cdot b>0$, $a\cdot b\geq a$, $a\cdot b\geq b$, the equation $a+x = 0$ has a unique solution $x\in\mathbb{Z}$, etc.
 
-In a different context, the Boolean algebra, the values of the variables are the truth values: true, false, instead of numbers.
-Also, the basic operations are conjunction (and), disjunction (or) and negation (not) instead of binary operations like addition and multiplication.
+Some properties are based on others until a whole theory around the integers is built. 
+The same happens with $\mathbb{N}$, $\mathbb{R}$, $\mathbb{C}$, etc. 
+When these mathematical objects are used in a computer, 
+we are not only using some specific values (elements of the set) but also
+all the properties and results attached to them. 
 
-In a similar way, each constant, variable, array or function in a programming language has an intrinsic data type associated. 
+Jumping to a different context like the Boolean algebra, the same principle applies.
+However, now the elements to consider are the truth values: \textit{true} and \textit{false}, instead of numbers.
+Also, the basic operations between these elements are conjunction (and), disjunction (or) and negation (not) 
+instead of binary operations like addition and multiplication.
+
+Hence, each constant, variable, array or function in a programming language has an intrinsic data type associated, 
+said in other words, a set to which they belong. 
 This type decides, among other things, the allowed values that the entity can have and the set of operations that can be performed with them.
 For example, the set of integers in mathematics is represented in a programming language through \texttt{integer} data type. 
-Then, a value $i\in\mathbb{Z}$ will be stored in an \texttt{integer} variable that admits addition, multiplication or exponentiation. 
-
-The data typing in a programming language is explicit when the programmer needs to decide and declare the type for each variable or implicit when the language assumes it. 
-Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
-Python is mainly an implicit typing language since we can assign a value to a variable without declaring type, i.e. \texttt{a = 3} will automatically treat \texttt{a} as an integer. 
-Fortran, on the contrary, is a explicit typing language because all variables must be previously declared with a specific type, i.e. \texttt{real :: x = 5.6}.
-
+Then, a value $i\in\mathbb{Z}$ will be stored in an \texttt{integer} variable that admits addition, multiplication or exponentiation.
 
 
         \newpage
         \subsection*{Fortran code}
-
 Fortran provides five intrinsic data types. 
 Derived data types can be created either from intrinsic types or from other derived types previously defined.
-The five intrinsic types are:
+The code below shows the declaration and initialization of the five intrinsic data types, which are:
 \begin{itemize}
     \item Numeric nature: \texttt{integer}, \texttt{real}, \texttt{complex}. 
     \item Boolean nature: \texttt{logical}.
     \item Text nature: \texttt{character}.
 \end{itemize}
-The numeric types behave like the mathematical abstractions of these sets, 
-roughly speaking: $n\in \mathbb{Z}$ is stored in an \texttt{integer}, 
-$x\in \mathbb{R}$ is stored in an \texttt{real} and 
-$z\in \mathbb{C}$ is stored in an \texttt{complex} variable.
-Many nuances to the equivalence between the programming concept and the mathematical abstraction for integers and reals are treated in the Part \ref{PartII} of this book. 
+Roughly speaking, a value $n\in \mathbb{Z}$ is stored in an \texttt{integer}, 
+$x\in \mathbb{R}$ is stored in a \texttt{real} and 
+$z\in \mathbb{C}$ is stored in a \texttt{complex} variable.
+Many nuances to the equivalence between the programming concept and the mathematical abstraction 
+for integers and reals are treated in the Part \ref{PartII} of this book. 
+
 The \texttt{logical} type gets the two possible values of the Boolean algebra; \texttt{True} and \texttt{False}. 
 Finally, the \texttt{character} type can store strings with ASCII characters which includes alphanumeric, symbols and sign characters.   
-
-Since Fortran is an explicit typing language, before using any variable, all must be previously declared with a specific type.
-The following program shows an example of the declaration and initialization of the five data types we can find. 
 \vspace{0.5cm}
 \lstfor
 \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
 \listings{\home/Basic_operations.f90}{subroutine Data_types}
 {end subroutine}{Basic_operations.f90}
 
+The data typing in a programming language is \textbf{explicit} when the programmer needs to decide and declare the type for each variable or \textbf{implicit} when the language assumes it. 
+Furthermore, while some programming languages allow the use of some data types as if they were a different type (weak typing) others does not (strong typing). 
+Since Fortran is an explicit typing language, before using any variable, all must be previously declared with a specific type.
+
+ 
+
 
 
         \newpage 
         \subsection*{Python code}
-
 The same five data types, also known as primitive data types, are built-in in Python but with a different name.
 In addition, Python also allows non-primitive data types (explained in this book as data structures)
 and user-defined data structures.
@@ -182,15 +233,13 @@ and user-defined data structures.
     \item Text nature: \texttt{str}.
 \end{itemize}
 
-Since Python is an implicit typing language don't declare the type of any variable and just initialize it.
+Since Python is mainly an implicit typing language notice that we don't declare the type of any variable and just initialize it.
 The following program shows an example of the initialization of the five data types we can find. 
 \vspace{0.5cm} 
 \renewcommand{\home}{./Python/sources/Foundations/Data_type} 
 \lstpython
-\listings{\home/data_type.py}{def data_types}
-{string}{data_type.py} 
-
-
+\listingsp{\home/data_type.py}{def data_types}
+{string}{data_type.py}
 
 
     \newpage
@@ -643,7 +692,13 @@ the set of operations that can be performed with them.
 The same applies to data structures, each structure can be operated 
 with a different bunch of operators in order to work with them. 
 
-
+%
+%In the context of the elementary algebra, some operations are defined for the elements of each of these sets, addition and multiplication.
+%Furthermore, the properties of these operations give a ring structure to the integers 
+%and a field structure to reals and complex. 
+%These properties among others build the structure of ring for the integers and much more properties can be derived.
+%Furthermore, when some results are proved for a set with their operations, 
+%any other set and operations following the same axioms
 
         \subsection*{Arithmetic operators}
         
@@ -741,10 +796,10 @@ with a different bunch of operators in order to work with them.
 The assignment operator is different from the rest of operators in the sense that its 
 definition does not come from pure mathematics. 
 It is based on the assignment statement, already mentioned in the introduction of this section. 
-In programming we have seen that the variables are built by 
+We have seen that the variables are built by 
 a memory storage location tagged with a symbolic name.
-While the name is just a tag to identify the variable,
-the content of the memory location is the data itself. 
+While the name is just a tag to identify the data,
+the content of the memory location (value) is the data itself. 
 Essentially, this operator sets or re-sets the value stored in that memory location (data) using its name. 
 
 To do that the assignment statement is used: 
@@ -833,7 +888,6 @@ Python automatically declares them. In addition, indentation rules must be stric
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/Roots} 
 \listingsp{\home/Roots.py}{from}{output}{Roots.py}
-%\lstfor
   
   
  

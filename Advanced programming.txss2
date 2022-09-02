@@ -6,14 +6,14 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "Advanced programming.tex",
+        "CurrentFile": "doc/Chapters/part_I/Operations.tex",
         "FileVersion": 1,
         "Files": [
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 38,
+                "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 215
             },
@@ -30,7 +30,7 @@
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Operations.tex",
                 "FirstLine": 0,
-                "FoldedLines": "3,105,191,279,379",
+                "FoldedLines": "3,155",
                 "Line": 4
             },
             {

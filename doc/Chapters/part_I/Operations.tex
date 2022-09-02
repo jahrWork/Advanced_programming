@@ -250,80 +250,106 @@ Also sets, vectors, tuples, matrices, tensors or sequences are used in the conte
 Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
 
 %set
-A set, with the definition given by Georg Cantor within the set theory, 
+A \textbf{set}, with the definition given by Georg Cantor within the set theory, 
 is a gathering together into a whole of definite, distinct objects of our perception or our thought, 
 which are called elements of the set.
 The elements of a set can be any mathematical objects: numbers, points in space, geometrical shapes, variables or other sets.
 However, every element of the set must be different from the others.
 
+%Let's build the set of the prime numbers up to 100 using the sieve of Eratosthenes:
+%$$
+%\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
+%$$
+
 Tuples and sequences are also collections of mathematical objects.
-However, a sequence is an enumerated collection, where repetitions are allowed and order matters.
-Unlike sets, since the elements follow an order, the elements can be repeated in different positions of the sequence.
+However, a \textbf{sequence} is an enumerated collection, where repetitions are allowed and order matters.
+Unlike sets, since the elements follow an order, they can be repeated in different positions of the sequence.
 A sequence can also be interpreted as a function from $\mathbb{N}$ (denoting the position within the sequence) to the elements.
 The length of the sequence is its number of elements and could be any finite value or infinite. 
-A tuples is a finite sequence, which means, a finite ordered lists of elements. 
+A \textbf{tuple} is a finite sequence, which means, a finite ordered lists of elements. 
 It is usually used the notation $n-$tuple for a list of $n$ elements, where $n$ is a non-negative integer.
 
 %vectors
-The concept of vector in mathematics has different formal definitions depending on the context.
+The concept of \textbf{vector} in mathematics has different formal definitions depending on the context.
 Historically the term vector was used for geometric vectors, objects that has magnitude and direction.
 However, a vector can be nowadays seen as a tuple or, in pure mathematics, as any element of a vector space. 
 
 Indeed, vectors considered as tuples of elements in a field $\mathbb{F}$, together with the common addition of vectors and the multiplication by an scalar in the field $\mathbb{F}$, build a vector space. 
-It is usually used $\mathbb{F}^{n}$ to denote the set of all $n-$tuples with entries in the field $\mathbb{F}$, that could be for example $\mathbb{R}$ or $\mathbb{C}$. 
+It is usually used $\mathbb{F}^{n}$ to denote the set of all $n-$tuples with elements from the field $\mathbb{F}$ (which could be for example $\mathbb{R}$ or $\mathbb{C}$). 
 Hence, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are 2-tuples and 3-tuples of reals and conform vector spaces with all its linear combinations.
-Notice that a vector can be represented by a one-dimensional arrangement of $n$ elements with respect to a given basis.
+Notice that, with this description, a vector is represented by a one-dimensional arrangement of $n$ elements. %with respect to a given basis.
 
-A matrix is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
-Matrices over a field $\mathbb{F}$ are those where all its \textit{elements} or \textit{entries} are elements of the field $\mathbb{F}$.
+A \textbf{matrix} is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
+Matrices over a field $\mathbb{F}$ are those where all its \textit{elements} or \textit{entries} belong to the field $\mathbb{F}$.
 If $\mathbb{F}$ is $\mathbb{R}$ or $\mathbb{C}$ it conforms real matrices or complex matrices respectively.
 It is usually used $\mathbb{F}^{n\times m}$ or  ${ \cal{M}}^{n \times m} (\mathbb{F})$ to denote the set of $n\times m$ matrices with entries in the field $\mathbb{F}$. 
-This set, together with the common addition of matrices and the multiplication by numbers (scalars) in the field $\mathbb{F}$ have the structure of vector space. 
+This set, together with the common addition of matrices and the multiplication by numbers (scalars) in the field $\mathbb{F}$ also has the structure of vector space. 
 Hence, the matrices are also vectors inherited from the vector space structure they present.
 
 %Tensors are NOT the generalization of scalars, vectors and matrices (no indices, one index, two indices) to an arbitrary number of indices. 
-The concept of tensor, like the concept of vector, also has different approaches. 
+The concept of \textbf{tensor}, like the concept of vector, also has different approaches. 
 Avoiding the formal definition let's consider here that a tensor can be represented as a potentially multidimensional array.
-The elements in this multidimensional array are called its scalar components and are denoted by indices denoting their position in the array.
+The elements in this multidimensional array are called scalar components and are denoted by indices with their position in the array.
 
 The standard notation for all these objects are as indicated below:
 \begin{itemize}
     \item Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$
-    \item Sequences and tuples are usually written between parenthesis $()$ or less often using square brackets $[]$ or angle brackets $\langle \rangle$: $(1,3,5,7,...)$
-    \item In a similar way vectors are usually enclosed in either parentheses $()$ or angle brackets $\langle \rangle$: $(1,2,3,4,5)$ or $\langle1,2,3,4,5 \rangle$
-    \item Matrices are commonly written with square brackets or parentheses:
+    \item Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$: $(1,3,5,7,...)$ %or angle brackets $\langle \rangle$: 
+    \item In a similar way vectors are usually enclosed in parentheses $()$: $(1,2,3,4,5)$ %or angle brackets $\langle \rangle$:  or $\langle1,2,3,4,5 \rangle$
+    \item Matrices are commonly written with square brackets: %or parentheses:
     
     $
     \begin{bmatrix}
         1 & 2 & 3 \\
         4 & 5 & 6
     \end{bmatrix} 
-    $ or $
-    \begin{pmatrix}
-        1 & 2 & 3\\
-        4 & 5 & 6
-    \end{pmatrix}   
     $
+%    $ or $
+%    \begin{pmatrix}
+%        1 & 2 & 3\\
+%        4 & 5 & 6
+%    \end{pmatrix}   
+%    $
     \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
     For example $\alpha_{ijkl}$ is a rank 4 tensor.
 \end{itemize}
+%\begin{itemize}
+%    \item Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$
+%    \item Sequences and tuples are usually written between parenthesis $()$ or less often using square brackets $[]$ or angle brackets $\langle \rangle$: $(1,3,5,7,...)$
+%    \item In a similar way vectors are usually enclosed in either parentheses $()$ or angle brackets $\langle \rangle$: $(1,2,3,4,5)$ or $\langle1,2,3,4,5 \rangle$
+%    \item Matrices are commonly written with square brackets or parentheses:
+%    
+%    $
+%    \begin{bmatrix}
+%        1 & 2 & 3 \\
+%        4 & 5 & 6
+%    \end{bmatrix} 
+%    $ or $
+%    \begin{pmatrix}
+%        1 & 2 & 3\\
+%        4 & 5 & 6
+%    \end{pmatrix}   
+%    $
+%    \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
+%    For example $\alpha_{ijkl}$ is a rank 4 tensor.
+%\end{itemize}
 
 In a programming language all these objects are represented by different data structures.
 Fortran for example does not include tuples, sets or sequences, but vectors, matrices and tensors are represented by arrays. 
-On the contrary, Python has built-in the structures of sets and tuples among others and arrays are available in the library \texttt{NumPy}.  
+On the contrary, Python has built-in the structures of sets and tuples among others and arrays are available in the \texttt{NumPy} library.  
 
 With the Fortran examples below the following concepts are covered:
 \begin{enumerate}[noitemsep]
     \item Declaring arrays: type, rank and dimension.
     \item Initialize arrays: constructors. 
-    \item Iterators for arrays: sectors or slices. 
+    \item Iterators for arrays, sectors or slices. 
 \end{enumerate}
 
 Also, with the Python examples, the following concepts are treated:
 \begin{enumerate}[noitemsep]
     \item Constructors, iterators and slices for NumPy arrays.
     \item Using sets, lists, tuples and dictionaries: constructors.
-    \item Iterators for data structures.
+    %\item Iterators for data structures.
 \end{enumerate}
 
 
@@ -343,7 +369,7 @@ A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j
 $$
 An array, either representing a vector, a matrix or a tensor, is properly \textbf{declared} when it has 
 type, rank and dimension (or extent) (see Figure \ref{fig:arrays}). 
-The data type has already been treated before, in these examples we are using \texttt{real}. 
+The data type has already been treated before, in these examples we are using \texttt{real} vectors and matrices. 
 The rank; the number of dimensions in the array, is 1 for column vectors, 2 for matrices and can be higher for higher dimension tensors.
 The extent of each particular dimension is its length; the number of elements in that dimension.
 \begin{IN}
@@ -465,15 +491,15 @@ Three ways are commonly used to manually construct an array:
 These arrays can be \textbf{iterated} using an index in each dimension and 
 \textbf{slicing} is also allowed.
 Notice here that NumPy arrays, contrary to Fortran, are row-major order. 
-This means that arrays store the data by rows and 
-then \texttt{C[1:3 ,2:4] = [ [1.,2.], [3.,4.] ]} will be assigned by rows. 
+This means that arrays store the data by rows and then, in the previous example 
+\texttt{C[1:3 ,2:4] = [ [1.,2.], [3.,4.] ]} will be assigned by rows. 
 
 Similarly to Fortran, the colon symbol iterates in a whole dimension (see \texttt{C[:,1]} in the example above) and 
 alternate values can be selected by specifying lower and upper bound and the jump between values.
 However, the example \texttt{B(-2:4:3,:)} made with Fortran can not be copied because:
 \begin{IN}
 In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} and
-the stop value of the slices is never reached. 
+stop 1 before the final bound.  
 \end{IN}
 
 
@@ -486,12 +512,12 @@ the stop value of the slices is never reached.
 
 \vspace{0.5cm}
 Python has built-in other data structures which are used to store collections of data.
-Their elements can be of any type, for example a list can contain strings together with integers and also other lists nested. 
+Their elements can be of any type: strings together with integers and reals, lists nested in lists, sets within tuples, etc. 
 This applies for all the following structures:
 \vspace{-.5cm}
 \begin{itemize}[noitemsep]    
     \item Set nature: \texttt{set}, \texttt{frozenset}.
-    \item Sequence nature: \texttt{list}, \texttt{tuple}.
+    \item Sequence nature: \texttt{list}, \texttt{tuple}, \texttt{range}.
     \item Mapping nature: \texttt{dict}.
 \end{itemize}
 \vspace{-.5cm}
@@ -531,7 +557,8 @@ iii) unchangeable: once created, it can not be modified.
 For tuples, Python allocates the required memory once and not reallocates it. 
 This becomes a more memory efficient strategy to follow when the data is going to be immutable.
 
-
+A \texttt{range} structure is similar to a tuple in all the senses, but with the difference that a range 
+cannot produce the same number twice. The sequence of numbers in a range is strictly increasing or decreasing. 
 
 %--------------------------------------------------------------------------
 A dictionary (\texttt{dict}) is similar to a list.
@@ -539,13 +566,6 @@ It is ordered, changeable and can store any type of data (even other dictionarie
 However, unlike lists, the values are stored in pairs: \texttt{key:value} and do not allow the same key for two elements.
 
 
-
-
-
-
-
-
-\newpage
 Let's now take a look at some examples of use cases of these structures. 
 Notice that they do not need to be explicitly declared, 
 Python automatically does it. 
@@ -553,51 +573,24 @@ The following notation is used to manually construct these structures:
 \vspace{-0.5cm}
 \begin{itemize}[noitemsep]
     \item \textbf{Set:} Following the roster notation, it is defined by listing its elements between curly brackets and separated by commas.
-    \newline Notice that \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
-    are the same set since repetition and order change do not modify it.
+    Notice that the sets \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
+    are the same since repetition and order change do not modify it.
     \item \textbf{List:} Written using square brackets \texttt{[]} with comma-separated values.
     \item \textbf{Tuple:} Written using parenthesis \texttt{()} with comma-separated values. 
     \item \textbf{Dictionary:} It has its list of elements separated by commas, 
     enclosed in curly brackets (\texttt{\{\}}) and 
     using a colon (\texttt{:}) to separate each pair. 
 \end{itemize}
-%\vspace{0.3cm} 
+\vspace{0.3cm} 
 \lstpython
-\renewcommand{\home}{./Python/sources/Foundations/data_type} 
-\listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
+%\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+%\listingsp{\home/data_type.py}{def data_structures}{temp}{data_type.py}
+\begin{lstlisting}
+ESTO ERAN LOS EJEMPLOS BASICOS PERO LOS HE MOVIDO A ITERADORES, 
+AQUÍ VOY A PONER COSAS MAS MATEMATICAS
+\end{lstlisting}
 
 
-
-
-\newpage
-Sets, lists, tuples and dictionaries are iterable structures since they all contains a countable number of elements.
-Every iterable object can use the \texttt{iter()} method to create an iterator from the data structure.
-Also, the \texttt{next()} method is used to jump to the next element in the iterator (\texttt{ite} is created and iterated in the code above).
-
-However, a more straightforward way involves using loops to iterate through the iterable object.
-Two main strategies can be followed: 
-\begin{enumerate}
-    \item \textbf{Iterating in the elements of the structure.} 
-    In the code above the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
-    by means of \texttt{s} and \texttt{k} respectively. 
-    All iterable structures are iterable in their elements.  
-    \item \textbf{Iterating in the index.}
-    In the code above both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
-    While lists and tuples are easily iterable on their indices, 
-    sets are not subscriptable (they do not have order) and 
-    dictionaries need keys as subscripts and not indices. 
-    \item \textbf{Iterate in both the index and the element.} 
-    In the code above the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
-    by means of the \texttt{eunmerate()} function.
-    While lists and tuples are easily iterable on their indices, 
-    sets are not subscriptable (they do not have order) and 
-    dictionaries should be better iterated using their keys.
-\end{enumerate} 
-
-Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
-All its arguments are integers and \texttt{start} and \texttt{step} are optional.
-When only \texttt{stop} is specified (see the examples above) the iterator starts in \texttt{0} and do not include the stop number itself.
-The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
 
  
 
@@ -621,15 +614,18 @@ The function \texttt{len()} is used to find the length of the structure to be it
 
 
 
-\newpage
+    \newpage
     \section{Maths operators}
-In mathematics, rings, fields, groups, vector spaces and more algebraic structures 
+We mentioned before that a lot of properties are derived from the structure of the integers with the usual addition and multiplication and their properties. 
+Well, in mathematics: rings, fields, groups, vector spaces and more algebraic structures 
 are built with the following ingredients:
+\vspace{-0.6cm}
 \begin{enumerate}[noitemsep]
     \item A nonempty set $A$.
     \item Some operations on $A$.
     \item A finite set of axioms that these operations must satisfy.   
 \end{enumerate}
+\vspace{-0.6cm}
 We can consider for example the set of reals together 
 with the operations of addition and multiplication 
 and the following axioms: 
@@ -640,28 +636,39 @@ distributivity of multiplication over addition.
 Then, the field $\{\mathbb{R}, +, \times\}$ is built. 
 
 A big amount of consequences are derived from the fact that we are working with a field:
-some equations are proved to have unique solutions, subtraction and division
+some equations are proved to have unique solutions, subtraction and division (except by 0)
 can be performed, every Cauchy sequence has a limit, etc. 
 
 We have seen before that the intrinsic data types appear as a need of representing 
 some essential mathematical sets like the reals, the integers, the complex numbers or
 the truth values. 
-In the same way, the mentioned operations are reproduced in the programming language 
+In the same way, the mentioned \textbf{arithmetic operations} are reproduced in the programming language 
 so the whole potential of algebraic structures are transmitted to the computer. 
+
+Let's consider for the examples below a well known equality, the Euler's identity:
+$$
+e^{i\pi}+1 = 0
+$$
 
 However, the arithmetic operators are not the only essential operators in mathematics, 
 in the context of an ordered field like the mentioned $\{\mathbb{R}, +, \times\}$
 any two elements can be compared with the usual ordering, which is derived from the 
 conventional counting and measuring order on $\mathbb{R}$. 
-The relational operators are used to compare any two numbers, $x, y \in \mathbb{R}$ for example. 
+The \textbf{relational operators} are used to compare any two numbers, $x, y \in \mathbb{R}$ for example. 
 Both numbers could accomplish with some of the following comparisons: 
 equals operator $x = y$, not equal $x\neq y$, less than $x < y$, greater than $x > y$, less or equal than $x \leq y$ and greater or equal than $x\geq y$. 
 Notice that the complex numbers do not have the structure of an ordered field and then, these operators are not useful in this context. 
 
-A logical operator on mathematical statements is used to combine one or more statements to create a new one. 
+Let's write in our code a simple inequality and check the fact that inequalities 
+must reverse their sign when both sides are multiplied or divided by a negative value. 
+For a given $x,y\in\mathbb{R}$ with $x\leq y$ or $x \geq y$ it is clear that:
+$$
+-x \geq -y \;\; \textrm{and} \;\; -x \leq -y \;\; \textrm{respectively}
+$$
+
+In the context of boolean algebra, a \textbf{logical operator} on mathematical statements is used to combine one or more statements to create a new one. 
 More than one operator can be used together in an statement building a compound operator. 
 Let's review some essential operators of this kind for the statements $P$ and $Q$:
-\newpage
 \begin{enumerate}[noitemsep]
     \item Conjunction of statements: $P \land Q$ is true when both $P$ and $Q$ are true.
     \item Disjunction of statements: $P\lor Q$ is true when at least $P$ or $Q$ is true.
@@ -673,9 +680,30 @@ Extending the use of propositional logic to the set theory, notice that an eleme
 do not have a truth value associated on their own, an element is not true or false by itself. 
 By including the relation between a member and a set as operator, true or false statements can be 
 built and used in the context of propositional logic. 
-For example, using the membership operator $\in$ we can say $3.5 \in \mathbb{R}$ is a true proposition. 
+For example, using the \textbf{membership operator} $\in$ we can say $3.5 \in \mathbb{R}$ is a true proposition. 
 Also the opposite operator can be considered, $3.5 \notin \mathbb{N}$ is a true proposition.
 
+Given the set 
+$\Pi = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \;\textrm{is prime}\}$ 
+and the set 
+$E = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \; \textrm{is even}\}$: 
+$$
+\Pi = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29\}
+$$
+$$
+E = \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30\}
+$$
+we can check first that the following assertion is false:
+$$
+(1\in P) \land (5\in P)
+$$
+and we can also check the first De Morgan's Law ($\neg (P\lor Q) \iff (\neg P \land \neg Q)$) for the assertions $P = a\in \Pi$ and $Q = a\in E$:
+$$
+\neg (a\in\Pi \lor a\in E) \to (\neg a\in\Pi \land \neg a\in E)
+$$
+$$
+(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
+$$
 
 
 Programming languages usually have built-in all these operators in their syntax,
@@ -703,27 +731,27 @@ with a different bunch of operators in order to work with them.
         \subsection*{Arithmetic operators}
         
         For both Fortran and Python the symbols for the main arithmetic operations are:
-        \vspace{-0.5cm}
+        \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
             \item \texttt{+} for the addition operator, 
             \item \texttt{-} for subtraction,
             \item \texttt{*} for multiplication,
             \item \texttt{/} for division and
             \item \texttt{**} for exponentiation.
+            
+            \vspace{0.3cm}
+            Python also includes the modular arithmetic operators (specially important when working with finite fields and cybersecurity):
+            \item \texttt{//} for the floor division: implementing the floor function over the result of the division, which means, it returns the greatest integer less than or equal to $x\in\mathbb{R}$ (ONLY PYTHON).
+            \item \texttt{\%} for the modulo operation: it returns the modulus of the division, its remainder after one number is divided by another (ONLY PYTHON).
         \end{itemize}
-        Python also includes the modular arithmetic operators, specially important in finite fields and several branches of the mathematics:
-        \vspace{-0.5cm}
-        \begin{itemize}[noitemsep]
-            \item \texttt{//} for the floor division: implementing the floor function over the result of the division, which means, it returns the greatest integer less than or equal to $x\in\mathbb{R}$.
-            \item \texttt{\%} for the modulo operation: it returns the modulus of the division, its remainder after one number is divided by another.
-        \end{itemize}
+        
         
         
         
         \subsection*{Relational operators}
-        
-        For both Fortran and Python the relational operators are:
         \vspace{-0.5cm}
+        For both Fortran and Python the relational operators are:
+        \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
             \item \texttt{==} for the \textit{equal to} operator (notice that \texttt{=} is not used for this), 
             \item \texttt{/=} in Fortran and \texttt{!=} in Python for the \textit{not equal to} operator.
@@ -736,29 +764,33 @@ with a different bunch of operators in order to work with them.
     
         
         \subsection*{Logical operators}
-        In Fortran the logical operators are:
         \vspace{-0.5cm}
+        In Fortran the logical operators are:
+        \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
-            \item \texttt{.and.} for the conjunction operator, 
-            \item \texttt{.or.} for the disjunction operator,
-            \item \texttt{.not.} for the negation operator,
-            \item \texttt{.eqv.} for the equivalent operator (true if both functional arguments have the same logical value) and
-            \item \texttt{.neqv.} for the non-equivalent operator (true if both functional arguments have different logical value).
+            \item \texttt{.and.} in Fortran, \texttt{and} in Python for the conjunction operator, 
+            \item \texttt{.or.} in Fortran, \texttt{or} in Python for the disjunction operator,
+            \item \texttt{.not.} in Fortran, \texttt{not} in Python for the negation operator,
+            
+            \vspace{0.3cm}
+            Fortran also includes the following:
+            \item \texttt{.eqv.} for the equivalent operator (true if both functional arguments have the same logical value, ONLY FORTRAN) and
+            \item \texttt{.neqv.} for the non-equivalent operator (true if both functional arguments have different logical value, ONLY FORTRAN).
         \end{itemize}
     
-        In Python the logical operators are:
-        \vspace{-0.5cm}
-        \begin{itemize}[noitemsep]
-            \item \texttt{and} for the conjunction operator, 
-            \item \texttt{or} for the disjunction operator and
-            \item \texttt{not} for the negation operator.
-        \end{itemize}
+%        In Python the logical operators are:
+%        \vspace{-0.5cm}
+%        \begin{itemize}[noitemsep]
+%            \item  for the conjunction operator, 
+%            \item  for the disjunction operator and
+%            \item  for the negation operator.
+%        \end{itemize}
         
         
         \subsection*{Membership operators}
-        
-        Python allows the membership operators for sets, lists, tuples and dictionary keys by using:
         \vspace{-0.5cm}
+        Python allows the membership operators for sets, lists, tuples and dictionary keys by using:
+        \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
             \item \texttt{in} for the $\in$ operator and
             \item \texttt{not in} for the $\notin$ operator.
@@ -767,8 +799,9 @@ with a different bunch of operators in order to work with them.
       
       
       
-        \newpage
+        %\newpage
         \subsection*{Fortran code}
+        \vspace{-0.5cm}
         The following Fortran code shows some mixed expressions that use the previous operators. 
         \vspace{0.5cm}
         \lstfor
@@ -778,11 +811,12 @@ with a different bunch of operators in order to work with them.
 
 
         \subsection*{Python code}
+        \vspace{-0.5cm}
         The following Python code shows some mixed expressions that use the previous operators. 
         \vspace{0.5cm} 
         \lstpython
         \renewcommand{\home}{./Python/sources/Foundations/data_type} 
-        \listingsp{\home/data_type.py}{def Operators}{1 in Primes}{data_type.py}
+        \listingsp{\home/data_type.py}{def Operators}{implies}{data_type.py}
         
         
         
@@ -813,6 +847,12 @@ this operator splits the programming languages into two worlds:
 a world of expressions with strong algebraic properties \texttt{expr} and 
 a world of statements with few mathematical properties \texttt{name =}.
 
+Several variations of the assignment operator are sometimes defined in languages like Python. 
+For example, 
+an operator that adds the right side operand with the left side and then assign the result to the left operand: \texttt{+=}.
+Also, an operator that multiplies the right operand with the left operand and then assign the result to left operand: \texttt{*=}.
+Like this, the following options are allowed: \texttt{-=}, \texttt{/=}, \texttt{\%=}, \texttt{//=}, \texttt{**=}, \texttt{\&=}, \texttt{|=}, \texttt{>>=}, \texttt{<<=}.  %\texttt{$^=$},
+
 
 
     \section{Control Flow statements}
@@ -835,16 +875,55 @@ specially in imperative programming languages
         
         \subsection*{Iterators}
         
-        iterators: list, tuples, arrays, sets, dictionaries (key, value)
-        for k in D   dictionary iterates in key 
-        for k in D.keys()   dictionary iterates in keys
-        for v in D.values()   dictionary iterates in values
+        When data structures were presented we already mentioned that both Python and Fortran 
+        use the index of each dimension as iterators in their arrays. 
+        Hence, using loops with different indices we can reference any element within the array.
         
-    
-    
-    
-    
+        Now we are going to see the iterators that can be used with structures like 
+        sets, lists, tuples, dictionaries and even strings in Python.    
+        Since all contain a countable number of elements they are considered iterable data structures. 
+        Three main strategies can be used:
+        \begin{enumerate}
+            \item \textbf{Iterating in the elements of the structure.} 
+            In the code below the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
+            by means of \texttt{s} and \texttt{k} respectively. 
+            All iterable structures are iterable in their elements, including strings.  
+            \item \textbf{Iterating in the index.}
+            In the code below both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
+            While lists, tuples and strings are easily iterable on their indices, 
+            sets are not subscriptable (they do not have order) and 
+            dictionaries need keys as subscripts and not indices. 
+            \item \textbf{Iterate in both the index and the element.} 
+            In the code below the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
+            by means of the \texttt{eunmerate()} function.
+            While lists, tuples and strings are easily iterable on their indices, 
+            sets are not subscriptable (they do not have order) and 
+            dictionaries should be better iterated using their keys.
+            
+            \item Dictionaries have two extra methods that simplifies the iteration, first one is 
+            \texttt{for k in D.keys()} to iterate in the keys 
+            and second \texttt{for v in D.values()} to iterate in the values. 
+        \end{enumerate} 
         
+        Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
+        All its arguments are integers and \texttt{start} and \texttt{step} are optional.
+        When only \texttt{stop} is specified (see the examples above) the iterator starts in \texttt{0} and do not include the stop number itself.
+        The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
+        
+        \newpage
+        \lstpython
+        \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+        \listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
+
+        Finally, notice that every iterable object can use the \texttt{iter()} method to create an iterator from the data structure and
+        the \texttt{next()} method to jump element in the iterator (see \texttt{ite} in the code above).
+        Actually, Python is using this kind of iteration behind the more straightforward options seen.
+ 
+ 
+ 
+ 
+ 
+ 
 %where??
 
 

@@ -1,4 +1,4 @@
-from numpy import array, zeros, conjugate, real, imag, sqrt
+from numpy import array, zeros, conjugate, real, imag, sqrt, exp, pi
 from re import split
 
 def data_types(): 
@@ -59,8 +59,16 @@ def data_structures():
   dictionaries = "ordered data values in key:value pairs"
   D = {"set":sets, "list":lists, "tuple":tuples, "dict":dictionaries} 
   
-  for k in D:     # mutable and do not allow duplicates"
+  for k in D:     # mutable and do not allow duplicates
      print("{:6} {} {}".format(k, ":", D[k]) )
+  print("\n") #temp
+
+  for k in D.keys():     
+     print("{:6} {} {}".format(k, ":", D[k]) )
+  print("\n")
+
+  for v in D.values():  
+     print("{}".format(v) )
   print("\n")
 
   ite = iter( ("one", 5, 3.5, 5) )
@@ -70,14 +78,18 @@ def data_structures():
 
 def Operators(): 
 
-  x = 7.; y = 2.
-  Primes = {2, 3, 5, 7, 9, 11, 13, 17, 19}
+  x = 2.; y = 7.
+  P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+  E = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+  e = exp(1.)
+  a = 2
      
-  print( "x*(2+3j) + y/( x**2 + x ) ) = ", x*(2+3j) + y/( x**2 + x ) ) 
-  print( "(7//2)*2 + 7%2 == 7 = ", (7//2)*2 + 7%2 == 7 )
-  print( "( ( x >= y ) and ( 1/x <= 1/y ) ) == True = ",
-                 ( ( x >= y ) and ( 1/x <= 1/y ) ) == True ) 
-  print( "(1 in Primes) or (3 in Primes) = ", (1 in Primes) or (3 in Primes) )
+  print( "e^(i pi) + 1 = ", e**(1j*pi) + 1 )
+  print( "x <= y is ",  x <= y, " and then -x >= -y is also", -x >= -y )
+  print( "( ( x <= y ) and ( 1/x >= 1/y ) ) == True = ",
+                 ( ( x <= y ) and ( 1/x >= 1/y ) ) == True ) 
+  print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
+  print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )
 
 
 

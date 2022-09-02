@@ -410,10 +410,10 @@ For example the matrix \texttt{A} in the code is initialized using the \texttt{r
   
     
 %sectors, iterators... 
-In general, Fortran allows only one kind of \textbf{iterator} for arrays; 
-an index in the dimension whether it loops with an implicit or explicit loop.   
-This is intimately related to the \textbf{slicing} of an array: the initialization of \texttt{Y} in the example above use an slice of \texttt{A}.
-This can also be extended to a whole dimension of an array using the colon symbol, \texttt{C(:,2)} (see the example below and Figure \ref{fig:arrays}). 
+In Fortran the elements of the array are accessed using parenthesis notation and
+an index in each dimension can be used as \textbf{iterator}.
+This is intimately related to the \textbf{slicing}, for example the initialization of \texttt{Y} above use an slice of \texttt{A}.
+This can also be extended to a whole dimension using the colon symbol, \texttt{C(:,2)} (see the example below and Figure \ref{fig:arrays}). 
 Furthermore, alternate values can be selected by specifying a lower bound, an upper bound and the jump between values 
 (see the example below and Figure \ref{fig:arrays}), \texttt{B(-2:4:3,:)} being the value \texttt{3} the jump between rows.
 Notice that, since Fortran is a column major order language, functions like \texttt{reshape} and slicing treats the data by columns. 
@@ -480,15 +480,16 @@ Three ways are commonly used to manually construct an array:
     \item \textbf{Using an array expression:} \texttt{Y = A(1, 2:5)} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
     Notice that Python not only starts in \texttt{0} all the indices so \texttt{1} means the second column, 
     but also an slice like \texttt{2:5} ends in \texttt{4} so the slice takes columns \texttt{3} to \texttt{5}. 
-    \item \textbf{Using an implicit loop:} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
+    \item \textbf{Using an implicit loop (list comprehension):} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
 \end{enumerate}
-\vspace{0.5cm} 
+%\vspace{0.5cm} 
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/data_type} 
 \listingsp{\home/data_type.py}{def arrays}{by rows}{data_type.py}
 
 %sectors, iterators...    
-These arrays can be \textbf{iterated} using an index in each dimension and 
+In Python, the elements of the array are accessed using bracket notation, 
+the array can be \textbf{iterated} using an index in each dimension and 
 \textbf{slicing} is also allowed.
 Notice here that NumPy arrays, contrary to Fortran, are row-major order. 
 This means that arrays store the data by rows and then, in the previous example 
@@ -498,7 +499,7 @@ Similarly to Fortran, the colon symbol iterates in a whole dimension (see \textt
 alternate values can be selected by specifying lower and upper bound and the jump between values.
 However, the example \texttt{B(-2:4:3,:)} made with Fortran can not be copied because:
 \begin{IN}
-In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} and
+In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} (zero-indexing) and
 stop 1 before the final bound.  
 \end{IN}
 
@@ -557,8 +558,13 @@ iii) unchangeable: once created, it can not be modified.
 For tuples, Python allocates the required memory once and not reallocates it. 
 This becomes a more memory efficient strategy to follow when the data is going to be immutable.
 
-A \texttt{range} structure is similar to a tuple in all the senses, but with the difference that a range 
-cannot produce the same number twice. The sequence of numbers in a range is strictly increasing or decreasing. 
+A \texttt{range} structure is a sequence of integers that cannot produce the same number twice, 
+it is strictly increasing or decreasing. 
+This structure is more efficient than a list or tuple in the sense that only generates the values 
+of the sequence when are needed and do not store any values in memory. 
+Hence, they are efficiently used for loops.
+
+
 
 %--------------------------------------------------------------------------
 A dictionary (\texttt{dict}) is similar to a list.
@@ -581,6 +587,8 @@ The following notation is used to manually construct these structures:
     enclosed in curly brackets (\texttt{\{\}}) and 
     using a colon (\texttt{:}) to separate each pair. 
 \end{itemize}
+
+Notice that lists, tuples and dictionaries use the square brackets notation to access to their elements, similar to the NumPy arrays. 
 \vspace{0.3cm} 
 \lstpython
 %\renewcommand{\home}{./Python/sources/Foundations/data_type} 
@@ -907,7 +915,7 @@ specially in imperative programming languages
         
         Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
         All its arguments are integers and \texttt{start} and \texttt{step} are optional.
-        When only \texttt{stop} is specified (see the examples above) the iterator starts in \texttt{0} and do not include the stop number itself.
+        When only \texttt{stop} is specified (see the examples below) the iterator starts in \texttt{0} and do not include the stop number itself.
         The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
         
         \newpage

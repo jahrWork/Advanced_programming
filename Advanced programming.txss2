@@ -26,12 +26,12 @@
                 "Line": 2
             },
             {
-                "Col": 0,
+                "Col": 68,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Operations.tex",
                 "FirstLine": 0,
-                "FoldedLines": "3,155",
-                "Line": 4
+                "FoldedLines": "3,155,245,617,828,875,930",
+                "Line": 909
             },
             {
                 "Col": 14,

@@ -1,12 +1,12 @@
 {
     "InternalPDFViewer": {
         "Embedded": false,
-        "File": "Advanced programming.pdf"
+        "File": ""
     },
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "Advanced programming.tex",
+        "CurrentFile": "doc/Chapters/part_I/Operations.tex",
         "FileVersion": 1,
         "Files": [
             {
@@ -18,36 +18,36 @@
                 "Line": 215
             },
             {
-                "Col": 35,
+                "Col": 12,
                 "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/Overview.tex",
+                "FileName": "doc/Chapters/part_I/introduction.tex",
                 "FirstLine": 0,
-                "FoldedLines": "99,103,185,199,217,339,403,439,680,695,699,766,863,905,1003,1013",
-                "Line": 78
-            },
-            {
-                "Col": 33,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/Operations.tex",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 0
+                "FoldedLines": "24,43",
+                "Line": 2
             },
             {
                 "Col": 0,
                 "EditorGroup": 0,
+                "FileName": "doc/Chapters/part_I/Operations.tex",
+                "FirstLine": 0,
+                "FoldedLines": "3,155,245,625,836,865,875,938",
+                "Line": 909
+            },
+            {
+                "Col": 14,
+                "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/sum_series.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 7
             },
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/matrices.tex",
                 "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 0
+                "FoldedLines": "5,16",
+                "Line": 311
             },
             {
                 "Col": 0,
@@ -64,8 +64,17 @@
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 0
+            },
+            {
+                "Col": 2,
+                "EditorGroup": 0,
+                "FileName": "doc/Chapters/part_I/Overview.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 14
             }
         ],
-        "MasterFile": ""
+        "MasterFile": "",
+        "VerticalSplit": false
     }
 }

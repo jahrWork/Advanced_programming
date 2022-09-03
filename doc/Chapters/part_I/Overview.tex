@@ -1,82 +1,54 @@
 \chapter{Computer, programming languages and paradigms} 
 
-%Parrafo de intro a Python y Fortran
-Python and Fortran are both high-level programming languages, being the former the first high-level programming language and it was invented by John Backus for IBM in 1954.
-Python, which was developed by Guido van Rossum and first released in 1991, is a general-purpose programming language, this means that it is not specialized for any specific kind of problem. 
-It is usually used for data analytics, Artificial Intelligence and machine learning, to build websites or for data visualization among others. 
-However, the language together with the standard library is not prepared for numerical computing.
-Hence, four main libraries are used to extend its capabilities: \textit{numpy}, \textit{scipy}, \textit{matplotlib} and \textit{pandas}. 
-Fortran stands for \textit{Formula Translation} and was specifically created for scientific computing in 1957.
-Through the successive standards developed in its history, all the features needed to perform scientific computing are built in. 
-From a general point of view, Fortran is a compiled language statically and strongly typed projected for high performance computing and natively parallel.
-On the contrary, Python is an interpreted, dynamically and weakly-typed language. 
-
-
 %De qué va Foundations de forma historiada
-\textit{Python and Fortran foundations} tries to give the reader a first approach to implement numerical 
-problems in the computer. 
-The authors consider that a brief knowledge of the history of 
-computers and programming languages allow to understand how different programming skills or paradigms
-have evolved during the last decades. For this reason, a pleasant history tour is proposed 
-at the beginning of this chapter. The birth of computers, 
-the space race and the influence of profound mathematicians among other factors conformed 
-the origin of computing languages. Several movies and documentaries are recommended to 
-understand those naive and happy days and how geeks and nerds had a big influence in the first 
-stages of personal computer business.
+This chapter is intended to give the reader more context about the concepts treated before.  
+The following sections review some building blocks of the theory of computation 
+through the names of the people that worked on them: Turing, Church, Neumann and Backus.
 
-Then, the following sections revise some building blocks of the theory of computation 
-through the names of the people that worked on them: Turing, Church, Neumann and Backus. 
+Notice that each section from 6.1 to 6.4 extends the concepts treated in chapters 1 to 4.
+Concepts like model of computation, the Von Neumann architecture and how it influences a programming language are summarized in section \ref{sec:vonNeu}.
+The main ideas behind the imperative and declarative programming paradigms are treated in section \ref{sec:impvsdec}.
+Vector languages, another essential property desired for scientific computing are introduced in section \ref{sec:veclan}.
+Section \ref{sec:fpro} gives a theoretical description for Functional Programming, a paradigm usually included within the declarative paradigms. 
+ 
+Finally, the authors consider that a brief knowledge of the history of computers and programming languages 
+allow to understand how different programming skills or paradigms have evolved during the last decades. 
+For this reason, a pleasant history tour is proposed in section \ref{sec:films}. 
+The birth of computers, the space race and the influence of profound mathematicians among other factors conformed the origin of computing languages. 
+Several movies and documentaries are recommended to understand those naive and happy days and how geeks and nerds had a big influence in the first stages of personal computer business.
+  
+  
+   
+  %In this part, basic operations are presented as a first approach to 
+  %perform simple mathematical operations.
+  % to learn applied mathematics 
+  %a chapter including  
+  %In it the reader can become familiar to the use of basic sentences in order
+  
+  %Some notions of theory of computation are revised here so a reader that is new 
+  %to the scientific programming can familiarize himself.
+  
+ 
+
+    \newpage   
+    \section{Von Neumann style}  \label{sec:vonNeu}
+    %\vspace{-0.3cm}
 The theory of computation gives the basis for the automatic processing of information where there is a 
 problem to solve (a function between a bunch of inputs and their associated outputs) 
 and a machine (analog, digital, quantum, etc.) to solve it. 
-The tools of the theory of computation will tell if the problem can be solved in the framework of a model of computation, 
-using an algorithm and 
-how efficiently is going to be solved. 
-The model of computation is a mathematical abstract construction 
-that describes how to compute the output of this mathematical function given its input.
-The universal Turing machine for example is a model of computation and 
-together with the von Neumann computer architecture gave rise 
-to the imperative programming paradigm. 
-The imperative paradigm consists of a sequence of basic computer operations, focused on the control flow of the program,
- to achieve the solution of some problem. 
-Later, John Backus, among others, asked himself if different programming paradigms 
-than imperative were possible to solve problems. 
-It was the birth of a programming style, the functional programming, closer to mathematics than to a specific computer 
-architecture and focused on the result of the computation rather than the flow control of the program. 
+The tools of the theory of computation tell 
+if the problem can be solved in the \textbf{framework of a model of computation}, 
+using an \textbf{algorithm} and 
+\textbf{how efficiently} is going to be solved.
 
-Finally, there are some essential features that makes a programming language suitable for scientific programming.
-A functional programming paradigm would be one of these, but also a syntax close to mathematics 
-or an array programming construction are desirable. 
-Array programming language, also called vector language makes reference to the possibility 
-of operating a whole group of values at the same time.
-Hence, the same operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
-in a closer to maths style, greatly simplifying mathematical expressions.
-
-For each concept treated here a Fortran code example guides the explanation and at the 
-end of each chapter the corresponding Python codes are presented. Thus, the following
-can be also used as a comparison between the foundations of both programming languages. 
- 
- 
-%In this part, basic operations are presented as a first approach to 
-%perform simple mathematical operations.
-% to learn applied mathematics 
-%a chapter including  
-%In it the reader can become familiar to the use of basic sentences in order
- 
-%Some notions of theory of computation are revised here so a reader that is new 
-%to the scientific programming can familiarize himself.
- 
-
- 
- 
-\newpage   
-    \section{Von Neumann style} 
-\vspace{-0.3cm}
-The Turing machine was invented by Alan Turing in 1936 by the name of ``a-machine''. 
+But first let's define what a model of computation is: a mathematical abstract construction 
+that describes how to compute the output of a mathematical function given its input.
+The Turing machine, invented by Alan Turing in 1936 by the name of ``a-machine'', is a model of computation. 
 The purpose for this model of computation was to give answer to some essential questions 
 in the theory of computation and mathematics in general. 
+
 This abstract construction consists on a scanning head capable of reading from an 
-infinite tape of cells a single cell at a time. 
+infinite tape of cells, a single cell at a time. 
 This tape has information coded and once a cell is read, the machine can delete that cell, 
 write another symbol or leave the symbol. 
 Then, it can move to a different position in the tape. 
@@ -102,116 +74,168 @@ and hardware are organized, interrelate and work to conform a machine.
 
 %von Neumann architecture
 The most common architecture used in the machines around us (although not the only option) is the von Neumann architecture. 
-In this description of a computer, a Central Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit separated from the CPU. 
+In this description of a computer, a Central Processing Unit (CPU) is in charge of executing the instructions that are stored in a Memory Unit (which is separated from the CPU). 
 In that memory, with each memory position uniquely identified by an address, the data and program are stored together. 
 Some Buses transfer data, addresses and control commands between different parts of the computer
 and at the same time allows the communication with input/output devices.
-The CPU follows an instruction cycle, composed by three stages, to work: 
-i) it fetches the next instruction of the program from the memory address (a counter points to this address), 
-ii) this instruction is decoded and 
-iii) the CPU performs the actions required by the instruction (reading addresses, performing arithmetic, writing in memory, etc.)
+Hence, in the simplest description of this architecture we have three elements; CPU, memory and a bus to transfer data between both. 
+The CPU works following an instruction cycle composed by three stages:
+\begin{enumerate}[label=(\roman*)]
+    \item It fetches the next instruction of the program from the memory address (a counter points to this address),
+    \item this instruction is decoded and 
+    \item the CPU performs the actions required by the instruction (reading addresses, performing arithmetic, writing in memory, etc.)
+\end{enumerate} 
 
+According to John Backus in his article ``Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs'' 
+this bus that connects CPU and memory acts as a bottleneck. 
+He says this is because in each instruction cycle the bus transmit a single word (let's say 64 bits) between memory and CPU.
+The purpose of any program is to modify the content of the memory so at the end of the execution the output of our function (or problem to solve) is stored.
+But this process is performed by pumping single words at a time through this bus.
+In addition, from all the information sent back and forth, a large part is not useful for the solution of our problem: names of data, other data needed to compute those names, memory addresses, etc. 
 
 Notice that this architecture not only describes how the hardware is organized but also how data and programs work.
-Inevitably, this architecture has influenced how programming languages are built to the point that 
-these are high level software versions of the von Neumann machine. 
-The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+Backus states that the von Neumann computer is the intellectual parent of conventional programming languages. 
+Inevitably, this architecture has influenced how they are built to the point that 
+they are high level software versions of the von Neumann machine. 
+%The chapter \ref{chap:basicop} delves into this idea by comparing the code written with a programming language and a von Neumann machine.
+
+%Aqui contar como influencia el lenguaje en profundidad...
+Notice that the \textit{variables} in a programming language imitate the \textit{memory cells} of the von Neumann architecture.
+The \textit{control statements} emulate the \textit{jump and test instructions} and
+the \textit{assignment statement} imitate the \textit{fetching, performing arithmetic and storing process}. 
+
+The assignment statement \texttt{v = 3*5 + 2} becomes the bottleneck of programming languages in the sense that a program is mainly concerned 
+with the flow of assignments of single variables (imitating single words). 
+By executing assignments many times, maybe altering subscripts (imitating memory addresses), 
+the program ends up with the result stored in a variable (imitating the storage in memory). 
+Furthermore, this assignment statement splits the programming languages into two worlds: 
+a world of expressions with strong algebraic properties (\texttt{3*5 + 2}) and a world of statements with few mathematical properties (\texttt{v =}).
+%In this paper, he proposes an alternative to this reality based on the functional programming style. 
+
+
 
 
 
  
- 
-    \section{Imperative versus declarative programming} 
+    \newpage
+    \section{Imperative versus declarative programming}  \label{sec:impvsdec}
+    \vspace{-.5cm}
+It has been mentioned that the paradigm of a programming language makes reference to 
+the group of features or ideas that describes how to write a program, its conceptual framework. 
+While some languages are focused on how the code is organized, 
+others give importance to the dataflow through operations.
+
+The ideas behind the universal Turing machine and 
+the von Neumann computer architecture gave rise 
+to what is called the imperative programming paradigm. 
+This paradigm is mainly focused on the control flow of the program,
+obtaining the solution of some problem with a bunch of control statements,
+variables and assignments. 
+John Backus, among others, asked himself if different programming paradigms 
+were possible to solve problems. 
+It was the birth of the functional programming, closer to mathematics than to a specific computer 
+architecture and focused on the result of the computation rather than the flow control of the program. 
 
 %RAM model and Church lambda 
-Different computation models exist apart from the Turing machine, 
-Random-access Machines (RAM) or lambda calculus ($\lambda$-calculus) are some of them. 
-Some of these computation models give rise to a programming paradigm. 
-Take a look at the next section to delve into this idea.  
+The Turing machine is not the only computational model developed historically,
+others are Register machines or lambda calculus ($\lambda$-calculus).
+The latter was developed by Alonzo Church and gives support to the functional programming paradigm, 
+which is included within the declarative paradigms together with more paradigms like logical, mathematical, constraint programming, etc.
+%exactly like the imperative paradigm finds its foundations in the Touring machine.
 
-%Paradigmas
-We have mentioned three essential models of computation: a Turing machine, Random-access Machines and $\lambda$-calculus (developed by Alonzo Church).
-Lambda-calculus is focused on the use of transformation rules and not in the machine that implements these rules so it is closer to software than hardware.
+The lambda calculus is focused on the use of transformation rules and 
+not in the machine that implements these rules so it is closer to software than hardware.
 It is built with three kind of terms: variables, abstractions and applications. 
 Essentially an abstraction here can be seen as a function (with an argument and a function body). 
-Hence, the programs are built by applying functions to other functions instead of assigning (storing) values to variables and an iteration process. 
-
-Some of these computation models give rise to a programming paradigm like imperative programming or functional programming (usually included in the declarative programming paradigm).
-A programming paradigm is the approach used to build the program, the features that define how to solve the problem with the computer. 
-The imperative programming paradigm finds its foundations in the Touring machine and functional programming is supported by the concepts of lambda calculus. 
+Hence, the programs are built by applying functions to other functions instead of 
+assigning (storing) values to variables and iterating with them. 
 All computable algorithms can be computed using lambda calculus so it is Turing complete.
 
 
 
+
+
+
+%Notice that the functional programming is included within the declarative paradigms 
+%A programming paradigm is the approach used to build the program, the features that define how to solve the problem with the computer. 
+%Some of these computation models give rise to a programming paradigm. 
+%Take a look at the next section to delve into this idea.  
+%Paradigmas
+%We have mentioned three essential models of computation: a Turing machine, Random-access Machines and $\lambda$-calculus (developed by ).
+%and functional programming is supported by the concepts of lambda calculus. 
+%Some of these computation models give rise to a programming paradigm like imperative programming or functional programming
+
+        \vspace{-.5cm}
         \subsection*{Imperative programming}
-    
+        \vspace{-.5cm}
 In the imperative programming paradigm the programmer tells the machine how to perform each task step by step. 
 The program state is changed through assignment statements so the main focus is \textbf{how} the result is obtained. 
-Structural Paradigm and Object-Oriented Paradigm are included in this group. 
+Structural Paradigm and Object-Oriented Paradigm (OOP) are included in this group being the latter one of the most famous programming paradigm. 
+In the OOP everything revolves around the ideas of classes, objects, methods and attributes.
 
 Advantages:
-Very easy to implement
-Contains loops and variables
+\begin{itemize}[noitemsep]
+    \item Very easy to implement
+    \item Relatively easy to learn
+    \item Easier to debug when the code is not huge
+    \item Easy to understand for beginners and external developers 
+    %(thinking in what a single-core processor would do with the code)
+    %\item Contains loops and variables
+\end{itemize}
 
 Disadvantages:
-More buggy compared to Declarative
-Hard to maintain
-Less efficient for long term
-Parallel programming not available
-Examples:
-OOPS is one of the most famous programming paradigm. OOPS short for (Object Oriented Programming) it comes under Imperative programming. In 
-this paradigm everything is revolving around classes and objects.
+\begin{itemize}[noitemsep]
+    \item More buggy compared to Declarative
+    \item More difficult to organize than declarative programming
+    \item Quickly becomes voluminous and hard to maintain or extent
+    \item Loses clarity while its size grows
+    \item Less efficient for long term
+    \item Difficult to create reusable code
+    \item Parallel programming not available
+\end{itemize}
 
-Languages: Java,Python,C++,Ruby, Smalltalk
-
-
+Some languages that mainly follow the imperative paradigm are:
+\begin{itemize}
+    \item Java, Python, C++, Ruby, Smalltalk
+\end{itemize}
+        
+        \vspace{-.5cm}
         \subsection*{Declarative programming}
-
+        %\vspace{-.5cm}
 In the declarative programming paradigm the programmer just tells the computer what to obtain and its properties but not the control flow to perform the task.
 Functional Paradigm, Logical Paradigm, Mathematical Paradigm and Reactive Paradigm are included in this group.
- 
+The functional paradigm finds its roots in mathematics, it is language independent and
+uses the concept of function as central model for its abstractions instead of the data structures.
+As a result, data are loosely coupled to functions.
+
 Advantages:
-Short and Efficient Code
-Implemented by the methods not yet known at the time of programming
-Characterized by high level of abstraction that's why easier to represent complex logic
-Maintenance is possible irrespective of application development.
+\begin{itemize}[noitemsep]
+    \item Short and efficient Code
+    \item Implemented by methods not yet known in the moment of coding
+    \item Easier to maintain, extend and optimize
+    \item Easier to create reusable code
+    \item Uses a high level of abstraction making easier to represent complex logic
+    %\item Maintenance is possible irrespective of application development
+\end{itemize}
 
 Disadvantages:
-Hard to understand for external Devs
-Hard to take characteristics of individual applications into account during programming
-Examples:
-Functional programming The functional programming paradigms has its roots in mathematics and it is language independent. The central model 
-for the abstraction is the function which are meant for some specific computation and not the data structure. Data are loosely coupled to 
-functions.
+\begin{itemize}[noitemsep]
+    \item Hard to understand for external developers and beginners
+    %\item Needs from abstract theoretical programming models 
+    \item Hard to consider specific characteristics of individual applications during programming
+\end{itemize}
 
-Languages: JavaScript,Haskell,Scala,Erlang, Lisp
- 
- 
- 
- 
- 
- 
- 
-%Instructions, machine and style
-%Backus Fortran and its paper 
-The strong relation between imperative programming languages and the von Neumann computer was treated by John Backus in its paper ``Can 
-Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs''. 
-He remarks the parallelism between the von Neumann memory and the use of variables to store data.
-Also the similarities between the instruction cycle of a CPU (fetch, store, execute) and the assignment statement of a programming language. 
-Furthermore, this assignment statement splits the programming languages into two worlds: 
-\begin{enumerate}
-    \item A world of expressions with strong algebraic properties (right side).
-    \item A world of statements with few mathematical properties (left side).
-\end{enumerate} 
-In this paper, he proposes an alternative to this reality based on the functional programming style. 
+Some languages that allows a declarative paradigm are:
+\begin{itemize}
+    \item JavaScript, Haskell, Scala, Erlang, Lisp
+\end{itemize}
 
-Imperative and declarative programming paradigms are treated in the chapter \ref{chap:impdec} using examples that illustrate the main difference between them. 
-Notice that the declarative programming paradigm is usually represented by the functional programming paradigm although there are more paradigms included here (logic, constraint programming, etc.).
-Functional programming is treated during the whole book, starting in the section \ref{sec:fpro}.
 
- 
 
- 
+%The central model for the abstraction is the function which are meant for some specific computation and not the data structure.
+
+%Imperative and declarative programming paradigms are treated in the chapter \ref{chap:impdec} using examples that illustrate the main difference between them. 
+%Functional programming is treated during the whole book, starting in the section \ref{sec:fpro}.
 % Ever since I started learning react I heard this buzzword Functional Programming. I have searched all over the internet and found some 
 % useful resources, watched countless youtube videos and finally got the hang of it, And probably you'll get it too till the end of this 
 % article.
@@ -222,39 +246,172 @@ Functional programming is treated during the whole book, starting in the section
  % Basically there are various approaches to write you programs. If you've done a CS major you'd probably know these and if you didn't don't 
  % worry its a method to solve a problem. There are two main paradigms Imperative programming and Declarative programming.
  
+ %Instructions, machine and style
+ %Backus Fortran and its paper 
+ %The strong relation between imperative programming languages and the von Neumann computer was treated by John Backus in its paper ``Can 
+ %Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs''. 
+ %He remarks the parallelism between the von Neumann memory and the use of variables to store data.
+ %Also the similarities between the instruction cycle of a CPU (fetch, store, execute) and the assignment statement of a programming language. 
  
  
+    \section{Vector languages} \label{sec:veclan}
  
-    \section{Vector languages}
- 
- 
+From all the features that define the paradigm of a programming language, 
+some of them are essential to make a language suitable for scientific programming.
+To allow a functional programming style would be one of these, 
+but also a syntax close to mathematics 
+or an array programming construction. 
+An array programming language, also called vector language, has the possibility 
+to operate a whole group of values with the same expression.
+Hence, the same operations applied to a number can also be applied to vectors, matrices and higher dimension arrays
+in a closer to maths style, greatly simplifying mathematical expressions.
+
+It is relatively new the development of array programming languages 
+being Fortran the first one to include it in the 90's with the ISO/IEC standard 1539:1991. 
+Other languages like MATLAB, R or the NumPy extension of Python also support array programming.
+Matrix arithmetic are built-in in these languages and therefore, 
+expressing the mathematical language in a natural way is feasible.
+
+Let's consider for example the addition of two vectors, matrices or other tensors. 
+The common mathematical notation would express $w = u + v$ wether $u$ and $v$ are vectors or higher dimension tensors. 
+In scalar languages like C, the operation addition is defined for single values. 
+Hence, the array addition needs a loop in the subscripts of both operands:
+\vspace{-0.3cm}
+\begin{verbatim}
+for (i = 0; i < n; i++)
+    w[i] = u[i] + v[i];
+\end{verbatim}
+\vspace{-0.3cm}
+Of course, the addition of higher dimension arrays needs from nested loops 
+iterating in the different dimensions subscripts. 
+Vector languages like Fortran, no matter the rank of the operands, 
+would just need the following expression:
+\vspace{-0.3cm}
+\begin{verbatim}
+w = u + v
+\end{verbatim}
+\vspace{-0.3cm}
+
+Take note of the difference between array programming and array processors. 
+The former makes reference to how the programmer codes the mathematical operations in its program. 
+The latter is related to how the processor operates that group of numbers; 
+by performing all the operations together under the same processor instruction in a considerably increase of speed.
+Both features imply an increase of performance for the coding and executing of scientific programs, 
+however, we are only considering in this book the advantages of an array programming language.
+
+Since both concepts are independent, scalar languages can also benefit 
+from the vectorization performed in array processors or even 
+the parallelization of tasks with multiple processors (called multi-processors). 
+However, this is done by the compiler under several optimizations of the code.
+On the contrary, array programming is automatically intended to implicit parallelization. 
+%Array processing is distinct from parallel processing in that one physical processor performs operations on a group of items simultaneously while parallel processing aims to split a larger problem into smaller ones (MIMD) to be solved piecemeal by numerous processors. Processors with two or more cores are increasingly common today
+
+%A FUTURO AQUI PODEMOS TRATAR LA DIFERENCIA ENTRE 
+%VECTOR LANGUAGE - VECTOR PROCESSOR (PROCESADOR CON DISTINTOS ALUs CREO) - MULTIPROCESSOR (MUCHOS PROCESADORES o MUCHOS CORES, PARALELO) 
 
  
  
- 
- 
- 
- 
     \section{Functional programming} \label{sec:fpro}
+
+With his visionary paper, where John Backus presented his Function-level programming (FP), he accelerate the research in Functional Programming.
+These researches end up in the modern functional languages, however, these are based on the lambda calculus instead of the paradigm described by Backus. 
+Hence, the ideas developed in his paper under the name of functional programming do not fully coincide with the current concept of functional programming. 
+%Let's take a look at the main ideas behind his alternative to von Neumann programming languages. 
+
+He based his alternative to von Neumann programming languages on the idea of changing variables by functions/programs and operations by combining forms. 
+Combining forms means to take some functions and combine them with algebraic laws so a new one is obtained.
+These algebraic laws are similar to the algebraic laws ranging over numbers and used to solve equations.
+Thanks to the general theorems of the algebra associated to algebraic laws, the paradigm gains its power. 
+%In addition, these laws give the power to the paradigm since they allow to use general theorems of the algebra for the programs. 
+
+Backus uses a comparison between an inner product coded using imperative style: 
+\vspace{-0.5cm}
+\begin{verbatim}
+c := 0
+for i := 1 step 1 until n do
+    c := c + a[i]xb[i]
+\end{verbatim}
+and his functional style:
+\newline\newline
+\texttt{Def IP $\equiv (/+)\circ(\alpha \times)\circ \textrm{Trans}$} 
+\newline\newline
+where \texttt{/} involves inserting the operation between members of the argument, 
+\texttt{$\alpha$} applies the operation to all members and
+\texttt{Trans} transposes the argument.
+
+He remarks the following ideas among others:
+\vspace{-0.3cm}
+\begin{enumerate}[noitemsep, label=(\roman*)]
+    \item Instead of operating on a state changed by means of control statements (\texttt{for}), a program can only operate on its arguments. 
+    Only two rules are needed: one that applies a function to its arguments and other that combines different functions. 
+    
+    \item It is hierarchical: complex entities are built from simpler ones. 
+    The complex entities are functions built from the combination of simpler functions.
+    
+    \item It is static and nonrepetitive: the programmer does not need to mentally execute the code to understand it. 
+    Then, is only worried about the meaning of the program, not how it is implemented. 
+    
+    \item It operates on whole conceptual units instead of operating one word at a time. 
+    The operation is considered an abstraction that admits any kind of data structure. 
+    Hence, no extra data (\texttt{n}) is needed to describe the operation except for the arguments. 
+%    The same operation performed over a number can be performed over a higher level elements
+    %\item No procedure declaration is needed and no substitution rules are applied to make the operation general.
+\end{enumerate}
  
-Functional programming (FP) is highly influenced by Mathematics realm. 
-FP would love to have all Mathematics included in every line of code.
+Nowadays, the functional programming paradigm is completely based on mathematics and 
+more specifically on the lambda calculus. 
+It seeks to have each line of code made up of mathematics which, 
+although it only needs from variables and functions to work, is extremely powerful.
+
+This paradigm takes its name from the fact that its main operation is the application of functions to arguments and 
+every function is at the same time composed by other functions and glued together. 
+Some of the basic principles underlying this paradigm are:
+\begin{enumerate}[noitemsep]
+    \item \textbf{Immutability:} Neither assignment statements nor variables are needed.
+    Hence, once declared a value, it never changes, making the program more predictable. 
+    
+    \item \textbf{No side effects:} Side effect in a function is every observable effect different than computing the result of the function applied to its arguments.
+    A functional program should not contain any side effects, eliminating then a big source of bugs. 
+    From a practical perspective, functional programming tries to reduce as much as possible side effects, letting them exist when they are required. 
+    %An advantage directly obtained from this principle is that the order of execution becomes irrelevant.
+    Since the value returned by a function is going to be immutable (no side effects can change it), 
+    the function can be evaluated at any point in the code, the order of execution and the control flow become irrelevan.
+    
+    \item \textbf{Pure functions:} These functions, apart from lacking side effects, always return the same result for the same input arguments.
+    Considering that the expression can be evaluated at any point in the code the function calls can be replaced by their returned value and the program is still as predictable as before.  
+    This property is called \textbf{referential transparency} and makes functional programs more tractable mathematically. 
+    
+    \item \textbf{First-class functions:} Those that i) accept other functions as arguments,
+    ii) return them as results, iii) can be assigned to variables or iv) can be included in any data structure. 
+    Functions are treated as first-class entities when they support the operations available to other entities like common variables with no restrictions. 
+    By treating functions as simple as variables the language becomes much more flexible. 
+    Many concepts are born here: 
+    \textbf{higher-order functions} (when at least the function takes one or more functions as arguments or returns a function as a result) or
+    \textbf{closures} (functions returned by a parent function, higher-order, that at the same time access the internal state of the parent).
+    %Currying   
+    %\item \textbf{Lazy evaluation:}    
+\end{enumerate}
  
-Although Math is only built with functions and variables, it’s still very powerful and expressive. 
-That’s what FP is trying to do. 
-Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
+This paradigm contributes mainly with two features to modularity; higher-order functions and lazy evaluation. %ref a Huges y su paper
+Modularity is a key property in a well-structured software, it simplifies debugging, allows to test independent pieces of code and code reuse.  
+Hence, considering the basic principles of the paradigm and the qualities inherited from being a declarative paradigm,
+functional programming has the potential to make a program 
+short, effective, easy and part by part debuggable, reusable, maintainable, testable, predictable, and well-structured among others. 
+
+
+
+
+%Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
  
-That’s why functions’ freedom (making them first-class) comes into work. 
-When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
-Which as we mentioned earlier, FP will make your code more Predictable, Testable, Reusable, Customisable, Cacheable, Maintainable, Composable and Readable.
+
+ %Functional programming (FP) is highly influenced by Mathematics realm. 
+ %FP would love to have all Mathematics included in every line of code.
+% Although Math is only built with functions and variables, it’s still very powerful and expressive. 
+% That’s what FP is trying to do. 
+% Solving every single problem using functions and functions only (exactly how the big brother (Maths) would do it).
  
- 
- 
- 
- 
- 
- 
- 
+%That’s why functions’ freedom (making them first-class) comes into work. 
+%When you can treat a function in a programming language as simple as a variable, that language would be much more flexible and opens a lot of rooms for improvements. 
  
 % 1. Imperative Paradigm
 % In which control flow is explicit, where the programmer instructs the program how to change its state. Where it includes more paradigms:
@@ -268,7 +425,7 @@ Which as we mentioned earlier, FP will make your code more Predictable, Testable
 
 
 \newpage 
-\section{Programming through history} 
+\section{Programming through history}   \label{sec:films}
 To understand different characteristic of modern programming languages
 is helpful to revise the history of informatics. In this chapter, 
 some documentaries and movies are commented to whet the appetite of the 

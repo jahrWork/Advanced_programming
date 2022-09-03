@@ -1,10 +1,11 @@
  module Foundations 
     
-  use Basic_operations,      only : Data_types 
+  use Basic_operations,      only : Data_types, Data_structures, Operators
   use Roots,                 only : Roots_2th  
   use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
-  use Matrix_operations,     only : Matrix_operation_examples
+  use Matrix_operations,     only : Matrix_operation_examples, ElementWise_operation_examples
   use Dynamic_allocation,    only : Matrices_allocation
+  use Stack_Overflow,        only : StackOverflow_LargeArrays, StackOverflow_InfiniteRecursion
   use vectors_and_matrices,  only : dot_product_examples, matmul_examples, greatest_difference
   use Fourier,               only : Fourier_example
   use Integrals_derivatives, only : Integral_and_derivative_examples
@@ -35,35 +36,38 @@ do ! Basic programming examples
      
     select case(option)
      case(0) 
-          exit 
+         exit 
           
      case(1) 
-          call Hello_world()
+         call Hello_world()
           
      case(2) 
-         call Data_types()
-         call Roots_2th()
+         call Data_types(); call Data_structures()
+         call Operators();  call Roots_2th()
          
      case(3) 
-        call Summation_n2_examples()
-        call Summation_examples()
-        call Summation_functional_examples()
+         call Summation_n2_examples()
+         call Summation_examples()
+         call Summation_functional_examples()
          
      case(4)      
-       call  Matrix_operation_examples() 
+         call  Matrix_operation_examples()
+         call  ElementWise_operation_examples()
      
      case(5) 
-          call Matrices_allocation()
-          call dot_product_examples()
-          call matmul_examples()
-          call greatest_difference() 
+         call Matrices_allocation()
+         call dot_product_examples()
+         call matmul_examples()
+         call greatest_difference()    
+         !call StackOverflow_LargeArrays()
+         !call StackOverflow_InfiniteRecursion()
          
      case(6) 
-           call Integral_and_derivative_examples()
+         call Integral_and_derivative_examples()
          
      case(7) 
-           call Taylor_expansion_examples()
-           call Fourier_example()
+         call Taylor_expansion_examples()
+         call Fourier_example()
          
      case(8)
          call Test_load_matrix()

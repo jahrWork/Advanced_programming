@@ -1,9 +1,10 @@
 
 from Hello_world import Hello_world
-from data_type import data_type
+from data_type import data_types, arrays, data_structures, Operators, input_Complex, structures
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
 from Matrix_operations import Matrix_operation_examples
+from Stack_Overflow import StackOverflow_LargeArrays, StackOverflow_InfiniteRecursion
 from Dynamic_allocation import Matrices_allocation
 from Integrals_derivatives import Integral_and_derivative_examples
 from Series_expansion import Taylor_expansion_examples
@@ -33,8 +34,9 @@ def menu_Foundations():
            Hello_world()
           
      elif option == 2: 
-           data_type()
-           Roots_2th()
+           input_Complex(); data_types()
+           arrays(); structures(); data_structures()
+           Operators(); Roots_2th()
          
      elif option == 3: 
         Summation_n2_examples()
@@ -43,9 +45,12 @@ def menu_Foundations():
          
      elif option == 4:      
         Matrix_operation_examples() 
+        ElementWise_operation_examples()
      
      elif option == 5: 
         Matrices_allocation() 
+        #StackOverflow_LargeArrays()
+        StackOverflow_InfiniteRecursion()
                  
      elif option == 6: 
         Integral_and_derivative_examples()

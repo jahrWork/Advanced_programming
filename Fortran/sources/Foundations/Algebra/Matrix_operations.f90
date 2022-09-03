@@ -1,5 +1,7 @@
 module Matrix_operations 
     
+    use Dynamic_allocation,      only : trace
+    
     implicit none 
     
 contains
@@ -90,5 +92,23 @@ function my_matmul( A, B ) result(C)
     
 end function  
 
+!*****************************************************************************
+!* Examples of element-wise operations
+!*****************************************************************************   
+subroutine ElementWise_operation_examples() 
+
+   integer, parameter :: N = 10 
+   real :: A(N,N), B(N,N)   
+   integer :: i, j  
+
+    A = reshape( [ ( ( (i/real(N))**(j-1), i=1, N ),  j=1, N) ], [N, N] )  
+    B = transpose(A)
+    
+    write(*,*) " 1. trace( A + B ) = ", trace(A + B) 
+    write(*,*) " 2. trace( A * B ) = ", trace(A * B)
+    write(*,*) " 3. trace( cos(A) ) = ", trace( cos( A ) )
+    write(*,*) " 4. trace( sqrt(A) ) = ", trace( sqrt( A ) )
+
+end subroutine    
 
 end module   

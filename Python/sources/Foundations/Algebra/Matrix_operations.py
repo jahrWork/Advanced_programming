@@ -1,4 +1,4 @@
-from numpy import zeros, sum, dot, matmul, array,  max, argmax, transpose, size, shape
+from numpy import zeros, sum, dot, matmul, array,  max, argmax, transpose, size, shape, multiply, cos, sqrt, trace
 from numpy import set_printoptions
 
     
@@ -72,3 +72,19 @@ def my_matmul( A, B ):
 
     return C 
 
+
+#***********************************************************
+# Examples of element-wise operations
+#***********************************************************
+def ElementWise_operation_examples():  
+
+    N = 10 
+   
+    A = array( [ [ (i/float(N))**(j-1) for j in range(1,N+1) ] for i in range(1, N+1) ] )
+    B = transpose(A)
+    
+    print( " 1. trace( A + B ) = ", trace( A + B ) )
+    print( " 2. trace( A * B ) = ", trace( multiply(A,B) ) ) 
+    print( " 3. trace( cos(A) ) = ", trace( cos(A) ) )
+    print( " 4. trace( sqrt(A) ) = ", trace( sqrt(A) ) ) 
+    #END

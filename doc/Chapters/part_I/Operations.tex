@@ -249,7 +249,7 @@ Numbers and truth values are not the only objects needed to build the different 
 Also sets, vectors, tuples, matrices, tensors or sequences are used in the context of algebra, calculus or set theory.
 Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
 
-%set
+%set --------------------------------------------------------------
 A \textbf{set}, with the definition given by Georg Cantor within the set theory, 
 is a gathering together into a whole of definite, distinct objects of our perception or our thought, 
 which are called elements of the set.
@@ -261,35 +261,74 @@ However, every element of the set must be different from the others.
 %\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
 %$$
 
+% --------------------------------------------------------------
+
 Tuples and sequences are also collections of mathematical objects.
 However, a \textbf{sequence} is an enumerated collection, where repetitions are allowed and order matters.
 Unlike sets, since the elements follow an order, they can be repeated in different positions of the sequence.
-A sequence can also be interpreted as a function from $\mathbb{N}$ (denoting the position within the sequence) to the elements.
-The length of the sequence is its number of elements and could be any finite value or infinite. 
+A sequence can also be interpreted (and it usually is) as a function whose domain is a countably ordered set like $\mathbb{N}$ 
+(denoting the position within the sequence) to the set of elements.
+The length of the sequence is its number of elements and could be any finite value (like in the sequence $(1,5,6,5,8,10)$) 
+or infinite (like Fibonacci sequence). 
+Sequences are essential in different branches of mathematics, specially in analysis since they are 
+the basis for series.
+
+Notice that sequences are not defined in terms of vectors in any sense. 
+It can happen that a sequence with elements in a field $\mathbb{F}$ 
+(whether finite or infinite)
+is a vector in the vector space of all sequences with elements in $\mathbb{F}$.
+This is because the addition and multiplication by scalars in $\mathbb{F}$ 
+can be defined in terms element wise common addition and multiplication, 
+and satisfy the vector axioms, hence, we have a space vector over $\mathbb{F}$.
+However, there is no need that the elements belong to a field and hence, no need 
+to consider sequences as vectors. 
+
+% --------------------------------------------------------------
+
 A \textbf{tuple} is a finite sequence, which means, a finite ordered lists of elements. 
 It is usually used the notation $n-$tuple for a list of $n$ elements, where $n$ is a non-negative integer.
+Again, under certain conditions, tuples can be seen as vectors, in this case from finite dimensional vector spaces. 
+However, since tuples does not need to have elements from a field, its definition is not based in vectors in any sense. 
 
+
+%--------------------------------------------------------------
 %vectors
-The concept of \textbf{vector} in mathematics has different formal definitions depending on the context.
 Historically the term vector was used for geometric vectors, objects that has magnitude and direction.
-However, a vector can be nowadays seen as a tuple or, in pure mathematics, as any element of a vector space. 
+However, a \textbf{vector} is any element of a vector space. 
+Hence, members of a set that can be added together and multiplied by numbers of a given field, satisfying some axioms.
 
-Indeed, vectors considered as tuples of elements in a field $\mathbb{F}$, together with the common addition of vectors and the multiplication by an scalar in the field $\mathbb{F}$, build a vector space. 
-It is usually used $\mathbb{F}^{n}$ to denote the set of all $n-$tuples with elements from the field $\mathbb{F}$ (which could be for example $\mathbb{R}$ or $\mathbb{C}$). 
-Hence, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are 2-tuples and 3-tuples of reals and conform vector spaces with all its linear combinations.
-Notice that, with this description, a vector is represented by a one-dimensional arrangement of $n$ elements. %with respect to a given basis.
+These vector spaces can be finite dimensional like the commonly used $\mathbb{F}^{n}$ 
+(where $\mathbb{F}$ is a field like for example $\mathbb{R}$ or $\mathbb{C}$).
+In these cases, $n-$tuples with elements in the field $\mathbb{F}$ are usually used to represent the vectors once a basis has been chosen. 
+Hence, tuples are used to represent the vectors in a specific basis but not being the vectors themselves.
+As an example, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are vector spaces 
+usually represented as 2-tuples and 3-tuples of reals with respect to a given basis.
+When $n-$tuples are used to represent the vectors we can use a one-dimensional arrangement of $n$ elements.
+
+Vector spaces can also be infinite dimensional, for example the vector space of infinite sequences of real numbers $\mathbb{R}^\infty$ or 
+the set of all continuous real valued functions on $[0,1]$. Now tuples cannot be used to represent vectors and sequences sometimes can.
+It is clear then that some vectors could be seen as tuples, or sequences, but again there is no need to define 
+vectors in terms of these objects since it is not the general situation. 
 
 A \textbf{matrix} is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
 Matrices over a field $\mathbb{F}$ are those where all its \textit{elements} or \textit{entries} belong to the field $\mathbb{F}$.
 If $\mathbb{F}$ is $\mathbb{R}$ or $\mathbb{C}$ it conforms real matrices or complex matrices respectively.
-It is usually used $\mathbb{F}^{n\times m}$ or  ${ \cal{M}}^{n \times m} (\mathbb{F})$ to denote the set of $n\times m$ matrices with entries in the field $\mathbb{F}$. 
-This set, together with the common addition of matrices and the multiplication by numbers (scalars) in the field $\mathbb{F}$ also has the structure of vector space. 
-Hence, the matrices are also vectors inherited from the vector space structure they present.
+It is usually used $\mathbb{F}^{n\times m}$ or ${\cal{M}}^{n \times m} (\mathbb{F})$ to denote 
+the set of $n\times m$ matrices with entries in the field $\mathbb{F}$. 
+This set, together with the common addition of matrices and the multiplication by numbers (scalars) 
+in the field $\mathbb{F}$ also has the structure of vector space. 
+Hence, some matrices are also vectors inherited from the vector space structure they present.
 
 %Tensors are NOT the generalization of scalars, vectors and matrices (no indices, one index, two indices) to an arbitrary number of indices. 
-The concept of \textbf{tensor}, like the concept of vector, also has different approaches. 
+The concept of \textbf{tensor} has different approaches. 
 Avoiding the formal definition let's consider here that a tensor can be represented as a potentially multidimensional array.
 The elements in this multidimensional array are called scalar components and are denoted by indices with their position in the array.
+
+Finally, we have used the term \textbf{array} (or arrangement) three times: 
+a potential representation for tuples or vectors, 
+a representation of matrices and a representation for tensors. 
+In maths, an array refers to an orderly arrangement of similar 
+mathematical objects, hence, following a specific pattern.
 
 The standard notation for all these objects are as indicated below:
 \begin{itemize}
@@ -297,7 +336,6 @@ The standard notation for all these objects are as indicated below:
     \item Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$: $(1,3,5,7,...)$ %or angle brackets $\langle \rangle$: 
     \item In a similar way vectors are usually enclosed in parentheses $()$: $(1,2,3,4,5)$ %or angle brackets $\langle \rangle$:  or $\langle1,2,3,4,5 \rangle$
     \item Matrices are commonly written with square brackets: %or parentheses:
-    
     $
     \begin{bmatrix}
         1 & 2 & 3 \\
@@ -313,30 +351,13 @@ The standard notation for all these objects are as indicated below:
     \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
     For example $\alpha_{ijkl}$ is a rank 4 tensor.
 \end{itemize}
-%\begin{itemize}
-%    \item Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$
-%    \item Sequences and tuples are usually written between parenthesis $()$ or less often using square brackets $[]$ or angle brackets $\langle \rangle$: $(1,3,5,7,...)$
-%    \item In a similar way vectors are usually enclosed in either parentheses $()$ or angle brackets $\langle \rangle$: $(1,2,3,4,5)$ or $\langle1,2,3,4,5 \rangle$
-%    \item Matrices are commonly written with square brackets or parentheses:
-%    
-%    $
-%    \begin{bmatrix}
-%        1 & 2 & 3 \\
-%        4 & 5 & 6
-%    \end{bmatrix} 
-%    $ or $
-%    \begin{pmatrix}
-%        1 & 2 & 3\\
-%        4 & 5 & 6
-%    \end{pmatrix}   
-%    $
-%    \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
-%    For example $\alpha_{ijkl}$ is a rank 4 tensor.
-%\end{itemize}
+% -------------------------------------------------------------- 
+
+
 
 In a programming language all these objects are represented by different data structures.
-Fortran for example does not include tuples, sets or sequences, but vectors, matrices and tensors are represented by arrays. 
-On the contrary, Python has built-in the structures of sets and tuples among others and arrays are available in the \texttt{NumPy} library.  
+Fortran for example does not include tuples, sets or sequences, but vectors, matrices and tensors are represented with arrays. 
+On the contrary, Python has built-in the structures of sets and tuples among others and arrays are available within the \texttt{NumPy} library.  
 
 With the Fortran examples below the following concepts are covered:
 \begin{enumerate}[noitemsep]
@@ -514,7 +535,7 @@ stop 1 before the final bound.
 \vspace{0.5cm}
 Python has built-in other data structures which are used to store collections of data.
 Their elements can be of any type: strings together with integers and reals, lists nested in lists, sets within tuples, etc. 
-This applies for all the following structures:
+This applies for all the following structures but for \texttt{range}:
 \vspace{-.5cm}
 \begin{itemize}[noitemsep]    
     \item Set nature: \texttt{set}, \texttt{frozenset}.
@@ -707,11 +728,11 @@ $$
 $$
 and we can also check the first De Morgan's Law ($\neg (P\lor Q) \iff (\neg P \land \neg Q)$) for the assertions $P = a\in \Pi$ and $Q = a\in E$:
 $$
-\neg (a\in\Pi \lor a\in E) \to (\neg a\in\Pi \land \neg a\in E)
+\neg (a\in\Pi \lor a\in E) \iff (\neg a\in\Pi \land \neg a\in E)
 $$
-$$
-(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
-$$
+%$$
+%(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
+%$$
 
 
 Programming languages usually have built-in all these operators in their syntax,
@@ -737,7 +758,7 @@ with a different bunch of operators in order to work with them.
 %any other set and operations following the same axioms
 
         \subsection*{Arithmetic operators}
-        
+        \vspace{-0.5cm}
         For both Fortran and Python the symbols for the main arithmetic operations are:
         \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
@@ -748,18 +769,19 @@ with a different bunch of operators in order to work with them.
             \item \texttt{**} for exponentiation.
             
             \vspace{0.3cm}
-            Python also includes the modular arithmetic operators (specially important when working with finite fields and cybersecurity):
-            \item \texttt{//} for the floor division: implementing the floor function over the result of the division, which means, it returns the greatest integer less than or equal to $x\in\mathbb{R}$ (ONLY PYTHON).
-            \item \texttt{\%} for the modulo operation: it returns the modulus of the division, its remainder after one number is divided by another (ONLY PYTHON).
+            Python also includes the modular arithmetic operators:
+            \item \texttt{//} for the floor division (ONLY PYTHON).
+            \item \texttt{\%} for the modulo operation (ONLY PYTHON).
         \end{itemize}
         
-        
-        
+        %(specially important when working with finite fields and cybersecurity)
+        %\footnote{It implements the floor function over the result of the division: it returns the greatest integer less than or equal to $x\in\mathbb{R}$.}
+        %\footnote{It returns the modulus of the division, its remainder after one number is divided by another.}
         
         \subsection*{Relational operators}
         \vspace{-0.5cm}
         For both Fortran and Python the relational operators are:
-        \vspace{-0.7cm}
+        \vspace{-0.5cm}
         \begin{itemize}[noitemsep]
             \item \texttt{==} for the \textit{equal to} operator (notice that \texttt{=} is not used for this), 
             \item \texttt{/=} in Fortran and \texttt{!=} in Python for the \textit{not equal to} operator.
@@ -768,13 +790,14 @@ with a different bunch of operators in order to work with them.
             \item \texttt{>=} for the \textit{greater or equal to} operator and
             \item \texttt{<=} for the \textit{less or equal to} operator.
         \end{itemize}
+    \vspace{-0.5cm}
         Historically, Fortran also allows \texttt{.EQ., .NE., .GT., .LT., .GE., .LE.} for the above operators respectively. 
     
         
         \subsection*{Logical operators}
         \vspace{-0.5cm}
         In Fortran the logical operators are:
-        \vspace{-0.7cm}
+        \vspace{-0.5cm}
         \begin{itemize}[noitemsep]
             \item \texttt{.and.} in Fortran, \texttt{and} in Python for the conjunction operator, 
             \item \texttt{.or.} in Fortran, \texttt{or} in Python for the disjunction operator,
@@ -797,7 +820,7 @@ with a different bunch of operators in order to work with them.
         
         \subsection*{Membership operators}
         \vspace{-0.5cm}
-        Python allows the membership operators for sets, lists, tuples and dictionary keys by using:
+        Python allows the membership operators for sets, lists, tuples and dictionary keys:
         \vspace{-0.7cm}
         \begin{itemize}[noitemsep]
             \item \texttt{in} for the $\in$ operator and

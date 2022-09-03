@@ -40,9 +40,7 @@ contains
      real :: pi = 4*atan(1.), e = exp(1.)
      
      write(*,*) "e^(i pi) + 1 = ",  e**( (0,1)*pi ) + 1
-     write(*,*) "x <= y is",  x <= y, "and then -x >= -y is", -x >= -y
-     write(*,*) "( ( x >= y ) .and. ( 1/x <= 1/y ) ) .eqv. .true. = ", &
-                 ( ( x >= y ) .and. ( 1/x <= 1/y ) ) .eqv. .true.
+     write(*,*) "x <= y and then -x >= -y",  x <= y .and. -x >= -y
          
  end subroutine 
  

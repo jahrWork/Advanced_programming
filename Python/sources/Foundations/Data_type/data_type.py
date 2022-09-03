@@ -85,9 +85,7 @@ def Operators():
   a = 2
      
   print( "e^(i pi) + 1 = ", e**(1j*pi) + 1 )
-  print( "x <= y is ",  x <= y, " and then -x >= -y is also", -x >= -y )
-  print( "( ( x <= y ) and ( 1/x >= 1/y ) ) == True = ",
-                 ( ( x <= y ) and ( 1/x >= 1/y ) ) == True ) 
+  print( "x <= y and then -x >= -y",  x <= y and -x >= -y )
   print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
   print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )
 

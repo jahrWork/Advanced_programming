@@ -26,6 +26,21 @@ def arrays():
     C[:,1] = X[0:5]
     C[1:3,2:4] = [ [1.,2.], [3.,4.] ] # enter by rows!
 
+def structures():
+
+    # Set
+    P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}
+
+    # List, sequence
+    print( "Sum sqrt(n/(n**4+1)) = ", sum( [sqrt(n/(n**4+1)) for n in range(10000+1)] ) )
+
+    # Set of tuples
+    print( { (i**2 - 1, 2*i, i**2 + 1) for i in range(2,10) } )
+
+    # Dictionary
+    D = { "set":{1,3}, "list":[1,3], "tuple":(1,3), "dict":{"one":1,"three":3} }
+
+
 
 def data_structures():
 
@@ -61,7 +76,7 @@ def data_structures():
   
   for k in D:     # mutable and do not allow duplicates
      print("{:6} {} {}".format(k, ":", D[k]) )
-  print("\n") #temp
+  print("\n")
 
   for k in D.keys():     
      print("{:6} {} {}".format(k, ":", D[k]) )
@@ -106,9 +121,9 @@ def input_Complex():
   w = sqrt(z); print("sqrt(z) = ", w)
 
   # real and imaginary parts using functions
-  print(real(w)); print(imag(w))
+  # print(real(w)); print(imag(w))
 
   # real and imaginary parts using objects
-  print(w.real); print(w.imag)
+  # print(w.real); print(w.imag)
 
 

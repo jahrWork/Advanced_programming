@@ -144,7 +144,7 @@ The essence of the declarative programming in this example are the lines:
 
 Both lines tell the compiler the properties of the solution to be obtained, no matter how the process is done. 
 In the first case the intrinsic function \texttt{sum} performs the summation 
-of some elements by means of an implicit loop from one value to another. The properties of the solution sought are 
+of the elements of a Fortran vector by means of an implicit loop from one value to another. The properties of the solution sought are 
 of course the limits of the sum (\texttt{i0} and \texttt{N}) and the type of term to be added. 
 In the second case, thanks to the created function \texttt{Sigma\_N}, the sum is performed just by declaring the 
 general term to add and the limits, the programmer does not need to tell the compiler how to do the summation step by step.
@@ -160,21 +160,17 @@ $$
 \subsection*{Python code}
 The same advantages demonstrated with Fortran are visible in Python, 
 now the extension and simplicity of the code is even higher due to the characteristics of this language. 
+We do not need vectors in Python since lists, the representation of matheamtical sequences, are built-in in the language. 
 However, do not forget the implicit assumptions that are made for its statements; 
 type and kind of variables, interface between procedures, etc.  
-\vspace{0.5cm}
+\vspace{0.3cm}
 \renewcommand{\home}{./Python/sources/Foundations/Calculus} 
 \lstpython
 \listingsp{\home/Series.py}{def Sigma_N}
-          {return}{Series.py}
-\lstfor
-
-\vspace{0.5cm}
-\renewcommand{\home}{./Python/sources/Foundations/Calculus} 
-\lstpython
+          {return}{Series.py}  
+\vspace{0.2cm}
 \listingsp{\home/Examples/Sum_series.py}{def a1}
           {return}{Sum_series.py}
-\lstfor
 
 
 

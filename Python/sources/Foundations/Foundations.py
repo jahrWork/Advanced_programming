@@ -1,6 +1,6 @@
 
 from Hello_world import Hello_world
-from data_type import data_types, arrays, data_structures, Operators, input_Complex
+from data_type import data_types, arrays, data_structures, Operators, input_Complex, structures
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
 from Matrix_operations import Matrix_operation_examples
@@ -35,7 +35,7 @@ def menu_Foundations():
           
      elif option == 2: 
            input_Complex(); data_types()
-           arrays(); data_structures()
+           arrays(); structures(); data_structures()
            Operators(); Roots_2th()
          
      elif option == 3: 

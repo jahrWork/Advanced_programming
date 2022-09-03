@@ -256,10 +256,10 @@ which are called elements of the set.
 The elements of a set can be any mathematical objects: numbers, points in space, geometrical shapes, variables or other sets.
 However, every element of the set must be different from the others.
 
-%Let's build the set of the prime numbers up to 100 using the sieve of Eratosthenes:
-%$$
-%\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
-%$$
+Let's create as an example the set of the prime numbers up to 50:
+$$
+\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
+$$
 
 % --------------------------------------------------------------
 
@@ -283,6 +283,12 @@ and satisfy the vector axioms, hence, we have a space vector over $\mathbb{F}$.
 However, there is no need that the elements belong to a field and hence, no need 
 to consider sequences as vectors. 
 
+Let's find in the examples below an approximation to the infinite sum of the sequence: 
+$$
+\left[\sqrt{\frac{n}{n^4+1}}| n\in\mathbb{N}\right]
+$$
+
+
 % --------------------------------------------------------------
 
 A \textbf{tuple} is a finite sequence, which means, a finite ordered lists of elements. 
@@ -290,6 +296,15 @@ It is usually used the notation $n-$tuple for a list of $n$ elements, where $n$ 
 Again, under certain conditions, tuples can be seen as vectors, in this case from finite dimensional vector spaces. 
 However, since tuples does not need to have elements from a field, its definition is not based in vectors in any sense. 
 
+As an example of tuple use let's generate a set of Pythagorean triples, 
+tuples like $\left(a,b,c\in\mathbb{Z}^+|a^2 + b^2 = c^2\right)$ using the following three equations:
+\begin{equation}
+    \begin{cases}
+        a  & = i^2 - 1\\
+        b & = 2i\\
+        c & = i^2+1
+    \end{cases}       
+\end{equation}
 
 %--------------------------------------------------------------
 %vectors
@@ -534,8 +549,10 @@ stop 1 before the final bound.
 
 \vspace{0.5cm}
 Python has built-in other data structures which are used to store collections of data.
-Their elements can be of any type: strings together with integers and reals, lists nested in lists, sets within tuples, etc. 
-This applies for all the following structures but for \texttt{range}:
+Their elements can be of any type for lists, tuples and dictionaries: 
+strings together with integers and reals, 
+lists nested in lists, tuples within lists, etc. 
+Sets and ranges present some exceptions to consider in the elements they gather.
 \vspace{-.5cm}
 \begin{itemize}[noitemsep]    
     \item Set nature: \texttt{set}, \texttt{frozenset}.
@@ -550,10 +567,9 @@ i) is unordered and
 ii) do not allow duplicate values. 
 In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant.
 Furthermore, two equal elements, since they are not ordered, could not be distinguished between them. 
-A \texttt{frozenset} is an unchangeable set, once created, its content can not be modified. 
+While a set is mutable (remove or add elements is allowed), a \texttt{frozenset} is an immutable set, once created, its content can not be modified. 
+Sets cannot contain lists or dictionaries since they are unhashable structures (they do not contain any hash value that never changes during their lifetime).
 
-
-%--------------------------------------------------------------------------
 %MATEMATICAS:
 %List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. USUALLY INFINITE
 %Tuple: enumerated collection of objects in which repetitions are allowed and order matters. ALWAYS FINITE
@@ -585,12 +601,11 @@ This structure is more efficient than a list or tuple in the sense that only gen
 of the sequence when are needed and do not store any values in memory. 
 Hence, they are efficiently used for loops.
 
-
-
-%--------------------------------------------------------------------------
 A dictionary (\texttt{dict}) is similar to a list.
 It is ordered, changeable and can store any type of data (even other dictionaries nested).
 However, unlike lists, the values are stored in pairs: \texttt{key:value} and do not allow the same key for two elements.
+%--------------------------------------------------------------------------
+
 
 
 Let's now take a look at some examples of use cases of these structures. 
@@ -602,24 +617,27 @@ The following notation is used to manually construct these structures:
     \item \textbf{Set:} Following the roster notation, it is defined by listing its elements between curly brackets and separated by commas.
     Notice that the sets \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
     are the same since repetition and order change do not modify it.
-    \item \textbf{List:} Written using square brackets \texttt{[]} with comma-separated values.
+    Other example is the set \texttt{P} defined in the example below.
+    \item \textbf{List:} Written using square brackets \texttt{[]} with comma-separated values. 
+    Notice the sequence example of the summation of a sequence below.
     \item \textbf{Tuple:} Written using parenthesis \texttt{()} with comma-separated values. 
+    For example the tuples defined in the set of Pythagorean triples.
     \item \textbf{Dictionary:} It has its list of elements separated by commas, 
     enclosed in curly brackets (\texttt{\{\}}) and 
     using a colon (\texttt{:}) to separate each pair. 
+    Notice the example of dictionary below. 
+    
+    \item Sets, lists and tuples can be also defined using an \textbf{implicit loop (list comprehension)}, 
+    the elements gathered in the structure are computed from a loop. 
+    For example the set of Pythagorean tuples defined below.
 \end{itemize}
-
-Notice that lists, tuples and dictionaries use the square brackets notation to access to their elements, similar to the NumPy arrays. 
+\vspace{-0.5cm}
+Notice that lists, tuples and dictionaries use the square brackets notation 
+to access to their elements, similar to the NumPy arrays. 
 \vspace{0.3cm} 
 \lstpython
-%\renewcommand{\home}{./Python/sources/Foundations/data_type} 
-%\listingsp{\home/data_type.py}{def data_structures}{temp}{data_type.py}
-\begin{lstlisting}
-ESTO ERAN LOS EJEMPLOS BASICOS PERO LOS HE MOVIDO A ITERADORES, 
-AQUÍ VOY A PONER COSAS MAS MATEMATICAS
-\end{lstlisting}
-
-
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{def structures}{one}{data_type.py}
 
  
 

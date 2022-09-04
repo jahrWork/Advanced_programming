@@ -1,0 +1,104 @@
+
+----------------------------------------
+mytuple = ("apple", "banana", "cherry")
+
+for i in range(len(mytuple)):
+  print(i)
+  print(mytuple[i])
+
+for x in mytuple:
+  print(x)
+  
+  
+mylist = ["apple", "banana", "cherry"]
+
+for i in range(len(mylist)):
+  print(i)
+  print(mylist[i])
+
+for x in mylist:
+  print(x)
+  
+  
+myset = {"apple", "banana", "cherry"}
+
+for i in range(len(myset)):
+  print(i)
+  #print(myset[i])
+
+for x in myset:
+  print(x)
+  
+  
+  
+mydict = {"apple":3.4, "banana":2.5, "cherry":6.3}
+
+for x in mydict:
+  print(x)
+  print(mydict[x])
+
+
+----------------------------------------
+
+mytuple = ("apple", "banana", "cherry")
+
+for i,v in enumerate(mytuple):
+  print(i, v)
+
+  
+  
+mylist = ["apple", "banana", "cherry"]
+
+for i,v in enumerate(mylist):
+  print(i, v)
+  
+  
+myset = {"apple", "banana", "cherry"}
+
+for i,v in enumerate(myset):
+  print(i, v)
+  
+  
+  
+mydict = {"apple":3.4, "banana":2.5, "cherry":6.3}
+
+for i,v in enumerate(mydict):
+  print(i, v)
+
+
+
+
+
+
+
+----------------------------------------
+
+x = "abcd"
+for i in range(len(x)):
+  print(i)
+  print(x[i])
+
+
+for i in x:
+  print(i)
+
+
+for i,v in enumerate(x):
+  print(i, v)
+  
+  
+  
+  
+----------------------------------------
+
+x = ["apple", "banana"]
+print("banana" in x)
+
+x = ("apple", "banana")
+print("banana" in x)
+
+x = {"apple", "banana"}
+print("banana" in x)
+
+x = {"apple":2, "banana":3}
+print("banana" in x)

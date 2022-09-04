@@ -44,4 +44,50 @@ contains
          
  end subroutine 
  
+  subroutine Flow_structures()
+ 
+     integer :: n = 6, i, f, a, b
+     real :: x1, x0, x, abso
+     
+     f = 1
+     
+     ! do loop
+     do i = n, 2, -1  !goes from n to 2 jumping backwards (-1)
+         f = f*i
+     end do
+     
+     write(*,*) "The factorial of n = ", n, "is n! = ", f
+     
+     ! do while loop
+     x1 = 3.; x0 = 0.
+     do while ( abs(x1-x0) > 1e-5 )
+         x0 = x1
+         x1 = x0 - (3*x0**3 - x0**2)/(9*x0**2 - 2*x0)
+     end do
+     
+     write(*,*) "One root of 3x^3 - x^2 is at x = ", x1
+     
+     ! if - then - else conditional
+     x = -75.2
+     if ( x >= 0 ) then
+         abso = x
+     else
+         abso = -x
+     end if
+     
+     write(*,*) "The absolute value of x = ", x, "is ", abso
+     
+     ! if - elseif - else conditional
+     a = 43; b = 34
+     write(*,*) "a = ", b, "b = ", b
+     if ( a > b ) then
+         write(*,*) "a is greater than b"
+     elseif (a < b) then
+         write(*,*) "a is less than b"
+     elseif (a == b) then
+         write(*,*) "a is equal to b"         
+     end if
+         
+ end subroutine 
+ 
  end module 

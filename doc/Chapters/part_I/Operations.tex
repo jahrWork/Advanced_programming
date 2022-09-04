@@ -900,29 +900,142 @@ Several variations of the assignment operator are sometimes defined in languages
 For example, 
 an operator that adds the right side operand with the left side and then assign the result to the left operand: \texttt{+=}.
 Also, an operator that multiplies the right operand with the left operand and then assign the result to left operand: \texttt{*=}.
-Like this, the following options are allowed: \texttt{-=}, \texttt{/=}, \texttt{\%=}, \texttt{//=}, \texttt{**=}, \texttt{\&=}, \texttt{|=}, \texttt{>>=}, \texttt{<<=}.  %\texttt{$^=$},
+Like this, the following options are allowed: \texttt{-=}, \texttt{/=}, \texttt{\%=}, \texttt{\^{}=}, \texttt{//=}, \texttt{**=}, \texttt{\&=}, \texttt{|=}, \texttt{>>=}, \texttt{<<=}. 
 
 
 
+
+
+    \newpage
     \section{Control Flow statements}
-In order to translate the steps of an algorithm to the programming language the control flow statements are needed. 
+In order to translate the steps of an algorithm to the programming language 
+and essentially manage the flow of data, the control flow statements are needed. 
 All the statements in a program are executed from top to bottom but 
 the control flow statements modify this behaviour by including decisions, 
-loops, branches, separate block executions, etc. 
+loops, branches, separate block executions, etc.
 Let's review some essential statements commonly used, 
 specially in imperative programming languages 
 (we will delve into the concepts of imperative and declarative languages later in this book).
 
 
-        \subsection*{Conditionals}
+        \subsection{Conditionals}
+        \vspace{-0.3cm}
+        The conditionals are used to separate the flow into branches depending on logical conditions. 
+        Some statements are executed if a logical expression is evaluated as \texttt{true} and others if it is evaluated as \texttt{false}.
+        
+        An \texttt{if - then - else} structure is used to evaluate first the condition between parenthesis and execute some statements if it's \texttt{true}.
+        If the condition is evaluated as \texttt{false} then the statements within the \texttt{else} statement are executed. 
+        Notice that \texttt{else} is optional, it could be omitted if we want to continue the program after the \texttt{if} condition was evaluated as \texttt{false}. 
+        A conditional is used to code the absolute value of a number in the examples below. 
+        
+        The structure \texttt{if - elseif - else} works in the same way, however it allows more than two branches in the same structure. 
+        From top to bottom all the conditions are evaluated, if one condition is \texttt{false} it jumps to check the following one. 
+        In the moment that one condition is \texttt{true}, their statements are executed and the structure exited without checking the rest. 
+        If neither condition is met, the \texttt{else} block of code is executed (if it is present, otherwise the program continues outside the structure).
+        As an example let's compare two integers $a$ and $b$. 
+
+        Fortran implements a third kind of conditional, the \texttt{case} structure. 
+        It executes a block of statements depending on the value of an \texttt{integer} or \texttt{character} expression.
+        All the Fortran menus in this book are coded using this structure. 
+        Consider for example the menu of Foundations: 
+        the user introduces an integer which is stored in \texttt{option} and 
+        \texttt{select case(option)} is executed accordingly. 
+        If \texttt{option} is \texttt{2}, the statements under \texttt{case(2)} are executed. 
+
+        Notice the differences between both languages. 
+        In Python the indentation rules must be strictly followed, 
+        the colon symbol is used before starting the body of the conditional and 
+        the keywords are \texttt{if}, \texttt{elif}, \texttt{else}.
+        In Fortran, instead of indentation, the \texttt{end} statement indicates where the body of the conditional ends and 
+        the keywords are \texttt{if}, \texttt{elseif}, \texttt{else}.
+
+
+            \newpage
+            \subsubsection*{Fortran code} 
+            \vspace{0.5cm}
+            \lstfor
+            \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+            \listings{\home/Basic_operations.f90}{else conditional}
+            {end subroutine}{Basic_operations.f90}
+            
+            
+            \subsubsection*{Python code}
+            \vspace{0.5cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{else conditional}{a is equal to b}{data_type.py}
+
+
+
+
+        \newpage
+        \subsection{Loops}
+        
+        Loops are used to repeat a bunch of statements cyclically, whether it is executed 
+        a fixed number of times, 
+        until a condition is reached or 
+        maybe up to infinity. 
+        Typically, the statements inside the loop are executed and then some condition is checked.
+        Depending on this condition (\texttt{true} or \texttt{false}) the bunch of statements starts again from the beginning or
+        the loop is exited and the next instruction outside the loop is executed. 
+        
+        Two basic types of loops are usually used depending 
+        if the number of iterations is explicitly known or 
+        it is not but a stop condition is known. 
+        In the first case, an index controls the loop: it usually has start and stop values and sometimes the increment in each iteration is specified.
+        Notice that this index cannot be modified inside the loop.
+        In the second case the number of iterations is not determined beforehand but 
+        the loop finishes once a condition is evaluated as \texttt{false}. 
+        This conditions is usually determined by some variables modified inside the loop.
+        
+        However, some keywords positioned inside a loop can be used to transfer 
+        some control of the loop execution to the statements inside. 
+        \begin{itemize}
+            \item Use \texttt{exit} in Fortran or \texttt{break} in Python to finish its execution and skip to the next code after the loop. 
+            Notice that these statements are usually positioned within a conditional so the loop is finished if the condition is \texttt{true}.        
+            \item Use \texttt{continue} in Python to end the current iteration of the loop but continue with the following iteration. 
+        \end{itemize}
+        
+        In the examples below we first compute the factorial of a number $n$, $n!$.
+        Since we know the number of multiplications to perform (given by \texttt{n}) we can use a 
+        \texttt{do} loop in Fortran and 
+        \texttt{for} loop in Python.
+        Notice that in both cases the multiplication stops when multiplying by 2, 
+        while in Fortran this is expressed by the stop value 2 (\texttt{n, 2, -1}) (sequence $(n, n-1, n-2,...,2)$), 
+        in Python the \texttt{range} function does not take the stop value at any moment in the sequence
+        so it has to be expressed as \texttt{range( n, 1, -1 )} (sequence $(n, n-1, n-2,..., 2)$).
+        
+        Later, the Newton-Raphson method is used to find a good approximation for one root of $f(x) = 3x^3-x^2$. 
+        We do not know the amount of iterations needed to find the root but we can set as condition that 
+        the distance between two successive approximations, $|x_{n+1} - x_n|$ is less than $0.00001$ so, while this error condition 
+        is higher than our threshold, the loop continues iterating.
+        
+        Finally notice the differences between both languages. 
+        In Python the indentation rules must be strictly followed and the colon symbol is used before starting the body of the loop.
+        In Fortran, instead of indentation, the \texttt{end} statement indicates where the body of the loop ends. 
         
         
-        
-        \subsection*{Loops}
-        
-        
-        
-        \subsection*{Iterators}
+            \newpage
+            \subsubsection*{Fortran code} 
+            \vspace{0.5cm}
+            \lstfor
+            \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+            \listings{\home/Basic_operations.f90}{Flow_structures}
+            {One root of}{Basic_operations.f90}
+            
+            
+            \subsubsection*{Python code}
+            \vspace{0.5cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{def Flow_structures}{One root of}{data_type.py}
+
+
+
+
+
+        \newpage
+        \subsection{Iterators}
         
         When data structures were presented we already mentioned that both Python and Fortran 
         use the index of each dimension as iterators in their arrays. 

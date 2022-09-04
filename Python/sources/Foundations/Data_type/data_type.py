@@ -127,3 +127,41 @@ def input_Complex():
   # print(w.real); print(w.imag)
 
 
+
+def Flow_structures():
+
+  f = 1; n = 6
+     
+  # for loop
+  for i in range(n,1,-1): # ranges between n and 2 jumping backwards (-1)
+    f = f*i
+     
+  print( "The factorial of n = ", n, "is n! = ", f )
+     
+  # while loop
+  x1 = 3.; x0 = 0.
+  while abs(x1-x0) > 1e-5:
+      x0 = x1
+      x1 = x0 - (3*x0**3 - x0**2)/(9*x0**2 - 2*x0)
+     
+  print( "One root of 3x^3 - x^2 is at x = ", x1 )
+
+  # if - else conditional
+  x = -75.2
+  if x >= 0:
+    abso = x
+  else:
+    abso = -x
+     
+  print( "The absolute value of x = ", x, "is ", abso )
+
+  # if - elif - else conditional
+  a = 43; b = 34
+  print( "a = ", b, "b = ", b )
+  if a > b:
+      print( "a is greater than b" )
+  elif (a < b):
+      print( "a is less than b" )
+  elif (a == b):
+      print( "a is equal to b" )         
+  

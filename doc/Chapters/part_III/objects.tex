@@ -1,13 +1,39 @@
 \chapter{Object Oriented Programming} 
 
-%Palabrejos que luego explicamos que son las 4 propiedades 
 
+In the following sections we delve into the main principles of Object Oriented Programming through some examples: 
+abstraction, encapsulation, inheritance and polymorphism. 
 
+    %\section{Abstraction}
+    %\section{Encapsulation}
 
-\section{Polymorphism} 
+    \section{Inheritance}
 
+Let's continue with the example used for the overview of this chapter. 
+Imagine that the simulation of evaporating droplets needs to include the combustion of spherical fuel droplets apart from the evaporation.
+Fuel droplets present a similar state as the generic type: temperature, size, mass fraction of fuel at its surface, etc.
+Also, they behave in a similar way: updating physical properties according to the temperature, decreasing size while it evaporates, etc. 
+However, this new class of droplet includes a heat of combustion as state and has extra behaviour, burning and liberating energy. 
 
+Inheritance allows the programmer to reuse all the logic behind the droplet class 
+and create the new fuel droplet class with its unique particularities, hence, not blurring the 
+definition of the droplet class.
+A hierarchy has been created where a child class (fuel droplet) is derived from a parent class (droplet).
 
+ 
+
+    \section{Polymorphism} 
+
+Imagine now that the simulation requires non-spherical droplets, for example ellipsoid shaped. 
+As we have seen, inheritance can be used to define this new class of droplets since they present a similar state and behaviour as spherical droplets.
+However, the size property must take into account the three axes of an ellipsoid and not only the radius of a spherical shape. 
+In addition, a method that decreases this size according to evaporation should also be consistent. 
+Furthermore, we want the methods and properties to be used in the same way, whether the droplets in our simulation are spherical or ellipsoid shaped.
+
+Polymorphism allows the use of the child classes in the same way as the parent classes with no need of mixing types. 
+In our example, the size property or the updating size method have multiple shapes depending on the specific class where it is defined. 
+The language decides at each case which implementation should be evaluated of the common method.
+ 
 
 
 
@@ -25,6 +51,15 @@
         \renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism} 
         \lstpython
         \listingsp{\home/polymorphism.py}{class}{Total perimeter}{polymorphism.py}
+
+
+
+
+
+
+
+
+
 
 
 %\newpage 

@@ -134,7 +134,7 @@ In scientific computing, operator overloading allows to manipulate objects with 
 
 
 
-\newpage 
+    \newpage 
     \section{Object Oriented Programming}
 
 Contrary to functional programming, object-oriented programming is not born 
@@ -156,8 +156,8 @@ This could be identified with its behaviour.
 
 %Ejemplo de un objeto
 Let's see what classes and objects are through an example. 
-Imagine you want to simulate the evaporation of a bunch of fuel droplets in a combustion chamber. 
-Each droplet presents an state like its temperature, its size, the mass fraction of fuel at its surface, a spatial discretization to solve conservation equations, etc.
+Imagine you want to simulate the evaporation of a bunch of spherical fluid droplets. 
+Each droplet presents an state like its temperature, its size, the mass fraction of fluid at its surface, a spatial discretization to solve conservation equations, etc.
 Also, a droplet behaves in a specific way, it updates its physical properties according to the temperature (Specific heat capacity, heat transfer coefficient, etc.) or decreases its size while it evaporates.
 Hence, each droplet could be programmed as an object in the simulation. 
 Notice that all the droplets share the same properties and behaviours so the class ``droplet'' 
@@ -171,7 +171,7 @@ abstraction, encapsulation, inheritance and polymorphism.
 The languages are usually classified into Object Based Language and Object Oriented Language.
 The former is used for any language that supports the concept of encapsulating state and behaviour 
 in an object while it does not need to support inheritance or polymorphism. 
-For example Fortran nowadays is an Object Based Language.
+For example Fortran 90 is an Object Based Language.
 If a language is Object Based but also supports the full bunch of principles mentioned, then they are Object Oriented Languages. 
 For example Python, Java, C++, Lisp or MATLAB.
 
@@ -182,7 +182,7 @@ For example Python, Java, C++, Lisp or MATLAB.
 
 
 
-\newpage 
+    \newpage 
     \section{Pointers} 
 
 A pointer is a variable that stores a memory address. 

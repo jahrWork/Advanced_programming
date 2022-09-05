@@ -6,7 +6,7 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "doc/Chapters/Part_III/objects.tex",
+        "CurrentFile": "doc/Chapters/Part_III/overview.tex",
         "FileVersion": 1,
         "Files": [
             {
@@ -70,16 +70,24 @@
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/part_I/Overview.tex",
                 "FirstLine": 0,
-                "FoldedLines": "",
+                "FoldedLines": "33,120,256,313",
                 "Line": 14
             },
             {
-                "Col": 0,
+                "Col": 1,
+                "EditorGroup": 0,
+                "FileName": "doc/Chapters/Part_III/overview.tex",
+                "FirstLine": 0,
+                "FoldedLines": "34,59,99,137,185,229,297,300",
+                "Line": 175
+            },
+            {
+                "Col": 59,
                 "EditorGroup": 0,
                 "FileName": "doc/Chapters/Part_III/objects.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 2
             }
         ],
         "MasterFile": "",

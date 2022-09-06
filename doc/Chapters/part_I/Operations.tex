@@ -690,16 +690,19 @@ Python automatically declares them. In addition, indentation rules must be stric
 \vspace{-0.5cm}
 Numbers and truth values are not the only objects needed to build the different branches of mathematics.
 Also sets, vectors, tuples, matrices, tensors or sequences are used in the context of algebra, calculus or set theory.
-Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
+Let's review now the formal definition of the objects that are represented in programming by arrays, sets, tuples, lists and dictionaries. 
 
 \begin{enumerate}[noitemsep]
-    \item Set: gathering together into a whole of definite, distinct objects of our perception or our thought.
-    \item Tuples and sequences: enumerated collection of elements, where repetitions are allowed and order matters. 
-    While a sequence can be finite or infinite, a tuples is always finite. 
-    \item Vectors: Elements of a vector space.
-    \item Matrices: rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
-    \item Graphs: mathematical structures used to model pairwise relations between objects.
+    \item \textbf{Set:} gathering together into a whole of definite, distinct objects of our perception or our thought.
+    \item \textbf{Tuples and sequences:} enumerated collection of elements, where repetitions are allowed and order matters. 
+    While a sequence can be finite or infinite, a tuple is always finite. 
+    \item \textbf{Vectors:} elements of a vector space.
+    \item \textbf{Matrices:} rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
+    \item \textbf{Graphs:} mathematical structures used to model pairwise relations between objects.
+    \item \textbf{Array:} an orderly arrangement of similar mathematical objects.
 \end{enumerate}
+
+        \subsection*{Set}
 
 %set --------------------------------------------------------------
 A \textbf{set}, with the definition given by Georg Cantor within the set theory, 
@@ -707,8 +710,32 @@ is a gathering together into a whole of definite, distinct objects of our percep
 which are called elements of the set.
 The elements of a set can be any mathematical objects: numbers, points in space, geometrical shapes, variables or other sets.
 However, every element of the set must be different from the others.
-Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation).
+Sets are usually indicated by listing its elements between curly brackets separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$.
 
+Given two sets $A$ and $B$, the following operations can be performed:
+\begin{enumerate}[noitemsep]
+    \item Union: $A\cup B$ is the set of elements that belong to set $A$, set $B$ or both.
+    \item Intersection: $A\cap B$ is the set of elements that belong to set $A$ and $B$.
+    \item Difference: $A - B$ is the set of elements that are in $A$ but not in $B$.
+    \item Complement: $\overline{A}$ is the set of all elements that are in the universal set $S$ but are not in $A$.
+\end{enumerate}
+Extending the use of propositional logic to the set theory, notice that an element or a set 
+do not have a truth value associated on their own, an element is not true or false by itself. 
+By including some relational operators, true or false statements can be 
+built and used in the context of propositional logic. 
+For example, we can say $3.5 \in \mathbb{R}$ which is a true proposition. 
+Given a set $A$, the following operators are used:
+\begin{enumerate}[noitemsep]
+    \item Membership: $x\in A$ means that $x$ is an element of the set $A$. The opposite operator would be $x\notin A$.
+    \item Subset: $A \subseteq B$ means that all elements of $A$ are also elements of $B$.
+    \item Superset: $A \supseteq B$ means that all elements of $B$ are also elements of $A$.
+    \item Strict subset: $A \subset B$ means that all elements of $A$ are also elements of $B$ but they are not equal.
+    \item Strict superset: $A \supset B$ means that all elements of $B$ are also elements of $A$ but they are not equal.
+\end{enumerate}
+
+
+
+        \subsection*{Tuple and sequence}
 % --------------------------------------------------------------
 \textbf{Tuples and sequences} are also collections of mathematical objects.
 However, a \textbf{sequence} is an enumerated collection, where repetitions are allowed and order matters.
@@ -719,8 +746,10 @@ Sequences are essential in different branches of mathematics, specially in analy
 the basis for series.
 A $n-$\textbf{tuple} is a finite sequence, which means, a finite ordered lists of $n$ elements where $n$ is a non-negative integer.
 Notice that $n-$tuples can be represented by an a single dimensional arrangement of $n$ elements.
-Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$.
+Sequences and tuples are usually written between parenthesis or square brackets: $[1,3,5,7,...]$.
 
+
+        \subsection*{Vector, matrix and tensor}
 %--------------------------------------------------------------
 %vectors
 A \textbf{vector} is any element of a vector space.
@@ -731,7 +760,7 @@ existence of identity and inverse elements for addition,
 existence of identity for scalar multiplication, 
 associativity of scalar multiplication and 
 distributivity for scalar multiplication over scalar and vector additions. 
-Vectors are usually enclosed in parentheses $()$.
+Vectors are usually enclosed in parentheses: $(x,y,z)$.
 
 %--------------------------------------------------------------
 A \textbf{matrix} is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
@@ -742,24 +771,81 @@ the set of $n\times m$ matrices with entries in the field $\mathbb{F}$.
 This set, together with the common addition of matrices and the multiplication by numbers (scalars) 
 in the field $\mathbb{F}$ also has the structure of vector space. 
 Hence, some matrices are also vectors inherited from the vector space structure they present.
-Matrices are commonly written with square brackets $[]$.
+Matrices are commonly written with square brackets: $\begin{bmatrix}  1 & 2 & 3 \\  4 & 5 & 6\end{bmatrix}$.
 
 %Tensors are NOT the generalization of scalars, vectors and matrices (no indices, one index, two indices) to an arbitrary number of indices. 
 The concept of \textbf{tensor} has different approaches. 
 Avoiding the formal definition let's consider here that a tensor can be represented as a potentially multidimensional array.
 The elements in this multidimensional array are called scalar components and are denoted by indices with their position in the array.
-A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
+A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor: $\alpha_{ijkl}$ is a rank 4 tensor
 
+
+        \subsection*{Graphs}
 %--------------------------------------------------------------
 \textbf{Graphs} in graph theory and discrete mathematics are structures that model pairwise relations between objects. 
 A graph is built by a collection of points (vertices) and lines (edges) connecting a subset of them.
-Graphs are usually denoted enclosed in parenthesis and indicating the sets of vertices and edges. 
+Graphs are usually enclosed in parenthesis and indicating the sets of vertices and edges: $G = (V,E)$ where $V = \{a,b,c\}$ and $E = \{\{a,b\},\{a,c\},\{b,c\}\}$. 
+
+
+        \subsection*{Array}
+
+%--------------------------------------------------------------
+We have used the term \textbf{array} (or arrangement) three times: 
+a potential representation for tuples or vectors, 
+a representation of matrices and a representation for tensors. 
+In maths, an array refers to an orderly arrangement of similar 
+mathematical objects. From this definition two notions are essential, 
+in an array the elements are of the same kind and they are ordered with a specific pattern.
+
+On one hand, notice that sequences or tuples are not defined in terms of vectors in any sense. 
+It can happen that a sequence with elements in a field $\mathbb{F}$ 
+(whether finite or infinite)
+is a vector in the vector space of all sequences with elements in $\mathbb{F}$.
+This is because the addition and multiplication by scalars in $\mathbb{F}$ 
+can be defined in terms of element wise common addition and multiplication, 
+and satisfy the vector axioms, hence, we have a vector space over $\mathbb{F}$. 
+It can also happen that some tuples are vectors of finite dimensional vector spaces. 
+However, there is no need that their elements belong to a field and hence, no need 
+to consider sequences or tuples  as vectors. 
+
+On the other hand, vectors are not defined in terms of sequences or tuples.
+Notice that vector spaces can be finite dimensional like the commonly used $\mathbb{F}^{n}$ 
+(where $\mathbb{F}$ is a field like for example $\mathbb{R}$ or $\mathbb{C}$) or infinite dimensional.
+In the first case, $n-$tuples with elements in the field $\mathbb{F}$ are usually used to represent the vectors once a basis has been chosen. 
+Hence, tuples are used to represent the vectors in a specific basis but not being the vectors themselves.
+As an example, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are vector spaces 
+usually represented as 2-tuples and 3-tuples of reals with respect to a given basis.
+When $n-$tuples are used to represent the vectors we can use a one-dimensional arrangement of $n$ elements.
+In the case of infinite dimensional vector spaces, tuples cannot be used to represent vectors and sequences sometimes can. 
+Some examples are the vector space of infinite sequences of real numbers $\mathbb{R}^\infty$ or 
+the set of all continuous real valued functions on $[0,1]$.
+It is clear then that some vectors could be seen as tuples, others as sequences and others in neither of these forms. 
+However, again there is no need to define 
+vectors in terms of these objects since it is not the general situation. 
+
+As a conclusion, even when vectors, matrices, tensors, sequences and tuples are different mathematical objects, 
+under some specific conditions they can be represented by arrays.
+
+%--------------------------------------------------------------
+
+
+%Aqui los ejemplitos basicos?
+
+
+
+
+
+
+
+
 
 
 
 
         \newpage
         \subsection*{Fortran code}
+        
+            \subsubsection*{Arrays}
 %Declaration
 Consider the following vectors $V, W \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ and matrix $A \in { \cal{M}}^{N \times N} (\mathbb{R})$ 
 with $N=10$ and let's declare them using Fortran arrays. 
@@ -860,6 +946,8 @@ Notice that, since Fortran is a column major order language, functions like \tex
 
         \newpage 
         \subsection*{Python code}
+        
+            \subsubsection*{Arrays}
 Let's see the same examples defined above using \texttt{NumPy} arrays and 
 let's include now a matrix $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$. 
 Notice that now they do not need to be explicitly declared, 
@@ -911,7 +999,7 @@ stop 1 before the final bound.
 
 
 
-
+            \subsubsection*{More}
 
 \vspace{0.5cm}
 Python has built-in other data structures which are used to store collections of data.
@@ -1008,6 +1096,95 @@ to access to their elements, similar to the NumPy arrays.
  
 
 
+
+
+
+
+        
+        
+
+      
+      
+      
+
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+    \newpage
+    \section{Iterators}
+
+When data structures were presented we already mentioned that both Python and Fortran 
+use the index of each dimension as iterators in their arrays. 
+Hence, using loops with different indices we can reference any element within the array.
+
+Now we are going to see the iterators that can be used with structures like 
+sets, lists, tuples, dictionaries and even strings in Python.    
+Since all contain a countable number of elements they are considered iterable data structures. 
+Three main strategies can be used:
+\begin{enumerate}
+    \item \textbf{Iterating in the elements of the structure.} 
+    In the code below the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
+    by means of \texttt{s} and \texttt{k} respectively. 
+    All iterable structures are iterable in their elements, including strings.  
+    \item \textbf{Iterating in the index.}
+    In the code below both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
+    While lists, tuples and strings are easily iterable on their indices, 
+    sets are not subscriptable (they do not have order) and 
+    dictionaries need keys as subscripts and not indices. 
+    \item \textbf{Iterate in both the index and the element.} 
+    In the code below the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
+    by means of the \texttt{eunmerate()} function.
+    While lists, tuples and strings are easily iterable on their indices, 
+    sets are not subscriptable (they do not have order) and 
+    dictionaries should be better iterated using their keys.
+    
+    \item Dictionaries have two extra methods that simplifies the iteration, first one is 
+    \texttt{for k in D.keys()} to iterate in the keys 
+    and second \texttt{for v in D.values()} to iterate in the values. 
+\end{enumerate} 
+
+Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
+All its arguments are integers and \texttt{start} and \texttt{step} are optional.
+When only \texttt{stop} is specified (see the examples below) the iterator starts in \texttt{0} and do not include the stop number itself.
+The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
+
+\newpage
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
+
+Finally, notice that every iterable object can use the \texttt{iter()} method to create an iterator from the data structure and
+the \texttt{next()} method to jump element in the iterator (see \texttt{ite} in the code above).
+Actually, Python is using this kind of iteration behind the more straightforward options seen.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+%FUTURE? 
+ 
+%where??
+
+%Luego hay funciones y metodos de objetos para hacer un monton mas de operaciones de todo tipo. 
+%In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
+
 %future?
 %\texttt{ (/ list /) } is not used as constructor.
 
@@ -1023,141 +1200,6 @@ to access to their elements, similar to the NumPy arrays.
 
 
 
-
-
-
-
-    \newpage
-    \section{Maths operators}
-
-
-Extending the use of propositional logic to the set theory, notice that an element or a set 
-do not have a truth value associated on their own, an element is not true or false by itself. 
-By including the relation between a member and a set as operator, true or false statements can be 
-built and used in the context of propositional logic. 
-For example, using the \textbf{membership operator} $\in$ we can say $3.5 \in \mathbb{R}$ is a true proposition. 
-Also the opposite operator can be considered, $3.5 \notin \mathbb{N}$ is a true proposition.
-
-Given the set 
-$\Pi = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \;\textrm{is prime}\}$ 
-and the set 
-$E = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \; \textrm{is even}\}$: 
-$$
-\Pi = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29\}
-$$
-$$
-E = \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30\}
-$$
-we can check first that the following assertion is false:
-$$
-(1\in P) \land (5\in P)
-$$
-and we can also check the first De Morgan's Law ($\neg (P\lor Q) \iff (\neg P \land \neg Q)$) for the assertions $P = a\in \Pi$ and $Q = a\in E$:
-$$
-\neg (a\in\Pi \lor a\in E) \iff (\neg a\in\Pi \land \neg a\in E)
-$$
-%$$
-%(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
-%$$
-
-
-
-
-In a programming language the data type of an entity decides, among other things, 
-the allowed values that it can have and 
-the set of operations that can be performed with them.
-The same applies to data structures, each structure can be operated 
-with a different bunch of operators in order to work with them. 
-
-
-
-        
-        
-        \subsection*{Membership operators}
-        \vspace{-0.5cm}
-        Python allows the membership operators for sets, lists, tuples and dictionary keys:
-        \vspace{-0.7cm}
-        \begin{itemize}[noitemsep]
-            \item \texttt{in} for the $\in$ operator and
-            \item \texttt{not in} for the $\notin$ operator.
-        \end{itemize}        
-      
-      
-      
-      
-
-        
-        
-        
-        
-        
-
-
-
-
-
-
-
-        \newpage
-    \section{Iterators}
-        
-        When data structures were presented we already mentioned that both Python and Fortran 
-        use the index of each dimension as iterators in their arrays. 
-        Hence, using loops with different indices we can reference any element within the array.
-        
-        Now we are going to see the iterators that can be used with structures like 
-        sets, lists, tuples, dictionaries and even strings in Python.    
-        Since all contain a countable number of elements they are considered iterable data structures. 
-        Three main strategies can be used:
-        \begin{enumerate}
-            \item \textbf{Iterating in the elements of the structure.} 
-            In the code below the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
-            by means of \texttt{s} and \texttt{k} respectively. 
-            All iterable structures are iterable in their elements, including strings.  
-            \item \textbf{Iterating in the index.}
-            In the code below both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
-            While lists, tuples and strings are easily iterable on their indices, 
-            sets are not subscriptable (they do not have order) and 
-            dictionaries need keys as subscripts and not indices. 
-            \item \textbf{Iterate in both the index and the element.} 
-            In the code below the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
-            by means of the \texttt{eunmerate()} function.
-            While lists, tuples and strings are easily iterable on their indices, 
-            sets are not subscriptable (they do not have order) and 
-            dictionaries should be better iterated using their keys.
-            
-            \item Dictionaries have two extra methods that simplifies the iteration, first one is 
-            \texttt{for k in D.keys()} to iterate in the keys 
-            and second \texttt{for v in D.values()} to iterate in the values. 
-        \end{enumerate} 
-        
-        Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
-        All its arguments are integers and \texttt{start} and \texttt{step} are optional.
-        When only \texttt{stop} is specified (see the examples below) the iterator starts in \texttt{0} and do not include the stop number itself.
-        The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
-        
-        \newpage
-        \lstpython
-        \renewcommand{\home}{./Python/sources/Foundations/data_type} 
-        \listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
-
-        Finally, notice that every iterable object can use the \texttt{iter()} method to create an iterator from the data structure and
-        the \texttt{next()} method to jump element in the iterator (see \texttt{ite} in the code above).
-        Actually, Python is using this kind of iteration behind the more straightforward options seen.
- 
- 
- 
- 
- 
- 
- 
- 
-%FUTURE? 
- 
-%where??
-
-%Luego hay funciones y metodos de objetos para hacer un monton mas de operaciones de todo tipo. 
-%In a set the data can be modified through built-in methods so for example mathematical set operations like union, intersection or difference can be performed.
 
 
 
@@ -1229,6 +1271,16 @@ with a different bunch of operators in order to work with them.
     %            \item  for the disjunction operator and
     %            \item  for the negation operator.
     %        \end{itemize}
+
+%        \subsection*{Membership operators}
+%        \vspace{-0.5cm}
+%        Python allows the membership operators for sets, lists, tuples and dictionary keys:
+%        \vspace{-0.7cm}
+%        \begin{itemize}[noitemsep]
+    %            \item \texttt{in} for the $\in$ operator and
+    %            \item \texttt{not in} for the $\notin$ operator.
+    %        \end{itemize}        
+%      
 
 %
 %We mentioned before that a lot of properties are derived from the structure of the integers with the usual addition and multiplication and their properties. 

@@ -1,3 +1,17 @@
+In a programming language the data type of an entity decides, among other things, 
+the allowed values that it can have and 
+the set of operations that can be performed with them.
+The same applies to data structures, each structure can be operated 
+with a different bunch of operators in order to work with them. 
+
+
+
+
+
+
+
+
+
 Let's create as an example the set of the prime numbers up to 50:
 $$
 \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
@@ -11,15 +25,7 @@ or infinite (like Fibonacci sequence).
 
 
 
-Notice that sequences are not defined in terms of vectors in any sense. 
-It can happen that a sequence with elements in a field $\mathbb{F}$ 
-(whether finite or infinite)
-is a vector in the vector space of all sequences with elements in $\mathbb{F}$.
-This is because the addition and multiplication by scalars in $\mathbb{F}$ 
-can be defined in terms element wise common addition and multiplication, 
-and satisfy the vector axioms, hence, we have a space vector over $\mathbb{F}$.
-However, there is no need that the elements belong to a field and hence, no need 
-to consider sequences as vectors. 
+
 
 Let's find in the examples below an approximation to the infinite sum of the sequence: 
 $$
@@ -27,8 +33,7 @@ $$
 $$
 
 
-Again, under certain conditions, tuples can be seen as vectors, in this case from finite dimensional vector spaces. 
-However, since tuples does not need to have elements from a field, its definition is not based in vectors in any sense. 
+ 
 
 
 
@@ -45,18 +50,28 @@ tuples like $\left(a,b,c\in\mathbb{Z}^+|a^2 + b^2 = c^2\right)$ using the follow
 
 
 
-These vector spaces can be finite dimensional like the commonly used $\mathbb{F}^{n}$ 
-(where $\mathbb{F}$ is a field like for example $\mathbb{R}$ or $\mathbb{C}$).
-In these cases, $n-$tuples with elements in the field $\mathbb{F}$ are usually used to represent the vectors once a basis has been chosen. 
-Hence, tuples are used to represent the vectors in a specific basis but not being the vectors themselves.
-As an example, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are vector spaces 
-usually represented as 2-tuples and 3-tuples of reals with respect to a given basis.
-When $n-$tuples are used to represent the vectors we can use a one-dimensional arrangement of $n$ elements.
 
-Vector spaces can also be infinite dimensional, for example the vector space of infinite sequences of real numbers $\mathbb{R}^\infty$ or 
-the set of all continuous real valued functions on $[0,1]$. Now tuples cannot be used to represent vectors and sequences sometimes can.
-It is clear then that some vectors could be seen as tuples, or sequences, but again there is no need to define 
-vectors in terms of these objects since it is not the general situation. 
+Given the set 
+$\Pi = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \;\textrm{is prime}\}$ 
+and the set 
+$E = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \; \textrm{is even}\}$: 
+$$
+\Pi = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29\}
+$$
+$$
+E = \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30\}
+$$
+we can check first that the following assertion is false:
+$$
+(1\in P) \land (5\in P)
+$$
+and we can also check the first De Morgan's Law ($\neg (P\lor Q) \iff (\neg P \land \neg Q)$) for the assertions $P = a\in \Pi$ and $Q = a\in E$:
+$$
+\neg (a\in\Pi \lor a\in E) \iff (\neg a\in\Pi \land \neg a\in E)
+$$
+%$$
+%(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
+%$$
 
 
 
@@ -66,28 +81,10 @@ vectors in terms of these objects since it is not the general situation.
 
 
 
-The standard notation for all these objects are as indicated below:
-\begin{itemize}
-    \item Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$
-    \item Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$: $(1,3,5,7,...)$ %or angle brackets $\langle \rangle$: 
-    \item In a similar way vectors are usually enclosed in parentheses $()$: $(1,2,3,4,5)$ %or angle brackets $\langle \rangle$:  or $\langle1,2,3,4,5 \rangle$
-    \item Matrices are commonly written with square brackets: %or parentheses:
-    $
-    \begin{bmatrix}
-        1 & 2 & 3 \\
-        4 & 5 & 6
-    \end{bmatrix} 
-    $
-%    $ or $
-%    \begin{pmatrix}
-%        1 & 2 & 3\\
-%        4 & 5 & 6
-%    \end{pmatrix}   
-%    $
-    \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
-    For example $\alpha_{ijkl}$ is a rank 4 tensor.
-\end{itemize}
-% -------------------------------------------------------------- 
+
+
+
+ 
 
 
 

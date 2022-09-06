@@ -1,0 +1,137 @@
+Let's create as an example the set of the prime numbers up to 50:
+$$
+\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}
+$$
+
+
+
+The length of the sequence is its number of elements and could be any finite value (like in the sequence $(1,5,6,5,8,10)$) 
+or infinite (like Fibonacci sequence).
+
+
+
+
+Notice that sequences are not defined in terms of vectors in any sense. 
+It can happen that a sequence with elements in a field $\mathbb{F}$ 
+(whether finite or infinite)
+is a vector in the vector space of all sequences with elements in $\mathbb{F}$.
+This is because the addition and multiplication by scalars in $\mathbb{F}$ 
+can be defined in terms element wise common addition and multiplication, 
+and satisfy the vector axioms, hence, we have a space vector over $\mathbb{F}$.
+However, there is no need that the elements belong to a field and hence, no need 
+to consider sequences as vectors. 
+
+Let's find in the examples below an approximation to the infinite sum of the sequence: 
+$$
+\left[\sqrt{\frac{n}{n^4+1}}| n\in\mathbb{N}\right]
+$$
+
+
+Again, under certain conditions, tuples can be seen as vectors, in this case from finite dimensional vector spaces. 
+However, since tuples does not need to have elements from a field, its definition is not based in vectors in any sense. 
+
+
+
+As an example of tuple use let's generate a set of Pythagorean triples, 
+tuples like $\left(a,b,c\in\mathbb{Z}^+|a^2 + b^2 = c^2\right)$ using the following three equations:
+\begin{equation}
+    \begin{cases}
+        a  & = i^2 - 1\\
+        b & = 2i\\
+        c & = i^2+1
+    \end{cases}       
+\end{equation}
+
+
+
+
+These vector spaces can be finite dimensional like the commonly used $\mathbb{F}^{n}$ 
+(where $\mathbb{F}$ is a field like for example $\mathbb{R}$ or $\mathbb{C}$).
+In these cases, $n-$tuples with elements in the field $\mathbb{F}$ are usually used to represent the vectors once a basis has been chosen. 
+Hence, tuples are used to represent the vectors in a specific basis but not being the vectors themselves.
+As an example, $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$ are vector spaces 
+usually represented as 2-tuples and 3-tuples of reals with respect to a given basis.
+When $n-$tuples are used to represent the vectors we can use a one-dimensional arrangement of $n$ elements.
+
+Vector spaces can also be infinite dimensional, for example the vector space of infinite sequences of real numbers $\mathbb{R}^\infty$ or 
+the set of all continuous real valued functions on $[0,1]$. Now tuples cannot be used to represent vectors and sequences sometimes can.
+It is clear then that some vectors could be seen as tuples, or sequences, but again there is no need to define 
+vectors in terms of these objects since it is not the general situation. 
+
+
+
+
+
+
+
+
+
+The standard notation for all these objects are as indicated below:
+\begin{itemize}
+    \item Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation): $\{\textrm{car, boat, plane}\}$
+    \item Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$: $(1,3,5,7,...)$ %or angle brackets $\langle \rangle$: 
+    \item In a similar way vectors are usually enclosed in parentheses $()$: $(1,2,3,4,5)$ %or angle brackets $\langle \rangle$:  or $\langle1,2,3,4,5 \rangle$
+    \item Matrices are commonly written with square brackets: %or parentheses:
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6
+    \end{bmatrix} 
+    $
+%    $ or $
+%    \begin{pmatrix}
+%        1 & 2 & 3\\
+%        4 & 5 & 6
+%    \end{pmatrix}   
+%    $
+    \item A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
+    For example $\alpha_{ijkl}$ is a rank 4 tensor.
+\end{itemize}
+% -------------------------------------------------------------- 
+
+
+
+In a programming language all these objects are represented by different data structures.
+Fortran for example does not include tuples, sets or sequences, but vectors, matrices and tensors are represented with arrays. 
+On the contrary, Python has built-in the structures of sets and tuples among others and arrays are available within the \texttt{NumPy} library.  
+
+With the Fortran examples below the following concepts are covered:
+\begin{enumerate}[noitemsep]
+    \item Declaring arrays: type, rank and dimension.
+    \item Initialize arrays: constructors. 
+    \item Iterators for arrays, sectors or slices. 
+\end{enumerate}
+
+Also, with the Python examples, the following concepts are treated:
+\begin{enumerate}[noitemsep]
+    \item Constructors, iterators and slices for NumPy arrays.
+    \item Using sets, lists, tuples and dictionaries: constructors.
+    %\item Iterators for data structures.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+Derived data types can be created either from intrinsic types or from other derived types previously defined.
+
+
+
+In addition, Python also allows non-primitive data types (explained in this book as data structures)
+and user-defined data structures.
+
+
+En el codigo de operadores
+
+  P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+  E = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+  
+    print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
+  print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )

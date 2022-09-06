@@ -40,7 +40,8 @@ contains
      real :: pi = 4*atan(1.), e = exp(1.)
      
      write(*,*) "e^(i pi) + 1 = ",  e**( (0,1)*pi ) + 1
-     write(*,*) "x <= y and then -x >= -y",  x <= y .and. -x >= -y
+     write(*,*) "x <= y and -x >= -y is ",  x <= y .and. -x >= -y
+     write(*,*) "(abc//def) < abcdeg = ", ("abc"//"def") < "abcdeg" 
          
  end subroutine 
  

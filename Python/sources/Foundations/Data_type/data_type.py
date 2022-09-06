@@ -94,15 +94,12 @@ def data_structures():
 def Operators(): 
 
   x = 2.; y = 7.
-  P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
-  E = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
   e = exp(1.)
-  a = 2
      
   print( "e^(i pi) + 1 = ", e**(1j*pi) + 1 )
-  print( "x <= y and then -x >= -y",  x <= y and -x >= -y )
-  print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
-  print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )
+  print( "x <= y and -x >= -y is ",  x <= y and -x >= -y )
+  print( "(abc+def) < abcdeg = ", ("abc"+"def") < "abcdeg" )
+
 
 
 

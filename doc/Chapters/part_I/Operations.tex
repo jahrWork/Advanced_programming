@@ -692,13 +692,13 @@ Numbers and truth values are not the only objects needed to build the different 
 Also sets, vectors, tuples, matrices, tensors or sequences are used in the context of algebra, calculus or set theory.
 Let's review now the formal definition of the objects that later are represented in programming by arrays, sets, tuples and lists. 
 
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
     \item Set: gathering together into a whole of definite, distinct objects of our perception or our thought.
     \item Tuples and sequences: enumerated collection of elements, where repetitions are allowed and order matters. 
     While a sequence can be finite or infinite, a tuples is always finite. 
     \item Vectors: Elements of a vector space.
-    \item Matrices and tensors:
-    \item graphs:
+    \item Matrices: rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
+    \item Graphs: mathematical structures used to model pairwise relations between objects.
 \end{enumerate}
 
 %set --------------------------------------------------------------
@@ -707,6 +707,7 @@ is a gathering together into a whole of definite, distinct objects of our percep
 which are called elements of the set.
 The elements of a set can be any mathematical objects: numbers, points in space, geometrical shapes, variables or other sets.
 However, every element of the set must be different from the others.
+Sets are usually indicated by listing its elements between curly brackets $\{\}$ separated by commas (roster notation).
 
 % --------------------------------------------------------------
 \textbf{Tuples and sequences} are also collections of mathematical objects.
@@ -716,17 +717,21 @@ A sequence can also be interpreted (and it usually is) as a function whose domai
 (denoting the position within the sequence) to the set of elements. 
 Sequences are essential in different branches of mathematics, specially in analysis since they are 
 the basis for series.
-A \textbf{tuple} is a finite sequence, which means, a finite ordered lists of elements. 
-It is usually used the notation $n-$tuple for a list of $n$ elements, where $n$ is a non-negative integer.
+A $n-$\textbf{tuple} is a finite sequence, which means, a finite ordered lists of $n$ elements where $n$ is a non-negative integer.
+Notice that $n-$tuples can be represented by an a single dimensional arrangement of $n$ elements.
+Sequences and tuples are usually written between parenthesis $()$ or square brackets $[]$.
 
 %--------------------------------------------------------------
 %vectors
-Historically the term vector was used for geometric vectors, objects that has magnitude and direction.
-However, a \textbf{vector} is any element of a vector space. 
-Hence, members of a set that can be added together and multiplied by numbers of a given field, satisfying some axioms.
-
-%Definir espacio vectorial
-
+A \textbf{vector} is any element of a vector space.
+Historically this term was used for geometric vectors, objects that has magnitude and direction.
+In a vector space its members are elements of a set and, satisfying some axioms, they can be added together and multiplied by numbers of a given field. 
+These axioms are associativity and commutativity of addition, 
+existence of identity and inverse elements for addition, 
+existence of identity for scalar multiplication, 
+associativity of scalar multiplication and 
+distributivity for scalar multiplication over scalar and vector additions. 
+Vectors are usually enclosed in parentheses $()$.
 
 %--------------------------------------------------------------
 A \textbf{matrix} is a rectangular arrangement of numbers (or other mathematical objects) distributed in rows and columns.
@@ -737,22 +742,18 @@ the set of $n\times m$ matrices with entries in the field $\mathbb{F}$.
 This set, together with the common addition of matrices and the multiplication by numbers (scalars) 
 in the field $\mathbb{F}$ also has the structure of vector space. 
 Hence, some matrices are also vectors inherited from the vector space structure they present.
+Matrices are commonly written with square brackets $[]$.
 
 %Tensors are NOT the generalization of scalars, vectors and matrices (no indices, one index, two indices) to an arbitrary number of indices. 
 The concept of \textbf{tensor} has different approaches. 
 Avoiding the formal definition let's consider here that a tensor can be represented as a potentially multidimensional array.
 The elements in this multidimensional array are called scalar components and are denoted by indices with their position in the array.
-
-Finally, we have used the term \textbf{array} (or arrangement) three times: 
-a potential representation for tuples or vectors, 
-a representation of matrices and a representation for tensors. 
-In maths, an array refers to an orderly arrangement of similar 
-mathematical objects, hence, following a specific pattern.
+A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor.
 
 %--------------------------------------------------------------
-%Def graphs
-
-
+\textbf{Graphs} in graph theory and discrete mathematics are structures that model pairwise relations between objects. 
+A graph is built by a collection of points (vertices) and lines (edges) connecting a subset of them.
+Graphs are usually denoted enclosed in parenthesis and indicating the sets of vertices and edges. 
 
 
 

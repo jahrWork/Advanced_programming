@@ -703,8 +703,8 @@ Let's review now the formal definition of the objects that are represented in pr
 \end{enumerate}
 
         \subsection*{Set}
-
-%set --------------------------------------------------------------
+\vspace{-0.5cm}
+% --------------------------------------------------------------
 A \textbf{set}, with the definition given by Georg Cantor within the set theory, 
 is a gathering together into a whole of definite, distinct objects of our perception or our thought, 
 which are called elements of the set.
@@ -719,11 +719,11 @@ Given two sets $A$ and $B$, the following operations can be performed:
     \item Difference: $A - B$ is the set of elements that are in $A$ but not in $B$.
     \item Complement: $\overline{A}$ is the set of all elements that are in the universal set $S$ but are not in $A$.
 \end{enumerate}
-Extending the use of propositional logic to the set theory, notice that an element or a set 
-do not have a truth value associated on their own, an element is not true or false by itself. 
+It is interesting to extend the use of propositional logic to the set theory. 
+Notice that an element or set do not have a truth value associated, they are not true or false by themselves. 
 By including some relational operators, true or false statements can be 
 built and used in the context of propositional logic. 
-For example, we can say $3.5 \in \mathbb{R}$ which is a true proposition. 
+For example, we can say $3.5 \in \mathbb{R}$ which is true. 
 Given a set $A$, the following operators are used:
 \begin{enumerate}[noitemsep]
     \item Membership: $x\in A$ means that $x$ is an element of the set $A$. The opposite operator would be $x\notin A$.
@@ -736,6 +736,7 @@ Given a set $A$, the following operators are used:
 
 
         \subsection*{Tuple and sequence}
+        \vspace{-.5cm}
 % --------------------------------------------------------------
 \textbf{Tuples and sequences} are also collections of mathematical objects.
 However, a \textbf{sequence} is an enumerated collection, where repetitions are allowed and order matters.
@@ -750,6 +751,7 @@ Sequences and tuples are usually written between parenthesis or square brackets:
 
 
         \subsection*{Vector, matrix and tensor}
+        \vspace{-.5cm}
 %--------------------------------------------------------------
 %vectors
 A \textbf{vector} is any element of a vector space.
@@ -779,6 +781,14 @@ Avoiding the formal definition let's consider here that a tensor can be represen
 The elements in this multidimensional array are called scalar components and are denoted by indices with their position in the array.
 A tensor is usually denoted by a symbolic name followed by a collection of subscripts where the number of subscripts attached defines the rank of the tensor: $\alpha_{ijkl}$ is a rank 4 tensor
 
+The operations among numbers in the elementary algebra can be extended to vectors, matrices and tensors. 
+The addition and subtraction are element wise-operations: 
+they are operated on corresponding elements within the respective objects. 
+There are also an element-wise multiplication, multiplication by a scalar, 
+vector product, dot product, matrix multiplication, transpose, trace, etc.
+These operations are covered in greater depth in chapter \ref{chap:matrices}.
+
+
 
         \subsection*{Graphs}
 %--------------------------------------------------------------
@@ -788,7 +798,6 @@ Graphs are usually enclosed in parenthesis and indicating the sets of vertices a
 
 
         \subsection*{Array}
-
 %--------------------------------------------------------------
 We have used the term \textbf{array} (or arrangement) three times: 
 a potential representation for tuples or vectors, 
@@ -808,6 +817,7 @@ It can also happen that some tuples are vectors of finite dimensional vector spa
 However, there is no need that their elements belong to a field and hence, no need 
 to consider sequences or tuples  as vectors. 
 
+\newpage
 On the other hand, vectors are not defined in terms of sequences or tuples.
 Notice that vector spaces can be finite dimensional like the commonly used $\mathbb{F}^{n}$ 
 (where $\mathbb{F}$ is a field like for example $\mathbb{R}$ or $\mathbb{C}$) or infinite dimensional.
@@ -827,9 +837,26 @@ As a conclusion, even when vectors, matrices, tensors, sequences and tuples are 
 under some specific conditions they can be represented by arrays.
 
 %--------------------------------------------------------------
-
-
-%Aqui los ejemplitos basicos?
+Let's see some basic examples of these structures in physics and mathematics:
+\vspace{0.5cm}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Data Structure}  & \textbf{Example}  & \textbf{Description}  \\ \hline
+        Set  & $\mathbb{N}$ & Natural numbers \\ \hline
+        Tuple  & $(x,y)$ & Cartesian coordinates \\ \hline
+        Sequence  & $[1,1,2,3,5,8,13,21,...]$ & Fibonacci sequence \\ \hline
+        Vector  & $\vec{v} = (\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt})$ & Velocity vector \\ \hline
+        Matrix  & $H(f) = \left[ \frac{\partial^2f}{\partial x_i\partial x_j} \right]$  &   Hessian matrix   \\ \hline
+        Tensor & $\sigma_{ij} = \left[{\begin{matrix}
+                \sigma _{11} & \sigma _{12} & \sigma _{13} \\
+                \sigma _{21} & \sigma _{22} & \sigma _{23} \\
+                \sigma _{31} & \sigma _{32} & \sigma _{33} \\
+        \end{matrix}}\right]$ & Stress tensor \\ \hline
+        Graph  & $(\{a,b,c\}, \{\{a,b\},\{b,c\},\{c,a\}\})$ & Cycle graph  \\ \hline
+    \end{tabular}
+\end{table}
 
 
 

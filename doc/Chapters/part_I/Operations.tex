@@ -741,6 +741,7 @@ Given a set $A$, the following operators are used:
 \textbf{Tuples and sequences} are also collections of mathematical objects.
 However, a \textbf{sequence} is an enumerated collection, where repetitions are allowed and order matters.
 Unlike sets, since the elements follow an order, they can be repeated in different positions of the sequence.
+The length of a sequence is its number of elements and could be any finite value or infinite.
 A sequence can also be interpreted (and it usually is) as a function whose domain is a countably ordered set like $\mathbb{N}$ 
 (denoting the position within the sequence) to the set of elements. 
 Sequences are essential in different branches of mathematics, specially in analysis since they are 
@@ -749,7 +750,7 @@ A $n-$\textbf{tuple} is a finite sequence, which means, a finite ordered lists o
 Notice that $n-$tuples can be represented by an a single dimensional arrangement of $n$ elements.
 Sequences and tuples are usually written between parenthesis or square brackets: $[1,3,5,7,...]$.
 
-
+        \vspace{-.5cm}
         \subsection*{Vector, matrix and tensor}
         \vspace{-.5cm}
 %--------------------------------------------------------------
@@ -833,7 +834,7 @@ It is clear then that some vectors could be seen as tuples, others as sequences 
 However, again there is no need to define 
 vectors in terms of these objects since it is not the general situation. 
 
-As a conclusion, even when vectors, matrices, tensors, sequences and tuples are different mathematical objects, 
+As a conclusion, even vectors, matrices, tensors, sequences and tuples being different mathematical objects, 
 under some specific conditions they can be represented by arrays.
 
 %--------------------------------------------------------------
@@ -858,11 +859,11 @@ Let's see some basic examples of these structures in physics and mathematics:
     \end{tabular}
 \end{table}
 
-
-
-
-
-
+We saw in previous sections that the data type of an object decides, among other things, 
+the allowed values that it can have and 
+the set of operations that can be performed with them. 
+The same applies to data structures, each structure can take specific values and 
+can be operated with a different bunch of operators.
 
 
 
@@ -872,15 +873,23 @@ Let's see some basic examples of these structures in physics and mathematics:
         \newpage
         \subsection*{Fortran code}
         
+        In a programming language all these objects are represented by different data structures.
+        Fortran does not include sets or graphs, but tuples, sequences, vectors, matrices and tensors are represented with arrays. 
+        
             \subsubsection*{Arrays}
 %Declaration
-Consider the following vectors $V, W \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ and matrix $A \in { \cal{M}}^{N \times N} (\mathbb{R})$ 
+Consider the following vectors $V \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ 
+and matrices $A \in { \cal{M}}^{N \times N} (\mathbb{R})$, $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$
 with $N=10$ and let's declare them using Fortran arrays. 
 $$
-V = \left( v_i =\frac{1}{i^2} \right)^T, \quad W = \left( w_i = \frac{(-1)^{i+1}}{2i+1} \right)^T \;\; i = 1 \ldots  N,  \quad Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T
+V = \left( v_i =\frac{1}{i^2} \right)^T, \quad A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1} \right], \;\; i = 1 \ldots  N, \;\;  j = 1 \ldots  N   
 $$
 $$
-A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1}, \ \ i = 1 \ldots  N, \ \ j = 1 \ldots  N \right], \quad X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T
+X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T,  \quad  Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T, \quad Z =     
+\begin{bmatrix}
+    1.1 & 2.2 & 3.3\\
+    4 & 5.6 & 6.2
+\end{bmatrix} 
 $$
 An array, either representing a vector, a matrix or a tensor, is properly \textbf{declared} when it has 
 type, rank and dimension (or extent) (see Figure \ref{fig:arrays}). 
@@ -973,6 +982,9 @@ Notice that, since Fortran is a column major order language, functions like \tex
 
         \newpage 
         \subsection*{Python code}
+        
+        On the contrary, Python has built-in the structures of sets and dictionaries (that can emulate graphs) and arrays are available within the \texttt{NumPy} library. 
+        Python also has tuples and lists built-in, however, tuples does not have a direct correspondence with its mathematical description. 
         
             \subsubsection*{Arrays}
 Let's see the same examples defined above using \texttt{NumPy} arrays and 

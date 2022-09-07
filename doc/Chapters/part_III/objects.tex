@@ -1,15 +1,34 @@
 \chapter{Object Oriented Programming} 
 
-
+\vspace{-1cm}
 In the following sections we delve into the main principles of Object Oriented Programming through some examples: 
 abstraction, encapsulation, inheritance and polymorphism. 
 
-    %\section{Abstraction}
-    %\section{Encapsulation}
+
+    \section{Encapsulation}
+    
+Let's continue with the example used for the overview of this chapter. 
+Notice that the objects representing the droplets include everything they need (data and methods) in the same unit. 
+Then, an object may share its state and interface so other objects can modify its state and use its methods 
+or may not and keep them private, encapsulation lets the objects manage both. 
+We could keep the state of each droplet private so it is not modified by other means than its own methods.  
+If the interface is public then other objects can use the object but always by means of these methods provided.  
+      
+   
+    \section{Abstraction}
+
+As an extension of the encapsulation principle we can think of abstraction. 
+Once the state and methods are encapsulated in the object, abstraction means that an object 
+should hide any code and state that is not needed by the rest and 
+should maintain public only a high-level interface to allow its use.
+By exposing only the minimum necessary and hiding the implementation the code is less complex 
+and increases reusability.
+
+
+    
 
     \section{Inheritance}
 
-Let's continue with the example used for the overview of this chapter. 
 Imagine that the simulation of evaporating droplets needs to include the combustion of spherical fuel droplets apart from the evaporation.
 Fuel droplets present a similar state as the generic type: temperature, size, mass fraction of fuel at its surface, etc.
 Also, they behave in a similar way: updating physical properties according to the temperature, decreasing size while it evaporates, etc. 
@@ -19,13 +38,6 @@ Inheritance allows the programmer to reuse all the logic behind the droplet clas
 and create the new fuel droplet class with its unique particularities, hence, not blurring the 
 definition of the droplet class.
 A hierarchy has been created where a child class (fuel droplet) is derived from a parent class (droplet).
-
-In the following examples the \texttt{polygon\_class} (or \texttt{type}) is created with 
-the properties \texttt{color}, \texttt{N\_sides}, \texttt{length} and 
-the methods \texttt{perimeter()} and \texttt{polygon\_constructor()} as constructor. 
-Inherited from this class the classes \texttt{square\_class} and \texttt{circle\_class} are also created  
-
-
 
 
 
@@ -44,21 +56,58 @@ The language decides at each case which implementation should be evaluated of th
  
 
 
+In the following example the \texttt{polygon\_class} is created with 
+the properties \texttt{color}, \texttt{N\_sides}, \texttt{length} and 
+the methods \texttt{perimeter()} and \texttt{polygon\_constructor()} as constructor. 
+The classes \texttt{square\_class} and \texttt{circle\_class} are inherited from this one, 
+the former modifies the definition of the constructor and 
+the latter both the constructor and the perimeter method. 
+
+Then, four objects are positioned in a \texttt{Polygons} variable: a polygon, an square, a circle and the same polygon repeated. 
+All of them are constructed using their respective classes and their perimeter obtained using the method \texttt{perimeter} indistinctly for each of them.
 
 
-        \newpage 
-        \subsection*{Fortran} 
-        
-        \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
-        \lstfor
-        \listings{\home/polymorphism.f90}{subroutine polymorphism_example}{end subroutine}{polymorphism.f90}
-        
-        
-        \newpage
-        \subsection*{Python}
-        \renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism} 
-        \lstpython
-        \listingsp{\home/polymorphism.py}{class}{Total perimeter}{polymorphism.py}
+    \newpage 
+    \section*{Fortran} 
+    \vspace{-.6cm}
+    Notice in the first place that the inherited classes \texttt{use} the module where the parent class is hosted. 
+    Then, by using the \texttt{extends} keyword the child class can be defined as usual. 
+    Also notice the use of \texttt{private} and \texttt{public} keywords to manage encapsulation and abstraction for these objects.  
+    In this case, the \texttt{square\_class} redefines its constructor to build a four equal sides polygon.  
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+    \lstfor
+    \listings{\home/polygon_class.f90}{module}{end type}{polygon_class.f90}
+    \vspace{-0.2cm}
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+    \lstfor
+    \listings{\home/square_class.f90}{module}{end module}{square_class.f90}
+    
+    
+    
+    
+    In Fortran, the variable \texttt{polygons(:)} must be made with an array, which can only have elements of the same type.
+    Since we need each element to be a different object, the variable is declared as an array of \texttt{pointer}, and 
+    more specifically, an array of pointers with abstract class so their targets can be any type of object.
+    When the objects \texttt{P}, \texttt{S} and \texttt{C} are constructed, 
+    each of the four elements in the polymorphic array is assigned to them. 
+    Finally, using the alias \texttt{Fi} for each object in the array, the perimeter is obtained and added to the total summation \texttt{L}.
+    \vspace{0.3cm}
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+    \lstfor
+    \listings{\home/polymorphism.f90}{subroutine polymorphism_example}{end subroutine}{polymorphism.f90}
+    
+    
+    
+    
+    
+    
+    
+    
+    \newpage
+    \section*{Python}
+    \renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism} 
+    \lstpython
+    \listingsp{\home/polymorphism.py}{class}{Total perimeter}{polymorphism.py}
 
 
 

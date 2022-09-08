@@ -3,7 +3,7 @@ from Hello_world import Hello_world
 from data_type import data_types, iterators, Operators, input_Complex, structures, Flow_structures
 from roots import Roots_2th
 from Sum_series import Summation_n2_examples, Summation_examples, Summation_functional_examples 
-from Matrix_operations import Matrix_operation_examples, arrays
+from Matrix_operations import Matrix_operation_examples, basic_arrays
 from Stack_Overflow import StackOverflow_LargeArrays, StackOverflow_InfiniteRecursion
 from Dynamic_allocation import Matrices_allocation
 from Integrals_derivatives import Integral_and_derivative_examples
@@ -44,7 +44,7 @@ def menu_Foundations():
         Summation_functional_examples()
          
      elif option == 4:      
-        Matrix_operation_examples() 
+        basic_arrays(); Matrix_operation_examples() 
         ElementWise_operation_examples()
      
      elif option == 5: 

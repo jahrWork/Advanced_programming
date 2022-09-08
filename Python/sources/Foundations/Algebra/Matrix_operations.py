@@ -92,12 +92,11 @@ def ElementWise_operation_examples():
 
 
 
-def arrays():
+def basic_arrays():
 
     N = 10 
   
     V = array( [  1./i**2 for i in range(1, N+1) ] )
-    W = array( [ (-1)**(i+1)/(2*i+1.) for i in range(1, N+1) ] ) 
     A = array( [ [ (i/float(N))**(j-1) for j in range(1,N+1) ] for i in range(1, N+1) ] )
     X = array( [ 1.3, 2.4, 3., 4.5, 5.3, 7. ] )  
     Y = A[1,2:5]

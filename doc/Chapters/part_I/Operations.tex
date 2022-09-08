@@ -1124,6 +1124,53 @@ using the following three equations up to $i = 9$:
 %    { 1, 2, 3, ..., 1000 }.
 %\end{verbatim}
 
+%Derived data types can be created either from intrinsic types or from other derived types previously defined.
+%In addition, Python also allows non-primitive data types (explained in this book as data structures)
+%and user-defined data structures.
+
+%Let's find in the examples below an approximation to the infinite sum of the sequence: 
+%$$
+%\left[\sqrt{\frac{n}{n^4+1}}| n\in\mathbb{N}\right]
+%$$
+%# List, sequence
+%print( "Sum sqrt(n/(n**4+1)) = ", sum( [sqrt(n/(n**4+1)) for n in range(10000+1)] ) )
+
+%
+%Given the set 
+%$\Pi = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \;\textrm{is prime}\}$ 
+%and the set 
+%$E = \{1\leq i\leq 30, i\in\mathbb{N}|\; i \; \textrm{is even}\}$: 
+%$$
+%\Pi = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29\}
+%$$
+%$$
+%E = \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30\}
+%$$
+%we can check first that the following assertion is false:
+%$$
+%(1\in P) \land (5\in P)
+%$$
+%and we can also check the first De Morgan's Law ($\neg (P\lor Q) \iff (\neg P \land \neg Q)$) for the assertions $P = a\in \Pi$ and $Q = a\in E$:
+%$$
+%\neg (a\in\Pi \lor a\in E) \iff (\neg a\in\Pi \land \neg a\in E)
+%$$
+%%$$
+%%(\neg a\in\Pi \land \neg a\in E) \to   \neg (a\in\Pi \lor a\in E)
+%%$$
+%
+%En el codigo de operadores
+%
+%P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+%E = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+%
+%print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
+%print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )
+
+
+
+
+
+
 
 
 

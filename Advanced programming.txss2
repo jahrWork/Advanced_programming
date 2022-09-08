@@ -6,64 +6,16 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "doc/Chapters/part_I/Operations.tex",
+        "CurrentFile": "Advanced programming.tex",
         "FileVersion": 1,
         "Files": [
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 0,
+                "FirstLine": 181,
                 "FoldedLines": "",
                 "Line": 215
-            },
-            {
-                "Col": 0,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/Operations.tex",
-                "FirstLine": 0,
-                "FoldedLines": "3,247,467,500,626,688,1161",
-                "Line": 909
-            },
-            {
-                "Col": 14,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/sum_series.tex",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 7
-            },
-            {
-                "Col": 0,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/matrices.tex",
-                "FirstLine": 0,
-                "FoldedLines": "5,16",
-                "Line": 311
-            },
-            {
-                "Col": 0,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/functions.tex",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 0
-            },
-            {
-                "Col": 0,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/RW_files.tex",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 0
-            },
-            {
-                "Col": 2,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/part_I/Overview.tex",
-                "FirstLine": 0,
-                "FoldedLines": "33,120,256,313",
-                "Line": 14
             },
             {
                 "Col": 1,

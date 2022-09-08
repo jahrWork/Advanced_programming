@@ -88,3 +88,22 @@ def ElementWise_operation_examples():
     print( " 3. trace( cos(A) ) = ", trace( cos(A) ) )
     print( " 4. trace( sqrt(A) ) = ", trace( sqrt(A) ) ) 
     #END
+
+
+
+
+def arrays():
+
+    N = 10 
+  
+    V = array( [  1./i**2 for i in range(1, N+1) ] )
+    W = array( [ (-1)**(i+1)/(2*i+1.) for i in range(1, N+1) ] ) 
+    A = array( [ [ (i/float(N))**(j-1) for j in range(1,N+1) ] for i in range(1, N+1) ] )
+    X = array( [ 1.3, 2.4, 3., 4.5, 5.3, 7. ] )  
+    Y = A[1,2:5]
+    Z = array( [ [ 1.1, 2.2, 3.3 ], [ 4., 5.6, 6.2 ] ] )
+
+    #Slices
+    C = zeros((5,4))
+    C[:,1] = X[0:5]
+    C[1:3,2:4] = [ [1.,2.], [3.,4.] ] # enter by rows!

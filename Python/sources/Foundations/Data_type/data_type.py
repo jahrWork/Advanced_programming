@@ -1,6 +1,7 @@
 from numpy import array, zeros, conjugate, real, imag, sqrt, exp, pi
 from re import split
 
+
 def data_types(): 
 
   integer = 1 
@@ -55,30 +56,30 @@ def Flow_structures():
   elif (a < b):
       print( "a is less than b" )
   elif (a == b):
-      print( "a is equal to b" )     
+      print( "a is equal to b" )   
+  else:
+      print( "Error: not valid comparison" )
 
 
-
-def arrays():
-
-    N = 10 
-  
-    V = array( [  1./i**2 for i in range(1, N+1) ] )
-    W = array( [ (-1)**(i+1)/(2*i+1.) for i in range(1, N+1) ] ) 
-    A = array( [ [ (i/float(N))**(j-1) for j in range(1,N+1) ] for i in range(1, N+1) ] )
-    X = array( [ 1.3, 2.4, 3., 4.5, 5.3, 7. ] )  
-    Y = A[1,2:5]
-    Z = array( [ [ 1.1, 2.2, 3.3 ], [ 4., 5.6, 6.2 ] ] )
-
-    #Slices
-    C = zeros((5,4))
-    C[:,1] = X[0:5]
-    C[1:3,2:4] = [ [1.,2.], [3.,4.] ] # enter by rows!
 
 def structures():
 
     # Set
-    P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}
+    X = {1, 2, 3}
+    Y = {1, 2, 3, 4}
+
+    print( "X ∪ Y:", X | Y )
+    print( "X ∩ Z:", X & Y ) 
+    print( "3 \u2208 X =", 3 in X )
+    print( "6 ∉ X =", 6 not in X )
+    print("X ⊂ Y =", X < Y ) 
+    print("X  ⊃ Y =", X > Y ) 
+    print("X ⊆ Y =", X <= Y ) 
+    print("X  ⊇ Y =", X >= Y )
+    X.add(0)
+    print( "add 0 to X =", X )
+    X.remove(0)
+    print( "remove 0 from X =", X )
 
     # List, sequence
     print( "Sum sqrt(n/(n**4+1)) = ", sum( [sqrt(n/(n**4+1)) for n in range(10000+1)] ) )
@@ -88,6 +89,9 @@ def structures():
 
     # Dictionary
     D = { "set":{1,3}, "list":[1,3], "tuple":(1,3), "dict":{"one":1,"three":3} }
+
+    # Array
+    V = array( [1, 2, 3] )
 
 
 

@@ -357,25 +357,24 @@ The code below shows the declaration and initialization of the five intrinsic da
         ~ & ~ & \texttt{*} & Multiplication \\ 
         ~ & ~ & \texttt{/} & Division (integers!) \\ 
         ~ & ~ & \texttt{**} & Exponentiation \\ 
-        ~ & Relational & \texttt{==}  (\texttt{.EQ.}) & Equal to (\texttt{=} not valid!) \\ 
-        ~ & ~ & \texttt{/=}  (\texttt{.NE.}) & Not equal to \\ 
-        ~ & {\footnotesize (no \texttt{complex})} & \texttt{>}  (\texttt{.GT.}) & Greater than  \\ 
-        ~ & {\footnotesize (no \texttt{complex})} & \texttt{<} (\texttt{.LT.}) & Less than \\ 
-        ~ & {\footnotesize (no \texttt{complex})} & \texttt{>=} (\texttt{.GE.}) & Greater or equal to \\ 
-        ~ & {\footnotesize (no \texttt{complex})} & \texttt{<=}  (\texttt{.LE.}) & Less or equal to  \\ \hline
+        ~ & Relational & \texttt{==}   & Equal to (\texttt{=} not valid!) \\ 
+        ~ & ~ & \texttt{/=}   & Not equal to \\ 
+        ~ & {\footnotesize (no \texttt{complex})} & \texttt{>}   & Greater than  \\ 
+        ~ & {\footnotesize (no \texttt{complex})} & \texttt{<}  & Less than \\ 
+        ~ & {\footnotesize (no \texttt{complex})} & \texttt{>=} & Greater or equal to \\ 
+        ~ & {\footnotesize (no \texttt{complex})} & \texttt{<=}   & Less or equal to  \\ \hline
         \texttt{logical} & Logical & \texttt{.and.} & Conjunction \\ 
         ~ & ~ & \texttt{.or.} & Disjunction \\ 
         ~ & ~ & \texttt{.not.} & Negation \\ 
-        ~ & ~ & \texttt{.eqv.} & Equivalent \\ 
-        ~ & ~ & \texttt{.neqv.} & Not equivalent \\ 
-        ~ & Relational &\texttt{==}  (\texttt{.EQ.}) & Equivalent \\ 
-        ~ & ~ & \texttt{/=}  (\texttt{.NE.}) & Not equivalent \\ \hline
+        ~ & Relational &\texttt{==}  & Equivalent \\ 
+        ~ & ~ & \texttt{/=}   & Not equivalent \\ \hline
         \texttt{character} & Character & \texttt{//} & Concatenate \\ 
         ~ & Relational & \texttt{==,/=,>,>=,<,<=} & order ASCII table \\ \hline
     \end{tabular}
 \end{table}
 
- 
+%We don't tell the options .EQ., .NEQ., etc.
+%Neither the .eqv. and .neqv. in logical
 
 
 
@@ -467,8 +466,8 @@ In the third example the string \texttt{abcdef} is compared alphabetically with 
     \newpage
     \section{Assignment operator}
 The assignment operator is different from the rest of operators in the sense that its 
-definition does not come from pure mathematics. 
-It is based on the assignment statement, already mentioned in the introduction of this section. 
+definition does not come from pure mathematics, it is not related to the mathematical equality 
+but related to the assignment statement. 
 We have seen that the variables are built by 
 a memory storage location tagged with a symbolic name.
 While the name is just a tag to identify the data,
@@ -477,20 +476,24 @@ Essentially, this operator sets or re-sets the value stored in that memory locat
 
 To do that the assignment statement is used: 
 
-\texttt{name = expr}
+\texttt{name = expression}
 
-This statement works from right to left, first the expression \texttt{expr} on the right is evaluated and
+This statement works from right to left, first the \texttt{expression} on the right is evaluated and
 when it is done, the data resulted is charged in the memory location tagged by \texttt{name}.
+Actually, for some programming languages it is referenced as the left arrow $\leftarrow$ indicating its purpose.
 According to John Backus in his article ``Can Programming Be Liberated from the von Neumann Style?'' 
 this operator splits the programming languages into two worlds: 
-a world of expressions with strong algebraic properties \texttt{expr} and 
+a world of expressions with strong algebraic properties \texttt{expression} and 
 a world of statements with few mathematical properties \texttt{name =}.
+\vspace{0.5cm}
+\lstfor
+\listings{./doc/Figures/assignment.f90}{x}{12}{assignment.f90}
 
-Several variations of the assignment operator are sometimes defined in languages like Python. 
-For example, 
-an operator that adds the right side operand with the left side and then assign the result to the left operand: \texttt{+=}.
-Also, an operator that multiplies the right operand with the left operand and then assign the result to left operand: \texttt{*=}.
-Like this, the following options are allowed: \texttt{-=}, \texttt{/=}, \texttt{\%=}, \texttt{\^{}=}, \texttt{//=}, \texttt{**=}, \texttt{\&=}, \texttt{|=}, \texttt{>>=}, \texttt{<<=}. 
+%Several variations of the assignment operator are sometimes defined in languages like Python. 
+%For example, 
+%an operator that adds the right side operand with the left side and then assign the result to the left operand: \texttt{+=}.
+%Also, an operator that multiplies the right operand with the left operand and then assign the result to left operand: \texttt{*=}.
+%Like this, the following options are allowed: \texttt{-=}, \texttt{/=}, \texttt{\%=}, \texttt{\^{}=}, \texttt{//=}, \texttt{**=}, \texttt{\&=}, \texttt{|=}, \texttt{>>=}, \texttt{<<=}. 
 
 
 
@@ -516,13 +519,14 @@ Some statements are executed if a logical expression is evaluated as \texttt{tru
 
 An \texttt{if - then - else} structure is used to evaluate first the condition between parenthesis and execute some statements if it's \texttt{true}.
 If the condition is evaluated as \texttt{false} then the statements within the \texttt{else} statement are executed. 
-Notice that \texttt{else} is optional, it could be omitted if we want to continue the program after the \texttt{if} condition was evaluated as \texttt{false}. 
+Although \texttt{else} is optional, we strongly recommend to include it in every conditional structure to ensure that at least one of the branches is executed. 
+If it seems to be not necessary then write just an error message within the \texttt{else} (see examples). 
 A conditional is used to code the absolute value of a number in the examples below. 
 
 The structure \texttt{if - elseif - else} works in the same way, however it allows more than two branches in the same structure. 
 From top to bottom all the conditions are evaluated, if one condition is \texttt{false} it jumps to check the following one. 
 In the moment that one condition is \texttt{true}, their statements are executed and the structure exited without checking the rest. 
-If neither condition is met, the \texttt{else} block of code is executed (if it is present, otherwise the program continues outside the structure).
+If neither condition is met, the \texttt{else} block of code is executed.
 As an example let's compare two integers $a$ and $b$. 
 
 Fortran implements a third kind of conditional, the \texttt{case} structure. 
@@ -543,7 +547,7 @@ the keywords are \texttt{if}, \texttt{elseif}, \texttt{else}.
 
             \newpage
             \subsubsection*{Fortran code} 
-            \vspace{0.5cm}
+            %\vspace{0.5cm}
             \lstfor
             \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
             \listings{\home/Basic_operations.f90}{else conditional}
@@ -551,10 +555,10 @@ the keywords are \texttt{if}, \texttt{elseif}, \texttt{else}.
         
         
             \subsubsection*{Python code}
-            \vspace{0.5cm} 
+            %\vspace{0.5cm} 
             \lstpython
             \renewcommand{\home}{./Python/sources/Foundations/data_type} 
-            \listingsp{\home/data_type.py}{else conditional}{a is equal to b}{data_type.py}
+            \listingsp{\home/data_type.py}{else conditional}{Error}{data_type.py}
 
 
 
@@ -724,7 +728,10 @@ Notice that an element or set do not have a truth value associated, they are not
 By including some relational operators, true or false statements can be 
 built and used in the context of propositional logic. 
 For example, we can say $3.5 \in \mathbb{R}$ which is true. 
+
+\newpage
 Given a set $A$, the following operators are used:
+\vspace{-.5cm}
 \begin{enumerate}[noitemsep]
     \item Membership: $x\in A$ means that $x$ is an element of the set $A$. The opposite operator would be $x\notin A$.
     \item Subset: $A \subseteq B$ means that all elements of $A$ are also elements of $B$.
@@ -732,9 +739,9 @@ Given a set $A$, the following operators are used:
     \item Strict subset: $A \subset B$ means that all elements of $A$ are also elements of $B$ but they are not equal.
     \item Strict superset: $A \supset B$ means that all elements of $B$ are also elements of $A$ but they are not equal.
 \end{enumerate}
+\vspace{-.5cm}
 
-
-
+        \vspace{-.5cm}
         \subsection*{Tuple and sequence}
         \vspace{-.5cm}
 % --------------------------------------------------------------
@@ -839,7 +846,8 @@ under some specific conditions they can be represented by arrays.
 
 %--------------------------------------------------------------
 Let's see some basic examples of these structures in physics and mathematics:
-\vspace{0.5cm}
+\vspace{-.5cm}
+\renewcommand{\arraystretch}{1.5} % Default value: 1
 \begin{table}[!h]
     \centering
     \begin{tabular}{|l|l|l|}
@@ -848,13 +856,15 @@ Let's see some basic examples of these structures in physics and mathematics:
         Set  & $\mathbb{N}$ & Natural numbers \\ \hline
         Tuple  & $(x,y)$ & Cartesian coordinates \\ \hline
         Sequence  & $[1,1,2,3,5,8,13,21,...]$ & Fibonacci sequence \\ \hline
-        Vector  & $\vec{v} = (\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt})$ & Velocity vector \\ \hline
-        Matrix  & $H(f) = \left[ \frac{\partial^2f}{\partial x_i\partial x_j} \right]$  &   Hessian matrix   \\ \hline
+        Vector  & $\vec{v} = (\dot{x},\dot{y},\dot{z})$ & Velocity vector \\ \hline
+        Matrix  & $H(f) = \left[ \partial^2f / \partial x_i\partial x_j \right]$  &   Hessian matrix   \\ \hline 
+        ~  & ~  &   ~   \\[0pt]
         Tensor & $\sigma_{ij} = \left[{\begin{matrix}
                 \sigma _{11} & \sigma _{12} & \sigma _{13} \\
                 \sigma _{21} & \sigma _{22} & \sigma _{23} \\
                 \sigma _{31} & \sigma _{32} & \sigma _{33} \\
-        \end{matrix}}\right]$ & Stress tensor \\ \hline
+        \end{matrix}}\right]$ & Stress tensor  \\
+        ~  & ~  &   ~   \\[0pt] \hline
         Graph  & $(\{a,b,c\}, \{\{a,b\},\{b,c\},\{c,a\}\})$ & Cycle graph  \\ \hline
     \end{tabular}
 \end{table}
@@ -876,192 +886,61 @@ can be operated with a different bunch of operators.
         In a programming language all these objects are represented by different data structures.
         Fortran does not include sets or graphs, but tuples, sequences, vectors, matrices and tensors are represented with arrays. 
         
-            \subsubsection*{Arrays}
-%Declaration
-Consider the following vectors $V \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ 
-and matrices $A \in { \cal{M}}^{N \times N} (\mathbb{R})$, $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$
-with $N=10$ and let's declare them using Fortran arrays. 
-$$
-V = \left( v_i =\frac{1}{i^2} \right)^T, \quad A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1} \right], \;\; i = 1 \ldots  N, \;\;  j = 1 \ldots  N   
-$$
-$$
-X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T,  \quad  Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T, \quad Z =     
-\begin{bmatrix}
-    1.1 & 2.2 & 3.3\\
-    4 & 5.6 & 6.2
-\end{bmatrix} 
-$$
-An array, either representing a vector, a matrix or a tensor, is properly \textbf{declared} when it has 
-type, rank and dimension (or extent) (see Figure \ref{fig:arrays}). 
-The data type has already been treated before, in these examples we are using \texttt{real} vectors and matrices. 
-The rank; the number of dimensions in the array, is 1 for column vectors, 2 for matrices and can be higher for higher dimension tensors.
-The extent of each particular dimension is its length; the number of elements in that dimension.
-\begin{IN}
-Notice that, in Fortran, the \textbf{bounds of a dimension} may start with the index we prefer. 
-By default it stars with index \texttt{1} but it can start in \texttt{0} or whatever index we want. 
-For example the matrix \texttt{B(-2:4,0:1)} starts in \texttt{-2} and ends in \texttt{4} (also included) for the first dimension and 
-\texttt{0} and \texttt{1} (also included) for the second dimension. 
-\end{IN}
-\vspace{0.5cm}
-\lstfor
-\renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
-\listings{\home/Basic_operations.f90}{subroutine Data_structures}
-{4,0}{Basic_operations.f90}
+            \subsubsection*{Array}
+            Similar to what happens with scalar variables or constants, 
+            each array has a data type, which indicates the data type of the elements within the array.
+            In the following code a one-dimensional array with three components is declared and initialized with the values $\vec{v} = (1,2,3)$. 
+            Notice that arrays in Fortran are declared enclosed in square parenthesis:  
+            \vspace{0.5cm}
+            \lstfor
+            \renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
+            \listings{\home/Basic_operations.f90}{subroutine Data_structures}
+            {end subroutine}{Basic_operations.f90}
 
 
-
-
-%Initialization
-Once declared, the \textbf{initialization} of the arrays is performed with constructors. 
-Three ways are commonly used to manually construct an array: 
-\vspace{-0.5cm}
-\begin{enumerate}[noitemsep]
-    \item \textbf{By a list of values:} \texttt{ [ list ] } where 'list' is a list of values of the same array type separated by commas. 
-    For example the vector \texttt{X} in the code. 
-    \item \textbf{Using an array expression:} \texttt{Y = [ A(2, 3:5) ]} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
-    \item \textbf{Using an implicit loop:} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
-\end{enumerate}
-In the case of Fortran the constructors are only used for rank-one arrays so 
-functions like \texttt{reshape} are needed for higher ranks. 
-For example the matrix \texttt{A} in the code is initialized using the \texttt{reshape} function.     
-\vspace{0.2cm}
-\lstfor
-\renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
-\listings{\home/Basic_operations.f90}{1./i}
-{2, 3}{Basic_operations.f90}    
-    
-   
-  
-    
-%sectors, iterators... 
-In Fortran the elements of the array are accessed using parenthesis notation and
-an index in each dimension can be used as \textbf{iterator}.
-This is intimately related to the \textbf{slicing}, for example the initialization of \texttt{Y} above use an slice of \texttt{A}.
-This can also be extended to a whole dimension using the colon symbol, \texttt{C(:,2)} (see the example below and Figure \ref{fig:arrays}). 
-Furthermore, alternate values can be selected by specifying a lower bound, an upper bound and the jump between values 
-(see the example below and Figure \ref{fig:arrays}), \texttt{B(-2:4:3,:)} being the value \texttt{3} the jump between rows.
-Notice that, since Fortran is a column major order language, functions like \texttt{reshape} and slicing treats the data by columns. 
-\vspace{0.2cm}
-\lstfor
-\renewcommand{\home}{./Fortran/sources/Foundations/Basic operations} 
-\listings{\home/Basic_operations.f90}{!Slices}
-{end subroutine}{Basic_operations.f90} 
-
-\begin{figure}
-    \begin{subfigure}[b]{0.5\textwidth}
-        \centering
-        \includegraphics[width = \textwidth]{./doc/Figures/Array1.png}  \\
-        \begin{center}
-            Rank = 2 \\
-            Extent = (5,4) \\
-            Size = 20 \\
-            Bounds = (1:5, 1:4) \\
-            %Shape = (5, 4)
-        \end{center}
-    \end{subfigure}
-    \hspace{\fill}
-    \begin{subfigure}[b]{0.5\textwidth}
-        \centering
-        \includegraphics[width = \textwidth]{./doc/Figures/Array3.png}  \\
-        \begin{center}
-            Rank = 2 \\
-            Extent = (7,2) \\
-            Size = 14 \\
-            Bounds = (-2:4, 0:1) \\
-            %Shape = (7, 2)
-        \end{center}
-    \end{subfigure}
-    \caption{Example arrays with their main properties.}   \label{fig:arrays}
-\end{figure}
-
-
-
-
-
-
-
-        \newpage 
         \subsection*{Python code}
         
-        On the contrary, Python has built-in the structures of sets and dictionaries (that can emulate graphs) and arrays are available within the \texttt{NumPy} library. 
-        Python also has tuples and lists built-in, however, tuples does not have a direct correspondence with its mathematical description. 
+        Python has built-in the structures of sets and dictionaries (that can emulate graphs). 
+        The mathematical tuples, sequences, vectors, matrices and tensors are represented with arrays, which are available in the library \texttt{NumPy}. 
+        In addition, Python has tuples and lists built-in, however, tuples does not have a direct correspondence with its mathematical description. 
+        From a general perspective, sets, tuples, lists and dictionaries are used to store collections of data.
+        Their elements can be of any type for lists, tuples and dictionaries: 
+        strings together with integers and reals, 
+        lists nested in lists, tuples within lists, etc. 
+        However, sets and ranges present some exceptions to consider in the elements they gather.
+        \vspace{-.5cm}
+        \begin{itemize}[noitemsep]    
+            \item Set nature: \texttt{set}, \texttt{frozenset}.
+            \item Sequence nature: \texttt{list}, \texttt{tuple}, \texttt{range}.
+            \item Array nature: \texttt{array}.
+            \item Mapping nature: \texttt{dict}.
+        \end{itemize}
         
-            \subsubsection*{Arrays}
-Let's see the same examples defined above using \texttt{NumPy} arrays and 
-let's include now a matrix $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$. 
-Notice that now they do not need to be explicitly declared, 
-Python automatically does it. 
-$$
-Z =     
-\begin{bmatrix}
-    1.1 & 2.2 & 3.3\\
-    4 & 5.6 & 6.2
-\end{bmatrix} 
-$$
+        
+        
+            \subsubsection*{Set}
+            A \texttt{set} in Python takes the same meaning as the mathematical object: a collection of any type of data that 
+            i) is unordered and 
+            ii) do not allow duplicate values. 
+            In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant.
+            Furthermore, two equal elements, since they are not ordered, could not be distinguished between them. 
+            While a set is mutable (remove or add elements is allowed), a \texttt{frozenset} is an immutable set, once created, its content can not be modified. 
+            Sets cannot contain lists or dictionaries since they are unhashable structures (they do not contain any hash value that never changes during their lifetime).
+            
+            %aqui el ejemplo, que no se esta generando bien el unicode
+            
+            \subsubsection*{Tuple and List}
+            
+            \subsubsection*{Range}
+            
+            \subsubsection*{Array}
+            
+            
+            \subsubsection*{Dictionaries}
 
-%Initialization
-The \textbf{initialization} of the arrays is performed using the \texttt{array()} function as constructor. 
-Three ways are commonly used to manually construct an array: 
-\begin{enumerate}[noitemsep]
-    \item \textbf{By a list of values:} \texttt{ [ list ] } or \texttt{ [ [ list ], [ list ] ] } where \texttt{list} is a list of values of the same array type separated by commas. 
-    For example the vector \texttt{X} or the matrix \texttt{Z}.
-    Notice that Python allows manual constructors for higher than rank-one arrays.
-    \item \textbf{Using an array expression:} \texttt{Y = A(1, 2:5)} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
-    Notice that Python not only starts in \texttt{0} all the indices so \texttt{1} means the second column, 
-    but also an slice like \texttt{2:5} ends in \texttt{4} so the slice takes columns \texttt{3} to \texttt{5}. 
-    \item \textbf{Using an implicit loop (list comprehension):} a list of elements is computed from a loop. For example vectors \texttt{V}, \texttt{W} or matrix \texttt{A} in the code.
-\end{enumerate}
-%\vspace{0.5cm} 
-\lstpython
-\renewcommand{\home}{./Python/sources/Foundations/data_type} 
-\listingsp{\home/data_type.py}{def arrays}{by rows}{data_type.py}
-
-%sectors, iterators...    
-In Python, the elements of the array are accessed using bracket notation, 
-the array can be \textbf{iterated} using an index in each dimension and 
-\textbf{slicing} is also allowed.
-Notice here that NumPy arrays, contrary to Fortran, are row-major order. 
-This means that arrays store the data by rows and then, in the previous example 
-\texttt{C[1:3 ,2:4] = [ [1.,2.], [3.,4.] ]} will be assigned by rows. 
-
-Similarly to Fortran, the colon symbol iterates in a whole dimension (see \texttt{C[:,1]} in the example above) and 
-alternate values can be selected by specifying lower and upper bound and the jump between values.
-However, the example \texttt{B(-2:4:3,:)} made with Fortran can not be copied because:
-\begin{IN}
-In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} (zero-indexing) and
-stop 1 before the final bound.  
-\end{IN}
-
-
-
-
-
-
-
-            \subsubsection*{More}
-
-\vspace{0.5cm}
-Python has built-in other data structures which are used to store collections of data.
-Their elements can be of any type for lists, tuples and dictionaries: 
-strings together with integers and reals, 
-lists nested in lists, tuples within lists, etc. 
-Sets and ranges present some exceptions to consider in the elements they gather.
-\vspace{-.5cm}
-\begin{itemize}[noitemsep]    
-    \item Set nature: \texttt{set}, \texttt{frozenset}.
-    \item Sequence nature: \texttt{list}, \texttt{tuple}, \texttt{range}.
-    \item Mapping nature: \texttt{dict}.
-\end{itemize}
-\vspace{-.5cm}
 
 %--------------------------------------------------------------------------
-A \texttt{set} in Python takes the same meaning as the mathematical object: a collection of any type of data that 
-i) is unordered and 
-ii) do not allow duplicate values. 
-In a set, all that matters is whether each element is in it or not, so the ordering of the elements is irrelevant.
-Furthermore, two equal elements, since they are not ordered, could not be distinguished between them. 
-While a set is mutable (remove or add elements is allowed), a \texttt{frozenset} is an immutable set, once created, its content can not be modified. 
-Sets cannot contain lists or dictionaries since they are unhashable structures (they do not contain any hash value that never changes during their lifetime).
+
 
 %MATEMATICAS:
 %List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. USUALLY INFINITE

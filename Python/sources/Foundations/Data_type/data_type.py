@@ -68,84 +68,85 @@ def structures():
     X = {1, 2, 3}
     Y = {1, 2, 3, 4}
 
-    print( "X ∪ Y:", X | Y )
-    print( "X ∩ Z:", X & Y ) 
-    print( "3 \u2208 X =", 3 in X )
-    print( "6 ∉ X =", 6 not in X )
-    print("X ⊂ Y =", X < Y ) 
-    print("X  ⊃ Y =", X > Y ) 
-    print("X ⊆ Y =", X <= Y ) 
-    print("X  ⊇ Y =", X >= Y )
+    print( "X union Y:", X | Y )
+    print( "X intersection Y:", X & Y ) 
+    print( "3 in X =", 3 in X )
+    print( "6 not in X =", 6 not in X )
+    print( "X strict subset Y =", X < Y ) 
+    print( "X strict superset Y =", X > Y ) 
+    print( "X subset Y =", X <= Y ) 
+    print( "X superset Y =", X >= Y )
     X.add(0)
     print( "add 0 to X =", X )
     X.remove(0)
     print( "remove 0 from X =", X )
 
-    # List, sequence
-    print( "Sum sqrt(n/(n**4+1)) = ", sum( [sqrt(n/(n**4+1)) for n in range(10000+1)] ) )
+    # List, Tuple
+    X = [1, 2, 3]
+    Y = [4, 5]
 
-    # Set of tuples
-    print( { (i**2 - 1, 2*i, i**2 + 1) for i in range(2,10) } )
+    print( "X cocatenate Y:", X + Y )
+    print( "3 in X =", 3 in X)
+    print( "3 not in Y =", 3 not in Y)
+    X.append(0)
+    print( "add 0 to X =", X )
+    X.remove(0)
+    print( "remove 0 from X =", X )
 
-    # Dictionary
-    D = { "set":{1,3}, "list":[1,3], "tuple":(1,3), "dict":{"one":1,"three":3} }
+    X = (1, 2, 3)
+    Y = (4, 5)
+
+    print( "X cocatenate Y:", X + Y )
+    print( "3 in X =", 3 in X )
+    print( "4 not in Y =", 4 not in Y ) #false
+
+    # Range
+    X = range(6, 14, 2)
+    print( "14 in X =", 14 in X )   #Stops in 12!
 
     # Array
     V = array( [1, 2, 3] )
+    print( V )
 
+    # Dictionary
+    D = {"a":[1, 2], "b":[3]}
+    F = {"b":[3], "a":[1, 2]}
+    print( "D equals F =", D == F )
+    print( "a in D =", "a" in D )
+    print( "a not in F =", "a" not in F )
 
-
-def data_structures():
-
-  sets = "unordered set with distinct elements" 
-  S = {"car", 5, 6.7, 1 + 1j} 
-   
-  print("\n type=", type(S)) 
-  for s in S:    # print order is unpredictable
-     print(" element =", s)
-
-  lists = "ordered set allowing equal elements" 
-  S = ["one", 5, 3.5, 5] 
-   
-  S[3] = 8
-  print("\n type=", type(S))   
-  for i in range(len(S)):    # lists are ordered 
-     print(" element =", S[i]) 
-     
-  tuples ="inmutable ordered set" 
-  S = ("one", 5, 3.5, 5)  
-  
-  print("\n type=", type(S))
-  for i in range(len(S)):     # tuples are inmutable 
-     print(" element =", S[i])   
-  print("\n") 
-  
-  for i, s in enumerate(S):
-      print(" index =", i, " element =", s)   
-  print("\n")
-
-  dictionaries = "ordered data values in key:value pairs"
-  D = {"set":sets, "list":lists, "tuple":tuples, "dict":dictionaries} 
-  
-  for k in D:     # mutable and do not allow duplicates
-     print("{:6} {} {}".format(k, ":", D[k]) )
-  print("\n")
-
-  for k in D.keys():     
-     print("{:6} {} {}".format(k, ":", D[k]) )
-  print("\n")
-
-  for v in D.values():  
-     print("{}".format(v) )
-  print("\n")
-
-  ite = iter( ("one", 5, 3.5, 5) )
-  print( next(ite) )
-  print( next(ite) ) #returns StopIteration when no more elements. 
+    
 
 
 
 
+def iterators():
+
+    S = {"car", 4.5, 3, 1+1j}
+    for s in S:    # Iterates in the element
+        print( "Element =", s )
+
+    L = [1, 2, 3, 4]  
+    for i in range(len(L)):    # Iterates in the index 
+        print( "Element =", L[i] )
+    
+    T = (1, 2, 3, 4)
+    for i, t in enumerate(T):  # Iterates in both: index and element 
+      print( "Index =", i, "Element =", t )  
+      
+    D = {"a":[1, 2], "b":[3]}
+    for k in D.keys():      # Iterates in the keys of a dictionary 
+        print( "{:2} {} {}".format(k, ":", D[k]) )
+
+    for v in D.values():  
+        print( "{}".format(v) )  # Iterates in the values of a dict 
+
+    Pyt = { (i**2 - 1, 2*i, i**2 + 1) for i in range(2,10) }
+    print( Pyt )
+
+    print( L[2] )  # Third element, index starts in 0
+    print( T[2] )
+    print( D["a"] )  # Element with key "a"
 
 
 

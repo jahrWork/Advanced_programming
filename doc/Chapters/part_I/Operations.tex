@@ -742,7 +742,7 @@ Given a set $A$, the following operators are used:
 \vspace{-.5cm}
 
         \vspace{-.5cm}
-        \subsection*{Tuple and sequence}
+        \subsection*{Sequence and Tuple}
         \vspace{-.5cm}
 % --------------------------------------------------------------
 \textbf{Tuples and sequences} are also collections of mathematical objects.
@@ -897,7 +897,7 @@ can be operated with a different bunch of operators.
             \listings{\home/Basic_operations.f90}{subroutine Data_structures}
             {end subroutine}{Basic_operations.f90}
 
-
+        \newpage
         \subsection*{Python code}
         
         Python has built-in the structures of sets and dictionaries (that can emulate graphs). 
@@ -908,17 +908,23 @@ can be operated with a different bunch of operators.
         strings together with integers and reals, 
         lists nested in lists, tuples within lists, etc. 
         However, sets and ranges present some exceptions to consider in the elements they gather.
-        \vspace{-.5cm}
         \begin{itemize}[noitemsep]    
             \item Set nature: \texttt{set}, \texttt{frozenset}.
             \item Sequence nature: \texttt{list}, \texttt{tuple}, \texttt{range}.
             \item Array nature: \texttt{array}.
             \item Mapping nature: \texttt{dict}.
         \end{itemize}
+        %MATEMATICAS:
+        %List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. USUALLY INFINITE
+        %Tuple: enumerated collection of objects in which repetitions are allowed and order matters. ALWAYS FINITE
         
+        %PROGRAMMING PYTHON:
+        %List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. ONLY FINITE IS POSSIBLE
+        %Tuple: Same as list but it can not change (programming concept not related to maths)
         
         
             \subsubsection*{Set}
+            \vspace{-.5cm}
             A \texttt{set} in Python takes the same meaning as the mathematical object: a collection of any type of data that 
             i) is unordered and 
             ii) do not allow duplicate values. 
@@ -926,112 +932,78 @@ can be operated with a different bunch of operators.
             Furthermore, two equal elements, since they are not ordered, could not be distinguished between them. 
             While a set is mutable (remove or add elements is allowed), a \texttt{frozenset} is an immutable set, once created, its content can not be modified. 
             Sets cannot contain lists or dictionaries since they are unhashable structures (they do not contain any hash value that never changes during their lifetime).
+            Following the roster notation, a set is expressed by listing its elements between curly brackets and separated by commas.
+            \vspace{0.3cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{Set}{remove}{data_type.py}
             
-            %aqui el ejemplo, que no se esta generando bien el unicode
+            %Notice that the sets \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
+            %are the same since repetition and order change do not modify it.
             
-            \subsubsection*{Tuple and List}
+            \subsubsection*{List and Tuple}
+            \vspace{-.5cm}
+            A \texttt{list} in Python is a collection of data characterised by being 
+            i) ordered: the position within the list is kept, 
+            ii) allow duplicates: items can appear more than one time in the list and  
+            iii) changeable: change, add, and remove items are allowed.
+            In a list, the difference between any two elements comes with the index within the list.
+            Lists are written using square brackets \texttt{[]} with comma-separated values.
             
+            A \texttt{tuple} does not take the mathematical definition of tuple.
+            In Python a tuple is the same as a list with the difference that tuples are unchangeable. 
+            Hence, a tuple is characterised by being 
+            i) ordered: the position within the tuple is kept, 
+            ii) allow duplicates: items can appear more than one time in the tuple and  
+            iii) unchangeable: once created, it can not be modified.
+            For tuples, Python allocates the required memory once and not reallocates it. 
+            This becomes a more memory efficient strategy to follow when the data is going to be immutable.
+            Tuples are written using parenthesis \texttt{()} with comma-separated values.
+            \vspace{0.1cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{Tuple}{false}{data_type.py}
+            
+            %No ponemos subset como operacion porque solo lo computa si estan ordenados de la misma forma 
+            
+            \vspace{-.5cm}
             \subsubsection*{Range}
+            \vspace{-0.5cm}
+            A \texttt{range} structure is a strictly increasing or decreasing sequence of integers. 
+            It is more efficient than a list or tuple since only generates the values 
+            of the sequence when are needed and do not store any values in memory. 
+            For \texttt{range(start, stop, step)} all its arguments are integers, 
+            \texttt{start} and \texttt{step} are optional.
+            If only \texttt{stop} is specified the sequence starts in \texttt{0} and do not include the \texttt{stop} value itself.            
+            \vspace{0.1cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{Range}{Stops in}{data_type.py}
             
             \subsubsection*{Array}
+            In Python array structures are not built-in, however, the library \texttt{NumPy} supports them.
+            In the following code a one-dimensional array with three components is declared and initialized with the values $\vec{v} = (1,2,3)$. 
+            Notice that the function array is used to declare this structure.
+            \vspace{0.3cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{Array}{print}{data_type.py}
             
             
-            \subsubsection*{Dictionaries}
-
-
-%--------------------------------------------------------------------------
-
-
-%MATEMATICAS:
-%List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. USUALLY INFINITE
-%Tuple: enumerated collection of objects in which repetitions are allowed and order matters. ALWAYS FINITE
-
-%PROGRAMMING PYTHON:
-%List/Sequence: enumerated collection of objects in which repetitions are allowed and order matters. ONLY FINITE IS POSSIBLE
-%Tuple: Same as list but it can not change (programming concept not related to maths)
-A \texttt{list} extracts its meaning from the concept of sequence in mathematics,
-however, in programming lists can not be infinite.
-Hence, a list is characterised by being 
-i) ordered: the position within the list is kept, 
-ii) allow duplicates: items can appear more than one time in the list and  
-iii) changeable: change, add, and remove items are allowed.
-In a list, the difference between any two elements comes with the index within the list.
-Notice that lists are not arrays or viceversa, in the sense that they come from completely different mathematical concepts. 
-
-A \texttt{tuple} also takes the mathematical definition of tuple (a finite sequence). 
-Since both tuples and lists are finite in the computer, the only difference between them are the changeability.
-Hence, a tuple is characterised by being 
-i) ordered: the position within the tuple is kept, 
-ii) allow duplicates: items can appear more than one time in the tuple and  
-iii) unchangeable: once created, it can not be modified.
-For tuples, Python allocates the required memory once and not reallocates it. 
-This becomes a more memory efficient strategy to follow when the data is going to be immutable.
-
-A \texttt{range} structure is a sequence of integers that cannot produce the same number twice, 
-it is strictly increasing or decreasing. 
-This structure is more efficient than a list or tuple in the sense that only generates the values 
-of the sequence when are needed and do not store any values in memory. 
-Hence, they are efficiently used for loops.
-
-A dictionary (\texttt{dict}) is similar to a list.
-It is ordered, changeable and can store any type of data (even other dictionaries nested).
-However, unlike lists, the values are stored in pairs: \texttt{key:value} and do not allow the same key for two elements.
-%--------------------------------------------------------------------------
-
-
-
-Let's now take a look at some examples of use cases of these structures. 
-Notice that they do not need to be explicitly declared, 
-Python automatically does it. 
-The following notation is used to manually construct these structures: 
-\vspace{-0.5cm}
-\begin{itemize}[noitemsep]
-    \item \textbf{Set:} Following the roster notation, it is defined by listing its elements between curly brackets and separated by commas.
-    Notice that the sets \texttt{ \{``car'', 5, 6.7, 1 + 1j\} } and \texttt{\{5, 1 + 1j, 6.7, ``car'', 5\}} 
-    are the same since repetition and order change do not modify it.
-    Other example is the set \texttt{P} defined in the example below.
-    \item \textbf{List:} Written using square brackets \texttt{[]} with comma-separated values. 
-    Notice the sequence example of the summation of a sequence below.
-    \item \textbf{Tuple:} Written using parenthesis \texttt{()} with comma-separated values. 
-    For example the tuples defined in the set of Pythagorean triples.
-    \item \textbf{Dictionary:} It has its list of elements separated by commas, 
-    enclosed in curly brackets (\texttt{\{\}}) and 
-    using a colon (\texttt{:}) to separate each pair. 
-    Notice the example of dictionary below. 
-    
-    \item Sets, lists and tuples can be also defined using an \textbf{implicit loop (list comprehension)}, 
-    the elements gathered in the structure are computed from a loop. 
-    For example the set of Pythagorean tuples defined below.
-\end{itemize}
-\vspace{-0.5cm}
-Notice that lists, tuples and dictionaries use the square brackets notation 
-to access to their elements, similar to the NumPy arrays. 
-\vspace{0.3cm} 
-\lstpython
-\renewcommand{\home}{./Python/sources/Foundations/data_type} 
-\listingsp{\home/data_type.py}{def structures}{one}{data_type.py}
-
- 
-
-
-
-
-
-
-        
-        
-
-      
-      
-      
-
-        
-        
-        
-        
-        
-
-
+            \subsubsection*{Dictionary}
+            A dictionary (\texttt{dict}) is a collection of data that stores pairs \texttt{key:value}. 
+            It is similar to a set in some sense, it is characterised by being 
+            i) ordered: the position is kept (however, in terms of comparison, two dictionaries with same pairs but different order are considered as equals), 
+            ii) do not allow key duplicates: the same key can not appear more than once and  
+            iii) changeable: change, add, and remove items are allowed.
+            It can store any type of data; lists, integers, tuples, ..., and even other dictionaries nested.
+            A dictionary is declared by a list of elements separated by commas, 
+            enclosed in curly brackets (\texttt{\{\}}) and 
+            using a colon (\texttt{:}) to separate each pair. 
+            \vspace{0.3cm} 
+            \lstpython
+            \renewcommand{\home}{./Python/sources/Foundations/data_type} 
+            \listingsp{\home/data_type.py}{Dictionary}{a not in F}{data_type.py}
 
 
 
@@ -1039,53 +1011,89 @@ to access to their elements, similar to the NumPy arrays.
 
     \newpage
     \section{Iterators}
+    \vspace{-.5cm}
+In this section, some iterators are presented for 
+sets, lists, tuples, dictionaries and even strings in Python. 
+Arrays are treated in the chapter \ref{chap:matrices}, however, 
+notice now that both Python and Fortran use the indices of each dimension as iterators.
+Hence, loops with different indices are used to reference any element within the array.
 
-When data structures were presented we already mentioned that both Python and Fortran 
-use the index of each dimension as iterators in their arrays. 
-Hence, using loops with different indices we can reference any element within the array.
-
-Now we are going to see the iterators that can be used with structures like 
-sets, lists, tuples, dictionaries and even strings in Python.    
-Since all contain a countable number of elements they are considered iterable data structures. 
-Three main strategies can be used:
+Sets, lists, tuples, ranges, dictionaries and strings, 
+they all contain a countable number of elements so 
+they are considered iterable data structures. 
+Three main strategies can be used to iterate:
+\vspace{-.3cm}
 \begin{enumerate}
-    \item \textbf{Iterating in the elements of the structure.} 
-    In the code below the set \texttt{S} and the dictionary \texttt{D} are iterated in their elements
-    by means of \texttt{s} and \texttt{k} respectively. 
-    All iterable structures are iterable in their elements, including strings.  
-    \item \textbf{Iterating in the index.}
-    In the code below both the list and the tuple are iterated in their index \texttt{i} by means of the \texttt{range()} function.
-    While lists, tuples and strings are easily iterable on their indices, 
+    \item \textbf{Iterating in the elements:} All iterable structures are iterable in their elements, including strings.      
+    \item \textbf{Iterating in the index:} While lists, tuples and strings are easily iterable on their indices, 
     sets are not subscriptable (they do not have order) and 
-    dictionaries need keys as subscripts and not indices. 
-    \item \textbf{Iterate in both the index and the element.} 
-    In the code below the tuple is also iterated using both the index \texttt{i} and the element \texttt{s} 
-    by means of the \texttt{eunmerate()} function.
-    While lists, tuples and strings are easily iterable on their indices, 
+    dictionaries need keys as subscripts and not indices.    
+    \item \textbf{Iterate in both the index and the element:} While lists, tuples and strings are easily iterable on their indices, 
     sets are not subscriptable (they do not have order) and 
     dictionaries should be better iterated using their keys.
-    
-    \item Dictionaries have two extra methods that simplifies the iteration, first one is 
-    \texttt{for k in D.keys()} to iterate in the keys 
-    and second \texttt{for v in D.values()} to iterate in the values. 
+    \item Dictionaries have two extra methods to iterate: 
+    \texttt{for k in D.keys()} to iterate in the keys and
+    \texttt{for v in D.values()} to iterate in the values. 
 \end{enumerate} 
-
-Notice that \texttt{range(start, stop, step)} returns a sequence of numbers between the given range.
-All its arguments are integers and \texttt{start} and \texttt{step} are optional.
-When only \texttt{stop} is specified (see the examples below) the iterator starts in \texttt{0} and do not include the stop number itself.
-The function \texttt{len()} is used to find the length of the structure to be iterated so it can be passed to \texttt{range()}. 
-
-\newpage
+\vspace{-.3cm}
+Notice that the structure \texttt{range()} is used in combination with \texttt{len()} 
+to iterate in the index of any other structure. 
+The function \texttt{len()} returns the length of the structure and \texttt{range()} 
+returns a sequence of numbers between \texttt{0} and the given length.
+%\vspace{.2cm}
 \lstpython
 \renewcommand{\home}{./Python/sources/Foundations/data_type} 
-\listingsp{\home/data_type.py}{def data_structures}{returns StopIteration}{data_type.py}
+\listingsp{\home/data_type.py}{def iterators}{the values of}{data_type.py}
 
-Finally, notice that every iterable object can use the \texttt{iter()} method to create an iterator from the data structure and
-the \texttt{next()} method to jump element in the iterator (see \texttt{ite} in the code above).
-Actually, Python is using this kind of iteration behind the more straightforward options seen.
+
+
+%Finally, notice that every iterable object can use the \texttt{iter()} method to create an iterator from the data structure and
+%the \texttt{next()} method to jump element in the iterator (see \texttt{ite} in the code above).
+%Actually, Python is using this kind of iteration behind the more straightforward options seen.
+% 
+% #ite = iter( ("one", 5, 3.5, 5) )
+% #print( next(ite) )
+% #print( next(ite) ) #returns StopIteration when no more elements. 
  
  
+To access the elements of these iterable objects the square brackets notation is used.
+In the example below, the third element of the list \texttt{L} or the tuple \texttt{T}
+is obtained. Notice that the indices start always in 0. 
+In a similar way, we can access the element with key \texttt{''a''} in the dictionary \texttt{D} 
+as shown in the example below.
+\vspace{.5cm}
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{Third element}{with key}{data_type.py}
  
+ 
+We have seen how to manually define these structures, but this is not the only way to do it. 
+When our structure is defined by a general term, or it takes a slice from another structure, 
+the \textbf{list comprehension} method (an implicit loop iterating in another structure) is used. 
+It can be used for lists, tuples, sets, etc. 
+Its notation for a tuple is:
+\begin{verbatim}
+(expression for index in iterable if condition == True)
+\end{verbatim}
+where \texttt{for}, \texttt{in} and \texttt{if} are the keywords of the notation.
+As an example let's generate a set of Pythagorean triples, 
+tuples like: 
+$$\left(a,b,c\in\mathbb{Z}^+|a^2 + b^2 = c^2\right)$$ 
+using the following three equations up to $i = 9$:
+\begin{equation}
+    \begin{cases}
+        a  & = i^2 - 1\\
+        b & = 2i\\
+        c & = i^2+1
+    \end{cases}       
+\end{equation}
+\vspace{.5cm}
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/data_type} 
+\listingsp{\home/data_type.py}{Pyt}{print}{data_type.py}
+ 
+ 
+
  
  
  

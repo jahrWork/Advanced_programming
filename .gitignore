@@ -2,6 +2,7 @@
 *.fdz
 *.pdf
 *.pyd
+*.u2d
 
 #-------------VISUAL STUDIO------------------------
 ## Ignore Visual Studio temporary files, build results, and

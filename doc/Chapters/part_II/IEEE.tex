@@ -545,7 +545,41 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
     \caption{Main formats in the standard IEEE 754: single, double and quadruple precision with a visual example in single precision.}
     \label{fig:ParametersIEEE}
 \end{figure}
-
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| r | c | c | c | c | c | }
+%        
+%        \hline
+%        Name & Sign &  \begin{tabular}{@{}c@{}}Exp\\  (r) \end{tabular} &  \begin{tabular}{@{}c@{}}Mantissa\\(p) \end{tabular} & \begin{tabular}{@{}c@{}}Exp. Bias\\  (B) \end{tabular}  & \begin{tabular}{@{}c@{}}Actual Bits\\  mantissa\end{tabular}  \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      & 1 & 8  & 23    & 127   & 24 \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    & 1 & 11 & 52    & 1023  & 53   \\  \hline
+%        
+%        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   & 1 & 15 & 112   & 16383 & 113   \\ \hline
+%        
+%    \end{tabular}                                                       
+%    %\caption{Main properties of the different precisions covered by the IEEE 754 standard.}
+%    %\label{tab:properties}
+%\end{table}
+%\vspace{-1cm}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| r | c | c | c |}
+%        
+%        \hline
+%        Name  & \begin{tabular}{@{}c@{}}Normalized \\ range \end{tabular} & \begin{tabular}{@{}c@{}}Approximate\\decimal range\end{tabular} & Precision \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      &  \begin{tabular}{@{}c@{}}$\pm2^{-126}$ to \\$\pm2^{127+1}$  \end{tabular}    & \begin{tabular}{@{}c@{}}$\pm1.18\cdot10^{ -38}$ to \\ $\pm3.4\cdot10^{38}$ \end{tabular}     & \sim 7 digits  \\ \hline
+%        
+%        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    &  \begin{tabular}{@{}c@{}}  $\pm2^{-1022}$ to\\  $\pm2^{1023+1}$\end{tabular}  & \begin{tabular}{@{}c@{}} $\pm2.23\cdot10^{ -308}$ to \\ $\pm1.80\cdot10^{308}$ \end{tabular} & \sim 15 digits        \\  \hline
+%        
+%        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   &  \begin{tabular}{@{}c@{}}  $\pm2^{-16382}$ to\\  $\pm2^{16383+1}$\end{tabular}   & \begin{tabular}{@{}c@{}} $\pm3.3621\cdot 10^{-4932}$ to \\ $\pm1.1897\cdot10^{4932}$ \end{tabular}  & \sim 19 digits          \\ \hline
+%        
+%    \end{tabular}                                                       
+%    \caption{Main properties of the different precisions covered by the IEEE 754 standard.}
+%    \label{tab:properties}
+%\end{table}
 
 \begin{table}[H]
     \centering
@@ -554,18 +588,16 @@ which means that the error caused by the conversion is $-4.76837158203125E-8$ wh
         \hline
         Name & Sign &  \begin{tabular}{@{}c@{}}Exp\\  (r) \end{tabular} &  \begin{tabular}{@{}c@{}}Mantissa\\(p) \end{tabular} & \begin{tabular}{@{}c@{}}Exp. Bias\\  (B) \end{tabular}  & \begin{tabular}{@{}c@{}}Actual Bits\\  mantissa\end{tabular}  \\ \hline
         
-        \begin{tabular}{@{}c@{}}Single precision \\ (binary32) \end{tabular}      & 1 & 8  & 23    & 127   & 24 \\ \hline
+        Single precision       & 1 & 8  & 23    & 127   & 24 \\ \hline
         
-        \begin{tabular}{@{}c@{}}Double precision \\ (binary64) \end{tabular}    & 1 & 11 & 52    & 1023  & 53   \\  \hline
+        Double precision    & 1 & 11 & 52    & 1023  & 53   \\  \hline
         
-        \begin{tabular}{@{}c@{}} Quadruple precision\\(binary128) \end{tabular}   & 1 & 15 & 112   & 16383 & 113   \\ \hline
+         Quadruple precision   & 1 & 15 & 112   & 16383 & 113   \\ \hline
         
     \end{tabular}                                                       
     %\caption{Main properties of the different precisions covered by the IEEE 754 standard.}
     %\label{tab:properties}
 \end{table}
-
-
 \begin{table}[H]
     \centering
     \begin{tabular}{| r | c | c | c |}

@@ -126,7 +126,8 @@ for dictionaries and slicing  \verb|pa=a[:]| is used for lists.
 
 
 \newpage
-\section{N-body problem}  
+\section{N-body problem} 
+\vspace{-.6cm} 
 This example is used to show how pointers allow to write simulation codes 
 where the same system variables are seen with different shapes. 
  
@@ -139,7 +140,6 @@ of each mass object $  i $, the equations of motion for each mass object writes:
 \frac{d \bold{r}_i}{dt} = \bold{v}_i, \qquad i=1, \ldots,N  
 \label{velocity} 
 \end{equation}
-
 \begin{equation} 
 m_i \frac{d \bold{v}_i}{dt} =  \sum_{j=1, j \ne i} ^N G \ m_i \ m_j \ \frac{\bold{r}_j -\bold{r}_i}
                               {\|\bold{r}_j -\bold{r}_i \|^3}

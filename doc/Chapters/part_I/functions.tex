@@ -72,15 +72,15 @@ $$
 \myfunc{ f }{\mathbb{R}}{\mathbb{R}}{x}{f(x)} 
 $$
 
-\begin{equation}
-    f\left( x\right) = 
-    \begin{cases}
-         0,  \ \ \ \  \ \ \ \ \  x < -\frac{\pi}{2}       \\
-         \cos(x), \ \             x \in\left[ -\frac{\pi}{2}, \frac{\pi}{2}   \right)        \\ 
-         0, \ \ \ \  \ \ \ \ \   x \geq \frac{\pi}{2}
-    \end{cases}
-    \label{eq:piecewise}
-\end{equation} 
+$$
+f\left( x\right) = 
+\begin{cases}
+     0,  \ \ \ \  \ \ \ \ \  x < -\frac{\pi}{2}       \\
+     \cos(x), \ \             x \in\left[ -\frac{\pi}{2}, \frac{\pi}{2}   \right)        \\ 
+     0, \ \ \ \  \ \ \ \ \   x \geq \frac{\pi}{2}
+\end{cases}
+\label{eq:piecewise}
+$$
 
 It can be easily done through a conditional expression on the variable $ x $ so, for each point of the domain the proper result is returned. 
 From the numerical point of view two precautions must be taken into account:
@@ -146,9 +146,8 @@ data that can be called from the main program or subroutines.
 {end subroutine}{plotting.f90}
 \renewcommand{\home}{./Fortran/sources/Foundations/Calculus} 
 
-
+\vspace{-.5cm}
 The previous subroutine allows to plot a 201 points curve from a generic function declared (by means of an interface) as a:
-
 $$ 
 \myfunc{ \texttt{f\_R\_R} }{\mathbb{R}}{\mathbb{R}}{x}{\texttt{f\_R\_R(x)}} 
 $$
@@ -172,29 +171,29 @@ Notice how this subroutine makes use of the \texttt{parameter M} that needs to b
 
 Let's build a simple approximation to the derivative of a function $ f(x) $ by means of its definition:
 
-\begin{equation}
-    f'(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
-\end{equation}
+$$
+f'(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+$$
 
 In calculus, the existence of this limit (derivable function) implies that both lateral limits exist, are finite and equal (at least when the function is defined in both sides of the point $x$):
 
-\begin{equation}
+$$
     f'(x) = \lim_{h\rightarrow 0^-}\frac{f(x+h)-f(x)}{h} = \lim_{h\rightarrow 0^+}\frac{f(x+h)-f(x)}{h}
-\end{equation}
+$$
 
 To obtain an approximation to this value $ f'(x) $ in a point $x $ with the computer, finite differences can be used. Instead of reproducing the limit in the point, a fixed value of $ h \neq 0$ is used. Notice that both $ h > 0 $ or $ h < 0 $ are possible so the approximation can be found like a forward difference or a backward difference. Actually, also central differences can be used if the expression is slightly modified. What must be considered is that now each expression leads to a different approximation while in calculus the existence of the derivative implies that all values are equal. 
 
 For this case let's consider $ h > 0 $ with $h$ a small value:
 
-\begin{equation}
+$$
     f'(x) \simeq \frac{f(x+h)-f(x)}{h}
-\end{equation}
+$$
 
 The question that arises; is it possible to bound the error of the approximation? 
 
-\begin{equation}
+$$
     E = f'(x) - \frac{f(x+h)-f(x)}{h}
-\end{equation}
+$$
 
 If the function $f(x)$ is sufficiently smooth near $x$ (for a forward-difference twice differentiable is needed), then a Taylor expansion can be used so the order of the scheme used is obtained. Intuitively, it is clear that by lowering the value of $h$ a better approximation of the derivative is obtained. Finding the order of the scheme means precisely finding how fast the error tends to zero when $h\rightarrow 0$. In addition, round-off error appears in this approximation depending on the value of $h$ too.
 
@@ -645,25 +644,25 @@ periodic functions.
 When implementing these expansions in the computer, truncated Fourier series are used
 to approximate the infinity Fourier expansion.  
 A truncated Fourier series is a finite sum of sine and cosine waves. 
-\begin{equation}
+$$
 f(x) = \sum_{k=0}^N a_k \ \cos( \ 2 \pi k  x \ ) + b_k \ \sin ( \ 2 \pi k  x \ ), 
-\end{equation}
+$$
 or expressed in its compact form: 
-\begin{equation}
+$$
 f(x) = \sum_{k=-N/2}^{N/2-1} c_k \ e^{ \ 2 \pi k  x \ i } .
-\end{equation}
+$$
 If $ f(x)$ is real, $ c_k $ and $a_k,\  b_k$ are related with the following expressions: 
-\begin{equation}
+$$
 c_k = \frac{1}{2}(a_k - i b_k), \qquad k=0, \ldots, N/2, 
-\end{equation}
-\begin{equation}
- c_{-k} = \overline{c_k},\qquad k=1, \ldots, N/2,
- \end{equation}
+$$
+$$
+c_{-k} = \overline{c_k},\qquad k=1, \ldots, N/2,
+$$
 where $ k $ represents different harmonics of frequency or wavelength  $ 2 \pi k $  of different 
  sine and cosine components.
 
 The following saw-tooth wave: 
-\begin{equation}
+$$
 f(x) =
 \left\{
 \begin{array}{ll}
@@ -674,12 +673,12 @@ f(x) =
 \\                                                                                                 
 \end{array}                                                                   
 \right.                                                     
-\end{equation}
+$$
 is expanded in Fourier series
-\begin{equation}
+$$
 f(x) =\sum_{k=1}^N  - \frac{2 \ (-1)^{k}}{\pi \ k}   \ \sin ( \ 2 \pi k  x \ ).
 \label{sawtooth}
-\end{equation}
+$$
 
 
 

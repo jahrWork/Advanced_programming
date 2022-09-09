@@ -3,7 +3,7 @@
   use Basic_operations,      only : Data_types, Data_structures, Operators, Flow_structures
   use Roots,                 only : Roots_2th  
   use Sum_series,            only : Summation_n2_examples, Summation_examples, Summation_functional_examples 
-  use Matrix_operations,     only : Matrix_operation_examples, ElementWise_operation_examples
+  use Matrix_operations,     only : Basic_arrays, Matrix_operation_examples, ElementWise_operation_examples
   use Dynamic_allocation,    only : Matrices_allocation
   use Stack_Overflow,        only : StackOverflow_LargeArrays, StackOverflow_InfiniteRecursion
   use vectors_and_matrices,  only : dot_product_examples, matmul_examples, greatest_difference
@@ -51,7 +51,7 @@ do ! Basic programming examples
          call Summation_functional_examples()
          
      case(4)      
-         call  Matrix_operation_examples()
+         call  Basic_arrays(); call Matrix_operation_examples()
          call  ElementWise_operation_examples()
      
      case(5) 

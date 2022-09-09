@@ -1,22 +1,149 @@
-
-
 \chapter{Object Oriented Programming} 
 
-\section{Polymorphism} 
+\vspace{-1cm}
+In the following sections we delve into the main principles of Object Oriented Programming through some examples: 
+abstraction, encapsulation, inheritance and polymorphism. 
 
-\newpage 
-\subsection*{Fortran} 
 
-\renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
-\lstfor
-\listings{\home/polymorphism.f90}{subroutine polymorphism_example}{end subroutine}{polymorphism.f90}
+    \section{Encapsulation}
+    
+Let's continue with the example used for the overview of this chapter. 
+Notice that the objects representing the droplets include everything they need (data and methods) in the same unit. 
+Then, an object may share its state and interface so other objects can modify its state and use its methods 
+or may not and keep them private, encapsulation lets the objects manage both. 
+We could keep the state of each droplet private so it is not modified by other means than its own methods.  
+If the interface is public then other objects can use the object but always by means of these methods provided.  
+      
+   
+    \section{Abstraction}
+
+As an extension of the encapsulation principle we can think of abstraction. 
+Once the state and methods are encapsulated in the object, abstraction means that an object 
+should hide any code and state that is not needed by the rest and 
+should maintain public only a high-level interface to allow its use.
+By exposing only the minimum necessary and hiding the implementation the code is less complex 
+and increases reusability.
+
+
+    
+
+    \section{Inheritance}
+
+Imagine that the simulation of evaporating droplets needs to include the combustion of spherical fuel droplets apart from the evaporation.
+Fuel droplets present a similar state as the generic type: temperature, size, mass fraction of fuel at its surface, etc.
+Also, they behave in a similar way: updating physical properties according to the temperature, decreasing size while it evaporates, etc. 
+However, this new class of droplet includes a heat of combustion as state and has extra behaviour, burning and liberating energy. 
+
+Inheritance allows the programmer to reuse all the logic behind the droplet class 
+and create the new fuel droplet class with its unique particularities, hence, not blurring the 
+definition of the droplet class.
+A hierarchy has been created where a child class (fuel droplet) is derived from a parent class (droplet).
+
+
+
+
+    \section{Polymorphism} 
+
+Imagine now that the simulation requires non-spherical droplets, for example ellipsoid shaped. 
+As we have seen, inheritance can be used to define this new class of droplets since they present a similar state and behaviour as spherical droplets.
+However, the property ``size'' must take into account the three axes of an ellipsoid and not only the radius of a spherical shape. 
+In addition, a method that decreases this size according to evaporation should also be consistent. 
+Furthermore, we want the methods and properties to be used in the same way, whether the droplets in our simulation are spherical or ellipsoid shaped.
+
+Polymorphism allows the use of the child classes in the same way as the parent classes with no need of mixing types. 
+In our example, the size property or the updating size method have multiple shapes depending on the specific class where it is defined. 
+The language decides at each case which implementation should be evaluated of the common method.
+ 
+Mainly two types of polymorphism are usually distinguished: overloading and overriding. 
+Overloading implies using methods with the same name in the same class, but 
+having different number of parameters or, being the same number of parameters, having different types.
+Overriding implies two or more classes with parent-child inheritance, using the same method, same number and types of parameters, 
+but having the child class a specific implementation.
+The method to use in a given situation for overloading is decided at compile-time,
+for overriding is decided at runtime. 
+Overloading is treated in depth in the chapter \ref{ch:overloading} for functions and operators. 
 
 
 \newpage
-\subsection*{Python}
-\renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism} 
-\lstpython
-\listingsp{\home/polymorphism.py}{class}{Total perimeter}{polymorphism.py}
+In the following example the \texttt{polygon\_class} is created with 
+the properties \texttt{color}, \texttt{N\_sides}, \texttt{length} and 
+methods \texttt{perimeter()} and \texttt{polygon\_constructor()} as constructor. 
+The classes \texttt{square\_class} and \texttt{circle\_class} are inherited from this one, 
+the former modifies the definition of the constructor and 
+the latter both the constructor and the perimeter method. 
+
+Then, four objects are positioned in a variable called \texttt{Polygons}: a polygon, an square, a circle and the same polygon repeated. 
+All of them are constructed using their respective classes and their perimeter obtained using the method \texttt{perimeter} indistinctly for each of them.
+
+
+ 
+    \section*{Fortran} 
+    
+    Notice in the first place that the inherited classes \texttt{use} the module where the parent class is hosted. 
+    Then, by using the \texttt{extends} keyword the child class can be defined as usual. 
+    Also notice the use of \texttt{private} and \texttt{public} keywords to manage encapsulation and abstraction for these objects.  
+    In this case, the \texttt{square\_class} redefines its constructor to build a four equal sides polygon.  
+    \vspace{0.5cm}
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+    \lstfor
+    \listings{\home/polygon_class.f90}{module}{end type}{polygon_class.f90}
+    
+%    \listings{\home/square_class.f90}{module}{end module}{square_class.f90}
+
+    \newpage
+    \listings{\home/circle_class.f90}{module}{end module}{square_class.f90}
+    
+    
+    
+    \newpage
+    In Fortran, the variable \texttt{polygons(:)} must be made with an array, which can only have elements of the same type.
+    Since we need each element to be a different object, the variable is declared as an array of \texttt{pointer}, and 
+    more specifically, an array of pointers with abstract class so their targets can be any type of object.
+    When the objects \texttt{P}, \texttt{S} and \texttt{C} are constructed, 
+    each of the four elements in the polymorphic array is pointed to each of them. 
+    Finally, using the alias \texttt{Fi} for each object in the array, the perimeter is obtained and added to the total summation \texttt{L}.
+    \vspace{0.3cm}
+    \renewcommand{\home}{./Fortran/sources/Advanced_programming/polymorphism} 
+    \lstfor
+    \listings{\home/polymorphism.f90}{subroutine polymorphism_example}{end subroutine}{polymorphism.f90}
+    
+    
+    
+    
+    
+    
+    
+    
+    \newpage
+    \section*{Python}
+    Python is much more straightforward for these purposes. 
+    Notice that the keyword \texttt{self} is used substituting the instance of the class, 
+    hence, all methods defined within the class can include references to the instance they are working with. 
+    Among other purposes, this let a constructor method bind the arguments to the properties of the class. 
+    
+    The inheritance is achieved by passing the parent class as an argument of the child class. 
+    Once done, the methods can be overrided like \texttt{parameter} in the example, which for both \texttt{square} and \texttt{circle} 
+    needs to be defined with a new implementation. 
+    While the \texttt{circle\_class} redefines the constructor from the beginning, notice that \texttt{square\_class} uses the inherited constructor 
+    and imposes the need of having four equal length sides. To do that, the keyword \texttt{super} is used so a the methods of the parent class are accessible.     
+    
+    The function \texttt{polymorphism\_example} creates each object using their respective constructors and gathers the four instances 
+    \texttt{P}, \texttt{S}, \texttt{C} and \texttt{P} again in a list. Since Python allows structures collecting different data types, 
+    there is no need of using pointers. Finally, the perimeter of each object is computed and summed in \texttt{L}.
+    
+    \newpage
+    \renewcommand{\home}{./Python/sources/Advanced_programming/polymorphism} 
+    \lstpython
+    \listingsp{\home/polymorphism.py}{class}{Total perimeter}{polymorphism.py}
+
+
+
+
+
+
+
+
+
 
 
 %\newpage 

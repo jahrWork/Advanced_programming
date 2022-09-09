@@ -27,13 +27,19 @@ Languages like Fortran, MATLAB, R or the NumPy extension of Python support array
 Matrix arithmetic are built-in in these languages and expressing the mathematical language in a natural way is feasible.
 
 \newpage
-The following array operations are covered:
-\begin{enumerate}
-    \item Addition. 
-    \item Dot product.
-    \item Matrix multiplications. 
-    \item Hadamard product. 
-    \item Element-wise operations.
+The following concepts are covered:
+\begin{enumerate}[noitemsep]
+    \item Declaring arrays (Fortran): type, rank and dimension.
+    \item Initialize arrays: constructors. 
+    \item Iterators for arrays, sectors or slices. 
+    \item Operations:
+    \begin{itemize}
+        \item Addition. 
+        \item Dot product.
+        \item Matrix multiplications. 
+        \item Hadamard product. 
+        \item Element-wise operations.    
+    \end{itemize}
 \end{enumerate}  
 
 
@@ -67,11 +73,159 @@ to the different ways of allocating space in the code.
 
 
 
+
+
+%___________________________________________________________________________________________________
+\newpage 
+\section{Declaring, initializing and slicing arrays} 
+%Declaration
+Consider the vectors $V \in \mathbb{R}^N$, $X\in \mathbb{R}^6$, $Y\in \mathbb{R}^3$ 
+and matrices $A \in { \cal{M}}^{N \times N} (\mathbb{R})$, $Z \in { \cal{M}}^{2 \times 3} (\mathbb{R})$
+with $N=10$ and let's use arrays to represent them: 
+$$
+V = \left( v_i =\frac{1}{i^2} \right)^T, \quad A = \left[ a_{ij} = \left( \frac{i}{N} \right)^{j-1} \right], \;\; i = 1 \ldots  N, \;\;  j = 1 \ldots  N   
+$$
+$$
+X = ( 1.3, 2.4, 3, 4.5, 5.3, 7 )^T,  \quad  Y = \left(A_{i j}\right)_{\substack{i = 2 \\  3\leq j\leq 5}}^T, \quad Z =     
+\begin{bmatrix}
+    1.1 & 2.2 & 3.3\\
+    4 & 5.6 & 6.2
+\end{bmatrix} 
+$$
+
+    \subsection*{Fortran code}
+
+An array, either representing a vector, a matrix or a tensor, is properly \textbf{declared} when it has 
+type, rank and dimension (or extent) (see Figure \ref{fig:arrays}). 
+The data type has already been treated before, in these examples we are using \texttt{real} vectors and matrices. 
+The rank; the number of dimensions in the array, is 1 for column vectors, 2 for matrices and can be higher for higher dimension tensors.
+The extent of each particular dimension is its length; the number of elements in that dimension.
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+\listings{\home/Matrix_operations.f90}{subroutine Basic_arrays}{indices of B}{Basic_operations.f90}
+
+\begin{IN}
+    Notice that, in Fortran, the \textbf{bounds of a dimension} may start with the index we prefer. 
+    By default it stars with index \texttt{1} but it can start in \texttt{0} or whatever index we want. 
+    For example the matrix \texttt{B(-2:4,0:1)} starts in \texttt{-2} and ends in \texttt{4} (also included) for the first dimension and 
+    \texttt{0} and \texttt{1} (also included) for the second dimension. 
+\end{IN}
+
+
+\newpage
+%Initialization
+Once declared, the \textbf{initialization} of the arrays is performed with constructors. 
+Three ways are commonly used to manually construct an array: 
+\vspace{-0.5cm}
+\begin{enumerate}[noitemsep]
+    \item \textbf{List of values:} \texttt{ [ list ] } where 'list' is a list of values of the same array type separated by commas. 
+    \item \textbf{Array slice:} For example \texttt{Y = [ A(2, 3:5) ]} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
+    \item \textbf{Implicit loop:} a list of elements is computed from a loop.
+\end{enumerate}
+In Fortran a list of values can only be used with rank-one arrays so 
+the function \texttt{reshape} is needed for higher ranks. 
+For example the matrix \texttt{A} in the code is initialized using the \texttt{reshape} function.     
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+\listings{\home/Matrix_operations.f90}{Implicit loop}{By columns}{Basic_operations.f90}   
+
+
+
+
+%sectors, iterators... 
+In Fortran the elements of the array are accessed using parenthesis notation and
+an index in each dimension can be used as \textbf{iterator}.
+This is intimately related to the \textbf{slicing}: referencing a portion of the array by a range of indices.
+For example the initialization of \texttt{Y} above use an slice of \texttt{A}.
+This can also be extended to a whole dimension using the colon symbol, \texttt{C(:,2)}. 
+Furthermore, alternate values can be selected by specifying a lower bound, an upper bound and the jump between values.
+Notice that, since Fortran is a column major order language, functions like \texttt{reshape} and slicing treats the data by columns. 
+\vspace{0.5cm}
+\lstfor
+\renewcommand{\home}{./Fortran/sources/Foundations/Algebra} 
+\listings{\home/Matrix_operations.f90}{Slices}{columns!}{Basic_operations.f90}  
+
+
+
+
+    \newpage
+    \subsection*{Python code}
+
+Let's see the same examples defined above using \texttt{NumPy} arrays.
+Notice that now they do not need to be explicitly declared, 
+Python automatically does it. 
+
+%Initialization
+The \textbf{initialization} of the arrays is performed using the \texttt{array()} function as constructor. 
+Three ways are commonly used to manually construct an array: 
+\begin{enumerate}[noitemsep]
+    \item \textbf{List of values:} \texttt{ [ list ] } or \texttt{ [ [ list ], [ list ] ] } for higher than rank-one arrays,
+     where \texttt{list} is a list of values of the same array type separated by commas.
+    \item \textbf{Array slicing:} For example \texttt{Y = A(1, 2:5)} stores the list of values in the second row of \texttt{A} from columns \texttt{3} to \texttt{5}.
+    \item \textbf{Implicit loop (list comprehension):} a list of elements is computed from a loop.
+\end{enumerate}
+\vspace{0.5cm} 
+\lstpython
+\renewcommand{\home}{./Python/sources/Foundations/Algebra} 
+\listingsp{\home/Matrix_operations.py}{basic_arrays}{by rows}{data_type.py}
+
+
+
+%sectors, iterators...    
+In Python, the elements of the array are accessed using bracket notation, 
+the array can be \textbf{iterated} using an index in each dimension and 
+\textbf{slicing} is also allowed.
+Notice that NumPy arrays, contrary to Fortran, are row-major order. 
+This means that arrays store the data by rows. 
+Similarly to Fortran, the colon symbol iterates in a whole dimension and 
+alternate values can be selected by specifying lower and upper bound and the jump between values.
+However, the example \texttt{B(-2:4:3,:)} made with Fortran can not be copied because:
+\begin{IN}
+    In Python, the \textbf{bounds of a dimension} always start with the index \texttt{0} (zero-indexing) and
+    stop 1 before the final bound.  
+\end{IN}
+
+
+
+\newpage
+\FloatBarrier
+\begin{figure}
+    \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{./doc/Figures/Array1.png}  \\
+        \begin{center}
+            Rank = 2 \\
+            Extent = (5,4) \\
+            Size = 20 \\
+            Bounds = (1:5, 1:4) \\
+            %Shape = (5, 4)
+        \end{center}
+    \end{subfigure}
+    \hspace{\fill}
+    \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{./doc/Figures/Array3.png}  \\
+        \begin{center}
+            Rank = 2 \\
+            Extent = (7,2) \\
+            Size = 14 \\
+            Bounds = (-2:4, 0:1) \\
+            %Shape = (7, 2)
+        \end{center}
+    \end{subfigure}
+    \caption{Example arrays with their main properties.}   \label{fig:arrays}
+\end{figure}
+
+\FloatBarrier
+
+
 %___________________________________________________________________________________________________
 \newpage 
 \section{Static size vectors and matrices} 
 
-Consider the same vectors $V, W \in \mathbb{R}^N$ and matrices $A, B \in { \cal{M}}_{N \times N} (\mathbb{R})$ used in previous chapters (with $N=10$): 
+Consider the same vectors $V, W \in \mathbb{R}^N$ and matrices $A, B \in { \cal{M}}_{N \times N} (\mathbb{R})$ used in the previous section (with $N=10$): 
 $$
 V = \left[ v_i =\frac{1}{i^2}, \ \ i = 1 \ldots  N \right],
 $$

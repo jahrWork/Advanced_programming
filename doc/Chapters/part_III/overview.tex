@@ -1,6 +1,4 @@
-
- 
- \chapter*{Menu for Advanced Programming} 
+\chapter*{Menu for Advanced Programming} 
     
    \vspace{0.5cm}
     \renewcommand{\home}{./Fortran/sources/Advanced_programming} 
@@ -33,8 +31,8 @@ However, in Fortran the use of abstract  \lstinline{class(*)}
 allows to use different data types at run time. 
   
  
-\newpage            
-\section{Scope} 
+    \newpage            
+    \section{Scope} 
 
 One of the most important matters that we need to understand when we begin to write our own codes in any programming language is the scope. 
 The scope of variables, named constants, objects, functions or procedures is the area of the program where they can be used or modified, that is, the area where each object is visible.
@@ -59,7 +57,7 @@ As a general rule, the use of global variables should be reduced as possible, th
 
 
 
-\section{Functional Programming}
+    \section{Functional Programming}
 Scitientifc programming is very close 
 to mathematics. Numerical schemes and approximation are grounded on vector spaces of finite and 
 infinite dimensions. Hence, experts developers have a deep knowledge of mathematics and they 
@@ -99,7 +97,7 @@ John Backus in 1977 asked in his famous Turing Award lecture:
 
 
 \newpage 
-\section{Overloading} 
+    \section{Overloading} 
 Scientific programming has common operations that are performed for different 
 space domains or different data types. In those cases, functions or operators can be  overloaded 
 to generalize different types or data structures.  
@@ -136,11 +134,56 @@ In scientific computing, operator overloading allows to manipulate objects with 
 
 
 
-\newpage 
-\section{Object Oriented Programming}
+    \newpage 
+    \section{Object Oriented Programming}
 
-\newpage 
-\section{Pointers} 
+Contrary to functional programming, object-oriented programming is not born 
+from strong mathematical foundations but from the need of describing the solution to a problem 
+by creating simulations of real life systems.
+
+This programming paradigm is based on the concept of \textit{object} which presents 
+a state in the form of data (usually called properties) and 
+a behaviour in the form of procedures (usually called methods).
+In addition, an object has identity, an unique name that differentiates it from other objects. 
+Hence, an object ties together what is it and how it relates.
+
+There are similar ideas behind the category theory of mathematics.
+But also, the definition of some objects in common branches of mathematics follow a pattern similar to the mentioned. 
+Sometimes a mathematical object is defined by what they do together with what they are. 
+Notice for example the definition of a field, it has a set which could be identified with 
+its state, but also two operations that must accomplish with a bunch of axioms. 
+This could be identified with its behaviour. 
+
+%Ejemplo de un objeto
+Let's see what classes and objects are through an example. 
+Imagine you want to simulate the evaporation of a bunch of spherical fluid droplets. 
+Each droplet presents an state like its temperature, its size, the mass fraction of fluid at its surface, a spatial discretization to solve conservation equations, etc.
+Also, a droplet behaves in a specific way, it updates its physical properties according to the temperature (Specific heat capacity, heat transfer coefficient, etc.) or decreases its size while it evaporates.
+Hence, each droplet could be programmed as an object in the simulation. 
+Notice that all the droplets share the same properties and behaviours so the class ``droplet'' 
+is defined as a blueprint for all the droplets.
+This blueprint gathers the properties, maybe carrying default values, and the methods, including a method to construct a new droplet. 
+Once a new individual droplet is introduced in the simulation, an object of class droplet is instantiated using the constructor. 
+%Podria dar como ejemplo un integer que en Python todo son objetos.
+
+Four principles are usually associated to the use of objects and classes: 
+abstraction, encapsulation, inheritance and polymorphism. 
+The languages are usually classified into Object Based Language and Object Oriented Language.
+The former is used for any language that supports the concept of encapsulating state and behaviour 
+in an object while it does not need to support inheritance or polymorphism. 
+For example Fortran 90 was an Object Based Language, however, nowadays it allows both inheritance or polymorphism.
+If a language is Object Based but also supports the full bunch of principles mentioned, then they are Object Oriented Languages. 
+For example Python, Java, C++, Lisp or MATLAB.
+
+
+
+
+
+
+
+
+    \newpage 
+    \section{Pointers} 
 
 A pointer is a variable that stores a memory address. 
 This memory address refers to some number, array of numbers or some object. 
@@ -184,7 +227,7 @@ a value that is a valid memory address.
 
 
 \newpage 
-\section{Wrappers} 
+    \section{Wrappers} 
 A wrapper refers to functions 
 that wrap around other function in order to change its interface or to complement 
 its functionality. 
@@ -252,10 +295,10 @@ without writing a line a new code.
 
 
 %\newpage 
-%\section{Mixing Python and Fortran}
+    %\section{Mixing Python and Fortran}
 
 \newpage 
-\section{Parallel programming} 
+    \section{Parallel programming} 
 Processors have reached the ceiling in terms of the frequency in which the operations 
 could be performed, and thus an new type of computation appears: parallelism.  
 Parallel computing performs simultaneously many calculations. 

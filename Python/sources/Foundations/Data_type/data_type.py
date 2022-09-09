@@ -1,6 +1,7 @@
 from numpy import array, zeros, conjugate, real, imag, sqrt, exp, pi
 from re import split
 
+
 def data_types(): 
 
   integer = 1 
@@ -10,122 +11,14 @@ def data_types():
   string = "data types"
 
 
-def arrays():
-
-    N = 10 
-  
-    V = array( [  1./i**2 for i in range(1, N+1) ] )
-    W = array( [ (-1)**(i+1)/(2*i+1.) for i in range(1, N+1) ] ) 
-    A = array( [ [ (i/float(N))**(j-1) for j in range(1,N+1) ] for i in range(1, N+1) ] )
-    X = array( [ 1.3, 2.4, 3., 4.5, 5.3, 7. ] )  
-    Y = A[1,2:5]
-    Z = array( [ [ 1.1, 2.2, 3.3 ], [ 4., 5.6, 6.2 ] ] )
-
-    #Slices
-    C = zeros((5,4))
-    C[:,1] = X[0:5]
-    C[1:3,2:4] = [ [1.,2.], [3.,4.] ] # enter by rows!
-
-def structures():
-
-    # Set
-    P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}
-
-    # List, sequence
-    print( "Sum sqrt(n/(n**4+1)) = ", sum( [sqrt(n/(n**4+1)) for n in range(10000+1)] ) )
-
-    # Set of tuples
-    print( { (i**2 - 1, 2*i, i**2 + 1) for i in range(2,10) } )
-
-    # Dictionary
-    D = { "set":{1,3}, "list":[1,3], "tuple":(1,3), "dict":{"one":1,"three":3} }
-
-
-
-def data_structures():
-
-  sets = "unordered set with distinct elements" 
-  S = {"car", 5, 6.7, 1 + 1j} 
-   
-  print("\n type=", type(S)) 
-  for s in S:    # print order is unpredictable
-     print(" element =", s)
-
-  lists = "ordered set allowing equal elements" 
-  S = ["one", 5, 3.5, 5] 
-   
-  S[3] = 8
-  print("\n type=", type(S))   
-  for i in range(len(S)):    # lists are ordered 
-     print(" element =", S[i]) 
-     
-  tuples ="inmutable ordered set" 
-  S = ("one", 5, 3.5, 5)  
-  
-  print("\n type=", type(S))
-  for i in range(len(S)):     # tuples are inmutable 
-     print(" element =", S[i])   
-  print("\n") 
-  
-  for i, s in enumerate(S):
-      print(" index =", i, " element =", s)   
-  print("\n")
-
-  dictionaries = "ordered data values in key:value pairs"
-  D = {"set":sets, "list":lists, "tuple":tuples, "dict":dictionaries} 
-  
-  for k in D:     # mutable and do not allow duplicates
-     print("{:6} {} {}".format(k, ":", D[k]) )
-  print("\n")
-
-  for k in D.keys():     
-     print("{:6} {} {}".format(k, ":", D[k]) )
-  print("\n")
-
-  for v in D.values():  
-     print("{}".format(v) )
-  print("\n")
-
-  ite = iter( ("one", 5, 3.5, 5) )
-  print( next(ite) )
-  print( next(ite) ) #returns StopIteration when no more elements. 
-
-
 def Operators(): 
 
   x = 2.; y = 7.
-  P = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
-  E = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
   e = exp(1.)
-  a = 2
      
   print( "e^(i pi) + 1 = ", e**(1j*pi) + 1 )
-  print( "x <= y and then -x >= -y",  x <= y and -x >= -y )
-  print( "(1 in P) and (5 in P) = ", (1 in P) and (5 in P) )
-  print( not(a in P or a in E), "implies", not(a in P) and not(a in E) )
-
-
-
-def input_Complex():
-  
-  # read real and imaginary parts using function split()
-  x, y = [float(i) for i  in split( "\s", input("Enter x, y: ") ) ] 
-  print("Values x, y: ", x, y) 
-  z = complex(x, y)
-
-  # read real and imaginary parts using objects and .split() method
-  x, y =  input("Enter x, y: ").split()
-  x, y = [float(x), float(y)]  
-  z = complex(x, y)
-  
-  w = sqrt(z); print("sqrt(z) = ", w)
-
-  # real and imaginary parts using functions
-  # print(real(w)); print(imag(w))
-
-  # real and imaginary parts using objects
-  # print(w.real); print(w.imag)
-
+  print( "x <= y and -x >= -y is ",  x <= y and -x >= -y )
+  print( "(abc+def) < abcdeg = ", ("abc"+"def") < "abcdeg" )
 
 
 def Flow_structures():
@@ -163,5 +56,121 @@ def Flow_structures():
   elif (a < b):
       print( "a is less than b" )
   elif (a == b):
-      print( "a is equal to b" )         
+      print( "a is equal to b" )   
+  else:
+      print( "Error: not valid comparison" )
+
+
+
+def structures():
+
+    # Set
+    X = {1, 2, 3}
+    Y = {1, 2, 3, 4}
+
+    print( "X union Y:", X | Y )
+    print( "X intersection Y:", X & Y ) 
+    print( "3 in X =", 3 in X )
+    print( "6 not in X =", 6 not in X )
+    print( "X strict subset Y =", X < Y ) 
+    print( "X strict superset Y =", X > Y ) 
+    print( "X subset Y =", X <= Y ) 
+    print( "X superset Y =", X >= Y )
+    X.add(0)
+    print( "add 0 to X =", X )
+    X.remove(0)
+    print( "remove 0 from X =", X )
+
+    # List, Tuple
+    X = [1, 2, 3]
+    Y = [4, 5]
+
+    print( "X cocatenate Y:", X + Y )
+    print( "3 in X =", 3 in X)
+    print( "3 not in Y =", 3 not in Y)
+    X.append(0)
+    print( "add 0 to X =", X )
+    X.remove(0)
+    print( "remove 0 from X =", X )
+
+    X = (1, 2, 3)
+    Y = (4, 5)
+
+    print( "X cocatenate Y:", X + Y )
+    print( "3 in X =", 3 in X )
+    print( "4 not in Y =", 4 not in Y ) #false
+
+    # Range
+    X = range(6, 14, 2)
+    print( "14 in X =", 14 in X )   #Stops in 12!
+
+    # Array
+    V = array( [1, 2, 3] )
+    print( V )
+
+    # Dictionary
+    D = {"a":[1, 2], "b":[3]}
+    F = {"b":[3], "a":[1, 2]}
+    print( "D equals F =", D == F )
+    print( "a in D =", "a" in D )
+    print( "a not in F =", "a" not in F )
+
+    
+
+
+
+
+def iterators():
+
+    S = {"car", 4.5, 3, 1+1j}
+    for s in S:    # Iterates in the element
+        print( "Element =", s )
+
+    L = [1, 2, 3, 4]  
+    for i in range(len(L)):    # Iterates in the index 
+        print( "Element =", L[i] )
+    
+    T = (1, 2, 3, 4)
+    for i, t in enumerate(T):  # Iterates in both: index and element 
+      print( "Index =", i, "Element =", t )  
+      
+    D = {"a":[1, 2], "b":[3]}
+    for k in D.keys():      # Iterates in the keys of a dictionary 
+        print( "{:2} {} {}".format(k, ":", D[k]) )
+
+    for v in D.values():  
+        print( "{}".format(v) )  # Iterates in the values of a dict 
+
+    Pyt = { (i**2 - 1, 2*i, i**2 + 1) for i in range(2,10) }
+    print( Pyt )
+
+    print( L[2] )  # Third element, index starts in 0
+    print( T[2] )
+    print( D["a"] )  # Element with key "a"
+
+
+
+def input_Complex():
+  
+  # read real and imaginary parts using function split()
+  x, y = [float(i) for i  in split( "\s", input("Enter x, y: ") ) ] 
+  print("Values x, y: ", x, y) 
+  z = complex(x, y)
+
+  # read real and imaginary parts using objects and .split() method
+  x, y =  input("Enter x, y: ").split()
+  x, y = [float(x), float(y)]  
+  z = complex(x, y)
+  
+  w = sqrt(z); print("sqrt(z) = ", w)
+
+  # real and imaginary parts using functions
+  # print(real(w)); print(imag(w))
+
+  # real and imaginary parts using objects
+  # print(w.real); print(w.imag)
+
+
+
+    
   

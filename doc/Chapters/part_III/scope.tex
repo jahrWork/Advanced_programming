@@ -1,9 +1,35 @@
 \chapter{Scope} 
-
-
     \vspace{-1cm}
+    \section{Introduction}
+
+In this section we take a deeper look at the basics behind the scope in Fortran and Python. 
+Notice that Fortran has two units of program (\texttt{program} and \texttt{module}) and 
+two units of subprogram (\texttt{subroutine} and \texttt{function}).
+While program units can contain subprograms, subroutines and functions can also contain functions. 
+From a general point of view, each variable, named constant, function or procedure is treated in the following way according to its scope:
+\vspace{-0.5cm}
+\begin{itemize}[noitemsep]
+    \item Everything declared at the beginning of a program/subprogram will be treated as global within that unit. 
+    Hence, all units of program nested will see the entity.
+    This is extended to the \texttt{use} statement, e.g. a main program \textit{using} a module sees all its public global entities but the module do not see the global entities of the main program. 
+    
+    \item On the contrary, all entities declared inside subroutines and functions are local and its scope is limited to the procedure itself. 
+\end{itemize}
+
+Python also works with a main application and external modules defined in different files. 
+From a general perspective, each variable, object, function, etc. is treated in the following way:
+\vspace{-0.5cm}
+\begin{itemize}[noitemsep]
+    \item Everything declared in the main body of the Python code will be treated as global. 
+    Hence, this entity is seen throughout all the program whether is a function or not.
+    
+    \item On the contrary, entities declared inside functions are local and its scope is limited to the function itself. 
+    More specifically, a function nested in another function sees the local variables declared in the host function.
+\end{itemize}
+
+
+
     \section{Module association}
-    \vspace{-0.3cm}
 A program is usually composed by different program units connected between them using a main program unit. 
 Each program unit has its own identity so they can be compiled independently, but they are all managed by a main unit.
 This role in Fortran is performed by the Main Program, denoting the beginning of the execution and usually including a \texttt{Program} statement. 
@@ -11,9 +37,10 @@ In Python, this starting point is usually indicated by the main function, or \te
 While the main program is going to manage the hierarchy of the program, several external procedures and modules can be joined. 
 Modules usually include specifications of variables, procedures, classes, etc. and they are one of the basic areas where the scope can be managed. 
 
-        \vspace{-0.3cm}
+
+
         \subsection*{Fortran}
-        \vspace{-0.3cm}
+        \vspace{-0.5cm}
 It is common to limit the scope of variables and procedures so they can only be accessed or modified inside the module. 
 By default all the entities in a module are public so they can be accessed by any other program unit by the \texttt{use} statement. 
 However, each entity can be treated as \texttt{private} so they can not be accessed from outside.  
@@ -22,7 +49,7 @@ module \texttt{scope\_example}.
 \vspace{0.3cm}
 \lstfor
 \listings{./doc/Figures/Modules.f90}{module}{use}{Modules.f90}
-
+\vspace{-0.3cm}
 If nothing is specified inside the module \texttt{scope\_example} then all its content is accessible. 
 However, with the keyword \texttt{private ::} followed by a list of entities, all these are not accessible from outside. 
 In the same way, the keyword \texttt{public ::} followed by some entities makes them accessible. 
@@ -57,7 +84,6 @@ Hence, \texttt{sc} is the name that enters in the global namespace and then
 \lstpython
 \listingsp{./doc/Figures/Modules.f90}{import}{import}{Modules.py}
 
-\newpage
 To import only specific parts of a module the keyword \texttt{from} is used together with the \texttt{import} statement. 
 Hence, the amount of entities in the scope is reduced and the control over them increased. 
 In the following example only the function \texttt{scope\_public\_private\_example} is imported and 
@@ -73,9 +99,33 @@ Finally, just \texttt{scope\_public\_private\_example()} can be used to call thi
 
 
 
+    \newpage
+    \section{Name matching in global and local scopes}
+We have now a general perspective of what happens when global variables are accessed in local scopes, they can be seen and used in expressions.
+On the contrary, local variables are not seen in global scopes. 
+A try to use its local name in a global scope leads to an error in both programming languages.
+The firs question that may arise is what happen when the same name is used for a local and a global variables. 
 
+In both programming languages Fortran and Python, by default, the global variables are not modified in local scopes. 
+If a local variable has the same name as a global then the host's one is no longer visible to the subprogram (function in Python).
+Then, we can not use the global value and only the local value is considered. 
+Of course, assigning values to this variable do not change the global entity. 
+A good practice is to declare in a subprogram all the needed data and pass the rest through arguments. 
+However, there are exceptions to this rule in both languages. 
+
+   
     \section{Modification of global variables}
-keyword: global and id destroy 
+This subsection tries to answer if it is possible to modify a global variable in a local scope. 
+
+In the case of Fortran, notice that the arguments defined as \texttt{out} or \texttt{inout} in a local scope 
+can modify the values of global variables even inside the function or subroutine. 
+Hence, special care must be taken into account when an argument in a procedure is declared as \texttt{out} or \texttt{inout}.
+
+Python offers the possibility of modifying global variables inside local scopes through the keyword \texttt{global}. 
+If a variable is defined inside a function as \texttt{global} its value can be modified inside the local scope (against the functional programming paradigm principles). 
+It is interesting to remark here that the unique object's memory address (\texttt{id}) of the variable changes when it is re-assigned inside the function.
+Said in other words, when modifying the global variable inside the local scope a new memory address is assigned to this entity and its old \texttt{id} is destroyed. 
+When the function has finished its execution, the reassigned \texttt{id} is kept. 
 
 
 
@@ -86,77 +136,9 @@ keyword: global and id destroy
 
 
 
-    \section{Nonlocal variables inside inner functions} 
+    %\section{Nonlocal variables inside inner functions} 
 
 
-
-In this section we take a deeper look at how the scope is treated in Fortran and Python since each programming language has its own particularities. 
-
-Fortran has two units of program (\texttt{program} and \texttt{module}) and two units of subprogram (\texttt{subroutine} and \texttt{function}).
-Program units can contain subprograms but remember that subroutines can also contain functions, and even functions can contain other functions. 
-Each variable, named constant, function or procedure is treated in the following way according to its scope (see Figure \ref{fig:ScopeFor}):
-\begin{itemize}
-    \item Everything declared at the beginning of a program/subprogram will be treated as global for that unit. 
-    Hence, all units of program nested will see the entity.
-    This also includes the \texttt{use} statement, e.g. a main program using a module sees all the global entities of the module (variables, procedures, etc.). 
-    
-    \item On the contrary, all entities declared inside subroutines and functions are local and its scope is limited to the procedure itself. 
-    %Notice that the scope of the procedures follow the same rule, in the figure \ref{fig:ScopeFor} the function \texttt{f2( x )} is only accessible inside the subroutine \texttt{sub2( x )}.
-    
-    \item If a local variable uses the same name as a global, it automatically becomes only local so it won't be able to access or modify the value of the global entity. 
-    
-    \item Between program units the entities are not shared unless the \texttt{use} statement makes the public entities visible. 
-    When we build a module in Fortran we can decide which variables, procedures, etc. are \texttt{public} and which are \texttt{private}. 
-    Hence, the main program or a different module that ``uses'' our module only sees the public entities.
-    
-    Another way to restrict the scope of objects declared in a module is by using the \texttt{only} clause with the \texttt{use} statement. 
-    If we want to make visible the subroutine \texttt{sub2} declared in a module \texttt{mod\_A} but not the rest of the content, we can write \texttt{use mod\_A, only sub2} in our main program. 
-\end{itemize}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/ScopeFor.png}
-    \caption{Example of scope for different variables and constants in both program units in Fortran. Notice that \texttt{MainProg} sees all entities of \texttt{mod\_A} by default, however, since \texttt{y} is declared as private, it won't be seen. Furthermore, function \texttt{f2( x )} is only accessible inside the subroutine \texttt{sub2( x )}, it won't be accessible from anywhere else. Finally, notice that \texttt{sub1( a )} sees \texttt{f1( x )} since both are global in the main program.}
-    \label{fig:ScopeFor}
-\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-Python also works with a main application and external modules defined in different files. 
-Each variable, object, function, etc. is treated in the following way (see Figure \ref{fig:ScopePy}):
-\begin{itemize}
-    \item Everything declared in the main body of the Python code will be treated as global. 
-    Hence, this entity is seen throughout all the program whether is a function or not.
-    
-    \item On the contrary, entities declared inside functions are local and its scope is limited to the function itself. 
-    More specifically, a function nested in another function sees the local variables declared in the host function.
-    
-    \item If a local variable uses the same name as a global variable, Python will separate them as two, one accessible from the global scope and other accessible from the local scope. 
-    The function by default won't be able to access or modify the value of the global entity.
-    Then, the attribute \texttt{global} can be used to ensure that the name of the variable refers to the global entity inside the function.
-    
-    \item To make functions, variables, etc. declared in modules visible in the main application the \texttt{import} statement is used. 
-    Notice that then the module is called before the specific function: \texttt{module.function()}.
-    To import only a part of the module, for example a function, the notation \texttt{from <module> import <name>} is used. 
-    Then, the specific \texttt{<name>} can be called directly in the code with no need of calling first the module.
-\end{itemize}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width= \textwidth]{./doc/Figures/ScopePy.png}
-    \caption{Example of scope for different variables and constants in the main application and a module in Python. Notice \texttt{Main.py} sees only \texttt{f2( x )} from \texttt{modA.py} due to the selective import. In addition, function \texttt{innerf2( x )} is only accessible inside \texttt{f2( x )}, it won't be accessible from anywhere else.}
-    \label{fig:ScopePy}
-\end{figure}
 
 
 
@@ -172,13 +154,6 @@ Each variable, object, function, etc. is treated in the following way (see Figur
 \end{IN}
 
 
-
-
-
-
-
-
-
 %In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  
 In the following code, the variable $y$ is a global variable of module \texttt{modB} and $x$ is a global variable of module \texttt{modA}.  
 Then, $y$ is seen inside function \texttt{functionB()} and $x$ is seen in \texttt{functionA}.
@@ -186,9 +161,6 @@ All global variables of \texttt{modB} are seen outside by means of the sentence 
 Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}. 
 More specifically, this means that $x$ is also seen in \texttt{functionB()}. 
 \vspace{0.5cm} 
-
-
-
 
 
 
@@ -217,7 +189,40 @@ More specifically, this means that $x$ is also seen in \texttt{functionB()}.
 
 
 
+
+
+
+
+
+
+% RECYCLE?
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width= \textwidth]{./doc/Figures/ScopeFor.png}
+%    \caption{Example of scope for different variables and constants in both program units in Fortran. Notice that \texttt{MainProg} sees all entities of \texttt{mod\_A} by default, however, since \texttt{y} is declared as private, it won't be seen. Furthermore, function \texttt{f2( x )} is only accessible inside the subroutine \texttt{sub2( x )}, it won't be accessible from anywhere else. Finally, notice that \texttt{sub1( a )} sees \texttt{f1( x )} since both are global in the main program.}
+%    \label{fig:ScopeFor}
+%\end{figure}
+%
+%
+%
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width= \textwidth]{./doc/Figures/ScopePy.png}
+%    \caption{Example of scope for different variables and constants in the main application and a module in Python. Notice \texttt{Main.py} sees only \texttt{f2( x )} from \texttt{modA.py} due to the selective import. In addition, function \texttt{innerf2( x )} is only accessible inside \texttt{f2( x )}, it won't be accessible from anywhere else.}
+%    \label{fig:ScopePy}
+%\end{figure}
+
+
+
+%OLD
 %The region of a program in which this variable or identifier is visible is called the scope.
 %set of statements in which the variable can be used or modified
 % This is called the scope of the visibility of some variable in some part of our code. 
 %Local variables are those which specified inside the function or subroutine that we are dealing with and global variables are those that can be accessed by common variables of my own module  or by inclusions of other modules. 
+
+
+
+
+
+
+

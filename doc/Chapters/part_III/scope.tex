@@ -1,16 +1,71 @@
 \chapter{Scope} 
 
 
-
+    \vspace{-1cm}
     \section{Module association}
-
+    \vspace{-0.3cm}
 A program is usually composed by different program units connected between them using a main program unit. 
 Each program unit has its own identity so they can be compiled independently, but they are all managed by a main unit.
 This role in Fortran is performed by the Main Program, denoting the beginning of the execution and usually including a \texttt{Program} statement. 
 In Python, this starting point is usually indicated by the main function, or \texttt{main()}, but not being mandatory.
-
 While the main program is going to manage the hierarchy of the program, several external procedures and modules can be joined. 
-These include specification of variables, procedures, classes, etc. and are 
+Modules usually include specifications of variables, procedures, classes, etc. and they are one of the basic areas where the scope can be managed. 
+
+        \vspace{-0.3cm}
+        \subsection*{Fortran}
+        \vspace{-0.3cm}
+It is common to limit the scope of variables and procedures so they can only be accessed or modified inside the module. 
+By default all the entities in a module are public so they can be accessed by any other program unit by the \texttt{use} statement. 
+However, each entity can be treated as \texttt{private} so they can not be accessed from outside.  
+For example, in the following code the module called \texttt{advanced\_programming} can access all the public entities declared inside the 
+module \texttt{scope\_example}.
+\vspace{0.3cm}
+\lstfor
+\listings{./doc/Figures/Modules.f90}{module}{use}{Modules.f90}
+
+If nothing is specified inside the module \texttt{scope\_example} then all its content is accessible. 
+However, with the keyword \texttt{private ::} followed by a list of entities, all these are not accessible from outside. 
+In the same way, the keyword \texttt{public ::} followed by some entities makes them accessible. 
+If the keywords are used alone, the whole module is affected. 
+Notice from the following code that the keyword \texttt{private} at the beginning blocks the access to all the content.
+Then, the keyword \texttt{public ::} defines only the subroutine \texttt{scope\_public\_private\_example} as accessible.
+\vspace{0.3cm}
+\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
+\lstfor
+\listings{\home/scope_example.f90}{module}{public}{scope_example.f90}
+
+A complementary way to do this is by limiting the access to the entities of the module from the program unit that is using it. 
+Hence, together with the \texttt{use} statement the keyword \texttt{only} limits the entities that are imported. 
+\vspace{0.3cm}
+\renewcommand{\home}{./Fortran/sources/Advanced_programming} 
+\lstfor
+\listings{\home/advanced_programming.f90}{module}{use}{advanced_programming.f90}
+
+
+
+
+
+        \subsection*{Python}
+In Python, the code is organized with modules and packages and
+the code in one module or package is made accessible to another using the keyword \texttt{import}. 
+It is common in Python to import a module and give it a different name so it is more comfortable to use.
+For example, in the following code a Python code accesses the entities declared inside the 
+module \texttt{scope\_example} and renames it as \texttt{sc}.
+Hence, \texttt{sc} is the name that enters in the global namespace and then  
+\texttt{sc.functionA()} must be used to call the function \texttt{functionA()}.
+\vspace{0.3cm}
+\lstpython
+\listingsp{./doc/Figures/Modules.f90}{import}{import}{Modules.py}
+
+\newpage
+To import only specific parts of a module the keyword \texttt{from} is used together with the \texttt{import} statement. 
+Hence, the amount of entities in the scope is reduced and the control over them increased. 
+In the following example only the function \texttt{scope\_public\_private\_example} is imported and 
+only this function is added to the global namespace. 
+Finally, just \texttt{scope\_public\_private\_example()} can be used to call this function.
+\renewcommand{\home}{./Python/sources/Advanced_programming} 
+\lstpython
+\listingsp{\home/advanced_programming.py}{from}{scope}{advanced_programming.py}
 
 
 
@@ -18,12 +73,20 @@ These include specification of variables, procedures, classes, etc. and are
 
 
 
-\section{Modification of global variables}
+
+    \section{Modification of global variables}
 keyword: global and id destroy 
 
-\section{Local and global with same labels}
 
-\section{Nonlocal variables inside inner functions} 
+
+
+
+    \section{Local and global with same labels}
+
+
+
+
+    \section{Nonlocal variables inside inner functions} 
 
 
 
@@ -33,7 +96,8 @@ Fortran has two units of program (\texttt{program} and \texttt{module}) and two 
 Program units can contain subprograms but remember that subroutines can also contain functions, and even functions can contain other functions. 
 Each variable, named constant, function or procedure is treated in the following way according to its scope (see Figure \ref{fig:ScopeFor}):
 \begin{itemize}
-    \item Everything declared at the beginning of a program/subprogram will be treated as global for that unit. Hence, all units of program nested will see the entity.
+    \item Everything declared at the beginning of a program/subprogram will be treated as global for that unit. 
+    Hence, all units of program nested will see the entity.
     This also includes the \texttt{use} statement, e.g. a main program using a module sees all the global entities of the module (variables, procedures, etc.). 
     
     \item On the contrary, all entities declared inside subroutines and functions are local and its scope is limited to the procedure itself. 
@@ -55,6 +119,17 @@ Each variable, named constant, function or procedure is treated in the following
     \caption{Example of scope for different variables and constants in both program units in Fortran. Notice that \texttt{MainProg} sees all entities of \texttt{mod\_A} by default, however, since \texttt{y} is declared as private, it won't be seen. Furthermore, function \texttt{f2( x )} is only accessible inside the subroutine \texttt{sub2( x )}, it won't be accessible from anywhere else. Finally, notice that \texttt{sub1( a )} sees \texttt{f1( x )} since both are global in the main program.}
     \label{fig:ScopeFor}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
 
 
 Python also works with a main application and external modules defined in different files. 

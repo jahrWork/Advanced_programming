@@ -30,6 +30,7 @@
     <Folder Include="sources\Advanced_programming\decorators\" />
     <Folder Include="sources\Advanced_programming\Mixing languages\" />
     <Folder Include="sources\Advanced_programming\overloading\" />
+    <Folder Include="sources\Advanced_programming\scope\alternative\" />
     <Folder Include="sources\Foundations\Calculus\Examples\" />
     <Folder Include="sources\Foundations\iterators\" />
     <Folder Include="sources\Foundations\" />
@@ -61,7 +62,11 @@
     <Compile Include="sources\Advanced_programming\overloading\overloading.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\scope\global_variables.py">
+    <Compile Include="sources\Advanced_programming\scope\alternative\scope_id_example.py" />
+    <Compile Include="sources\Advanced_programming\scope\alternative\scope_id_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sources\Advanced_programming\scope\scope_id_example.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />

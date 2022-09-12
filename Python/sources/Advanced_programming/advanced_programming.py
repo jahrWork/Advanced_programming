@@ -38,6 +38,8 @@ def menu_advanced_programming():
 
      elif option == 1 : 
          scope_public_private_example() 
+         #scope_id_example()
+         exec(open("./sources/Advanced_programming/scope/scope_id_example.py").read())
    
      elif option == 2:  
          polymorphism_example()

@@ -6,32 +6,24 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "Advanced programming.tex",
+        "CurrentFile": "doc/Chapters/Part_III/scope.tex",
         "FileVersion": 1,
         "Files": [
             {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Advanced programming.tex",
-                "FirstLine": 181,
+                "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 215
             },
             {
-                "Col": 1,
-                "EditorGroup": 0,
-                "FileName": "doc/Chapters/Part_III/overview.tex",
-                "FirstLine": 0,
-                "FoldedLines": "34,59,99,137,185,229,297,300",
-                "Line": 175
-            },
-            {
                 "Col": 0,
                 "EditorGroup": 0,
-                "FileName": "doc/Chapters/Part_III/objects.tex",
+                "FileName": "doc/Chapters/Part_III/scope.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 2
+                "Line": 0
             }
         ],
         "MasterFile": "",

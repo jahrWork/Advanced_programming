@@ -1,5 +1,4 @@
 from scope_example import         scope_public_private_example
-from scope_id_example import      scope_id_example
 from polymorphism import          polymorphism_example
 from polymorphic_odes import      complex_ODES
 from vectors_and_matrices import  dot_product_examples, matmul_examples, greatest_difference
@@ -39,7 +38,8 @@ def menu_advanced_programming():
 
      elif option == 1 : 
          scope_public_private_example() 
-         scope_id_example()
+         #scope_id_example()
+         exec(open("./sources/Advanced_programming/scope/scope_id_example.py").read())
    
      elif option == 2:  
          polymorphism_example()

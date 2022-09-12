@@ -4,3 +4,6 @@ module advanced_programming
     
     
 import scope_example as sc
+
+
+from scope_example import *

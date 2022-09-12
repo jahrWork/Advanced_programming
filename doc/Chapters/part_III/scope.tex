@@ -20,8 +20,8 @@ Python also works with a main application and external modules defined in differ
 From a general perspective, each variable, object, function, etc. is treated in the following way:
 \vspace{-0.5cm}
 \begin{itemize}[noitemsep]
-    \item Everything declared in the main body of the Python code will be treated as global. 
-    Hence, this entity is seen throughout all the program whether is a function or not.
+    \item Everything declared in the main body or the body of a module will be treated as global. 
+    Hence, this entity is seen throughout all the program/module.
     
     \item On the contrary, entities declared inside functions are local and its scope is limited to the function itself. 
     More specifically, a function nested in another function sees the local variables declared in the host function.
@@ -94,6 +94,10 @@ Finally, just \texttt{scope\_public\_private\_example()} can be used to call thi
 \lstpython
 \listingsp{\home/advanced_programming.py}{from}{scope}{advanced_programming.py}
 
+When we want to import all the module in this way, the following notation is used.
+\vspace{0.3cm}
+\lstpython
+\listingsp{./doc/Figures/Modules.f90}{from}{from}{Modules.py}
 
     \newpage
     \section{First examples}
@@ -135,14 +139,14 @@ If a local variable has the same name as a global then the host's one is no long
 Then, we can not use the global value and only the local value is considered. 
 Of course, assigning values to this variable do not change the global entity. 
 A good practice is to declare in a subprogram all the needed data and pass the rest through arguments. 
-However, there are exceptions to this rule in both languages. 
+However, there are exceptions to this rule in both languages (read next section). 
 
 Let's see some examples where the \texttt{id} of a global variable \texttt{x} 
 (unique identifier for every object in Python which indicates its memory address) 
 is monitored in different situations. 
-Notice that this variable \texttt{x} is considered global within the host function and for all the nested functions. 
-We talk about the local scope inside each of the nested functions. 
-Each case in the examples is explained in the comments of the code.
+Notice that this variable \texttt{x} is global within the script and for all the nested functions. 
+We talk about the local scope inside each of the different functions. 
+Each case from the examples is commented in the code.
 
 \newpage
 \renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
@@ -197,7 +201,7 @@ See this behaviour in the following example.
     \section{\texttt{Nonlocal} variables inside inner functions} 
     \vspace{-0.7cm}
 The nonlocal keyword follows a similar concept to \texttt{global} but it is used with variables inside nested functions, which means, functions inside other functions. 
-It indicates to Python that the variable should not be local in the inner function, it does not belong to the inner function.
+It indicates to Python that the variable should not be local in the inner function, said in other words, it does not belong to the inner function.
 Hence, the variable is treated as non local, but neither global, it just belongs to the host function. 
 Take a look at the following example.
 \vspace{0.5cm}

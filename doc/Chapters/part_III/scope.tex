@@ -26,9 +26,10 @@ From a general perspective, each variable, object, function, etc. is treated in 
     \item On the contrary, entities declared inside functions are local and its scope is limited to the function itself. 
     More specifically, a function nested in another function sees the local variables declared in the host function.
 \end{itemize}
+    
 
 
-
+    \newpage
     \section{Module association}
 A program is usually composed by different program units connected between them using a main program unit. 
 Each program unit has its own identity so they can be compiled independently, but they are all managed by a main unit.
@@ -71,7 +72,7 @@ Hence, together with the \texttt{use} statement the keyword \texttt{only} limits
 
 
 
-
+        
         \subsection*{Python}
 In Python, the code is organized with modules and packages and
 the code in one module or package is made accessible to another using the keyword \texttt{import}. 
@@ -94,14 +95,37 @@ Finally, just \texttt{scope\_public\_private\_example()} can be used to call thi
 \listingsp{\home/advanced_programming.py}{from}{scope}{advanced_programming.py}
 
 
-
-
-
-
-
     \newpage
+    \section{First examples}
+
+%---------------------------------------------------------------------------------------------
+In the following code, the variable \texttt{y} is a global variable of module \texttt{modB} and 
+\texttt{x} is a global variable of module \texttt{modA}.  
+Then, \texttt{y} is seen inside function \texttt{functionB()} and 
+\texttt{x} is seen in \texttt{functionA}.
+All public global variables of \texttt{modA} are seen in \texttt{modB} by means of the sentence \texttt{use modA}. 
+More specifically, \texttt{functionA} is accessible from outside the module but \texttt{x} is not. 
+\vspace{-0.7cm}
+\subsection*{Fortran}
+\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
+\lstfor
+\listings{\home/modB.f90}{module modB}{end module}{modB.f90}
+\listings{\home/modA.f90}{module modA}{end module}{modA.f90}
+
+
+\newpage
+\subsection*{Python}
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\lstpython
+\listingsp{\home/modB.py}{from}{return}{modB.py}
+\listingsp{\home/modA.py}{x}{return}{modA.py}
+
+%---------------------------------------------------------------------------------------------
+
+
     \section{Name matching in global and local scopes}
-We have now a general perspective of what happens when global variables are accessed in local scopes, they can be seen and used in expressions.
+We have now a general perspective of what happens when global variables are accessed in local scopes: 
+they can be seen and used in expressions.
 On the contrary, local variables are not seen in global scopes. 
 A try to use its local name in a global scope leads to an error in both programming languages.
 The firs question that may arise is what happen when the same name is used for a local and a global variables. 
@@ -113,10 +137,27 @@ Of course, assigning values to this variable do not change the global entity.
 A good practice is to declare in a subprogram all the needed data and pass the rest through arguments. 
 However, there are exceptions to this rule in both languages. 
 
-   
-    \section{Modification of global variables}
-This subsection tries to answer if it is possible to modify a global variable in a local scope. 
+Let's see some examples where the \texttt{id} of a global variable \texttt{x} 
+(unique identifier for every object in Python which indicates its memory address) 
+is monitored in different situations. 
+Notice that this variable \texttt{x} is considered global within the host function and for all the nested functions. 
+We talk about the local scope inside each of the nested functions. 
+Each case in the examples is explained in the comments of the code.
 
+\newpage
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\lstpython
+\listingsp{\home/scope_id_example.py}{x is global}{in function f7}{scope_id_example.py}
+
+\listingsp{\home/scope_id_example.py}{def f3}{Id inside f7}{scope_id_example.py}
+
+
+
+
+    \newpage
+    \section{Modification of global variables}
+    \vspace{-.5cm}
+This subsection tries to answer if it is possible to modify a global variable in a local scope. 
 In the case of Fortran, notice that the arguments defined as \texttt{out} or \texttt{inout} in a local scope 
 can modify the values of global variables even inside the function or subroutine. 
 Hence, special care must be taken into account when an argument in a procedure is declared as \texttt{out} or \texttt{inout}.
@@ -127,16 +168,47 @@ It is interesting to remark here that the unique object's memory address (\textt
 Said in other words, when modifying the global variable inside the local scope a new memory address is assigned to this entity and its old \texttt{id} is destroyed. 
 When the function has finished its execution, the reassigned \texttt{id} is kept. 
 
+Take note of the following example and the comments in the code:
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\lstpython
+\listingsp{\home/scope_id_example.py}{Global x can be modified}{New x id after global}{scope_id_example.py}
 
+\listingsp{\home/scope_id_example.py}{def f1}{Id after reassign}{scope_id_example.py}
 
 
 
     \section{Local and global with same labels}
+    \vspace{-.5cm}
+As a conclusion from the previous sections we can say that the same name but different values in local and global scopes leads to different objects and hence, different \texttt{id}.
+However, it is interesting to note here the following. 
+When a local and global variables has the same name and value, even if the objects should be different (no \texttt{global} keyword is used), Python treats them as exactly the same object. 
+Hence, it and takes the data from the same memory address.  
+See this behaviour in the following example.
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\lstpython
+\listingsp{\home/scope_id_example.py}{x now has value}{x id after f5}{scope_id_example.py}
+
+\listingsp{\home/scope_id_example.py}{def f4}{Id inside f5}{scope_id_example.py}
 
 
 
+    \section{\texttt{Nonlocal} variables inside inner functions} 
+    \vspace{-0.7cm}
+The nonlocal keyword follows a similar concept to \texttt{global} but it is used with variables inside nested functions, which means, functions inside other functions. 
+It indicates to Python that the variable should not be local in the inner function, it does not belong to the inner function.
+Hence, the variable is treated as non local, but neither global, it just belongs to the host function. 
+Take a look at the following example.
+\vspace{0.5cm}
+\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
+\lstpython
+\listingsp{\home/scope_id_example.py}{nonlocal is used instead}{f6}{scope_id_example.py}
 
-    %\section{Nonlocal variables inside inner functions} 
+\listingsp{\home/scope_id_example.py}{def f6}{x inside g}{scope_id_example.py}
+
+
+
 
 
 
@@ -145,7 +217,8 @@ When the function has finished its execution, the reassigned \texttt{id} is kept
 \begin{IN}
     \begin{itemize}
         \item Reduce the scope of variables and other entities as much as possible to avoid name collision or incorrect use of global entities. 
-        A function for example should get all the information needed from local variables and input arguments, thereby ensuring its result does not depend on external pieces of code.
+        A function should get all the information needed from local variables and input arguments, 
+        thereby ensuring its result does not depend on external pieces of code.
         
         \item If a global variable is needed, then consider the use of \texttt{parameter} in Fortran so its value is protected from being changed throughout the code. 
         
@@ -153,37 +226,6 @@ When the function has finished its execution, the reassigned \texttt{id} is kept
     \end{itemize}    
 \end{IN}
 
-
-%In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  
-In the following code, the variable $y$ is a global variable of module \texttt{modB} and $x$ is a global variable of module \texttt{modA}.  
-Then, $y$ is seen inside function \texttt{functionB()} and $x$ is seen in \texttt{functionA}.
-All global variables of \texttt{modB} are seen outside by means of the sentence \texttt{use modB}. 
-Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}. 
-More specifically, this means that $x$ is also seen in \texttt{functionB()}. 
-\vspace{0.5cm} 
-
-
-
-\newpage  
-\section*{Fortran}
-
-\renewcommand{\home}{./Fortran/sources/Advanced_programming/scope} 
-
-\lstfor
-\listings{\home/modB.f90}{module modB}{end module}{modB.f90}
-
-\listings{\home/modA.f90}{module modA}{end module}{modA.f90}
-
-
-\newpage
-\section*{Python}
-
-\renewcommand{\home}{./Python/sources/Advanced_programming/scope} 
-
-\lstpython
-\listings{\home/modB.py}{from}{return}{modB.py}
-
-\listings{\home/modA.py}{x}{return}{modA.py}
 
 
 

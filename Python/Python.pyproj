@@ -61,7 +61,7 @@
     <Compile Include="sources\Advanced_programming\overloading\overloading.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sources\Advanced_programming\scope\global_variables.py">
+    <Compile Include="sources\Advanced_programming\scope\scope_id_example.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sources\Foundations\Algebra\Dynamic_allocation.py" />

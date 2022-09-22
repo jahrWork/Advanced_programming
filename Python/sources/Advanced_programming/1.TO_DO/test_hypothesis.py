@@ -4,11 +4,7 @@ from hypothesis.strategies import integers, floats
 from hypothesis.extra.numpy import arrays
 
 from hypothesis import settings, Verbosity 
-from numpy import float, int8
-from numpy import all, any
-from numpy import nan, inf
-from cmath import sqrt
-from numpy import  abs, sign 
+from numpy import float, int8, all, any, nan, inf, sqrt, abs, sign 
 from math import  isinf, isnan
 
 #from os_sys.float_info import epsilon

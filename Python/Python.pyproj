@@ -10,7 +10,7 @@
     <OutputPath>.</OutputPath>
     <Name>Python_project</Name>
     <RootNamespace>Python_project</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>Global|VisualStudio|Python39</InterpreterId>
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
@@ -168,17 +168,6 @@
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />
     <InterpreterReference Include="Global|VisualStudio|Python39" />
-  </ItemGroup>
-  <ItemGroup>
-    <Interpreter Include="..\..\..\EntornoPython\env\">
-      <Id>env</Id>
-      <Version>3.9</Version>
-      <Description>env (Python 3.9 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

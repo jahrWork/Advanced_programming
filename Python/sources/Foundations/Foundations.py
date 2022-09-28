@@ -8,6 +8,7 @@ from Stack_Overflow import StackOverflow_LargeArrays, StackOverflow_InfiniteRecu
 from Dynamic_allocation import Matrices_allocation
 from Integrals_derivatives import Integral_and_derivative_examples
 from Series_expansion import Taylor_expansion_examples
+from Fourier import Fourier_example
 from Read_files import Test_load_matrix
    
 def menu_Foundations(): 

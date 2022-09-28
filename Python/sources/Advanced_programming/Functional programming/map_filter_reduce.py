@@ -1,5 +1,5 @@
 
-from numpy import array, max, zeros, cos, sin, matmul, pi, argmin
+from numpy import array, max, zeros, cos, sin, matmul, pi, argmin, float64
 from numpy.linalg import norm  
 import random
 import matplotlib.pyplot as plt
@@ -38,7 +38,7 @@ def test_map_filter_reduce():
 
 def Rotation(P, theta): 
       
-      A = array( zeros([2,2]) )
+      A = zeros((2,2), dtype=float64)  
 
       A[0,:] = [ cos(theta), -sin(theta) ] 
       A[1,:] = [ sin(theta),  cos(theta) ] 
@@ -71,7 +71,7 @@ def test_filter_reduce():
 
      N = 10000
     
-     set = array( zeros( [N, 2]) )
+     set = zeros( (N, 2), dtype=float64)
      random.seed(1)
 
      for i in range(N):  

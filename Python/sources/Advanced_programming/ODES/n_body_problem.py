@@ -23,7 +23,7 @@ def Integrate_NBP():
      
  #   Write equations: Solution( body, coordinate, position-velocity )      
      Us  = reshape( U, (Nb, Nc, 2) )  
-     F = array( zeros(len(U)) )   
+     F =  zeros(len(U))   
      dUs = reshape( F, (Nb, Nc, 2) )  
      
      r = reshape( Us[:, :, 0], (Nb, Nc) )     # position and velocity 
@@ -70,7 +70,7 @@ def Integrate_NBP():
 #------------------------------------------------------------
 def Initial_positions_and_velocities( Nc, Nb ): 
  
-    U0 = array( zeros(2*Nc*Nb) )
+    U0 =  zeros(2*Nc*Nb)
     U1  = reshape( U0, (Nb, Nc, 2) )  
     r0 = reshape( U1[:, :, 0], (Nb, Nc) )     # position and velocity 
     v0 = reshape( U1[:, :, 1], (Nb, Nc) )
@@ -114,8 +114,8 @@ def test_without_pointers_Integrate_NBP():
  
    U = odeint(F_NBody, U0, Time)
 
-   x = array( zeros(N+1) )  
-   y = array( zeros(N+1) ) 
+   x = zeros(N+1)  
+   y = zeros(N+1) 
 
    for i in range(Nb):
      for n in range(N+1): 
@@ -132,7 +132,7 @@ def test_without_pointers_Integrate_NBP():
 #------------------------------------------------------------
 def without_pointers_Initial_positions_and_velocities( Nc, Nb ): 
  
-    U0 = array( zeros(2*Nc*Nb) )
+    U0 = zeros(2*Nc*Nb)
     U0 = [ 1,0, -1, 0, 0, 0.4, 0, -0.4 ]
 
     return U0  
@@ -145,8 +145,8 @@ def  without_pointers_F_NBody_problem(U, Nb, Nc):
      
      r, v = split(U,2) 
      
-     dvdt = array( zeros( int( len(U)/2 ) ) ) 
-     a = array( zeros(Nc) ) 
+     dvdt =  zeros( int( len(U)/2 ) ) 
+     a = zeros(Nc) 
      
      drdt = v 
 

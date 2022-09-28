@@ -10,7 +10,7 @@ def Matrices_allocation():
     S = sum( array([ trace(power(Vandermonde(M),2)) for M in range(1,6)])) 
     print("2. sum from M=1 to 5 of traces ( A_M **2 ) = ", S) 
     
-    Ak = array( zeros( [8,8,6] ) ) 
+    Ak = zeros( (8,8,6) ) 
     for  k in range(6):  
       Ak[:, :, k] = power( Vandermonde(8), k) 
     

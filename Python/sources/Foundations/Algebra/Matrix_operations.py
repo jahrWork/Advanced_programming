@@ -59,7 +59,7 @@ def my_matmul( A, B ):
     N, M = shape(A)
     L = shape(B)[1]     
 
-    C = array( zeros( [N,L] ) )
+    C = zeros( (N,L) )
    
 
     for i in range(N): 

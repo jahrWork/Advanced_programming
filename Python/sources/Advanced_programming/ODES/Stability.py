@@ -8,8 +8,8 @@ def System_matrix( F, U0, t ):
    
      eps = 1e-6 
      N = len(U0) 
-     A = array( zeros( [N, N] ) )
-     delta = array( zeros(N) )
+     A =  zeros( (N, N), dtype=float64)
+     delta = zeros(N) 
      
      for j in range(N):  
          

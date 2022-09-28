@@ -13,7 +13,7 @@ def complex_oscillator(Z, t):
 def simulation(U0, Nv, F):  
 
      N = 100
-     U = array( zeros( [N+1, Nv], dtype=type(U0) ) )
+     U = zeros( (N+1, Nv), dtype=type(U0) ) 
      time = linspace(0, 10, N+1)
      U[0, :] =  U0
     

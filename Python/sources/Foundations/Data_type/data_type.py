@@ -153,12 +153,12 @@ def iterators():
 def input_Complex():
   
   # read real and imaginary parts using function split()
-  x, y = [float(i) for i  in split( "\s", input("Enter x, y: ") ) ] 
+  x, y = [float(i) for i  in split( "\s", input("Enter real and imaginary part x, y: ") ) ] 
   print("Values x, y: ", x, y) 
   z = complex(x, y)
 
   # read real and imaginary parts using objects and .split() method
-  x, y =  input("Enter x, y: ").split()
+  x, y =  input("Enter real and imaginary part x, y: ").split()
   x, y = [float(x), float(y)]  
   z = complex(x, y)
   

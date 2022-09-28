@@ -13,7 +13,7 @@ def StackOverflow_LargeArrays():
 
 def StackOverflow_size( n ):  
 
-    R = array( zeros( [n,n,n] ) ) 
+    R = zeros( (n,n,n) ) 
     
     return R
 
@@ -26,7 +26,13 @@ def StackOverflow_size( n ):
 def StackOverflow_InfiniteRecursion():  
 
     k = 3
-    wrong_power( random.rand(100,100), k )
+    try: 
+       wrong_power( random.rand(100,100), k )
+    except: 
+       print(40*"_")
+       print("Stack overflow due to infinite recursion")
+       print(40*"_")
+
     
 
 def wrong_power(A, k):    

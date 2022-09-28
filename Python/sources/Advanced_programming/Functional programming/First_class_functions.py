@@ -1,11 +1,12 @@
-   
+from math import sqrt   
+
 def function_examples():  
 
       print( "First class functions. Integrals and moments   ") 
      
     # Integral of f(x) from a to b 
       R = Integral(h, 0., 1.) 
-      print("\n  Integral of h(x) from 0 to 1  =", R )
+      print("\n Integral of h(x) from 0 to 1  =", R )
     
     # Integral of x**n f(x) from a to b based on Integral 
       R = Moment(h, 3, 0., 1.) 

@@ -9,8 +9,8 @@ def Error_Cauchy_Problem( Time_Domain, Differential_operator,
           
        N = len(Time_Domain)-1;  Nv = len(U0) 
        t1 = Time_Domain
-       t2 = array( zeros(2*N+1) )
-       Error = array ( zeros( (N+1, Nv) ) )
+       t2 = zeros(2*N+1)
+       Error = zeros(N+1, Nv)
        
        for i in range(N):  
            t2[2*i]   = t1[i] 
@@ -32,8 +32,8 @@ def Error_Cauchy_Problem( Time_Domain, Differential_operator,
 def Temporal_convergence_rate( Time_Domain, Differential_operator,
                                U0, Scheme, m ): 
      
-      log_E = array( zeros(m) )
-      log_N = array( zeros(m) )
+      log_E = zeros(m) 
+      log_N = zeros(m)
       N = len(Time_Domain)-1
       t1 = Time_Domain
       U1 = Cauchy_problem( Differential_operator, t1, U0, Scheme) 

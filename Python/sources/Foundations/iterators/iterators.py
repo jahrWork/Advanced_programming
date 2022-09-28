@@ -13,8 +13,8 @@ for v, w in zip(V, W):
 
 # numpy arrays  
 N = 10 
-V = array( zeros(N+1) ) 
-W = array( zeros(N+1) ) 
+V = zeros(N+1) 
+W = zeros(N+1) 
 
 V[:] = 2. 
 W[:] = 4. 

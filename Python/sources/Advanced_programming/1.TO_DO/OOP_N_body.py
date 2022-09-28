@@ -13,7 +13,7 @@ class galaxy:
 
      def forces(self): 
 
-        a = array( zeros(3) )
+        a =  zeros(3)
 
         for i in self.planets: 
             a[:] = 0 

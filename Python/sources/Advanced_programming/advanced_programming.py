@@ -3,7 +3,7 @@ from polymorphism import          polymorphism_example
 from polymorphic_odes import      complex_ODES
 from vectors_and_matrices import  dot_product_examples, matmul_examples, greatest_difference
 from First_class_functions import function_examples
-from map_filter_reduce import     test_map_filter_reduce
+from map_filter_reduce import     test_map_filter_reduce, test_rotation, test_filter_reduce
 from functions import             derivative_example
 from mapping import               mapping_example
 from n_body_problem import        Integrate_NBP
@@ -58,6 +58,8 @@ def menu_advanced_programming():
      elif option == 5:  
          test_map_filter_reduce()
          mapping_example()
+         test_rotation()
+         test_filter_reduce()
 
      elif option == 6: 
           pointer_examples() 

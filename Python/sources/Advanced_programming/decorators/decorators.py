@@ -44,6 +44,7 @@ def profiling(f):
         r = f(*args, **kwargs)
         current, peak = tracemalloc.get_traced_memory()
         finish_time = perf_counter()
+        print("_"*60)
         print("Function: " + f.__name__)
         print("Memory usage: ", current/10**6, "MB") 
         print("Peak memory usage: ", peak/10**6, "MB") 
@@ -77,13 +78,13 @@ def decorator_example():
     print( "f(x) =", f(3))
 
     @simple_decorator 
-    def f(x): 
+    def fd(x): 
       return x**2
 
-    print( "decorated f(x) =", f(3), "\n")
+    print( "decorated fd(x) =", fd(3), "\n")
 
     g = simple_decorator(f)
-    print( "decorated f(x) =", f(4))
+    print( "decorated f(x) =", g(4))
    
 
     @debugging

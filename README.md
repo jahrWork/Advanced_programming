@@ -2,4 +2,4 @@
 
 Hierarchical structure of modules written in python
 
-![](/doc/Figures/Advanced.png)
+![](/doc/Figures/advanced.png)

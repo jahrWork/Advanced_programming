@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5ca4ffdf-626b-4d0e-b42d-d7a1537ef971</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sources\Advanced_programming\speeding_up\series.py</StartupFile>
+    <StartupFile>sources\Advanced_programming\polymorphism\polymorphism.py</StartupFile>
     <SearchPath>sources\Foundations;sources\Foundations\Roots;sources\Foundations\Calculus;sources\Foundations\Calculus\Examples;sources\Foundations\Algebra;sources\Foundations\Read_files;sources\Advanced_programming;sources\Advanced_programming\scope;sources\Advanced_programming\polymorphism;sources\Advanced_programming\Functional programming;sources\Advanced_programming\ODES;sources\Foundations\Data_type;sources\Advanced_programming\pointers;sources\Advanced_programming\decorators;sources\Advanced_programming\Mixing languages\Fortran_to_Python;sources\Advanced_programming\Mixing languages\python_to_C</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>

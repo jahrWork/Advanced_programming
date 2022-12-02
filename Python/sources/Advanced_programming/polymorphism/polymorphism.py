@@ -8,7 +8,7 @@ class polygon():
 
         return sum(sides); 
 
-class square(polygon):   #inheritance from figure 
+class square(polygon):   #inheritance from polygon
      S = 4
      def __init__(self, L):
       super(polygon,self).__init__()
@@ -47,5 +47,7 @@ def polymorphism_example():
    print(" " )
 
 
+if __name__ == "__main__": 
 
+    polymorphism_example()
 

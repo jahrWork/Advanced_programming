@@ -17,28 +17,19 @@ def Stability_Region(Scheme, N, x0, xf, y0, yf):
     return rho, x, y  
 
 
-def test_RK4(): 
+def test_Stability_regions(): 
 
-    rho, x, y  = Stability_Region( RK4, 100, -4, 2, -4, 4)
+    schemes = [RK4, Inverse_Euler] 
 
-    plt.contour( x, y, transpose(rho), linspace(0, 1, 11) )
-    plt.axis('equal')
-    plt.grid()
-    plt.show()
-
-def test_Inverse_Euler(): 
-
-    
-    rho, x, y  = Stability_Region( Inverse_Euler, 100, -4, 4, -4, 4) 
-
-    plt.contour( x, y, transpose(rho), linspace(0, 1, 11) )
-    plt.axis('equal')
-    plt.grid()
-    plt.show()
+    for scheme in schemes: 
+      rho, x, y  = Stability_Region(scheme, 100, -4, 2, -4, 4)
+      plt.contour( x, y, transpose(rho), linspace(0, 1, 11) )
+      plt.axis('equal')
+      plt.grid()
+      plt.show()
 
 
     
     
 if __name__ == '__main__':  
-    test_RK4()
-    test_Inverse_Euler()
+    test_Stability_regions()

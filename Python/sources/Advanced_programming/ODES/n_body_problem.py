@@ -7,19 +7,10 @@ import matplotlib.pyplot as plt
 from Cauchy_problem import Cauchy_problem
 from Temporal_schemes import RK4
 
-
- 
-#------------------------------------------------------------------
-# Orbits of N bodies 
-#      U : state vector
-#      r, v: position and velocity points to U     
-#------------------------------------------------------------------    
-def Integrate_NBP():  
-    
-   #-----------------------------------------------------------------
-   #  dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
-   #----------------------------------------------------------------- 
-   def F_NBody(U, t): 
+#-----------------------------------------------------------------
+#  dvi/dt = - G m sum_j (ri- rj) / | ri -rj |**3, dridt = vi 
+#----------------------------------------------------------------- 
+def F_NBody(U, t, Nb, Nc): 
      
  #   Write equations: Solution( body, coordinate, position-velocity )      
      Us  = reshape( U, (Nb, Nc, 2) )  
@@ -43,6 +34,17 @@ def Integrate_NBP():
     
      return F
 
+ 
+#------------------------------------------------------------------
+# Orbits of N bodies 
+#      U : state vector
+#      r, v: position and velocity points to U     
+#------------------------------------------------------------------    
+def Integrate_NBP():  
+    
+   def F(U,t): 
+       return F_NBody(U, t, Nb, Nc) 
+
    N =  1000    # time steps 
    Nb = 4      # bodies 
    Nc = 3      # coordinates 
@@ -54,7 +56,7 @@ def Integrate_NBP():
    U0 = Initial_positions_and_velocities( Nc, Nb )
  
   #U = odeint(F_NBody, U0, Time)
-   U = Cauchy_problem(F_NBody, Time, U0, RK4) 
+   U = Cauchy_problem(F, Time, U0, RK4) 
 
    Us  = reshape( U, (N+1, Nb, Nc, 2) ) 
    r   = reshape( Us[:, :, :, 0], (N+1, Nb, Nc) ) 

@@ -41,3 +41,7 @@ def complex_ODES():
 
    # state vector to integrate is polymorphic 
 
+
+if __name__ == "__main__": 
+
+    complex_ODES() 

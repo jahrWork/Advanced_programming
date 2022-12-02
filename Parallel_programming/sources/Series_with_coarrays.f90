@@ -5,7 +5,10 @@
 !     
 !  Author: Nov 2021, juanantonio.hernandez@upm.es 
 !**************************************************    
-program Series_with_coarrays
+module Series_with_coarrays
+
+contains 
+subroutine example_Series_with_coarrays
 
 implicit none  
 
@@ -13,7 +16,7 @@ implicit none
   integer :: image, j, Ni  
 
 ! S is a coarray of dimension  determined at runtime
-  real (kind=8) :: S[*]  
+  real (kind=8), save  :: S[*]  
   
 ! SN is the total sum of every image   
   real (kind=8) :: SN
@@ -60,4 +63,5 @@ implicit none
      
    end if
 
-end program 
+end subroutine    
+end module

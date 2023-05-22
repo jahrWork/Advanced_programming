@@ -3,7 +3,57 @@ module matrix_multiplication
     implicit none 
     
     
-contains 
+    contains 
+    
+   
+subroutine test_matmul  
+        
+integer, parameter :: N = 5000
+integer, parameter :: M =  5000
+integer, parameter ::  TIMES = 1000
+integer :: i, j, k 
+real  :: A(N, M), x(N), b(M)
+
+    
+    real :: t1, t2, s  
+  
+    do i=1, N
+            do j=1, M 
+               A(i,j)   = (i-1) * (j-1)  / real( N * M) 
+            end do 
+            x(i) = (i-1) * (i-1)  / real( N * M ) 
+    end do  
+    
+    
+    call CPU_TIME(t1)
+    do k=0, TIMES 
+        b =  matmul(A, x) 
+        write(*,*) k 
+    end do 
+    call CPU_TIME(t2)
+    write(*,*) " CPU = ", t2-t1 
+    write(*,*) "b_1 = ", b(1) 
+    write(*,*) "b_M = ", b(M) 
+    
+    call CPU_TIME(t1)
+    do k=0, TIMES 
+        do i=1, N
+            s = 0 
+             do j=1, M 
+                s  = s +  x(j) * A(j,i)  
+            end do 
+            b(i) = s 
+        end do  
+    end do 
+    call CPU_TIME(t2)
+    write(*,*) " CPU = ", t2-t1 
+    write(*,*) "b_1 = ", b(1) 
+    write(*,*) "b_M = ", b(M) 
+        
+end subroutine 
+        
+    
+    
     
 !function  parallel_matmul(A, V) result(B) 
 !      real, intent(in) :: A(:,:), V(:) 

@@ -59,19 +59,21 @@ int main() {
     // Perform A-x multiplication TIMES times and measure CPU time
     start = clock();
     for (k = 0; k < TIMES; k++) {
+
         for (i = 0; i < N; i++)
         {
-            s = 0.0;
+            //s = 0.0;
+            b[i] = 0.0;
             for (j = 0; j < M; j++)
             {
-                s += A[i][j] * x[j];
+                b[i] += A[i][j] * x[j];
                 //   s = s + k * A[i][j] * x[j];
                  //  s = s +  x[j] * x[j];
             }
-            b[i] = s;
+            // = s;
             //   printf("%f10.8 ", s);
         }
-        printf("%d\n ", k);
+       printf("C++ %d\n ", k);
     }
 
     end = clock();

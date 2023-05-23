@@ -19,7 +19,7 @@ for i in range(N):
 t1 = time.time()
 for k in range(TIMES):    
         b =  matmul(A, x) 
-        print(k) 
+        #print(k) 
 t2 = time.time()   
 
 print(" CPU = ", t2-t1 )  

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption>localhost</connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1684938629</timestamp>
+  <hostname>DESKTOP-SPJG8D0</hostname>
+  <os>windows</os>
+  <product>Intel® Advisor 2022.0</product>
+  <buildNumber type="s32_t">611554</buildNumber>
+  <logicalCPUCount type="s32_t">64</logicalCPUCount>
+  <physicalCoreCount type="s32_t">32</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">3593000000</CPUFrequency>
+  <CPUFamily type="s32_t">25</CPUFamily>
+  <CPUModel type="s32_t">8</CPUModel>
+  <CPUStepping type="s32_t">2</CPUStepping>
+  <CPUBrandName>AMD Ryzen Threadripper PRO 5975WX 32-Cores     </CPUBrandName>
+  <isa>avx2</isa>
+ </rdmgr>
+ <contextValues type="bag"/>
+</root>

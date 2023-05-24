@@ -1,12 +1,25 @@
 !  
     program tests_matmul
 
+    use ISO_C_BINDING
+    use ISO_FORTRAN_ENV
+    
+    use kernel32, only : GetSystemInfo
+    use dfwinty, only : T_SYSTEM_INFO
+   
+   
+    
     implicit none
-  
+   
+   
    
 call test_matmul 
  
-contains 
+    contains 
+    
+
+   
+    
     
 subroutine test_matmul  
         
@@ -14,14 +27,16 @@ integer, parameter :: N = 5000
 integer, parameter :: M =  5000
 integer, parameter ::  TIMES = 1000
 integer :: i, j, k, l, Nl, l1, l2, p    
-real, target  :: A(N, M), AT(M,N), x(N), b(M), v(M), s(N)  
-real, pointer :: pA(:) 
+real :: A(N, M), x(N), b(M)
 
+integer, parameter :: bitness = bit_size(0_C_INTPTR_T)
+type(T_SYSTEM_INFO)  :: si
+   
+integer*8 :: N_operations
     
-    real :: t1, t2
-    !real ::  s  
+real :: t1, t2
   
-    pA(1:N*M) => A(1:N, 1:M) 
+    
     
     
     
@@ -89,10 +104,25 @@ real, pointer :: pA(:)
     !
     !stop 
     
+   
+   
+   
+   
+   write(*,'(*(g0))') 'This is a ',bitness,'-bit system.'
+   write(*,'(*(g0))') COMPILER_VERSION()
+   !call system('SystemInfo')
+   !write(*,*) "system architecture:"
+   !call system("wmic OS get OSArchitecture")
+   !call GetSystemInfo(si)
+   !write(6, '(A, I2)') "The number of processors  is ", &
+   !                         si%dwNumberOfProcessors
+    
+   !call system("dxdiag")
+    
     call CPU_TIME(t1)
     do k=0, TIMES  
             b = matmul(A, x) 
-            write(*,*) k
+           ! write(*,*) k
     end do 
     call CPU_TIME(t2)
     write(*,*) " CPU = ", t2-t1 
@@ -105,19 +135,20 @@ real, pointer :: pA(:)
         
         b = 0 
         do j=1, M
-            
           do i=1, N
               b(i) = b(i) + A(i,j) * x(j)
           end do 
-          
         end do 
         
-        write(*,*) k
+     !   write(*,*) k
     end do 
     call CPU_TIME(t2)
     write(*,*) " CPU = ", t2-t1 
     write(*,*) "b_1 = ", b(1) 
     write(*,*) "b_M = ", b(M) 
+    N_operations = 2 * N * M * real(TIMES)
+    write(*,*) "N_operations =  ", N_operations
+    write(*,*) "GFLOPS =  ", N_operations / ( 1e6*(t2-t1) )
     
     
         

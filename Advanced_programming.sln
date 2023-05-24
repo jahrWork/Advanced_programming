@@ -18,7 +18,7 @@ Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "matmul", "matmul\matmul.vfp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C_matmul", "C_matmul\C_matmul.vcxproj", "{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_matmul", "Python_matmul\Python_matmul.pyproj", "{D994DC7D-AE7D-41A1-B237-B8AD47B29F16}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "matmul_Python", "Python_matmul\matmul_Python.pyproj", "{D994DC7D-AE7D-41A1-B237-B8AD47B29F16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,7 +65,8 @@ Global
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Debug|x64.Build.0 = Debug|x64
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Debug|x86.ActiveCfg = Debug|Win32
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Debug|x86.Build.0 = Debug|Win32
-		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|Any CPU.ActiveCfg = Release|x64
+		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|Any CPU.Build.0 = Release|x64
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|x64.ActiveCfg = Release|x64
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|x64.Build.0 = Release|x64
 		{1DDF76A4-0913-4764-B12E-0421A59883CD}.Release|x86.ActiveCfg = Release|Win32
@@ -75,7 +76,8 @@ Global
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Debug|x64.Build.0 = Debug|x64
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Debug|x86.ActiveCfg = Debug|Win32
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Debug|x86.Build.0 = Debug|Win32
-		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|Any CPU.ActiveCfg = Release|Win32
+		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|Any CPU.ActiveCfg = Release|x64
+		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|Any CPU.Build.0 = Release|x64
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|x64.ActiveCfg = Release|x64
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|x64.Build.0 = Release|x64
 		{2B3F98FD-9B45-41B4-8DF3-13C19F9FF486}.Release|x86.ActiveCfg = Release|Win32

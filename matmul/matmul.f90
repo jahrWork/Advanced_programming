@@ -3,126 +3,48 @@
 
     use ISO_C_BINDING
     use ISO_FORTRAN_ENV
-    
-    use kernel32, only : GetSystemInfo
-    use dfwinty, only : T_SYSTEM_INFO
-   
-   
-    
+  
     implicit none
-   
    
    
 call test_matmul 
  
-    contains 
+contains 
     
-
-   
-    
+       
     
 subroutine test_matmul  
         
 integer, parameter :: N = 5000
-integer, parameter :: M =  5000
+integer, parameter :: M = 5000
 integer, parameter ::  TIMES = 1000
 integer :: i, j, k, l, Nl, l1, l2, p    
 real :: A(N, M), x(N), b(M)
 
 integer, parameter :: bitness = bit_size(0_C_INTPTR_T)
-type(T_SYSTEM_INFO)  :: si
+!type(T_SYSTEM_INFO)  :: si
    
 integer*8 :: N_operations
-    
 real :: t1, t2
   
     
-    
-    
-    
-    do i=1, N
+   
+   
+   write(*,'(*(g0))') 'This is a ',bitness,'-bit system.'
+   write(*,'(*(g0))') COMPILER_VERSION()
+ 
+   
+   do i=1, N
             do j=1, M 
                A(i,j)   = (i-1) * (j+1)  / real( N * M) 
             end do 
             x(i) = (i-1) * (i-1)  / real( N * M ) 
     end do  
     
-    !
-    !call CPU_TIME(t1)
-    !do k=0, TIMES 
-    !    b =  matmul(A, x) 
-    !end do 
-    !call CPU_TIME(t2)
-    !write(*,*) " matmul CPU = ", t2-t1 
-    !write(*,*) "b_1 = ", b(1) 
-    !write(*,*) "b_M = ", b(M) 
-    !
-    !call CPU_TIME(t1)
-    !
-    !call CPU_TIME(t1)
-    !do k=0, TIMES 
-    !    b(1:N/2) =  matmul(A(1:N/2, :),  x) 
-    !    b(N/2+1:N) =  matmul(A(N/2+1:N, :),  x) 
-    !end do 
-    !call CPU_TIME(t2)
-    !write(*,*) " 2 matmul CPU = ", t2-t1 
-    !write(*,*) "b_1 = ", b(1) 
-    !write(*,*) "b_M = ", b(M) 
-    !
-    !call CPU_TIME(t1)
-    !Nl = 20 
-    !p = N / Nl 
-    !do k=0, TIMES
-    !     l1 = 1
-    !     l2 = p 
-    !    do l=1, Nl 
-    !    !  write(*,*) l, l1, l2    
-    !      b(l1:l2) =  matmul(A(l1:l2, :),  x) 
-    !      l1 = l1 + p
-    !      l2 = l1 + p - 1 
-    !    end do 
-    !end do 
-    !call CPU_TIME(t2)
-    !write(*,*) " Nl matmul CPU = ", t2-t1 
-    !write(*,*) "b_1 = ", b(1) 
-    !write(*,*) "b_M = ", b(M) 
-    !
-    !stop 
-    
-    !call CPU_TIME(t1)
-    !Nl = 10 
-    !do k=0, TIMES 
-    !    do i=1, N
-    !      b(i) =  dot_product(A(i, :),  x) 
-    !    end do 
-    !    write(*,*) k
-    !end do 
-    !call CPU_TIME(t2)
-    !write(*,*) " dot_product CPU = ", t2-t1 
-    !write(*,*) "b_1 = ", b(1) 
-    !write(*,*) "b_M = ", b(M) 
-    !
-    !stop 
-    
-   
-   
-   
-   
-   write(*,'(*(g0))') 'This is a ',bitness,'-bit system.'
-   write(*,'(*(g0))') COMPILER_VERSION()
-   !call system('SystemInfo')
-   !write(*,*) "system architecture:"
-   !call system("wmic OS get OSArchitecture")
-   !call GetSystemInfo(si)
-   !write(6, '(A, I2)') "The number of processors  is ", &
-   !                         si%dwNumberOfProcessors
-    
-   !call system("dxdiag")
-    
     call CPU_TIME(t1)
     do k=0, TIMES  
             b = matmul(A, x) 
-           ! write(*,*) k
+      !     write(*,*) k
     end do 
     call CPU_TIME(t2)
     write(*,*) " CPU = ", t2-t1 
@@ -140,17 +62,26 @@ real :: t1, t2
           end do 
         end do 
         
-     !   write(*,*) k
+    !    write(*,*) k
     end do 
     call CPU_TIME(t2)
     write(*,*) " CPU = ", t2-t1 
     write(*,*) "b_1 = ", b(1) 
     write(*,*) "b_M = ", b(M) 
+    
     N_operations = 2 * N * M * real(TIMES)
-    write(*,*) "N_operations =  ", N_operations
-    write(*,*) "GFLOPS =  ", N_operations / ( 1e6*(t2-t1) )
+    
+    write(*,*) "----Memory speed ----"
+    call system("wmic memorychip get devicelocator, speed, capacity")
+    write(*,*) "----CPU speed ----"
+    call system("wmic cpu get name, maxclockspeed, currentclockspeed")
+   
+    write(*,*) "----------Theoretical CPU time ---------" 
+    write(*,*) "CPU_time = (N_operations/16)/ 4GhZ * 4cycles,vectorization 512 bits"
+    write(*,*) "CPU_time (seconds)=  " , N_operations / ( 4e9*16  )  * 4 
     
     
+    read(*,*)
         
 end subroutine
 

@@ -1,1634 +1,1970 @@
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t219p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t219p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t219p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t219p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t229p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t229p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t229p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t229p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 112, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 34, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 122, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 44, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 127, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 49, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 133, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 55, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 145, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 67, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 74, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 76, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 79, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 80, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 84, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 112, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 34, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 122, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 44, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 127, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 49, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 133, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 55, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 145, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 67, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 74, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 76, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 79, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 80, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 84, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 75, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          ''''
+  - Callee:          SYSTEM.t219p.t3v
+  - String:          ''' inlined into '''
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          TESTS_MATMUL_ip_TEST_MATMUL
+  - String:          ':'
+  - Line:            '59'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 77, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          ''''
+  - Callee:          SYSTEM.t229p.t3v
+  - String:          ''' inlined into '''
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          TESTS_MATMUL_ip_TEST_MATMUL
+  - String:          ':'
+  - Line:            '61'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_fpe_
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_reentrancy
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_fpe_
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_reentrancy
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            TooCostly
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 16, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 10, Column: 0 }
 Function:        MAIN__
 Args:
   - String:          ''''
   - Callee:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ''' not inlined into '''
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ''' because too costly to inline '
   - String:          '(cost='
-  - Cost:            '625'
+  - Cost:            '750'
   - String:          ', threshold='
-  - Threshold:       '625'
+  - Threshold:       '750'
   - String:          ')'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 112, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 34, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 122, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 44, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 127, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 49, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 133, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 55, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 145, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 67, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 74, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
-  - Callee:          for_write_seq_lis_xmit
+  - Callee:          SYSTEM
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 76, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 79, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 80, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 84, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 111, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 33, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 112, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 34, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 122, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 44, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 127, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 49, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 133, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 55, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 145, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 67, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_cpusec
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 74, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 150, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
-  - Callee:          for_write_seq_lis_xmit
+  - Callee:          SYSTEM
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 76, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 151, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 0, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 79, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 80, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 81, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 84, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          TESTS_MATMUL_ip_TEST_MATMUL
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Passed
 Pass:            licm
 Name:            InstSunk
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 45, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 39, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'sinking '
   - Inst:            zext
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 45, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 39, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 45, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 39, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            add
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 45, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 39, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 45, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 39, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            zext
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 45, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 39, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            zext
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1636,14 +1972,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 127, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 49, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1651,14 +1987,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1666,14 +2002,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1681,33 +2017,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 145, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1715,18 +2032,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 67, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1734,18 +2051,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 147, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1753,78 +2070,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 148, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 69, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 127, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1832,18 +2089,78 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 145, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 70, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 49, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1851,18 +2168,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 67, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1870,18 +2187,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 147, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1889,96 +2206,115 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 148, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 69, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 70, Column: 0 }
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_fpe_
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_reentrancy
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_fpe_
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_set_reentrancy
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            TooCostly
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 16, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 10, Column: 0 }
 Function:        MAIN__
 Args:
   - String:          ''''
   - Callee:          TESTS_MATMUL_ip_TEST_MATMUL
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 24, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 16, Column: 0 }
   - String:          ''' not inlined into '''
   - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                        Line: 2, Column: 0 }
   - String:          ''' because too costly to inline '
   - String:          '(cost='
-  - Cost:            '625'
+  - Cost:            '750'
   - String:          ', threshold='
-  - Threshold:       '625'
+  - Threshold:       '750'
   - String:          ')'
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -1986,14 +2322,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2001,14 +2337,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 127, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 49, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2016,14 +2352,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2031,14 +2367,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2046,14 +2382,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2061,14 +2397,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2076,18 +2412,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 145, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 67, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2095,18 +2431,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2114,18 +2450,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 147, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 69, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2133,18 +2469,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 148, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 70, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2152,14 +2488,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2167,14 +2503,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 127, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 49, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 128, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 50, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2182,14 +2518,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 122, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 44, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 129, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 51, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2197,14 +2533,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 130, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 52, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2212,14 +2548,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2227,33 +2563,14 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
-Function:        TESTS_MATMUL_ip_TEST_MATMUL
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 145, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 146, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2261,18 +2578,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 128, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 133, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 67, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 147, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 68, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2280,18 +2597,18 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 129, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 50, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 147, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 55, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 148, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 69, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'load of type '
@@ -2299,77 +2616,96 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 130, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 51, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 148, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 69, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 70, Column: 0 }
+Function:        TESTS_MATMUL_ip_TEST_MATMUL
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 70, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            insertelement
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            shufflevector
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 124, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 46, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            bitcast
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 124, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 46, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            insertelement
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 139, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 61, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            shufflevector
-    DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                       Line: 139, Column: 0 }
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                       Line: 61, Column: 0 }
 ...
 --- !Analysis
 Pass:            prologepilog
 Name:            StackSize
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
@@ -2392,7 +2728,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionCount
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
@@ -2446,8 +2782,8 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 43, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 37, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - NumVRCopies:     '1'
@@ -2459,24 +2795,24 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            SpillReloadCopies
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 24, Column: 1 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 16, Column: 1 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
-  - NumVRCopies:     '42'
+  - NumVRCopies:     '49'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '3.388500e+03'
+  - TotalCopiesCost: '3.395500e+03'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
 --- !Analysis
 Pass:            prologepilog
 Name:            StackSize
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 24, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 16, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
-  - NumStackBytes:   '20616'
+  - NumStackBytes:   '20664'
   - String:          ' stack bytes in function'
 ...
 --- !Analysis
@@ -2489,7 +2825,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '25'
+  - INST_:           '80'
   - String:          "\n"
 ...
 --- !Analysis
@@ -2498,7 +2834,7 @@ Name:            InstructionMix
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      bb2
+  - BasicBlock:      bb4
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2508,12 +2844,12 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      bb6
+  - BasicBlock:      bb8
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2523,12 +2859,12 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      bb9
+  - BasicBlock:      bb11
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2538,22 +2874,22 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      bb5
+  - BasicBlock:      bb7
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '63'
+  - INST_:           '6'
   - String:          "\n"
 ...
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2568,7 +2904,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2583,7 +2919,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2598,7 +2934,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2613,7 +2949,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2628,7 +2964,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2643,7 +2979,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2658,7 +2994,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2673,7 +3009,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2688,7 +3024,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2703,7 +3039,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2718,7 +3054,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
                    Line: 0, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
@@ -2727,16 +3063,16 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '110'
+  - INST_:           '150'
   - String:          "\n"
 ...
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionCount
-DebugLoc:        { File: 'C:\Users\Juan\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
-                   Line: 24, Column: 0 }
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\matmul.f90', 
+                   Line: 16, Column: 0 }
 Function:        TESTS_MATMUL_ip_TEST_MATMUL
 Args:
-  - NumInstructions: '340'
+  - NumInstructions: '378'
   - String:          ' instructions in function'
 ...

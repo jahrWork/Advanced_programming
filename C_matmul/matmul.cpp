@@ -117,7 +117,7 @@ int main() {
             }
            
         }
-       printf("C++ %d\n ", k);
+      // printf("C++ %d\n ", k);
     }
 
     end = clock();

@@ -1,14 +1,14 @@
 
-from numpy import zeros, matmul 
+from numpy import zeros, matmul, float32, float16
 import time 
 
 
 N = 5000
 M =  5000
 TIMES = 1000
-A = zeros( [N,M]  )
-x = zeros( [N]  )
-b = zeros( [M]  )
+A = zeros( [N,M],   dtype = float32 )  
+x = zeros( [N],     dtype = float32 )
+b = zeros( [M],     dtype = float32 )
 
 for i in range(N):    
      for j in range(M): 

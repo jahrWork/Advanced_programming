@@ -4,12 +4,13 @@ Program parallel_examples
     use Series_with_coarrays
     implicit none 
     
+     call example_Series_with_coarrays
+    stop
     
     call test_matmul
     stop 
     
-    call example_Series_with_coarrays
-    stop 
+    
     
     
     call example_parallel_matmul

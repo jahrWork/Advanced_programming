@@ -1,0 +1,973 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t128p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t128p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t128p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t128p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t138p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t138p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        SYSTEM.t138p.t3v
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          SYSTEM.t138p.t3v
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 19, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 21, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 22, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 28, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 30, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 33, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 34, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 36, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 19, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 21, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 22, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 28, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 30, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 33, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 34, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 36, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 29, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - String:          ''''
+  - Callee:          SYSTEM.t128p.t3v
+  - String:          ''' inlined into '''
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - String:          ':'
+  - Line:            '20'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 31, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - String:          ''''
+  - Callee:          SYSTEM.t138p.t3v
+  - String:          ''' inlined into '''
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - String:          ':'
+  - Line:            '22'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 19, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 21, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 22, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 28, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 30, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 33, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 34, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 36, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 19, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 20, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 21, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 22, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 28, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 30, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 0, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          SYSTEM
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 33, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 34, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 35, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 36, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+Function:        ENVIRONMENT.
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        ENVIRONMENT.
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      alloca_0
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+Function:        ENVIRONMENT.
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 9, Column: 1 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - NumVRCopies:     '26'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.600000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 9, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - NumStackBytes:   '456'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 9, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      alloca_1
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '191'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\environment.f90', 
+                   Line: 9, Column: 0 }
+Function:        ENVIRONMENT_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - NumInstructions: '191'
+  - String:          ' instructions in function'
+...

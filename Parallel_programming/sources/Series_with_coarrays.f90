@@ -7,10 +7,12 @@
 !**************************************************    
 module Series_with_coarrays
 
-contains 
-subroutine example_Series_with_coarrays
+  implicit none  
 
-implicit none  
+
+contains 
+    
+subroutine example_Series_with_coarrays
 
 ! this image and number of images 
   integer :: image, j, Ni  
@@ -20,13 +22,14 @@ implicit none
   
 ! SN is the total sum of every image   
   real (kind=8) :: SN
-  real (kind=8) :: t0, tf, rate, PI = 4*atan(1.0)
+  real (kind=8) :: PI = 4*atan(1.0)
+  integer :: it1, it2, rate 
   
 ! N is the total number of terms 
 ! Nt is the total number of terms of each image   
   integer(kind=8) :: i,  N , Nt 
 
-   call cpu_time(t0) 
+   call system_clock(it1)
    image = this_image()
    Ni = num_images()
    
@@ -53,8 +56,10 @@ implicit none
        SN = SN + S[j] 
      end do
      
-     call cpu_time(tf)
-     write (*,*) "CPU time:", tf-t0
+     call system_clock(count_rate=rate)
+     call system_clock(it2)
+     write(*,*) " CPU_time = ", real(it2-it1)/rate 
+     
      write (*,*) "Number of images:", Ni
      write (*,*) "Number of terms =", N
      write (*,*) "Calculated  SN=", SN
@@ -64,4 +69,5 @@ implicit none
    end if
 
 end subroutine    
+
 end module

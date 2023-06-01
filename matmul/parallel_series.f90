@@ -75,6 +75,7 @@ subroutine  final_cpu_time(test, it1, S_t, N)
        integer(kind=8), intent(in) :: N 
        
         real (kind=8) ::  Error, PI = 4*atan(1d0)
+   
   
     integer  :: it2, rate 
     
@@ -91,6 +92,7 @@ subroutine  final_cpu_time(test, it1, S_t, N)
     write (*,*) "Error bound =         ", 1d0/N  
     write(*,*) 
     
+       
 end subroutine     
     
     

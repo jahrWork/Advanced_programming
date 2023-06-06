@@ -65,6 +65,7 @@ subroutine sum_series_single_core( N )
    
    call final_cpu_time("sum series single core", it1, S_t, N)
   
+   
  
 end subroutine
  

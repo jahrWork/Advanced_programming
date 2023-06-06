@@ -2,10 +2,10 @@
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 93, Column: 0 }
+                   Line: 95, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -16,7 +16,21 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 96, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
@@ -30,94 +44,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -142,10 +72,80 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 93, Column: 0 }
+                   Line: 100, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 103, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -157,6 +157,34 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 96, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
@@ -170,7 +198,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
@@ -184,80 +212,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
+                   Line: 100, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -269,6 +227,76 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 103, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
@@ -285,7 +313,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 28, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -299,7 +327,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 36, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -341,7 +369,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 28, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -355,7 +383,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 36, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -498,10 +526,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 93, Column: 0 }
+                   Line: 95, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -512,7 +540,21 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 96, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
@@ -526,94 +568,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -638,10 +596,80 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 93, Column: 0 }
+                   Line: 100, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 103, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -653,6 +681,34 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 96, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
@@ -666,94 +722,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 95, Column: 0 }
+                   Line: 98, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 87, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -775,25 +747,94 @@ Args:
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
-Pass:            gvn
-Name:            LoadClobbered
+Pass:            inline
+Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
+                   Line: 100, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 93, Column: 0 }
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 101, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 102, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 103, Column: 0 }
+Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 87, Column: 0 }
+  - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
+                   Line: 101, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
@@ -802,13 +843,13 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 98, Column: 0 }
+                       Line: 101, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
+                   Line: 102, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
@@ -817,7 +858,7 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 99, Column: 0 }
+                       Line: 102, Column: 0 }
 ...
 --- !Missed
 Pass:            inline
@@ -826,7 +867,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 28, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -840,7 +881,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 36, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -882,7 +923,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 28, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -896,7 +937,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 36, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - Callee:          for_cpusec
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
   - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
@@ -2964,7 +3005,7 @@ Args:
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 97, Column: 0 }
+                   Line: 101, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
@@ -2973,13 +3014,13 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 93, Column: 0 }
+                       Line: 101, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 98, Column: 0 }
+                   Line: 102, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
@@ -2988,22 +3029,7 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 98, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 99, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 99, Column: 0 }
+                       Line: 102, Column: 0 }
 ...
 --- !Passed
 Pass:            licm
@@ -3204,9 +3230,9 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 12, Column: 1 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - NumVRCopies:     '18'
+  - NumVRCopies:     '16'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '3.364500e+03'
+  - TotalCopiesCost: '3.362500e+03'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
@@ -3217,7 +3243,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 12, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - NumStackBytes:   '20312'
+  - NumStackBytes:   '2000312'
   - String:          ' stack bytes in function'
 ...
 --- !Analysis
@@ -3292,7 +3318,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '6'
+  - INST_:           '7'
   - String:          "\n"
 ...
 --- !Analysis
@@ -3482,7 +3508,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 12, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - NumInstructions: '169'
+  - NumInstructions: '170'
   - String:          ' instructions in function'
 ...
 --- !Missed
@@ -3695,7 +3721,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
 Function:        PARALLEL_MATMUL_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      loop_body71.preheader
+  - BasicBlock:      loop_body65.preheader
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -3755,7 +3781,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
 Function:        PARALLEL_MATMUL_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      loop_exit72
+  - BasicBlock:      loop_exit66
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -3869,9 +3895,9 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 87, Column: 1 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - NumVRCopies:     '18'
+  - NumVRCopies:     '20'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '1.800000e+01'
+  - TotalCopiesCost: '2.000000e+01'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
@@ -3882,7 +3908,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 87, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - NumStackBytes:   '296'
+  - NumStackBytes:   '312'
   - String:          ' stack bytes in function'
 ...
 --- !Analysis
@@ -3897,7 +3923,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '128'
+  - INST_:           '140'
   - String:          "\n"
 ...
 --- !Analysis
@@ -3907,6 +3933,6 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 87, Column: 0 }
 Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
 Args:
-  - NumInstructions: '128'
+  - NumInstructions: '140'
   - String:          ' instructions in function'
 ...

@@ -15,7 +15,7 @@ subroutine CPU_specifications_and_compiler(N_operations, single_precission, para
    
     integer, parameter :: bitness = bit_size(0_C_INTPTR_T)
     real :: time 
-    integer :: N_threads 
+    integer :: N_threads, N_cores  
   
    
     write(*,*) "----Compiler and OS ----"
@@ -36,12 +36,14 @@ subroutine CPU_specifications_and_compiler(N_operations, single_precission, para
     if (parallel) then 
         write(*,*) "Operations are done in parallel"  
         N_threads = Number_of_threads()
+        N_cores = N_threads / 2 
         write(*,*) "Number of threads: ", N_threads 
        
         
     else 
         write(*,*) "Operations are done in a single core" 
         N_threads = 1 
+        N_cores = 1 
         write(*,*) "Number of threads: ", N_threads 
         
     end if 
@@ -52,11 +54,11 @@ subroutine CPU_specifications_and_compiler(N_operations, single_precission, para
     if (single_precission) then  
         write(*,*) "Operations are done in single precission: 4 bytes" 
         write(*,*) "A 512 bits vector channel performs 16 operations per clock cycle"
-        time = (N_operations/16) / ( 4e9 ) * 4  / N_threads 
+        time = (N_operations/16) / ( 4e9 ) * 4  / N_cores 
     else 
         write(*,*) "Operations are done in double precission: 8 bytes" 
         write(*,*) "A 512 bits vector channel performs  8 operations per clock cycle"
-        time = (N_operations/8) / ( 4e9 ) * 4  / N_threads 
+        time = (N_operations/8) / ( 4e9 ) * 4  / N_cores
     end if 
     
     

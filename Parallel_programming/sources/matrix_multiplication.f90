@@ -12,7 +12,7 @@ integer, parameter :: N = 5000
 integer, parameter :: M =  5000
 integer, parameter ::  TIMES = 1000
 integer :: i, j, k 
-real  :: A(N, M), x(N), b(M)
+real  :: A(N, M), x(M), b(N)
 
     
     real :: t1, t2, s  
@@ -33,7 +33,7 @@ real  :: A(N, M), x(N), b(M)
     call CPU_TIME(t2)
     write(*,*) " CPU = ", t2-t1 
     write(*,*) "b_1 = ", b(1) 
-    write(*,*) "b_M = ", b(M) 
+    write(*,*) "b_M = ", b(N) 
     
     call CPU_TIME(t1)
     do k=0, TIMES 

@@ -1,8 +1,8 @@
  module parallel_matmul 
     
    implicit none 
-   integer, parameter :: N = 5000
-   real, save :: A(N, N), x(N), b(N)
+   integer, parameter :: N = 500000, M= 50
+   real, save :: A(N, M), x(M), b(N)
    !integer, parameter :: M = 5000
   ! real, save, allocatable :: A(:, :), x(:), b(:)
    
@@ -14,31 +14,31 @@ subroutine test_matmul_single_core( N_operations )
         
  !real, allocatable :: A(:, :), x(:), b(:)
  integer :: k
- real :: t1
+ integer :: it1
   
     integer :: TIMES = 1000
    ! allocate( A(N,N), x(N), b(N) ) 
    
-    N_operations = 2 * N * N * real(TIMES)
+    N_operations = 2 * N * M * real(TIMES)
     
     
-    call Initialization(N, N, A, x) 
+    call Initialization(N, M, A, x) 
  
-    
-    call cpu_time(t1)
+   
+    call system_clock(it1)
     do k=0, TIMES  
             b = matmul(A, x) 
            !write(*,*) k
     end do 
-    call final_cpu_time1("matmul", t1, b) 
+    call final_cpu_time1("matmul", it1, b) 
    
         
-    call cpu_time(t1) 
+    call system_clock(it1)
     do k=0, TIMES  
         b = my_matmul(A, x) 
     !   write(*,*) k
     end do 
-   call final_cpu_time1("my_matmul", t1, b) 
+   call final_cpu_time1("my_matmul", it1, b) 
     
    write(*,*) " Press enter" 
    read(*,*)
@@ -84,17 +84,20 @@ end function
 
 
 
-subroutine  final_cpu_time1(test, t1, b)
+subroutine  final_cpu_time1(test, it1, b)
        character(len=*), intent(in) :: test 
-       real, intent(in) :: t1, b(:) 
+       integer, intent(in) :: it1
+       real, intent(in) :: b(:) 
   
-    real :: t2 
+    integer :: it2, rate  
   
-    call cpu_time(t2)
+   
+    call system_clock(count_rate=rate)
+    call system_clock(it2)
     
     write(*,'(A18, A)') "----- Testing... ", test 
 
-    write(*,*) " CPU_time = ", t2-t1 
+    write(*,*) " CPU_time = ", real(it2-it1)/rate 
     write(*,*) "b_1 = ", b(1) 
     write(*,*) "b_M = ", b( size(b) ) 
     write(*,*) 

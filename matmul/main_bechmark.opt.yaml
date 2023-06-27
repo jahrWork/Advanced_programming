@@ -1,0 +1,2139 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_FOUNDATIONS.void
+Args:
+  - Callee:          MENU_FOUNDATIONS
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_FOUNDATIONS.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_FOUNDATIONS.void
+Args:
+  - Callee:          MENU_FOUNDATIONS
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_FOUNDATIONS.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_INTEGERS_AND_REALS.void
+Args:
+  - Callee:          MENU_INTEGERS_AND_REALS
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_INTEGERS_AND_REALS.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_INTEGERS_AND_REALS.void
+Args:
+  - Callee:          MENU_INTEGERS_AND_REALS
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_INTEGERS_AND_REALS.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_ADVANCED_PROGRAMMING.void
+Args:
+  - Callee:          MENU_ADVANCED_PROGRAMMING
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_ADVANCED_PROGRAMMING.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MENU_ADVANCED_PROGRAMMING.void
+Args:
+  - Callee:          MENU_ADVANCED_PROGRAMMING
+  - String:          ' will not be inlined into '
+  - Caller:          MENU_ADVANCED_PROGRAMMING.void
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 0, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_fpe_
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_reentrancy
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 58, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 61, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_stop_core_quiet
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 67, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 68, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_fpe_
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_reentrancy
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 58, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 61, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_stop_core_quiet
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 67, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 68, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 32, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          ''''
+  - Callee:          MENU_FOUNDATIONS.void
+  - String:          ''' inlined into '''
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          MAIN__
+  - String:          ':'
+  - Line:            '30'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 35, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          ''''
+  - Callee:          MENU_INTEGERS_AND_REALS.void
+  - String:          ''' inlined into '''
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          MAIN__
+  - String:          ':'
+  - Line:            '33'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 38, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          ''''
+  - Callee:          MENU_ADVANCED_PROGRAMMING.void
+  - String:          ''' inlined into '''
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          MAIN__
+  - String:          ':'
+  - Line:            '36'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_fpe_
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_reentrancy
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_FOUNDATIONS
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_INTEGERS_AND_REALS
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_ADVANCED_PROGRAMMING
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 58, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 61, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_stop_core_quiet
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 67, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 68, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+Function:        MAIN__
+Args:
+  - Callee:          __kmpc_end
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_fpe_
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_set_reentrancy
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_FOUNDATIONS
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_INTEGERS_AND_REALS
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          MENU_ADVANCED_PROGRAMMING
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 58, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 61, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_stop_core_quiet
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 67, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 68, Column: 0 }
+Function:        MAIN__
+Args:
+  - Callee:          for_read_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+Function:        MAIN__
+Args:
+  - Callee:          __kmpc_end
+  - String:          ' will not be inlined into '
+  - Caller:          MAIN__
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 2, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 16, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 17, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 17, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 19, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 19, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 20, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 20, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 21, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 21, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 22, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 22, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 23, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 23, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 24, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 41, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                       Line: 24, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 26, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 15, Column: 0 }
+Function:        MAIN__
+Args:
+  - NumVRCopies:     '20'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.312000e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 1 }
+Function:        MAIN__
+Args:
+  - NumVRCopies:     '25'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.317000e+03'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - NumStackBytes:   '360'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      alloca_0
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '32'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb16
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 16, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb2
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '97'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb2
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb14
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 41, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb12
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb15
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 0, Column: 0 }
+Function:        MAIN__
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb13
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '44'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\main_bechmark.f90', 
+                   Line: 2, Column: 0 }
+Function:        MAIN__
+Args:
+  - NumInstructions: '194'
+  - String:          ' instructions in function'
+...

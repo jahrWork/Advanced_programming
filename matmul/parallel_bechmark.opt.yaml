@@ -30,66 +30,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 13, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 15, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 21, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
                    Line: 22, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 24, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -103,7 +47,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 25, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - Callee:          for_stop_core_quiet
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -114,7 +58,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 27, Column: 0 }
+                   Line: 31, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_write_seq_lis
@@ -128,7 +72,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_read_seq_lis
@@ -170,66 +114,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 13, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 15, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 21, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
                    Line: 22, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 24, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -243,7 +131,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 25, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - Callee:          for_stop_core_quiet
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -254,7 +142,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 27, Column: 0 }
+                   Line: 31, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_write_seq_lis
@@ -268,7 +156,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_read_seq_lis
@@ -310,66 +198,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 13, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 15, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 21, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
                    Line: 22, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 24, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -383,7 +215,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 25, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - Callee:          for_stop_core_quiet
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -394,7 +226,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 27, Column: 0 }
+                   Line: 31, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_write_seq_lis
@@ -408,7 +240,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_read_seq_lis
@@ -462,66 +294,10 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 13, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 15, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 21, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
                    Line: 22, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ' will not be inlined into '
-  - Caller:          MAIN__
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                       Line: 2, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 24, Column: 0 }
-Function:        MAIN__
-Args:
-  - Callee:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_TEST_VECTORIZED_AND_PARALLELIZED_SERIES
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -535,7 +311,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 25, Column: 0 }
 Function:        MAIN__
 Args:
-  - Callee:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - Callee:          for_stop_core_quiet
   - String:          ' will not be inlined into '
   - Caller:          MAIN__
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
@@ -546,7 +322,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 27, Column: 0 }
+                   Line: 31, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_write_seq_lis
@@ -560,7 +336,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_bechmark.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        MAIN__
 Args:
   - Callee:          for_read_seq_lis
@@ -589,9 +365,9 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 2, Column: 1 }
 Function:        MAIN__
 Args:
-  - NumVRCopies:     '14'
+  - NumVRCopies:     '5'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '1.400000e+01'
+  - TotalCopiesCost: '5.000000e+00'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
@@ -617,7 +393,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '69'
+  - INST_:           '50'
   - String:          "\n"
 ...
 --- !Analysis
@@ -627,6 +403,6 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 2, Column: 0 }
 Function:        MAIN__
 Args:
-  - NumInstructions: '69'
+  - NumInstructions: '50'
   - String:          ' instructions in function'
 ...

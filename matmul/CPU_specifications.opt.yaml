@@ -3,11 +3,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                    Line: 0, Column: 0 }
-Function:        SYSTEM.t169p.t3v
+Function:        SYSTEM.t170p.t3v
 Args:
   - Callee:          SYSTEM
   - String:          ' will not be inlined into '
-  - Caller:          SYSTEM.t169p.t3v
+  - Caller:          SYSTEM.t170p.t3v
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                        Line: 0, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -17,11 +17,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                    Line: 0, Column: 0 }
-Function:        SYSTEM.t169p.t3v
+Function:        SYSTEM.t170p.t3v
 Args:
   - Callee:          SYSTEM
   - String:          ' will not be inlined into '
-  - Caller:          SYSTEM.t169p.t3v
+  - Caller:          SYSTEM.t170p.t3v
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                        Line: 0, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -31,11 +31,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                    Line: 0, Column: 0 }
-Function:        SYSTEM.t179p.t3v
+Function:        SYSTEM.t180p.t3v
 Args:
   - Callee:          SYSTEM
   - String:          ' will not be inlined into '
-  - Caller:          SYSTEM.t179p.t3v
+  - Caller:          SYSTEM.t180p.t3v
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                        Line: 0, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -45,11 +45,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                    Line: 0, Column: 0 }
-Function:        SYSTEM.t179p.t3v
+Function:        SYSTEM.t180p.t3v
 Args:
   - Callee:          SYSTEM
   - String:          ' will not be inlined into '
-  - Caller:          SYSTEM.t179p.t3v
+  - Caller:          SYSTEM.t180p.t3v
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                        Line: 0, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -58,35 +58,35 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 70, Column: 0 }
+                       Line: 40, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 70, Column: 0 }
+                       Line: 40, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 21, Column: 0 }
+                   Line: 20, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -100,7 +100,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
+                   Line: 21, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_fmt
@@ -114,7 +114,21 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_fmt_xmit
@@ -131,7 +145,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 22, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_fmt_xmit
+  - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -145,7 +159,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 23, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_fmt
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -170,7 +184,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 27, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -183,586 +197,264 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 30, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 33, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 34, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 37, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 44, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 55, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 56, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 59, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 60, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 66, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 21, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 23, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 24, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 28, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 30, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 33, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 34, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 37, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 44, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 55, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 56, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 59, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 60, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 66, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Passed
-Pass:            inline
-Name:            Inlined
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                    Line: 29, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - String:          ''''
-  - Callee:          SYSTEM.t169p.t3v
-  - String:          ''' inlined into '''
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
                        Line: 9, Column: 0 }
-  - String:          ''''
-  - String:          ' with '
-  - String:          '(cost='
-  - Cost:            '-15000'
-  - String:          ', threshold='
-  - Threshold:       '375'
-  - String:          ')'
-  - String:          ' at callsite '
-  - String:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-  - String:          ':'
-  - Line:            '20'
-  - String:          ':'
-  - Column:          '0'
-  - String:          ';'
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 32, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 34, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 34, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 35, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 20, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 22, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 23, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 24, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 27, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 29, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 32, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 34, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 34, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 35, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
 ...
 --- !Passed
 Pass:            inline
 Name:            Inlined
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 31, Column: 0 }
+                   Line: 28, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - String:          ''''
-  - Callee:          SYSTEM.t179p.t3v
+  - Callee:          SYSTEM.t170p.t3v
   - String:          ''' inlined into '''
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -777,7 +469,7 @@ Args:
   - String:          ' at callsite '
   - String:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
   - String:          ':'
-  - Line:            '22'
+  - Line:            '19'
   - String:          ':'
   - Column:          '0'
   - String:          ';'
@@ -786,13 +478,41 @@ Args:
 Pass:            inline
 Name:            Inlined
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 38, Column: 0 }
+                   Line: 30, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - String:          ''''
+  - Callee:          SYSTEM.t180p.t3v
+  - String:          ''' inlined into '''
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+  - String:          ':'
+  - Line:            '21'
+  - String:          ':'
+  - Column:          '0'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 33, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - String:          ''''
   - Callee:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 70, Column: 0 }
+                       Line: 40, Column: 0 }
   - String:          ''' inlined into '''
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -807,16 +527,380 @@ Args:
   - String:          ' at callsite '
   - String:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
   - String:          ':'
-  - Line:            '29'
+  - Line:            '24'
   - String:          ':'
   - Column:          '0'
   - String:          ';'
 ...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 106, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 107, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 120, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 121, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 125, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 106, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 107, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 120, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 121, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 125, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
 --- !Passed
 Pass:            openmp
 Name:            Region
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - Construct:       parallel
@@ -826,7 +910,7 @@ Args:
 Pass:            openmp
 Name:            Region
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - Construct:       parallel
@@ -836,35 +920,35 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 21, Column: 0 }
+                   Line: 20, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -878,7 +962,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
+                   Line: 21, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_fmt
@@ -892,7 +976,21 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_fmt_xmit
@@ -909,7 +1007,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 22, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_fmt_xmit
+  - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -923,7 +1021,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 23, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_fmt
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -948,7 +1046,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 27, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -976,7 +1074,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 30, Column: 0 }
+                   Line: 29, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1004,10 +1102,24 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 33, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 45, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          __kmpc_fork_call
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -1032,49 +1144,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 37, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          __kmpc_fork_call
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
+                   Line: 34, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis_xmit
@@ -1088,7 +1158,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 44, Column: 0 }
+                   Line: 35, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1102,119 +1172,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 55, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 56, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 59, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 60, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 66, Column: 0 }
+                   Line: 20, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1231,7 +1189,35 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 21, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_lis
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 21, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -1246,34 +1232,6 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_fmt
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 22, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -1287,7 +1245,7 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 23, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - Callee:          for_write_seq_fmt
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -1312,7 +1270,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 28, Column: 0 }
+                   Line: 27, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1340,7 +1298,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 30, Column: 0 }
+                   Line: 29, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1368,10 +1326,24 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 33, Column: 0 }
+                   Line: 32, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 45, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
+Args:
+  - Callee:          __kmpc_fork_call
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
@@ -1396,49 +1368,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 37, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          __kmpc_fork_call
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 40, Column: 0 }
+                   Line: 34, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis_xmit
@@ -1452,133 +1382,7 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 44, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 47, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 55, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 56, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 59, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 60, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 65, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 66, Column: 0 }
+                   Line: 35, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - Callee:          for_write_seq_lis
@@ -1592,7 +1396,7 @@ Args:
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 80, Column: 0 }
+                   Line: 50, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - String:          'load of type '
@@ -1601,69 +1405,69 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 76, Column: 0 }
+                   Line: 46, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - Callee:          __kmpc_fork_call
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 70, Column: 0 }
+                       Line: 40, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - Callee:          __kmpc_fork_call
   - String:          ' will not be inlined into '
   - Caller:          CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 70, Column: 0 }
+                       Line: 40, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 80, Column: 0 }
+                   Line: 50, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - String:          'load of type '
@@ -1672,13 +1476,377 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 106, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 107, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 120, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 121, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 125, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 106, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 107, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 120, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 121, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 122, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 123, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 124, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 125, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                       Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 80, Column: 0 }
+                   Line: 50, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - String:          'load of type '
@@ -1687,13 +1855,13 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 80, Column: 0 }
+                   Line: 50, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - String:          'load of type '
@@ -1702,7 +1870,7 @@ Args:
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                       Line: 75, Column: 0 }
+                       Line: 45, Column: 0 }
 ...
 --- !Analysis
 Pass:            prologepilog
@@ -1740,9 +1908,9 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 9, Column: 1 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - NumVRCopies:     '45'
+  - NumVRCopies:     '25'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '3.609524e+01'
+  - TotalCopiesCost: '2.500000e+01'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
@@ -1753,59 +1921,14 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 9, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - NumStackBytes:   '664'
+  - NumStackBytes:   '472'
   - String:          ' stack bytes in function'
 ...
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 9, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      alloca_1
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '184'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      bb_new58_else.split
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '40'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      bb_new69_then
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '21'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
+                   Line: 20, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
   - String:          'BasicBlock: '
@@ -1813,82 +1936,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '58'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      bb_new76_else
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '20'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      bb19_endif.split
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '12'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      ''
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '3'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      ''
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '2'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 0, Column: 0 }
-Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      ''
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '49'
+  - INST_:           '187'
   - String:          "\n"
 ...
 --- !Analysis
@@ -1898,14 +1946,14 @@ DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programm
                    Line: 9, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER
 Args:
-  - NumInstructions: '389'
+  - NumInstructions: '187'
   - String:          ' instructions in function'
 ...
 --- !Analysis
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 70, Column: 0 }
+                   Line: 40, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - NumStackBytes:   '40'
@@ -1928,7 +1976,7 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 70, Column: 0 }
+                   Line: 40, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS
 Args:
   - NumInstructions: '12'
@@ -1938,7 +1986,100 @@ Args:
 Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 1 }
+                   Line: 96, Column: 1 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - NumVRCopies:     '23'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.300000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 96, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - NumStackBytes:   '424'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 96, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      alloca_3
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 0, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      initcall73_else
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 0, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      initcall70_then
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 0, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      bb14_endif
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '136'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 96, Column: 0 }
+Function:        CPU_SPECIFICATIONS_mp_PRINT_CPU_TIME
+Args:
+  - NumInstructions: '178'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
+                   Line: 45, Column: 1 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - NumVRCopies:     '1'
@@ -1951,7 +2092,7 @@ Args:
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - NumStackBytes:   '40'
@@ -1974,7 +2115,7 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_CPU_SPECIFICATIONS_AND_COMPILER.DIR.OMP.PARALLEL.2
 Args:
   - NumInstructions: '12'
@@ -1984,7 +2125,7 @@ Args:
 Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 1 }
+                   Line: 45, Column: 1 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - NumVRCopies:     '1'
@@ -1997,7 +2138,7 @@ Args:
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - NumStackBytes:   '40'
@@ -2020,7 +2161,7 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\CPU_specifications.f90', 
-                   Line: 75, Column: 0 }
+                   Line: 45, Column: 0 }
 Function:        CPU_SPECIFICATIONS_mp_NUMBER_OF_THREADS.DIR.OMP.PARALLEL.27
 Args:
   - NumInstructions: '12'

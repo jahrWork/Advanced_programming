@@ -2,42 +2,28 @@
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 83, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 84, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 84, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 85, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 86, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -45,55 +31,41 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -101,13 +73,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -115,41 +87,41 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -157,13 +129,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -171,13 +143,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -185,195 +157,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 94, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 83, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_system_clock_rate
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 84, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_system_clock_count
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 86, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_fmt
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -381,198 +171,268 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 94, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
-  - Callee:          for_write_seq_lis
+  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 19, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 95, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 84, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_system_clock_rate
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 85, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 87, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 90, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 90, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 24, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 93, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
-  - Callee:          omp_get_num_threads
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 25, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 93, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
-  - Callee:          omp_get_thread_num
+  - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 19, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 94, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 94, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 95, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 16, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 16, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
-  - Callee:          for_write_seq_lis
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 24, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - Callee:          omp_get_num_threads
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 25, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - Callee:          omp_get_thread_num
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 44, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 25, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ''' because too costly to inline '
   - String:          '(cost='
   - Cost:            '750'
@@ -584,45 +444,185 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 57, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 42, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
+                       Line: 32, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 57, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 47, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          omp_get_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 48, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          omp_get_thread_num
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 42, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 47, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          omp_get_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 48, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          omp_get_thread_num
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 66, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 67, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
+                       Line: 32, Column: 0 }
   - String:          ''' because too costly to inline '
   - String:          '(cost='
   - Cost:            '750'
@@ -634,8 +634,8 @@ Args:
 Pass:            openmp
 Name:            Region
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 28, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 51, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
 Args:
   - Construct:       loop
   - String:          ' construct transformed'
@@ -644,8 +644,8 @@ Args:
 Pass:            openmp
 Name:            Region
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 45, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - Construct:       parallel
   - String:          ' construct transformed'
@@ -654,42 +654,28 @@ Args:
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 83, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 84, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 84, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 85, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 86, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -697,55 +683,41 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -753,13 +725,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -767,41 +739,41 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -809,13 +781,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -823,13 +795,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -837,195 +809,13 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 94, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 83, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_system_clock_rate
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 84, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_system_clock_count
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 86, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_fmt
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 87, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_fmt_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 89, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 90, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 92, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 93, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -1033,466 +823,268 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 94, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 95, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 84, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
-  - Callee:          __kmpc_for_static_init_8
+  - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          __kmpc_for_static_fini
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          __kmpc_barrier
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 24, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          omp_get_num_threads
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 25, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          omp_get_thread_num
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          __kmpc_for_static_init_8
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          __kmpc_for_static_fini
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          __kmpc_barrier
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 39, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          for_write_seq_lis_xmit
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 24, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          omp_get_num_threads
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 25, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - Callee:          omp_get_thread_num
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 22, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     store
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     store
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     store
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     store
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            gvn
-Name:            LoadClobbered
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
-Args:
-  - String:          'load of type '
-  - Type:            ''
-  - String:          ' not eliminated'
-  - String:          ' in favor of '
-  - OtherAccess:     load
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-  - String:          ' because it is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 19, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 85, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 87, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
-  - Callee:          __kmpc_fork_call
+  - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 19, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_fmt
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 88, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_fmt_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 90, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 90, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 91, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 93, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 93, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 94, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 94, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 95, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 16, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 16, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
-  - Callee:          __kmpc_fork_call
+  - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 44, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+                   Line: 25, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
+                       Line: 73, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 9, Column: 0 }
-  - String:          ''' because too costly to inline '
-  - String:          '(cost='
-  - Cost:            '750'
-  - String:          ', threshold='
-  - Threshold:       '750'
-  - String:          ')'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 57, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-Args:
-  - Callee:          for_system_clock_count
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            NoDefinition
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 57, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-Args:
-  - Callee:          for_system_clock_count
-  - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
-  - String:          ' because its definition is unavailable'
-...
---- !Missed
-Pass:            inline
-Name:            TooCostly
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 66, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-Args:
-  - String:          ''''
-  - Callee:          PARALLEL_SERIES_mp_FINAL_CPU_TIME
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 72, Column: 0 }
-  - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 49, Column: 0 }
+                       Line: 8, Column: 0 }
   - String:          ''' because too costly to inline '
   - String:          '(cost='
   - Cost:            '750'
@@ -1504,8 +1096,8 @@ Args:
 Pass:            licm
 Name:            LoadWithLoopInvariantAddressInvalidated
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 62, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 21, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          failed to move load with loop-invariant address because the loop may invalidate its value
 ...
@@ -1513,15 +1105,15 @@ Args:
 Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 62, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 21, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
 --- !Passed
 Pass:            gvn
 Name:            LoadElim
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1530,11 +1122,231 @@ Args:
   - InfavorOfValue:  ''
 ...
 --- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_for_static_init_8
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_for_static_fini
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_barrier
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 47, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          omp_get_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 48, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          omp_get_thread_num
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_for_static_init_8
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_for_static_fini
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          __kmpc_barrier
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 62, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          for_write_seq_lis_xmit
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 47, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          omp_get_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 48, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - Callee:          omp_get_thread_num
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1542,18 +1354,18 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     store
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1561,16 +1373,16 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     store
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1578,18 +1390,18 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     load
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1597,18 +1409,18 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     store
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1616,16 +1428,16 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     store
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -1633,16 +1445,204 @@ Args:
   - String:          ' in favor of '
   - OtherAccess:     load
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                       Line: 29, Column: 0 }
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 42, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 45, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          __kmpc_fork_call
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 42, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          for_system_clock_count
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 45, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - Callee:          __kmpc_fork_call
+  - String:          ' will not be inlined into '
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 67, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - String:          ''''
+  - Callee:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 73, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 32, Column: 0 }
+  - String:          ''' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '750'
+  - String:          ', threshold='
+  - Threshold:       '750'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                       Line: 52, Column: 0 }
 ...
 --- !Analysis
 Pass:            prologepilog
 Name:            StackSize
-Function:        PARALLEL_SERIES.
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES.
 Args:
   - NumStackBytes:   '0'
   - String:          ' stack bytes in function'
@@ -1650,7 +1650,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-Function:        PARALLEL_SERIES.
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES.
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_0
@@ -1663,65 +1663,17 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionCount
-Function:        PARALLEL_SERIES.
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES.
 Args:
   - NumInstructions: '1'
   - String:          ' instructions in function'
 ...
 --- !Missed
 Pass:            regalloc
-Name:            SpillReloadCopies
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 9, Column: 1 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - NumVRCopies:     '4'
-  - String:          ' virtual registers copies '
-  - TotalCopiesCost: '4.000000e+00'
-  - String:          ' total copies cost '
-  - String:          generated in function
-...
---- !Analysis
-Pass:            prologepilog
-Name:            StackSize
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 9, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - NumStackBytes:   '152'
-  - String:          ' stack bytes in function'
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionMix
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 9, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - String:          'BasicBlock: '
-  - BasicBlock:      DIR.OMP.END.PARALLEL.763
-  - String:          "\n"
-  - String:          ''
-  - String:          ': '
-  - INST_:           '35'
-  - String:          "\n"
-...
---- !Analysis
-Pass:            asm-printer
-Name:            InstructionCount
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 9, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
-Args:
-  - NumInstructions: '35'
-  - String:          ' instructions in function'
-...
---- !Missed
-Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 64, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 23, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -1733,8 +1685,8 @@ Args:
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 64, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 23, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -1746,8 +1698,8 @@ Args:
 Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 49, Column: 1 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 8, Column: 1 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - NumVRCopies:     '7'
   - String:          ' virtual registers copies '
@@ -1759,8 +1711,8 @@ Args:
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 49, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 8, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - NumStackBytes:   '72'
   - String:          ' stack bytes in function'
@@ -1769,11 +1721,11 @@ Args:
 Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 49, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 8, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      alloca_2
+  - BasicBlock:      alloca_1
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1785,7 +1737,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      region.0
@@ -1800,10 +1752,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      ifmerge.27
+  - BasicBlock:      ifmerge.28
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1815,10 +1767,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      loop.19
+  - BasicBlock:      loop.20
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1830,10 +1782,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      afterloop.19
+  - BasicBlock:      afterloop.20
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1845,7 +1797,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      region.0
@@ -1860,10 +1812,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      hir.L.28
+  - BasicBlock:      hir.L.29
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1875,10 +1827,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      loop.64
+  - BasicBlock:      loop.65
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1890,10 +1842,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      hir.L.59
+  - BasicBlock:      hir.L.60
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1905,10 +1857,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      bb5
+  - BasicBlock:      bb3
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -1919,8 +1871,8 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 49, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_SINGLE_CORE
+                   Line: 8, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_SINGLE_CORE
 Args:
   - NumInstructions: '70'
   - String:          ' instructions in function'
@@ -1929,8 +1881,56 @@ Args:
 Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 72, Column: 1 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 32, Column: 1 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - NumVRCopies:     '4'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.000000e+00'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 32, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - NumStackBytes:   '152'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 32, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      DIR.OMP.END.PARALLEL.763
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '35'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 32, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS
+Args:
+  - NumInstructions: '35'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
+                   Line: 73, Column: 1 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - NumSpills:       '1'
   - String:          ' spills '
@@ -1950,8 +1950,8 @@ Args:
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 72, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 73, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - NumStackBytes:   '392'
   - String:          ' stack bytes in function'
@@ -1960,8 +1960,8 @@ Args:
 Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 72, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 73, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_3
@@ -1975,8 +1975,8 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 72, Column: 0 }
-Function:        PARALLEL_SERIES_mp_FINAL_CPU_TIME
+                   Line: 73, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_FINAL_CPU_TIME
 Args:
   - NumInstructions: '170'
   - String:          ' instructions in function'
@@ -1985,8 +1985,8 @@ Args:
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -1998,8 +1998,8 @@ Args:
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 29, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 52, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -2011,8 +2011,8 @@ Args:
 Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 1 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 45, Column: 1 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - NumVRCopies:     '15'
   - String:          ' virtual registers copies '
@@ -2024,8 +2024,8 @@ Args:
 Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 45, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - NumStackBytes:   '264'
   - String:          ' stack bytes in function'
@@ -2033,7 +2033,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      DIR.OMP.LOOP.1
@@ -2048,10 +2048,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      omp.pdo.body22.lr.ph
+  - BasicBlock:      omp.pdo.body34.lr.ph
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2063,10 +2063,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      omp.pdo.body22.preheader
+  - BasicBlock:      omp.pdo.body34.preheader
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2078,7 +2078,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      ifmerge.70
@@ -2093,7 +2093,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.62
@@ -2108,7 +2108,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.62
@@ -2123,7 +2123,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      DIR.OMP.LOOP.1
@@ -2138,10 +2138,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      omp.pdo.body22.preheader
+  - BasicBlock:      omp.pdo.body34.preheader
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -2153,7 +2153,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      hir.L.71
@@ -2168,7 +2168,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.107
@@ -2183,7 +2183,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.region.exit.split
@@ -2198,7 +2198,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      DIR.OMP.END.PARALLEL.763.exitStub.split
@@ -2212,8 +2212,8 @@ Args:
 Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_series.f90', 
-                   Line: 22, Column: 0 }
-Function:        PARALLEL_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
+                   Line: 45, Column: 0 }
+Function:        VECTORIZED_AND_PARALLELIZED_SERIES_mp_SUM_SERIES_WITH_DIFFERENT_THREADS.DIR.OMP.PARALLEL.2.split
 Args:
   - NumInstructions: '155'
   - String:          ' instructions in function'

@@ -3,11 +3,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -17,11 +17,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 96, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -31,11 +31,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -45,11 +45,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -59,11 +59,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -73,11 +73,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -87,11 +87,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -101,11 +101,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -115,11 +115,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -129,11 +129,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -143,11 +143,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 103, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -157,11 +157,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -171,11 +171,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 96, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -185,11 +185,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -199,11 +199,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -213,11 +213,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -227,11 +227,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -241,11 +241,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -255,11 +255,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -269,11 +269,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -283,11 +283,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -297,11 +297,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 103, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -311,11 +311,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 28, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -325,11 +325,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 36, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -339,11 +339,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 43, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -353,11 +353,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 44, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_read_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -367,11 +367,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 28, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -381,11 +381,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 36, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -395,11 +395,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 43, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -409,11 +409,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 44, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_read_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -423,14 +423,14 @@ Pass:            inline
 Name:            Inlined
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 25, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_INITIALIZATION
+  - Callee:          MATMUL_BENCHMARK_mp_INITIALIZATION
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 50, Column: 0 }
   - String:          ''' inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''''
@@ -441,7 +441,7 @@ Args:
   - Threshold:       '250'
   - String:          ')'
   - String:          ' at callsite '
-  - String:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - String:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
   - String:          ':'
   - Line:            '13'
   - String:          ':'
@@ -453,14 +453,14 @@ Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 33, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Callee:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''' because too costly to inline '
@@ -475,14 +475,14 @@ Pass:            inline
 Name:            Inlined
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_MY_MATMUL
+  - Callee:          MATMUL_BENCHMARK_mp_MY_MATMUL
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 66, Column: 0 }
   - String:          ''' inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''''
@@ -493,7 +493,7 @@ Args:
   - Threshold:       '250'
   - String:          ')'
   - String:          ' at callsite '
-  - String:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - String:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
   - String:          ':'
   - Line:            '26'
   - String:          ':'
@@ -505,14 +505,14 @@ Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 41, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Callee:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''' because too costly to inline '
@@ -527,11 +527,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -541,11 +541,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 96, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -555,11 +555,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -569,11 +569,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -583,11 +583,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -597,11 +597,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -611,11 +611,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -625,11 +625,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -639,11 +639,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -653,11 +653,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -667,11 +667,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 103, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -681,11 +681,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 95, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_rate
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -695,11 +695,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 96, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -709,11 +709,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -723,11 +723,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 98, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_fmt_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -737,11 +737,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -751,11 +751,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 100, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -765,11 +765,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -779,11 +779,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -793,11 +793,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -807,11 +807,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis_xmit
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -821,11 +821,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 103, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Caller:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -835,7 +835,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -850,7 +850,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -865,11 +865,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 28, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -879,11 +879,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 36, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -893,11 +893,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 43, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -907,11 +907,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 44, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_read_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -921,11 +921,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 28, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -935,11 +935,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 36, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_system_clock_count
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -949,11 +949,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 43, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_write_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -963,11 +963,11 @@ Pass:            inline
 Name:            NoDefinition
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 44, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - Callee:          for_read_seq_lis
   - String:          ' will not be inlined into '
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ' because its definition is unavailable'
@@ -977,14 +977,14 @@ Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 33, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Callee:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''' because too costly to inline '
@@ -999,14 +999,14 @@ Pass:            inline
 Name:            TooCostly
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 41, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          ''''
-  - Callee:          PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+  - Callee:          MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 87, Column: 0 }
   - String:          ''' not inlined into '''
-  - Caller:          PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+  - Caller:          MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
     DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                        Line: 12, Column: 0 }
   - String:          ''' because too costly to inline '
@@ -1021,7 +1021,7 @@ Pass:            licm
 Name:            InstSunk
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'sinking '
   - Inst:            zext
@@ -1033,7 +1033,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            add
@@ -1045,7 +1045,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1057,7 +1057,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            zext
@@ -1069,7 +1069,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1081,7 +1081,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1093,7 +1093,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1105,7 +1105,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1117,7 +1117,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1129,7 +1129,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1141,7 +1141,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1153,7 +1153,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1165,7 +1165,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1177,7 +1177,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1189,7 +1189,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1201,7 +1201,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1213,7 +1213,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1225,7 +1225,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1237,19 +1237,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
-Args:
-  - String:          'hoisting '
-  - Inst:            load
-    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                       Line: 79, Column: 0 }
-...
---- !Passed
-Pass:            licm
-Name:            Hoisted
-DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
-                   Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1261,7 +1249,19 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                       Line: 79, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
+                   Line: 79, Column: 0 }
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            zext
@@ -1273,7 +1273,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1285,7 +1285,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1297,7 +1297,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1309,7 +1309,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1321,7 +1321,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1333,7 +1333,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1345,7 +1345,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -1357,7 +1357,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1369,7 +1369,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1381,7 +1381,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1393,7 +1393,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1405,7 +1405,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1417,7 +1417,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1429,7 +1429,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1441,7 +1441,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1453,7 +1453,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1465,7 +1465,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1477,7 +1477,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1489,7 +1489,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1501,7 +1501,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1513,7 +1513,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1525,7 +1525,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1537,7 +1537,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1549,7 +1549,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1561,7 +1561,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1573,7 +1573,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1585,7 +1585,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1597,7 +1597,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1609,7 +1609,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1621,7 +1621,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1633,7 +1633,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1645,7 +1645,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1657,7 +1657,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1669,7 +1669,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1681,7 +1681,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1693,7 +1693,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1705,7 +1705,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1717,7 +1717,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1729,7 +1729,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1741,7 +1741,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1753,7 +1753,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1765,7 +1765,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -1777,7 +1777,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -1789,7 +1789,7 @@ Pass:            licm
 Name:            LoadWithLoopInvariantAddressInvalidated
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          failed to move load with loop-invariant address because the loop may invalidate its value
 ...
@@ -1798,7 +1798,7 @@ Pass:            licm
 Name:            LoadWithLoopInvariantAddressInvalidated
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          failed to move load with loop-invariant address because the loop may invalidate its value
 ...
@@ -1807,7 +1807,7 @@ Pass:            licm
 Name:            LoadWithLoopInvariantAddressInvalidated
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          failed to move load with loop-invariant address because the loop may invalidate its value
 ...
@@ -1816,7 +1816,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1825,7 +1825,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1834,7 +1834,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1843,7 +1843,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1852,7 +1852,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1861,7 +1861,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1870,7 +1870,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1879,7 +1879,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1888,7 +1888,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1897,7 +1897,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1906,7 +1906,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1915,7 +1915,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1924,7 +1924,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1933,7 +1933,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1942,7 +1942,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1951,7 +1951,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1960,7 +1960,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1969,7 +1969,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1978,7 +1978,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1987,7 +1987,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -1996,7 +1996,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2005,7 +2005,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2014,7 +2014,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2023,7 +2023,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2032,7 +2032,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2041,7 +2041,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2050,7 +2050,7 @@ Pass:            licm
 Name:            PromoteLoopAccessesToScalar
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 38, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          Moving accesses to memory location out of the loop
 ...
@@ -2059,7 +2059,7 @@ Pass:            gvn
 Name:            LoadElim
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2072,7 +2072,7 @@ Pass:            gvn
 Name:            LoadElim
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2085,7 +2085,7 @@ Pass:            gvn
 Name:            LoadElim
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2098,7 +2098,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            add
@@ -2110,7 +2110,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            mul
@@ -2122,7 +2122,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            sitofp
@@ -2132,7 +2132,7 @@ Args:
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            fdiv
@@ -2142,7 +2142,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2154,7 +2154,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2166,7 +2166,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2178,7 +2178,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2190,7 +2190,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2202,7 +2202,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            zext
@@ -2214,7 +2214,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2226,7 +2226,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2238,7 +2238,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 58, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2250,7 +2250,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 58, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            icmp
@@ -2262,7 +2262,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            mul
@@ -2274,7 +2274,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            sitofp
@@ -2284,7 +2284,7 @@ Args:
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            fdiv
@@ -2294,7 +2294,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2306,7 +2306,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2318,7 +2318,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2330,7 +2330,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2342,7 +2342,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 61, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2354,7 +2354,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            mul
@@ -2366,7 +2366,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            sitofp
@@ -2376,7 +2376,7 @@ Args:
 --- !Passed
 Pass:            licm
 Name:            Hoisted
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            fdiv
@@ -2386,7 +2386,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2398,7 +2398,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2410,7 +2410,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2422,7 +2422,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2434,7 +2434,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2446,7 +2446,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2458,7 +2458,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2470,7 +2470,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            trunc
@@ -2482,7 +2482,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 60, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            sext
@@ -2494,7 +2494,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2506,7 +2506,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2518,7 +2518,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2530,7 +2530,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2542,7 +2542,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2554,7 +2554,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2566,7 +2566,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2578,7 +2578,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            zext
@@ -2590,7 +2590,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2602,7 +2602,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2614,7 +2614,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2626,7 +2626,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2638,7 +2638,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2650,7 +2650,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2662,7 +2662,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2674,7 +2674,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2686,7 +2686,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 78, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            icmp
@@ -2698,7 +2698,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2710,7 +2710,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2722,7 +2722,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2734,7 +2734,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2746,7 +2746,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2758,7 +2758,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2770,7 +2770,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2782,7 +2782,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2794,7 +2794,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2806,7 +2806,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -2818,7 +2818,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            call
@@ -2830,7 +2830,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            load
@@ -2842,7 +2842,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 80, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            shl
@@ -2854,7 +2854,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 80, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            add
@@ -2866,7 +2866,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 80, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            ashr
@@ -2878,7 +2878,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2893,7 +2893,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2908,7 +2908,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2923,7 +2923,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2938,7 +2938,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2953,7 +2953,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2968,7 +2968,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -2987,7 +2987,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -3006,7 +3006,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 101, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -3021,7 +3021,7 @@ Pass:            gvn
 Name:            LoadClobbered
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 102, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - String:          'load of type '
   - Type:            ''
@@ -3036,7 +3036,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            insertelement
@@ -3048,7 +3048,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            shufflevector
@@ -3060,7 +3060,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 30, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            bitcast
@@ -3072,7 +3072,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            insertelement
@@ -3084,7 +3084,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'hoisting '
   - Inst:            shufflevector
@@ -3096,7 +3096,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 59, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'hoisting '
   - Inst:            mul
@@ -3108,7 +3108,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            mul
@@ -3120,7 +3120,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 79, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            getelementptr
@@ -3132,7 +3132,7 @@ Pass:            licm
 Name:            Hoisted
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 78, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'hoisting '
   - Inst:            add
@@ -3142,7 +3142,7 @@ Args:
 --- !Analysis
 Pass:            prologepilog
 Name:            StackSize
-Function:        PARALLEL_MATMUL.
+Function:        MATMUL_BENCHMARK.
 Args:
   - NumStackBytes:   '0'
   - String:          ' stack bytes in function'
@@ -3150,7 +3150,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionMix
-Function:        PARALLEL_MATMUL.
+Function:        MATMUL_BENCHMARK.
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_0
@@ -3163,7 +3163,7 @@ Args:
 --- !Analysis
 Pass:            asm-printer
 Name:            InstructionCount
-Function:        PARALLEL_MATMUL.
+Function:        MATMUL_BENCHMARK.
 Args:
   - NumInstructions: '1'
   - String:          ' instructions in function'
@@ -3171,7 +3171,7 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '2'
   - String:          ' virtual registers copies '
@@ -3182,7 +3182,7 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '5'
   - String:          ' virtual registers copies '
@@ -3193,7 +3193,7 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -3204,7 +3204,7 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '6'
   - String:          ' virtual registers copies '
@@ -3215,7 +3215,7 @@ Args:
 --- !Missed
 Pass:            regalloc
 Name:            LoopSpillReloadCopies
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '1'
   - String:          ' virtual registers copies '
@@ -3228,7 +3228,7 @@ Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 12, Column: 1 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumVRCopies:     '16'
   - String:          ' virtual registers copies '
@@ -3241,9 +3241,9 @@ Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 12, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
-  - NumStackBytes:   '2000312'
+  - NumStackBytes:   '4312'
   - String:          ' stack bytes in function'
 ...
 --- !Analysis
@@ -3251,7 +3251,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 12, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_1
@@ -3266,7 +3266,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb23.i
@@ -3281,7 +3281,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb27.i
@@ -3296,7 +3296,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb28.i
@@ -3311,10 +3311,10 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
-  - BasicBlock:      PARALLEL_MATMUL_mp_INITIALIZATION.exit
+  - BasicBlock:      MATMUL_BENCHMARK_mp_INITIALIZATION.exit
   - String:          "\n"
   - String:          ''
   - String:          ': '
@@ -3326,7 +3326,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.167
@@ -3341,7 +3341,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.169
@@ -3356,7 +3356,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.185
@@ -3371,7 +3371,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.185
@@ -3386,7 +3386,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.169
@@ -3401,7 +3401,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.167
@@ -3416,7 +3416,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.172
@@ -3431,7 +3431,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.174
@@ -3446,7 +3446,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.200
@@ -3461,7 +3461,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.200
@@ -3476,7 +3476,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.174
@@ -3491,7 +3491,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.172
@@ -3506,7 +3506,7 @@ Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 12, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_TEST_MATMUL_SINGLE_CORE
+Function:        MATMUL_BENCHMARK_mp_TEST_MATMUL_SINGLE_CORE
 Args:
   - NumInstructions: '170'
   - String:          ' instructions in function'
@@ -3516,7 +3516,7 @@ Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 58, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - NumVRCopies:     '4'
   - String:          ' virtual registers copies '
@@ -3529,7 +3529,7 @@ Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 50, Column: 1 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - NumVRCopies:     '5'
   - String:          ' virtual registers copies '
@@ -3542,7 +3542,7 @@ Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 50, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - NumStackBytes:   '64'
   - String:          ' stack bytes in function'
@@ -3552,7 +3552,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 50, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_2
@@ -3567,7 +3567,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb23.preheader
@@ -3582,7 +3582,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb28
@@ -3597,7 +3597,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb23
@@ -3612,7 +3612,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb27.preheader
@@ -3627,7 +3627,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb27
@@ -3642,7 +3642,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb24
@@ -3657,7 +3657,7 @@ Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 50, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_INITIALIZATION
+Function:        MATMUL_BENCHMARK_mp_INITIALIZATION
 Args:
   - NumInstructions: '75'
   - String:          ' instructions in function'
@@ -3667,7 +3667,7 @@ Pass:            regalloc
 Name:            LoopSpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 78, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - NumVRCopies:     '3'
   - String:          ' virtual registers copies '
@@ -3680,7 +3680,7 @@ Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 66, Column: 1 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - NumVRCopies:     '9'
   - String:          ' virtual registers copies '
@@ -3693,7 +3693,7 @@ Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 66, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - NumStackBytes:   '88'
   - String:          ' stack bytes in function'
@@ -3703,7 +3703,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 66, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_3
@@ -3718,7 +3718,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop_body65.preheader
@@ -3733,7 +3733,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      then.54
@@ -3748,7 +3748,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      else.54
@@ -3763,7 +3763,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.55
@@ -3778,7 +3778,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop_exit66
@@ -3793,7 +3793,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb38.preheader
@@ -3808,7 +3808,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      then.14
@@ -3823,7 +3823,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.50
@@ -3838,7 +3838,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      loop.51
@@ -3853,7 +3853,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      afterloop.51
@@ -3868,7 +3868,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      bb39
@@ -3883,7 +3883,7 @@ Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 66, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_MY_MATMUL
+Function:        MATMUL_BENCHMARK_mp_MY_MATMUL
 Args:
   - NumInstructions: '93'
   - String:          ' instructions in function'
@@ -3893,7 +3893,7 @@ Pass:            regalloc
 Name:            SpillReloadCopies
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 87, Column: 1 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - NumVRCopies:     '20'
   - String:          ' virtual registers copies '
@@ -3906,7 +3906,7 @@ Pass:            prologepilog
 Name:            StackSize
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 87, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - NumStackBytes:   '312'
   - String:          ' stack bytes in function'
@@ -3916,7 +3916,7 @@ Pass:            asm-printer
 Name:            InstructionMix
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 0, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - String:          'BasicBlock: '
   - BasicBlock:      alloca_4
@@ -3931,7 +3931,7 @@ Pass:            asm-printer
 Name:            InstructionCount
 DebugLoc:        { File: 'C:\Dropbox\Software_codes\Simulation\Advanced_programming\matmul\parallel_matmul.f90', 
                    Line: 87, Column: 0 }
-Function:        PARALLEL_MATMUL_mp_FINAL_CPU_TIME1
+Function:        MATMUL_BENCHMARK_mp_FINAL_CPU_TIME1
 Args:
   - NumInstructions: '140'
   - String:          ' instructions in function'

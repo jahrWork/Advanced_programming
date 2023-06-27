@@ -4,7 +4,10 @@ Program parallel_examples
     use Series_with_coarrays
     implicit none 
     
-     call example_Series_with_coarrays
+    !if (this_image() == 1) write(*,*) " Hello " 
+    !stop 
+    
+    call example_Series_with_coarrays
     stop
     
     call test_matmul

@@ -6,7 +6,7 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "doc/Chapters/Part_III/scope.tex",
+        "CurrentFile": "doc/Chapters/part_III/parallel.tex",
         "FileVersion": 1,
         "Files": [
             {
@@ -20,13 +20,12 @@
             {
                 "Col": 0,
                 "EditorGroup": 0,
-                "FileName": "doc/Chapters/Part_III/scope.tex",
+                "FileName": "doc/Chapters/part_III/parallel.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
                 "Line": 0
             }
         ],
-        "MasterFile": "",
-        "VerticalSplit": false
+        "MasterFile": ""
     }
 }

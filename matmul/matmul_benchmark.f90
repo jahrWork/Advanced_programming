@@ -20,8 +20,16 @@
       real, intent(in) :: A(N,N), x(N) 
       real :: b(N)
      end function
+    end interface 
+    
+    interface 
+     function interface_C_AXB(N, A, B) result(C) 
+      integer, intent(in) :: N
+      real, intent(in) :: A(N,N), B(N,N) 
+      real :: C(N,N)
+     end function
    end interface 
-   
+    
    
     contains   
     
@@ -33,13 +41,16 @@ do
      
      
      write(*,*) " select an option " 
-     write(*,*) " 0. exit/quit  "
+     write(*,'(A100)') " 0. exit/quit                                                                                   "
      write(*,'(A100)') " 1. BEST performance with intrisic matmul single core, static memory                            " 
      write(*,'(A100)') " 2. POOR performance: my_matmul (row by column). assumed shape, single core, static memory      " 
      write(*,'(A100)') " 3. MEDIUM performance: my_matmul (column operations), assumed shape, single core, static memory" 
      write(*,'(A100)') " 4. BEST performance: my_matmul (column operations)), explicit shape, single core, static memory" 
      write(*,'(A100)') " 5. Intrisic matmul single core, allocation with different dimensions                           " 
      write(*,'(A100)') " 6. BEST My matmul single core, allocation with different dimensions                            "
+     write(*,'(A100)') " 6. BEST My matmul single core, allocation with different dimensions                            "
+     write(*,'(A100)') " 7. C = A B  matmul single core, allocation with different dimensions                           "
+     write(*,'(A100)') " 8. C = A B  sgemm ( Intel mkl matmul) single core, allocation with different dimensions        "
      read(*,*) option   
      
     select case(option)
@@ -65,7 +76,13 @@ do
          
     case(6) 
          call explicit_shape_single_core_allocation_different_dimension(best_my_matmul)
-        
+         
+    case(7) 
+         call C_AXB_single_core_allocation_different_dimension
+         
+     case(8) 
+         call C_AXB_single_core_allocation_different_dimension(best_sgemm)  
+         
          case default
            write(*,*) " option not implemented" 
               
@@ -197,47 +214,6 @@ procedure (interface_matmul_explicit), optional :: my_matmul
 end subroutine
 
 
-subroutine explicit_shape_single_core_allocation_different_dimension(my_matmul) 
-procedure (interface_matmul_explicit), optional :: my_matmul 
-
-        
- real, allocatable :: A(:, :), x(:), b(:)
- integer :: t0 
- integer (kind=8) :: N_op, TIMES, N, M, k  
-  
-    
-    N_op = 2 * 25e9  
-    
-    do N = 1000, 5000, 1000
-        M = N 
-        allocate( A(N,M), x(M), b(N) ) 
-   
-        TIMES = N_op / ( 2 * N * M ) 
-        
-    
-        write(*,*) "________________________________________________________________"
-        write(*,*) " Ax = b matmul with N = ", N 
-        write(*,*) " N_operations = ", N_op
-        call Initialization(N, M, A, x) 
-    
-        call system_clock(t0)
-        do k=0, TIMES  
-            if (present(my_matmul)) then 
-               b = my_matmul(N, A, x) 
-            else 
-               b = matmul(A, x)
-            end if 
-        end do 
-        call print_CPU_time(single_precision = .true., start_time = t0, N_operations = N_op, N_threads = 1)
-        deallocate( A, x, b ) 
-   end do 
-        
-   
-  
-        
-end subroutine
-
-
 subroutine  Initialization(N, M, A, x)  
     integer, intent(in) :: N, M 
     real,intent(out) ::  A(:,:), x(:) 
@@ -252,11 +228,115 @@ subroutine  Initialization(N, M, A, x)
             x(i) = (i-1) * (i-1)  / real( N * M ) 
     end do  
 
+end subroutine
+
+
+
+
+
+
+subroutine explicit_shape_single_core_allocation_different_dimension(my_matmul) 
+procedure (interface_matmul_explicit), optional :: my_matmul 
+
+        
+ real, allocatable :: A(:, :), x(:), b(:)
+ integer :: t0 
+ integer (kind=8) :: N_op, TIMES, k  
+ integer (kind=8) :: N, M 
+    
+    N_op = 2 * 25e9  
+    
+    do N = 500, 5000, 500
+        M = N 
+        allocate( A(N,M), x(M), b(N) ) 
+   
+        TIMES = N_op / real( 2 * N * M, kind=8 ) 
+        
+    
+        write(*,*) "________________________________________________________________"
+        write(*,*) " Ax = b matmul with N = ", N 
+        write(*,*) " N_operations = ", N_op
+  !      call Initialization(N, M, A, x) 
+    
+        call system_clock(t0)
+        do k=0, TIMES  
+            if (present(my_matmul)) then 
+!              b = my_matmul(N, A, x) 
+            else 
+               b = matmul(A, x)
+            end if 
+        end do 
+        call print_CPU_time(single_precision = .true., start_time = t0, N_operations = N_op, N_threads = 1)
+        deallocate( A, x, b ) 
+   end do 
+        
+        
+end subroutine
+
+
+
+function best_sgemm(N, A, B) result(C) 
+   integer, intent(in) :: N 
+   real, intent(in) :: A(N, N), B(N, N) 
+   real :: C(N, N)
+   
+   call sgemm("n", "n", N, N, N, 1e0, A, N, B, N, 1e0, C, N) 
+
+end function 
+
+
+
+
+subroutine C_AxB_single_core_allocation_different_dimension(my_matmul) 
+procedure (interface_C_AxB), optional :: my_matmul 
+
+    
+ real, allocatable :: A(:, :), B(:,:), C(:,:)
+ integer :: t0 
+ integer (kind=8) :: N_op, TIMES, k  
+ integer  :: i, N, M 
+    
+    
+    N_op = 1000000000000_8 
+    
+    do i = 0, 4
+        N = 625*2**i
+        M = N 
+        allocate( A(N,M), B(N,N), C(N,N) ) 
+        
+        k = N 
+        TIMES = (2 **(4-i) ) ** 3  
+        
+    
+        write(*,*) "________________________________________________________________"
+        write(*,*) " C = A B  matmul with N = ", N 
+        write(*,*) " N_operations = ", N_op
+        write(*,*) " TIMES = ", TIMES 
+        
+        call random_number(A) 
+        call random_number(B) 
+        C = 0 
+    
+        call system_clock(t0)
+        do k=1, TIMES  
+            if (present(my_matmul)) then 
+              C = C + my_matmul(N, A, B) 
+            else 
+              C = C + matmul(A, B)
+            end if 
+        !    write(*,*) "k=", k 
+        end do 
+        call print_CPU_time(single_precision = .true., start_time = t0, N_operations = N_op, N_threads = 1)
+        deallocate( A, B, C ) 
+   end do 
+ 
+    
+        
 end subroutine 
 
+ 
 
-
-    end module
+end module
 
 
 

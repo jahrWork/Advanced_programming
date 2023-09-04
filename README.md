@@ -11,6 +11,7 @@ This book is divided in three parts:
 1) Foundations.
 2) Computer operations with integers and reals.
 3) Advanced programming.
+   
 These three parts can be read independently. The first part: Foundations is devoted to
 initiate the reader in implementing numerical problems with the computer.
 The second part: Computer operations with integers and reals.

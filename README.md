@@ -25,10 +25,9 @@ emulating math environments.
 This book can not be considered a full handbook of Python or Fortran.
 It is a modest approach of challenging numerical problems by means of
 functional programming in Python and Fortran.
-This book is fully supported with the following software repository:
-https://github.com/jahrWork/Advanced_programming
+This book is fully supported with the present software repository.
 
 
-Hierarchical structure of modules written in python
+Hierarchical structure of modules written in python of this repository 
 
 ![](/doc/Figures/advanced.png)
